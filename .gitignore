@@ -1,0 +1,6 @@
+*.log
+data/
+methods/
+proposal/
+ref/
+results/
