@@ -1,0 +1,11 @@
+---
+title: "Home"
+author: "Christopher Tastad"
+date: \today
+bibliography: bib.bib
+output:
+    html_document:
+        toc: yes
+        toc_float: yes
+        theme: paper
+---

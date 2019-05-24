@@ -1,0 +1,23 @@
+% Encoding: UTF-8
+@misc{citations, title={Bibliographies and Citations}, url={https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html}, journal={Citations}}
+
+@article{rmarkdown_cheatsheet, title={Rmarkdown Cheatsheet}, url={https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf}, journal={Rmarkdown}} 
+
+@misc{cboettig_2019, title={cboettig/knitcitations}, url={https://github.com/cboettig/knitcitations}, journal={GitHub}, author={Cboettig}, year={2019}, month={Apr}}
+
+@misc{refmanager, title={Add Citations to an RMarkdown Document and Print Bibliography}, url={https://cran.r-project.org/web/packages/RefManageR/vignettes/TestAlphabetic.html#cite-aristotlephysics}, journal={refmanager}}
+
+% 28091601
+
+@Article{pmid28091601,
+  author       = {Zheng, G. X. and Terry, J. M. and Belgrader, P. and Ryvkin, P. and Bent, Z. W. and Wilson, R. and Ziraldo, S. B. and Wheeler, T. D. and McDermott, G. P. and Zhu, J. and Gregory, M. T. and Shuga, J. and Montesclaros, L. and Underwood, J. G. and Masquelier, D. A. and Nishimura, S. Y. and Schnall-Levin, M. and Wyatt, P. W. and Hindson, C. M. and Bharadwaj, R. and Wong, A. and Ness, K. D. and Beppu, L. W. and Deeg, H. J. and McFarland, C. and Loeb, K. R. and Valente, W. J. and Ericson, N. G. and Stevens, E. A. and Radich, J. P. and Mikkelsen, T. S. and Hindson, B. J. and Bielas, J. H.},
+  title        = {{{M}assively parallel digital transcriptional profiling of single cells}},
+  volume       = {8},
+  pages        = {14049},
+  note         = {[PubMed Central:\href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5241818}{PMC5241818}] [DOI:\href{https://dx.doi.org/10.1038/ncomms14049}{10.1038/ncomms14049}] [PubMed:\href{https://www.ncbi.nlm.nih.gov/pubmed/26940866}{26940866}]},
+  abstract     = {Characterizing the transcriptome of individual cells is fundamental to understanding complex biological systems. We describe a droplet-based system that enables 3' mRNA counting of tens of thousands of single cells per sample. Cell encapsulation, of up to 8 samples at a time, takes place in âˆ¼6 min, with âˆ¼50% cell capture efficiency. To demonstrate the system's technical performance, we collected transcriptome data from âˆ¼250k single cells across 29 samples. We validated the sensitivity of the system and its ability to detect rare populations using cell lines and synthetic RNAs. We profiled 68k peripheral blood mononuclear cells to demonstrate the system's ability to characterize large immune populations. Finally, we used sequence variation in the transcriptome data to determine host and donor chimerism at single-cell resolution from bone marrow mononuclear cells isolated from transplant patients.},
+  date         = {2017-01},
+  journaltitle = {Nat Commun},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

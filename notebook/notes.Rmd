@@ -1,0 +1,168 @@
+---
+title: "Notes"
+author: "Christopher Tastad"
+date: \today
+bibliography: bib.bib
+output:
+    html_document:
+        toc: yes
+        toc_float: yes
+        theme: paper
+---
+
+# May 2019
+
+## 21
+
+#### TODO
+
+
+```{r eval=F}
+
+
+ID  Age   Project        Tags       R Due        Description                Urg
+--- ----- -------------- ---------- - ---------- -------------------------- ----
+326 10h   starrlab       computer n R 2019-05-21 write daily summary        10.5
+327 27min starrlab       computer n              find umn git and hosting    1.9
+312 20h   starrlab.ocpmi computer n              organize lab notebook [1]   2.7
+315 18h   starrlab.ocpmi computer n              find ovca review re cur     1.9
+                                                 treatment
+316 18h   starrlab.ocpmi computer n              read starr paper re 1st pt  1.9
+317 18h   starrlab.ocpmi computer n              read ocpmi summary          1.9
+318 18h   starrlab.ocpmi computer n              install surat               1.9
+319 18h   starrlab.ocpmi computer w              run surat tutorial w/ pt    1.9
+                                                 59
+320 18h   starrlab.ocpmi computer n              read single cell paper      1.9
+                                                 zheng 2017
+321 18h   starrlab.ocpmi computer n              find and read copy num      1.9
+                                                 variation paper
+322 18h   starrlab.ocpmi computer n              organize refs in email      1.9
+                                                 inbox
+323 18h   starrlab.ocpmi computer n              compile bibtex ref page     1.9
+
+12 tasks
+
+```
+
+### Citation packages
+
+#### Rmarkdown Default
+
+This is the intrinsic formatting style for Rmarkdown citation mangement. It has the ability to call a BibTex file and carries the least effort to get it working. It's what I will probably go for across my whole setup. [@citations]
+
+#### knitcitations
+
+The knitcitations package might provide the best balance of featureset to ease of use. The only constraining factor is what seems like a few bugs that limit intended functionality. The ref() function doesn't work for instance. [@cboettig_2019]
+
+#### RefManageR
+
+This is a fully featured R package that seems to attempt to replace a complete citation manager. It comes across as very comprehensive but more complicated than I would like the approach to be. [@refmanager]
+
+### Summary
+
+#### TODO actions
+
+* 327, 312:progress
+
+The majority of the day was spent exploring the setup for my lab notebook. My intention is to create a living document using the Rmarkdown website knit feature [@rmarkdown_cheatsheet]. This will allow for a dynamic storage of both records and code work inline with one comprehensive document. A large portion of this time was spent giving consideration to how I will handle citations both in the document and for future publication. After significant exploration, my plan is to use the intrinsic Rmarkdown system [@citations] through use of a bibtex file. This will allow for simple reference in-place with the notebook along with using a standardized format for publication ready references.
+Additionally, I plan on establishing a git repo to manage version control and historical record with the notebook as well using the umn github server [citation needed].
+
+***
+
+## 22
+
+### TODO
+
+```{r eval=F}
+
+
+ID  Age Project        Tags       R Due        Description                  Urg
+--- --- -------------- ---------- - ---------- ---------------------------- ----
+326 15h starrlab       computer n R 2019-05-22 write daily summary          10.5
+312 1d  starrlab.ocpmi computer n              organize lab notebook [1]    2.71
+315 1d  starrlab.ocpmi computer n              find ovca review re cur      1.91
+                                               treatment
+316 1d  starrlab.ocpmi computer n              read starr paper re 1st pt   1.91
+317 1d  starrlab.ocpmi computer n              read ocpmi summary           1.91
+318 1d  starrlab.ocpmi computer n              install surat                1.91
+319 1d  starrlab.ocpmi computer w              run surat tutorial w/ pt 59  1.91
+320 1d  starrlab.ocpmi computer n              read single cell paper zheng 1.91
+                                               2017
+321 1d  starrlab.ocpmi computer n              find and read copy num       1.91
+                                               variation paper
+322 1d  starrlab.ocpmi computer n              organize refs in email inbox 1.91
+323 1d  starrlab.ocpmi computer n              compile bibtex ref page      1.91
+
+11 tasks
+
+```
+
+### weekly mtg w/ Tim
+
+present: chris, tim
+
+* Make sure to utilize notes field in bibtex file. Having an ongoing record of each paper read is critical.
+* Consider separating data and results in file organization.
+* Change notebook structure to follow layout of paper. Organize the work with a mindset toward writing the paper from the start, not the finish.
+* Currently, we are still working to establish the standardized parameters of the dataset. The goal is to arrive at a place where we can make biological conclusions.
+    + How do we draw contrast from a dataset of this nature?
+
+### Notebook Structure
+
+In my conversation with Tim, I decided I need to take an alternate structure to my lab notebook. My original intent was to emulate a development oriented documentation process. Instead, I will go a route that better follows the academic writing process with pages dedicated to methods, results, etc.
+
+### Reference Management
+
+While I would prefer to take a lean, text based approach to this, I am clearly beginning to waste some time in gear the system. I came across jabref, which seems to leverage a unix philosophy and can be found in the ubuntu repos.
+
+### Summary
+
+#### TODO actions
+
+* 312:progress, 323:progress
+
+My work today included continued focus on getting organized an taking a very deliberate approaching to my workflow before I begin. I met with Tim to begin our weekly meetings, and we covered some aspects of this workflow. Major take aways include the importance of annotation when reviewing literature. I had originally assumed I could handle refernces processing merely in a bare bibtex file. My feeling now is that I will begin to use a dedicated application for greater consistency in documentation.
+
+***
+
+## 23
+
+### TODO
+
+```{r eval=F}
+
+
+ID  Age Project        Tags       R Due        Description                  Urg
+--- --- -------------- ---------- - ---------- ---------------------------- ----
+334 11h starrlab       computer n R 2019-05-23 write daily summary          10.6
+327 23h starrlab       computer n              reorg notebook to follow      1.9
+                                               paper structure
+329 19h starrlab       computer n              setup jabref                  1.9
+330 19h starrlab       lab n                   setup desk                    1.9
+331 19h starrlab       computer n              create agenda field           1.9
+332 19h starrlab       computer n              create lit tag                1.9
+333 19h starrlab       computer n              create lab context            1.9
+336 41s starrlab       computer n              create website knit script    1.9
+312 2d  starrlab.ocpmi computer n              organize lab notebook [1]    2.71
+315 2d  starrlab.ocpmi computer n              find ovca review re cur      1.91
+                                               treatment
+316 2d  starrlab.ocpmi computer n              read starr paper re 1st pt   1.91
+317 2d  starrlab.ocpmi computer n              read ocpmi summary           1.91
+318 2d  starrlab.ocpmi computer n              install surat                1.91
+319 2d  starrlab.ocpmi computer w              run surat tutorial w/ pt 59  1.91
+320 2d  starrlab.ocpmi computer n              read single cell paper zheng 1.91
+                                               2017
+321 2d  starrlab.ocpmi computer n              find and read copy num       1.91
+                                               variation paper
+322 2d  starrlab.ocpmi computer n              organize refs in email inbox 1.91
+323 2d  starrlab.ocpmi computer n              compile bibtex ref page      1.91
+
+18 tasks
+
+```
+
+### JabRef
+
+I've started to figure out jabref. I think I will still look to my bibtex file as the primary source for citation management, but will make use of the interface and some of the features of jabref. Additionally dio2bib will play a central role in extracting bibtex content.
+
+# References

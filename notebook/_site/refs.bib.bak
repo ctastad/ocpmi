@@ -1,0 +1,45 @@
+% Encoding: UTF-8
+@misc{citations, title={Bibliographies and Citations}, url={https://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html}, journal={Citations}}
+
+@article{rmarkdown_cheatsheet, title={Rmarkdown Cheatsheet}, url={https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf}, journal={Rmarkdown}} 
+
+@misc{cboettig_2019, title={cboettig/knitcitations}, url={https://github.com/cboettig/knitcitations}, journal={GitHub}, author={Cboettig}, year={2019}, month={Apr}}
+
+@misc{refmanager, title={Add Citations to an RMarkdown Document and Print Bibliography}, url={https://cran.r-project.org/web/packages/RefManageR/vignettes/TestAlphabetic.html#cite-aristotlephysics}, journal={refmanager}}
+
+@Article{Zheng2017,
+  author        = {Grace X. Y. Zheng and Jessica M. Terry and Phillip Belgrader and Paul Ryvkin and Zachary W. Bent and Ryan Wilson and Solongo B. Ziraldo and Tobias D. Wheeler and Geoff P. McDermott and Junjie Zhu and Mark T. Gregory and Joe Shuga and Luz Montesclaros and Jason G. Underwood and Donald A. Masquelier and Stefanie Y. Nishimura and Michael Schnall-Levin and Paul W. Wyatt and Christopher M. Hindson and Rajiv Bharadwaj and Alexander Wong and Kevin D. Ness and Lan W. Beppu and H. Joachim Deeg and Christopher McFarland and Keith R. Loeb and William J. Valente and Nolan G. Ericson and Emily A. Stevens and Jerald P. Radich and Tarjei S. Mikkelsen and Benjamin J. Hindson and Jason H. Bielas},
+  title         = {Massively parallel digital transcriptional profiling of single cells},
+  journal       = {Nature Communications},
+  year          = {2017},
+  volume        = {8},
+  number        = {1},
+  month         = jan,
+  __markedentry = {[chris:6]},
+  doi           = {10.1038/ncomms14049},
+  publisher     = {Springer Science and Business Media {LLC}},
+  url           = {https://doi.org/10.1038/ncomms14049},
+}
+
+@Article{Lheureux2019,
+  author    = {Stephanie Lheureux and Marsela Braunstein and Amit M. Oza},
+  title     = {Epithelial ovarian cancer: Evolution of management in the era of precision medicine},
+  journal   = {{CA}: A Cancer Journal for Clinicians},
+  year      = {2019},
+  month     = may,
+  note      = {THIS IS A NOTE},
+  doi       = {10.3322/caac.21559},
+  publisher = {Wiley},
+  url       = {https://doi.org/10.3322/caac.21559},
+}
+
+@Misc{BibEntry2019May,
+  title   = {{How can I force R markdown / LaTeX to display 'note' field in bibliography (display additional information)?}},
+  month   = {May},
+  year    = {2019},
+  note    = {[Online; accessed 23. May 2019]},
+  journal = {Stack Overflow},
+  url     = {https://stackoverflow.com/questions/42417659/how-can-i-force-r-markdown-latex-to-display-note-field-in-bibliography-disp},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

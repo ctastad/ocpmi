@@ -1,0 +1,14 @@
+name: "CTT_Notebook"
+navbar:
+    title: "CTT Notebook"
+    left:
+        - text: "Home"
+          href: index.html
+        - text: "Notes"
+          href: notes.html
+        - text: "Results"
+          href: results.html
+        - text: "Methods"
+          href: methods.html
+        - text: "References"
+          href: references.html
