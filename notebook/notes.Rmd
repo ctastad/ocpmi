@@ -10,7 +10,35 @@ output:
         theme: paper
 ---
 
+```{r}
+library(prettydoc)
+```
+
+```{r eval=F}
+
+```
+
+
 # May 2019
+
+## 20
+
+### Background mtg w/ Tim
+
+* present: chris, tim
+
+We discussed the outlook for my role in the lab. This included a considerable amount of background on the ocpmi project and potential directions I could take.
+
+Focus Options
+
+* ID of ovca stem cell
+* what is the basis for clustering
+* single cell seq methods paper
+* compare mouse to human
+* copy number variation on single cell
+* rerun new version of cell ranger
+* RHEL update
+
 
 ## 21
 
@@ -97,7 +125,7 @@ ID  Age Project        Tags       R Due        Description                  Urg
 
 ```
 
-### weekly mtg w/ Tim
+### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -161,8 +189,51 @@ ID  Age Project        Tags       R Due        Description                  Urg
 
 ```
 
-### JabRef
+### Citations
 
-I've started to figure out jabref. I think I will still look to my bibtex file as the primary source for citation management, but will make use of the interface and some of the features of jabref. Additionally dio2bib will play a central role in extracting bibtex content.
+#### Custom CSL
+
+At some point, I would like to setup a custom csl file to format my refernces. The goal here would be to add formated features that are note readily available in some existing format style. [@2019], [@BibEntry2019May]
+
+#### JabRef
+
+I've started to figure out jabref. I think I will still look to my bibtex file as the primary source for citation management, but will make use of the interface and some of the features of jabref. Additionally dio2bib will play a central role in extracting bibtex content. [@2019b]
+
+### GitHub
+
+The setup for my git server is complete. It's a private server host by the university a /tasta005/ocpmi [@ocpmi_git]
+
+### Summary
+
+I was able to round out much of my organizational setup today. I feel confident about the citation mangement strategy I plan to use going forward which combines the use of dio2bib for bibtex creation, BibItNow for website extraction, and JabRef to centralize mangement. Additionally, I was able to connect my relevant directories to my git server, which will account for both a measure of backup and version control. Having gotten settled into these systems I think I will be able to begin incorporating my literature search into my daily activities.
+
+#### TODO actions
+
+```{r eval=F}
+
+Created    Completed  Age Project        R Due        Description
+---------- ---------- --- -------------- - ---------- --------------------------
+2019-05-22 2019-05-23 1d  starrlab       R 2019-05-22 write daily summary
+2019-05-22 2019-05-23 1d  starrlab                    setup desk
+2019-05-23 2019-05-23 16h starrlab       R 2019-05-23 write daily summary
+2019-05-20 2019-05-23 3d  starrlab.ocpmi              organize lab notebook
+                                                        2019-05-21 record,
+                                                      master, comms, refs, home,
+                                                      docs
+2019-05-22 2019-05-23 1d  starrlab                    create lab context
+2019-05-22 2019-05-23 1d  starrlab                    create lit tag
+2019-05-22 2019-05-23 1d  starrlab                    setup jabref
+2019-05-20 2019-05-23 3d  starrlab.ocpmi              compile bibtex ref page
+2019-05-20 2019-05-23 3d  starrlab.ocpmi              organize refs in email
+                                                      inbox
+2019-05-22 2019-05-23 1d  starrlab                    setup umn git
+2019-05-22 2019-05-23 1d  starrlab                    create agenda field
+
+11 tasks
+```
+
+***
+
+TEST
 
 # References
