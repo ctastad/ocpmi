@@ -416,7 +416,8 @@ div.tocify {
 </div>
 
 
-<pre class="r"><code>library(prettydoc)</code></pre>
+<pre class="r"><code>library(devtools)
+library(Seurat)</code></pre>
 <div id="may-2019" class="section level1">
 <h1>May 2019</h1>
 <div id="section" class="section level2">
@@ -441,8 +442,8 @@ div.tocify {
 </div>
 <div id="section-1" class="section level2">
 <h2>21</h2>
-<div id="todo" class="section level4">
-<h4>TODO</h4>
+<div id="todo" class="section level3">
+<h3>TODO</h3>
 <pre class="r"><code>ID  Age   Project        Tags       R Due        Description                Urg
 --- ----- -------------- ---------- - ---------- -------------------------- ----
 326 10h   starrlab       computer n R 2019-05-21 write daily summary        10.5
@@ -482,8 +483,8 @@ div.tocify {
 </div>
 <div id="summary" class="section level3">
 <h3>Summary</h3>
-<div id="todo-actions" class="section level4">
-<h4>TODO actions</h4>
+<div id="completed" class="section level4">
+<h4>Completed</h4>
 <ul>
 <li>327, 312:progress</li>
 </ul>
@@ -538,8 +539,8 @@ div.tocify {
 </div>
 <div id="summary-1" class="section level3">
 <h3>Summary</h3>
-<div id="todo-actions-1" class="section level4">
-<h4>TODO actions</h4>
+<div id="completed-1" class="section level4">
+<h4>Completed</h4>
 <ul>
 <li>312:progress, 323:progress</li>
 </ul>
@@ -597,8 +598,8 @@ div.tocify {
 <div id="summary-2" class="section level3">
 <h3>Summary</h3>
 <p>I was able to round out much of my organizational setup today. I feel confident about the citation mangement strategy I plan to use going forward which combines the use of dio2bib for bibtex creation, BibItNow for website extraction, and JabRef to centralize mangement. Additionally, I was able to connect my relevant directories to my git server, which will account for both a measure of backup and version control. Having gotten settled into these systems I think I will be able to begin incorporating my literature search into my daily activities.</p>
-<div id="todo-actions-2" class="section level4">
-<h4>TODO actions</h4>
+<div id="completed-2" class="section level4">
+<h4>Completed</h4>
 <pre class="r"><code>Created    Completed  Age Project        R Due        Description
 ---------- ---------- --- -------------- - ---------- --------------------------
 2019-05-22 2019-05-23 1d  starrlab       R 2019-05-22 write daily summary
@@ -616,6 +617,64 @@ div.tocify {
                                                       inbox
 2019-05-22 2019-05-23 1d  starrlab                    setup umn git
 2019-05-22 2019-05-23 1d  starrlab                    create agenda field
+
+11 tasks</code></pre>
+<hr />
+</div>
+</div>
+</div>
+<div id="section-4" class="section level2">
+<h2>24</h2>
+<div id="todo-3" class="section level3">
+<h3>TODO</h3>
+<pre class="r"><code>ID  Age Project        Tag            Description                           Urg
+--- --- -------------- -------------- ------------------------------------- ----
+314 3d  starrlab.ocpmi computer lit n find ovca review re cur treatment     2.02
+315 3d  starrlab.ocpmi computer lit n read starr paper re 1st pt            2.02
+316 3d  starrlab.ocpmi computer lit n read ocpmi summary                    2.02
+319 3d  starrlab.ocpmi computer lit n read single cell paper zheng 2017     2.02
+320 3d  starrlab.ocpmi computer lit n find and read copy num variation      2.02
+                                      paper
+317 3d  starrlab.ocpmi computer n     install surat                         1.92
+318 3d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59           1.92
+325 1d  starrlab       computer n     create website knit script            1.91
+327 22h starrlab       comp w         make custom csl                        1.9
+328 22h starrlab       lab n          complete lab training                  1.9
+330 20h starrlab       w              agenda items                           1.8
+
+11 tasks</code></pre>
+</div>
+<div id="create_site-script" class="section level3">
+<h3>create_site Script</h3>
+<p>I created a small R script that will effectively knit each page of my lab notebook. This can be executed in the R console or in bash, but each file has to be saved. The save -&gt; knit function that’s performed by the IDE does not apply to the console executed render command.</p>
+<pre class="r"><code>rmarkdown::render(&quot;index.Rmd&quot;)
+rmarkdown::render(&quot;notes.Rmd&quot;)
+rmarkdown::render(&quot;results.Rmd&quot;)
+rmarkdown::render(&quot;methods.Rmd&quot;)
+rmarkdown::render(&quot;references.Rmd&quot;)
+rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
+</div>
+<div id="summary-3" class="section level3">
+<h3>Summary</h3>
+<p>Today was filled with primarily administrative work. A large bulk of my time was taken by lab safety training, which I was unable to fully complete. Along with this, I was finally able to install Seurat and tinker with the package tutorial. It seems like the version I downloaded may not be compatible with the tuturial code, so I will have to explore that more.</p>
+<div id="completed-3" class="section level4">
+<h4>Completed</h4>
+<pre class="r"><code>Created    Completed  Age Project        Description
+---------- ---------- --- -------------- ---------------------------------------
+2019-05-23 2019-05-24 1d  starrlab       create website knit script
+2019-05-24 2019-05-24 2h  starrlab       DEHS Radiation Safety Orientation
+                                         Training
+2019-05-24 2019-05-24 2h  starrlab       Implementation of NIH Guidelines
+2019-05-24 2019-05-24 2h  starrlab       Bloodborne Pathogens: Advanced
+2019-05-24 2019-05-24 2h  starrlab       DEHS Chemical Safety Training
+2019-05-24 2019-05-24 2h  starrlab       Biological Safety in the Laboratory
+2019-05-24 2019-05-24 2h  starrlab       Bloodborne Pathogens: Introduction and
+                                         Advanced
+2019-05-24 2019-05-24 2h  starrlab       DEHS Introduction to Research Safety
+                                         Training
+2019-05-24 2019-05-24 2h  starrlab       Animal Use Tutorial
+2019-05-23 2019-05-24 1d  starrlab       complete lab training
+2019-05-20 2019-05-24 4d  starrlab.ocpmi install surat
 
 11 tasks</code></pre>
 <hr />
