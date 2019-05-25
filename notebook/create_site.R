@@ -1,0 +1,6 @@
+rmarkdown::render("index.Rmd")
+rmarkdown::render("notes.Rmd")
+rmarkdown::render("results.Rmd")
+rmarkdown::render("methods.Rmd")
+rmarkdown::render("references.Rmd")
+rmarkdown::render_site("index.Rmd")
