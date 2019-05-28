@@ -8,3 +8,4 @@ results/
 *.sav
 *.swp
 *.Rmd.swp
+*.html

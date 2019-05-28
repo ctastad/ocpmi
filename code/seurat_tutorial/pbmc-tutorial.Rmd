@@ -35,7 +35,7 @@ pbmc <- new("seurat", raw.data = pbmc.data)
 
 # Keep all genes expressed in >= 3 cells, keep all cells with >= 200 genes
 # Perform log-normalization, first scaling each cell to a total of 1e4 molecules (as in Macosko et al. Cell 2015)
-pbmc <- Setup(pbmc, min.cells = 3, min.genes = 200, do.logNormalize = T, total.expr = 1e4, project = "10X_PBMC")
+pbmc <- CreateSeuratObject(pbmc, min.cells = 3, min.genes = 200, do.logNormalize = T, total.expr = 1e4, project = "10X_PBMC")
 ```
 
 ***

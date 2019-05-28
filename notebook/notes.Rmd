@@ -297,7 +297,63 @@ Created    Completed  Age Project        Description
 11 tasks
 ```
 
+***
+
+## 27
+
+### TODO
+
+```{r eval=F}
+
+ID Age Project        Tags           Description                            Urg
+-- --- -------------- -------------- -------------------------------------- ----
+77 4d  starrlab       computer w     make custom csl                        1.92
+79 3d  starrlab       computer n     GCP Human RSRCH Biomed Studies         1.92
+80 3d  starrlab       computer n     CITI research ethics training          1.92
+81 3d  starrlab       computer n     University Information Security        1.92
+                                     Awareness Training
+78 4d  starrlab                      agenda items                           1.02
+91 15h starrlab.ocpmi computer lit n read papalexi 2018 [2]                  2.9
+68 6d  starrlab.ocpmi computer lit n find ovca review re cur treatment      2.03
+69 6d  starrlab.ocpmi computer lit w read starr paper re 1st pt             2.03
+70 6d  starrlab.ocpmi computer lit w read ocpmi summary                     2.03
+72 6d  starrlab.ocpmi computer lit w read single cell paper zheng 2017      2.03
+73 6d  starrlab.ocpmi computer lit w find and read copy num variation paper 2.03
+71 6d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59            1.93
+
+12 tasks
+```
+
+### Evolution of Management in the Era of Precision Medicine
+
+* State of field for ovarian cancer
+* Current treatments and outcomes
+* Ovca presents very late. The internal location of the cancer and general lack of screening options lead to most cases being diagnosed at a later stage than many other cancers would. 
+* Treatment options have largely focused on sugical debulking and platinum based chemotherapy.
+* Risk factors are inherited: germline mutations in breast cancer susceptible genes (e.g. brca), nulliparity, infertility, enometriosis, obesity, age, potentially perineal talc.
+* Reducing factors that have been found to be potentially significant are gravidity, oral contraceptive use, regular use of aspirin, and nsaids.
+* Currently, population screening in ovca has not been found to be effective.
+* Epithelial ovarian cancer accounts for 95% of ovarian malignancies
+* 5 eoc subtypes: high-grade serous, low-grade serous, clear cell, endometrioid, and mucinous
+* HGSOC has the highest incidence with 70% of eoc cases.
+* It is believed fallopian tube epithelium is the possible site for tumor initiation.
+* Mutations in p53 are seen in +90% cases of HGSOC
+* p53 mutations and brca inactivation lead to high numbers of copy variation.
+* HGSOC has 4 prognostic subtypes: differntiated, immunoreactive, mesenchymal, and proliferative
+* Immunoreactive is considered to have the best overall survivial while mesenchymal has the worst.
+* Ovca cells also overexpress folate and mesothelin which have been targest for antibody therapy.
+* LGSOC is seen in about 10% of cases
+* LGSOC is considered to develop in a pathway which is very distinct from HGSOC
+* B-Raf and KRAS mutations are the most commonly present in LGSOC
+* Hormone therapy is sometimes used due to the presence of estrogen/progesterone receptors.
+* CNAs in p53 are rare, and brca inactivation seem to unrelated to LGSOC
+  
+### Summary
+
+Just worked my way through the above summary today. Will continue and complete reading this lit tomorrow.
+
 
 ***
 
 # References
+
