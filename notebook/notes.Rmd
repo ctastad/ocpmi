@@ -457,7 +457,76 @@ Created    Completed  Age Project        Description
 1 task
 ```
 
+***
+
+## 29
+
+### TODO
+
+```{r eval=F}
+ID Age  Project        Tags           Description                           Urg
+-- ---- -------------- -------------- ------------------------------------- ----
+75 5d   starrlab                      agenda items [3]                      2.03
+74 6d   starrlab       computer w     make custom csl                       1.93
+76 5d   starrlab       computer n     GCP Human RSRCH Biomed Studies        1.93
+77 5d   starrlab       computer n     CITI research ethics training         1.93
+78 5d   starrlab       computer n     University Information Security       1.93
+                                      Awareness Training
+90 1d   starrlab       computer n     find alternative to jabref            1.91
+92 22h  starrlab       computer n     fix god damn git issue                 1.9
+97 1min starrlab       computer n     fix hostname issue w/ mesabi           1.9
+88 2d   starrlab.ocpmi computer lit n read papalexi 2018 [2]                2.91
+89 1d   starrlab.ocpmi computer lit w read macintyre 2018 [2]               2.91
+91 1d   starrlab.ocpmi lit s          read sahin 2017 [1]                   2.71
+66 8d   starrlab.ocpmi computer lit w read starr paper re 1st pt            2.04
+67 8d   starrlab.ocpmi computer lit w read ocpmi summary                    2.04
+69 8d   starrlab.ocpmi computer lit w read single cell paper zheng 2017     2.04
+70 8d   starrlab.ocpmi computer lit w read venteicher - CNV paper           2.04
+68 8d   starrlab.ocpmi computer w     run surat tutorial w/ pt 59           1.94
+96 2min starrlab.ocpmi computer n     run seurat with pbmc data              1.9
+
+17 tasks
+```
+
+
+### wkly mtg w/ Tim
+
+```{r eval=F}
+Description
+--------------------------------------------------------------------------------
+agenda items
+  2019-05-27 validation in diff between lumpectomy and mastectomy
+  2019-05-28 elaborate on lack of randomized controls for ovca treatments
+  2019-05-28 discuss vacation
+  2019-05-28 discuss chemotherapy at large
+  2019-05-28 review parp inhibitor mechanism
+  2019-05-28 are occc and lgsoc our general targets given their chemoresistance?
+  2019-05-28 how do our questions differ from the findings of kondrashova 2017 -
+RAD51 mutations acquired resistance
+
+1 task
+```
+
+#### mtg notes
+
+* mysql reference: single cell rnaseq analysis protocol
+* figure out mesabi hostname issue
+* explore starrt2 msi path
+    + [/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38]
+* There is no specific focus in the pathology we're focusing on. OCCC and LGSOC are being considered just as readily as other subtypes.
+* Kondrashova 2017 (RAD51 mutations leading to chemoresistance) is potentially a good example of what our research questions will be.
+* Tim's focus is more basic science oriented. Potential applications would be to identify when a pt would be resistant and that they should persue other treatment from the outset.
+* All of our findings from this dataset will require wetlab validation
+* This dataset is incredibly unique. We should be able to discover something nobody else has.
+* Data validation has generally been handeled on the project so far.
+    + Objective: determine cell type.
+* There's no way to call copy number variation from this data. That would be novel.
+
+
+
 
 ***
 
 # References
+
+
