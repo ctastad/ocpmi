@@ -581,9 +581,41 @@ Created    Completed  Age Project  Description
 2 tasks
 ```
 
+***
+
+## 30
+
+### TODO
+
+```{r eval=F}
+
+ID Age Project        Tags           Description                            Urg
+-- --- -------------- -------------- -------------------------------------- ----
+75 6d  starrlab                      agenda items [3]                       2.03
+74 6d  starrlab       computer w     make custom csl                        1.93
+76 5d  starrlab       computer n     GCP Human RSRCH Biomed Studies         1.93
+77 5d  starrlab       computer n     CITI research ethics training          1.93
+78 5d  starrlab       computer n     University Information Security        1.93
+                                     Awareness Training
+90 1d  starrlab       computer n     find alternative to jabref             1.91
+88 3d  starrlab.ocpmi computer lit n read papalexi 2018 [2]                 2.92
+89 2d  starrlab.ocpmi computer lit w read macintyre 2018 [2]                2.91
+91 1d  starrlab.ocpmi lit s          read sahin 2017 [1]                    2.71
+66 9d  starrlab.ocpmi computer lit w read starr paper re 1st pt             2.05
+67 9d  starrlab.ocpmi computer lit w read ocpmi summary                     2.05
+69 9d  starrlab.ocpmi computer lit w read single cell paper zheng 2017      2.05
+70 9d  starrlab.ocpmi computer lit w read venteicher - CNV paper            2.05
+68 9d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59            1.95
+95 20h starrlab.ocpmi computer n     run seurat with pbmc data               1.9
+
+15 tasks
+```
+
+
 
 ***
 
 # References
+
 
 
