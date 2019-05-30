@@ -888,6 +888,47 @@ RAD51 mutations acquired resistance
 </ul></li>
 <li>There’s no way to call copy number variation from this data. That would be novel.</li>
 </ul>
+</div>
+</div>
+<div id="msi-project-directory" class="section level3">
+<h3>MSI Project Directory</h3>
+<p>I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/msi and other collaborator work. I have a personal directory in this space along with access to other shared directories.</p>
+<p>The root project directory is:</p>
+<pre class="r"><code>/home/starrt2/</code></pre>
+<p>I have a personal directory under the root. At the same level, there is also a shared directory which includes some content which involves active collaboration.</p>
+<pre class="r"><code>/home/starrt2/tasta005</code></pre>
+<p>Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.</p>
+<ul>
+<li>Look for the leading 6 digit integer as a point of reference for the data_release folder.</li>
+<li>The Starr_Project sub folder is given a number which is considered the MSI and sample ID.</li>
+</ul>
+<pre class="r"><code>/home/starrt2/data_release/umgc/hiseq</code></pre>
+<p>The Analysis directory contains the source data</p>
+<ul>
+<li>illumina-basicQC # quality control data</li>
+<li>cellranger-<code>*</code>
+<ul>
+<li>analysis # ?</li>
+<li>filtered_gene_bc_matricies # data source that has been filtered by “true cell content”</li>
+<li>raw_gene_bc_matrices # matrix data that includes unfiltered reads or all read content</li>
+<li>web_summary.html # interactive cell ranger summary</li>
+</ul></li>
+</ul>
+<p>An example of a complete data source location is below:</p>
+<pre class="r"><code>/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38</code></pre>
+</div>
+<div id="summary-6" class="section level3">
+<h3>Summary</h3>
+<p>I met with Tim today for our weekly meeting. We discussed some aspects of ovca content that I had been reading to develop my general knowledge. I major element of this conversation that will adjust what my intentions were going forward dealt with the nature of statistically validating the results of our pipeline. My original thought was that there was some need to dig into the backend of the Seurat/cellranger packages to both confirm and optimise the output. It sounds as though this has been done to a degree that Tim is satisfied with and that we can move on to explore questions that are Biological in nature.</p>
+<p>Additionally, I did a little house keeping by establishing the first part of the methods page in my notebook. I explored the MSI project directory for the first time today and recorded some documentation about the file structure and data locations. My expectation is to pull what would be method oriented documentaion from Notes -&gt; Methods or Notes -&gt; Results as these things need to be pinned for repeat use and reference.</p>
+<div id="completed-5" class="section level4">
+<h4>Completed</h4>
+<pre class="r"><code>Created    Completed  Age Project  Description
+---------- ---------- --- -------- ----------------------------
+2019-05-28 2019-05-29 1d  starrlab fix god damn git issue
+2019-05-29 2019-05-29 2h  starrlab fix hostname issue w/ mesabi
+
+2 tasks</code></pre>
 <hr />
 </div>
 </div>

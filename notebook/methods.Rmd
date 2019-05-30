@@ -14,13 +14,17 @@ output:
 
 ### MSI Project Folder
 
+#### TODO
+
+Add MSI reference for login and use
+
 The root project directory is:
 
 ```{r eval=F}
 /home/starrt2/
 ```
 
-My personal directory is located below the root at:
+I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.
 
 ```{r eval=F}
 /home/starrt2/tasta005
