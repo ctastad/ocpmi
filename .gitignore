@@ -9,3 +9,5 @@ results/
 *.swp
 *.Rmd.swp
 *.html
+*.rds
+*.png

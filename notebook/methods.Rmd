@@ -10,6 +10,8 @@ output:
         theme: paper
 ---
 
+
+
 ## Directories
 
 ### MSI Project Folder
@@ -54,3 +56,6 @@ An example of a complete data source location is below:
 /home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
 ```
 
+```{r}
+shiny::includeHTML("/home/chris/starr_lab/ocpmi/code/seurat_tutorial/pbmc3k_tutorial.html")
+```

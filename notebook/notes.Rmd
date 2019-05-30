@@ -130,7 +130,7 @@ present: chris, tim
 * Consider separating data and results in file organization.
 * Change notebook structure to follow layout of paper. Organize the work with a mindset toward writing the paper from the start, not the finish.
 * Currently, we are still working to establish the standardized parameters of the data set. The goal is to arrive at a place where we can make biological conclusions.
-    + How do we draw contrast from a dataset of this nature?
+    + How do we draw contrast from a data set of this nature?
 
 ### Notebook Structure
 
@@ -609,6 +609,14 @@ ID Age Project        Tags           Description                            Urg
 95 20h starrlab.ocpmi computer n     run seurat with pbmc data               1.9
 
 15 tasks
+```
+
+### Seurat Tutorial pbmc3k
+
+I ran the v3 Seurat tutorial to completion using the pbmc dataset. This outline was very intuitive and worked through the pipeline seamlessly. There are several points that warrant further explanation.
+
+```{r}
+shiny::includeHTML("/home/chris/starr_lab/ocpmi/code/seurat_tutorial/pbmc3k_tutorial.html")
 ```
 
 
