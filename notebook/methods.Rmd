@@ -27,7 +27,9 @@ My personal directory is located below the root at:
 ```
 
 Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
-* Look for the leading 6 digit integer as a point of reference.
+
+* Look for the leading 6 digit integer as a point of reference for the data_release folder.
+* The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
 
 ```{r eval=F}
 /home/starrt2/data_release/umgc/hiseq
@@ -41,12 +43,6 @@ The Analysis directory contains the source data
     + filtered_gene_bc_matricies # data source that has been filtered by "true cell content"
     + raw_gene_bc_matrices # matrix data that includes unfiltered reads or all read content
     + web_summary.html # interactive cell ranger summary
-
-The hiseq folder contains fastq files and an "Analysis" Directory. The processed cellranger data is in "Analysis".
-* The "illumina-basicQC" is quality control data.
-
-
-
 
 An example of a complete data source location is below:
 
