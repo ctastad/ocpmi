@@ -418,6 +418,14 @@ div.tocify {
 
 <pre class="r"><code>library(devtools)
 library(Seurat)</code></pre>
+<pre><code>## Registered S3 method overwritten by 'R.oo':
+##   method        from       
+##   throw.default R.methodsS3</code></pre>
+<pre><code>## Registered S3 methods overwritten by 'ggplot2':
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
 <div id="may-2019" class="section level1">
 <h1>May 2019</h1>
 <div id="section" class="section level2">
@@ -470,11 +478,11 @@ library(Seurat)</code></pre>
 <h3>Citation packages</h3>
 <div id="rmarkdown-default" class="section level4">
 <h4>Rmarkdown Default</h4>
-<p>This is the intrinsic formatting style for Rmarkdown citation mangement. It has the ability to call a BibTex file and carries the least effort to get it working. It’s what I will probably go for across my whole setup. <span class="citation">(“Bibliographies and Citations,” n.d.)</span></p>
+<p>This is the intrinsic formatting style for Rmarkdown citation management. It has the ability to call a BibTex file and carries the least effort to get it working. It’s what I will probably go for across my whole setup. <span class="citation">(“Bibliographies and Citations,” n.d.)</span></p>
 </div>
 <div id="knitcitations" class="section level4">
 <h4>knitcitations</h4>
-<p>The knitcitations package might provide the best balance of featureset to ease of use. The only constraining factor is what seems like a few bugs that limit intended functionality. The ref() function doesn’t work for instance. <span class="citation">(Cboettig 2019)</span></p>
+<p>The knitcitations package might provide the best balance of feature set to ease of use. The only constraining factor is what seems like a few bugs that limit intended functionality. The ref() function doesn’t work for instance. <span class="citation">(Cboettig 2019)</span></p>
 </div>
 <div id="refmanager" class="section level4">
 <h4>RefManageR</h4>
@@ -523,7 +531,7 @@ library(Seurat)</code></pre>
 <li>Make sure to utilize notes field in bibtex file. Having an ongoing record of each paper read is critical.</li>
 <li>Consider separating data and results in file organization.</li>
 <li>Change notebook structure to follow layout of paper. Organize the work with a mindset toward writing the paper from the start, not the finish.</li>
-<li>Currently, we are still working to establish the standardized parameters of the dataset. The goal is to arrive at a place where we can make biological conclusions.
+<li>Currently, we are still working to establish the standardized parameters of the data set. The goal is to arrive at a place where we can make biological conclusions.
 <ul>
 <li>How do we draw contrast from a dataset of this nature?</li>
 </ul></li>
@@ -544,7 +552,7 @@ library(Seurat)</code></pre>
 <ul>
 <li>312:progress, 323:progress</li>
 </ul>
-<p>My work today included continued focus on getting organized an taking a very deliberate approaching to my workflow before I begin. I met with Tim to begin our weekly meetings, and we covered some aspects of this workflow. Major take aways include the importance of annotation when reviewing literature. I had originally assumed I could handle refernces processing merely in a bare bibtex file. My feeling now is that I will begin to use a dedicated application for greater consistency in documentation.</p>
+<p>My work today included continued focus on getting organized an taking a very deliberate approaching to my workflow before I begin. I met with Tim to begin our weekly meetings, and we covered some aspects of this workflow. Major take aways include the importance of annotation when reviewing literature. I had originally assumed I could handle references processing merely in a bare bibtex file. My feeling now is that I will begin to use a dedicated application for greater consistency in documentation.</p>
 <hr />
 </div>
 </div>
@@ -584,7 +592,7 @@ library(Seurat)</code></pre>
 <h3>Citations</h3>
 <div id="custom-csl" class="section level4">
 <h4>Custom CSL</h4>
-<p>At some point, I would like to setup a custom csl file to format my refernces. The goal here would be to add formated features that are note readily available in some existing format style. <span class="citation">(“Zotero Style Repository” 2019)</span>, <span class="citation">(“How can I force R markdown / LaTeX to display ’note’ field in bibliography (display additional information)?” 2019)</span></p>
+<p>At some point, I would like to setup a custom csl file to format my references. The goal here would be to add formatted features that are note readily available in some existing format style. <span class="citation">(“Zotero Style Repository” 2019)</span>, <span class="citation">(“How can I force R markdown / LaTeX to display ’note’ field in bibliography (display additional information)?” 2019)</span></p>
 </div>
 <div id="jabref" class="section level4">
 <h4>JabRef</h4>
@@ -597,7 +605,7 @@ library(Seurat)</code></pre>
 </div>
 <div id="summary-2" class="section level3">
 <h3>Summary</h3>
-<p>I was able to round out much of my organizational setup today. I feel confident about the citation mangement strategy I plan to use going forward which combines the use of dio2bib for bibtex creation, BibItNow for website extraction, and JabRef to centralize mangement. Additionally, I was able to connect my relevant directories to my git server, which will account for both a measure of backup and version control. Having gotten settled into these systems I think I will be able to begin incorporating my literature search into my daily activities.</p>
+<p>I was able to round out much of my organizational setup today. I feel confident about the citation management strategy I plan to use going forward which combines the use of dio2bib for bibtex creation, BibItNow for website extraction, and JabRef to centralize management. Additionally, I was able to connect my relevant directories to my git server, which will account for both a measure of backup and version control. Having gotten settled into these systems I think I will be able to begin incorporating my literature search into my daily activities.</p>
 <div id="completed-2" class="section level4">
 <h4>Completed</h4>
 <pre class="r"><code>Created    Completed  Age Project        R Due        Description
@@ -656,7 +664,7 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 </div>
 <div id="summary-3" class="section level3">
 <h3>Summary</h3>
-<p>Today was filled with primarily administrative work. A large bulk of my time was taken by lab safety training, which I was unable to fully complete. Along with this, I was finally able to install Seurat and tinker with the package tutorial. It seems like the version I downloaded may not be compatible with the tuturial code, so I will have to explore that more.</p>
+<p>Today was filled with primarily administrative work. A large bulk of my time was taken by lab safety training, which I was unable to fully complete. Along with this, I was finally able to install Seurat and tinker with the package tutorial. It seems like the version I downloaded may not be compatible with the tutorial code, so I will have to explore that more.</p>
 <div id="completed-3" class="section level4">
 <h4>Completed</h4>
 <pre class="r"><code>Created    Completed  Age Project        Description
@@ -709,8 +717,8 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>State of field for ovarian cancer</li>
 <li>Current treatments and outcomes</li>
 <li>Ovca presents very late. The internal location of the cancer and general lack of screening options lead to most cases being diagnosed at a later stage than many other cancers would.</li>
-<li>Treatment options have largely focused on sugical debulking and platinum based chemotherapy.</li>
-<li>Risk factors are inherited: germline mutations in breast cancer susceptible genes (e.g. brca), nulliparity, infertility, enometriosis, obesity, age, potentially perineal talc.</li>
+<li>Treatment options have largely focused on surgical debulking and platinum based chemotherapy.</li>
+<li>Risk factors are inherited: germ line mutations in breast cancer susceptible genes (e.g. brca), nulliparity, infertility, endometriosis, obesity, age, potentially perineal talc.</li>
 <li>Reducing factors that have been found to be potentially significant are gravidity, oral contraceptive use, regular use of aspirin, and nsaids.</li>
 <li>Currently, population screening in ovca has not been found to be effective.</li>
 <li>Epithelial ovarian cancer accounts for 95% of ovarian malignancies</li>
@@ -719,9 +727,9 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>It is believed fallopian tube epithelium is the possible site for tumor initiation.</li>
 <li>Mutations in p53 are seen in +90% cases of HGSOC</li>
 <li>p53 mutations and brca inactivation lead to high numbers of copy variation.</li>
-<li>HGSOC has 4 prognostic subtypes: differntiated, immunoreactive, mesenchymal, and proliferative</li>
-<li>Immunoreactive is considered to have the best overall survivial while mesenchymal has the worst.</li>
-<li>Ovca cells also overexpress folate and mesothelin which have been targest for antibody therapy.</li>
+<li>HGSOC has 4 prognostic subtypes: differentiated, immunoreactive, mesenchymal, and proliferative</li>
+<li>Immunoreactive is considered to have the best overall survival while mesenchymal has the worst.</li>
+<li>Ovca cells also over express folate and mesothelin which have been targets for antibody therapy.</li>
 <li>LGSOC is seen in about 10% of cases</li>
 <li>LGSOC is considered to develop in a pathway which is very distinct from HGSOC</li>
 <li>B-Raf and KRAS mutations are the most commonly present in LGSOC</li>
@@ -784,25 +792,25 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>pairing drugs does not improve outcomes.</li>
 <li>IP chemo is often used due to the tight localization of ovca in the abdomen</li>
 <li>hyperthermic IP chemo is currently being explored with reasonable results</li>
-<li>Treatment after recurrence follows several judgements of benefit.</li>
-<li>Recurrence after a period of over 6mo suggests platnum sensitivity where platinum based chemo would be reapplied</li>
-<li>Shorter intervals of recurrence employ non-platinum based therarpies</li>
+<li>Treatment after recurrence follows several judgments of benefit.</li>
+<li>Recurrence after a period of over 6mo suggests platinum sensitivity where platinum based chemo would be reapplied</li>
+<li>Shorter intervals of recurrence employ non-platinum based therapies</li>
 <li>Current consensus is the use of carboplatin and paclitaxel together every 3wks</li>
-<li>Targeted therarpy has beeng gradually introduced in recent years.</li>
+<li>Targeted therapy has been gradually introduced in recent years.</li>
 <li>Bevacizumab has shown the greatest promise among antiangiogenics being the only one in clinical use.</li>
 <li>PARP inhibitors</li>
 <li>Used as maintenance with platinum therapy at the time of recurrence.</li>
 <li>A trial showed that the key benefit in PFS was driven by the parp inhibitor maintenance therapy.</li>
 <li>Trial from 2018 led to first-line maintenance in brca mutated cases</li>
-<li>Stratified approach to systemtic therapy can be used with bevacizumab after surgery with a switch to maintenance on the basis of brca mutations.</li>
-<li>Immunetherapy is currently being explored on several fronts though none are in clinical practice.</li>
+<li>Stratified approach to systemic therapy can be used with bevacizumab after surgery with a switch to maintenance on the basis of brca mutations.</li>
+<li>Immunotherapy is currently being explored on several fronts though none are in clinical practice.</li>
 <li>ovca has a high expression of PD-L1.</li>
 <li>Checkpoint inhibitors targeting PD-L1/PD1 or CTLA-4 have shown only modest results.</li>
 <li>Autologous cell therapy is also being utilized.</li>
-<li>A variation of this therpay is exploring car-t cells targeting mesothelin</li>
+<li>A variation of this therapy is exploring car-t cells targeting mesothelin</li>
 <li>Vaccines have not worked well due to the highly immunosuppressive cancer environment</li>
 <li>A vaccine targeting survivin is currently being explored</li>
-<li>Additionally, the concept of the patient-specific mutanome is being researched in an effort to develope patient-specific cancer vaccines.</li>
+<li>Additionally, the concept of the patient-specific mutanome is being researched in an effort to develop patient-specific cancer vaccines.</li>
 <li>OCCC and LGSOC are relatively chemoresistant.</li>
 <li>Prevention and screening are currently limited.</li>
 <li>There is no validated screening method for standard practice.</li>
@@ -814,7 +822,7 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 </div>
 <div id="summary-5" class="section level3">
 <h3>Summary</h3>
-<p>I have shifted forcus to begin a comprehensive literature review. I’ve started by taking a look at a review of the current landscape of treatment and outcomes for ovca <span class="citation">(Lheureux, Braunstein, and Oza 2019)</span>. This was helpful to fill many of the holes I have in my general knowledge of cancer biology with the more specific case studyies of ovca. Much of this reinforced the review that Tim has given in our meetings, which was helpful. Along with this, I began to work my way through the Seurat tutorial. I was able to locate the v3 tutorial and pbmc dataset and made it about half way through the written guide. I plan on getting fully through this tomorrow as well as meeting with Tim to discuss some questions I developed from the ovca review.</p>
+<p>I have shifted focus to begin a comprehensive literature review. I’ve started by taking a look at a review of the current landscape of treatment and outcomes for ovca <span class="citation">(Lheureux, Braunstein, and Oza 2019)</span>. This was helpful to fill many of the holes I have in my general knowledge of cancer biology with the more specific case studies of ovca. Much of this reinforced the review that Tim has given in our meetings, which was helpful. Along with this, I began to work my way through the Seurat tutorial. I was able to locate the v3 tutorial and pbmc data set and made it about half way through the written guide. I plan on getting fully through this tomorrow as well as meeting with Tim to discuss some questions I developed from the ovca review.</p>
 <div id="completed-4" class="section level4">
 <h4>Completed</h4>
 <pre class="r"><code>Created    Completed  Age Project        Description
@@ -855,6 +863,7 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 </div>
 <div id="wkly-mtg-w-tim-1" class="section level3">
 <h3>wkly mtg w/ Tim</h3>
+<p>present: chris, tim</p>
 <pre class="r"><code>Description
 --------------------------------------------------------------------------------
 agenda items
@@ -879,10 +888,10 @@ RAD51 mutations acquired resistance
 </ul></li>
 <li>There is no specific focus in the pathology we’re focusing on. OCCC and LGSOC are being considered just as readily as other subtypes.</li>
 <li>Kondrashova 2017 (RAD51 mutations leading to chemoresistance) is potentially a good example of what our research questions will be.</li>
-<li>Tim’s focus is more basic science oriented. Potential applications would be to identify when a pt would be resistant and that they should persue other treatment from the outset.</li>
-<li>All of our findings from this dataset will require wetlab validation</li>
-<li>This dataset is incredibly unique. We should be able to discover something nobody else has.</li>
-<li>Data validation has generally been handeled on the project so far.
+<li>Tim’s focus is more basic science oriented. Potential applications would be to identify when a pt would be resistant and that they should pursue other treatment from the outset.</li>
+<li>All of our findings from this data set will require wetlab validation</li>
+<li>This data set is incredibly unique. We should be able to discover something nobody else has.</li>
+<li>Data validation has generally been handled on the project so far.
 <ul>
 <li>Objective: determine cell type.</li>
 </ul></li>
@@ -895,7 +904,7 @@ RAD51 mutations acquired resistance
 <p>I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/msi and other collaborator work. I have a personal directory in this space along with access to other shared directories.</p>
 <p>The root project directory is:</p>
 <pre class="r"><code>/home/starrt2/</code></pre>
-<p>I have a personal directory under the root. At the same level, there is also a shared directory which includes some content which involves active collaboration.</p>
+<p>I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.</p>
 <pre class="r"><code>/home/starrt2/tasta005</code></pre>
 <p>Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.</p>
 <ul>
@@ -919,8 +928,8 @@ RAD51 mutations acquired resistance
 </div>
 <div id="summary-6" class="section level3">
 <h3>Summary</h3>
-<p>I met with Tim today for our weekly meeting. We discussed some aspects of ovca content that I had been reading to develop my general knowledge. I major element of this conversation that will adjust what my intentions were going forward dealt with the nature of statistically validating the results of our pipeline. My original thought was that there was some need to dig into the backend of the Seurat/cellranger packages to both confirm and optimise the output. It sounds as though this has been done to a degree that Tim is satisfied with and that we can move on to explore questions that are Biological in nature.</p>
-<p>Additionally, I did a little house keeping by establishing the first part of the methods page in my notebook. I explored the MSI project directory for the first time today and recorded some documentation about the file structure and data locations. My expectation is to pull what would be method oriented documentaion from Notes -&gt; Methods or Notes -&gt; Results as these things need to be pinned for repeat use and reference.</p>
+<p>I met with Tim today for our weekly meeting. We discussed some aspects of ovca content that I had been reading to develop my general knowledge. I major element of this conversation that will adjust what my intentions were going forward dealt with the nature of statistically validating the results of our pipeline. My original thought was that there was some need to dig into the backend of the Seurat/cellranger packages to both confirm and optimize the output. It sounds as though this has been done to a degree that Tim is satisfied with and that we can move on to explore questions that are Biological in nature.</p>
+<p>Additionally, I did a little house keeping by establishing the first part of the methods page in my notebook. I explored the MSI project directory for the first time today and recorded some documentation about the file structure and data locations. My expectation is to pull what would be method oriented documentation from Notes -&gt; Methods or Notes -&gt; Results as these things need to be pinned for repeat use and reference.</p>
 <div id="completed-5" class="section level4">
 <h4>Completed</h4>
 <pre class="r"><code>Created    Completed  Age Project  Description
