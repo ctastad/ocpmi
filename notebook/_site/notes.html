@@ -1642,9 +1642,10 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 </table>
 <p>12 tasks</p>
 </div>
-<div id="evolution-of-management-in-the-era-of-precision-medicine-12" class="section level3">
-<h3>Evolution of Management in the Era of Precision Medicine (1/2)</h3>
-<p><span class="citation">(Lheureux, Braunstein, and Oza 2019)</span></p>
+<div id="lheureux2019" class="section level3">
+<h3><span class="citation">(Lheureux, Braunstein, and Oza 2019)</span></h3>
+<div id="evolution-of-management-in-the-era-of-precision-medicine-12" class="section level4">
+<h4>Evolution of Management in the Era of Precision Medicine (1/2)</h4>
 <ul>
 <li>State of field for ovarian cancer</li>
 <li>Current treatments and outcomes</li>
@@ -1668,6 +1669,7 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>Hormone therapy is sometimes used due to the presence of estrogen/progesterone receptors.</li>
 <li>CNAs in p53 are rare, and brca inactivation seem to unrelated to LGSOC</li>
 </ul>
+</div>
 </div>
 <div id="summary-4" class="section level3">
 <h3>Summary</h3>
@@ -1807,9 +1809,10 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 </table>
 <p>13 tasks</p>
 </div>
-<div id="evolution-of-management-in-the-era-of-precision-medicine-22" class="section level3">
-<h3>Evolution of Management in the Era of Precision Medicine (2/2)</h3>
-<p><span class="citation">(Lheureux, Braunstein, and Oza 2019)</span></p>
+<div id="lheureux2019-1" class="section level3">
+<h3><span class="citation">(Lheureux, Braunstein, and Oza 2019)</span></h3>
+<div id="evolution-of-management-in-the-era-of-precision-medicine-22" class="section level4">
+<h4>Evolution of Management in the Era of Precision Medicine (2/2)</h4>
 <ul>
 <li>OCCC or clear cell carcinoma represents about 5% of cases.</li>
 <li>The pathogenesis of OCCC is not well understood.</li>
@@ -1861,6 +1864,7 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>Some biomarkers have been utilized such as HE4 in combination with CA125.</li>
 <li>Another approach has been to evaluate DNA methylation in cfDNA.</li>
 </ul>
+</div>
 </div>
 <div id="summary-5" class="section level3">
 <h3>Summary</h3>
@@ -2527,9 +2531,10 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>I’ve decided to use the IEEE with url csl style taken from the zotero style repository. <span class="citation">(“Zotero Style Repository” 2019)</span></li>
 </ul>
 </div>
-<div id="single-cell-sequencing-in-ovarian-cancer-a-new-frontier-in-precision-medicine" class="section level3">
-<h3>Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine</h3>
-<p><span class="citation">(Winterhoff et al. 2019)</span></p>
+<div id="winterhoff2019" class="section level3">
+<h3><span class="citation">(Winterhoff et al. 2019)</span></h3>
+<div id="single-cell-sequencing-in-ovarian-cancer-a-new-frontier-in-precision-medicine" class="section level4">
+<h4>Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine</h4>
 <p>Key Points</p>
 <ul>
 <li>Intratumor heterogeneity is an inherent property of ovarian cancer, which impacts clinical outcomes</li>
@@ -2545,7 +2550,86 @@ rmarkdown::render_site(&quot;index.Rmd&quot;)</code></pre>
 <li>Evaluation of cell plasticity as it relates to cell type transitions may provide insight into the development of chemoresistance</li>
 <li>Understanding the lineage of the cellular qualities of metastatic dissemination is made possible with scRNA data</li>
 </ul>
+</div>
+</div>
+<div id="using-ancestry-to-find-the-stem-cell" class="section level3">
+<h3>Using Ancestry to find the Stem Cell</h3>
+<p>Question: can we use sequence-based lineage tracing to identify a common progenitor cell expression profile?</p>
+<p>A thought I had while looking at some lit tonight led me to wonder if it’s worth exploring sequence-based cell lineage across individual cells rather than using differential expression patterns as a general means of characterization. I will need to do a dedicated lit search to explore this concept, but I imagine the use of single cell data for lineage tracing is relatively limited. At a minimum, Tim has alluded to the notion that our data set is unique among the ovca model, which would lend itself to a novel application of single cell lineage tracing. Regardless, this could be a relatively significant deviation from their current pipeline, so I will have to discuss it with Tim.</p>
+</div>
+<div id="updated-create_site.r-script" class="section level3">
+<h3>Updated create_site.R Script</h3>
+<p>I made a minor update to the script I use to automate total site rendering to clean up the directory a bit. I don’t have any use in the parent notebook/ directory for individual html files since they are generated in the site render. The <code>ifelse</code> at the end of the script clears these html files from the notebook directory.</p>
+<pre class="r"><code>rmarkdown::render(&quot;index.Rmd&quot;)
+rmarkdown::render(&quot;notes.Rmd&quot;)
+rmarkdown::render(&quot;results.Rmd&quot;)
+rmarkdown::render(&quot;methods.Rmd&quot;)
+rmarkdown::render(&quot;references.Rmd&quot;)
+rmarkdown::render_site(&quot;index.Rmd&quot;)
+
+fl &lt;- Sys.glob(&quot;*.html&quot;)
+
+ifelse(file.exists(fl), file.remove(fl))</code></pre>
+</div>
+<div id="summary-8" class="section level3">
+<h3>Summary</h3>
+<p>I was able to explore a few different fronts today. I put some more work in to polishing my citation management. This is an area I have been woefully lacking in from past experience, so I do not discount the extra work applied to make sure this is at a publication-ready level.</p>
+<p>Additionally, I worked my way through the earliest publication related to the ocpmi project <span class="citation">(Winterhoff et al. 2019)</span>. Through this I was able to develop some insight to the early considerations this group gave to this data as they were only working with 66 individual cells. They offered a broad scope of the advantages single cell tech offers along with pointing me to a few sources that establish the current state of the field.</p>
+<p>Last, I can’t say what generated this thought specifically, but I came across what my limited knowledge of the field would call a good idea. All of our discussions on this data set up to this point have centered on the use of UMI counts and gene expression levels as a means to develop differentiated cell profiles. A consideration I would potentially like to explore is the possibility that we look at sequence level data to identify cell lineage in search of a common progenitor. I have little basis to say if this is a reasonable or even realistic scientific question, but I feel this could be a substantive, novel insight given the nature of our data set. It’s quite possible this approach would require too great an investment in shifting the informatics work toward raw sequence analysis, but I will discuss it with Tim nonetheless.</p>
+<div id="completed-7" class="section level4">
+<h4>Completed</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Created</th>
+<th align="left">Completed</th>
+<th>Age</th>
+<th align="left">Project</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019-05-20</td>
+<td align="left">2019-06-01</td>
+<td>11d</td>
+<td align="left">starrlab.ocpmi</td>
+<td align="left">read starr paper re 1st pt</td>
+</tr>
+<tr class="even">
+<td align="left">2019-05-28</td>
+<td align="left">2019-05-31</td>
+<td>3d</td>
+<td align="left">starrlab</td>
+<td align="left">find alternative to jabref</td>
+</tr>
+<tr class="odd">
+<td align="left">2019-05-30</td>
+<td align="left">2019-05-31</td>
+<td>1d</td>
+<td align="left">starrlab</td>
+<td align="left">update notes regarding citation tools re</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+<td align="left"></td>
+<td align="left">mendeley</td>
+</tr>
+<tr class="odd">
+<td align="left">2019-05-23</td>
+<td align="left">2019-05-31</td>
+<td>8d</td>
+<td align="left">starrlab</td>
+<td align="left">make custom csl</td>
+</tr>
+</tbody>
+</table>
+<p>4 tasks</p>
 <hr />
+<hr />
+</div>
 </div>
 </div>
 </div>

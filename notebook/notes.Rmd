@@ -310,9 +310,10 @@ ID Age Project        Tags           Description                            Urg
 
 12 tasks
 
-### Evolution of Management in the Era of Precision Medicine  (1/2)
 
-[@Lheureux2019]
+###[@Lheureux2019]
+
+#### Evolution of Management in the Era of Precision Medicine  (1/2)
 
 * State of field for ovarian cancer
 * Current treatments and outcomes
@@ -367,9 +368,10 @@ ID Age Project        Tags           Description                            Urg
 
 13 tasks
 
-### Evolution of Management in the Era of Precision Medicine (2/2)
 
-[@Lheureux2019]
+### [@Lheureux2019]
+
+#### Evolution of Management in the Era of Precision Medicine (2/2)
 
 * OCCC or clear cell carcinoma represents about 5% of cases.
 * The pathogenesis of OCCC is not well understood.
@@ -650,9 +652,9 @@ At the risk of seeming indecisive, I've decided to switch citation managers. Giv
 * There are watched folders which will draw sources from any pdf put into them at `starr_lab/ocpmi/ref/`.
 * I've decided to use the IEEE with url csl style taken from the zotero style repository. [@2019]
 
-### Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine
+### [@Winterhoff2019]
 
-[@Winterhoff2019]
+#### Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine
 
 Key Points
 
@@ -669,10 +671,55 @@ Notes
 * Evaluation of cell plasticity as it relates to cell type transitions may provide insight into the development of chemoresistance
 * Understanding the lineage of the cellular qualities of metastatic dissemination is made possible with scRNA data
 
+### Using Ancestry to find the Stem Cell
 
+Question: can we use sequence-based lineage tracing to identify a common progenitor cell expression profile?
+
+A thought I had while looking at some lit tonight led me to wonder if it's worth exploring sequence-based cell lineage across individual cells rather than using differential expression patterns as a general means of characterization. I will need to do a dedicated lit search to explore this concept, but I imagine the use of single cell data for lineage tracing is relatively limited. At a minimum, Tim has alluded to the notion that our data set is unique among the ovca model, which would lend itself to a novel application of single cell lineage tracing. Regardless, this could be a relatively significant deviation from their current pipeline, so I will have to discuss it with Tim.
+
+### Updated create_site.R Script
+
+I made a minor update to the script I use to automate total site rendering to clean up the directory a bit. I don't have any use in the parent notebook/ directory for individual html files since they are generated in the site render. The `ifelse` at the end of the script clears these html files from the notebook directory.
+
+```{r eval=F}
+rmarkdown::render("index.Rmd")
+rmarkdown::render("notes.Rmd")
+rmarkdown::render("results.Rmd")
+rmarkdown::render("methods.Rmd")
+rmarkdown::render("references.Rmd")
+rmarkdown::render_site("index.Rmd")
+
+fl <- Sys.glob("*.html")
+
+ifelse(file.exists(fl), file.remove(fl))
+```
+
+### Summary
+
+I was able to explore a few different fronts today. I put some more work in to polishing my citation management. This is an area I have been woefully lacking in from past experience, so I do not discount the extra work applied to make sure this is at a publication-ready level.
+
+Additionally, I worked my way through the earliest publication related to the ocpmi project [@Winterhoff2019]. Through this I was able to develop some insight to the early considerations this group gave to this data as they were only working with 66 individual cells. They offered a broad scope of the advantages single cell tech offers along with pointing me to a few sources that establish the current state of the field.
+
+Last, I can't say what generated this thought specifically, but I came across what my limited knowledge of the field would call a good idea. All of our discussions on this data set up to this point have centered on the use of UMI counts and gene expression levels as a means to develop differentiated cell profiles. A consideration I would potentially like to explore is the possibility that we look at sequence level data to identify cell lineage in search of a common progenitor. I have little basis to say if this is a reasonable or even realistic scientific question, but I feel this could be a substantive, novel insight given the nature of our data set. It's quite possible this approach would require too great an investment in shifting the informatics work toward raw sequence analysis, but I will discuss it with Tim nonetheless.
+
+#### Completed
+
+Created    Completed  Age Project        Description
+---------- ---------- --- -------------- --------------------------
+2019-05-20 2019-06-01 11d starrlab.ocpmi read starr paper re 1st pt
+2019-05-28 2019-05-31 3d  starrlab       find alternative to jabref
+2019-05-30 2019-05-31 1d  starrlab       update notes regarding citation tools re
+                                         mendeley
+2019-05-23 2019-05-31 8d  starrlab       make custom csl
+
+4 tasks
 
 
 ***
 
+***
+
 # References
+
+
 
