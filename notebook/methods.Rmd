@@ -2,7 +2,7 @@
 title: "Methods"
 author: "Christopher Tastad"
 date: \today
-bibliography: bib.bib
+bibliography: library.bib
 output:
     html_document:
         toc: yes

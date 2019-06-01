@@ -2,7 +2,7 @@
 title: "Notes"
 author: "Christopher Tastad"
 date: \today
-bibliography: bib.bib
+bibliography: library.bib
 output:
     html_document:
         toc: yes
@@ -42,7 +42,6 @@ Focus Options
 ### TODO
 
 
-```{r eval=F}
 
 
 ID  Age   Project        Tags       R Due        Description                Urg
@@ -67,7 +66,6 @@ ID  Age   Project        Tags       R Due        Description                Urg
 
 12 tasks
 
-```
 
 ### Citation packages
 
@@ -98,7 +96,6 @@ Additionally, I plan on establishing a git repo to manage version control and hi
 
 ### TODO
 
-```{r eval=F}
 
 
 ID  Age Project        Tags       R Due        Description                  Urg
@@ -120,7 +117,6 @@ ID  Age Project        Tags       R Due        Description                  Urg
 
 11 tasks
 
-```
 
 ### wkly mtg w/ Tim
 
@@ -154,7 +150,6 @@ My work today included continued focus on getting organized an taking a very del
 
 ### TODO
 
-```{r eval=F}
 
 
 ID  Age Project        Tags       R Due        Description                  Urg
@@ -184,7 +179,6 @@ ID  Age Project        Tags       R Due        Description                  Urg
 
 18 tasks
 
-```
 
 ### Citations
 
@@ -206,7 +200,6 @@ I was able to round out much of my organizational setup today. I feel confident 
 
 #### Completed
 
-```{r eval=F}
 
 Created    Completed  Age Project        R Due        Description
 ---------- ---------- --- -------------- - ---------- --------------------------
@@ -227,7 +220,6 @@ Created    Completed  Age Project        R Due        Description
 2019-05-22 2019-05-23 1d  starrlab                    create agenda field
 
 11 tasks
-```
 
 ***
 
@@ -235,7 +227,6 @@ Created    Completed  Age Project        R Due        Description
 
 ### TODO
 
-```{r eval=F}
 
 ID  Age Project        Tag            Description                           Urg
 --- --- -------------- -------------- ------------------------------------- ----
@@ -253,7 +244,6 @@ ID  Age Project        Tag            Description                           Urg
 330 20h starrlab       w              agenda items                           1.8
 
 11 tasks
-```
 
 ### create_site Script
 
@@ -275,7 +265,6 @@ Today was filled with primarily administrative work. A large bulk of my time was
 
 #### Completed
 
-```{r eval=F}
 
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
@@ -295,7 +284,6 @@ Created    Completed  Age Project        Description
 2019-05-20 2019-05-24 4d  starrlab.ocpmi install surat
 
 11 tasks
-```
 
 ***
 
@@ -303,7 +291,6 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
-```{r eval=F}
 
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
@@ -322,9 +309,10 @@ ID Age Project        Tags           Description                            Urg
 71 6d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59            1.93
 
 12 tasks
-```
 
-### Evolution of Management in the Era of Precision Medicine (1/2)
+### Evolution of Management in the Era of Precision Medicine  (1/2)
+
+[@Lheureux2019]
 
 * State of field for ovarian cancer
 * Current treatments and outcomes
@@ -359,7 +347,6 @@ Just worked my way through the above summary today. Will continue and complete r
 
 ### TODO
 
-```{r eval=F}
 
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
@@ -379,9 +366,10 @@ ID Age Project        Tags           Description                            Urg
 71 7d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59            1.94
 
 13 tasks
-```
 
 ### Evolution of Management in the Era of Precision Medicine (2/2)
+
+[@Lheureux2019]
 
 * OCCC or clear cell carcinoma represents about 5% of cases.
 * The pathogenesis of OCCC is not well understood.
@@ -448,14 +436,12 @@ I have shifted focus to begin a comprehensive literature review. I've started by
 
 #### Completed
 
-```{r eval=F}
 
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------
 2019-05-20 2019-05-28 7d  starrlab.ocpmi find ovca review re cur treatment
 
 1 task
-```
 
 ***
 
@@ -463,7 +449,6 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
-```{r eval=F}
 ID Age  Project        Tags           Description                           Urg
 -- ---- -------------- -------------- ------------------------------------- ----
 75 5d   starrlab                      agenda items [3]                      2.03
@@ -486,14 +471,12 @@ ID Age  Project        Tags           Description                           Urg
 96 2min starrlab.ocpmi computer n     run seurat with pbmc data              1.9
 
 17 tasks
-```
 
 
 ### wkly mtg w/ Tim
 
 present: chris, tim
 
-```{r eval=F}
 Description
 --------------------------------------------------------------------------------
 agenda items
@@ -507,7 +490,6 @@ agenda items
 RAD51 mutations acquired resistance
 
 1 task
-```
 
 #### mtg notes
 
@@ -549,6 +531,7 @@ Processed data can be found in the hiseq folder under data_release. This data is
 /home/starrt2/data_release/umgc/hiseq
 ```
 
+
 The Analysis directory contains the source data
 
 * illumina-basicQC # quality control data
@@ -572,14 +555,12 @@ Additionally, I did a little house keeping by establishing the first part of the
 
 #### Completed
 
-```{r eval=F}
 Created    Completed  Age Project  Description
 ---------- ---------- --- -------- ----------------------------
 2019-05-28 2019-05-29 1d  starrlab fix god damn git issue
 2019-05-29 2019-05-29 2h  starrlab fix hostname issue w/ mesabi
 
 2 tasks
-```
 
 ***
 
@@ -587,7 +568,6 @@ Created    Completed  Age Project  Description
 
 ### TODO
 
-```{r eval=F}
 
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
@@ -609,7 +589,6 @@ ID Age Project        Tags           Description                            Urg
 95 20h starrlab.ocpmi computer n     run seurat with pbmc data               1.9
 
 15 tasks
-```
 
 ### Seurat Tutorial pbmc3k
 
@@ -624,7 +603,6 @@ Briefly, I wrapped up safety training today, so that is all taken care of. The r
 
 #### Completed
 
-```{r eval=F}
 
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
@@ -635,7 +613,6 @@ Created    Completed  Age Project        Description
 2019-05-29 2019-05-30 1d  starrlab.ocpmi run seurat with pbmc data
 
 4 tasks
-```
 
 ***
 
@@ -643,7 +620,6 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
-```{r eval=F}
 ID Age Project        Tags       Description                                Urg
 -- --- -------------- ---------- ------------------------------------------ ----
 73 8d  starrlab                  agenda items [3]                           2.04
@@ -665,7 +641,27 @@ ID Age Project        Tags       Description                                Urg
 69 11d starrlab.ocpmi lit w      read venteicher - CNV paper                1.96
 
 15 tasks
-```
+
+### Mendeley
+
+At the risk of seeming indecisive, I've decided to switch citation managers. Given my use if the BibTex file format, it is effectively painless to switch. JabRef showed some promise but presented a few bugs related to database calls which would render much of the value of using it worthless. Mendeley has both a native linux application along with a web import tool for firefox. This is the only major citation tool I've come across that combines those two things. Here are a few key features of my use:
+
+* All content will still be synced back to a BibTex file name `library.bib` located under the `starr_lab/ocpmi/notebook/` subdirectory
+* There are watched folders which will draw sources from any pdf put into them at `starr_lab/ocpmi/ref/`.
+* I've decided to use the IEEE with url csl style taken from the zotero style repository. [@2019]
+
+### Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine
+
+[@Winterhoff2019]
+
+Key Points
+
+* Intratumor heterogeneity is an inherent property of ovarian cancer, which impacts clinical outcomes
+* SC sequencing tech enables characterization of intratumor heterogeneity in ovarian cancer
+* To date, single-cell studies on ovarian cancers are scarce, which limits the opportunity to investigate effects on clinical outcomes
+* Larger data sets are needed to establish potential associations between the unique information captured by SC sequencing and clinically relevant outcomes in ovca
+
+Notes
 
 
 
