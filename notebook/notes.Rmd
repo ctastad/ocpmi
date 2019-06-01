@@ -637,7 +637,39 @@ Created    Completed  Age Project        Description
 4 tasks
 ```
 
+***
+
+## 31
+
+### TODO
+
+```{r eval=F}
+ID Age Project        Tags       Description                                Urg
+-- --- -------------- ---------- ------------------------------------------ ----
+73 8d  starrlab                  agenda items [3]                           2.04
+72 8d  starrlab       computer w make custom csl                            1.94
+83 3d  starrlab       computer n find alternative to jabref                 1.92
+91 1d  starrlab       computer n review pca concepts                        1.91
+92 1d  starrlab       computer n compare default seurat tutorial to         1.91
+                                 starrlab protocol
+93 1d  starrlab       computer n deep dive into default seurat analysis     1.91
+94 1d  starrlab       computer n update notes regarding citation tools re   1.91
+                                 mendeley
+81 4d  starrlab.ocpmi lit n      read papalexi 2018 [2]                     2.82
+82 4d  starrlab.ocpmi lit w      read macintyre 2018 [2]                    2.82
+84 3d  starrlab.ocpmi lit s      read sahin 2017 [1]                        2.72
+65 11d starrlab.ocpmi lit w      read starr paper re 1st pt                 1.96
+66 11d starrlab.ocpmi lit w      read ocpmi summary                         1.96
+67 11d starrlab.ocpmi computer w run surat tutorial w/ pt 59                1.96
+68 11d starrlab.ocpmi lit w      read single cell paper zheng 2017          1.96
+69 11d starrlab.ocpmi lit w      read venteicher - CNV paper                1.96
+
+15 tasks
+```
+
+
 
 ***
 
 # References
+
