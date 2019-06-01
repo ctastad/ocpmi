@@ -663,6 +663,13 @@ Key Points
 
 Notes
 
+* They claim they found genes associated with ovca stem cells.
+* When they evaluated based on molecular eoc cancer subtypes, all subtypes were present.
+* Studying the immune microenvironment of a tumor becomes more feasible with scRNA sequencing
+* Evaluation of cell plasticity as it relates to cell type transitions may provide insight into the development of chemoresistance
+* Understanding the lineage of the cellular qualities of metastatic dissemination is made possible with scRNA data
+
+
 
 
 ***

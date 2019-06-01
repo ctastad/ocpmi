@@ -4,3 +4,7 @@ rmarkdown::render("results.Rmd")
 rmarkdown::render("methods.Rmd")
 rmarkdown::render("references.Rmd")
 rmarkdown::render_site("index.Rmd")
+
+fl <- Sys.glob("*.html")
+
+ifelse(file.exists(fl), file.remove(fl))
