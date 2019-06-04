@@ -479,6 +479,9 @@ ID Age  Project        Tags           Description                           Urg
 
 present: chris, tim
 
+```{r eval=F}
+
+
 Description
 --------------------------------------------------------------------------------
 agenda items
@@ -492,6 +495,7 @@ agenda items
 RAD51 mutations acquired resistance
 
 1 task
+```
 
 #### mtg notes
 
@@ -717,9 +721,68 @@ Created    Completed  Age Project        Description
 
 ***
 
+# June
+
+## 3
+
+### TODO
+
+ID Age Project        Tags       Description                                Urg
+-- --- -------------- ---------- ------------------------------------------ ----
+52 10d starrlab                  agenda items [2]                           1.95
+74 2d  starrlab       computer n add notes about cancer stem cell database  1.91
+49 13d starrlab.ocpmi lit w      read tirosh 2016 [2]                       2.87
+56 7d  starrlab.ocpmi lit n      read papalexi 2018 [2]                     2.84
+57 6d  starrlab.ocpmi lit w      read macintyre 2018 [2]                    2.83
+58 5d  starrlab.ocpmi lit s      read sahin 2017 [1]                        2.73
+67 2d  starrlab.ocpmi lit n      do lit search on cell ancestry [1]         2.71
+46 13d starrlab.ocpmi lit w      read ocpmi summary                         1.97
+47 13d starrlab.ocpmi computer w run surat tutorial w/ pt 59                1.97
+48 13d starrlab.ocpmi lit w      read single cell paper zheng 2017          1.97
+63 3d  starrlab.ocpmi computer n review pca concepts                        1.92
+64 3d  starrlab.ocpmi computer n compare default seurat tutorial to         1.92
+                                 starrlab protocol
+65 3d  starrlab.ocpmi computer w deep dive into default seurat analysis     1.92
+69 2d  starrlab.ocpmi lit n      find cancer stem cell review               1.91
+
+14 tasks
+
+### Cancer Stem Cell Database
+
+http://www.csctt.org/ [@csctt2019]
+
+Tim sent me a link to a possible resource last week that could be useful in building references for exploring the cancer stem cell concept.
+
+### LitSrch re Cancer Stem Cell
+
+I've done some extremely high level review from the wikipedia article on CSCs [@csc_wiki]. This pointed me to several papers of relevance that I hope to look at in future exploration of the topic.
+
+#### Notes
+
+* While there has been significant research around the topic, CSCs remain a debated idea.
+* There are currently a few models for CSC tumor propogation
+    + The CSC model
+        - This is also known as the hierachrical model
+        - CSCs are a tumorigenic and biologically distinct subpopulation [@Beck2013].
+        - Two defining features: ability to self-renew, capacity to generate pro-growth progeny
+        - This model suggests only certain cells have the ability to drive the progression of cancer
+    + Stochastic model
+        - Also known as clonal evolution model
+        - This model suggests the necessary mutations to acheive CSC status can happen to any cell at random.
+        - All tumor cells retain the ability to develop plasticity and self-renew/differentiate [@Kreso2014].
+        - Elements of resistance and fitness accumulate over time [@Beck2013].
+        - CSCs with a growth advantage outpeform other cells [@Barabe2007].
+    + CSC Immunology model
+        - Both stem cell and CSCs possess qualities that make them resistant to immune survillance [@MacCalli2014].
+        - CSCs may exist at all times but only propogate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity [@Bruttel2014].
+
+
+
+
 ***
 
 # References
+
 
 
 
