@@ -775,13 +775,44 @@ I've done some extremely high level review from the wikipedia article on CSCs [@
     + CSC Immunology model
         - Both stem cell and CSCs possess qualities that make them resistant to immune survillance [@MacCalli2014].
         - CSCs may exist at all times but only propogate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity [@Bruttel2014].
+* Debate
+    + The existence of CSCs is still under debate because no consistently definable characteristcs have been found [@Gupta2009].
+    + The origin of CSCs is also a major topic.
+        - Are these disregulated normal SCs
+        - Are they instead a more specialized population that gained the ability to self-renew.
+        - Is it something else entirely due to the modular plasticity cancer cells can show [@Nouri2017].
+* Modeling
+    + There has been some mathematical modeling taken to the growth of these cells.
+    + The cell compartment method is one approach [@Ganguly2006].
+    + Other models may exist and are worth exploring in the context of highlighting CSC mutation lineage.
+* Origin
+    + stem cell mutation
+        - stem cell niche populations develope mutations which derail regular progression and can be past to progeny [@Wang2009].
+    + adult stem cells
+        - Stem cell populations in tissue with high rates of turnover experience frequent cell divisions. Increated liklihood of mutations leads to accumulated genetic defects that drive cancer initiation. [@Lopez-Lazaro2018]
+    + De-differentiation
+        - Cells are driven back to a state of stemness through some external factor.
 
+### Summary
 
+I focused mostly on lit search efforts today. I want to develop a better understanding of the current landscape of the CSC hypothesis, so I have taken a broad overview of different findings. I started with the wikipedia article on the subject and have branched out to several other major papers in the field. A few points of interest are the controversies around origin and characterization. There seems to be a relatively wide interpretation of CSCs in terms of typing and behavior. This is obviously due to the relatively abstract nature of stemness and cell development. Talking with Tim today, there are some limitations since we only have expression data. One consideration is that our pipeline is using a known reference sequence database to process the output. Given this, there may be unknown mutations that could serve as markers of both CSC identity and possible lineage association. Screening for these in a cell specific way could bring about interesting findings.
+
+#### Completed
+
+Created    Completed  Age Project        Description
+---------- ---------- --- -------------- ---------------------------------------
+2019-06-01 2019-06-03 2d  starrlab       add notes about cancer stem cell
+                                         database
+2019-06-01 2019-06-03 2d  starrlab.ocpmi litsrch re cancer stem cell review
+
+2 tasks
 
 
 ***
 
 # References
+
+
 
 
 

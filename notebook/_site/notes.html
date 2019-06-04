@@ -418,6 +418,14 @@ div.tocify {
 
 <pre class="r"><code>library(devtools)
 library(Seurat)</code></pre>
+<pre><code>## Registered S3 method overwritten by 'R.oo':
+##   method        from       
+##   throw.default R.methodsS3</code></pre>
+<pre><code>## Registered S3 methods overwritten by 'ggplot2':
+##   method         from 
+##   [.quosures     rlang
+##   c.quosures     rlang
+##   print.quosures rlang</code></pre>
 <div id="may-2019" class="section level1">
 <h1>May 2019</h1>
 <div id="section" class="section level2">
@@ -2817,7 +2825,80 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 <li>CSCs may exist at all times but only propogate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity <span class="citation">(Bruttel and Wischhusen 2014)</span>.</li>
 </ul></li>
 </ul></li>
+<li>Debate
+<ul>
+<li>The existence of CSCs is still under debate because no consistently definable characteristcs have been found <span class="citation">(Gupta, Chaffer, and Weinberg 2009)</span>.</li>
+<li>The origin of CSCs is also a major topic.
+<ul>
+<li>Are these disregulated normal SCs</li>
+<li>Are they instead a more specialized population that gained the ability to self-renew.</li>
+<li>Is it something else entirely due to the modular plasticity cancer cells can show <span class="citation">(Nouri et al. 2017)</span>.</li>
+</ul></li>
+</ul></li>
+<li>Modeling
+<ul>
+<li>There has been some mathematical modeling taken to the growth of these cells.</li>
+<li>The cell compartment method is one approach <span class="citation">(Ganguly and Puri 2006)</span>.</li>
+<li>Other models may exist and are worth exploring in the context of highlighting CSC mutation lineage.</li>
+</ul></li>
+<li>Origin
+<ul>
+<li>stem cell mutation
+<ul>
+<li>stem cell niche populations develope mutations which derail regular progression and can be past to progeny <span class="citation">(Y. Wang et al. 2009)</span>.</li>
+</ul></li>
+<li>adult stem cells
+<ul>
+<li>Stem cell populations in tissue with high rates of turnover experience frequent cell divisions. Increated liklihood of mutations leads to accumulated genetic defects that drive cancer initiation. <span class="citation">(López-Lázaro 2018)</span></li>
+</ul></li>
+<li>De-differentiation
+<ul>
+<li>Cells are driven back to a state of stemness through some external factor.</li>
+</ul></li>
+</ul></li>
 </ul>
+</div>
+</div>
+<div id="summary-9" class="section level3">
+<h3>Summary</h3>
+<p>I focused mostly on lit search efforts today. I want to develop a better understanding of the current landscape of the CSC hypothesis, so I have taken a broad overview of different findings. I started with the wikipedia article on the subject and have branched out to several other major papers in the field. A few points of interest are the controversies around origin and characterization. There seems to be a relatively wide interpretation of CSCs in terms of typing and behavior. This is obviously due to the relatively abstract nature of stemness and cell development. Talking with Tim today, there are some limitations since we only have expression data. One consideration is that our pipeline is using a known reference sequence database to process the output. Given this, there may be unknown mutations that could serve as markers of both CSC identity and possible lineage association. Screening for these in a cell specific way could bring about interesting findings.</p>
+<div id="completed-8" class="section level4">
+<h4>Completed</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Created</th>
+<th align="left">Completed</th>
+<th>Age</th>
+<th align="left">Project</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019-06-01</td>
+<td align="left">2019-06-03</td>
+<td>2d</td>
+<td align="left">starrlab</td>
+<td align="left">add notes about cancer stem cell</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+<td align="left"></td>
+<td align="left">database</td>
+</tr>
+<tr class="odd">
+<td align="left">2019-06-01</td>
+<td align="left">2019-06-03</td>
+<td>2d</td>
+<td align="left">starrlab.ocpmi</td>
+<td align="left">litsrch re cancer stem cell review</td>
+</tr>
+</tbody>
+</table>
+<p>2 tasks</p>
 <hr />
 </div>
 </div>
@@ -2833,7 +2914,7 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 <p>Barabe, F., James A. Kennedy, Kristin J. Hope, and John E. Dick. 2007. “Modeling the Initiation and Progression of Human Acute Leukemia in Mice.” <em>Science</em> 316 (5824): 600–604. doi:<a href="https://doi.org/10.1126/science.1139851">10.1126/science.1139851</a>.</p>
 </div>
 <div id="ref-Beck2013">
-<p>Beck, Benjamin, and Cédric Blanpain. 2013. “Unravelling cancer stem cell potential.” doi:<a href="https://doi.org/10.1038/nrc3597">10.1038/nrc3597</a>.</p>
+<p>Beck, Benjamin, and Cédric Blanpain. 2013. “Unravelling cancer stem cell potential.” <em>Nature Reviews Cancer</em> 13 (10): 727–38. doi:<a href="https://doi.org/10.1038/nrc3597">10.1038/nrc3597</a>.</p>
 </div>
 <div id="ref-citations">
 <p>“Bibliographies and Citations.” n.d. <a href="https://rmarkdown.rstudio.com/authoring{\_}bibliographies{\_}and{\_}citations.html" class="uri">https://rmarkdown.rstudio.com/authoring{\_}bibliographies{\_}and{\_}citations.html</a>.</p>
@@ -2853,26 +2934,41 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 <div id="ref-2019b">
 <p>“Doi2bib.” 2019. <a href="https://www.doi2bib.org/bib/https://doi.org/10.1038/ncomms14049" class="uri">https://www.doi2bib.org/bib/https://doi.org/10.1038/ncomms14049</a>.</p>
 </div>
+<div id="ref-Ganguly2006">
+<p>Ganguly, R., and I. K. Puri. 2006. “Mathematical model for the cancer stem cell hypothesis.” <em>Cell Proliferation</em> 39 (1): 3–14. doi:<a href="https://doi.org/10.1111/j.1365-2184.2006.00369.x">10.1111/j.1365-2184.2006.00369.x</a>.</p>
+</div>
 <div id="ref-2019d">
 <p>“Get Started.” 2019. <a href="https://satijalab.org/seurat/get{\_}started.html" class="uri">https://satijalab.org/seurat/get{\_}started.html</a>.</p>
+</div>
+<div id="ref-Gupta2009">
+<p>Gupta, Piyush B., Christine L. Chaffer, and Robert A. Weinberg. 2009. “Cancer stem cells: mirage or reality?” <em>Nature Medicine</em> 15 (9): 1010–2. doi:<a href="https://doi.org/10.1038/nm0909-1010">10.1038/nm0909-1010</a>.</p>
 </div>
 <div id="ref-BibEntry2019May">
 <p>“How can I force R markdown / LaTeX to display ’note’ field in bibliography (display additional information)?” 2019. <a href="https://stackoverflow.com/questions/42417659/how-can-i-force-r-markdown-latex-to-display-note-field-in-bibliography-disp" class="uri">https://stackoverflow.com/questions/42417659/how-can-i-force-r-markdown-latex-to-display-note-field-in-bibliography-disp</a>.</p>
 </div>
 <div id="ref-Kreso2014">
-<p>Kreso, Antonija, and John E. Dick. 2014. “Evolution of the cancer stem cell model.” doi:<a href="https://doi.org/10.1016/j.stem.2014.02.006">10.1016/j.stem.2014.02.006</a>.</p>
+<p>Kreso, Antonija, and John E. Dick. 2014. “Evolution of the Cancer Stem Cell Model.” <em>Cell Stem Cell</em> 14 (3): 275–91. doi:<a href="https://doi.org/10.1016/j.stem.2014.02.006">10.1016/j.stem.2014.02.006</a>.</p>
 </div>
 <div id="ref-Lheureux2019">
 <p>Lheureux, Stephanie, Marsela Braunstein, and Amit M Oza. 2019. “Epithelial ovarian cancer: Evolution of management in the era of precision medicine.” <em>CA: A Cancer Journal for Clinicians</em>, May. Wiley, caac.21559. doi:<a href="https://doi.org/10.3322/caac.21559">10.3322/caac.21559</a>.</p>
 </div>
+<div id="ref-Lopez-Lazaro2018">
+<p>López-Lázaro, Miguel. 2018. “The stem cell division theory of cancer.” <em>Critical Reviews in Oncology/Hematology</em> 123 (March): 95–113. doi:<a href="https://doi.org/10.1016/j.critrevonc.2018.01.010">10.1016/j.critrevonc.2018.01.010</a>.</p>
+</div>
 <div id="ref-MacCalli2014">
 <p>Maccalli, Cristina, Andrea Volontè, Carolina Cimminiello, and Giorgio Parmiani. 2014. “Immunology of cancer stem cells in solid tumours. A review.” <em>European Journal of Cancer</em> 50 (3): 649–55. doi:<a href="https://doi.org/10.1016/j.ejca.2013.11.014">10.1016/j.ejca.2013.11.014</a>.</p>
+</div>
+<div id="ref-Nouri2017">
+<p>Nouri, Mannan, Josselin Caradec, Amy Anne Lubik, Na Li, Brett G. Hollier, Mandeep Takhar, Manuel Altimirano-Dimas, et al. 2017. “Therapy-induced developmental reprogramming of prostate cancer cells and acquired therapy resistance.” <em>Oncotarget</em> 8 (12). doi:<a href="https://doi.org/10.18632/oncotarget.14850">10.18632/oncotarget.14850</a>.</p>
 </div>
 <div id="ref-rmarkdown_cheatsheet">
 <p>“Rmarkdown Cheatsheet.” n.d. <em>Rmarkdown</em>. <a href="https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf" class="uri">https://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf</a>.</p>
 </div>
 <div id="ref-ocpmi_git">
 <p>“Tasta005/Ocpmi.” 2019. <a href="https://github.umn.edu/tasta005/ocpmi" class="uri">https://github.umn.edu/tasta005/ocpmi</a>.</p>
+</div>
+<div id="ref-Wang2009">
+<p>Wang, Yuan, Jiong Yang, Huarui Zheng, Gerald J. Tomasek, Peng Zhang, Paul E. McKeever, Eva Y.H.P. Lee, and Yuan Zhu. 2009. “Expression of Mutant p53 Proteins Implicates a Lineage Relationship between Neural Stem Cells and Malignant Astrocytic Glioma in a Murine Model.” <em>Cancer Cell</em> 15 (6): 514–26. doi:<a href="https://doi.org/10.1016/j.ccr.2009.04.001">10.1016/j.ccr.2009.04.001</a>.</p>
 </div>
 <div id="ref-Winterhoff2019">
 <p>Winterhoff, Boris, Shobhana Talukdar, Zenas Chang, Jinhua Wang, and Timothy K. Starr. 2019. “Single-cell sequencing in ovarian cancer.” <em>Current Opinion in Obstetrics and Gynecology</em> 31 (1): 49–55. doi:<a href="https://doi.org/10.1097/GCO.0000000000000516">10.1097/GCO.0000000000000516</a>.</p>
