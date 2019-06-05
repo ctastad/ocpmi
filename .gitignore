@@ -12,3 +12,5 @@ results/
 *.rds
 *.png
 *.csl
+*.tsv
+*.mtx
