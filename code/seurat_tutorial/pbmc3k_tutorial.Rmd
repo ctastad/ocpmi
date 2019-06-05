@@ -4,6 +4,8 @@ output:
   html_document:
     df_print: kable
     theme: paper
+    toc: yes
+    toc_float: yes
 date: 'Compiled: `r format(Sys.Date(), "%B %d, %Y")`'
 ---
 ***
@@ -55,6 +57,8 @@ dense.size / sparse.size
 ```
 </details>
 \
+
+Click above to unfold
 
 ### Standard pre-processing workflow
 
@@ -177,6 +181,8 @@ pbmc <- ScaleData(object = pbmc, vars.to.regress = 'percent.mt')
 However, particularly for advanced users who would like to use this functionality, we strongly recommend the use of our new normalization workflow, `sctransform`. The method is described in our recent [preprint](https://www.biorxiv.org/content/10.1101/576827v2), with a separate vignette using Seurat v3 [here](https://www.dropbox.com/s/r84d0a4b4mihltf/sctransform_vignette.pdf). As with `ScaleData`, the function `SCTransform` also includes a `vars.to.regress` parameter.
 </details>
 \
+
+Click above to unfold
 
 ***
 

@@ -13,6 +13,8 @@ output:
 ```{r}
 library(devtools)
 library(Seurat)
+library(knitr)
+library(kableExtra)
 
 ```
 
@@ -814,29 +816,34 @@ Created    Completed  Age Project        Description
 ### TODO
 
 
-ID Age Project        Tags       Description                                Urg
--- --- -------------- ---------- ------------------------------------------ ----
-52 11d starrlab                  agenda items [3]                           2.06
-49 2w  starrlab.ocpmi lit        read tirosh 2016 [2]                       2.78
-55 8d  starrlab.ocpmi lit        read papalexi 2018 [2]                     2.74
-56 7d  starrlab.ocpmi lit        read macintyre 2018 [2]                    2.74
-48 2w  starrlab.ocpmi lit        read zheng 2017 [1]                        2.68
-57 6d  starrlab.ocpmi lit        read sahin 2017 [1]                        2.63
-65 3d  starrlab.ocpmi lit        litsrch re genetic lineage tracing method  2.62
-                                 [1]
-47 2w  starrlab.ocpmi computer w run surat tutorial w/ pt 59                1.98
-62 5d  starrlab.ocpmi computer n review pca concepts                        1.93
-63 4d  starrlab.ocpmi computer n compare default seurat tutorial to         1.92
-                                 starrlab protocol
-64 4d  starrlab.ocpmi computer w deep dive into default seurat analysis     1.92
-46 2w  starrlab.ocpmi lit        read ocpmi summary                         1.88
-77 19h starrlab.ocpmi lit        find list of CSC markers                    1.8
+ID Age Project Tags   Description                                           Urg
+-- --- ------- ------ ----------------------------------------------------- ----
+49 2w  lab     lit    read tirosh 2016 [2]                                  2.78
+55 8d  lab     lit    read papalexi 2018 [2]                                2.74
+56 7d  lab     lit    read macintyre 2018 [2]                               2.74
+48 2w  lab     lit    read zheng 2017 [1]                                   2.68
+57 7d  lab     lit    read sahin 2017 [1]                                   2.64
+65 3d  lab     lit    litsrch re genetic lineage tracing method [1]         2.62
+52 11d lab            agenda items [3]                                      2.06
+47 2w  lab     comp w run surat tutorial w/ pt 59                           1.98
+62 5d  lab     comp n review pca concepts                                   1.93
+63 4d  lab     comp n compare default seurat tutorial to starrlab protocol  1.92
+64 4d  lab     comp w deep dive into default seurat analysis                1.92
+46 2w  lab     lit    read ocpmi summary                                    1.88
+77 20h lab     lit    find list of CSC markers                               1.8
 
 13 tasks
+
+### Summary
+
+I didn't get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seemlessly run on MSI.
+
 
 ***
 
 # References
+
+
 
 
 
