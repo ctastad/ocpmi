@@ -838,10 +838,69 @@ ID Age Project Tags   Description                                           Urg
 
 I didn't get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seemlessly run on MSI.
 
+***
+
+## 5
+
+### TODO
+
+ID Age  Project Tags   Description                                          Urg
+-- ---- ------- ------ ---------------------------------------------------- ----
+49 2w   lab     lit    read tirosh 2016 [2]                                 2.78
+55 9d   lab     lit    read papalexi 2018 [2]                               2.75
+56 8d   lab     lit    read macintyre 2018 [2]                              2.74
+76 2d   lab     lit    read konrashova 2017 [2]                             2.71
+48 2w   lab     lit    read zheng 2017 [1]                                  2.68
+57 8d   lab     lit    read sahin 2017 [1]                                  2.64
+65 4d   lab     lit    litsrch re genetic lineage tracing method [1]        2.62
+47 2w   lab     comp w run surat tutorial w/ pt 59                          1.98
+62 6d   lab     comp n review pca concepts                                  1.93
+63 5d   lab     comp n compare default seurat tutorial to starrlab protocol 1.93
+64 5d   lab     comp w deep dive into default seurat analysis               1.93
+84 20h  lab     comp n figure out remote vim setup                           1.9
+89 1min lab     comp n send vacation dates to tim                            1.9
+46 2w   lab     lit    read ocpmi summary                                   1.88
+77 1d   lab     lit    find list of CSC markers                             1.81
+52 12d  lab            agenda items                                         1.07
+
+16 tasks
+
+
+### wkly mtg w/ Tim
+
+present: chris, tim
+
+```{r eval=F}
+Description
+--------------------------------------------------------------------------------
+agenda items
+  2019-05-28 discuss vacation
+  2019-06-01 can we use sequence-based lineage tracing to identify a common
+progenitor cell expression profile
+  2019-06-03 is the JGO article just a couple poster abstracts?
+  2019-06-05 discuss seurat output
+
+1 task
+```
+
+#### mtg notes
+
+* We discussed the nature of the Seurat output to some degree
+    + I had been wondering how Tim came about the specifications to the metrics he used in his Seurat analysis file.
+    + He has largely used the default params other outside of a few specific cases
+    + These specifications and their justifications are all detailed in the Single Cell RNAseq Analysis protocol document in my `methods` folder.
+    + One thing he mentioned would be an area I could assist him with is the way we fine tune these params.
+    + Isaac is working on this to some extent by evaluating the 3 methods available for `Identification of highly variable features`.
+        - So far, he's found that there is a notable difference in the genes identified, but the clustering output is relatively similar.
+    + Additionally, we discussed the broad strokes of concepts behind the idea of CSCs. There is a great deal of ambiguity here, and we didn't really arrive at any objective conclusions. To some extent, I just needed to work through the ideas with someone else. I will need to really formulate a sense of this for any comprehensive experimentation which leverages this concept.
+    + This was a subpoint but an important realization: **the 10x do not include full coverage.** This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specfics.
+
+
 
 ***
 
 # References
+
 
 
 
