@@ -896,6 +896,21 @@ progenitor cell expression profile
     + Additionally, we discussed the broad strokes of concepts behind the idea of CSCs. There is a great deal of ambiguity here, and we didn't really arrive at any objective conclusions. To some extent, I just needed to work through the ideas with someone else. I will need to really formulate a sense of this for any comprehensive experimentation which leverages this concept.
     + This was a subpoint but an important realization: **the 10x do not include full coverage.** This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specfics.
 
+### Remote MSI Setup
+
+I've reached somewhat of a hang up in my development environment. I've yet to work in a centos, and I'm generally unfamiliar with the msi setup. So far, I've been able to make sense of my home directory in my personal instance and load the R console. Additionally, I've been able to get the installation of packages going and have a process running over night in tmux. 
+
+The challenge I see stems from the combination of developing in an Rstudio-like environment that allows for the execution of code snippets while being executed in the msi environment. What I am looking at as I wrap the day is using Rserve on my msi instance to connect to my local dev environment.
+
+https://www.rforge.net/Rserve/doc.html
+
+https://www.msi.umn.edu/support/faq/how-can-i-install-r-packages-my-home-directory
+
+https://satijalab.org/seurat/install.html
+
+### Summary
+
+I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the msi environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my msi instance would be highly preferred. Still, there are some hurdles to doing this that I haven't dealt with previously, so I have been working to link my current setup to the operational environment of msi. This will probably continue to take some time, but I hope to be fully ready tomorrow.
 
 
 ***
