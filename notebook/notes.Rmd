@@ -892,6 +892,7 @@ progenitor cell expression profile
     + One thing he mentioned would be an area I could assist him with is the way we fine tune these params.
     + Isaac is working on this to some extent by evaluating the 3 methods available for `Identification of highly variable features`.
         - So far, he's found that there is a notable difference in the genes identified, but the clustering output is relatively similar.
+    + Tim has created a custom analysis specific to our data set that applied cell typing to clusters.
     + Additionally, we discussed the broad strokes of concepts behind the idea of CSCs. There is a great deal of ambiguity here, and we didn't really arrive at any objective conclusions. To some extent, I just needed to work through the ideas with someone else. I will need to really formulate a sense of this for any comprehensive experimentation which leverages this concept.
     + This was a subpoint but an important realization: **the 10x do not include full coverage.** This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specfics.
 
