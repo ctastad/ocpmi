@@ -417,20 +417,9 @@ div.tocify {
 
 
 <pre class="r"><code>library(devtools)
-library(Seurat)</code></pre>
-<pre><code>## Registered S3 method overwritten by 'R.oo':
-##   method        from       
-##   throw.default R.methodsS3</code></pre>
-<pre><code>## Registered S3 methods overwritten by 'ggplot2':
-##   method         from 
-##   [.quosures     rlang
-##   c.quosures     rlang
-##   print.quosures rlang</code></pre>
-<pre class="r"><code>library(knitr)
+library(Seurat)
+library(knitr)
 library(kableExtra)</code></pre>
-<pre><code>## Registered S3 method overwritten by 'rvest':
-##   method            from
-##   read_xml.response xml2</code></pre>
 <div id="may-2019" class="section level1">
 <h1>May 2019</h1>
 <div id="section" class="section level2">
@@ -2807,11 +2796,11 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 <h4>Notes</h4>
 <ul>
 <li>While there has been significant research around the topic, CSCs remain a debated idea.</li>
-<li>There are currently a few models for CSC tumor propogation
+<li>There are currently a few models for CSC tumor propagation
 <ul>
 <li>The CSC model
 <ul>
-<li>This is also known as the hierachrical model</li>
+<li>This is also known as the hierarchical model</li>
 <li>CSCs are a tumorigenic and biologically distinct subpopulation <span class="citation">(Beck and Blanpain 2013)</span>.</li>
 <li>Two defining features: ability to self-renew, capacity to generate pro-growth progeny</li>
 <li>This model suggests only certain cells have the ability to drive the progression of cancer</li>
@@ -2819,20 +2808,20 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 <li>Stochastic model
 <ul>
 <li>Also known as clonal evolution model</li>
-<li>This model suggests the necessary mutations to acheive CSC status can happen to any cell at random.</li>
+<li>This model suggests the necessary mutations to achieve CSC status can happen to any cell at random.</li>
 <li>All tumor cells retain the ability to develop plasticity and self-renew/differentiate <span class="citation">(Kreso and Dick 2014)</span>.</li>
 <li>Elements of resistance and fitness accumulate over time <span class="citation">(Beck and Blanpain 2013)</span>.</li>
-<li>CSCs with a growth advantage outpeform other cells <span class="citation">(Barabe et al. 2007)</span>.</li>
+<li>CSCs with a growth advantage outperform other cells <span class="citation">(Barabe et al. 2007)</span>.</li>
 </ul></li>
 <li>CSC Immunology model
 <ul>
-<li>Both stem cell and CSCs possess qualities that make them resistant to immune survillance <span class="citation">(Maccalli et al. 2014)</span>.</li>
-<li>CSCs may exist at all times but only propogate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity <span class="citation">(Bruttel and Wischhusen 2014)</span>.</li>
+<li>Both stem cell and CSCs possess qualities that make them resistant to immune surveillance <span class="citation">(Maccalli et al. 2014)</span>.</li>
+<li>CSCs may exist at all times but only propagate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity <span class="citation">(Bruttel and Wischhusen 2014)</span>.</li>
 </ul></li>
 </ul></li>
 <li>Debate
 <ul>
-<li>The existence of CSCs is still under debate because no consistently definable characteristcs have been found <span class="citation">(Gupta, Chaffer, and Weinberg 2009)</span>.</li>
+<li>The existence of CSCs is still under debate because no consistently definable characteristics have been found <span class="citation">(Gupta, Chaffer, and Weinberg 2009)</span>.</li>
 <li>The origin of CSCs is also a major topic.
 <ul>
 <li>Are these disregulated normal SCs</li>
@@ -2850,11 +2839,11 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 <ul>
 <li>stem cell mutation
 <ul>
-<li>stem cell niche populations develope mutations which derail regular progression and can be past to progeny <span class="citation">(Y. Wang et al. 2009)</span>.</li>
+<li>stem cell niche populations develop mutations which derail regular progression and can be past to progeny <span class="citation">(Y. Wang et al. 2009)</span>.</li>
 </ul></li>
 <li>adult stem cells
 <ul>
-<li>Stem cell populations in tissue with high rates of turnover experience frequent cell divisions. Increated liklihood of mutations leads to accumulated genetic defects that drive cancer initiation. <span class="citation">(López-Lázaro 2018)</span></li>
+<li>Stem cell populations in tissue with high rates of turnover experience frequent cell divisions. Increased likelihood of mutations leads to accumulated genetic defects that drive cancer initiation. <span class="citation">(López-Lázaro 2018)</span></li>
 </ul></li>
 <li>De-differentiation
 <ul>
@@ -3034,7 +3023,7 @@ ifelse(file.exists(fl), file.remove(fl))</code></pre>
 </div>
 <div id="summary-10" class="section level3">
 <h3>Summary</h3>
-<p>I didn’t get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seemlessly run on MSI.</p>
+<p>I didn’t get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seamlessly run on MSI.</p>
 <hr />
 </div>
 </div>
@@ -3214,7 +3203,7 @@ progenitor cell expression profile
 </ul></li>
 <li>Tim has created a custom analysis specific to our data set that applied cell typing to clusters.</li>
 <li>Additionally, we discussed the broad strokes of concepts behind the idea of CSCs. There is a great deal of ambiguity here, and we didn’t really arrive at any objective conclusions. To some extent, I just needed to work through the ideas with someone else. I will need to really formulate a sense of this for any comprehensive experimentation which leverages this concept.</li>
-<li>This was a subpoint but an important realization: <strong>the 10x do not include full coverage.</strong> This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specfics.</li>
+<li>This was a subpoint but an important realization: <strong>the 10x do not include full coverage.</strong> This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specifics.</li>
 </ul></li>
 </ul>
 </div>
@@ -3396,7 +3385,69 @@ progenitor cell expression profile
 </tbody>
 </table>
 <p>18 tasks</p>
+</div>
+<div id="msi-workflow" class="section level3">
+<h3>MSI Workflow</h3>
+<p>After a considerable amount of effort to create a synchronous workflow with my MSI instance, I’ve generally given up and settled on scripting locally and batching with MSI. I’ve mounted my home directory with sshfs and clone my ocpmi git repo so I can work out of my MSI instance for the most part. My only concern is if I run into resource intensive cases that require more ram. It does seem that MSI kills unbatched jobs that exceed a threshold of resource use since my process was killed each time it went over 10gb of ram.</p>
+</div>
+<div id="notes-to-add" class="section level3">
+<h3>Notes to add</h3>
+<ul>
+<li>git repo info</li>
+<li>sshfs setup and bash script</li>
+<li>msi setup info</li>
+<li>seurat install and docs methods</li>
+</ul>
+</div>
+<div id="summary-12" class="section level3">
+<h3>Summary</h3>
+<p>I’ve wasted a large amount of time over the past two days. I spent a solid 10 hours trying to get my workflow in MSI established all to essentially go with what would have been my setup had I done nothing at all. I will generally resort to developing on my local machine with a connection to my MSI directory. Beyond this, I will need to take a look at the batching process for MSI and possible explore some of their training resources to gain a better understanding.</p>
+<div id="completed-9" class="section level4">
+<h4>Completed</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Created</th>
+<th align="left">Completed</th>
+<th>Age</th>
+<th>Project</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019-06-05</td>
+<td align="left">2019-06-06</td>
+<td>1d</td>
+<td>lab</td>
+<td align="left">send vacation dates to tim</td>
+</tr>
+<tr class="even">
+<td align="left">2019-06-04</td>
+<td align="left">2019-06-06</td>
+<td>1d</td>
+<td>lab</td>
+<td align="left">figure out remote vim setup</td>
+</tr>
+<tr class="odd">
+<td align="left">2019-06-06</td>
+<td align="left">2019-06-06</td>
+<td>2h</td>
+<td>lab</td>
+<td align="left">clone git repo to msi directory</td>
+</tr>
+<tr class="even">
+<td align="left">2019-06-06</td>
+<td align="left">2019-06-06</td>
+<td>2h</td>
+<td>lab</td>
+<td align="left">exchange ssh keys with msi</td>
+</tr>
+</tbody>
+</table>
+<p>4 tasks</p>
 <hr />
+</div>
 </div>
 </div>
 </div>

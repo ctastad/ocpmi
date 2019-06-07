@@ -762,23 +762,23 @@ I've done some extremely high level review from the wikipedia article on CSCs [@
 #### Notes
 
 * While there has been significant research around the topic, CSCs remain a debated idea.
-* There are currently a few models for CSC tumor propogation
+* There are currently a few models for CSC tumor propagation
     + The CSC model
-        - This is also known as the hierachrical model
+        - This is also known as the hierarchical model
         - CSCs are a tumorigenic and biologically distinct subpopulation [@Beck2013].
         - Two defining features: ability to self-renew, capacity to generate pro-growth progeny
         - This model suggests only certain cells have the ability to drive the progression of cancer
     + Stochastic model
         - Also known as clonal evolution model
-        - This model suggests the necessary mutations to acheive CSC status can happen to any cell at random.
+        - This model suggests the necessary mutations to achieve CSC status can happen to any cell at random.
         - All tumor cells retain the ability to develop plasticity and self-renew/differentiate [@Kreso2014].
         - Elements of resistance and fitness accumulate over time [@Beck2013].
-        - CSCs with a growth advantage outpeform other cells [@Barabe2007].
+        - CSCs with a growth advantage outperform other cells [@Barabe2007].
     + CSC Immunology model
-        - Both stem cell and CSCs possess qualities that make them resistant to immune survillance [@MacCalli2014].
-        - CSCs may exist at all times but only propogate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity [@Bruttel2014].
+        - Both stem cell and CSCs possess qualities that make them resistant to immune surveillance [@MacCalli2014].
+        - CSCs may exist at all times but only propagate once 1) they shed dependence on niche factors or 2) they develop a means to escape immune surveillance or 3) the immune system loses tumorsuppressive capacity [@Bruttel2014].
 * Debate
-    + The existence of CSCs is still under debate because no consistently definable characteristcs have been found [@Gupta2009].
+    + The existence of CSCs is still under debate because no consistently definable characteristics have been found [@Gupta2009].
     + The origin of CSCs is also a major topic.
         - Are these disregulated normal SCs
         - Are they instead a more specialized population that gained the ability to self-renew.
@@ -789,9 +789,9 @@ I've done some extremely high level review from the wikipedia article on CSCs [@
     + Other models may exist and are worth exploring in the context of highlighting CSC mutation lineage.
 * Origin
     + stem cell mutation
-        - stem cell niche populations develope mutations which derail regular progression and can be past to progeny [@Wang2009].
+        - stem cell niche populations develop mutations which derail regular progression and can be past to progeny [@Wang2009].
     + adult stem cells
-        - Stem cell populations in tissue with high rates of turnover experience frequent cell divisions. Increated liklihood of mutations leads to accumulated genetic defects that drive cancer initiation. [@Lopez-Lazaro2018]
+        - Stem cell populations in tissue with high rates of turnover experience frequent cell divisions. Increased likelihood of mutations leads to accumulated genetic defects that drive cancer initiation. [@Lopez-Lazaro2018]
     + De-differentiation
         - Cells are driven back to a state of stemness through some external factor.
 
@@ -836,7 +836,7 @@ ID Age Project Tags   Description                                           Urg
 
 ### Summary
 
-I didn't get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seemlessly run on MSI.
+I didn't get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seamlessly run on MSI.
 
 ***
 
@@ -894,7 +894,7 @@ progenitor cell expression profile
         - So far, he's found that there is a notable difference in the genes identified, but the clustering output is relatively similar.
     + Tim has created a custom analysis specific to our data set that applied cell typing to clusters.
     + Additionally, we discussed the broad strokes of concepts behind the idea of CSCs. There is a great deal of ambiguity here, and we didn't really arrive at any objective conclusions. To some extent, I just needed to work through the ideas with someone else. I will need to really formulate a sense of this for any comprehensive experimentation which leverages this concept.
-    + This was a subpoint but an important realization: **the 10x do not include full coverage.** This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specfics.
+    + This was a subpoint but an important realization: **the 10x do not include full coverage.** This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specifics.
 
 ### Remote MSI Setup
 
@@ -945,7 +945,7 @@ ID Age Project Tags   Description                                           Urg
 
 ### MSI Workflow
 
-After a considerable amount of effort to create a synchronous workflow with my MSI instance, I've generally given up and settled on scripting locally and batching with MSI. I've mounted my home directory with sshfs and clone my ocpmi git repo
+After a considerable amount of effort to create a synchronous workflow with my MSI instance, I've generally given up and settled on scripting locally and batching with MSI. I've mounted my home directory with sshfs and clone my ocpmi git repo so I can work out of my MSI instance for the most part. My only concern is if I run into resource intensive cases that require more ram. It does seem that MSI kills unbatched jobs that exceed a threshold of resource use since my process was killed each time it went over 10gb of ram.
 
 ### Notes to add
 
@@ -953,10 +953,24 @@ After a considerable amount of effort to create a synchronous workflow with my M
 * sshfs setup and bash script
 * msi setup info
 * seurat install and docs methods
- 
 
+### Summary
+
+I've wasted a large amount of time over the past two days. I spent a solid 10 hours trying to get my workflow in MSI established all to essentially go with what would have been my setup had I done nothing at all. I will generally resort to developing on my local machine with a connection to my MSI directory. Beyond this, I will need to take a look at the batching process for MSI and possible explore some of their training resources to gain a better understanding.
+
+#### Completed
+
+Created    Completed  Age Project Description
+---------- ---------- --- ------- -------------------------------
+2019-06-05 2019-06-06 1d  lab     send vacation dates to tim
+2019-06-04 2019-06-06 1d  lab     figure out remote vim setup
+2019-06-06 2019-06-06 2h  lab     clone git repo to msi directory
+2019-06-06 2019-06-06 2h  lab     exchange ssh keys with msi
+
+4 tasks
 
 ***
 
 # References
+
 
