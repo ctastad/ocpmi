@@ -898,7 +898,7 @@ progenitor cell expression profile
 
 ### Remote MSI Setup
 
-I've reached somewhat of a hang up in my development environment. I've yet to work in a centos, and I'm generally unfamiliar with the msi setup. So far, I've been able to make sense of my home directory in my personal instance and load the R console. Additionally, I've been able to get the installation of packages going and have a process running over night in tmux. 
+I've reached somewhat of a hang up in my development environment. I've yet to work in a centos, and I'm generally unfamiliar with the msi setup. So far, I've been able to make sense of my home directory in my personal instance and load the R console. Additionally, I've been able to get the installation of packages going and have a process running over night in tmux.
 
 The challenge I see stems from the combination of developing in an Rstudio-like environment that allows for the execution of code snippets while being executed in the msi environment. What I am looking at as I wrap the day is using Rserve on my msi instance to connect to my local dev environment.
 
@@ -912,17 +912,51 @@ https://satijalab.org/seurat/install.html
 
 I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the msi environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my msi instance would be highly preferred. Still, there are some hurdles to doing this that I haven't dealt with previously, so I have been working to link my current setup to the operational environment of msi. This will probably continue to take some time, but I hope to be fully ready tomorrow.
 
+***
+
+## 6
+
+### TODO
+
+
+ID Age Project Tags   Description                                           Urg
+-- --- ------- ------ ----------------------------------------------------- ----
+49 2w  lab     lit    read tirosh 2016 [2]                                  2.79
+54 10d lab     lit    read papalexi 2018 [2]                                2.75
+55 9d  lab     lit    read macintyre 2018 [2]                               2.75
+74 3d  lab     lit    read konrashova 2017 [2]                              2.72
+48 2w  lab     lit    read zheng 2017 [1]                                   2.69
+56 8d  lab     lit    read sahin 2017 [1]                                   2.64
+63 5d  lab     lit    litsrch re genetic lineage tracing method [1]         2.63
+47 2w  lab     comp w run surat tutorial w/ pt 59                           1.99
+60 6d  lab     comp n review pca concepts                                   1.93
+61 6d  lab     comp n compare default seurat tutorial to starrlab protocol  1.93
+62 6d  lab     comp w deep dive into default seurat analysis                1.93
+82 1d  lab     comp n figure out remote vim setup                           1.91
+87 22h lab     comp n send vacation dates to tim                             1.9
+88 18h lab     comp n update methods on msi dev setup                        1.9
+89 18h lab     comp n spell check notebook                                   1.9
+46 2w  lab     lit    read ocpmi summary                                    1.89
+75 2d  lab     lit    find list of CSC markers                              1.81
+51 13d lab            agenda items                                          1.07
+
+18 tasks
+
+
+### MSI Workflow
+
+After a considerable amount of effort to create a synchronous workflow with my MSI instance, I've generally given up and settled on scripting locally and batching with MSI. I've mounted my home directory with sshfs and clone my ocpmi git repo
+
+### Notes to add
+
+* git repo info
+* sshfs setup and bash script
+* msi setup info
+* seurat install and docs methods
+ 
+
 
 ***
 
 # References
-
-
-
-
-
-
-
-
-
 
