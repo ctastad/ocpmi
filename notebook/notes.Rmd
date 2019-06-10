@@ -969,8 +969,36 @@ Created    Completed  Age Project Description
 
 4 tasks
 
+## 10
+
+### TODO
+
+ID Age Project Tags     Description                                         Urg
+-- --- ------- -------- --------------------------------------------------- ----
+48 2w  lab     lit work read tirosh 2016 [2]                                2.91
+53 2w  lab     lit work read papalexi 2018 [2]                              2.88
+54 13d lab     lit work read macintyre 2018 [2]                             2.87
+70 7d  lab     lit work read konrashova 2017 [2]                            2.84
+47 2w  lab     lit work read zheng 2017 [1]                                 2.81
+55 13d lab     lit work read sahin 2017 [1]                                 2.77
+61 9d  lab     lit work litsrch re genetic lineage tracing method [1]       2.75
+45 2w  lab     lit work read ocpmi summary                                  2.01
+46 2w  lab     w work   run surat tutorial w/ pt 59                         2.01
+58 11d lab     n work   review pca concepts                                 1.96
+59 10d lab     n work   compare default seurat tutorial to starrlab         1.95
+                        protocol
+60 10d lab     w work   deep dive into default seurat analysis              1.95
+71 6d  lab     lit work find list of CSC markers                            1.93
+80 4d  lab     n work   update methods on msi dev setup                     1.92
+81 4d  lab     n work   spell check notebook                                1.92
+83 3d  lab     n work   add notes re sshfs bash script                      1.92
+50 2w  lab     work     agenda items                                        1.89
+
+17 tasks
+
 ***
 
 # References
+
 
 
