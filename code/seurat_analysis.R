@@ -50,3 +50,25 @@ pt59 <- ScaleData(object = pt59, features = all.genes)
 
 pt59 <- RunPCA(object = pt59, features = VariableFeatures(object = pt59))
 print(x = pt59[['pca']], dims = 1:5, nfeatures = 5)
+VizDimLoadings(object = pt59, dims = 1:2, reduction = 'pca')
+DimPlot(object = pt59, reduction = 'pca')
+DimHeatmap(object = pt59, dims = 1, cells = 500, balanced = TRUE)
+DimHeatmap(object = pt59, dims = 1:15, cells = 500, balanced = TRUE)
+
+# Determine dimensionality
+
+pt59 <- JackStraw(object = pt59, num.replicate = 100)
+pt59 <- ScoreJackStraw(object = pt59, dims = 1:20)
+JackStrawPlot(object = pt59, dims = 1:20)
+ElbowPlot(object = pt59)
+
+# Clustering the cells
+
+pt59 <- FindNeighbors(object = pt59, dims = 1:20)
+pt59 <- FindClusters(object = pt59, resolution = 0.5)
+head(x = Idents(object = pt59), 5)
+
+# Non-linear dimensional reduction
+
+pt59 <- RunUMAP(object = pt59, dims = 1:20)
+DimPlot(object = pt59, reduction = 'umap')
