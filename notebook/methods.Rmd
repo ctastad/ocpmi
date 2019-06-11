@@ -12,9 +12,9 @@ output:
 
 
 
-# Directories
+# MSI
 
-### MSI Project Folder
+## Project Folder
 
 #### TODO
 
@@ -56,7 +56,50 @@ An example of a complete data source location is below:
 /home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
 ```
 
-# Vanilla Seurat Pipeline
+## Load/Install R pkgs
+
+* In order to run R in my MSI instance, I need to load the module and install applications.
+
+```{r eval=F}
+module load R/3.6.0
+R
+```
+
+* To install packages in my local home directory, need to define a path.
+
+```{r eval=F}
+.libPaths(new='~/R/x86_64-pc-linux-gnu-library/3.6.0')
+dir.create('~/R/x86_64-pc-linux-gnu-library/3.6.0', showWarnings = FALSE, recursive = TRUE)
+```
+
+* Confirm the path is correct.
+
+```{r eval=F}
+.libPaths()
+```
+
+* Choose as CRAN mirror.
+
+```{r eval=F}
+getCRANmirrors()
+chooseCRANmirror(ind=2)
+```
+
+* Packages should be able to be installed and loaded normally now.
+
+## Automount MSI sshfs
+
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
+
+```{bash eval=F}
+#!/bin/bash
+
+sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
+```
+
+# Seurat
+
+## PBMC Tutorial
 
 ```{r}
 htmltools::includeHTML("../code/seurat_tutorial/pbmc3k_tutorial.html")

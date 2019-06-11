@@ -503,7 +503,7 @@ RAD51 mutations acquired resistance
 
 * mysql reference: single cell rnaseq analysis protocol
 * figure out mesabi hostname issue
-* explore starrt2 msi path
+* explore starrt2 MSI path
     + [/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38]
 * There is no specific focus in the pathology we're focusing on. OCCC and LGSOC are being considered just as readily as other subtypes.
 * Kondrashova 2017 (RAD51 mutations leading to chemoresistance) is potentially a good example of what our research questions will be.
@@ -516,7 +516,7 @@ RAD51 mutations acquired resistance
 
 ### MSI Project Directory
 
-I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/msi and other collaborator work. I have a personal directory in this space along with access to other shared directories.
+I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/MSI and other collaborator work. I have a personal directory in this space along with access to other shared directories.
 
 The root project directory is:
 
@@ -530,7 +530,7 @@ I have a personal directory under the root. At the same level, there is also a s
 /home/starrt2/tasta005
 ```
 
-Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
+Processed data can be found in the hiseq folder under data_release. This data is mirrored in the MSI file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
 
 * Look for the leading 6 digit integer as a point of reference for the data_release folder.
 * The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
@@ -898,11 +898,20 @@ progenitor cell expression profile
 
 ### Remote MSI Setup
 
-I've reached somewhat of a hang up in my development environment. I've yet to work in a centos, and I'm generally unfamiliar with the msi setup. So far, I've been able to make sense of my home directory in my personal instance and load the R console. Additionally, I've been able to get the installation of packages going and have a process running over night in tmux.
+I've reached somewhat of a hang up in my development environment. I've yet to work in centos, and I'm generally unfamiliar with the MSI setup. So far, I've been able to make sense of my home directory in my personal instance and load the R console. Additionally, I've been able to get the installation of packages going and have a process running over night in tmux.
 
-The challenge I see stems from the combination of developing in an Rstudio-like environment that allows for the execution of code snippets while being executed in the msi environment. What I am looking at as I wrap the day is using Rserve on my msi instance to connect to my local dev environment.
+The challenge I see stems from the combination of developing in an Rstudio-like environment that allows for the execution of code snippets while being executed in the MSI environment. What I am looking at as I wrap the day is using Rserve on my MSI instance to connect to my local dev environment.
+
+
+
+
+### Rserve
+
+I've found the package `Rserve` which can establish a servable instance of R on a remote server. This holds some potential to allow me to develop locally and execute any part of my code in the MSI instance. There is documentation at the link below. One necessary element of making this work would be to find a suitable Rserve client that can run locally and communicate with the server.
 
 https://www.rforge.net/Rserve/doc.html
+
+
 
 https://www.msi.umn.edu/support/faq/how-can-i-install-r-packages-my-home-directory
 
@@ -910,7 +919,7 @@ https://satijalab.org/seurat/install.html
 
 ### Summary
 
-I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the msi environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my msi instance would be highly preferred. Still, there are some hurdles to doing this that I haven't dealt with previously, so I have been working to link my current setup to the operational environment of msi. This will probably continue to take some time, but I hope to be fully ready tomorrow.
+I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the MSI environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my MSI instance would be highly preferred. Still, there are some hurdles to doing this that I haven't dealt with previously, so I have been working to link my current setup to the operational environment of MSI. This will probably continue to take some time, but I hope to be fully ready tomorrow.
 
 ***
 
@@ -969,6 +978,8 @@ Created    Completed  Age Project Description
 
 4 tasks
 
+***
+
 ## 10
 
 ### TODO
@@ -995,6 +1006,52 @@ ID Age Project Tags     Description                                         Urg
 50 2w  lab     work     agenda items                                        1.89
 
 17 tasks
+
+### Non-contemporaneous Notes - 6/6
+
+#### Load/Install R pkgs
+
+* In order to run R in my MSI instance, I need to load the module and install applications.
+
+```{r eval=F}
+module load R/3.6.0
+R
+```
+
+* To install packages in my local home directory, need to define a path.
+
+```{r eval=F}
+.libPaths(new='~/R/x86_64-pc-linux-gnu-library/3.6.0')
+dir.create('~/R/x86_64-pc-linux-gnu-library/3.6.0', showWarnings = FALSE, recursive = TRUE)
+```
+
+* Confirm the path is correct.
+
+```{r eval=F}
+.libPaths()
+```
+
+* Choose as CRAN mirror.
+
+```{r eval=F}
+getCRANmirrors()
+chooseCRANmirror(ind=2)
+```
+
+* Packages should be able to be installed and loaded normally now.
+
+#### sshfs Setup
+
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
+
+* Automount MSI sshfs
+
+```{bash eval=F}
+#!/bin/bash
+
+sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
+```
+
 
 ***
 

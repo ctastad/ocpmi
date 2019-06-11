@@ -1,5 +1,4 @@
 ---
-title: "Seurat - Guided Clustering Tutorial"
 output:
   html_document:
     df_print: kable

@@ -2083,7 +2083,7 @@ RAD51 mutations acquired resistance
 <ul>
 <li>mysql reference: single cell rnaseq analysis protocol</li>
 <li>figure out mesabi hostname issue</li>
-<li>explore starrt2 msi path
+<li>explore starrt2 MSI path
 <ul>
 <li>[/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38]</li>
 </ul></li>
@@ -2102,12 +2102,12 @@ RAD51 mutations acquired resistance
 </div>
 <div id="msi-project-directory" class="section level3">
 <h3>MSI Project Directory</h3>
-<p>I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/msi and other collaborator work. I have a personal directory in this space along with access to other shared directories.</p>
+<p>I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/MSI and other collaborator work. I have a personal directory in this space along with access to other shared directories.</p>
 <p>The root project directory is:</p>
 <pre class="r"><code>/home/starrt2/</code></pre>
 <p>I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.</p>
 <pre class="r"><code>/home/starrt2/tasta005</code></pre>
-<p>Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.</p>
+<p>Processed data can be found in the hiseq folder under data_release. This data is mirrored in the MSI file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.</p>
 <ul>
 <li>Look for the leading 6 digit integer as a point of reference for the data_release folder.</li>
 <li>The Starr_Project sub folder is given a number which is considered the MSI and sample ID.</li>
@@ -3210,15 +3210,19 @@ progenitor cell expression profile
 </div>
 <div id="remote-msi-setup" class="section level3">
 <h3>Remote MSI Setup</h3>
-<p>I’ve reached somewhat of a hang up in my development environment. I’ve yet to work in a centos, and I’m generally unfamiliar with the msi setup. So far, I’ve been able to make sense of my home directory in my personal instance and load the R console. Additionally, I’ve been able to get the installation of packages going and have a process running over night in tmux.</p>
-<p>The challenge I see stems from the combination of developing in an Rstudio-like environment that allows for the execution of code snippets while being executed in the msi environment. What I am looking at as I wrap the day is using Rserve on my msi instance to connect to my local dev environment.</p>
+<p>I’ve reached somewhat of a hang up in my development environment. I’ve yet to work in centos, and I’m generally unfamiliar with the MSI setup. So far, I’ve been able to make sense of my home directory in my personal instance and load the R console. Additionally, I’ve been able to get the installation of packages going and have a process running over night in tmux.</p>
+<p>The challenge I see stems from the combination of developing in an Rstudio-like environment that allows for the execution of code snippets while being executed in the MSI environment. What I am looking at as I wrap the day is using Rserve on my MSI instance to connect to my local dev environment.</p>
+</div>
+<div id="rserve" class="section level3">
+<h3>Rserve</h3>
+<p>I’ve found the package <code>Rserve</code> which can establish a servable instance of R on a remote server. This holds some potential to allow me to develop locally and execute any part of my code in the MSI instance. There is documentation at the link below. One necessary element of making this work would be to find a suitable Rserve client that can run locally and communicate with the server.</p>
 <p><a href="https://www.rforge.net/Rserve/doc.html" class="uri">https://www.rforge.net/Rserve/doc.html</a></p>
 <p><a href="https://www.msi.umn.edu/support/faq/how-can-i-install-r-packages-my-home-directory" class="uri">https://www.msi.umn.edu/support/faq/how-can-i-install-r-packages-my-home-directory</a></p>
 <p><a href="https://satijalab.org/seurat/install.html" class="uri">https://satijalab.org/seurat/install.html</a></p>
 </div>
 <div id="summary-11" class="section level3">
 <h3>Summary</h3>
-<p>I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the msi environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my msi instance would be highly preferred. Still, there are some hurdles to doing this that I haven’t dealt with previously, so I have been working to link my current setup to the operational environment of msi. This will probably continue to take some time, but I hope to be fully ready tomorrow.</p>
+<p>I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the MSI environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my MSI instance would be highly preferred. Still, there are some hurdles to doing this that I haven’t dealt with previously, so I have been working to link my current setup to the operational environment of MSI. This will probably continue to take some time, but I hope to be fully ready tomorrow.</p>
 <hr />
 </div>
 </div>
@@ -3446,6 +3450,210 @@ progenitor cell expression profile
 </tbody>
 </table>
 <p>4 tasks</p>
+<hr />
+</div>
+</div>
+</div>
+<div id="section-14" class="section level2">
+<h2>10</h2>
+<div id="todo-13" class="section level3">
+<h3>TODO</h3>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Age</th>
+<th>Project</th>
+<th align="left">Tags</th>
+<th align="left">Description</th>
+<th align="left">Urg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>48</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read tirosh 2016 [2]</td>
+<td align="left">2.91</td>
+</tr>
+<tr class="even">
+<td>53</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read papalexi 2018 [2]</td>
+<td align="left">2.88</td>
+</tr>
+<tr class="odd">
+<td>54</td>
+<td>13d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read macintyre 2018 [2]</td>
+<td align="left">2.87</td>
+</tr>
+<tr class="even">
+<td>70</td>
+<td>7d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read konrashova 2017 [2]</td>
+<td align="left">2.84</td>
+</tr>
+<tr class="odd">
+<td>47</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read zheng 2017 [1]</td>
+<td align="left">2.81</td>
+</tr>
+<tr class="even">
+<td>55</td>
+<td>13d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read sahin 2017 [1]</td>
+<td align="left">2.77</td>
+</tr>
+<tr class="odd">
+<td>61</td>
+<td>9d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">litsrch re genetic lineage tracing method [1]</td>
+<td align="left">2.75</td>
+</tr>
+<tr class="even">
+<td>45</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read ocpmi summary</td>
+<td align="left">2.01</td>
+</tr>
+<tr class="odd">
+<td>46</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">w work</td>
+<td align="left">run surat tutorial w/ pt 59</td>
+<td align="left">2.01</td>
+</tr>
+<tr class="even">
+<td>58</td>
+<td>11d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">review pca concepts</td>
+<td align="left">1.96</td>
+</tr>
+<tr class="odd">
+<td>59</td>
+<td>10d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">compare default seurat tutorial to starrlab</td>
+<td align="left">1.95</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td align="left"></td>
+<td align="left">protocol</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td>60</td>
+<td>10d</td>
+<td>lab</td>
+<td align="left">w work</td>
+<td align="left">deep dive into default seurat analysis</td>
+<td align="left">1.95</td>
+</tr>
+<tr class="even">
+<td>71</td>
+<td>6d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">find list of CSC markers</td>
+<td align="left">1.93</td>
+</tr>
+<tr class="odd">
+<td>80</td>
+<td>4d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">update methods on msi dev setup</td>
+<td align="left">1.92</td>
+</tr>
+<tr class="even">
+<td>81</td>
+<td>4d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">spell check notebook</td>
+<td align="left">1.92</td>
+</tr>
+<tr class="odd">
+<td>83</td>
+<td>3d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">add notes re sshfs bash script</td>
+<td align="left">1.92</td>
+</tr>
+<tr class="even">
+<td>50</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">work</td>
+<td align="left">agenda items</td>
+<td align="left">1.89</td>
+</tr>
+</tbody>
+</table>
+<p>17 tasks</p>
+</div>
+<div id="non-contemporaneous-notes---66" class="section level3">
+<h3>Non-contemporaneous Notes - 6/6</h3>
+<div id="loadinstall-r-pkgs" class="section level4">
+<h4>Load/Install R pkgs</h4>
+<ul>
+<li>In order to run R in my MSI instance, I need to load the module and install applications.</li>
+</ul>
+<pre class="r"><code>module load R/3.6.0
+R</code></pre>
+<ul>
+<li>To install packages in my local home directory, need to define a path.</li>
+</ul>
+<pre class="r"><code>.libPaths(new='~/R/x86_64-pc-linux-gnu-library/3.6.0')
+dir.create('~/R/x86_64-pc-linux-gnu-library/3.6.0', showWarnings = FALSE, recursive = TRUE)</code></pre>
+<ul>
+<li>Confirm the path is correct.</li>
+</ul>
+<pre class="r"><code>.libPaths()</code></pre>
+<ul>
+<li>Choose as CRAN mirror.</li>
+</ul>
+<pre class="r"><code>getCRANmirrors()
+chooseCRANmirror(ind=2)</code></pre>
+<ul>
+<li>Packages should be able to be installed and loaded normally now.</li>
+</ul>
+</div>
+<div id="sshfs-setup" class="section level4">
+<h4>sshfs Setup</h4>
+<p>I’m using <code>sshfs</code> to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at <code>/home/chris/starr_lab/auto_mnt_sshfs</code> on my local machine.</p>
+<ul>
+<li>Automount MSI sshfs</li>
+</ul>
+<pre class="bash"><code>#!/bin/bash
+
+sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt</code></pre>
 <hr />
 </div>
 </div>
