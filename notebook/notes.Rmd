@@ -1042,9 +1042,9 @@ chooseCRANmirror(ind=2)
 
 #### sshfs Setup
 
-I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto-mount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
 
-* Automount MSI sshfs
+* Auto-mount MSI sshfs
 
 ```{bash eval=F}
 #!/bin/bash
@@ -1054,7 +1054,7 @@ sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
 
 ### Summary
 
-I made some more progress on developing a base implementation of the default Seurat analysis pipeline when evaluating the pt59 dataset. To a degree, I am mostly taking default params using the PBMC tutorial and running them with the new dataset. Outside of the default params, I have been using the file located at `/ocpmi/code/tim/seurat_analysis.R` as a reference to see what Tim has modified thus far. There are certain points where he has taken the base value and others where his code deviates heavily. The general flow of his implementation differs from the tutorial in the sense that his code is less stepwise and more focused on the output while the tutorial is a bit more exploratory to exhibit features. This makes sense of course. An aspect of my own implementation will have to consider how distributed each analysis process to provide modularity.
+I made some more progress on developing a base implementation of the default Seurat analysis pipeline when evaluating the pt59 dataset. To a degree, I am mostly taking default params using the PBMC tutorial and running them with the new dataset. Outside of the default params, I have been using the file located at `/ocpmi/code/tim/seurat_analysis.R` as a reference to see what Tim has modified thus far. There are certain points where he has taken the base value and others where his code deviates heavily. The general flow of his implementation differs from the tutorial in the sense that his code is less step wise and more focused on the output while the tutorial is a bit more exploratory to exhibit features. This makes sense of course. An aspect of my own implementation will have to consider how distributed each analysis process to provide modularity.
 
 A major point I came across today was that I forgot to review the RNAseq protocol located at `/ocpmi/methods/`. Tim and I had discussed this in our meeting last week, but I forgot to make a note about this. There is a good deal of documentation for his code and methods there, so I probably should have remembered to look at this more. I will dedicate some time tomorrow to do this.
 
