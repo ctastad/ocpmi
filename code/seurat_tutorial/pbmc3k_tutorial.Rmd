@@ -1,11 +1,12 @@
 ---
+title: "Seurat - Guided Clustering Tutorial"
+date: \today
 output:
   html_document:
     df_print: kable
     theme: paper
     toc: yes
-    toc_float: yes
-date: 'Compiled: `r format(Sys.Date(), "%B %d, %Y")`'
+#    toc_float: yes
 ---
 ***
 
@@ -73,7 +74,6 @@ Seurat allows you to easily explore QC metrics and filter cells based on any use
 * Similarly, the total number of molecules detected within a cell (correlates strongly with unique genes)
 * The percentage of reads that map to the mitochondrial genome
     + Low-quality / dying cells often exhibit extensive mitochondrial contamination
-    + We calculate mitochondrial QC metrics with the `PercentageFeatureSet` function, which calculates the percentage of counts originating from a set of features
     + We use the set of all genes starting with `MT-` as a set of mitochondrial genes
 
 ```{r mito, fig.height=7, fig.width=13}
@@ -330,6 +330,7 @@ DoHeatmap(object = pbmc, features = top10$gene) + NoLegend()
 ***
 ### Assigning cell type identity to clusters
 
+Fortunately in the case of this dataset, we can use canonical markers to easily match the unbiased clustering to known cell types:
 Fortunately in the case of this dataset, we can use canonical markers to easily match the unbiased clustering to known cell types:
 
 ```{r eval=F}

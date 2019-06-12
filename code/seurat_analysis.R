@@ -2,7 +2,6 @@
 #' title: "Default Seurat Analysis"
 #' author: "Christopher Tastad"
 #' date: \today
-#' bibliography: library.bib
 #' output:
 #'     html_document:
 #'         toc: yes
@@ -37,7 +36,8 @@ head(x = pt59@meta.data, 5)
 VlnPlot(object = pt59, features = c("nFeature_RNA", "nCount_RNA", "percent.mt"), ncol = 3)
 plot1 <- FeatureScatter(object = pt59, feature1 = "nCount_RNA", feature2 = "percent.mt")
 plot2 <- FeatureScatter(object = pt59, feature1 = "nCount_RNA", feature2 = "nFeature_RNA")
-CombinePlots(plots = list(plot1,plot2))
+# CombinePlots(plots = list(plot1,plot2))
+plot2
 
 pt59 <- subset(x = pt59, subset = nFeature_RNA > 200 & nFeature_RNA < 2500 & percent.mt < 5)
 
