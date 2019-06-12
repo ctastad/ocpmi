@@ -105,3 +105,28 @@ sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
 htmltools::includeHTML("../code/seurat_tutorial/pbmc3k_tutorial.html")
 ```
 
+# R
+
+### Render .R -> .html
+
+It is possible to render markdown output straight from a .R file. This can save the need to create two seperate files when running code and producing a formatted output. 
+
+https://rmarkdown.rstudio.com/articles_report_from_r_script.html
+
+A markdown report can be compiled from an R script by:
+
+```{r eval=F}
+rmarkdown::render("analysis.R") # will generate an html output
+rmarkdown::render("analysis.R", "pdf_document")
+```
+
+The metadata and output can be modified through special comments.
+
+```{r eval=F}
+#' ---
+#' title: "Crop Analysis Q3 2013"
+#' author: "John Smith"
+#' date: "May 3rd, 2014"
+#' output: pdf_document
+#' ---
+```

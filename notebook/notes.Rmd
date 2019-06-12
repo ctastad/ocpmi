@@ -1100,6 +1100,35 @@ ID Age Project Tags     Description                                         Urg
 
 18 tasks
 
+### RNA Velocity
+
+I came a cross a [thread](https://www.reddit.com/r/bioinformatics/comments/bz292v/_/) on the bioinformatics subreddit discussing the isssues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. (@LaManno2018)
+
+### Render .R -> .html
+
+I made an amazing discovery today. It is possible to render markdown output straight from a .R file. I'm not sure if I can apply certain yaml or formatting settings to this process yet, but this function alone will save the need to create two seperate files when running code and producing a formatted output.
+
+https://rmarkdown.rstudio.com/articles_report_from_r_script.html
+
+A markdown report can be compiled from an R script by:
+
+```{r eval=F}
+rmarkdown::render("analysis.R") # will generate an html output
+rmarkdown::render("analysis.R", "pdf_document")
+```
+
+The metadata and output can be modified through special comments.
+
+```{r eval=F}
+#' ---
+#' title: "Crop Analysis Q3 2013"
+#' author: "John Smith"
+#' date: "May 3rd, 2014"
+#' output: pdf_document
+#' ---
+```
+
+
 
 ***
 
