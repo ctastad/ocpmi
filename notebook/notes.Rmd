@@ -1147,7 +1147,44 @@ Created    Completed  Age Project Description
 
 ***
 
+## 12
+
+### TODO
+
+ID Age Project Tags     Description                                         Urg
+-- --- ------- -------- --------------------------------------------------- ----
+46 3w  lab     lit work read tirosh 2016 [2]                                2.92
+48 2w  lab     work     agenda items [3]                                     2.9
+51 2w  lab     lit work read papalexi 2018 [2]                              2.89
+52 2w  lab     lit work read macintyre 2018 [2]                             2.88
+68 9d  lab     lit work read konrashova 2017 [2]                            2.85
+45 3w  lab     lit work read zheng 2017 [1]                                 2.82
+53 2w  lab     lit work read sahin 2017 [1]                                 2.78
+59 11d lab     lit work litsrch re genetic lineage tracing method [1]       2.76
+90 1d  lab     lit work read manno 2018 [1]                                 2.71
+44 3w  lab     lit work read ocpmi summary                                  2.02
+56 13d lab     n work   review pca concepts                                 1.97
+57 12d lab     n work   compare default seurat tutorial to starrlab         1.97
+                        protocol
+58 12d lab     w work   deep dive into default seurat analysis              1.97
+69 8d  lab     lit work find list of CSC markers                            1.94
+85 1d  lab     n work   evaluate list of highly var features pt59           1.91
+87 1d  lab     errand n bring monitor to work                               1.91
+88 1d  lab     n work   review rnaseq analysis protocol                     1.91
+93 19h lab     n work   perform diff exp analysis on non-lin red pt59        1.9
+                        output
+
+18 tasks
+
+
+
+
+
+
+***
+
 # References
+
 
 
 
