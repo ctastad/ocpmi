@@ -130,3 +130,10 @@ The metadata and output can be modified through special comments.
 #' output: pdf_document
 #' ---
 ```
+
+Additionally, regular markdown formatting can be applied behind this special comment type.
+
+```{r eval=F}
+#' A script comment that includes **markdown** formatting.
+```
+
