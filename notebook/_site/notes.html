@@ -3876,13 +3876,60 @@ sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt</code></pre>
 </div>
 <div id="rna-velocity" class="section level3">
 <h3>RNA Velocity</h3>
-<p>I came a cross a <a href="https://www.reddit.com/r/bioinformatics/comments/bz292v/_/">thread</a> on the bioinformatics subreddit discussing the isssues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. (<span class="citation">La Manno et al. (2018)</span>)</p>
+<p>I came a cross a <a href="https://www.reddit.com/r/bioinformatics/comments/bz292v/_/">thread</a> on the bioinformatics subreddit discussing the issues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. (<span class="citation">La Manno et al. (2018)</span>)</p>
 </div>
-<div id="rendering-.r---.html" class="section level3">
-<h3>Rendering .R -&gt; .html</h3>
-<p>I made an amazing discovery today. It is possible to render markdown output straight from a .R file. I’m not sure if I can apply certain yaml or formatting settings to this process yet, but this function alone will save the need to create two seperate files when running code and producing a formatted output.</p>
+<div id="render-.r---.html" class="section level3">
+<h3>Render .R -&gt; .html</h3>
+<p>I made an amazing discovery today. It is possible to render markdown output straight from a .R file. I’m not sure if I can apply certain yaml or formatting settings to this process yet, but this function alone will save the need to create two separate files when running code and producing a formatted output.</p>
 <p><a href="https://rmarkdown.rstudio.com/articles_report_from_r_script.html" class="uri">https://rmarkdown.rstudio.com/articles_report_from_r_script.html</a></p>
+<p>A markdown report can be compiled from an R script by:</p>
+<pre class="r"><code>rmarkdown::render(&quot;analysis.R&quot;) # will generate an html output
+rmarkdown::render(&quot;analysis.R&quot;, &quot;pdf_document&quot;)</code></pre>
+<p>The metadata and output can be modified through special comments.</p>
+<pre class="r"><code>#' ---
+#' title: &quot;Crop Analysis Q3 2013&quot;
+#' author: &quot;John Smith&quot;
+#' date: &quot;May 3rd, 2014&quot;
+#' output: pdf_document
+#' ---</code></pre>
+</div>
+<div id="summary-14" class="section level3">
+<h3>Summary</h3>
+<p>My day consisted of a continued focus on developing a complete working model of the general Seurat pipeline through the lens of the pt59 data. I haven’t done much in terms of evaluation for the output and will need to dig into this more. The highly variable features and linear dimensional reduction are items I need to both confirm for efficacy and make sense of in their findings. Additionally, I merely clustered the data along 13 dimensions and did not apply any further analysis such as the exploration of highly variable features in the umap’d data.</p>
+<p>I did make some unintended progress on formatting and organization of code after discovering that I can render markdown directly from an R script file. This is what I was striving for to some degree in my MSI setup from last week, so it is a relief to arrive at a workable solution.</p>
+<p>Last, I plan on taking a bit of a dive into the concept of RNA velocity to see if it holds any relevance to evaluating our data set. As I have become acclimated to the content of this field, I have felt there is some aspect of single cell analysis that the group has not considered to explore concepts beyond cell typing such as CNV, cell lineage, and stem cell character. I don’t say that with the authority to know if it is the case, but the adolescence of this field draws the general assumption.</p>
+<div id="completed-11" class="section level4">
+<h4>Completed</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Created</th>
+<th align="left">Completed</th>
+<th>Age</th>
+<th>Project</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019-06-11</td>
+<td align="left">2019-06-11</td>
+<td>5h</td>
+<td>lab</td>
+<td align="left">email tim re mtg resched</td>
+</tr>
+<tr class="even">
+<td align="left">2019-05-20</td>
+<td align="left">2019-06-11</td>
+<td>3w</td>
+<td>lab</td>
+<td align="left">run surat tutorial w/ pt 59</td>
+</tr>
+</tbody>
+</table>
+<p>2 tasks</p>
 <hr />
+</div>
 </div>
 </div>
 </div>
