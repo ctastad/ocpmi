@@ -1241,6 +1241,46 @@ ID Age Project Tags     Description                                   Urg
 
 17 tasks
 
+### wkly mtg w/ Tim
+
+present: chris, tim
+
+```{r eval=F}
+
+Description
+------------------------------------------------------------------------------
+agenda items
+  2019-06-10 discuss application of different R files
+  2019-06-10 compare pt59 data
+  2019-06-11 job
+  2019-06-12 discuss selection of genetic markers and highly variable features
+  2019-06-13 tirosh 2016 CNV method
+
+1 task
+```
+
+#### Notes
+
+* When do I want my thesis to come together?
+    + September is the goal right now.
+* The CSC concept is probably not a suitable project since it is relatively hard to define without some type of in situ validation, which I won't have time for.
+* The RNA velocity concept is interesting but probably outside my scope right now.
+* The CNV project
+    + Has been started to some degree by jason and would be a good candidate project.
+    + He has a preliminary version of this that I should discuss with him.
+    + They did not have the bulk exome data at this point, so there is potential for a greater reference in analysis.
+    + I should get the exome data and develop a process to establish a CNV baseline.
+    + I can use @Tirosh2016 as a general method reference in SC CNV analysis, but developing a novel, standardized approach would be valuable according to Tim.
+    + ACTIONS:
+        - reach out to jason re his efforts so far.
+        - get exome data.
+        - read @Zare2017 for a comparison of CNV analysis in whole exome data.
+        - email yuk and explore grant opportunities.
+        - compare Tim's pt59 output.
+        - continue pt59 analysis by applying bolean script
+* Tim gave me a list of cell type gene reference lists which will come in handy when identifying clusters and variable features.
+* We discussed Tim's R scripts. The `seurat_analysis.R` is meant to be a bit of a customization analysis after the general pipeline has run. The others serve their dedicated purpose, which is outlined in the RNAseq analysis protocol.
+
 
 ***
 

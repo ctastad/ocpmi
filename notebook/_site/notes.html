@@ -420,14 +420,6 @@ div.tocify {
 library(Seurat)
 library(knitr)
 library(kableExtra)</code></pre>
-<pre><code>## Registered S3 method overwritten by 'rvest':
-##   method            from
-##   read_xml.response xml2</code></pre>
-<pre><code>## 
-## Attaching package: 'kableExtra'</code></pre>
-<pre><code>## The following object is masked from 'package:dplyr':
-## 
-##     group_rows</code></pre>
 <div id="may-2019" class="section level1">
 <h1>May 2019</h1>
 <div id="section" class="section level2">
@@ -3884,7 +3876,7 @@ sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt</code></pre>
 </div>
 <div id="rna-velocity" class="section level3">
 <h3>RNA Velocity</h3>
-<p>I came a cross a <a href="https://www.reddit.com/r/bioinformatics/comments/bz292v/_/">thread</a> on the bioinformatics subreddit discussing the issues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. (<span class="citation">La Manno et al. (2018)</span>)</p>
+<p>I came a cross a <a href="https://www.reddit.com/r/bioinformatics/comments/bz292v/_/">thread</a> on the bioinformatics subreddit discussing the issues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. <span class="citation">(La Manno et al. 2018)</span></p>
 </div>
 <div id="render-.r---.html" class="section level3">
 <h3>Render .R -&gt; .html</h3>
@@ -4119,7 +4111,282 @@ rmarkdown::render(&quot;analysis.R&quot;, &quot;pdf_document&quot;)</code></pre>
 </tbody>
 </table>
 <p>18 tasks</p>
+</div>
+<div id="sshfs-unmount" class="section level3">
+<h3>sshfs Unmount</h3>
+<p>I’ve run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use <code>fusermount</code> to force the unmount first.</p>
+<pre class="r"><code>fusermount -uz /data</code></pre>
+</div>
+<div id="msi-interactive-computing" class="section level3">
+<h3>MSI Interactive Computing</h3>
+<p>Running all of my work locally has shown to be more resource consuming than originally anticipated. This has developed somewhat of a bottleneck, so I’m hoping I can transfer the larger rendering jobs to MSI so they can process in the background. A limitation in doing this is developing the ability to generate markdown since this would be the best output. It isn’t necessary, but I would prefer this. The hangup seems to be the lack of a graphics environment. Obviously, a headless server will not have something like this loaded by default, but I have to see if I can get that working.</p>
+</div>
+<div id="rna-velocity-1" class="section level3">
+<h3>RNA Velocity</h3>
+<p>I began to gloss over this paper today <span class="citation">(La Manno et al. 2018)</span>. The concept is both relatively simple in general terms yet includes a good deal of complexity since it involves RNA splicing. I need to read further, but what I’ve read so far lends itself to the potential for some application in our data set. I’ll have to discuss with Tim more tomorrow.</p>
+</div>
+<div id="pt59-analysis" class="section level3">
+<h3>pt59 analysis</h3>
+<p>I continued to round out my general analysis of the pt59 data. This analysis was furthered with my original approach of being blind to the Biological relevance. I’ve been able to generate outputs that follow the base pipeline but will need to evaluate markers specific to our cell types and genetic markers of interest.</p>
+</div>
+<div id="summary-15" class="section level3">
+<h3>Summary</h3>
+<p>Today included some light work around finishing off my pt59 analysis. The code I’ve put together generally mirrors the PBMC tutorial with some minor variations. Key to this general approach is that I haven’t customized the marker selection. This would be a good discussion with Tim in how he has identified this in the past in a consistent manner. Additionally, my computer is becoming more limited with every process I run. It may be worth breaking these things into smaller chunks of analysis to account for my resource limitations, but I’m going to return to getting things working on MSI first.</p>
+<div id="completed-12" class="section level4">
+<h4>Completed</h4>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Created</th>
+<th align="left">Completed</th>
+<th>Age</th>
+<th>Project</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2019-06-10</td>
+<td align="left">2019-06-12</td>
+<td>2d</td>
+<td>lab</td>
+<td align="left">bring monitor to work</td>
+</tr>
+<tr class="even">
+<td align="left">2019-05-30</td>
+<td align="left">2019-06-12</td>
+<td>13d</td>
+<td>lab</td>
+<td align="left">compare default seurat tutorial to starrlab</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+<td></td>
+<td align="left">protocol</td>
+</tr>
+<tr class="even">
+<td align="left">2019-06-11</td>
+<td align="left">2019-06-12</td>
+<td>1d</td>
+<td>lab</td>
+<td align="left">perform diff exp analysis on non-lin red pt59</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td></td>
+<td></td>
+<td align="left">output</td>
+</tr>
+</tbody>
+</table>
+<p>3 tasks</p>
 <hr />
+</div>
+</div>
+</div>
+<div id="section-17" class="section level2">
+<h2>13</h2>
+<div id="todo-16" class="section level3">
+<h3>TODO</h3>
+<table>
+<thead>
+<tr class="header">
+<th>ID</th>
+<th>Age</th>
+<th>Project</th>
+<th align="left">Tags</th>
+<th align="left">Description</th>
+<th align="left">Urg</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>46</td>
+<td>3w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read tirosh 2016 [2]</td>
+<td align="left">2.93</td>
+</tr>
+<tr class="even">
+<td>48</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">work</td>
+<td align="left">agenda items <a href="#section-13">6</a></td>
+<td align="left">2.91</td>
+</tr>
+<tr class="odd">
+<td>51</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read papalexi 2018 [2]</td>
+<td align="left">2.89</td>
+</tr>
+<tr class="even">
+<td>52</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read macintyre 2018 [2]</td>
+<td align="left">2.89</td>
+</tr>
+<tr class="odd">
+<td>66</td>
+<td>9d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read konrashova 2017 [2]</td>
+<td align="left">2.85</td>
+</tr>
+<tr class="even">
+<td>45</td>
+<td>3w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read zheng 2017 [1]</td>
+<td align="left">2.83</td>
+</tr>
+<tr class="odd">
+<td>53</td>
+<td>2w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read sahin 2017 [1]</td>
+<td align="left">2.78</td>
+</tr>
+<tr class="even">
+<td>58</td>
+<td>12d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">litsrch re genetic lineage tracing method [1]</td>
+<td align="left">2.77</td>
+</tr>
+<tr class="odd">
+<td>84</td>
+<td>1d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read manno 2018 [1]</td>
+<td align="left">2.71</td>
+</tr>
+<tr class="even">
+<td>44</td>
+<td>3w</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">read ocpmi summary</td>
+<td align="left">2.03</td>
+</tr>
+<tr class="odd">
+<td>56</td>
+<td>13d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">review pca concepts</td>
+<td align="left">1.97</td>
+</tr>
+<tr class="even">
+<td>57</td>
+<td>13d</td>
+<td>lab</td>
+<td align="left">w work</td>
+<td align="left">deep dive into default seurat analysis</td>
+<td align="left">1.97</td>
+</tr>
+<tr class="odd">
+<td>67</td>
+<td>9d</td>
+<td>lab</td>
+<td align="left">lit work</td>
+<td align="left">find list of CSC markers</td>
+<td align="left">1.95</td>
+</tr>
+<tr class="even">
+<td>81</td>
+<td>2d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">evaluate list of highly var features pt59</td>
+<td align="left">1.91</td>
+</tr>
+<tr class="odd">
+<td>83</td>
+<td>2d</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">review rnaseq analysis protocol</td>
+<td align="left">1.91</td>
+</tr>
+<tr class="even">
+<td>88</td>
+<td>20h</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">clean up github tracked files</td>
+<td align="left">1.9</td>
+</tr>
+<tr class="odd">
+<td>89</td>
+<td>17h</td>
+<td>lab</td>
+<td align="left">n work</td>
+<td align="left">put pt59 output on results page</td>
+<td align="left">1.9</td>
+</tr>
+</tbody>
+</table>
+<p>17 tasks</p>
+</div>
+<div id="wkly-mtg-w-tim-3" class="section level3">
+<h3>wkly mtg w/ Tim</h3>
+<p>present: chris, tim</p>
+<pre class="r"><code>Description
+------------------------------------------------------------------------------
+agenda items
+  2019-06-10 discuss application of different R files
+  2019-06-10 compare pt59 data
+  2019-06-11 job
+  2019-06-12 discuss selection of genetic markers and highly variable features
+  2019-06-13 tirosh 2016 CNV method
+
+1 task</code></pre>
+<div id="notes-1" class="section level4">
+<h4>Notes</h4>
+<ul>
+<li>When do I want my thesis to come together?
+<ul>
+<li>September is the goal right now.</li>
+</ul></li>
+<li>The CSC concept is probably not a suitable project since it is relatively hard to define without some type of in situ validation, which I won’t have time for.</li>
+<li>The RNA velocity concept is interesting but probably outside my scope right now.</li>
+<li>The CNV project
+<ul>
+<li>Has been started to some degree by jason and would be a good candidate project.</li>
+<li>He has a preliminary version of this that I should discuss with him.</li>
+<li>They did not have the bulk exome data at this point, so there is potential for a greater reference in analysis.</li>
+<li>I should get the exome data and develop a process to establish a CNV baseline.</li>
+<li>I can use <span class="citation">Tirosh et al. (2016)</span> as a general method reference in SC CNV analysis, but developing a novel, standardized approach would be valuable according to Tim.</li>
+<li>Actions:
+<ul>
+<li>reach out to jason re his efforts so far.</li>
+<li>get exome data.</li>
+<li>read <span class="citation">Zare et al. (2017)</span> for a comparison of CNV analysis in whole exome data.</li>
+<li>email yuk and explore grant opportunities.</li>
+<li>compare Tim’s pt59 output.</li>
+<li>continue pt59 analysis by applying bolean script</li>
+</ul></li>
+</ul></li>
+<li>Tim gave me a list of cell type gene reference lists which will come in handy when identifying clusters and variable features.</li>
+<li>We discussed Tim’s R scripts. The <code>seurat_analysis.R</code> is meant to be a bit of a customization analysis after the general pipeline has run. The others serve their dedicated purpose, which is outlined in the RNAseq analysis protocol.</li>
+</ul>
+<hr />
+</div>
 </div>
 </div>
 </div>
@@ -4189,11 +4456,17 @@ rmarkdown::render(&quot;analysis.R&quot;, &quot;pdf_document&quot;)</code></pre>
 <div id="ref-ocpmi_git">
 <p>“Tasta005/Ocpmi.” 2019. <a href="https://github.umn.edu/tasta005/ocpmi" class="uri">https://github.umn.edu/tasta005/ocpmi</a>.</p>
 </div>
+<div id="ref-Tirosh2016">
+<p>Tirosh, Itay, Andrew S. Venteicher, Christine Hebert, Leah E. Escalante, Anoop P. Patel, Keren Yizhak, Jonathan M. Fisher, et al. 2016. “Single-cell RNA-seq supports a developmental hierarchy in human oligodendroglioma.” <em>Nature</em> 539 (7628): 309–13. doi:<a href="https://doi.org/10.1038/nature20123">10.1038/nature20123</a>.</p>
+</div>
 <div id="ref-Wang2009">
 <p>Wang, Yuan, Jiong Yang, Huarui Zheng, Gerald J. Tomasek, Peng Zhang, Paul E. McKeever, Eva Y.H.P. Lee, and Yuan Zhu. 2009. “Expression of Mutant p53 Proteins Implicates a Lineage Relationship between Neural Stem Cells and Malignant Astrocytic Glioma in a Murine Model.” <em>Cancer Cell</em> 15 (6): 514–26. doi:<a href="https://doi.org/10.1016/j.ccr.2009.04.001">10.1016/j.ccr.2009.04.001</a>.</p>
 </div>
 <div id="ref-Winterhoff2019">
 <p>Winterhoff, Boris, Shobhana Talukdar, Zenas Chang, Jinhua Wang, and Timothy K. Starr. 2019. “Single-cell sequencing in ovarian cancer.” <em>Current Opinion in Obstetrics and Gynecology</em> 31 (1): 49–55. doi:<a href="https://doi.org/10.1097/GCO.0000000000000516">10.1097/GCO.0000000000000516</a>.</p>
+</div>
+<div id="ref-Zare2017">
+<p>Zare, Fatima, Michelle Dow, Nicholas Monteleone, Abdelrahman Hosny, and Sheida Nabavi. 2017. “An evaluation of copy number variation detection tools for cancer using whole exome sequencing data.” <em>BMC Bioinformatics</em>. doi:<a href="https://doi.org/10.1186/s12859-017-1705-x">10.1186/s12859-017-1705-x</a>.</p>
 </div>
 <div id="ref-2019">
 <p>“Zotero Style Repository.” 2019. <a href="https://www.zotero.org/styles" class="uri">https://www.zotero.org/styles</a>.</p>
