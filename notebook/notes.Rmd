@@ -1195,7 +1195,7 @@ I began to gloss over this paper today [@LaManno2018]. The concept is both relat
 
 ### pt59 analysis
 
-
+I continued to round out my general analysis of the pt59 data. This analysis was furthered with my original approach of being blind to the Biological relevance. I've been able to generate outputs that follow the base pipeline but will need to evaluate markers specific to our cell types and genetic markers of interest.
 
 
 
