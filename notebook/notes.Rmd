@@ -1191,21 +1191,32 @@ Running all of my work locally has shown to be more resource consuming than orig
 
 ### RNA Velocity
 
-I began to gloss over this paper today [@LaManno2018]. The concept is both relatively simple in general terms yet includes a good deal of complexity since it involves RNA splicing. I need to read further, but what I've read so far lends itself to the potential for some applicatoin in our data set. I'll have to discuss with Tim more tomorrow.
+I began to gloss over this paper today [@LaManno2018]. The concept is both relatively simple in general terms yet includes a good deal of complexity since it involves RNA splicing. I need to read further, but what I've read so far lends itself to the potential for some application in our data set. I'll have to discuss with Tim more tomorrow.
 
 ### pt59 analysis
 
 I continued to round out my general analysis of the pt59 data. This analysis was furthered with my original approach of being blind to the Biological relevance. I've been able to generate outputs that follow the base pipeline but will need to evaluate markers specific to our cell types and genetic markers of interest.
+
+### Summary
+
+Today included some light work around finishing off my pt59 analysis. The code I've put together generally mirrors the PBMC tutorial with some minor variations. Key to this general approach is that I haven't customized the marker selection. This would be a good discussion with Tim in how he has identified this in the past in a consistent manner. Additionally, my computer is becoming more limited with every process I run. It may be worth breaking these things into smaller chunks of analysis to account for my resource limitations, but I'm going to return to getting things working on MSI first.
+
+#### Completed
+
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-06-10 2019-06-12 2d  lab     bring monitor to work
+2019-05-30 2019-06-12 13d lab     compare default seurat tutorial to starrlab
+                                  protocol
+2019-06-11 2019-06-12 1d  lab     perform diff exp analysis on non-lin red pt59
+                                  output
+
+3 tasks
+
 
 
 
 ***
 
 # References
-
-
-
-
-
-
 
