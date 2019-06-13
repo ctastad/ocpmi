@@ -1,5 +1,5 @@
 #' ---
-#' title: "Default Seurat Analysis"
+#' title: "pt59 Seurat Analysis"
 #' author: "Christopher Tastad"
 #' date: \today
 #' output:
@@ -13,8 +13,7 @@
 library(dplyr)
 library(Seurat)
 
-setwd("~/starr_lab/ocpmi/data/")
-pt59.data <- Read10X(data.dir = "./pt59/")
+pt59.data <- Read10X(data.dir = "./GRCh38/")
 pt59 <- CreateSeuratObject(counts = pt59.data, project = "pt59", min.cells = 3, min.features = 200)
 pt59
 
@@ -50,7 +49,8 @@ pt59 <- FindVariableFeatures(object = pt59, selection.method = 'vst', nfeatures 
 top10 <- head(x = VariableFeatures(object = pt59), 10)
 plot1 <- VariableFeaturePlot(object = pt59)
 plot2 <- LabelPoints(plot = plot1, points = top10, repel = T)
-CombinePlots(plots = list(plot1, plot2))
+# CombinePlots(plots = list(plot1, plot2))
+plot2
 
 #' # Scaling the data
 
