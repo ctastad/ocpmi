@@ -1102,7 +1102,7 @@ ID Age Project Tags     Description                                         Urg
 
 ### RNA Velocity
 
-I came a cross a [thread](https://www.reddit.com/r/bioinformatics/comments/bz292v/_/) on the bioinformatics subreddit discussing the issues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. (@LaManno2018)
+I came a cross a [thread](https://www.reddit.com/r/bioinformatics/comments/bz292v/_/) on the bioinformatics subreddit discussing the issues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. [@LaManno2018]
 
 ### Render .R -> .html
 
@@ -1176,6 +1176,24 @@ ID Age Project Tags     Description                                         Urg
 
 18 tasks
 
+
+### sshfs Unmount
+
+I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use `fusermount` to force the unmount first.
+
+```{r eval=F}
+fusermount -uz /data
+```
+
+### MSI Interactive Computing
+
+Running all of my work locally has shown to be more resource consuming than originally anticipated. This has developed somewhat of a bottleneck, so I'm hoping I can transfer the larger rendering jobs to MSI so they can process in the background. A limitation in doing this is developing the ability to generate markdown since this would be the best output. It isn't necessary, but I would prefer this. The hangup seems to be the lack of a graphics environment. Obviously, a headless server will not have something like this loaded by default, but I have to see if I can get that working.
+
+### RNA Velocity
+
+I began to gloss over this paper today [@LaManno2018]. The concept is both relatively simple in general terms yet includes a good deal of complexity since it involves RNA splicing. I need to read further, but what I've read so far lends itself to the potential for some applicatoin in our data set. I'll have to discuss with Tim more tomorrow.
+
+### pt59 analysis
 
 
 

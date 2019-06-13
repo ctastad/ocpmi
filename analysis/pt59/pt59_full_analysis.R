@@ -83,3 +83,13 @@ head(x = Idents(object = pt59), 5)
 
 pt59 <- RunUMAP(object = pt59, dims = 1:20)
 DimPlot(object = pt59, reduction = 'umap')
+
+#' # Find differentially expressed features
+
+pt59.markers <- FindAllMarkers(object = pt59, only.pos = TRUE, min.pct = 0.25, logfc.threshold = 0.25)
+pt59.markers %>% group_by(cluster) %>% top_n(n = 2, wt = avg_logFC)
+VlnPlot(object = pt59, features = c("MS4A1", "CD79A"))
+VlnPlot(object = pt59, features = c("NKG7", "PF4"), slot = 'counts', log = TRUE)
+FeaturePlot(object = pt59, features = c("MS4A1", "GNLY", "CD3E", "CD14", "FCER1A", "FCGR3A", "LYZ", "PPBP", "CD8A"))
+pt59.markers %>% group_by(cluster) %>% top_n(n = 10, wt = avg_logFC) -> top10
+DoHeatmap(object = pt59, features = top10$gene) + NoLegend()
