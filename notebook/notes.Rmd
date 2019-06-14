@@ -1469,6 +1469,28 @@ OSError: [Errno 2] No such file or directory
 
 ```
 
+### Summary
+
+I had my weekly meeting with Tim today. We had a productive conversation where we were able to assess and re-gear my progress. We came to the conclusion that I would focus on the CNV approach and were able to put together a large ranger of reference points around getting this started. There are several actions that came from our meeting, and I will have a good amount to focus on. The primary focus beyond content review will be developing a method for evaluating CNV within the whole exome data.
+
+I was also able to get some house keeping done around documentation.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age  Project Description
+---------- ---------- ---- ------- ---------------------------------------------
+2019-06-11 2019-06-13 2d   lab     read manno 2018
+                                     2019-06-11 rna velocity of single cells
+2019-06-03 2019-06-13 9d   lab     find list of CSC markers
+2019-06-01 2019-06-13 12d  lab     litsrch re genetic lineage tracing method
+                                     2019-06-01 can we determine a common
+                                   ancestor among cell ancestry
+2019-06-12 2019-06-13 1d   lab     clean up github tracked files
+2019-06-13 2019-06-13 2min lab     organize cnv reference content
+
+5 tasks
+```
 
 
 
@@ -1476,5 +1498,6 @@ OSError: [Errno 2] No such file or directory
 ***
 
 # References
+
 
 
