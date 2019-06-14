@@ -1,7 +1,0 @@
-#!/bin/bash -l
-#PBS -l nodes=1:ppn=1,mem=32gb,walltime=8:00:00
-#PBS -m ae
-
-cd ~/ovarian/ssrnaseq/pat_#
-module load R/3.5.0
-R --no-save  <seurat_final.R

@@ -46,6 +46,7 @@ Focus Options
 
 
 
+```{r eval=F}
 ID  Age   Project        Tags       R Due        Description                Urg
 --- ----- -------------- ---------- - ---------- -------------------------- ----
 326 10h   starrlab       computer n R 2019-05-21 write daily summary        10.5
@@ -67,6 +68,7 @@ ID  Age   Project        Tags       R Due        Description                Urg
 323 18h   starrlab.ocpmi computer n              compile bibtex ref page     1.9
 
 12 tasks
+```
 
 
 ### Citation packages
@@ -100,6 +102,7 @@ Additionally, I plan on establishing a git repo to manage version control and hi
 
 
 
+```{r eval=F}
 ID  Age Project        Tags       R Due        Description                  Urg
 --- --- -------------- ---------- - ---------- ---------------------------- ----
 326 15h starrlab       computer n R 2019-05-22 write daily summary          10.5
@@ -118,6 +121,7 @@ ID  Age Project        Tags       R Due        Description                  Urg
 323 1d  starrlab.ocpmi computer n              compile bibtex ref page      1.91
 
 11 tasks
+```
 
 
 ### wkly mtg w/ Tim
@@ -154,6 +158,7 @@ My work today included continued focus on getting organized an taking a very del
 
 
 
+```{r eval=F}
 ID  Age Project        Tags       R Due        Description                  Urg
 --- --- -------------- ---------- - ---------- ---------------------------- ----
 334 11h starrlab       computer n R 2019-05-23 write daily summary          10.6
@@ -180,6 +185,7 @@ ID  Age Project        Tags       R Due        Description                  Urg
 323 2d  starrlab.ocpmi computer n              compile bibtex ref page      1.91
 
 18 tasks
+```
 
 
 ### Citations
@@ -203,6 +209,7 @@ I was able to round out much of my organizational setup today. I feel confident 
 #### Completed
 
 
+```{r eval=F}
 Created    Completed  Age Project        R Due        Description
 ---------- ---------- --- -------------- - ---------- --------------------------
 2019-05-22 2019-05-23 1d  starrlab       R 2019-05-22 write daily summary
@@ -222,6 +229,7 @@ Created    Completed  Age Project        R Due        Description
 2019-05-22 2019-05-23 1d  starrlab                    create agenda field
 
 11 tasks
+```
 
 ***
 
@@ -230,6 +238,7 @@ Created    Completed  Age Project        R Due        Description
 ### TODO
 
 
+```{r eval=F}
 ID  Age Project        Tag            Description                           Urg
 --- --- -------------- -------------- ------------------------------------- ----
 314 3d  starrlab.ocpmi computer lit n find ovca review re cur treatment     2.02
@@ -246,6 +255,7 @@ ID  Age Project        Tag            Description                           Urg
 330 20h starrlab       w              agenda items                           1.8
 
 11 tasks
+```
 
 ### create_site Script
 
@@ -268,6 +278,7 @@ Today was filled with primarily administrative work. A large bulk of my time was
 #### Completed
 
 
+```{r eval=F}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
 2019-05-23 2019-05-24 1d  starrlab       create website knit script
@@ -286,6 +297,7 @@ Created    Completed  Age Project        Description
 2019-05-20 2019-05-24 4d  starrlab.ocpmi install surat
 
 11 tasks
+```
 
 ***
 
@@ -294,6 +306,7 @@ Created    Completed  Age Project        Description
 ### TODO
 
 
+```{r eval=F}
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
 77 4d  starrlab       computer w     make custom csl                        1.92
@@ -311,6 +324,7 @@ ID Age Project        Tags           Description                            Urg
 71 6d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59            1.93
 
 12 tasks
+```
 
 
 ###[@Lheureux2019]
@@ -351,6 +365,7 @@ Just worked my way through the above summary today. Will continue and complete r
 ### TODO
 
 
+```{r eval=F}
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
 77 4d  starrlab       computer w     make custom csl                        1.92
@@ -369,6 +384,7 @@ ID Age Project        Tags           Description                            Urg
 71 7d  starrlab.ocpmi computer w     run surat tutorial w/ pt 59            1.94
 
 13 tasks
+```
 
 
 ### [@Lheureux2019]
@@ -441,11 +457,13 @@ I have shifted focus to begin a comprehensive literature review. I've started by
 #### Completed
 
 
+```{r eval=F}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------
 2019-05-20 2019-05-28 7d  starrlab.ocpmi find ovca review re cur treatment
 
 1 task
+```
 
 ***
 
@@ -453,6 +471,7 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
+```{r eval=F}
 ID Age  Project        Tags           Description                           Urg
 -- ---- -------------- -------------- ------------------------------------- ----
 75 5d   starrlab                      agenda items [3]                      2.03
@@ -475,6 +494,7 @@ ID Age  Project        Tags           Description                           Urg
 96 2min starrlab.ocpmi computer n     run seurat with pbmc data              1.9
 
 17 tasks
+```
 
 
 ### wkly mtg w/ Tim
@@ -563,12 +583,14 @@ Additionally, I did a little house keeping by establishing the first part of the
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project  Description
 ---------- ---------- --- -------- ----------------------------
 2019-05-28 2019-05-29 1d  starrlab fix god damn git issue
 2019-05-29 2019-05-29 2h  starrlab fix hostname issue w/ mesabi
 
 2 tasks
+```
 
 ***
 
@@ -577,6 +599,7 @@ Created    Completed  Age Project  Description
 ### TODO
 
 
+```{r eval=F}
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
 75 6d  starrlab                      agenda items [3]                       2.03
@@ -597,6 +620,7 @@ ID Age Project        Tags           Description                            Urg
 95 20h starrlab.ocpmi computer n     run seurat with pbmc data               1.9
 
 15 tasks
+```
 
 ### Seurat Tutorial pbmc3k
 
@@ -612,6 +636,7 @@ Briefly, I wrapped up safety training today, so that is all taken care of. The r
 #### Completed
 
 
+```{r eval=F}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
 2019-05-24 2019-05-30 6d  starrlab       GCP Human RSRCH Biomed Studies
@@ -621,6 +646,7 @@ Created    Completed  Age Project        Description
 2019-05-29 2019-05-30 1d  starrlab.ocpmi run seurat with pbmc data
 
 4 tasks
+```
 
 ***
 
@@ -628,6 +654,7 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
+```{r eval=F}
 ID Age Project        Tags       Description                                Urg
 -- --- -------------- ---------- ------------------------------------------ ----
 73 8d  starrlab                  agenda items [3]                           2.04
@@ -649,6 +676,7 @@ ID Age Project        Tags       Description                                Urg
 69 11d starrlab.ocpmi lit w      read venteicher - CNV paper                1.96
 
 15 tasks
+```
 
 ### Mendeley
 
@@ -710,6 +738,7 @@ Last, I can't say what generated this thought specifically, but I came across wh
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- --------------------------
 2019-05-20 2019-06-01 11d starrlab.ocpmi read starr paper re 1st pt
@@ -719,6 +748,7 @@ Created    Completed  Age Project        Description
 2019-05-23 2019-05-31 8d  starrlab       make custom csl
 
 4 tasks
+```
 
 
 ***
@@ -729,6 +759,7 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
+```{r eval=F}
 ID Age Project        Tags       Description                                Urg
 -- --- -------------- ---------- ------------------------------------------ ----
 52 10d starrlab                  agenda items [2]                           1.95
@@ -748,6 +779,7 @@ ID Age Project        Tags       Description                                Urg
 69 2d  starrlab.ocpmi lit n      find cancer stem cell review               1.91
 
 14 tasks
+```
 
 ### Cancer Stem Cell Database
 
@@ -801,6 +833,7 @@ I focused mostly on lit search efforts today. I want to develop a better underst
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
 2019-06-01 2019-06-03 2d  starrlab       add notes about cancer stem cell
@@ -808,6 +841,7 @@ Created    Completed  Age Project        Description
 2019-06-01 2019-06-03 2d  starrlab.ocpmi litsrch re cancer stem cell review
 
 2 tasks
+```
 
 ***
 
@@ -816,6 +850,7 @@ Created    Completed  Age Project        Description
 ### TODO
 
 
+```{r eval=F}
 ID Age Project Tags   Description                                           Urg
 -- --- ------- ------ ----------------------------------------------------- ----
 49 2w  lab     lit    read tirosh 2016 [2]                                  2.78
@@ -833,6 +868,7 @@ ID Age Project Tags   Description                                           Urg
 77 20h lab     lit    find list of CSC markers                               1.8
 
 13 tasks
+```
 
 ### Summary
 
@@ -844,6 +880,7 @@ I didn't get a lot done today. I began to apply the vanilla Seurat analysis to t
 
 ### TODO
 
+```{r eval=F}
 ID Age  Project Tags   Description                                          Urg
 -- ---- ------- ------ ---------------------------------------------------- ----
 49 2w   lab     lit    read tirosh 2016 [2]                                 2.78
@@ -864,6 +901,7 @@ ID Age  Project Tags   Description                                          Urg
 52 12d  lab            agenda items                                         1.07
 
 16 tasks
+```
 
 
 ### wkly mtg w/ Tim
@@ -928,6 +966,7 @@ I met with Tim today for our weekly meeting. We were able to discuss things that
 ### TODO
 
 
+```{r eval=F}
 ID Age Project Tags   Description                                           Urg
 -- --- ------- ------ ----------------------------------------------------- ----
 49 2w  lab     lit    read tirosh 2016 [2]                                  2.79
@@ -950,6 +989,7 @@ ID Age Project Tags   Description                                           Urg
 51 13d lab            agenda items                                          1.07
 
 18 tasks
+```
 
 
 ### MSI Workflow
@@ -969,6 +1009,7 @@ I've wasted a large amount of time over the past two days. I spent a solid 10 ho
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- -------------------------------
 2019-06-05 2019-06-06 1d  lab     send vacation dates to tim
@@ -977,6 +1018,7 @@ Created    Completed  Age Project Description
 2019-06-06 2019-06-06 2h  lab     exchange ssh keys with msi
 
 4 tasks
+```
 
 ***
 
@@ -984,6 +1026,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
+```{r eval=F}
 ID Age Project Tags     Description                                         Urg
 -- --- ------- -------- --------------------------------------------------- ----
 48 2w  lab     lit work read tirosh 2016 [2]                                2.91
@@ -1006,6 +1049,7 @@ ID Age Project Tags     Description                                         Urg
 50 2w  lab     work     agenda items                                        1.89
 
 17 tasks
+```
 
 ### Non-contemporaneous Notes - 6/6
 
@@ -1062,6 +1106,7 @@ Overall, I will spend most of tomorrow continuing to review the documentation an
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- -------------------------------
 2019-06-05 2019-06-10 4d  lab     spell check notebook
@@ -1069,6 +1114,7 @@ Created    Completed  Age Project Description
 2019-06-06 2019-06-10 3d  lab     add notes re sshfs bash script
 
 3 tasks
+```
 
 ***
 
@@ -1076,6 +1122,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
+```{r eval=F}
 ID Age Project Tags     Description                                         Urg
 -- --- ------- -------- --------------------------------------------------- ----
 48 3w  lab     lit work read tirosh 2016 [2]                                2.92
@@ -1099,6 +1146,7 @@ ID Age Project Tags     Description                                         Urg
 95 20s lab     n work   email tim re mtg resched                             1.9
 
 18 tasks
+```
 
 ### RNA Velocity
 
@@ -1138,18 +1186,23 @@ Last, I plan on taking a bit of a dive into the concept of RNA velocity to see i
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ---------------------------
 2019-06-11 2019-06-11 5h  lab     email tim re mtg resched
 2019-05-20 2019-06-11 3w  lab     run surat tutorial w/ pt 59
 
 2 tasks
+```
 
 ***
 
 ## 12
 
 ### TODO
+
+```{r eval=F}
+
 
 ID Age Project Tags     Description                                         Urg
 -- --- ------- -------- --------------------------------------------------- ----
@@ -1175,6 +1228,7 @@ ID Age Project Tags     Description                                         Urg
                         output
 
 18 tasks
+```
 
 
 ### sshfs Unmount
@@ -1203,6 +1257,7 @@ Today included some light work around finishing off my pt59 analysis. The code I
 
 #### Completed
 
+```{r eval=F}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
 2019-06-10 2019-06-12 2d  lab     bring monitor to work
@@ -1212,12 +1267,15 @@ Created    Completed  Age Project Description
                                   output
 
 3 tasks
+```
 
 ***
 
 ## 13
 
 ### TODO
+
+```{r eval=F}
 
 ID Age Project Tags     Description                                   Urg
 -- --- ------- -------- --------------------------------------------- ----
@@ -1240,6 +1298,7 @@ ID Age Project Tags     Description                                   Urg
 89 17h lab     n work   put pt59 output on results page                1.9
 
 17 tasks
+```
 
 ### wkly mtg w/ Tim
 
@@ -1252,14 +1311,18 @@ Description
 agenda items
   2019-06-10 discuss application of different R files
   2019-06-10 compare pt59 data
-  2019-06-11 job
+  2019-06-11 job funding
   2019-06-12 discuss selection of genetic markers and highly variable features
+  2019-06-13 assess current progress and direction
   2019-06-13 tirosh 2016 CNV method
+  2019-06-13 how are you determining dimensionality
 
 1 task
 ```
 
 #### Notes
+
+Direction and project selection
 
 * When do I want my thesis to come together?
     + September is the goal right now.
@@ -1271,16 +1334,140 @@ agenda items
     + They did not have the bulk exome data at this point, so there is potential for a greater reference in analysis.
     + I should get the exome data and develop a process to establish a CNV baseline.
     + I can use @Tirosh2016 as a general method reference in SC CNV analysis, but developing a novel, standardized approach would be valuable according to Tim.
-    + ACTIONS:
-        - reach out to jason re his efforts so far.
-        - get exome data.
-        - read @Zare2017 for a comparison of CNV analysis in whole exome data.
-        - email yuk and explore grant opportunities.
-        - compare Tim's pt59 output.
-        - continue pt59 analysis by applying bolean script
+
+Analysis of genetic markers and variable features
+
 * Tim gave me a list of cell type gene reference lists which will come in handy when identifying clusters and variable features.
 * We discussed Tim's R scripts. The `seurat_analysis.R` is meant to be a bit of a customization analysis after the general pipeline has run. The others serve their dedicated purpose, which is outlined in the RNAseq analysis protocol.
 
+Selection of dimensionality
+
+* Tim gave me an overview of his method for selection the dimensionality of the data sets. He uses the option to take a csv output of the PCA and rank by statistical significance. Currently, he uses the relatively arbitrary cutoff of 1e-10.
+
+Cell Ranger Status
+
+* It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
+
+```{r eval=F}
+/scratch.global/zhan2142/starr/
+```
+
+
+ACTIONS:
+
+* reach out to jason re his efforts so far.
+* get exome data.
+* read @Zare2017 for a comparison of CNV analysis in whole exome data.
+* email yuk and explore grant opportunities.
+* compare Tim's pt59 output.
+* continue pt59 analysis by applying boolean script
+
+
+### CNV
+
+#### Points of contact
+
+* Juan Abrahante <abrah023@umn.edu>
+* Christy Henzler <chenzler@umn.edu>
+* Jinhua Wang <wangjh@umn.edu>
+* Ying Zhang <zhan2142@umn.edu>
+* Andrew Nelson <nels2055@umn.edu>
+
+#### Varscan2
+
+Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
+
+#### Contra
+
+Juan had tried using contra in the past which did not work.
+
+##### An email from Juan 6/13/2019
+
+Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
+
+
+First, I attempted via Python 3, 2.7 and the original 2.6 version using the test set in my local computer. Then, I moved into the "Matrix" or in this case Mesabi.
+
+With Help from Master Jedi Christy (Thank you Christy!) I created a conda environment for Contra via:
+
+```{r eval=F}
+conda create -n contra python=2.6
+source activate /home/umgc-staff/abrah023/bin/miniconda3/envs/contra
+```
+
+change directory to folder containing Contra script (tried both Version 2.0.8 and 1.0.3).
+
+```{r eval=F}
+
+python contra.py --target ../0247401_D_BED_20090724_hg19_MERGED.bed --test ../P0667N_GATKrealigned_duplicates_marked.bam --control ../P0667T_GATKrealigned_duplicates_marked.bam --fasta human_g1k_v37.fasta --outfolder ../output2/
+```
+
+That was using the files that came with Contra and got an error:
+
+```{r eval=F}
+
+
+(contra) abrah023@ln0003 [~/AndyTemp/CONTRA.v2.0.8] % python contra.py --target ../0247401_D_BED_20090724_hg19_MERGED.bed --test ../P0667N_GATKrealigned_duplicates_marked.bam --control ../P0667T_GATKrealigned_duplicates_marked.bam --fasta human_g1k_v37.fasta --o ../outputr/
+
+target		: ../0247401_D_BED_20090724_hg19_MERGED.bed
+
+test		: ../P0667N_GATKrealigned_duplicates_marked.bam
+
+control		: ../P0667T_GATKrealigned_duplicates_marked.bam
+
+outfolder	: ../outputr/
+
+numBin		: [20]
+
+minreaddepth	: 10
+
+minNBases	: 10
+
+sam		: False
+
+pval		: 0.05
+
+sampleName	: No-SampleName
+
+nomultimapped	: False
+
+plot		: False
+
+bedInput		: False
+
+minExon		: 2000
+
+largeDeletion	: False
+
+removeDups	: False
+
+Creating Output Folder :  Done.
+
+Traceback (most recent call last):
+
+  File "contra.py", line 625, in <module>
+
+    main()
+
+  File "contra.py", line 570, in main
+
+    get_genome(params.TEST, genomeFile)
+
+  File "/panfs/roc/groups/8/umgc-staff/abrah023/AndyTemp/CONTRA.v2.0.8/scripts/get_chr_length.py", line 31, in get_genome
+
+    raw_header = subprocess.Popen(args, stdout = subprocess.PIPE).communicate()[0]
+
+  File "/home/umgc-staff/abrah023/bin/miniconda3/envs/contra/lib/python2.6/subprocess.py", line 623, in __init__
+
+    errread, errwrite)
+
+  File "/home/umgc-staff/abrah023/bin/miniconda3/envs/contra/lib/python2.6/subprocess.py", line 1141, in _execute_child
+
+    raise child_exception
+
+OSError: [Errno 2] No such file or directory
+
+```
 
 ***
 

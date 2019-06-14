@@ -16,9 +16,6 @@ output:
 
 ## Project Folder
 
-#### TODO
-
-Add MSI reference for login and use
 
 The root project directory is:
 
@@ -54,6 +51,14 @@ An example of a complete data source location is below:
 
 ```{r eval=F}
 /home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
+```
+
+## New Cell Ranger Output Location
+
+* It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
+
+```{r eval=F}
+/scratch.global/zhan2142/starr/
 ```
 
 ## Load/Install R pkgs
@@ -120,7 +125,7 @@ htmltools::includeHTML("../code/seurat_tutorial/pbmc3k_tutorial.html")
 
 ### Render .R -> .html
 
-It is possible to render markdown output straight from a .R file. This can save the need to create two seperate files when running code and producing a formatted output. 
+It is possible to render markdown output straight from a .R file. This can save the need to create two seperate files when running code and producing a formatted output.
 
 https://rmarkdown.rstudio.com/articles_report_from_r_script.html
 
@@ -148,3 +153,109 @@ Additionally, regular markdown formatting can be applied behind this special com
 #' A script comment that includes **markdown** formatting.
 ```
 
+
+# CNV
+
+## Points of contact
+
+* Juan Abrahante <abrah023@umn.edu>
+* Christy Henzler <chenzler@umn.edu>
+* Jinhua Wang <wangjh@umn.edu>
+* Ying Zhang <zhan2142@umn.edu>
+* Andrew Nelson <nels2055@umn.edu>
+
+## Varscan2
+
+Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
+
+## Contra
+
+Juan had tried using contra in the past which did not work.
+
+### An email from Juan 6/13/2019
+
+Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
+
+
+First, I attempted via Python 3, 2.7 and the original 2.6 version using the test set in my local computer. Then, I moved into the "Matrix" or in this case Mesabi.
+
+With Help from Master Jedi Christy (Thank you Christy!) I created a conda environment for Contra via:
+
+```{r eval=F}
+conda create -n contra python=2.6
+source activate /home/umgc-staff/abrah023/bin/miniconda3/envs/contra
+```
+
+change directory to folder containing Contra script (tried both Version 2.0.8 and 1.0.3).
+
+```{r eval=F}
+
+python contra.py --target ../0247401_D_BED_20090724_hg19_MERGED.bed --test ../P0667N_GATKrealigned_duplicates_marked.bam --control ../P0667T_GATKrealigned_duplicates_marked.bam --fasta human_g1k_v37.fasta --outfolder ../output2/
+```
+
+That was using the files that came with Contra and got an error:
+
+```{r eval=F}
+
+
+(contra) abrah023@ln0003 [~/AndyTemp/CONTRA.v2.0.8] % python contra.py --target ../0247401_D_BED_20090724_hg19_MERGED.bed --test ../P0667N_GATKrealigned_duplicates_marked.bam --control ../P0667T_GATKrealigned_duplicates_marked.bam --fasta human_g1k_v37.fasta --o ../outputr/
+
+target		: ../0247401_D_BED_20090724_hg19_MERGED.bed
+
+test		: ../P0667N_GATKrealigned_duplicates_marked.bam
+
+control		: ../P0667T_GATKrealigned_duplicates_marked.bam
+
+outfolder	: ../outputr/
+
+numBin		: [20]
+
+minreaddepth	: 10
+
+minNBases	: 10
+
+sam		: False
+
+pval		: 0.05
+
+sampleName	: No-SampleName
+
+nomultimapped	: False
+
+plot		: False
+
+bedInput		: False
+
+minExon		: 2000
+
+largeDeletion	: False
+
+removeDups	: False
+
+Creating Output Folder :  Done.
+
+Traceback (most recent call last):
+
+  File "contra.py", line 625, in <module>
+
+    main()
+
+  File "contra.py", line 570, in main
+
+    get_genome(params.TEST, genomeFile)
+
+  File "/panfs/roc/groups/8/umgc-staff/abrah023/AndyTemp/CONTRA.v2.0.8/scripts/get_chr_length.py", line 31, in get_genome
+
+    raw_header = subprocess.Popen(args, stdout = subprocess.PIPE).communicate()[0]
+
+  File "/home/umgc-staff/abrah023/bin/miniconda3/envs/contra/lib/python2.6/subprocess.py", line 623, in __init__
+
+    errread, errwrite)
+
+  File "/home/umgc-staff/abrah023/bin/miniconda3/envs/contra/lib/python2.6/subprocess.py", line 1141, in _execute_child
+
+    raise child_exception
+
+OSError: [Errno 2] No such file or directory
+
+```

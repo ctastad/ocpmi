@@ -1,7 +1,0 @@
-#!/bin/bash -l
-#PBS -l nodes=1:ppn=1,mem=32gb,walltime=8:00:00
-#PBS -m ae
-
-cd ~/ovarian/ssrnaseq/cr_starr_msi
-module load R/3.5.0
-R --no-save  <seurat_filter_2.R
