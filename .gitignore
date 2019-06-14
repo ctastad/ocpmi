@@ -19,7 +19,6 @@ results/
 *.html
 *.rds
 *.png
-*.csl
 *.tsv
 *.mtx
 *.csv
