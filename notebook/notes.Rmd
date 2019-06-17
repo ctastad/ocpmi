@@ -10,14 +10,6 @@ output:
         theme: paper
 ---
 
-```{r}
-library(devtools)
-library(Seurat)
-library(knitr)
-library(kableExtra)
-
-```
-
 # May 2019
 
 ## 20
@@ -42,9 +34,6 @@ Focus Options
 ## 21
 
 ### TODO
-
-
-
 
 ```{r eval=F}
 ID  Age   Project        Tags       R Due        Description                Urg
@@ -1381,7 +1370,7 @@ Tim wants me to try to use Varscan2 as a method to assess the exome data [@Kobol
 
 Juan had tried using contra in the past which did not work.
 
-##### An email from Juan 6/13/2019
+##### from: Juan 6/13/2019
 
 Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
 
@@ -1492,12 +1481,102 @@ Created    Completed  Age  Project Description
 5 tasks
 ```
 
+***
 
+## 14
 
+### TODO
+
+```{r eval=F}
+
+ID Age  Project Tags     Description                                        Urg
+-- ---- ------- -------- -------------------------------------------------- ----
+44 3w   lab     lit work read tirosh 2016 [2]                               2.94
+49 2w   lab     lit work read papalexi 2018 [2]                              2.9
+50 2w   lab     lit work read macintyre 2018 [2]                             2.9
+60 11d  lab     lit work read konrashova 2017 [2]                           2.86
+43 3w   lab     lit work read zheng 2017 [1]                                2.84
+80 1d   lab     lit work read zare 2017 [1]                                 2.71
+42 3w   lab     lit work read ocpmi summary                                 2.04
+53 2w   lab     n work   review pca concepts                                1.98
+54 2w   lab     w work   deep dive into default seurat analysis             1.98
+69 4d   lab     n work   evaluate list of highly var features pt59          1.92
+70 4d   lab     n work   review rnaseq analysis protocol                    1.92
+46 3w   lab     work     agenda items                                       1.92
+71 2d   lab     n work   put pt59 output on results page                    1.91
+78 1d   lab     n work   reach out to jason re his CNV method               1.91
+79 1d   lab     w work   get exome data                                     1.91
+81 1d   lab     n work   email yuk re grant opportunities                   1.91
+82 1d   lab     n work   explore grant opportunities                        1.91
+83 1d   lab     n work   compare tims pt59 output                          1.91
+84 1d   lab     n work   continue pt59 analysis with cell type selection    1.91
+                         boolean script
+85 1d   lab     n work   get graphics function to work on msi               1.91
+93 3min lab     n work   send reminder to tim re rhel access                 1.9
+
+21 tasks
+
+```
+
+### More CNV refernce
+
+#### from: Jinhua 6/14/19
+
+If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
+
+For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+
+#### from: Andrew 6/14/19
+
+You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
+
+Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
+
+***
+
+## 17
+
+### TODO
+
+```{r eval=F}
+
+ID  Age  Project Tags     Description                                       Urg
+--- ---- ------- -------- ------------------------------------------------- ----
+ 44 3w   lab     lit work read tirosh 2016 [2]                              2.95
+ 49 3w   lab     lit work read papalexi 2018 [2]                            2.92
+ 50 2w   lab     lit work read macintyre 2018 [2]                           2.91
+ 60 2w   lab     lit work read konrashova 2017 [2]                          2.88
+ 43 3w   lab     lit work read zheng 2017 [1]                               2.85
+ 80 4d   lab     lit work read zare 2017 [1]                                2.72
+ 42 3w   lab     lit work read ocpmi summary                                2.05
+ 53 2w   lab     n work   review pca concepts                                  2
+ 54 2w   lab     w work   deep dive into default seurat analysis            1.99
+ 69 6d   lab     n work   evaluate list of highly var features pt59         1.93
+ 70 6d   lab     n work   review rnaseq analysis protocol                   1.93
+ 46 3w   lab     work     agenda items                                      1.93
+ 71 4d   lab     n work   put pt59 output on results page                   1.92
+ 78 4d   lab     n work   reach out to jason re his CNV method              1.92
+ 79 4d   lab     w work   get exome data                                    1.92
+ 81 4d   lab     n work   email yuk re grant opportunities                  1.92
+ 82 4d   lab     n work   explore grant opportunities                       1.92
+ 83 4d   lab     n work   compare tim's pt59 output                         1.92
+ 84 4d   lab     n work   continue pt59 analysis with cell type selection   1.92
+                          boolean script
+ 85 3d   lab     n work   get graphics function to work on msi              1.92
+ 86 3d   lab     w work   get scripts from jason re cnv analysis            1.92
+ 93 2d   lab     n work   send reminder to tim re rhel access               1.91
+ 94 2d   lab     n work   explore nelsona2 directory                        1.91
+103 4min lab     n work   email tim re short mtg to discuss updated grad     1.9
+                          plan
+
+24 tasks
+```
 
 ***
 
 # References
+
+
 
 
 
