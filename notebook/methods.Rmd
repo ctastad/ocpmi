@@ -274,7 +274,21 @@ You should now have access to nelsona2, where the somatic DNA exome data is loca
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
 
+## @Tirosh2016
 
+This paper is the only other case Tim is aware of where a group was able to effectively show CNV in single cell expression data.
+
+* This group took human oligodendrogliomas and isolated ~4300 cells for sequencing.
+* They constructed a developmental program from genome-wide expression signatures.
+* The analysis produced the conclusion that these cells display 2 distinct developmental programs.
+* Subclonal point mutation and insitu hybridization was also done as verification of these retults.
+
+#### CNV Method
+
+* Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectivley created "bins" of expression level to define relative changes in expression.
+* They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
+* This was used to define the baseline for microglia and oligdendrocytes.
+* PCA comprised the main statistical approach.
 
 
 
