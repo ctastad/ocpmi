@@ -50,6 +50,7 @@ Focus Options
 * rerun new version of cell ranger
 * RHEL update
 
+***
 
 ## 21
 
@@ -1610,7 +1611,15 @@ This paper is the only other case Tim is aware of where a group was able to effe
 
 ### Minor Notebook Restructure
 
-I realized I have a home page for no reason. I've replaced what is currently a blank placeholder page with what is my notes page since that is effectively the main page of my notebook.
+I realized I have a home page for no reason. I've replaced what is currently a blank placeholder page with what is my notes page since that is effectively the main page of my notebook. In doing so, I added a preamble to the begging of this document as well.
+
+### Jason's CNV Method
+
+Jason sent a very detailed overview over the weekend of his work on the CNV project. This includes code, references, and some analysis. I will need to look at this in greater depth and potentially set time to discuss it with him further. The files are located at the directory below.
+
+* `/starr_lab/ocpmi/methods/jason_cnv`
+
+
 
 ***
 

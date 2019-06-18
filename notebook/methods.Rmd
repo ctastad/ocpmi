@@ -118,7 +118,7 @@ fusermount -uz /data
 ## PBMC Tutorial
 
 ```{r}
-htmltools::includeHTML("../code/seurat_tutorial/pbmc3k_tutorial.html")
+htmltools::includeHTML("../methods/code/seurat_tutorial/pbmc3k_tutorial.html")
 ```
 
 # R
@@ -163,6 +163,7 @@ Additionally, regular markdown formatting can be applied behind this special com
 * Jinhua Wang <wangjh@umn.edu>
 * Ying Zhang <zhan2142@umn.edu>
 * Andrew Nelson <nels2055@umn.edu>
+* Jason Cepela <cepel004@umn.edu>
 
 ## Varscan2
 
@@ -290,7 +291,26 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * This was used to define the baseline for microglia and oligdendrocytes.
 * PCA comprised the main statistical approach.
 
+## Jason's Work
 
+
+Jason sent me his working directory for the early phase of the CNV project. It is located at
+
+* `/starr_lab/ocpmi/methods/jason_cnv`
+
+### from: Jason 6/15/19
+
+I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
+
+As you may know, the single cell data isn’t really fit for gene-level CNV analysis because only 10-15% of the gene space is covered. So my approach was to look at the average expression level of all genes measured in each chromosome arm, for each cell. I scaled these average values across all the cells (vertically in the figures) that we had annotated as non-epithelial cells. The heatmaps show chromosome arms across the X axis and individual cells across the Y axis. So, rather than looking for CNV in a gene, I’m looking for entire chromosome arm amplifications & deletions.
+
+One useful file will be “ENSEMBLgenes.csv” which indicates the chromosome number and location of each gene. Also, in the CNV.Rmd notebook I have hardcoded the centromere position of each chromosome. Together these will allow you to explore average gene expression by chromosome arm.
+
+Please note that if you are using the most recent patient data from Tim, there will be more cells in each patient because we re-ran the Cell Ranger pipeline since I did this analysis. We have also updated the cell type annotation for each cell since I’ve done this.
+
+The vertical colored bar on the left of the heatmaps show the cell type. They are colored according to “Picture1.png”. On the right side of the heatmaps in small font you will see the cluster number and the annotated cell type according to our outdated Seurat pipeline.
+
+If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
 
 ***
 
