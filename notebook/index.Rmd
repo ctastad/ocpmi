@@ -10,6 +10,26 @@ output:
         theme: paper
 ---
 
+# Preamble
+
+This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
+
+The layout is generally centered here on the `Log`, which is meant as a full continuum of work and notation completed while in the Starr lab. Elements of this page have been pulled as special points of reference when they need a relevant context such as a repeatedly used `method` or notable `results`. References used on each specific page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located in the `starr_lab/ocpmi/notebook/` directory) are collated on the `References` page.
+
+### Git
+
+Version control was used throughout the development of this work and can be found at the University's private github server:
+
+https://github.umn.edu/tasta005/ocpmi.git
+
+### Contact
+
+Christopher Tastad, MS Candidate
+
+* University: tasta005@umn.edu
+* Personal: ctastad@gmail.com
+* Mobile: 612-817-7989
+
 # May 2019
 
 ## 20

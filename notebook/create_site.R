@@ -2,7 +2,6 @@ cur_dir <- getwd()
 setwd("/home/chris/starr_lab/ocpmi/notebook")
 
 rmarkdown::render("index.Rmd")
-rmarkdown::render("notes.Rmd")
 rmarkdown::render("results.Rmd")
 rmarkdown::render("methods.Rmd")
 rmarkdown::render("references.Rmd")
