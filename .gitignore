@@ -1,4 +1,6 @@
 *.docx
+*.docx_
+*.zip
 *.DS_Store
 *.gif
 *.Robj
