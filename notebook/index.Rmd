@@ -1619,6 +1619,31 @@ Jason sent a very detailed overview over the weekend of his work on the CNV proj
 
 * `/starr_lab/ocpmi/methods/jason_cnv`
 
+### Summary
+
+I did some house keeping on my documentation today. I've received a considerable amount of data and references regarding the CNV project, so I put some effort into organizing and clarifying my direction with this. My primary goals right now are covering the literature re the comparison for CNV techniques in whole exome data (@Zare2017) and then getting up to speed on Jason's past work. I hope to have a better mastery of the content to attack the project by the time I return from France.
+
+#### Completed
+
+```{r eval=F}
+
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-06-13 2019-06-17 4d  lab     email yuk re grant opportunities
+2019-06-15 2019-06-17 2d  lab     send reminder to tim re rhel access
+2019-06-17 2019-06-17 2h  lab     email tim re short mtg to discuss updated grad
+                                  plan
+2019-05-20 2019-06-17 3w  lab     read tirosh 2016
+                                    2019-06-03
+                                  https://doi.org/10.1038/nature20123
+                                    2019-06-03 CNV analysis in glioma
+2019-06-13 2019-06-17 4d  lab     reach out to jason re his CNV method
+2019-06-13 2019-06-17 4d  lab     get exome data
+2019-06-13 2019-06-17 4d  lab     explore grant opportunities
+2019-06-13 2019-06-17 4d  lab     get scripts from jason re cnv analysis
+
+8 tasks
+```
 
 
 ***
