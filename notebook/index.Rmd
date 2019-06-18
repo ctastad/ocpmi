@@ -1645,6 +1645,17 @@ Created    Completed  Age Project Description
 8 tasks
 ```
 
+## 18
+
+### mtg w/ Tim
+
+present: tim, chris
+
+I met briefly with Tim before leaving on my trip. We discussed the potential change in trajectory given the update that I will need to take 3 credits of directed research instead of 1 in the fall. He felt this generally won't adjust what our current plan is, and I tend to aggree.
+
+Additionally, I introduced a concept that Yuk had brought up regarding the possiblity of a "long-distance, part-time PhD" given that I may move in the fall and secure a full time job. Tim was open to this, and I will keep it on the backburner for when that time comes after I've completed my masters degree.
+
+Last, we discussed some of the smaller CNV analysis papers I've found that take a gene prep platform approach to evaluating CNV in single cells. The key distinction here is that these are likely done with DNA, but we both agreed that they may lack significance since I haven't found one published in a journal of significant impact. It may be something to explore for expanding my knowledge of methods though.
 
 ***
 
