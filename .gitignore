@@ -1,4 +1,8 @@
 *.docx
+*.gz
+*.aux
+*.fdb
+*.fls
 *.docx_
 *.zip
 *.DS_Store

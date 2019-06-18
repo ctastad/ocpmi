@@ -1,0 +1,696 @@
+---
+title: "CNV"
+output: html_notebook
+---
+
+Initialize R, set options.
+Read in human chromosome data. Annotate gene chrArm locations
+```{r}
+# Options
+myDir <- "/Users/jason/Desktop/OneDrive - University of Minnesota/BICB/Thesis/CNV/"
+ensemblGenesDir <- "/Users/jason/Desktop/OneDrive - University of Minnesota/BICB/Thesis/Data/Human/ensembl_genes/"
+patientDir <- paste("/Users/jason/Desktop/OneDrive - University of Minnesota/BICB/Thesis/Data/Patients/",sep="")
+
+#patients <- c("p59","p60","p61","p62","p64","p67","p69","p71","p72","p75","p76")
+patients <- "p59"
+
+# initialize
+setwd(myDir)
+library(ggplot2)
+library(data.table)
+library(readxl)
+library(tidyr)
+library(reshape2)
+library(RColorBrewer)
+library(gplots)
+
+# Ingest & annotate geneData from human reference data
+chr1 <- read_excel(paste(ensemblGenesDir,"Chromosome 1.xls",sep = ""))
+chr2 <- read_excel(paste(ensemblGenesDir,"Chromosome 2.xls",sep = ""))
+chr3 <- read_excel(paste(ensemblGenesDir,"Chromosome 3.xls",sep = ""))
+chr4 <- read_excel(paste(ensemblGenesDir,"Chromosome 4.xls",sep = ""))
+chr5 <- read_excel(paste(ensemblGenesDir,"Chromosome 5.xls",sep = ""))
+chr6 <- read_excel(paste(ensemblGenesDir,"Chromosome 6.xls",sep = ""))
+chr7 <- read_excel(paste(ensemblGenesDir,"Chromosome 7.xls",sep = ""))
+chr8 <- read_excel(paste(ensemblGenesDir,"Chromosome 8.xls",sep = ""))
+chr9 <- read_excel(paste(ensemblGenesDir,"Chromosome 9.xls",sep = ""))
+chr10 <- read_excel(paste(ensemblGenesDir,"Chromosome 10.xls",sep = ""))
+chr11 <- read_excel(paste(ensemblGenesDir,"Chromosome 11.xls",sep = ""))
+chr12 <- read_excel(paste(ensemblGenesDir,"Chromosome 12.xls",sep = ""))
+chr13 <- read_excel(paste(ensemblGenesDir,"Chromosome 13.xls",sep = ""))
+chr14 <- read_excel(paste(ensemblGenesDir,"Chromosome 14.xls",sep = ""))
+chr15 <- read_excel(paste(ensemblGenesDir,"Chromosome 15.xls",sep = ""))
+chr16 <- read_excel(paste(ensemblGenesDir,"Chromosome 16.xls",sep = ""))
+chr17 <- read_excel(paste(ensemblGenesDir,"Chromosome 17.xls",sep = ""))
+chr18 <- read_excel(paste(ensemblGenesDir,"Chromosome 18.xls",sep = ""))
+chr19 <- read_excel(paste(ensemblGenesDir,"Chromosome 19.xls",sep = ""))
+chr20 <- read_excel(paste(ensemblGenesDir,"Chromosome 20.xls",sep = ""))
+chr21 <- read_excel(paste(ensemblGenesDir,"Chromosome 21.xls",sep = ""))
+chr22 <- read_excel(paste(ensemblGenesDir,"Chromosome 22.xls",sep = ""))
+chrX <- read_excel(paste(ensemblGenesDir,"Chromosome X.xls",sep = ""))
+
+geneData <- rbind(chr1, chr2, chr3, chr4, chr5, chr6, chr7, chr8, chr9, chr10, chr11, chr12, chr13, chr14, chr15, chr16, chr17, chr18, chr19, chr20, chr21, chr22, chrX)
+
+colnames(geneData) <- c("ENSEMBL", "chr", "start", "end", "geneName")
+
+rm(chr1, chr2, chr3, chr4, chr5, chr6, chr7, chr8, chr9, chr10, chr11, chr12, chr13, chr14, chr15, chr16, chr17, chr18, chr19, chr20, chr21, chr22, chrX)
+
+geneData$arm <- "NA"
+geneData$arm[geneData$chr == 1 & geneData$start < 125000000] <- 'p'
+geneData$arm[geneData$chr == 1 & geneData$start > 125000000] <- 'q'
+geneData$arm[geneData$chr == 2 & geneData$start < 93300000] <- 'p'
+geneData$arm[geneData$chr == 2 & geneData$start > 93300000] <- 'q'
+geneData$arm[geneData$chr == 3 & geneData$start < 91000000] <- 'p'
+geneData$arm[geneData$chr == 3 & geneData$start > 91000000] <- 'q'
+geneData$arm[geneData$chr == 4 & geneData$start < 50400000] <- 'p'
+geneData$arm[geneData$chr == 4 & geneData$start > 50400000] <- 'q'
+geneData$arm[geneData$chr == 5 & geneData$start < 48400000] <- 'p'
+geneData$arm[geneData$chr == 5 & geneData$start > 48400000] <- 'q'
+geneData$arm[geneData$chr == 6 & geneData$start < 61000000] <- 'p'
+geneData$arm[geneData$chr == 6 & geneData$start > 61000000] <- 'q'
+geneData$arm[geneData$chr == 7 & geneData$start < 59900000] <- 'p'
+geneData$arm[geneData$chr == 7 & geneData$start > 59900000] <- 'q'
+geneData$arm[geneData$chr == 8 & geneData$start < 45600000] <- 'p'
+geneData$arm[geneData$chr == 8 & geneData$start > 45600000] <- 'q'
+geneData$arm[geneData$chr == 9 & geneData$start < 49000000] <- 'p'
+geneData$arm[geneData$chr == 9 & geneData$start > 49000000] <- 'q'
+geneData$arm[geneData$chr == 10 & geneData$start < 40200000] <- 'p'
+geneData$arm[geneData$chr == 10 & geneData$start > 40200000] <- 'q'
+geneData$arm[geneData$chr == 11 & geneData$start < 53700000] <- 'p'
+geneData$arm[geneData$chr == 11 & geneData$start > 53700000] <- 'q'
+geneData$arm[geneData$chr == 12 & geneData$start < 35800000] <- 'p'
+geneData$arm[geneData$chr == 12 & geneData$start > 35800000] <- 'q'
+geneData$arm[geneData$chr == 13 & geneData$start < 17900000] <- 'p'
+geneData$arm[geneData$chr == 13 & geneData$start > 17900000] <- 'q'
+geneData$arm[geneData$chr == 14 & geneData$start < 17600000] <- 'p'
+geneData$arm[geneData$chr == 14 & geneData$start > 17600000] <- 'q'
+geneData$arm[geneData$chr == 15 & geneData$start < 19000000] <- 'p'
+geneData$arm[geneData$chr == 15 & geneData$start > 19000000] <- 'q'
+geneData$arm[geneData$chr == 16 & geneData$start < 36600000] <- 'p'
+geneData$arm[geneData$chr == 16 & geneData$start > 36600000] <- 'q'
+geneData$arm[geneData$chr == 17 & geneData$start < 24000000] <- 'p'
+geneData$arm[geneData$chr == 17 & geneData$start > 24000000] <- 'q'
+geneData$arm[geneData$chr == 18 & geneData$start < 17200000] <- 'p'
+geneData$arm[geneData$chr == 18 & geneData$start > 17200000] <- 'q'
+geneData$arm[geneData$chr == 19 & geneData$start < 26500000] <- 'p'
+geneData$arm[geneData$chr == 19 & geneData$start > 26500000] <- 'q'
+geneData$arm[geneData$chr == 20 & geneData$start < 27500000] <- 'p'
+geneData$arm[geneData$chr == 20 & geneData$start > 27500000] <- 'q'
+geneData$arm[geneData$chr == 21 & geneData$start < 13200000] <- 'p'
+geneData$arm[geneData$chr == 21 & geneData$start > 13200000] <- 'q'
+geneData$arm[geneData$chr == 22 & geneData$start < 14700000] <- 'p'
+geneData$arm[geneData$chr == 22 & geneData$start > 14700000] <- 'q'
+geneData$arm[geneData$chr == "X" & geneData$start < 60600000] <- 'p'
+geneData$arm[geneData$chr == "X" & geneData$start > 60600000] <- 'q'
+
+```
+
+
+
+Read in patient data. 
+Read in cluster annotation data.
+Create master matrix with all cells all genes
+```{r}
+#for( i in 1:length(patients) )
+#{
+  i <- 1
+  patient <- patients[i]  
+
+  # read in files and re-label headers
+  barcod
+  
+  es.tsv <- read.csv(paste(patientDir,patient,"/barcodes.tsv", sep=""), header = FALSE)
+  colnames(barcodes.tsv) <- "barcodes"
+
+  genes.tsv <- read.csv(paste(patientDir,patient,"/genes.tsv", sep=""), header = FALSE, sep = "\t")
+  colnames(genes.tsv) <- c("ENSEMBL","Names")
+
+  matrix.mtx <- read.csv(paste(patientDir,patient,"/matrix.mtx", sep=""), header = FALSE, skip = 3, sep = " ")
+  colnames(matrix.mtx) <- c("geneIndex", "cellIndex", "UMI")
+  
+  if ( file.exists(paste(patientDir,patient,"/cluster_data.csv", sep="")) ) 
+  { 
+    clusterDataExists <- TRUE 
+  } else { 
+    clusterDataExists <- FALSE 
+  }
+  
+  if ( clusterDataExists )
+  { 
+    cluster_data.csv <- read.csv(paste(patientDir,patient,"/cluster_data.csv", sep=""), header = TRUE, skip = 0, sep = ",") 
+    colnames(cluster_data.csv) <- c("origIndex", "filterIndex", "barcode", 
+                                  "clustNum", "clustColor", 
+                                  "majorCellType", "majorCellTypeColor", 
+                                  "minorCellType", "minorCellTypeColor", 
+                                  "tSNE1", "tSNE2")
+  } else { 
+    annot1 <- read.csv(paste(patientDir,patient,"/annot-01.csv", sep=""), header = TRUE, sep = ",")
+    annot2 <- read.csv(paste(patientDir,patient,"/annot-02.csv", sep=""), header = TRUE, sep = ",") 
+    colnames(annot1) <- c("barcode", "clustNum")
+    colnames(annot2) <- c("barcode", "cellType")
+  }
+
+  # add ensemble index from genes.tsv file
+  geneData$ensemblIndex <- match(geneData$ENSEMBL, genes.tsv$ENSEMBL)
+
+  # use indices of genes to match to UMI values in matrix
+  masterMatrix <- merge(geneData, matrix.mtx, by.x="ensemblIndex", by.y="geneIndex", all.x=FALSE, all.y = FALSE)
+
+  # add barcodes, cluster numbers, and cell types to masterMatrix
+  masterMatrix$barcode <- barcodes.tsv[masterMatrix$cellIndex,]
+  if ( clusterDataExists )
+  {
+    masterMatrix$clustNum <- cluster_data.csv$clustNum[match(masterMatrix$barcode, cluster_data.csv$barcode)]
+    masterMatrix$cellType <- cluster_data.csv$minorCellType[match(masterMatrix$barcode, cluster_data.csv$barcode)]
+  } else {
+    masterMatrix$clustNum <- annot1$clustNum[match(masterMatrix$barcode, annot1$barcode)]
+    masterMatrix$cellType <- annot2$cellType[match(masterMatrix$barcode, annot2$barcode)]
+  }
+  masterMatrix$chrArm <- paste(masterMatrix$chr, masterMatrix$arm, sep = "")
+```
+
+
+Filter data?
+```{r}
+
+```
+
+Normalize data 1:
+  For every UMI, find fraction of total cell's UMI.
+  Sum these values per chrArm. Now we have total fraction of UMI for each cell for each chrArm
+  Normalize by chrArm using only specific cell types as factors for centering and scaling
+```{r}
+  
+  ### Turn UMI counts into fractions of total cell UMI by dividing each UMI by sum of all UMIs for that cell
+  totCellUMI <- aggregate( UMI ~ barcode, data = masterMatrix, FUN = sum )
+  colnames(totCellUMI) <- c("barcode", "sumUMI")
+  masterMatrix <- merge(masterMatrix, totCellUMI, by.x="barcode", by.y="barcode", all.x=FALSE)
+  rm(totCellUMI)
+  masterMatrix$UMIfrac <- masterMatrix$UMI / masterMatrix$sumUMI
+
+  # sum value per chrArm  
+  chrArmFracSums <- aggregate( UMIfrac ~ barcode + chrArm, data = masterMatrix, FUN = sum  )
+  # add cell type data
+  chrArmFracSums <- merge(x = chrArmFracSums, y = cluster_data.csv, by = "barcode", all.x = FALSE, all.y=FALSE)
+   
+  # calculate normalized values using fibroblasts and macrophages
+  centerNonEpi <- aggregate( formula = UMIfrac ~ chrArm, data = chrArmFracSums[chrArmFracSums$minorCellType == "epithelial",], FUN = mean )
+  scaleNonEpi <- aggregate( formula = UMIfrac ~ chrArm, data = chrArmFracSums[chrArmFracSums$minorCellType == "epithelial",], FUN = sd )
+  colnames(centerNonEpi) <- c("chrArm", "meanUMInonEpi")
+  colnames(scaleNonEpi) <- c("chrArm", "sdUMInonEpi")
+  
+  #centerFibro <- aggregate( formula = UMIfrac ~ chrArm, data = chrArmFracSums[chrArmFracSums$minorCellType == "fibroblast",], FUN = mean )
+  #centerMacro <- aggregate( formula = UMIfrac ~ chrArm, data = chrArmFracSums[chrArmFracSums$minorCellType == "macrophage",], FUN = mean )
+  #scaleFibro <- aggregate( formula = UMIfrac ~ chrArm, data = chrArmFracSums[chrArmFracSums$minorCellType == "fibroblast",], FUN = sd )
+  #scaleMacro <- aggregate( formula = UMIfrac ~ chrArm, data = chrArmFracSums[chrArmFracSums$minorCellType == "macrophage",], FUN = sd )
+  #colnames(centerFibro) <- c("chrArm", "meanUMIfibro")
+  #colnames(scaleFibro) <- c("chrArm", "sdUMIfibro")
+  #colnames(centerMacro) <- c("chrArm", "meanUMImacro")
+  #colnames(scaleMacro) <- c("chrArm", "sdUMImacro")
+  
+  chrArmFracSums <- merge(x = chrArmFracSums, y = centerFibro, by = "chrArm", all.x = FALSE, all.y = FALSE)
+  chrArmFracSums <- merge(x = chrArmFracSums, y = centerMacro, by = "chrArm", all.x = FALSE, all.y = FALSE)
+  chrArmFracSums <- merge(x = chrArmFracSums, y = scaleFibro, by = "chrArm", all.x = FALSE, all.y = FALSE)
+  chrArmFracSums <- merge(x = chrArmFracSums, y = scaleMacro, by = "chrArm", all.x = FALSE, all.y = FALSE)
+  
+  chrArmFracSums$UMInormFibro <- ( chrArmFracSums$UMIfrac - chrArmFracSums$meanUMIfibro ) / chrArmFracSums$sdUMIfibro
+  chrArmFracSums$UMInormMacro <- ( chrArmFracSums$UMIfrac - chrArmFracSums$meanUMImacro ) / chrArmFracSums$sdUMImacro
+
+```
+
+Create Fibro heatmap
+```{r}
+
+  info <- paste(patient, "total fraction of UMI counts per cell, centered/scaled by chrArm on fibroblast cells", sep = "; ")
+
+  # convert data to wide matrix
+  heatmapMatrix <- chrArmFracSums[,c("chrArm", "barcode", "UMInormFibro")] 
+  heatmapMatrix <- dcast(heatmapMatrix, barcode~chrArm, value.var="UMInormFibro") 
+  
+  # add cell type, clust num, and color data
+  heatmapMatrix$cellType <- cluster_data.csv$minorCellType[match(heatmapMatrix$barcode, cluster_data.csv$barcode, nomatch = "NA")]
+  heatmapMatrix$clustNum <- cluster_data.csv$clustNum[match(heatmapMatrix$barcode, cluster_data.csv$barcode, nomatch = "NA")]
+  heatmapMatrix$color    <- cluster_data.csv$minorCellTypeColor[match(heatmapMatrix$barcode, cluster_data.csv$barcode, nomatch = "NA")]
+
+  # fix rownames
+  rownames(heatmapMatrix) <- heatmapMatrix[,"barcode"] 
+  
+  # order y-axis (cells) by cellType, then clustNum
+  heatmapMatrix <- heatmapMatrix[order(heatmapMatrix$cellType, heatmapMatrix$clustNum),]
+  
+  # create row seperators based on cluster numbers
+  rowSeps <- c(1,1+which(diff(heatmapMatrix$clustNum)!=0))
+
+  # save heatmap colors
+  heatmapColors <- heatmapMatrix$color
+  heatmapColors[heatmapColors==""] <- NA
+  
+  # make group row labels
+  groupLabels <- rep("", nrow(heatmapMatrix))
+  groupLabels[rowSeps] <- paste(heatmapMatrix$clustNum[rowSeps], heatmapMatrix$cellType[rowSeps], sep = ",")
+  
+  # order x-axis by chrArm, drop: "barcode","cellType","color"
+  heatmapMatrix <- heatmapMatrix[,c("1p","1q","2p","2q","3p","3q","4p","4q","5p","5q","6p","6q","7p","7q","8p","8q","9p","9q","10p","10q","11p","11q","12p","12q","13q","14q","15q","16p","16q","17p","17q","18p","18q","19p","19q","20p","20q","21p","21q","22q","Xp","Xq")]
+  
+  heatmapMatrix<- as.matrix(x = heatmapMatrix)
+  
+  scaling <- "none"
+  
+  # create heatmap
+  png(filename = paste(myDir,"heatmaps/",patient,".heatmap.fibro.png", sep=""), width = 3000, height = 1500)
+  heatmap.2(x = heatmapMatrix,
+            Rowv = FALSE, Colv = FALSE,
+            dendrogram = "none", 
+            scale = scaling,
+            trace = "none",
+            labRow = groupLabels,
+            RowSideColors = as.character(heatmapColors),
+            rowsep = rowSeps,
+            main = info,
+            xlab = "Chromosome Arm", ylab = "Cells",
+            col = colorRampPalette(c("red", "white", "green"))(n = 299), 
+            breaks = c(seq(-3,-1.5,length=100),seq(-1.49,1.49,length=100),seq(1.5,3,length=100)), 
+#           breaks = c(seq(-2,-1.25,length=100),seq(-1.24,1.24,length=100),seq(1.25,2,length=100)),
+            symbreaks = TRUE,
+            symm = FALSE, 
+            symkey = TRUE,
+            keysize = 0.5,
+            cexRow = 1
+            )
+  dev.off()
+
+    
+```
+
+
+
+Create Macro heatmap
+```{r}
+
+  info <- paste(patient, "total fraction of UMI counts per cell, centered/scaled by chrArm on macrophage cells", sep = "; ")
+
+  # convert data to wide matrix
+  heatmapMatrix <- chrArmFracSums[,c("chrArm", "barcode", "UMInormMacro")] 
+  heatmapMatrix <- dcast(heatmapMatrix, barcode~chrArm, value.var="UMInormMacro") 
+  
+  # add cell type, clust num, and color data
+  heatmapMatrix$cellType <- cluster_data.csv$minorCellType[match(heatmapMatrix$barcode, cluster_data.csv$barcode, nomatch = "NA")]
+  heatmapMatrix$clustNum <- cluster_data.csv$clustNum[match(heatmapMatrix$barcode, cluster_data.csv$barcode, nomatch = "NA")]
+  heatmapMatrix$color    <- cluster_data.csv$minorCellTypeColor[match(heatmapMatrix$barcode, cluster_data.csv$barcode, nomatch = "NA")]
+
+  # fix rownames
+  rownames(heatmapMatrix) <- heatmapMatrix[,"barcode"] 
+  
+  # order y-axis (cells) by cellType, then clustNum
+  heatmapMatrix <- heatmapMatrix[order(heatmapMatrix$cellType, heatmapMatrix$clustNum),]
+  
+  # create row seperators based on cluster numbers
+  rowSeps <- c(1,1+which(diff(heatmapMatrix$clustNum)!=0))
+
+  # save heatmap colors
+  heatmapColors <- heatmapMatrix$color
+  heatmapColors[heatmapColors==""] <- NA
+  
+  # make group row labels
+  groupLabels <- rep("", nrow(heatmapMatrix))
+  groupLabels[rowSeps] <- paste(heatmapMatrix$clustNum[rowSeps], heatmapMatrix$cellType[rowSeps], sep = ",")
+  
+  # order x-axis by chrArm, drop: "barcode","cellType","color"
+  heatmapMatrix <- heatmapMatrix[,c("1p","1q","2p","2q","3p","3q","4p","4q","5p","5q","6p","6q","7p","7q","8p","8q","9p","9q","10p","10q","11p","11q","12p","12q","13q","14q","15q","16p","16q","17p","17q","18p","18q","19p","19q","20p","20q","21p","21q","22q","Xp","Xq")]
+  
+  heatmapMatrix<- as.matrix(x = heatmapMatrix)
+  
+  scaling <- "none"
+  
+  # create heatmap
+  png(filename = paste(myDir,"heatmaps/",patient,".heatmap.macro.new.png", sep=""), width = 3000, height = 1500)
+  heatmap.2(x = heatmapMatrix,
+            Rowv = FALSE, Colv = FALSE,
+            dendrogram = "none", 
+            scale = scaling,
+            trace = "none",
+            labRow = groupLabels,
+            RowSideColors = as.character(heatmapColors),
+            rowsep = rowSeps,
+            main = info,
+            xlab = "Chromosome Arm", ylab = "Cells",
+            col = colorRampPalette(c("red", "white", "blue"))(99), 
+       #     breaks = c(seq(-2,-1.501,length=100),        # red-white
+        #               seq(-1.5,-1.001,length=100),      # white-white
+        #                seq( -1, 1, length=100),          # white-blue
+        #                seq(01.001,1.5,length=100),       # white-blue
+          #            ), 
+            symbreaks = TRUE,
+            symm = FALSE, 
+            symkey = TRUE,
+            keysize = 0.5,
+            cexRow = 1
+            )
+  dev.off()
+
+    
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Old code...
+```{r}
+
+
+  # scale and log transform fractions
+  # masterMatrix$UMIscaledFrac <- log(masterMatrix$UMIfrac * 10000)
+  
+  # center and scale columns of data based on macro/fibro subsets
+  # find average for centering for each chrArm, using only the macro/fibro cells
+  centerFibro <- aggregate( formula = UMI ~ chrArm, data = masterMatrix[masterMatrix$cellType == "fibroblast",], FUN = mean )
+  colnames(centerFibro) <- c("chrArm", "meanUMIfibro")
+  scaleFibro <- aggregate( formula = UMI ~ chrArm, data = masterMatrix[masterMatrix$cellType == "fibroblast",], FUN = sd )
+  colnames(scaleFibro) <- c("chrArm", "sdUMIfibro")
+  centerMacro <- aggregate( formula = UMI ~ chrArm, data = masterMatrix[masterMatrix$cellType == "macrophage",], FUN = mean )
+  colnames(centerMacro) <- c("chrArm", "meanUMImacro")
+  scaleMacro <- aggregate( formula = UMI ~ chrArm, data = masterMatrix[masterMatrix$cellType == "macrophage",], FUN = sd )
+  colnames(scaleMacro) <- c("chrArm", "sdUMImacro")
+  
+   # masterMatrix$UMInormFibro <- ( masterMatrix$UMI - centerFibro$meanUMI[centerFibro$chrArm == masterMatrix$chrArm] ) / scaleFibro$sdUMI[scaleFibro$chrArm == masterMatrix$chrArm]  ## WHY DOESN'T THIS WORK? Adding a ton of repetitive data points to masterMatrix to get around this : ( 
+  
+  masterMatrix <- merge(x = masterMatrix, y = centerFibro, by = "chrArm", all.x = FALSE)
+  masterMatrix <- merge(x = masterMatrix, y = scaleFibro, by = "chrArm", all.x = FALSE)
+  masterMatrix <- merge(x = masterMatrix, y = centerMacro, by = "chrArm", all.x = FALSE)
+  masterMatrix <- merge(x = masterMatrix, y = scaleMacro, by = "chrArm", all.x = FALSE)
+
+  masterMatrix$UMInormFibr <- ( masterMatrix$UMI - masterMatrix$meanUMIfibro ) / masterMatrix$sdUMIfibro
+  masterMatrix$UMInormMacro <- ( masterMatrix$UMI - masterMatrix$meanUMImacro ) / masterMatrix$sdUMImacro
+
+  ###
+  ### create matrix for heatmap
+  ###
+  
+    ###  get the average UMI for all genes in each cell / chr arm.
+    # heatmapData <- aggregate( UMI~barcode+chrArm, data = masterMatrix, FUN = mean ) 
+    # info <- paste(patient, "mean of UMI counts", sep = "; ")
+    ## OR ## 
+    # get the sum of UMI fractions, where UMI fractions are total UMI count of gene / total UMI count of cell
+    # heatmapData <- aggregate( UMIfrac~barcode+chrArm, data = masterMatrix, FUN = sum ) 
+    # info <- paste(patient, "sum of UMI fractions", sep = "; ")
+    ## OR ##
+    # get the normalized values
+    # heatmapData <- aggregate( UMInormMacro~barcode+chrArm, data = masterMatrix, FUN = mean ) 
+    # info <- paste(patient, "mean of UMI values centered/scaled by chrArm on macrophage cells", sep = "; ")
+    ## OR ##
+    heatmapData <- aggregate( UMInormFibr ~ barcode+chrArm, data = masterMatrix, FUN = mean ) 
+    info <- paste(patient, "mean of UMI values centered/scaled by chrArm on fibroblast cells", sep = "; ")
+    
+     
+     
+     
+  # add cell type 
+  if ( clusterDataExists )
+  {
+    heatmapData$cellType <- cluster_data.csv$minorCellType[match(heatmapData$barcode, cluster_data.csv$barcode)]
+  } else {    
+    heatmapData$cellType <- annot2$cellType[match(heatmapData$barcode, annot2$barcode)] 
+  }
+  
+  # pull out data for matrix
+  heatmapMatrix <- heatmapData[,1:3] 
+  
+  # convert to wide matrix
+  # heatmapMatrix <- dcast(heatmapMatrix, barcode~chrArm, value.var="UMI") 
+  # heatmapMatrix <- dcast(heatmapMatrix, barcode~chrArm, value.var="UMIfrac") 
+  # heatmapMatrix <- dcast(heatmapMatrix, barcode~chrArm, value.var="UMInormMacro") 
+  heatmapMatrix <- dcast(heatmapMatrix, barcode~chrArm, value.var="UMInormFibr") 
+  
+  
+  # add cell type & clust num data
+  if ( clusterDataExists )
+  {  
+    heatmapMatrix$cellType <- cluster_data.csv$minorCellType[match(heatmapMatrix$barcode, cluster_data.csv$barcode)]
+    heatmapMatrix$clustNum <- cluster_data.csv$clustNum[match(heatmapMatrix$barcode, cluster_data.csv$barcode)]
+  } else {
+    heatmapMatrix$cellType <- annot2$cellType[match(heatmapMatrix$barcode, annot2$barcode)]
+    heatmapMatrix$clustNum <- annot1$clustNum[match(heatmapMatrix$barcode, annot1$barcode)]
+  }
+  
+  # fix row names
+  rownames(heatmapMatrix) <- heatmapMatrix[,"barcode"] 
+  
+  # order y-axis (cells) by cellType, then clustNum
+  heatmapMatrix <- heatmapMatrix[order(heatmapMatrix$cellType, heatmapMatrix$clustNum),]
+  
+  # create row seperators based on cluster numbers
+  rowSeps <- c(1,1+which(diff(heatmapMatrix$clustNum)!=0))
+  #colSeps <- seq(from = 1, to = 44, by = 2)
+  
+  # add colors
+  if ( clusterDataExists )
+  {  
+    heatmapMatrix$color <- cluster_data.csv$minorCellTypeColor[match(heatmapMatrix$barcode, 
+                                                                     cluster_data.csv$barcode, 
+                                                                     nomatch = "NA")]
+  } else {
+    heatmapMatrix$color[heatmapMatrix$cellType == "epithelial"] <- "red" 
+    heatmapMatrix$color[heatmapMatrix$cellType == "immune"] <- "yellow"
+    heatmapMatrix$color[heatmapMatrix$cellType == "stroma"] <- "blue" 
+    heatmapMatrix$color[heatmapMatrix$cellType == "endothelial"] <- "green" 
+  }
+  heatmapColors <- heatmapMatrix$color
+  heatmapColors[heatmapColors==""] <- NA
+  
+  # make group row labels
+  groupLabels <- rep("", nrow(heatmapMatrix))
+  groupLabels[rowSeps] <- paste(heatmapMatrix$clustNum[rowSeps], heatmapMatrix$cellType[rowSeps], sep = ",")
+  
+  # order x-axis by chrArm, drop: "barcode","cellType","color"
+  heatmapMatrix <- heatmapMatrix[,c("1p","1q","2p","2q","3p","3q","4p","4q","5p","5q","6p","6q","7p","7q","8p","8q","9p","9q","10p","10q","11p","11q","12p","12q","13q","14q","15q","16p","16q","17p","17q","18p","18q","19p","19q","20p","20q","21p","21q","22q","Xp","Xq")]
+  
+  # round to 2 digits
+  # heatmapMatrix<- as.matrix(round(x = heatmapMatrix, digits = 2))
+  heatmapMatrix<- as.matrix(x = heatmapMatrix)
+  
+  scaling <- "none"
+  info <- paste(info, scaling, sep = "; ")
+  
+  # create heatmap
+  png(filename = paste(myDir,"heatmaps/",patient,".heatmap.4.png", sep=""), width = 3000, height = 1500)
+  heatmap.2(x = heatmapMatrix,
+            Rowv = FALSE, Colv = FALSE,
+            dendrogram = "none", 
+            scale = scaling,
+            trace = "none",
+            labRow = groupLabels,
+            RowSideColors = as.character(heatmapColors),
+            rowsep = rowSeps,
+            main = info,
+            xlab = "Chromosome Arm", ylab = "Cells",
+            col = colorRampPalette(c("red", "black", "green"))(n = 299), 
+            breaks = c(seq(-3,-1,length=100),seq(-0.99,0.99,length=100),seq(1,3,length=100)), 
+#           breaks = c(seq(-2,-1.25,length=100),seq(-1.24,1.24,length=100),seq(1.25,2,length=100)),
+            symbreaks = TRUE,
+            symm = FALSE, 
+            symkey = TRUE,
+            keysize = 0.5,
+            cexRow = 1
+            )
+  dev.off()
+```
+}
+
+
+
+
+
+
+
+
+How does our genes.tsv gene list compare with BioMart gene list?
+```{r}
+nrow(genes.tsv)
+nrow(geneData)
+length(union(genes.tsv$ENSEMBL, geneData$ENSEMBL))
+length(intersect(genes.tsv$ENSEMBL, geneData$ENSEMBL))
+length(setdiff(genes.tsv$ENSEMBL, geneData$ENSEMBL))
+length(setdiff(geneData$ENSEMBL, genes.tsv$ENSEMBL))
+```
+
+
+
+Now into plotting...
+
+```{r}
+# How many cells is each gene expressed in?
+DT <- data.table(masterMatrix)
+
+geneData1 <- DT[, .(numCells = uniqueN(cellIndex)), by = ENSEMBL]
+geneData2 <- DT[, .(UMIAve = mean(UMI)), by = ENSEMBL]
+geneData <- merge(geneData1, geneData2)
+chr8matrix <- merge(chr8matrix, geneData)
+
+# How many genes does each cell have expression for?
+cellData1 <- DT[, .(numGenes = uniqueN(ENSEMBL)), by = cellIndex]
+cellData2 <- DT[, .(cellType = cellType), by = cellIndex]
+cellData <- unique(merge(cellData1, cellData2))
+chr8matrix <- merge(chr8matrix, cellData)
+rm(cellData1, cellData2)
+
+pArm <- chr8matrix[chr8matrix$pArm == TRUE,]
+pArmDT <- data.table(pArm)
+pArmGeneData1 <- pArmDT[, .(numCells = uniqueN(cellIndex)), by = ENSEMBL]
+pArmGeneData2 <- pArmDT[, .(UMIAve = mean(UMI)), by = ENSEMBL]
+pArmgeneData <- merge(pArmGeneData1, pArmGeneData2)
+pArmCellData1 <- pArmDT[, .(numGenes = uniqueN(ENSEMBL)), by = cellIndex]
+pArmCellData2 <- pArmDT[, .(cellType = cellType), by = cellIndex]
+pArmCellData <- unique(merge(pArmCellData1, pArmCellData2))
+
+qArm <- chr8matrix[chr8matrix$pArm == FALSE,]
+qArmDT <- data.table(qArm)
+qArmGeneData1 <- qArmDT[, .(numCells = uniqueN(cellIndex)), by = ENSEMBL]
+qArmGeneData2 <- qArmDT[, .(UMIAve = mean(UMI)), by = ENSEMBL]
+qArmgeneData <- merge(qArmGeneData1, qArmGeneData2)
+qArmCellData1 <- qArmDT[, .(numGenes = uniqueN(ENSEMBL)), by = cellIndex]
+qArmCellData2 <- qArmDT[, .(cellType = cellType), by = cellIndex]
+qArmCellData <- unique(merge(qArmCellData1, qArmCellData2))
+
+rm(pArm, pArmDT)
+rm(geneData1, geneData2, pArmGeneData1, pArmGeneData2, qArmGeneData1, qArmCellData2)
+
+```
+
+
+In how many cells is each gene expressed?
+```{r}
+ggplot(data = geneData) + 
+  geom_histogram(mapping = aes(x=numCells), binwidth = 50) +
+  ggtitle("Num cells per gene") + 
+  xlab("num cells") +
+  ylab("num genes")
+```
+
+
+What is the average UMI for each gene?
+```{r}
+ggplot(data = geneData) + 
+  geom_histogram(mapping = aes(x=UMIAve), binwidth = 1) + 
+  ggtitle("Ave(UMI) per gene") +
+  xlab("ave(UMI)") +
+  ylab("num genes")
+```
+
+Find out how many genes each cell has expression in
+```{r}
+ggplot(data = cellData,
+       aes(x = numGenes,
+           fill = cellType)) + 
+  geom_histogram(binwidth = 5,
+                 position = "dodge") +
+  ggtitle("Total num genes per cell") 
+  xlab("num genes") +
+  ylab("num cells")
+```
+
+How many genes per cell on the p arm?
+```{r}
+ggplot(data = pArmCellData,
+       aes(x = numGenes,
+          fill = cellType)) +
+  geom_histogram(position = "dodge", binwidth = 5) +
+  ggtitle("num genes per cell - p arm") +
+  xlab("num genes") +
+  ylab("num cells")
+```
+
+How many genes per cell on the q arm? 
+```{r}
+ggplot(data = qArmCellData,
+       aes(x = numGenes,
+          fill = cellType)) +
+  geom_histogram(position = "dodge", binwidth = 5) +
+  ggtitle("num genes per cell - q arm") +
+  xlab("num genes") +
+  ylab("num cells")
+```
+
+Is the distribution of UMI occurrence bimodal in chr8p?
+```{r}
+# ggplot(data = pArmNumGenesByCell) + 
+#   geom_histogram(mapping = aes(x=numGenes), binwidth = 5) + 
+#   ggtitle("num genes per cell - p arm") +
+#   xlab("num genes") +
+#   ylab("num cells")
+
+```
+
+Is the distribution of UMI occurrence bimodal in chr8q? No
+```{r}
+# qArm <- chr8matrix[chr8matrix$pArm == FALSE,]
+# qArmDT <- data.table(qArm)
+# qArmNumGenesByCell <- qArmDT[, .(numGenes = uniqueN(ENSEMBL)), by = cellIndex]
+# nrow(qArmNumGenesByCell)
+# ggplot(data = qArmNumGenesByCell) + 
+#   geom_histogram(mapping = aes(x=numGenes), binwidth = 5) + 
+#   ggtitle("num genes per cell - q arm") +
+#   xlab("num genes") +
+#   ylab("num cells")
+
+```
+
+What is the distribution of UMI sums for cells for chr8p only?
+```{r}
+# sumTableP <- aggregate(UMI~cellIndex, data=pArm, FUN=sum)
+# colnames(sumTableP) <- c("cellIndex", "sumUMI")
+# max(sumTableP$sumUMI)
+# min(sumTableP$sumUMI)
+# ggplot(data = sumTableP) + 
+#   geom_histogram(mapping = aes(x=sumUMI), binwidth = 5) + 
+#   ggtitle("Sum(UMI) per cell - p arm") + 
+#   xlab("sum(UMI) - p arm only") +
+#   ylab("num cells")
+
+```
+
+What is the distribution of UMI sums for cells for chr8q only?
+```{r}
+# sumTableQ <- aggregate(UMI~cellIndex, data=qArm, FUN=sum)
+# colnames(sumTableQ) <- c("cellIndex", "sumUMI")
+# max(sumTableQ$sumUMI)
+# min(sumTableQ$sumUMI)
+# ggplot(data = sumTableQ) + 
+#   geom_histogram(mapping = aes(x=sumUMI), binwidth = 5) + 
+#   ggtitle("Distribution of sum(UMI) per cell - q arm") + 
+#   xlab("sum(UMI) - q arm only") +
+#   ylab("num cells")
+```
+
+What is the distribution of UMI sums for cells?
+```{r}
+sumTable <- aggregate(UMI~cellIndex, data=chr8matrix, FUN=sum)
+colnames(sumTable) <- c("cellIndex", "sumUMI")
+ggplot(data = sumTable) + 
+  geom_histogram(mapping = aes(x=sumUMI), binwidth = 10) + 
+  ggtitle("Sum(UMI) per cell") + 
+  xlab("sum(UMI)") +
+  ylab("num cells")
+```
+
