@@ -9,11 +9,6 @@
 *.pptx
 *.xlsx
 *.log
-data/
-methods/
-proposal/
-ref/
-results/
 *.bak
 *.sav
 *.swp
