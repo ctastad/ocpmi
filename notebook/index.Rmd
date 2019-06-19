@@ -1657,6 +1657,91 @@ Additionally, I introduced a concept that Yuk had brought up regarding the possi
 
 Last, we discussed some of the smaller CNV analysis papers I've found that take a gene prep platform approach to evaluating CNV in single cells. The key distinction here is that these are likely done with DNA, but we both agreed that they may lack significance since I haven't found one published in a journal of significant impact. It may be something to explore for expanding my knowledge of methods though.
 
+## 19
+
+### @Zare2017
+
+This paper explored a comparative analysis between current CNV analysis tools that operate in the context of whole exome sequencing which in wide use in the field. The group narrowed the landscape down to just 5 tools that meet a few criteria.
+
+* There are 3 approaches to identifying CNVs
+    + read count (read depth)
+    + paired-end
+    + assembly
+* All tools the group evaluated used the read depth method since the pair-end and assembly methods are rendered ineffective with low read coverage like is seen in exome data. All CNV detection tools for WES are based on this method as a result.
+* Ambiguities in alignment can create bias in the RD approach.
+* The hybridization process and an uneven distribution of reads in exonic regions leads to bias.
+* There are reads in the WES data that will be overlapping noise which would otherwise be delineated in the scRNA data. I will have to account for this.
+* As of 2016, there are 15 seq-based CNV tools.
+* B allele frequencies (BAF) is used to address tumor complexity in some of these tools.
+* Group used both read and synthesized data.
+* Look at table 1 for feature breakdown
+* Look at table 4 for performance summary
+
+ADTEx
+
+* Newest of the tools they evaluated
+* Has ability to leverage BAF
+* Uses Discrete Wavelet Transform as a preprocessing step to reduce noise.
+* Two Hidden Markov Models are used in detection.
+* CBS is used in segmentation
+
+Contra
+
+* used for very small target regions.
+* normalizes read count and log ratios for each base.
+* better for reducing effect of GC bias.
+* addresses problem of very low coverage and GC bias.
+
+cn.MOPS
+
+* Can use multiple samples for each genomics region to create a better estimate
+* Uses a non-overlapping sliding window.
+* Creates a null-hypothesis to measure distance to observed value.
+* Can reduce false discovery rate
+
+ExomeCNV
+
+* Specifically design for WES data.
+* Can use BAF data
+* Counts overlapping reads from exons by using these counts for tumor and normal.
+* Can also detect loss of heterzygosity.
+
+VarScan2
+
+* Also specifically designed for WES data from tumor-normal.
+* Does not use a sliding window.
+* Calculates tumor to normal read count ratios of high quality base that fulfill minimum coverage requirements.
+* Using Fischers test, consecutive bases do not change significantly are binned together.
+* Does not utilize a segmentation algorithm, CBS is advised.
+
+Results
+
+* The tools show low consistency.
+* only about 25% of the true amplified genes and deleted genes were identified by all tools in the gene-based comparison.
+* In the segment-based comparison, the sensitivities and FDRs were all comparably similar to the gene-based comparison.
+* There was no consistency among tools for the size and number of detected CNVs as well.
+* Due to contra's approach, it excels with clean data but may not be suitable for messy cancer data.
+* Mis-detection of poor coverage sequences is a central cause of the poor performance.
+* Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
+* A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
+
+items to clarify later
+
+* More specifically, what is the source of the exome data?
+    + Is it at the site of the tumor?
+    + Is it the same sample as the scRNA?
+    + Is it general pt seq data?
+* Difference between CBS and HMM algorithms.
+* GC bias
+* Do lit search on newer tools.
+* B allele frequency (BAF). Does our dataset have these values.
+* What is phred base quality
+* VarSimlab, for generating synthetic CNV
+* cghMCR to identify CNV genes using Refseq gene identifications.
+* GenomicRanges package to detect overlapping regions.
+
+
+
 ***
 
 # References
