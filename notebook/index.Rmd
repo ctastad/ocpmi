@@ -1802,18 +1802,10 @@ Created    Completed  Age P Project  Description
 2019-06-17 2019-07-08 2w    lab      clear uncached files from git
 2019-06-17 2019-07-08 3w    lab.ccgd email oit points of contact to get rhel
                                      server access
-                                       2019-06-17 Look on page 5 of the attached
-                                     CCGD project document, there are three
-                                     dated conversations that I have had with
-                                     the OIT people. The last conversation
-                                     includes a link to spreadsheet we need to
-                                     fill out and a link to what they have to
-                                     fill out, including a link to some branding
-                                     considerations. Let me know if you need
-                                     more than that.
-
 3 tasks
 ```
+
+***
 
 ## 9
 
@@ -1847,6 +1839,16 @@ ID Age Project Tags     Description                                         Urg
 20 tasks
 ```
 
+### CCGD access
+
+I was informed by OIT that the server is actually owned by HST (Health Science Technology?) and that I need to reach out to them. The contacts I was given are:
+
+* Colby Reese reese007@umn.edu
+* Tom Kell kell@umn.edu
+* Nathan Huff nrhuff@umn.edu
+* Jeffrey Sik sikxx005@umn.edu
+
+I emailed Tom since he was the only one listed in the original CCGD documentation.
 
 ***
 

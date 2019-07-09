@@ -319,7 +319,13 @@ If you have any question or would like to discuss in more detail, I’ll be happ
 * oitlinux@umn.edu
 * Sonya Sustacek (ssustace)
 * John Trammell (tram0004)
-* Tom Krell (sp?).
+
+#### HST
+
+* Colby Reese reese007@umn.edu
+* Tom Kell kell@umn.edu
+* Nathan Huff nrhuff@umn.edu
+* Jeffrey Sik sikxx005@umn.edu
 
 ***
 
