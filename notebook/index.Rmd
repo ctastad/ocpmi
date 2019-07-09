@@ -14,7 +14,7 @@ output:
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
 
-The layout is generally centered here on the `Log`, which is meant as a full continuum of work and notation completed while in the Starr lab. Elements of this page have been pulled as special points of reference when they need a relevant context such as a repeatedly used `method` or notable `results`. References used on each specific page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located in the `starr_lab/ocpmi/notebook/` directory) are collated on the `References` page.
+The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `starr_lab/ocpmi/notebook/`) are collated on the `References` page.
 
 ### Git
 
