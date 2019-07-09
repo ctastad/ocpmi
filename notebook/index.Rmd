@@ -1744,7 +1744,7 @@ Results
 
 # July
 
-## 8 
+## 8
 
 ### TODO
 
@@ -1789,7 +1789,7 @@ I reached out to oialinux@umn.edu today regarding getting server access to the c
 
 ### Summary
 
-I'm back. Feeling pretty rusty, so I've been reacclimating myself to the work I left 3wks ago. I started up the process of getting ccgd upgrade going and should be able to work on that in tandem with the cnv work. Additionally, I need to begin the process of really testing and applying the cnv protocols I reviewed on 6/19. 
+I'm back. Feeling pretty rusty, so I've been reacclimating myself to the work I left 3wks ago. I started up the process of getting ccgd upgrade going and should be able to work on that in tandem with the cnv work. Additionally, I need to begin the process of really testing and applying the cnv protocols I reviewed on 6/19.
 
 #### Completed
 
@@ -1815,9 +1815,43 @@ Created    Completed  Age P Project  Description
 3 tasks
 ```
 
+## 9
+
+## TODO
+
+```{r eval=F}
+ID Age Project Tags     Description                                         Urg
+-- --- ------- -------- --------------------------------------------------- ----
+45 6w  lab     lit work read papalexi 2018 [2]                              3.04
+46 6w  lab     lit work read macintyre 2018 [2]                             3.03
+69 2w  lab     w work   what is the source of the exome data [3]            3.01
+75 21h lab     w work   items to clarify [6]                                 2.9
+44 6w  lab     work     agenda items [1]                                    2.85
+41 7w  lab     w work   review frameworks for ccgd database                 2.17
+42 7w  lab     lit work read ocpmi summary                                  2.17
+43 7w  lab     w work   explore shiny framework for database                2.17
+47 5w  lab     n work   review pca concepts                                 2.11
+48 5w  lab     w work   deep dive into default seurat analysis              2.11
+56 4w  lab     n work   evaluate list of highly var features pt59           2.05
+57 4w  lab     n work   review rnaseq analysis protocol                     2.05
+58 3w  lab     n work   put pt59 output on results page                     2.04
+60 3w  lab     n work   compare tim's pt59 output                           2.04
+61 3w  lab     n work   continue pt59 analysis with cell type selection     2.04
+                        boolean script
+62 3w  lab     n work   get graphics function to work on msi                2.04
+65 3w  lab     n work   explore nelsona2 directory                          2.03
+68 3w  lab     n work   begin comparison of cnv tools                       2.02
+70 2w  lab     n work   go back to june 19 and review items to clarify      2.01
+76 10s lab     n work   contact hst rep re ccgd access                       1.9
+
+20 tasks
+```
+
+
 ***
 
 # References
+
 
 
 
