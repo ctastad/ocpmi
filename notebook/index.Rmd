@@ -1725,7 +1725,7 @@ Results
 * Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
 * A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
 
-items to clarify later
+### items to clarify
 
 * More specifically, what is the source of the exome data?
     + Is it at the site of the tumor?
@@ -1740,11 +1740,53 @@ items to clarify later
 * cghMCR to identify CNV genes using Refseq gene identifications.
 * GenomicRanges package to detect overlapping regions.
 
+***
+
+# July
+
+## 8 
+
+### TODO
+
+```{r eval=F}
+
+ID Age  Project  Tags     Description                                       Urg
+-- ---- -------- -------- ------------------------------------------------- ----
+46 6w   lab      lit work read papalexi 2018 [2]                            3.03
+47 5w   lab      lit work read macintyre 2018 [2]                           3.02
+72 2w   lab      w work   what is the source of the exome data [3]             3
+79 8min lab      w work   items to clarify [6]                               2.9
+44 6w   lab      work     agenda items [1]                                  2.85
+41 6w   lab      w work   review frameworks for ccgd database               2.16
+42 6w   lab      lit work read ocpmi summary                                2.16
+43 6w   lab      w work   explore shiny framework for database              2.16
+45 6w   lab      w work   get admin access to server                        2.14
+48 5w   lab      n work   review pca concepts                               2.11
+49 5w   lab      w work   deep dive into default seurat analysis            2.11
+57 3w   lab      n work   evaluate list of highly var features pt59         2.05
+58 3w   lab      n work   review rnaseq analysis protocol                   2.05
+59 3w   lab      n work   put pt59 output on results page                   2.04
+61 3w   lab      n work   compare tim's pt59 output                         2.04
+62 3w   lab      n work   continue pt59 analysis with cell type selection   2.04
+                          boolean script
+63 3w   lab      n work   get graphics function to work on msi              2.04
+66 3w   lab      n work   explore nelsona2 directory                        2.03
+70 2w   lab      n work   begin comparison of cnv tools                     2.01
+71 2w   lab      n work   clear uncached files from git                     2.01
+73 2w   lab      w work   look up version tracking in document editing for     2
+                          rmarkdown
+74 2w   lab      n work   go back to june 19 and review items to clarify       2
+69 2w   lab.ccgd n work   email oit points of contact to get rhel server    2.81
+                          access [1]
+
+23 tasks
+```
 
 
 ***
 
 # References
+
 
 
 
