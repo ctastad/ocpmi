@@ -275,7 +275,7 @@ You should now have access to nelsona2, where the somatic DNA exome data is loca
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
 
-## @Tirosh2016
+## CNV w/ scRNA @Tirosh2016
 
 This paper is the only other case Tim is aware of where a group was able to effectively show CNV in single cell expression data.
 
@@ -284,12 +284,78 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * The analysis produced the conclusion that these cells display 2 distinct developmental programs.
 * Subclonal point mutation and insitu hybridization was also done as verification of these retults.
 
-#### CNV Method
+### CNV Method
 
 * Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectivley created "bins" of expression level to define relative changes in expression.
 * They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
 * This was used to define the baseline for microglia and oligdendrocytes.
 * PCA comprised the main statistical approach.
+
+## Comparing CNV tools @Zare2017
+
+This paper explored a comparative analysis between current CNV analysis tools that operate in the context of whole exome sequencing which in wide use in the field. The group narrowed the landscape down to just 5 tools that meet a few criteria.
+
+* There are 3 approaches to identifying CNVs
+    + read count (read depth)
+    + paired-end
+    + assembly
+* All tools the group evaluated used the read depth method since the pair-end and assembly methods are rendered ineffective with low read coverage like is seen in exome data. All CNV detection tools for WES are based on this method as a result.
+* Ambiguities in alignment can create bias in the RD approach.
+* The hybridization process and an uneven distribution of reads in exonic regions leads to bias.
+* There are reads in the WES data that will be overlapping noise which would otherwise be delineated in the scRNA data. I will have to account for this.
+* As of 2016, there are 15 seq-based CNV tools.
+* B allele frequencies (BAF) is used to address tumor complexity in some of these tools.
+* Group used both read and synthesized data.
+* Look at table 1 for feature breakdown
+* Look at table 4 for performance summary
+
+### ADTEx
+
+* Newest of the tools they evaluated
+* Has ability to leverage BAF
+* Uses Discrete Wavelet Transform as a preprocessing step to reduce noise.
+* Two Hidden Markov Models are used in detection.
+* CBS is used in segmentation
+
+### Contra
+
+* used for very small target regions.
+* normalizes read count and log ratios for each base.
+* better for reducing effect of GC bias.
+* addresses problem of very low coverage and GC bias.
+
+### cn.MOPS
+
+* Can use multiple samples for each genomics region to create a better estimate
+* Uses a non-overlapping sliding window.
+* Creates a null-hypothesis to measure distance to observed value.
+* Can reduce false discovery rate
+
+### ExomeCNV
+
+* Specifically design for WES data.
+* Can use BAF data
+* Counts overlapping reads from exons by using these counts for tumor and normal.
+* Can also detect loss of heterzygosity.
+
+### VarScan2
+
+* Also specifically designed for WES data from tumor-normal.
+* Does not use a sliding window.
+* Calculates tumor to normal read count ratios of high quality base that fulfill minimum coverage requirements.
+* Using Fischers test, consecutive bases do not change significantly are binned together.
+* Does not utilize a segmentation algorithm, CBS is advised.
+
+### Results
+
+* The tools show low consistency.
+* only about 25% of the true amplified genes and deleted genes were identified by all tools in the gene-based comparison.
+* In the segment-based comparison, the sensitivities and FDRs were all comparably similar to the gene-based comparison.
+* There was no consistency among tools for the size and number of detected CNVs as well.
+* Due to contra's approach, it excels with clean data but may not be suitable for messy cancer data.
+* Mis-detection of poor coverage sequences is a central cause of the poor performance.
+* Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
+* A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
 
 ## Jason's Work
 
