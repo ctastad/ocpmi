@@ -53,7 +53,7 @@ An example of a complete data source location is below:
 /home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
 ```
 
-## New Cell Ranger Output Location
+## New Cell Ranger Output
 
 * It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
 
@@ -94,7 +94,7 @@ chooseCRANmirror(ind=2)
 
 ## MSI sshfs
 
-### Automount
+#### Automount
 
 I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
 
@@ -104,7 +104,7 @@ I'm using `sshfs` to mount my MSI home folder on my local machine to make it mor
 sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
 ```
 
-### Unmount
+#### Unmount
 
 I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use `fusermount` to force the unmount first.
 
@@ -169,7 +169,7 @@ Additionally, regular markdown formatting can be applied behind this special com
 
 Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
 
-### from: Jinhua 6/14/19
+#### from: Jinhua 6/14/19
 
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
@@ -179,7 +179,7 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 Juan had tried using contra in the past which did not work.
 
-### from: Juan 6/13/2019
+#### from: Juan 6/13/2019
 
 Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
 
@@ -269,11 +269,30 @@ OSError: [Errno 2] No such file or directory
 
 ## Exome data
 
-### from: Andrew Nelson 6/14/19
+#### from: Andrew 6/14/19
 
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
+
+#### from: Christy re coverage data 7/10/19
+
+Just realized I didn't send you the final coverage data. My apologies.
+The data is now here: `/home/nelsona2/shared/ovarian_Jan2019/DNA_project/coverage`
+There are 3 excel files with coverage as listed below. (There is also a README.txt in the above directory with the same information.) Let me know if you have any questions!
+Best,
+Christy
+
+OvCA_exome_capture_coverage.xlsx
+Coverage by chromosome and exon for the bed file provided by Agilent for the capture (S07604715)
+
+
+OvCA_exome_exon_flattened_coverage.xlsx
+Coverage by chromosome, gene and exon using a bed file created by using the S07604715 capture's target gene names to pull the full exon-level coordinates from UCSC (for RefSeq gene names, Ensembl gene names, miRNAs and other non-coding genes). The purpose of this is to make sure each gene is fully covered by the capture, i.e. to help identify any exons that were left out of the capture bed file because they were too difficult to sequence or didn't perform well, or just by accident. (Based on our clinical experience, this happens more than you might think.) Going to this extra effort to pull the full exon bed files from another source allows us to see when exons have been missed by the capture. For each gene, any overlapping exons were merged so that an individual base within in a gene is only counted once for coverage, and overlapping exons are counted/listed in the spreadsheet as a single "meta-exon".
+
+OvCA_exome_fullreduce_coverage.xlsx
+Coverage by chromosome and exon. Same bed file as in OvCA_exome_exon_flattened_coverage.xlsx, however instead of only merging overlapping exons if they occurred w any overlapping exons were merged with each other, regardless of gene. This gives us a bed file with any base in the capture only counted once for coverage
+ purposes, even if it is included in multiple exons in the same or different genes.
 
 ## CNV w/ scRNA @Tirosh2016
 
@@ -309,7 +328,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Look at table 1 for feature breakdown
 * Look at table 4 for performance summary
 
-### ADTEx
+#### ADTEx
 
 * Newest of the tools they evaluated
 * Has ability to leverage BAF
@@ -317,28 +336,28 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Two Hidden Markov Models are used in detection.
 * CBS is used in segmentation
 
-### Contra
+#### Contra
 
 * used for very small target regions.
 * normalizes read count and log ratios for each base.
 * better for reducing effect of GC bias.
 * addresses problem of very low coverage and GC bias.
 
-### cn.MOPS
+#### cn.MOPS
 
 * Can use multiple samples for each genomics region to create a better estimate
 * Uses a non-overlapping sliding window.
 * Creates a null-hypothesis to measure distance to observed value.
 * Can reduce false discovery rate
 
-### ExomeCNV
+#### ExomeCNV
 
 * Specifically design for WES data.
 * Can use BAF data
 * Counts overlapping reads from exons by using these counts for tumor and normal.
 * Can also detect loss of heterzygosity.
 
-### VarScan2
+#### VarScan2
 
 * Also specifically designed for WES data from tumor-normal.
 * Does not use a sliding window.
@@ -346,7 +365,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Using Fischers test, consecutive bases do not change significantly are binned together.
 * Does not utilize a segmentation algorithm, CBS is advised.
 
-### Results
+#### Results
 
 * The tools show low consistency.
 * only about 25% of the true amplified genes and deleted genes were identified by all tools in the gene-based comparison.
@@ -364,7 +383,7 @@ Jason sent me his working directory for the early phase of the CNV project. It i
 
 * `/starr_lab/ocpmi/methods/jason_cnv`
 
-### from: Jason 6/15/19
+#### from: Jason 6/15/19
 
 I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
 
