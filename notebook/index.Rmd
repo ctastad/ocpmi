@@ -1809,7 +1809,7 @@ Created    Completed  Age P Project  Description
 
 ## 9
 
-## TODO
+### TODO
 
 ```{r eval=F}
 ID Age Project Tags     Description                                         Urg
@@ -1850,14 +1850,85 @@ I was informed by OIT that the server is actually owned by HST (Health Science T
 
 I emailed Tom since he was the only one listed in the original CCGD documentation.
 
+### Summary
+
+I am still going through the process of reviewing my work to reestablish the momentum and direction I had 3 weeks ago. I have been looking at Jason's code to make sense of his approach. I will probably reach out to him depending on what comes from my meeting with Tim tomorrow so that we can discuss his method. I need to clarify the picture of how I will implement the proper tool sets for both the exome and scRNA data.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-07-09 2019-07-09 5h  lab     contact hst rep re ccgd access
+2019-06-19 2019-07-09 2w  lab     go back to june 19 and review items to clarify
+
+2 tasks
+```
+
+***
+
+## 10
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags     Description                                  Urg
+-- --- - ------- -------- -------------------------------------------- ----
+72 18h H lab     n work   review zare notes before meeting              7.9
+45 6w    lab     lit work read papalexi 2018 [2]                       3.04
+46 6w    lab     lit work read macintyre 2018 [2]                      3.04
+63 3w    lab     w work   what is the source of the exome data [3]     3.02
+68 1d    lab     w work   items to clarify [6]                         2.91
+44 6w    lab     work     agenda items [1]                             2.86
+41 7w    lab     w work   review frameworks for ccgd database          2.17
+42 7w    lab     lit work read ocpmi summary                           2.17
+43 7w    lab     w work   explore shiny framework for database         2.17
+47 5w    lab     n work   review pca concepts                          2.12
+56 3w    lab     n work   get graphics function to work on msi         2.04
+59 3w    lab     n work   explore nelsona2 directory                   2.04
+62 3w    lab     n work   clarify direction for cnv tool selection     2.02
+
+13 tasks
+```
+
+### wkly mtg w/ Tim
+
+present: chris, tim
+
+* Since I have been away, I did not have any work to discuss with Tim.
+* We realigned my direction around the CNV project approach.
+* We have variant allele freq (var). I should look into this.
+* Reach out to people who processed wes data re ability get baf data. Talk to Rebecca Larue first.
+  - Ask Rebecca which pipeline she used for methods purposes.
+* Read papers on excavator, varscan2, scope and assess which would be best. Run on one dataset.
+* We discussed the source exome data since I wanted to clarify my understanding of this. The wes tissue can effectivley be assumed to be the same source as the scRNA for each pt.
+
+### Summary
+
+The conversation with Tim today was helpful in regaining some direction on the CNV work. Right now, my immediate goals are to establish the toolset for wes analysis, develop a reliable wes output for reference, and then evaluate the method I use to approach the scRNA cnv analysis. I need more detail about the development of the wes data, so reaching out to Rebecca will be important at this point. Identifying supporting information for the wes data such as BAFs and VAFs could be determining factors in the pipeline I use.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- --------------------------------------------
+2019-06-19 2019-07-10 3w    lab     what is the source of the exome data
+                                      2019-06-19 is it at the tumor site?
+                                      2019-06-19 is it the same sample as the
+                                    scRNA?
+                                      2019-06-19 is it just general pt exome
+                                    data?
+2019-07-09 2019-07-10 20h H lab     review zare notes before meeting
+2019-06-17 2019-07-10 3w    lab     clarify direction for cnv tool selection
+
+3 tasks
+```
+
+
+
 ***
 
 # References
-
-
-
-
-
 
 
 
