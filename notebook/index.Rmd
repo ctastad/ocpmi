@@ -1900,8 +1900,8 @@ present: chris, tim
 * We have variant allele freq (var). I should look into this.
 * Reach out to people who processed wes data re ability get baf data. Talk to Rebecca Larue first.
   - Ask Rebecca which pipeline she used for methods purposes.
-* Read papers on excavator, varscan2, scope and assess which would be best. Run on one dataset.
-* We discussed the source exome data since I wanted to clarify my understanding of this. The wes tissue can effectivley be assumed to be the same source as the scRNA for each pt.
+* Read papers on excavator (@Magi2013), varscan2, scope (@Wang2019) and assess which would be best. Run on one dataset.
+* We discussed the source exome data since I wanted to clarify my understanding of this. The wes tissue can effectively be assumed to be the same source as the scRNA for each pt.
 
 ### Summary
 
