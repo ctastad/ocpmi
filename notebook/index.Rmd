@@ -1924,11 +1924,41 @@ Created    Completed  Age P Project Description
 3 tasks
 ```
 
+***
+
+## 11
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags     Description                                       Urg
+-- --- - ------- -------- ------------------------------------------------- ----
+67 23h H lab     n work   contact rebecca re wes processing                  7.9
+68 23h M lab     n work   create summarizing outline cnv project direction   5.8
+63 2d    lab     w work   items to clarify [6]                              2.91
+65 23h   lab     n work   read wang 2019 [1]                                 2.7
+66 23h   lab     n work   read magi 2013 [1]                                 2.7
+41 7w    lab     lit work read ocpmi summary                                2.18
+46 6w    lab     n work   review pca concepts                               2.13
+44 6w  L lab     lit work read papalexi 2018 [2]                            2.05
+57 3w    lab     n work   explore nelsona2 directory                        2.04
+45 6w  L lab     lit work read macintyre 2018 [2]                           2.04
+69 23h   lab     w work   ask rebecca about wes processing method            1.9
+43 6w  L lab     work     agenda items [1]                                  1.86
+40 7w  L lab     w work   review frameworks for ccgd database               1.18
+42 7w  L lab     w work   explore shiny framework for database              1.18
+54 3w  L lab     n work   get graphics function to work on msi              1.05
+
+15 tasks
+```
+
+
 
 
 ***
 
 # References
+
 
 
 
