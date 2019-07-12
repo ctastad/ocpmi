@@ -10,6 +10,16 @@ output:
         theme: paper
 ---
 
+```{r echo=F}
+library(knitr)
+```
+
+# Contacts
+
+```{r echo=F}
+contacts <- read.csv("/home/chris/starr_lab/contacts.csv")
+kable(contacts)
+```
 
 
 # MSI
@@ -19,24 +29,18 @@ output:
 
 The root project directory is:
 
-```{r eval=F}
-/home/starrt2/
-```
+* `/home/starrt2/`
 
 I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.
 
-```{r eval=F}
-/home/starrt2/tasta005
-```
+* `/home/starrt2/tasta005`
 
 Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
 
 * Look for the leading 6 digit integer as a point of reference for the data_release folder.
 * The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
 
-```{r eval=F}
-/home/starrt2/data_release/umgc/hiseq
-```
+* `/home/starrt2/data_release/umgc/hiseq`
 
 The Analysis directory contains the source data
 
@@ -49,17 +53,13 @@ The Analysis directory contains the source data
 
 An example of a complete data source location is below:
 
-```{r eval=F}
-/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
-```
+* `/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38`
 
 ## New Cell Ranger Output
 
 * It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
 
-```{r eval=F}
-/scratch.global/zhan2142/starr/
-```
+* `/scratch.global/zhan2142/starr/`
 
 ## Load/Install R pkgs
 
@@ -156,14 +156,6 @@ Additionally, regular markdown formatting can be applied behind this special com
 
 # CNV
 
-## Points of contact
-
-* Juan Abrahante <abrah023@umn.edu>
-* Christy Henzler <chenzler@umn.edu>
-* Jinhua Wang <wangjh@umn.edu>
-* Ying Zhang <zhan2142@umn.edu>
-* Andrew Nelson <nels2055@umn.edu>
-* Jason Cepela <cepel004@umn.edu>
 
 ## Varscan2
 
@@ -303,7 +295,7 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * The analysis produced the conclusion that these cells display 2 distinct developmental programs.
 * Subclonal point mutation and insitu hybridization was also done as verification of these retults.
 
-### CNV Method
+#### CNV Method
 
 * Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectivley created "bins" of expression level to define relative changes in expression.
 * They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
@@ -399,18 +391,10 @@ If you have any question or would like to discuss in more detail, I’ll be happ
 
 # CCGD Upgrade
 
-## Points of contact
+#### Project doc location
 
-* oitlinux@umn.edu
-* Sonya Sustacek (ssustace)
-* John Trammell (tram0004)
+* `/home/chris/starr_lab/ccgd/refs/CCGD Project.docx`
 
-#### HST
-
-* Colby Reese reese007@umn.edu
-* Tom Kell kell@umn.edu
-* Nathan Huff nrhuff@umn.edu
-* Jeffrey Sik sikxx005@umn.edu
 
 ***
 
