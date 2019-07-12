@@ -1966,9 +1966,34 @@ Created    Completed  Age P Project Description
 1 task
 ```
 
+***
+
 ## 12
 
 ### TODO
+
+```{r eval=F}
+ID Age P Project Tags     Description                                       Urg
+-- --- - ------- -------- ------------------------------------------------- ----
+67 1d  M lab     n work   create summarizing outline cnv project direction  5.81
+63 3d    lab     w work   items to clarify [6]                              2.92
+65 1d    lab     n work   read wang 2019 [1]                                2.71
+66 1d    lab     n work   read magi 2013 [1]                                2.71
+41 7w    lab     lit work read ocpmi summary                                2.18
+46 6w    lab     n work   review pca concepts                               2.13
+44 6w  L lab     lit work read papalexi 2018 [2]                            2.05
+57 3w    lab     n work   explore nelsona2 directory                        2.05
+45 6w  L lab     lit work read macintyre 2018 [2]                           2.05
+68 19h   lab     w work   email other hst staff                              1.9
+69 1h    lab     n work   take a look at genomespace                         1.9
+43 7w  L lab     work     agenda items [1]                                  1.87
+40 7w  L lab     w work   review frameworks for ccgd database               1.18
+42 7w  L lab     w work   explore shiny framework for database              1.18
+54 4w  L lab     n work   get graphics function to work on msi              1.05
+
+15 tasks
+```
+
 
 ### Collaborator mtg
 
@@ -1994,6 +2019,7 @@ Created    Completed  Age P Project Description
 ***
 
 # References
+
 
 
 
