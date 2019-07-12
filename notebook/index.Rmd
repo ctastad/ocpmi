@@ -1966,6 +1966,28 @@ Created    Completed  Age P Project Description
 1 task
 ```
 
+## 12
+
+### TODO
+
+### Collaborator mtg
+
+* exome data
+   - freebase was used to call variants
+   - there are some issues in variant filtering for calls in processing the wes data.
+   - Andy took pt pm1 and did a cross refernce across the 4 bams available
+     + Coverage variability is high
+     + Filtering poor calls stands as a significant hurdle
+     + Currently, we need to establish a base line for "common" mutation calls
+     + the tst170 was thought to be a higher standard, but the consistency does not seem to be there
+     + Andy and Tim are going to create a simplified list of common genes to identify mutations
+* scRNA
+  - all single cell data has been rerun through cell ranger v3 and seurat.
+  - we are switching to nova seq from hiseq.
+  - the location and naming of this are somewhat ambiguous
+  - the new v3 cell ranger data might be named "v2"...
+
+
 
 
 
