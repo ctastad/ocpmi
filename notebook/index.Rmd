@@ -10,6 +10,26 @@ output:
         theme: paper
 ---
 
+<!-- Style -->
+
+<style type="text/css">
+
+h1 {
+  color: #333333;
+}
+h2 {
+  color: #333333;
+}
+h3 {
+  color: #333333;
+}
+h4 {
+  color: #333333;
+}
+</style>
+
+<!-- Content -->
+
 # Preamble
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
@@ -1997,20 +2017,23 @@ ID Age P Project Tags     Description                                       Urg
 
 ### Collaborator mtg
 
+present: josh, andy, isaac, shobhana, borris, jason, tim, ying
+
 * exome data
-   - freebase was used to call variants
-   - there are some issues in variant filtering for calls in processing the wes data.
-   - Andy took pt pm1 and did a cross refernce across the 4 bams available
-     + Coverage variability is high
-     + Filtering poor calls stands as a significant hurdle
-     + Currently, we need to establish a base line for "common" mutation calls
-     + the tst170 was thought to be a higher standard, but the consistency does not seem to be there
-     + Andy and Tim are going to create a simplified list of common genes to identify mutations
+    + freebase was used to call variants
+    + there are some issues in variant filtering for calls in processing the wes data.
+    + Andy took pt pm1 (pt54) and did a cross refernce across the 4 bams available
+        - Coverage variability is high
+        - Filtering poor calls stands as a significant hurdle
+        - Currently, we need to establish a base line for "common" mutation calls
+        - the tst170 was thought to be a higher standard, but the consistency does not seem to be there
+        - Andy and Tim are going to create a simplified list of common genes to identify mutations
 * scRNA
-  - all single cell data has been rerun through cell ranger v3 and seurat.
-  - we are switching to nova seq from hiseq.
-  - the location and naming of this are somewhat ambiguous
-  - the new v3 cell ranger data might be named "v2"...
+    + all single cell data has been rerun through cell ranger v3 and seurat.
+    + we are switching to nova seq from hiseq.
+    + the location and naming of this are somewhat ambiguous
+    + the new v3 cell ranger data might be named "v2"...
+
 
 
 

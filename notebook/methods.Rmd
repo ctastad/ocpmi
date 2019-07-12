@@ -368,6 +368,12 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
 * A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
 
+#### Other tools
+
+* varsimlab to generate synthetic cnv
+* cghmcr to identify cnv genes using refseq gene id
+* genomicranges to detect overlapping regions
+
 ## Jason's Work
 
 
