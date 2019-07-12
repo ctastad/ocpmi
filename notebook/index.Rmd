@@ -1952,12 +1952,27 @@ ID Age P Project Tags     Description                                       Urg
 15 tasks
 ```
 
+### Summary
+
+I reached out to Rebecca re a conversation about the background of the exome data processing. While I can investigate different tool sets to get a sense of what I will use, There are a few things she may be able to help me with that could be determining factors. I also began investigating the SCOPE tool today at the suggestion of Jinhua. I didn't have any background on this pipeline and was surprised to find it's purpose is to address single cell data, albeit with DNA. They indicate they did some validation with RNA data from 10x, so it remains to be seen if I will be able to use this.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- ---------------------------------
+2019-07-10 2019-07-11 1d  H lab     contact rebecca re wes processing
+
+1 task
+```
+
 
 
 
 ***
 
 # References
+
 
 
 
