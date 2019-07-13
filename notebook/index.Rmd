@@ -2034,17 +2034,56 @@ present: josh, andy, isaac, shobhana, borris, jason, tim, ying
     + the location and naming of this are somewhat ambiguous
     + the new v3 cell ranger data might be named "v2"...
 
+### CNV tool lit search
 
+#### EXCAVATOR
 
+#### SCOPE
 
+#### Awesome single cell repo
+
+I found a really comprehensive list of single cell analysis tools at the github below.
+
+* https://github.com/seandavi/awesome-single-cell
+
+#### InferCNV
+
+I also found a tool that was inspired by the @Tirosh2016 paper which explicitly aims to identify cnv in scRNA data. This looks very promising, and I will probably attempt this tool set first when getting into the sc data. The tool look like it could potentially be very simple. As this may help in getting started, it may be a drawback with the added complexity of our data set.
+
+* https://github.com/broadinstitute/infercnv/wiki
+
+### Summary
+
+I spent the day evaluating CNV tools. While this was relatively productive, a brief conversation with Tim did draw attention to the fact I need to stop aiming and shoot. With the general info I've gathered, I can begin to run some analysis. My first step will be to run EXCAVATOR with a single pt data set followed by VarScan2 with the same data. My hope is that these pipelines come together with some ease and offer some level of a tutorial or test case. If not, I will focus on which of the two I can fully execute more quickly.
+
+Additionally, my content search led me to an application I have an early excitement for, and that is InferCNV. I have really only glanced at the wiki for this tool, but it seems as if it was made specifically for our purposes. It looks relatively simple to use, and I am hoping that it can allow me to generate some data right away.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-07-11 2019-07-12 1d  lab     email other hst staff
+2019-07-08 2019-07-12 4d  lab     items to clarify
+                                    2019-07-08 varsimlab, for generating
+                                  synthetic cnv
+                                    2019-07-08 cghmcr to identify cnv genes
+                                  using refseq gene id
+                                    2019-07-08 genomicranges package to detect
+                                  overlapping regions
+2019-07-12 2019-07-12 8h  lab     take a look at genomespace
+2019-05-20 2019-07-12 7w  lab     read ocpmi summary
+2019-07-10 2019-07-12 2d  lab     read wang 2019
+                                    2019-07-10 scope wes tool
+2019-07-10 2019-07-12 2d  lab     read magi 2013
+                                    2019-07-10 excavator wes tool
+
+7 tasks
+```
 
 
 ***
 
 # References
-
-
-
-
 
 

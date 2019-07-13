@@ -395,6 +395,13 @@ The vertical colored bar on the left of the heatmaps show the cell type. They ar
 
 If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
 
+
+# Awesome single cell repo
+
+I found a really comprehensive list of single cell analysis tools at the github below.
+
+* https://github.com/seandavi/awesome-single-cell
+
 # CCGD Upgrade
 
 #### Project doc location
