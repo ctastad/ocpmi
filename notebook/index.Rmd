@@ -2081,9 +2081,32 @@ Created    Completed  Age Project Description
 7 tasks
 ```
 
+***
+
+## 15
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags   Description                                         Urg
+-- --- - ------- ------ --------------------------------------------------- ----
+60 2d  H lab     n work run excavator                                       7.91
+59 4d  M lab     n work create summarizing outline cnv project direction    5.82
+61 2d    lab     n work summarize value of excavator                        1.91
+62 2d    lab     n work summarize features of scope                         1.91
+42 7w  L lab     work   agenda items [1]                                    1.88
+40 7w  L lab     w work review frameworks for ccgd database                  1.2
+41 7w  L lab     w work explore shiny framework for database                 1.2
+50 4w  L lab     n work get graphics function to work on msi                1.07
+
+8 tasks
+```
+
+
 
 ***
 
 # References
+
 
 
