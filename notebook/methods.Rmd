@@ -167,6 +167,14 @@ If it is for single cell exome DNA copy number call, you may try this tool: SCOP
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
 
+## EXCAVATOR
+
+#### from: Jinhua 6/14/19
+
+If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
+
+For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+
 ## Contra
 
 Juan had tried using contra in the past which did not work.
