@@ -2122,6 +2122,10 @@ As stated in @Magi2017
 
 >The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
 
+### Summary
+
+I put time into getting xcavator implemented. I am going with the updated version of excavator that was introduced in 2017. I had not noticed in my initial glance at the tool that it utilized perl and fortran. I don't believe this will impact any of the coding necessary since the pipeline seems to rely on modification of reference files, so my limited knowledge of perl and fortran shouldn't be an issue. 
+
 ***
 
 # References
