@@ -2106,6 +2106,14 @@ ID Age P Project Tags   Description                                         Urg
 
 I will be taking the first wes cnv approach using the excavator/xcavator tool. This group published EXCAVATOR in @Magi2013 and have since expanded on it @Magi2017. I will be looking at XCAVATOR first, given its recency to see if it can bring anything to fruition.
 
+Excavator leverages perl, bash, R, and fortran (of all things), and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
+
+* `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/lib`
+
+Documentation can be found here:
+
+* `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/docs/EXCAVATOR Manual.pdf`
+
 #### XCAVATOR Implementation
 
 As stated in @Magi2017
@@ -2113,7 +2121,6 @@ As stated in @Magi2017
 > All the computational approaches described in this paper have been packaged in the XCAVATOR software tool. XCAVATOR is a collection of perl, bash, R and fortran codes and its computational architecture has been derived from the EXCAVATOR tool that we published in 2013 [34] for the detection of CNVs/sCNA from whole-exome sequencing data. Our tool takes as input WGS data as BAM files and gives as output plots reporting raw, normalized, segmented and called data and a list of detected CNVs in tab-delimited and VCF format.
 
 >The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
-
 
 ***
 
