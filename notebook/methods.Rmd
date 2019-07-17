@@ -94,9 +94,9 @@ chooseCRANmirror(ind=2)
 
 ## MSI sshfs
 
-#### Automount
+#### Auto mount
 
-I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
 
 ```{bash eval=F}
 #!/bin/bash
@@ -112,6 +112,13 @@ I've run into the case where a server disconnect causes a hang any time I naviga
 fusermount -uz /data
 ```
 
+## Interactive Computing
+
+It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
+
+This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
+
+* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
 
 # Seurat
 
@@ -125,7 +132,7 @@ htmltools::includeHTML("../methods/code/seurat_tutorial/pbmc3k_tutorial.html")
 
 ### Render .R -> .html
 
-It is possible to render markdown output straight from a .R file. This can save the need to create two seperate files when running code and producing a formatted output.
+It is possible to render markdown output straight from a .R file. This can save the need to create two separate files when running code and producing a formatted output.
 
 https://rmarkdown.rstudio.com/articles_report_from_r_script.html
 
@@ -320,11 +327,11 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * This group took human oligodendrogliomas and isolated ~4300 cells for sequencing.
 * They constructed a developmental program from genome-wide expression signatures.
 * The analysis produced the conclusion that these cells display 2 distinct developmental programs.
-* Subclonal point mutation and insitu hybridization was also done as verification of these retults.
+* Subclonal point mutation and insitu hybridization was also done as verification of these results.
 
 #### CNV Method
 
-* Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectivley created "bins" of expression level to define relative changes in expression.
+* Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectively created "bins" of expression level to define relative changes in expression.
 * They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
 * This was used to define the baseline for microglia and oligdendrocytes.
 * PCA comprised the main statistical approach.

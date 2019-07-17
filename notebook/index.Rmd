@@ -2147,9 +2147,16 @@ ID Age P Project Tags   Description                                         Urg
 8 tasks
 ```
 
+### Interactive Computing
+
+It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
+
+This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
+
+* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
+
+
+***
 
 # References
-
-
-
 
