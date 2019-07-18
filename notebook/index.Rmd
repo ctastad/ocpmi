@@ -2153,7 +2153,7 @@ It is possible to run an interactive session with the MSI lab space using the `i
 
 This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
 
-* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
+* https://www.msi.umn.edu/content/interactive-queue-use-isub
 
 ***
 
@@ -2183,6 +2183,26 @@ present: tim, chris
 
 We had a limited discussion today. I updated Tim on progress with getting started in xcavator and getting access to the ccgd server space. Tim suggested I approach sonya given her past involvement with the project.
 
+### XCAVATOR Progress
+
+I'm continuing the process of getting xcavator setup and running. As a pipeline, xcavator is less mature than something like Seurat, especially with its documentation. I need to discuss a handful of items with either Rebecca or Christy regarding the processing of the wes data.
+
+### Summary
+
+Most of my time today was spent making sense of the xcavator workflow. There are some gaps in the documentation that I may have to parse out, but I am getting a sense for the parameters.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-07-17 2019-07-17 23h lab     reach out to ssustace@umn.edu re ccgd server
+                                  access
+
+1 task
+```
+
+
 ***
 
 ## 18
@@ -2209,6 +2229,7 @@ ID Age P Project Tags   Description                                         Urg
 ***
 
 # References
+
 
 
 
