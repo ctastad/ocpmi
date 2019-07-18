@@ -24,7 +24,9 @@ kable(contacts)
 
 # MSI
 
-## Project Folder
+## Directories
+
+#### Project Folder
 
 
 The root project directory is:
@@ -55,7 +57,7 @@ An example of a complete data source location is below:
 
 * `/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38`
 
-## New Cell Ranger Output
+#### New Cell Ranger Output
 
 * It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
 
@@ -96,20 +98,26 @@ chooseCRANmirror(ind=2)
 
 #### Auto mount
 
-I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script. This is located at `/home/chris/starr_lab/automnt_msi` on my local machine.
 
-```{bash eval=F}
+```{r eval=F}
 #!/bin/bash
 
-sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
+sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt/tasta005
+sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2
+
 ```
 
 #### Unmount
 
-I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use `fusermount` to force the unmount first.
+I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an exacutable for this, `umount_msi`, in the same directory.
 
 ```{r eval=F}
-fusermount -uz /data
+#!/bin/bash
+
+fusermount -u msi_mnt/tasta005
+fusermount -u msi_mnt/starrt2
+
 ```
 
 ***
@@ -136,7 +144,7 @@ htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 
 # R
 
-### Render .R -> .html
+## Render .R -> .html
 
 It is possible to render markdown output straight from a .R file. This can save the need to create two separate files when running code and producing a formatted output.
 
@@ -164,6 +172,36 @@ Additionally, regular markdown formatting can be applied behind this special com
 
 ```{r eval=F}
 #' A script comment that includes **markdown** formatting.
+```
+
+## notebook_knit.R
+
+I've renamed my `create_site` file to `notebook_knit` due to a conflict with a different executable. The location of this file is now at `/usr/bin` on my local machine. The updated script is below.
+
+```{r eval=F}
+#!/usr/bin/env Rscript
+
+cur_dir <- getwd()
+setwd("/home/chris/starr_lab/ocpmi/notebook")
+
+rmarkdown::render("index.Rmd")
+rmarkdown::render("results.Rmd")
+rmarkdown::render("methods.Rmd")
+rmarkdown::render("references.Rmd")
+rmarkdown::render_site("index.Rmd")
+
+fl <- Sys.glob("*.html")
+
+ifelse(file.exists(fl), file.remove(fl))
+
+setwd(cur_dir)
+
+```
+
+A key element to make this executable was to include it in an environment directory (i.e. `/usr/bin`) and also make it executable for all users with the command below.
+
+```{r eval=F}
+sudo chmod a+x notebook_knit.R
 ```
 
 ***
