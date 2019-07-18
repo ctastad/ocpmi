@@ -10,6 +10,26 @@ output:
         theme: paper
 ---
 
+<!-- Style -->
+
+<style type="text/css">
+
+h1 {
+  color: #333333;
+}
+h2 {
+  color: #333333;
+}
+h3 {
+  color: #333333;
+}
+h4 {
+  color: #333333;
+}
+</style>
+
+<!-- Content -->
+
 # Preamble
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
@@ -1809,7 +1829,7 @@ Created    Completed  Age P Project  Description
 
 ## 9
 
-## TODO
+### TODO
 
 ```{r eval=F}
 ID Age Project Tags     Description                                         Urg
@@ -1900,18 +1920,271 @@ present: chris, tim
 * We have variant allele freq (var). I should look into this.
 * Reach out to people who processed wes data re ability get baf data. Talk to Rebecca Larue first.
   - Ask Rebecca which pipeline she used for methods purposes.
-* Read papers on excavator, varscan2, scope and assess which would be best. Run on one dataset.
+* Read papers on excavator (@Magi2013), varscan2, scope (@Wang2019) and assess which would be best. Run on one dataset.
+* We discussed the source exome data since I wanted to clarify my understanding of this. The wes tissue can effectively be assumed to be the same source as the scRNA for each pt.
+
+### Summary
+
+The conversation with Tim today was helpful in regaining some direction on the CNV work. Right now, my immediate goals are to establish the toolset for wes analysis, develop a reliable wes output for reference, and then evaluate the method I use to approach the scRNA cnv analysis. I need more detail about the development of the wes data, so reaching out to Rebecca will be important at this point. Identifying supporting information for the wes data such as BAFs and VAFs could be determining factors in the pipeline I use.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- --------------------------------------------
+2019-06-19 2019-07-10 3w    lab     what is the source of the exome data
+                                      2019-06-19 is it at the tumor site?
+                                      2019-06-19 is it the same sample as the
+                                    scRNA?
+                                      2019-06-19 is it just general pt exome
+                                    data?
+2019-07-09 2019-07-10 20h H lab     review zare notes before meeting
+2019-06-17 2019-07-10 3w    lab     clarify direction for cnv tool selection
+
+3 tasks
+```
+
+***
+
+## 11
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags     Description                                       Urg
+-- --- - ------- -------- ------------------------------------------------- ----
+67 23h H lab     n work   contact rebecca re wes processing                  7.9
+68 23h M lab     n work   create summarizing outline cnv project direction   5.8
+63 2d    lab     w work   items to clarify [6]                              2.91
+65 23h   lab     n work   read wang 2019 [1]                                 2.7
+66 23h   lab     n work   read magi 2013 [1]                                 2.7
+41 7w    lab     lit work read ocpmi summary                                2.18
+46 6w    lab     n work   review pca concepts                               2.13
+44 6w  L lab     lit work read papalexi 2018 [2]                            2.05
+57 3w    lab     n work   explore nelsona2 directory                        2.04
+45 6w  L lab     lit work read macintyre 2018 [2]                           2.04
+69 23h   lab     w work   ask rebecca about wes processing method            1.9
+43 6w  L lab     work     agenda items [1]                                  1.86
+40 7w  L lab     w work   review frameworks for ccgd database               1.18
+42 7w  L lab     w work   explore shiny framework for database              1.18
+54 3w  L lab     n work   get graphics function to work on msi              1.05
+
+15 tasks
+```
+
+### Summary
+
+I reached out to Rebecca re a conversation about the background of the exome data processing. While I can investigate different tool sets to get a sense of what I will use, There are a few things she may be able to help me with that could be determining factors. I also began investigating the SCOPE tool today at the suggestion of Jinhua. I didn't have any background on this pipeline and was surprised to find it's purpose is to address single cell data, albeit with DNA. They indicate they did some validation with RNA data from 10x, so it remains to be seen if I will be able to use this.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- ---------------------------------
+2019-07-10 2019-07-11 1d  H lab     contact rebecca re wes processing
+
+1 task
+```
+
+***
+
+## 12
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags     Description                                       Urg
+-- --- - ------- -------- ------------------------------------------------- ----
+67 1d  M lab     n work   create summarizing outline cnv project direction  5.81
+63 3d    lab     w work   items to clarify [6]                              2.92
+65 1d    lab     n work   read wang 2019 [1]                                2.71
+66 1d    lab     n work   read magi 2013 [1]                                2.71
+41 7w    lab     lit work read ocpmi summary                                2.18
+46 6w    lab     n work   review pca concepts                               2.13
+44 6w  L lab     lit work read papalexi 2018 [2]                            2.05
+57 3w    lab     n work   explore nelsona2 directory                        2.05
+45 6w  L lab     lit work read macintyre 2018 [2]                           2.05
+68 19h   lab     w work   email other hst staff                              1.9
+69 1h    lab     n work   take a look at genomespace                         1.9
+43 7w  L lab     work     agenda items [1]                                  1.87
+40 7w  L lab     w work   review frameworks for ccgd database               1.18
+42 7w  L lab     w work   explore shiny framework for database              1.18
+54 4w  L lab     n work   get graphics function to work on msi              1.05
+
+15 tasks
+```
+
+
+### Collaborator mtg
+
+present: josh, andy, isaac, shobhana, borris, jason, tim, ying
+
+* exome data
+    + freebase was used to call variants
+    + there are some issues in variant filtering for calls in processing the wes data.
+    + Andy took pt pm1 (pt54) and did a cross refernce across the 4 bams available
+        - Coverage variability is high
+        - Filtering poor calls stands as a significant hurdle
+        - Currently, we need to establish a base line for "common" mutation calls
+        - the tst170 was thought to be a higher standard, but the consistency does not seem to be there
+        - Andy and Tim are going to create a simplified list of common genes to identify mutations
+* scRNA
+    + all single cell data has been rerun through cell ranger v3 and seurat.
+    + we are switching to nova seq from hiseq.
+    + the location and naming of this are somewhat ambiguous
+    + the new v3 cell ranger data might be named "v2"...
+
+### CNV tool lit search
+
+#### EXCAVATOR
+
+#### SCOPE
+
+#### Awesome single cell repo
+
+I found a really comprehensive list of single cell analysis tools at the github below.
+
+* https://github.com/seandavi/awesome-single-cell
+
+#### InferCNV
+
+I also found a tool that was inspired by the @Tirosh2016 paper which explicitly aims to identify cnv in scRNA data. This looks very promising, and I will probably attempt this tool set first when getting into the sc data. The tool look like it could potentially be very simple. As this may help in getting started, it may be a drawback with the added complexity of our data set.
+
+* https://github.com/broadinstitute/infercnv/wiki
+
+### Summary
+
+I spent the day evaluating CNV tools. While this was relatively productive, a brief conversation with Tim did draw attention to the fact I need to stop aiming and shoot. With the general info I've gathered, I can begin to run some analysis. My first step will be to run EXCAVATOR with a single pt data set followed by VarScan2 with the same data. My hope is that these pipelines come together with some ease and offer some level of a tutorial or test case. If not, I will focus on which of the two I can fully execute more quickly.
+
+Additionally, my content search led me to an application I have an early excitement for, and that is InferCNV. I have really only glanced at the wiki for this tool, but it seems as if it was made specifically for our purposes. It looks relatively simple to use, and I am hoping that it can allow me to generate some data right away.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-07-11 2019-07-12 1d  lab     email other hst staff
+2019-07-08 2019-07-12 4d  lab     items to clarify
+                                    2019-07-08 varsimlab, for generating
+                                  synthetic cnv
+                                    2019-07-08 cghmcr to identify cnv genes
+                                  using refseq gene id
+                                    2019-07-08 genomicranges package to detect
+                                  overlapping regions
+2019-07-12 2019-07-12 8h  lab     take a look at genomespace
+2019-05-20 2019-07-12 7w  lab     read ocpmi summary
+2019-07-10 2019-07-12 2d  lab     read wang 2019
+                                    2019-07-10 scope wes tool
+2019-07-10 2019-07-12 2d  lab     read magi 2013
+                                    2019-07-10 excavator wes tool
+
+7 tasks
+```
+
+***
+
+## 15
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags   Description                                         Urg
+-- --- - ------- ------ --------------------------------------------------- ----
+60 2d  H lab     n work run excavator                                       7.91
+59 4d  M lab     n work create summarizing outline cnv project direction    5.82
+61 2d    lab     n work summarize value of excavator                        1.91
+62 2d    lab     n work summarize features of scope                         1.91
+42 7w  L lab     work   agenda items [1]                                    1.88
+40 7w  L lab     w work review frameworks for ccgd database                  1.2
+41 7w  L lab     w work explore shiny framework for database                 1.2
+50 4w  L lab     n work get graphics function to work on msi                1.07
+
+8 tasks
+```
+
+### WES analysis with EXCAVATOR/XCAVATOR
+
+I will be taking the first wes cnv approach using the excavator/xcavator tool. This group published EXCAVATOR in @Magi2013 and have since expanded on it @Magi2017. I will be looking at XCAVATOR first, given its recency to see if it can bring anything to fruition.
+
+Excavator leverages perl, bash, R, and fortran (of all things), and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
+
+* `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/lib`
+
+Documentation can be found here:
+
+* `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/docs/EXCAVATOR Manual.pdf`
+
+#### XCAVATOR Implementation
+
+As stated in @Magi2017
+
+> All the computational approaches described in this paper have been packaged in the XCAVATOR software tool. XCAVATOR is a collection of perl, bash, R and fortran codes and its computational architecture has been derived from the EXCAVATOR tool that we published in 2013 [34] for the detection of CNVs/sCNA from whole-exome sequencing data. Our tool takes as input WGS data as BAM files and gives as output plots reporting raw, normalized, segmented and called data and a list of detected CNVs in tab-delimited and VCF format.
+
+>The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
+
+### Summary
+
+I put time into getting xcavator implemented. I am going with the updated version of excavator that was introduced in 2017. I had not noticed in my initial glance at the tool that it utilized perl and fortran. I don't believe this will impact any of the coding necessary since the pipeline seems to rely on modification of reference files, so my limited knowledge of perl and fortran shouldn't be an issue.
+
+***
+
+## 16
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags   Description                                         Urg
+-- --- - ------- ------ --------------------------------------------------- ----
+60 3d  H lab     n work run excavator                                       7.92
+59 5d  M lab     n work create summarizing outline cnv project direction    5.83
+61 3d    lab     n work summarize value of excavator                        1.92
+62 3d    lab     n work summarize features of scope                         1.92
+42 7w  L lab     work   agenda items [1]                                    1.89
+40 8w  L lab     w work review frameworks for ccgd database                 1.21
+41 8w  L lab     w work explore shiny framework for database                1.21
+50 4w  L lab     n work get graphics function to work on msi                1.08
+
+8 tasks
+```
+
+### Interactive Computing
+
+It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
+
+This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
+
+* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
+
+***
+
+## 17
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags    Description                                        Urg
+-- --- - ------- ------- -------------------------------------------------- ----
+60 4d  H lab     n work  run excavator                                      7.92
+59 6d  M lab     n work  create summarizing outline cnv project direction   5.83
+71 23h M lab     n phone call any hst number                                 5.8
+61 4d    lab     n work  summarize value of excavator                       1.92
+62 4d    lab     n work  summarize features of scope                        1.92
+42 7w  L lab     work    agenda items [1]                                    1.9
+40 8w  L lab     w work  review frameworks for ccgd database                1.21
+41 8w  L lab     w work  explore shiny framework for database               1.21
+50 4w  L lab     n work  get graphics function to work on msi               1.08
+
+9 tasks
+```
+
+### wkly mtg w/ Tim
+
+present: tim, chris
+
+We had a limited discussion today. I updated Tim on progress with getting started in xcavator and getting access to the ccgd server space. Tim suggested I approach sonya given her past involvement with the project.
 
 ***
 
 # References
-
-
-
-
-
-
-
-
 
 

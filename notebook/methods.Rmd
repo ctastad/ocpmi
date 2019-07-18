@@ -10,6 +10,16 @@ output:
         theme: paper
 ---
 
+```{r echo=F}
+library(knitr)
+```
+
+# Contacts
+
+```{r echo=F}
+contacts <- read.csv("/home/chris/starr_lab/contacts.csv")
+kable(contacts)
+```
 
 
 # MSI
@@ -19,24 +29,18 @@ output:
 
 The root project directory is:
 
-```{r eval=F}
-/home/starrt2/
-```
+* `/home/starrt2/`
 
 I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.
 
-```{r eval=F}
-/home/starrt2/tasta005
-```
+* `/home/starrt2/tasta005`
 
 Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
 
 * Look for the leading 6 digit integer as a point of reference for the data_release folder.
 * The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
 
-```{r eval=F}
-/home/starrt2/data_release/umgc/hiseq
-```
+* `/home/starrt2/data_release/umgc/hiseq`
 
 The Analysis directory contains the source data
 
@@ -49,17 +53,13 @@ The Analysis directory contains the source data
 
 An example of a complete data source location is below:
 
-```{r eval=F}
-/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
-```
+* `/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38`
 
-## New Cell Ranger Output Location
+## New Cell Ranger Output
 
 * It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
 
-```{r eval=F}
-/scratch.global/zhan2142/starr/
-```
+* `/scratch.global/zhan2142/starr/`
 
 ## Load/Install R pkgs
 
@@ -94,9 +94,9 @@ chooseCRANmirror(ind=2)
 
 ## MSI sshfs
 
-### Automount
+#### Auto mount
 
-I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable automount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
 
 ```{bash eval=F}
 #!/bin/bash
@@ -104,7 +104,7 @@ I'm using `sshfs` to mount my MSI home folder on my local machine to make it mor
 sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
 ```
 
-### Unmount
+#### Unmount
 
 I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use `fusermount` to force the unmount first.
 
@@ -112,20 +112,33 @@ I've run into the case where a server disconnect causes a hang any time I naviga
 fusermount -uz /data
 ```
 
+***
+
+## Interactive Computing
+
+It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
+
+This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
+
+* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
+
+***
 
 # Seurat
 
 ## PBMC Tutorial
 
 ```{r}
-htmltools::includeHTML("../methods/code/seurat_tutorial/pbmc3k_tutorial.html")
+htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 ```
+
+***
 
 # R
 
 ### Render .R -> .html
 
-It is possible to render markdown output straight from a .R file. This can save the need to create two seperate files when running code and producing a formatted output.
+It is possible to render markdown output straight from a .R file. This can save the need to create two separate files when running code and producing a formatted output.
 
 https://rmarkdown.rstudio.com/articles_report_from_r_script.html
 
@@ -153,33 +166,151 @@ Additionally, regular markdown formatting can be applied behind this special com
 #' A script comment that includes **markdown** formatting.
 ```
 
+***
 
 # CNV
 
-## Points of contact
-
-* Juan Abrahante <abrah023@umn.edu>
-* Christy Henzler <chenzler@umn.edu>
-* Jinhua Wang <wangjh@umn.edu>
-* Ying Zhang <zhan2142@umn.edu>
-* Andrew Nelson <nels2055@umn.edu>
-* Jason Cepela <cepel004@umn.edu>
 
 ## Varscan2
 
 Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
 
-### from: Jinhua 6/14/19
+#### from: Jinhua 6/14/19
 
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
 
+***
+
+## EXCAVATOR
+
+#### from: Jinhua 6/14/19
+
+If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
+
+For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+
+
+#### Implementation
+
+I will be taking the first wes cnv approach using the excavator/xcavator tool. This group published EXCAVATOR in @Magi2013 and have since expanded on it @Magi2017. I will be looking at XCAVATOR first, given its recency to see if it can bring anything to fruition.
+
+Excavator leverages perl, bash, R, and fortran (of all things), and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
+
+* `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/lib`
+
+Documentation can be found here:
+
+* `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/docs/EXCAVATOR Manual.pdf`
+
+As stated in @Magi2017
+
+> All the computational approaches described in this paper have been packaged in the XCAVATOR software tool. XCAVATOR is a collection of perl, bash, R and fortran codes and its computational architecture has been derived from the EXCAVATOR tool that we published in 2013 [34] for the detection of CNVs/sCNA from whole-exome sequencing data. Our tool takes as input WGS data as BAM files and gives as output plots reporting raw, normalized, segmented and called data and a list of detected CNVs in tab-delimited and VCF format.
+
+>The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
+
+### XCAVATOR Readme
+
+#### System Requirements
+
+XCAVATOR was conceived for running on UNIX OS 64-bit machines with R (version ≥ 2.14.0) and the Hmisc library, SAM-tools (version ≥ 0.1.17), and Perl (version ≥ 5.8.8) to be correctly installed on your system.
+
+R can be downloaded at CRAN (http://cran.r-project.org), while SAMtools at SourceForge (http://samtools.sourceforge.net). Perl is native in almost any Unix machine. Before installing and runnig XCAVATOR be sure they are all installed on your system and their executable files have been exported in your PATH. If you experience any problem with any of them you should contact your system administrator. Installation of any of these softwares requires superuser privileges.
+
+To check for R, SAMtools and Perl you can type on your shell the following commands:
+
+```{r eval=F}
+> R
+Press CTRL+D to quit R.
+> samtools
+> perl -v
+```
+
+#### XCAVATOR Installation
+
+Uncompress the XCAVATOR package, then move to `.../XCAVATOR/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
+
+```{r eval=F}
+F77> R CMD SHLIB F4R.f
+F77> R CMD SHLIB FastJointSLMLibrary.f
+```
+
+This will create the .o and .so fortran libraries.
+
+#### XCAVATOR Commands
+
+The XCAVATOR workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
+
+1. `ReferenceWindowInitialize.pl`
+2. `XCAVATORDataPrepare.pl`
+3. `XCAVATORDataAnalysis.pl`
+
+#### ReferenceWindowInitialize.pl
+
+`ReferenceWindowInitialize.pl` is the module that calculates "windows" informations for the XCAVATOR analyses. This module calculates GC-content and mappability values for consecutive and non overlapping windows of the genome of size "window".
+
+`ReferenceWindowInitialize.pl` requires 4 arguments: the path to a source file (e.g. SourceTarget.txt), the path to a bed file, a "label" and the assembly name (allowed options are: hg19 and hg38). Example of cmd is:
+
+```{r eval=F}
+perl ReferenceWindowInitialize.pl SourceTarget.txt MyWindowLabelName myWindow hg19
+```
+
+The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimitated file that contains the absolute paths to a bigWig file (.bw) for the calculations of mappability and to the reference genome sequence in .fasta format for GC-content calculations.
+
+The bigWig file is a binary file reporting information about mappability, referred to a reference assembly. Mappability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
+
+myWindow represents the distance between start and end (in bp) of consecutive and non-overlapping windows of the genome that will be used by XCAVATOR to calculate read counts. myWindow must be an integer number (e.g. 100,200,500,1000).
+
+Setting the label name as "MyWindowLabelName", the `ReferenceWindowInitialize.pl` module will create a folder (if you are using the hg19 assembly) `/.../XCAVATOR/data/targets/hg19/MyLabelName` containing all files required for XCAVATOR analysis.
+
+
+
+#### XcavatorDataPrepare.pl
+
+
+`XCAVATORDataPrepare.pl` is a Perl script that performs RC or DOC calculation and normalization on multiple .bam files. It takes as input an experimental file and four command-line options to run properly:
+
+```{r eval=F}
+perl XCAVATORDataPrepare.pl FilePrepare.txt --processors 7 --target MyLabelName --mode DOC --assembly hg19
+```
+
+The text file (e.g. `FilePrepare.txt`, that you have to create) contains details about all .bam files you want to analyse. The options concern the number of processors to use (–processors), the name of the target (MyLabelName, with window size and GC and mappability informations), the mode (RC for short reads and DOC for long reads, PacBio and Nanopore) and the human assembly you used for the mapping (–assembly). Available options for assembly are hg19 and hg38.
+
+Before running `EXCAVATORDataPrepare.pl` you need to create a space delimited file with three fields: the absolute path to the .bam file you want to analyse, the path to the main sample output folder and the sample name. The sample name will be used as a prefix/suffix for output files. Each row in the file contains details about one sample. For each sample, the main output folder specified in the second filed of the `ExperimentalFilePre- pare.window.txt` will be created.
+
+#### XcavatorDataAnalysis.pl
+
+`XCAVATORDataAnalysis.pl` is a multi-threading Perl that performs the segmentation of the RC/DOC by means of the Shifting Level Model algorithm and exploits FastCall algorithm to classify each segmented region as one of the five possible discrete states (2-copy deletion, 1-copy deletion, normal, 1-copy duplication and N-copy amplification). `XCAVATORDataAnalysis.pl` takes as input one file and four options. This is an example of the cmd:
+
+```{r eval=F}
+perl XCAVATORDataAnalysis.pl FileAnalysis.txt --processors 6 --target MyLabelName --assembly hg19 --output OutputFolder --mode nocontrol/pooling/paired
+```
+
+MyLabelName and assembly must be the same used in `XCAVATORDataPrepare.pl` step. The input file is a space delimited text file that contains three fields, the second and the third are the same as in FilePrepare.txt, while the first is a label which specifies how to handle and compare the samples. Labels are Cx (for controls, with x=1,2,3…) and Ty (with y=1,2,3….).
+
+XCAVATOR allows to analyze samples in three different ways: paired, nocontrol and pooling. In pooling, all test samples will be compared with the same global control obtained by combining all control samples (all the samples with Cx label will be collapsed to a pooled control sample). In paired, each test sample is compared with its control sample (T1-C1, T2-C2,….) and this analysis mode is best suited for the identification of somatic CNV of matched tumor/control samples. In "nocontrol" mode each test sample is analyzed without using a control and the `FileAnalysis.txt` file only needs Ty labels.
+
+An example of well formatted `FileAnalysis.txt` for pooling, paired and nocontrol mode is reported in the XCAVATOR main folder.
+
+All the results of the analyses are stored in the `OutputFolder` that contains two main subfolders: `Plots` and `Results.` The `Plots` folder contains .pdf files reporting the segmented genomic profiles and statistically significant genomic regions (chromosome by chromosome) for each test sample (follow `/.../Plots/SampleName/`).
+
+The `Results/SampleName/` folder contains .txt and .vcf files with the results produced by SLM and FastCall. In particular, FastCall results are summarized in `FastCallResults_SampleName.txt` files. The fields of this file reports: chromosome, start position, end position, median log2-ratio in the segment copy number fraction, copy number value, copy number state and call probability. Concerning copy number state values: 2-copies deletion are encoded with "-2", while 1-copy deletions are reported as "-1" calls. 1-copy and multiple-copies duplication are reported as "1" and "2" respectively.
+
+Moreover, XCAVATOR also produces a .vcf file (`ExcavatorRegionCall_SampleName.vcf`) with details about identified CNVs. The VCF (Variant Call Format) is a text file of nine fields used to store sequence variations. Each row contains details about a CNV: the starting breakpoint is specified in POS field, the end and the length of the CNV are in the INFO field (END and SVLEN id).
+
+#### Algorithms Parameters
+
+SML and FastCall parameters are stored in the ParameterFile.txt in the main folder of the tool. For LSM algorithm the user can set the value of Omega in the range 0.0 − 1.0, Theta (0.0 − 1.0) and D_norm. We suggest to use Omega (0.1 − 0.5), Theta (10^−7 −10^−3) and D_norm (10^4 −10^6). For FastCall algorithm the user may set the parameters: Cellularity (0.0−1.0) is the fraction of tumor cells (change this value only for somatic analyses), Threshold d (recommended 0.2−0.6) is the lower bound for the truncated gaussian of the neutral (2 copies) state, Threshold u (recommended 0.1 − 0.4) is the upper bound for the truncated gaussian of the neutral (2 copies) state.
+
+***
+
+
 ## Contra
 
 Juan had tried using contra in the past which did not work.
 
-### from: Juan 6/13/2019
+#### from: Juan 6/13/2019
 
 Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
 
@@ -267,13 +398,36 @@ OSError: [Errno 2] No such file or directory
 
 ```
 
+***
+
 ## Exome data
 
-### from: Andrew Nelson 6/14/19
+#### from: Andrew 6/14/19
 
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
+
+#### from: Christy re coverage data 7/10/19
+
+Just realized I didn't send you the final coverage data. My apologies.
+The data is now here: `/home/nelsona2/shared/ovarian_Jan2019/DNA_project/coverage`
+There are 3 excel files with coverage as listed below. (There is also a README.txt in the above directory with the same information.) Let me know if you have any questions!
+Best,
+Christy
+
+OvCA_exome_capture_coverage.xlsx
+Coverage by chromosome and exon for the bed file provided by Agilent for the capture (S07604715)
+
+
+OvCA_exome_exon_flattened_coverage.xlsx
+Coverage by chromosome, gene and exon using a bed file created by using the S07604715 capture's target gene names to pull the full exon-level coordinates from UCSC (for RefSeq gene names, Ensembl gene names, miRNAs and other non-coding genes). The purpose of this is to make sure each gene is fully covered by the capture, i.e. to help identify any exons that were left out of the capture bed file because they were too difficult to sequence or didn't perform well, or just by accident. (Based on our clinical experience, this happens more than you might think.) Going to this extra effort to pull the full exon bed files from another source allows us to see when exons have been missed by the capture. For each gene, any overlapping exons were merged so that an individual base within in a gene is only counted once for coverage, and overlapping exons are counted/listed in the spreadsheet as a single "meta-exon".
+
+OvCA_exome_fullreduce_coverage.xlsx
+Coverage by chromosome and exon. Same bed file as in OvCA_exome_exon_flattened_coverage.xlsx, however instead of only merging overlapping exons if they occurred w any overlapping exons were merged with each other, regardless of gene. This gives us a bed file with any base in the capture only counted once for coverage
+ purposes, even if it is included in multiple exons in the same or different genes.
+
+***
 
 ## CNV w/ scRNA @Tirosh2016
 
@@ -282,14 +436,16 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * This group took human oligodendrogliomas and isolated ~4300 cells for sequencing.
 * They constructed a developmental program from genome-wide expression signatures.
 * The analysis produced the conclusion that these cells display 2 distinct developmental programs.
-* Subclonal point mutation and insitu hybridization was also done as verification of these retults.
+* Subclonal point mutation and insitu hybridization was also done as verification of these results.
 
-### CNV Method
+#### CNV Method
 
-* Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectivley created "bins" of expression level to define relative changes in expression.
+* Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectively created "bins" of expression level to define relative changes in expression.
 * They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
 * This was used to define the baseline for microglia and oligdendrocytes.
 * PCA comprised the main statistical approach.
+
+***
 
 ## Comparing CNV tools @Zare2017
 
@@ -309,7 +465,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Look at table 1 for feature breakdown
 * Look at table 4 for performance summary
 
-### ADTEx
+#### ADTEx
 
 * Newest of the tools they evaluated
 * Has ability to leverage BAF
@@ -317,28 +473,28 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Two Hidden Markov Models are used in detection.
 * CBS is used in segmentation
 
-### Contra
+#### Contra
 
 * used for very small target regions.
 * normalizes read count and log ratios for each base.
 * better for reducing effect of GC bias.
 * addresses problem of very low coverage and GC bias.
 
-### cn.MOPS
+#### cn.MOPS
 
 * Can use multiple samples for each genomics region to create a better estimate
 * Uses a non-overlapping sliding window.
 * Creates a null-hypothesis to measure distance to observed value.
 * Can reduce false discovery rate
 
-### ExomeCNV
+#### ExomeCNV
 
 * Specifically design for WES data.
 * Can use BAF data
 * Counts overlapping reads from exons by using these counts for tumor and normal.
 * Can also detect loss of heterzygosity.
 
-### VarScan2
+#### VarScan2
 
 * Also specifically designed for WES data from tumor-normal.
 * Does not use a sliding window.
@@ -346,7 +502,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Using Fischers test, consecutive bases do not change significantly are binned together.
 * Does not utilize a segmentation algorithm, CBS is advised.
 
-### Results
+#### Results
 
 * The tools show low consistency.
 * only about 25% of the true amplified genes and deleted genes were identified by all tools in the gene-based comparison.
@@ -357,6 +513,14 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
 * A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
 
+#### Other tools
+
+* varsimlab to generate synthetic cnv
+* cghmcr to identify cnv genes using refseq gene id
+* genomicranges to detect overlapping regions
+
+***
+
 ## Jason's Work
 
 
@@ -364,7 +528,7 @@ Jason sent me his working directory for the early phase of the CNV project. It i
 
 * `/starr_lab/ocpmi/methods/jason_cnv`
 
-### from: Jason 6/15/19
+#### from: Jason 6/15/19
 
 I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
 
@@ -378,20 +542,22 @@ The vertical colored bar on the left of the heatmaps show the cell type. They ar
 
 If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
 
+***
+
+# Awesome single cell repo
+
+I found a really comprehensive list of single cell analysis tools at the github below.
+
+* https://github.com/seandavi/awesome-single-cell
+
+***
+
 # CCGD Upgrade
 
-## Points of contact
+#### Project doc location
 
-* oitlinux@umn.edu
-* Sonya Sustacek (ssustace)
-* John Trammell (tram0004)
+* `/home/chris/starr_lab/ccgd/refs/CCGD Project.docx`
 
-#### HST
-
-* Colby Reese reese007@umn.edu
-* Tom Kell kell@umn.edu
-* Nathan Huff nrhuff@umn.edu
-* Jeffrey Sik sikxx005@umn.edu
 
 ***
 
