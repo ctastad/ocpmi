@@ -2255,11 +2255,67 @@ A key element to make this executable was to include it in an environment direct
 sudo chmod a+x notebook_knit.R
 ```
 
+### XCAVATOR Window Initialize
+
+The first command seems to take too much memory, so I installed the pipeline on MSI today. The setup should mirror my local installation for now. The goal right now is just to get the code to run. I'm attempting to execute the `ReferenceWindowInitialize.pl` command.
+
+Overall, I'm using the default params and referencing the hg19.fa fasta file I downloaded from here:
+
+* http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/
+
+Here is the `SourceTarget.txt` file on the MSI instance:
+
+```{r eval=F}
+/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR/data/ucsc.hg19.bw /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR/data/hg19.fa
+
+```
+
+Here is the command itself:
+
+```{r eval=F}
+perl ReferenceWindowInitialize.pl -v SourceTarget.txt test_window1 100 hg19
+```
+
+
+#### Error
+
+I've encountered an error attempting to execute `ReferenceWindowInitialize.pl`.
+
+I am initially just putting any data that will work into the pipeline to get the code running. As far as I can tell, I should be able to use a random fasta file. I chose hg19 since that is identified as a reference genome.
+
+The output of the error is below. The key issues seems to be the creation of the test directory and whatever `*_chromosome.txt` is.
+
+```{r eval=F}
+Program folder is: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR
+Creating Consecutive and non-overlapping windows of 100 bp Size
+sh: R: command not found
+Calculating Mappability and GC content...
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR/data/targets/hg19/test_window1/*_chromosome.txt: No such file or directory
+...done!
+
+```
+
+### Summary
+
+Thinking about the test data I've chosen, I might need to reevaluate. The hg19 dataset isn't wes data, and I don't know if that is an issue for the pipeline. It's also entirely possible I'm missing a setting that is essential to the initialization step. Another point of consideration is that I need a dataset that also has associated bam files, which I am not aware of for hg19. I could take a pt from the ocpmi data set, but they do not have basic fasta files that I am aware of yet, and I don't know if the fastq files we do actually have are compatible with the pipeline.
+
+#### Completed
+
+```{r eval=F}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- --------------------
+2019-07-16 2019-07-18 2d  M lab     call any hst number
+2019-07-17 2019-07-18 23h   lab     find all sfconflicts
+
+2 tasks
+```
+
 
 
 ***
 
 # References
+
 
 
 
