@@ -2310,11 +2310,35 @@ Created    Completed  Age P Project Description
 2 tasks
 ```
 
+## 21
+
+### TODO
+
+```{r eval=F}
+ID Age P Project Tags   Description                                         Urg
+-- --- - ------- ------ --------------------------------------------------- ----
+58 8d  H lab     n work run excavator                                       7.94
+57 11d M lab     n work create summarizing outline cnv project direction    5.86
+72 4d    lab     w work mtg with rebecca [5]                                2.92
+59 8d    lab     n work summarize value of excavator                        1.94
+60 8d    lab     n work summarize features of scope                         1.94
+68 5d    lab     w work get ahold of someone from hst re ccgd database      1.93
+81 2d    lab     n work test fastq compatiblity with xcavator               1.91
+82 2d    lab     n work trouble shoot xcavator error from june 18           1.91
+86 44s   lab     n work access and explore ccgd server                       1.9
+40 8w  L lab     w work review frameworks for ccgd database                 0.24
+41 8w  L lab     w work explore shiny framework for database                0.23
+42 8w  L lab            agenda [1]                                          0.12
+
+12 tasks
+```
+
 
 
 ***
 
 # References
+
 
 
 
