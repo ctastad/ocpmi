@@ -646,6 +646,16 @@ I found a really comprehensive list of single cell analysis tools at the github 
 
 * `/home/chris/starr_lab/ccgd/refs/CCGD Project.docx`
 
+### Server site
+
+I was finally able to get through on the access portion of the ccgd project. Sonya played an important role in initiating access, which was ultimately completed by Satish.
+
+* [ccgd-starrlab.oit.umn.edu](ccgd-starrlab.oit.umn.edu)
+
+The working directory for the website seems to be located at:
+
+* `/swadm/var/www/html`
+
 #### Server Access Conversations
 
 <details>
