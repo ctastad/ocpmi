@@ -2389,11 +2389,32 @@ Following an example from the Seurat pbmc tutorial, I am incorporating folding p
 </details>
 ```
 
+### XCAVATOR vs EXCAVATOR2
+
+I've been working through the error I'm getting in running the `ReferenceWindowInitialize.pl` script to no avail. There is some ambiguity in the file setup for the script arguments. It asks for a bed file but does not specify where that is supposed to be referenced. As a result, I'm going to see if I can easily transition to using EXCAVATOR instead.
+
+### Summary
+
+The XCAVATOR package has been giving me some difficulty with the inconsistencies in its documentation. Part of the issue could stem from my lack of knowledge regarding the file types necessary, but there is not a clear indication that I am wrong either. There script requirements do not fully line up, and the lack of a complete test dataset compounds the issue. I'm goign to try my luck with the EXCAVATOR2 package since it is probably more mature in its function and support.
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- -------------------------------------
+2019-07-18 2019-07-22 4d  lab     check status of access to ccgd server
+2019-07-21 2019-07-22 1d  lab     put satish on contact list
+2019-07-21 2019-07-22 1d  lab     enter daily summary from yesterday
+
+3 tasks
+```
+
 
 
 ***
 
 # References
+
 
 
 

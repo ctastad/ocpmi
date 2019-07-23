@@ -304,25 +304,36 @@ This will create the .o and .so fortran libraries.
 
 The XCAVATOR workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
 
-1. `ReferenceWindowInitialize.pl`
-2. `XCAVATORDataPrepare.pl`
-3. `XCAVATORDataAnalysis.pl`
+* `ReferenceWindowInitialize.pl`
+* `XCAVATORDataPrepare.pl`
+* `XCAVATORDataAnalysis.pl`
 
 #### ReferenceWindowInitialize.pl
 
 `ReferenceWindowInitialize.pl` is the module that calculates "windows" informations for the XCAVATOR analyses. This module calculates GC-content and mappability values for consecutive and non overlapping windows of the genome of size "window".
 
-`ReferenceWindowInitialize.pl` requires 4 arguments: the path to a source file (e.g. SourceTarget.txt), the path to a bed file, a "label" and the assembly name (allowed options are: hg19 and hg38). Example of cmd is:
+`ReferenceWindowInitialize.pl` requires 4 arguments:
+
+1. path to a source file (e.g. SourceTarget.txt)
+2. path to a bed file
+3. a "label"
+4. the assembly name (hg19/hg38)
+
+An example cmd is:
 
 ```{r eval=F}
-perl ReferenceWindowInitialize.pl SourceTarget.txt MyWindowLabelName myWindow hg19
+perl ReferenceWindowInitialize.pl \ # script
+    SourceTarget.txt \              # 1.
+    MyWindowLabelName \             # 3.
+    myWindow \                      #
+    hg19                            # 4.
 ```
 
-The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimitated file that contains the absolute paths to a bigWig file (.bw) for the calculations of mappability and to the reference genome sequence in .fasta format for GC-content calculations.
+The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimitated file that contains the absolute paths to 1) a `bigWig file (.bw)` for the calculations of mappability and 2) to the reference genome sequence in .fasta format for GC-content calculations.
 
-The bigWig file is a binary file reporting information about mappability, referred to a reference assembly. Mappability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
+The `bigWig file` is a binary file reporting information about mappability, referred to a reference assembly. Mappability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
 
-myWindow represents the distance between start and end (in bp) of consecutive and non-overlapping windows of the genome that will be used by XCAVATOR to calculate read counts. myWindow must be an integer number (e.g. 100,200,500,1000).
+`myWindow` represents the distance between start and end (in bp) of consecutive and non-overlapping windows of the genome that will be used by XCAVATOR to calculate read counts. `myWindow` must be an integer number (e.g. 100,200,500,1000).
 
 Setting the label name as "MyWindowLabelName", the `ReferenceWindowInitialize.pl` module will create a folder (if you are using the hg19 assembly) `/.../XCAVATOR/data/targets/hg19/MyLabelName` containing all files required for XCAVATOR analysis.
 
