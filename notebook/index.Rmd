@@ -2395,7 +2395,7 @@ I've been working through the error I'm getting in running the `ReferenceWindowI
 
 ### Summary
 
-The XCAVATOR package has been giving me some difficulty with the inconsistencies in its documentation. Part of the issue could stem from my lack of knowledge regarding the file types necessary, but there is not a clear indication that I am wrong either. There script requirements do not fully line up, and the lack of a complete test dataset compounds the issue. I'm goign to try my luck with the EXCAVATOR2 package since it is probably more mature in its function and support.
+The XCAVATOR package has been giving me some difficulty with the inconsistencies in its documentation. Part of the issue could stem from my lack of knowledge regarding the file types necessary, but there is not a clear indication that I am wrong either. There script requirements do not fully line up, and the lack of a complete test dataset compounds the issue. I'm going to try my luck with the EXCAVATOR2 package since it is probably more mature in its function and support.
 
 #### Completed
 
