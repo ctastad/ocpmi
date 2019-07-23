@@ -2393,6 +2393,8 @@ Following an example from the Seurat pbmc tutorial, I am incorporating folding p
 
 I've been working through the error I'm getting in running the `ReferenceWindowInitialize.pl` script to no avail. There is some ambiguity in the file setup for the script arguments. It asks for a bed file but does not specify where that is supposed to be referenced. As a result, I'm going to see if I can easily transition to using EXCAVATOR instead.
 
+* https://sourceforge.net/projects/excavator2tool/
+
 ### Summary
 
 The XCAVATOR package has been giving me some difficulty with the inconsistencies in its documentation. Part of the issue could stem from my lack of knowledge regarding the file types necessary, but there is not a clear indication that I am wrong either. There script requirements do not fully line up, and the lack of a complete test dataset compounds the issue. I'm going to try my luck with the EXCAVATOR2 package since it is probably more mature in its function and support.
@@ -2405,8 +2407,29 @@ Created    Completed  Age Project Description
 2019-07-18 2019-07-22 4d  lab     check status of access to ccgd server
 2019-07-21 2019-07-22 1d  lab     put satish on contact list
 2019-07-21 2019-07-22 1d  lab     enter daily summary from yesterday
+2019-07-18 2019-07-22 3d  lab     trouble shoot xcavator error from june 18
 
 3 tasks
+```
+
+***
+
+## 23
+
+### TODO
+
+```{r}
+ID Age  P Project Tags   Description                                        Urg
+-- ---- - ------- ------ -------------------------------------------------- ----
+66 5d     lab     w work mtg with rebecca [5]                               2.93
+75 1min   lab     n work find vcf files in dna_project                       1.9
+76 1min   lab     n work begin pilot with data from RL                       1.9
+78 18s    lab     n work explore application of vcf files in cnv pipeline    1.9
+40 9w   L lab     w work review frameworks for ccgd database                0.25
+41 9w   L lab     w work explore shiny framework for database               0.25
+42 8w   L lab            agenda [1]                                         0.13
+
+7 tasks
 ```
 
 
@@ -2414,10 +2437,6 @@ Created    Completed  Age Project Description
 ***
 
 # References
-
-
-
-
 
 
 
