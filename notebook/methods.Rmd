@@ -6,7 +6,7 @@ bibliography: library.bib
 output:
     html_document:
         toc: yes
-#        toc_float: yes
+        toc_float: yes
         theme: paper
 ---
 
@@ -134,8 +134,6 @@ This is useful in the event I want to do development inside MSI rather than just
 
 # Seurat
 
-## PBMC Tutorial
-
 ```{r}
 htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 ```
@@ -204,6 +202,17 @@ A key element to make this executable was to include it in an environment direct
 sudo chmod a+x notebook_knit.R
 ```
 
+## Folding elements
+
+Following an example from the Seurat pbmc tutorial, I am incorporating folding page elements in my notebook to reduce length and clutter.
+
+```{r eval=F}
+<details>
+  <summary>****</summary>
+</details>
+```
+
+
 ***
 
 # CNV
@@ -213,21 +222,36 @@ sudo chmod a+x notebook_knit.R
 
 Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
 
-#### from: Jinhua 6/14/19
-
+<details>
+  <summary>**from: Jinhua 6/14/19**</summary>
+```{remark}
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+```
+
+</details>
+
+
+
 
 ***
 
 ## EXCAVATOR
 
-#### from: Jinhua 6/14/19
 
+<details>
+  <summary>**from: Jinhua 6/14/19**</summary>
+```{remark}
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+```
+
+</details>
+
+
+
 
 
 #### Implementation
@@ -348,8 +372,9 @@ SML and FastCall parameters are stored in the ParameterFile.txt in the main fold
 
 Juan had tried using contra in the past which did not work.
 
-#### from: Juan 6/13/2019
 
+<details>
+  <summary>**from: Juan 6/13/2019**</summary>
 Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
 
 
@@ -436,18 +461,32 @@ OSError: [Errno 2] No such file or directory
 
 ```
 
+
+</details>
+
+
+
+
 ***
 
 ## Exome data
 
-#### from: Andrew 6/14/19
 
+<details>
+  <summary>**from: Andrew re wes location 6/14/19**</summary>
+```{remark}
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
+```
 
-#### from: Christy re coverage data 7/10/19
+</details>
 
+
+
+<details>
+  <summary>**from: Christy re coverage data 7/10/19**</summary>
+```{remark}
 Just realized I didn't send you the final coverage data. My apologies.
 The data is now here: `/home/nelsona2/shared/ovarian_Jan2019/DNA_project/coverage`
 There are 3 excel files with coverage as listed below. (There is also a README.txt in the above directory with the same information.) Let me know if you have any questions!
@@ -464,6 +503,10 @@ Coverage by chromosome, gene and exon using a bed file created by using the S076
 OvCA_exome_fullreduce_coverage.xlsx
 Coverage by chromosome and exon. Same bed file as in OvCA_exome_exon_flattened_coverage.xlsx, however instead of only merging overlapping exons if they occurred w any overlapping exons were merged with each other, regardless of gene. This gives us a bed file with any base in the capture only counted once for coverage
  purposes, even if it is included in multiple exons in the same or different genes.
+```
+
+</details>
+
 
 ***
 
@@ -566,8 +609,10 @@ Jason sent me his working directory for the early phase of the CNV project. It i
 
 * `/starr_lab/ocpmi/methods/jason_cnv`
 
-#### from: Jason 6/15/19
 
+<details>
+  <summary>**from: Jason 6/15/19**</summary>
+```{remark}
 I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
 
 As you may know, the single cell data isn’t really fit for gene-level CNV analysis because only 10-15% of the gene space is covered. So my approach was to look at the average expression level of all genes measured in each chromosome arm, for each cell. I scaled these average values across all the cells (vertically in the figures) that we had annotated as non-epithelial cells. The heatmaps show chromosome arms across the X axis and individual cells across the Y axis. So, rather than looking for CNV in a gene, I’m looking for entire chromosome arm amplifications & deletions.
@@ -579,6 +624,11 @@ Please note that if you are using the most recent patient data from Tim, there w
 The vertical colored bar on the left of the heatmaps show the cell type. They are colored according to “Picture1.png”. On the right side of the heatmaps in small font you will see the cluster number and the annotated cell type according to our outdated Seurat pipeline.
 
 If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
+```
+
+</details>
+
+
 
 ***
 
@@ -595,6 +645,230 @@ I found a really comprehensive list of single cell analysis tools at the github 
 #### Project doc location
 
 * `/home/chris/starr_lab/ccgd/refs/CCGD Project.docx`
+
+#### Server Access Conversations
+
+<details>
+  <summary>**Email thread with Satish to gain access**</summary>
+
+```{remark}
+Hi Jeff,
+
+Thank you for your response. oialinux@umn.edu was actually the first point of contact I made, and they directed me to HST. I've cc'd the contact who handled the this response.
+
+
+Satish,
+
+Would we be able to make sense of the discrepancy in administration here?
+
+
+
+
+
+Thank you,
+--
+Christopher Tastad
+
+<ctastad@gmail.com>
+Mobile: 612-817-7989
+
+
+On Wed, Jul 17, 2019 at 11:34 AM Jeffrey Sik <sikxx005@umn.edu> wrote:
+
+    Hi Christopher,
+
+    Unfortunately I do not have access to this box and digging further it looks like it's over on OIT's infrastructure. You could try emailing oialinux@umn.edu which is the linux group over there.
+
+    Hope this helps!
+    Thanks,
+
+
+    Jeffrey Sik
+
+    UNIVERSITY OF MINNESOTA
+       HST Systems Administrator
+       Email: sikxx005@umn.edu Phone: (612) 624-9148
+
+
+    On Fri, Jul 12, 2019 at 3:35 PM Christopher Tastad <tasta005@umn.edu> wrote:
+
+        Hello,
+
+        I'm forwarding this on looking for some assistance gaining access to a server that is under the management of HST. Would any of you be able to point me in the right direction?
+
+
+
+
+        Thank you,
+        --
+        Christopher Tastad
+
+        <ctastad@gmail.com>
+        Mobile: 612-817-7989
+
+
+        ---------- Forwarded message ---------
+        From: Christopher Tastad <tasta005@umn.edu>
+        Date: Tue, Jul 9, 2019 at 4:54 PM
+        Subject: Fwd: INC2271719 Update: tasta005@umn.edu - Server Access - CCGD Starr lab - INC2271719 satishs
+        To: <kell@umn.edu>
+        Cc: Tim Starr <star0044@umn.edu>
+
+
+        Hello,
+
+        I am reaching out on behalf of the Starr lab regarding an HST hosted server. I will be taking over a required upgrade for this server and need to start by getting access. The server is running RHEL, and I believe the host site is:
+
+        ccgd-starrlab.oit.umn.edu
+
+        Other points of contact I've been given are Jeffrey Sik, Colby Reese, Nathan Huff. If I should contact one of them, please let me know. Otherwise, please advise on how I should proceed.
+
+
+
+        Thank you,
+        --
+        Christopher Tastad
+
+        <ctastad@gmail.com>
+        Mobile: 612-817-7989
+
+
+        ---------- Forwarded message ---------
+        From: UMN Service Desk <help@umn.edu>
+        Date: Tue, Jul 9, 2019 at 10:20 AM
+        Subject: INC2271719 Update: tasta005@umn.edu - Server Access - CCGD Starr lab - INC2271719 satishs
+        To: <tasta005@umn.edu>
+
+
+
+        Additional comments:
+        2019-07-09 10:20:14 CDT - Satish Chowdary Sadineedi (satishs) Additional comments
+        Hi Chris ,
+
+        The authorized requestors listed on this host are reese007, kell, nrhuff, sikxx005 and it belongs to HST. . Could you ask one of the authorized requestors to approve this request ?
+
+        Thanks,
+        Satish
+
+        You can track the status of your ticket INC2271719 at any time.
+
+        If you would like to provide more information, please reply to this email to update your ticket.
+
+        Ref:MSG25438236
+
+
+```
+
+</details>
+
+<details>
+  <summary>**Email thread with Sonya to gain access**</summary>
+
+```{remark}
+Hi, Christopher.
+
+Not a problem. I've asked Satish to grant you access to that server. I've added myself to the watchlist on the ticket.
+
+Thanks,
+Sonya
+---------------------------------------------------------------------
+Sonya Smith Šustáček
+Project Manager & Business/Systems Analyst (Infrastructure Services)
+Office of Information Technology | it.umn.edu
+University of Minnesota | umn.edu
+ssustace@umn.edu | 612.301.2128
+
+“We must accept finite disappointment, but never lose infinite hope.”  -- Martin Luther King, Jr.
+
+
+On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
+
+    Hi Sonya,
+
+    I am reaching out on behalf of the Starr lab regarding a University hosted server. I will be taking over a required upgrade for this server and need to start by getting access.
+
+    With this, I have been having some trouble identifying who owns the administration of the server. Both OIT and HST have indicated that the other is the manager. I still have active threads with them to see if we can sort it out, but I wanted to make another point of contact since this has been a multi week process.
+
+    I've been told reese007, kell, nrhuff, sikxx005 at HST are authorized requestors and have reached out to them with the only response being that OIT is the owner of the space.
+
+    For reference, the server site is below, and my OIT ticket is INC2271719.
+
+    ccgd-starrlab.oit.umn.edu
+
+    Any assistance would be greatly appreciated.
+
+
+
+    --
+    Christopher Tastad
+
+    <ctastad@gmail.com>
+    Mobile: 612-817-7989
+
+
+    ---------- Forwarded message ---------
+    From: Timothy Starr <star0044@umn.edu>
+    Date: Wed, Jul 17, 2019 at 4:50 PM
+    Subject: Fwd: Strategy to migrate ccgd-starrlab to a RHEL 7 Server
+    To: Christopher Tastad <tasta005@umn.edu>
+
+
+
+
+>     Begin forwarded message:
+>
+>     From: Sonya Sustacek <ssustace@umn.edu>
+>     Subject: Re: Strategy to migrate ccgd-starrlab to a RHEL 7 Server
+>     Date: April 10, 2019 at 11:26:33 AM CDT
+>     To: Ken Abbott <abbot195@umn.edu>
+>     Cc: John Trammell <tram0004@umn.edu>, Tim Starr <star0044@umn.edu>, Thomas Kell <kell@umn.edu>
+>
+>     Hi, Ken.
+>
+>     It's okay that you cannot attend this meeting. Thanks so much for the information. This is helpful.
+>
+>     There are a couple of issues that I think it's better for Tim, HST rep, and Linux rep to get together to hammer out and make clear.
+>
+>     HST can request a new server for Dr. Starr. Then the question is who migrates the website (and updates Phython) to the new server? Who will support it? Does it make sense to move the site to Drupal?
+>
+>     We (OIT) just want to know where we go from here as things have stalled a bit.
+>
+>     Again, thanks for you help and good luck with medical school. :-)
+>
+>     Best,
+>     Sonya
+>     ---------------------------------------------------------------------
+>     Sonya Smith Šustáček
+>     Project Manager & Business/Systems Analyst (Infrastructure Services)
+>     Office of Information Technology | it.umn.edu
+>     University of Minnesota | umn.edu
+>     ssustace@umn.edu | 612.301.2128
+>
+>     “We must accept finite disappointment, but never lose infinite hope.”  -- Martin Luther King, Jr.
+>
+>
+>     On Tue, Apr 9, 2019 at 8:49 PM <abbot195@umn.edu> wrote:
+>
+>         Hi folks. I built this site for Tim in 2012. I’m a medical student doing 100-hour weeks (until December) so I cannot make it to this meeting, but I hope we can exchange some information via email. I think the best bet is just another RHEL server—with only a few webpages here, I think we don’t need a platform, and it could be a pain to adapt what we have now to work with a platform. I may be able to help with this, but I cannot really speculate much about how much I will be able to accomplish, according to any timetable; I would appreciate a labor estimate (and description of any known hurdles) from someone who has experience completing these RHEL migrations for other University entities.
+>
+>
+>
+>         -Ken
+>
+>
+>
+>         -----Original Appointment-----
+>         From: Google Calendar <calendar-notification@google.com> On Behalf Of Sonya Sustacek
+>         Sent: Tuesday, April 9, 2019 4:20 PM
+>         To: abbot195@umn.edu; John Trammell; Tim Starr; kell@umn.edu
+>         Subject: Strategy to migrate ccgd-starrlab to a RHEL 7 Server
+>         When: Friday, April 12, 2019 2:00 PM-2:50 PM (UTC-05:00) Eastern Time (US & Canada).
+>         Where: WBOB-523 OIT
+
+
+```
+
+</details>
 
 
 ***

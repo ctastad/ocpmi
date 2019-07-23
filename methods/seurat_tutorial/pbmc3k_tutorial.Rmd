@@ -6,7 +6,7 @@ output:
     df_print: kable
     theme: paper
     toc: yes
-#    toc_float: yes
+    toc_float: yes
 ---
 ***
 
@@ -32,8 +32,8 @@ library(dplyr)
 library(Seurat)
 
 # Load the PBMC dataset
-setwd("~/starr_lab/ocpmi/code/seurat_tutorial/")
-pbmc.data <- Read10X(data.dir = "~/starr_lab/ocpmi/code/seurat_tutorial/filtered_gene_bc_matrices/hg19/")
+setwd("~/starr_lab/ocpmi/methods/seurat_tutorial/")
+pbmc.data <- Read10X(data.dir = "~/starr_lab/ocpmi/methods/seurat_tutorial/filtered_gene_bc_matrices/hg19/")
 # Initialize the Seurat object with the raw (non-normalized data).
 pbmc <- CreateSeuratObject(counts = pbmc.data, project = "pbmc3k", min.cells = 3, min.features = 200)
 pbmc
@@ -282,7 +282,7 @@ DimPlot(object = pbmc, reduction = 'umap')
 You can save the object at this point so that it can easily be loaded back in without having to rerun the computationally intensive steps performed above, or easily shared with collaborators.
 
 ```{r saveobject, eval=FALSE}
-saveRDS(pbmc, file = "~/starr_lab/ocpmi/code/seurat_tutorial/")
+saveRDS(pbmc, file = "~/starr_lab/ocpmi/methods/seurat_tutorial/")
 ```
 
 ***
@@ -331,9 +331,8 @@ DoHeatmap(object = pbmc, features = top10$gene) + NoLegend()
 ### Assigning cell type identity to clusters
 
 Fortunately in the case of this dataset, we can use canonical markers to easily match the unbiased clustering to known cell types:
-Fortunately in the case of this dataset, we can use canonical markers to easily match the unbiased clustering to known cell types:
 
-```{r eval=F}
+```{remark}
 
 Cluster ID | Markers       | Cell Type
 -----------|---------------|----------
@@ -361,9 +360,9 @@ library(ggplot2)
 plot <- DimPlot(object = pbmc, reduction = "umap", label = TRUE, label.size = 4.5) + xlab("UMAP 1") + ylab("UMAP 2") +
   theme(axis.title = element_text(size = 18), legend.text = element_text(size = 18)) +
   guides(colour = guide_legend(override.aes = list(size = 10)))
-ggsave(filename = "~/starr_lab/ocpmi/code/seurat_tutorial/pbmc3k_umap.png", height = 7, width = 12, plot = plot)
+ggsave(filename = "~/starr_lab/ocpmi/methods/seurat_tutorial/pbmc3k_umap.png", height = 7, width = 12, plot = plot)
 ```
 
 ```{r save.rds, eval=F}
-saveRDS(pbmc, file = "~/starr_lab/ocpmi/code/seurat_tutorial/pbmc3k_final.rds")
+saveRDS(pbmc, file = "~/starr_lab/ocpmi/methods/seurat_tutorial/pbmc3k_final.rds")
 ```

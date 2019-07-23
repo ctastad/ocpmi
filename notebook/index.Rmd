@@ -10,6 +10,7 @@ output:
         theme: paper
 ---
 
+
 <!-- Style -->
 
 <style type="text/css">
@@ -50,6 +51,10 @@ Christopher Tastad, MS Candidate
 * Personal: ctastad@gmail.com
 * Mobile: 612-817-7989
 
+```{r global_options}
+knitr::opts_chunk$set(eval=F)
+```
+
 # May 2019
 
 ## 20
@@ -76,7 +81,7 @@ Focus Options
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID  Age   Project        Tags       R Due        Description                Urg
 --- ----- -------------- ---------- - ---------- -------------------------- ----
 326 10h   starrlab       computer n R 2019-05-21 write daily summary        10.5
@@ -132,7 +137,7 @@ Additionally, I plan on establishing a git repo to manage version control and hi
 
 
 
-```{r eval=F}
+```{r}
 ID  Age Project        Tags       R Due        Description                  Urg
 --- --- -------------- ---------- - ---------- ---------------------------- ----
 326 15h starrlab       computer n R 2019-05-22 write daily summary          10.5
@@ -188,7 +193,7 @@ My work today included continued focus on getting organized an taking a very del
 
 
 
-```{r eval=F}
+```{r}
 ID  Age Project        Tags       R Due        Description                  Urg
 --- --- -------------- ---------- - ---------- ---------------------------- ----
 334 11h starrlab       computer n R 2019-05-23 write daily summary          10.6
@@ -239,7 +244,7 @@ I was able to round out much of my organizational setup today. I feel confident 
 #### Completed
 
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project        R Due        Description
 ---------- ---------- --- -------------- - ---------- --------------------------
 2019-05-22 2019-05-23 1d  starrlab       R 2019-05-22 write daily summary
@@ -268,7 +273,7 @@ Created    Completed  Age Project        R Due        Description
 ### TODO
 
 
-```{r eval=F}
+```{r}
 ID  Age Project        Tag            Description                           Urg
 --- --- -------------- -------------- ------------------------------------- ----
 314 3d  starrlab.ocpmi computer lit n find ovca review re cur treatment     2.02
@@ -291,7 +296,7 @@ ID  Age Project        Tag            Description                           Urg
 
 I created a small R script that will effectively knit each page of my lab notebook. This can be executed in the R console or in bash, but each file has to be saved. The save -> knit function that's performed by the IDE does not apply to the console executed render command.
 
-```{r eval=F}
+```{r}
 rmarkdown::render("index.Rmd")
 rmarkdown::render("notes.Rmd")
 rmarkdown::render("results.Rmd")
@@ -308,7 +313,7 @@ Today was filled with primarily administrative work. A large bulk of my time was
 #### Completed
 
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
 2019-05-23 2019-05-24 1d  starrlab       create website knit script
@@ -336,7 +341,7 @@ Created    Completed  Age Project        Description
 ### TODO
 
 
-```{r eval=F}
+```{r}
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
 77 4d  starrlab       computer w     make custom csl                        1.92
@@ -395,7 +400,7 @@ Just worked my way through the above summary today. Will continue and complete r
 ### TODO
 
 
-```{r eval=F}
+```{r}
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
 77 4d  starrlab       computer w     make custom csl                        1.92
@@ -487,7 +492,7 @@ I have shifted focus to begin a comprehensive literature review. I've started by
 #### Completed
 
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------
 2019-05-20 2019-05-28 7d  starrlab.ocpmi find ovca review re cur treatment
@@ -501,7 +506,7 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age  Project        Tags           Description                           Urg
 -- ---- -------------- -------------- ------------------------------------- ----
 75 5d   starrlab                      agenda items [3]                      2.03
@@ -531,7 +536,7 @@ ID Age  Project        Tags           Description                           Urg
 
 present: chris, tim
 
-```{r eval=F}
+```{r}
 
 
 Description
@@ -570,13 +575,13 @@ I logged into the MSI account for the first time today. There is a relatively de
 
 The root project directory is:
 
-```{r eval=F}
+```{r}
 /home/starrt2/
 ```
 
 I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.
 
-```{r eval=F}
+```{r}
 /home/starrt2/tasta005
 ```
 
@@ -585,7 +590,7 @@ Processed data can be found in the hiseq folder under data_release. This data is
 * Look for the leading 6 digit integer as a point of reference for the data_release folder.
 * The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
 
-```{r eval=F}
+```{r}
 /home/starrt2/data_release/umgc/hiseq
 ```
 
@@ -601,7 +606,7 @@ The Analysis directory contains the source data
 
 An example of a complete data source location is below:
 
-```{r eval=F}
+```{r}
 /home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
 ```
 
@@ -613,7 +618,7 @@ Additionally, I did a little house keeping by establishing the first part of the
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project  Description
 ---------- ---------- --- -------- ----------------------------
 2019-05-28 2019-05-29 1d  starrlab fix god damn git issue
@@ -629,7 +634,7 @@ Created    Completed  Age Project  Description
 ### TODO
 
 
-```{r eval=F}
+```{r}
 ID Age Project        Tags           Description                            Urg
 -- --- -------------- -------------- -------------------------------------- ----
 75 6d  starrlab                      agenda items [3]                       2.03
@@ -666,7 +671,7 @@ Briefly, I wrapped up safety training today, so that is all taken care of. The r
 #### Completed
 
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
 2019-05-24 2019-05-30 6d  starrlab       GCP Human RSRCH Biomed Studies
@@ -684,7 +689,7 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age Project        Tags       Description                                Urg
 -- --- -------------- ---------- ------------------------------------------ ----
 73 8d  starrlab                  agenda items [3]                           2.04
@@ -745,7 +750,7 @@ A thought I had while looking at some lit tonight led me to wonder if it's worth
 
 I made a minor update to the script I use to automate total site rendering to clean up the directory a bit. I don't have any use in the parent notebook/ directory for individual html files since they are generated in the site render. The `ifelse` at the end of the script clears these html files from the notebook directory.
 
-```{r eval=F}
+```{r}
 rmarkdown::render("index.Rmd")
 rmarkdown::render("notes.Rmd")
 rmarkdown::render("results.Rmd")
@@ -768,7 +773,7 @@ Last, I can't say what generated this thought specifically, but I came across wh
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- --------------------------
 2019-05-20 2019-06-01 11d starrlab.ocpmi read starr paper re 1st pt
@@ -789,7 +794,7 @@ Created    Completed  Age Project        Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age Project        Tags       Description                                Urg
 -- --- -------------- ---------- ------------------------------------------ ----
 52 10d starrlab                  agenda items [2]                           1.95
@@ -863,7 +868,7 @@ I focused mostly on lit search efforts today. I want to develop a better underst
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project        Description
 ---------- ---------- --- -------------- ---------------------------------------
 2019-06-01 2019-06-03 2d  starrlab       add notes about cancer stem cell
@@ -880,7 +885,7 @@ Created    Completed  Age Project        Description
 ### TODO
 
 
-```{r eval=F}
+```{r}
 ID Age Project Tags   Description                                           Urg
 -- --- ------- ------ ----------------------------------------------------- ----
 49 2w  lab     lit    read tirosh 2016 [2]                                  2.78
@@ -910,7 +915,7 @@ I didn't get a lot done today. I began to apply the vanilla Seurat analysis to t
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age  Project Tags   Description                                          Urg
 -- ---- ------- ------ ---------------------------------------------------- ----
 49 2w   lab     lit    read tirosh 2016 [2]                                 2.78
@@ -938,7 +943,7 @@ ID Age  Project Tags   Description                                          Urg
 
 present: chris, tim
 
-```{r eval=F}
+```{r}
 Description
 --------------------------------------------------------------------------------
 agenda items
@@ -996,7 +1001,7 @@ I met with Tim today for our weekly meeting. We were able to discuss things that
 ### TODO
 
 
-```{r eval=F}
+```{r}
 ID Age Project Tags   Description                                           Urg
 -- --- ------- ------ ----------------------------------------------------- ----
 49 2w  lab     lit    read tirosh 2016 [2]                                  2.79
@@ -1039,7 +1044,7 @@ I've wasted a large amount of time over the past two days. I spent a solid 10 ho
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- -------------------------------
 2019-06-05 2019-06-06 1d  lab     send vacation dates to tim
@@ -1056,7 +1061,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age Project Tags     Description                                         Urg
 -- --- ------- -------- --------------------------------------------------- ----
 48 2w  lab     lit work read tirosh 2016 [2]                                2.91
@@ -1087,27 +1092,27 @@ ID Age Project Tags     Description                                         Urg
 
 * In order to run R in my MSI instance, I need to load the module and install applications.
 
-```{r eval=F}
+```{r}
 module load R/3.6.0
 R
 ```
 
 * To install packages in my local home directory, need to define a path.
 
-```{r eval=F}
+```{r}
 .libPaths(new='~/R/x86_64-pc-linux-gnu-library/3.6.0')
 dir.create('~/R/x86_64-pc-linux-gnu-library/3.6.0', showWarnings = FALSE, recursive = TRUE)
 ```
 
 * Confirm the path is correct.
 
-```{r eval=F}
+```{r}
 .libPaths()
 ```
 
 * Choose as CRAN mirror.
 
-```{r eval=F}
+```{r}
 getCRANmirrors()
 chooseCRANmirror(ind=2)
 ```
@@ -1136,7 +1141,7 @@ Overall, I will spend most of tomorrow continuing to review the documentation an
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- -------------------------------
 2019-06-05 2019-06-10 4d  lab     spell check notebook
@@ -1152,7 +1157,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age Project Tags     Description                                         Urg
 -- --- ------- -------- --------------------------------------------------- ----
 48 3w  lab     lit work read tirosh 2016 [2]                                2.92
@@ -1190,14 +1195,14 @@ https://rmarkdown.rstudio.com/articles_report_from_r_script.html
 
 A markdown report can be compiled from an R script by:
 
-```{r eval=F}
+```{r}
 rmarkdown::render("analysis.R") # will generate an html output
 rmarkdown::render("analysis.R", "pdf_document")
 ```
 
 The metadata and output can be modified through special comments.
 
-```{r eval=F}
+```{r}
 #' ---
 #' title: "Crop Analysis Q3 2013"
 #' author: "John Smith"
@@ -1216,7 +1221,7 @@ Last, I plan on taking a bit of a dive into the concept of RNA velocity to see i
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ---------------------------
 2019-06-11 2019-06-11 5h  lab     email tim re mtg resched
@@ -1231,7 +1236,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 
 
 ID Age Project Tags     Description                                         Urg
@@ -1265,7 +1270,7 @@ ID Age Project Tags     Description                                         Urg
 
 I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use `fusermount` to force the unmount first.
 
-```{r eval=F}
+```{r}
 fusermount -uz /data
 ```
 
@@ -1287,7 +1292,7 @@ Today included some light work around finishing off my pt59 analysis. The code I
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
 2019-06-10 2019-06-12 2d  lab     bring monitor to work
@@ -1305,7 +1310,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 
 ID Age Project Tags     Description                                   Urg
 -- --- ------- -------- --------------------------------------------- ----
@@ -1334,7 +1339,7 @@ ID Age Project Tags     Description                                   Urg
 
 present: chris, tim
 
-```{r eval=F}
+```{r}
 
 Description
 ------------------------------------------------------------------------------
@@ -1378,7 +1383,7 @@ Cell Ranger Status
 
 * It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
 
-```{r eval=F}
+```{r}
 /scratch.global/zhan2142/starr/
 ```
 
@@ -1420,21 +1425,21 @@ First, I attempted via Python 3, 2.7 and the original 2.6 version using the test
 
 With Help from Master Jedi Christy (Thank you Christy!) I created a conda environment for Contra via:
 
-```{r eval=F}
+```{r}
 conda create -n contra python=2.6
 source activate /home/umgc-staff/abrah023/bin/miniconda3/envs/contra
 ```
 
 change directory to folder containing Contra script (tried both Version 2.0.8 and 1.0.3).
 
-```{r eval=F}
+```{r}
 
 python contra.py --target ../0247401_D_BED_20090724_hg19_MERGED.bed --test ../P0667N_GATKrealigned_duplicates_marked.bam --control ../P0667T_GATKrealigned_duplicates_marked.bam --fasta human_g1k_v37.fasta --outfolder ../output2/
 ```
 
 That was using the files that came with Contra and got an error:
 
-```{r eval=F}
+```{r}
 
 
 (contra) abrah023@ln0003 [~/AndyTemp/CONTRA.v2.0.8] % python contra.py --target ../0247401_D_BED_20090724_hg19_MERGED.bed --test ../P0667N_GATKrealigned_duplicates_marked.bam --control ../P0667T_GATKrealigned_duplicates_marked.bam --fasta human_g1k_v37.fasta --o ../outputr/
@@ -1507,7 +1512,7 @@ I was also able to get some house keeping done around documentation.
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age  Project Description
 ---------- ---------- ---- ------- ---------------------------------------------
 2019-06-11 2019-06-13 2d   lab     read manno 2018
@@ -1528,7 +1533,7 @@ Created    Completed  Age  Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 
 ID Age  Project Tags     Description                                        Urg
 -- ---- ------- -------- -------------------------------------------------- ----
@@ -1579,7 +1584,7 @@ Tim has cross walk files; as you will find out there are multiple different samp
 
 ### TODO
 
-```{r eval=F}
+```{r}
 
 ID  Age  Project Tags     Description                                       Urg
 --- ---- ------- -------- ------------------------------------------------- ----
@@ -1645,7 +1650,7 @@ I did some house keeping on my documentation today. I've received a considerable
 
 #### Completed
 
-```{r eval=F}
+```{r}
 
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
@@ -1768,7 +1773,7 @@ Results
 
 ### TODO
 
-```{r eval=F}
+```{r}
 
 ID Age  Project  Tags     Description                                       Urg
 -- ---- -------- -------- ------------------------------------------------- ----
@@ -1813,7 +1818,7 @@ I'm back. Feeling pretty rusty, so I've been reacclimating myself to the work I 
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age P Project  Description
 ---------- ---------- --- - -------- -------------------------------------------
 2019-06-13 2019-07-08 3w  H lab      read zare 2017
@@ -1831,7 +1836,7 @@ Created    Completed  Age P Project  Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age Project Tags     Description                                         Urg
 -- --- ------- -------- --------------------------------------------------- ----
 45 6w  lab     lit work read papalexi 2018 [2]                              3.04
@@ -1876,7 +1881,7 @@ I am still going through the process of reviewing my work to reestablish the mom
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
 2019-07-09 2019-07-09 5h  lab     contact hst rep re ccgd access
@@ -1891,7 +1896,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags     Description                                  Urg
 -- --- - ------- -------- -------------------------------------------- ----
 72 18h H lab     n work   review zare notes before meeting              7.9
@@ -1929,7 +1934,7 @@ The conversation with Tim today was helpful in regaining some direction on the C
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age P Project Description
 ---------- ---------- --- - ------- --------------------------------------------
 2019-06-19 2019-07-10 3w    lab     what is the source of the exome data
@@ -1950,7 +1955,7 @@ Created    Completed  Age P Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags     Description                                       Urg
 -- --- - ------- -------- ------------------------------------------------- ----
 67 23h H lab     n work   contact rebecca re wes processing                  7.9
@@ -1978,7 +1983,7 @@ I reached out to Rebecca re a conversation about the background of the exome dat
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age P Project Description
 ---------- ---------- --- - ------- ---------------------------------
 2019-07-10 2019-07-11 1d  H lab     contact rebecca re wes processing
@@ -1992,7 +1997,7 @@ Created    Completed  Age P Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags     Description                                       Urg
 -- --- - ------- -------- ------------------------------------------------- ----
 67 1d  M lab     n work   create summarizing outline cnv project direction  5.81
@@ -2060,7 +2065,7 @@ Additionally, my content search led me to an application I have an early excitem
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
 2019-07-11 2019-07-12 1d  lab     email other hst staff
@@ -2087,7 +2092,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags   Description                                         Urg
 -- --- - ------- ------ --------------------------------------------------- ----
 60 2d  H lab     n work run excavator                                       7.91
@@ -2132,7 +2137,7 @@ I put time into getting xcavator implemented. I am going with the updated versio
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags   Description                                         Urg
 -- --- - ------- ------ --------------------------------------------------- ----
 60 3d  H lab     n work run excavator                                       7.92
@@ -2161,7 +2166,7 @@ This is useful in the event I want to do development inside MSI rather than just
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags    Description                                        Urg
 -- --- - ------- ------- -------------------------------------------------- ----
 60 4d  H lab     n work  run excavator                                      7.92
@@ -2193,7 +2198,7 @@ Most of my time today was spent making sense of the xcavator workflow. There are
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
 2019-07-17 2019-07-17 23h lab     reach out to ssustace@umn.edu re ccgd server
@@ -2208,7 +2213,7 @@ Created    Completed  Age Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags   Description                                         Urg
 -- --- - ------- ------ --------------------------------------------------- ----
 59 5d  H lab     n work run excavator                                       7.93
@@ -2229,7 +2234,7 @@ ID Age P Project Tags   Description                                         Urg
 
 I've renamed my `create_site` file to `notebook_knit` due to a conflict with a different executable. The location of this file is now at `/usr/bin` on my local machine. The updated script is below.
 
-```{r eval=F}
+```{r}
 #!/usr/bin/env Rscript
 
 cur_dir <- getwd()
@@ -2251,7 +2256,7 @@ setwd(cur_dir)
 
 A key element to make this executable was to include it in an environment directory (i.e. `/usr/bin`) and also make it executable for all users with the command below.
 
-```{r eval=F}
+```{r}
 sudo chmod a+x notebook_knit.R
 ```
 
@@ -2265,14 +2270,14 @@ Overall, I'm using the default params and referencing the hg19.fa fasta file I d
 
 Here is the `SourceTarget.txt` file on the MSI instance:
 
-```{r eval=F}
+```{r}
 /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR/data/ucsc.hg19.bw /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR/data/hg19.fa
 
 ```
 
 Here is the command itself:
 
-```{r eval=F}
+```{r}
 perl ReferenceWindowInitialize.pl -v SourceTarget.txt test_window1 100 hg19
 ```
 
@@ -2285,7 +2290,7 @@ I am initially just putting any data that will work into the pipeline to get the
 
 The output of the error is below. The key issues seems to be the creation of the test directory and whatever `*_chromosome.txt` is.
 
-```{r eval=F}
+```{r}
 Program folder is: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR
 Creating Consecutive and non-overlapping windows of 100 bp Size
 sh: R: command not found
@@ -2301,7 +2306,7 @@ Thinking about the test data I've chosen, I might need to reevaluate. The hg19 d
 
 #### Completed
 
-```{r eval=F}
+```{r}
 Created    Completed  Age P Project Description
 ---------- ---------- --- - ------- --------------------
 2019-07-16 2019-07-18 2d  M lab     call any hst number
@@ -2316,7 +2321,7 @@ Created    Completed  Age P Project Description
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags   Description                                         Urg
 -- --- - ------- ------ --------------------------------------------------- ----
 58 8d  H lab     n work run excavator                                       7.94
@@ -2353,7 +2358,7 @@ The working directory for the website seems to be located at:
 
 ### TODO
 
-```{r eval=F}
+```{r}
 ID Age P Project Tags   Description                                         Urg
 -- --- - ------- ------ --------------------------------------------------- ----
 58 9d  H lab     n work run excavator                                       7.95
@@ -2372,6 +2377,18 @@ ID Age P Project Tags   Description                                         Urg
 
 13 tasks
 ```
+
+
+### Folding elements
+
+Following an example from the Seurat pbmc tutorial, I am incorporating folding page elements in my notebook to reduce length and clutter.
+
+```{r eval=F}
+<details>
+  <summary>****</summary>
+</details>
+```
+
 
 
 ***
