@@ -117,7 +117,7 @@ sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2
 
 #### Unmount
 
-I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an exacutable for this, `umount_msi`, in the same directory.
+I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an executable for this, `umount_msi`, in the same directory.
 
 ```{r eval=F}
 #!/bin/bash
@@ -268,9 +268,7 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 #### Implementation
 
-I will be taking the first wes cnv approach using the excavator/xcavator tool. This group published EXCAVATOR in @Magi2013 and have since expanded on it @Magi2017. I will be looking at XCAVATOR first, given its recency to see if it can bring anything to fruition.
-
-Excavator leverages perl, bash, R, and fortran (of all things), and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
+Excavator leverages perl, bash, R, and fortran, and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
 
 * `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/lib`
 
@@ -290,7 +288,7 @@ As stated in @Magi2017
 
 XCAVATOR was conceived for running on UNIX OS 64-bit machines with R (version ≥ 2.14.0) and the Hmisc library, SAM-tools (version ≥ 0.1.17), and Perl (version ≥ 5.8.8) to be correctly installed on your system.
 
-R can be downloaded at CRAN (http://cran.r-project.org), while SAMtools at SourceForge (http://samtools.sourceforge.net). Perl is native in almost any Unix machine. Before installing and runnig XCAVATOR be sure they are all installed on your system and their executable files have been exported in your PATH. If you experience any problem with any of them you should contact your system administrator. Installation of any of these softwares requires superuser privileges.
+R can be downloaded at CRAN (http://cran.r-project.org), while SAMtools at SourceForge (http://samtools.sourceforge.net). Perl is native in almost any Unix machine. Before installing and running XCAVATOR be sure they are all installed on your system and their executable files have been exported in your PATH. If you experience any problem with any of them you should contact your system administrator. Installation of any of these softwares requires superuser privileges.
 
 To check for R, SAMtools and Perl you can type on your shell the following commands:
 
@@ -303,7 +301,7 @@ Press CTRL+D to quit R.
 
 #### XCAVATOR Installation
 
-Uncompress the XCAVATOR package, then move to `.../XCAVATOR/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
+Decompress the XCAVATOR package, then move to `.../XCAVATOR/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
 
 ```{r eval=F}
 F77> R CMD SHLIB F4R.f
@@ -322,7 +320,7 @@ The XCAVATOR workflow analysis is made of three steps that can be invoked by mea
 
 #### ReferenceWindowInitialize.pl
 
-`ReferenceWindowInitialize.pl` is the module that calculates "windows" informations for the XCAVATOR analyses. This module calculates GC-content and mappability values for consecutive and non overlapping windows of the genome of size "window".
+`ReferenceWindowInitialize.pl` is the module that calculates "windows" information for the XCAVATOR analyses. This module calculates GC-content and mapability values for consecutive and non overlapping windows of the genome of size "window".
 
 `ReferenceWindowInitialize.pl` requires 4 arguments:
 
@@ -341,9 +339,9 @@ perl ReferenceWindowInitialize.pl \ # script
     hg19                            # 4.
 ```
 
-The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimitated file that contains the absolute paths to 1) a `bigWig file (.bw)` for the calculations of mappability and 2) to the reference genome sequence in .fasta format for GC-content calculations.
+The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimited file that contains the absolute paths to 1) a `bigWig file (.bw)` for the calculations of mapability and 2) to the reference genome sequence in .fasta format for GC-content calculations.
 
-The `bigWig file` is a binary file reporting information about mappability, referred to a reference assembly. Mappability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
+The `bigWig file` is a binary file reporting information about mapability, referred to a reference assembly. Mapability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
 
 `myWindow` represents the distance between start and end (in bp) of consecutive and non-overlapping windows of the genome that will be used by XCAVATOR to calculate read counts. `myWindow` must be an integer number (e.g. 100,200,500,1000).
 
@@ -360,9 +358,9 @@ Setting the label name as "MyWindowLabelName", the `ReferenceWindowInitialize.pl
 perl XCAVATORDataPrepare.pl FilePrepare.txt --processors 7 --target MyLabelName --mode DOC --assembly hg19
 ```
 
-The text file (e.g. `FilePrepare.txt`, that you have to create) contains details about all .bam files you want to analyse. The options concern the number of processors to use (–processors), the name of the target (MyLabelName, with window size and GC and mappability informations), the mode (RC for short reads and DOC for long reads, PacBio and Nanopore) and the human assembly you used for the mapping (–assembly). Available options for assembly are hg19 and hg38.
+The text file (e.g. `FilePrepare.txt`, that you have to create) contains details about all .bam files you want to analyze. The options concern the number of processors to use (–processors), the name of the target (MyLabelName, with window size and GC and mapability informations), the mode (RC for short reads and DOC for long reads, PacBio and Nanopore) and the human assembly you used for the mapping (–assembly). Available options for assembly are hg19 and hg38.
 
-Before running `EXCAVATORDataPrepare.pl` you need to create a space delimited file with three fields: the absolute path to the .bam file you want to analyse, the path to the main sample output folder and the sample name. The sample name will be used as a prefix/suffix for output files. Each row in the file contains details about one sample. For each sample, the main output folder specified in the second filed of the `ExperimentalFilePre- pare.window.txt` will be created.
+Before running `EXCAVATORDataPrepare.pl` you need to create a space delimited file with three fields: the absolute path to the .bam file you want to analyze, the path to the main sample output folder and the sample name. The sample name will be used as a prefix/suffix for output files. Each row in the file contains details about one sample. For each sample, the main output folder specified in the second filed of the `ExperimentalFilePre- pare.window.txt` will be created.
 
 #### XcavatorDataAnalysis.pl
 
@@ -374,9 +372,9 @@ perl XCAVATORDataAnalysis.pl FileAnalysis.txt --processors 6 --target MyLabelNam
 
 MyLabelName and assembly must be the same used in `XCAVATORDataPrepare.pl` step. The input file is a space delimited text file that contains three fields, the second and the third are the same as in FilePrepare.txt, while the first is a label which specifies how to handle and compare the samples. Labels are Cx (for controls, with x=1,2,3…) and Ty (with y=1,2,3….).
 
-XCAVATOR allows to analyze samples in three different ways: paired, nocontrol and pooling. In pooling, all test samples will be compared with the same global control obtained by combining all control samples (all the samples with Cx label will be collapsed to a pooled control sample). In paired, each test sample is compared with its control sample (T1-C1, T2-C2,….) and this analysis mode is best suited for the identification of somatic CNV of matched tumor/control samples. In "nocontrol" mode each test sample is analyzed without using a control and the `FileAnalysis.txt` file only needs Ty labels.
+XCAVATOR allows to analyze samples in three different ways: paired, no control and pooling. In pooling, all test samples will be compared with the same global control obtained by combining all control samples (all the samples with Cx label will be collapsed to a pooled control sample). In paired, each test sample is compared with its control sample (T1-C1, T2-C2,….) and this analysis mode is best suited for the identification of somatic CNV of matched tumor/control samples. In "no control" mode each test sample is analyzed without using a control and the `FileAnalysis.txt` file only needs Ty labels.
 
-An example of well formatted `FileAnalysis.txt` for pooling, paired and nocontrol mode is reported in the XCAVATOR main folder.
+An example of well formatted `FileAnalysis.txt` for pooling, paired and no control mode is reported in the XCAVATOR main folder.
 
 All the results of the analyses are stored in the `OutputFolder` that contains two main subfolders: `Plots` and `Results.` The `Plots` folder contains .pdf files reporting the segmented genomic profiles and statistically significant genomic regions (chromosome by chromosome) for each test sample (follow `/.../Plots/SampleName/`).
 
@@ -570,7 +568,7 @@ Pipeline (in-house) &rarr; Mapping (GR37\*) &rarr; Preprocessing (`ScanIndel-ova
 Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 * Important scripts are located in `/DNA_project/scanindel_mod`.
-* The probe pull down inclued some non-coding regions.
+* The probe pull down included some non-coding regions.
     - The assumption was that there may be a relevant impact on the coding regions in some cases, so these elements should be recovered and selectively filtered out.
 * ClinVar was used to apply annotation to variance that matches existing clinical reference.
 
@@ -591,7 +589,7 @@ Pipeline (in-house) &rarr; Mapping (GR37\*) &rarr; Preprocessing (`ScanIndel-ova
 * The sc and wes data were mapped using different reference genomes. sc - GR38 and wes - GR37. **This could be a problem.**
 * The Freebayes params may be relevant, I should look into those.
 * Important scripts are located in `/DNA_project/scanindel_mod`.
-* The probe pull down inclued some non-coding regions.
+* The probe pull down included some non-coding regions.
     - The assumption was that there may be a relevant impact on the coding regions in some cases, so these elements should be recovered and selectively filtered out.
 * ClinVar was used to apply annotation to variance that matches existing clinical reference.
 
