@@ -2495,6 +2495,8 @@ ID Age P Project Tags   Description                                         Urg
 
 ### wkly mtg w/ Tim
 
+present: chris, tim
+
 ```{r}
 Description
 ---------------------------------------------------------------
@@ -2508,13 +2510,26 @@ agenda
 1 task
 ```
 
+#### Notes
+
+Our meeting covered the two major branches of the ccgd and ocpmi project. First, I updated Tim on my new access to the ccgd server.
+
+* Looking at the current status, the next steps are to determine the process for updating the server os. 
+    - I need to reach out to OIT to determine their policy on upgrades.
+* Also, I need to begin the backup process to make sure all elements can be recovered in the event of any issues in the upgrade.
+    - This is also a conversation to be had with OIT.
+
+The updates on the ocpmi project centered on my conversation with Rebecca.
+
+* As I had highlighted, the processing work done by RL/CH on the wes data will not be relevant to my cnv pipeline.
+    - I need to reach out to them and clarify where their raw data is currently since I assume this is also on aws.
+* With the roadblocks I've experienced with E/Xcavator, Tim suggested I reach out to the developers. Which I will do after a trial of Excavator2
+    - The plan for my approach in the event I continue to see issues can be seen below:
+
+### CNV Plan
+
+Try Excavator2 &rarr; Contact Devs &rarr; Resort to VarScan2
 
 ***
 
 # References
-
-
-
-
-
-
