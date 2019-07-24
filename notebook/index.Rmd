@@ -2432,11 +2432,53 @@ ID Age  P Project Tags   Description                                        Urg
 7 tasks
 ```
 
+### Call w/ Rebecca
 
+Topic: wes data processing and prep
+
+I was able to finally connect with Rebecca and discuss the nature of the wes data processing that took place earlier this year. It sounds like there has been some distance between when they were actually working on this and now. Nonetheless, she was able to share some general information on their process, which will be very helpful.
+
+```{r}
+Description
+------------------------------------------------------------
+mtg with rebecca
+  2019-07-17 what is the reference assembly for the wes data
+  2019-07-17 file naming conventions
+  2019-07-17 what is a reasonable window size
+  2019-07-18 what is the nature of our controls
+  2019-07-18 do we have fasta files
+
+1 task
+```
+
+#### Notes
+
+* All processing was done in MSI scratch due to the large resource use.
+* The data is stored in 2nd tier storage right now as a result.
+  BAM files might also be in 2nd tier storage.
+* The location of the data is `/nelsona2/shared/ovarian_Jan2019/DNA_project`.
+* The directory `/ovarian_Jan2019/singlesamples`, which I had thought was the directory of interest, contains the data for the RNAseq project.
+* The sc and wes data were mapped using different reference genomes. sc - GR38 and wes - GR37. **This could be a problem.**
+    - We might need to remap the wes data to GR38.
+* I need to do a search of `/DNA_project` to see if there are any usable sequence files in there.
+* RL is going to move a small dataset from aws so that I can begin a pilot analysis.
+* The Freebayes params may be relevant, I should look into those.
+
+#### Process
+
+Pipeline (in-house) &rarr; Mapping (GR37\*) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)
+
+Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
+
+* Important scripts are located in `/DNA_project/scanindel_mod`.
+* The probe pull down inclued some non-coding regions.
+    - The assumption was that there may be a relevant impact on the coding regions in some cases, so these elements should be recovered and selectively filtered out.
+* ClinVar was used to apply annotation to variance that matches existing clinical reference.
 
 ***
 
 # References
+
 
 
 
