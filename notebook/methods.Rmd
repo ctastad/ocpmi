@@ -552,18 +552,19 @@ mtg with rebecca
 
 * All processing was done in MSI scratch due to the large resource use.
 * The data is stored in 2nd tier storage right now as a result.
-  BAM files might also be in 2nd tier storage.
+* BAM files might also be in 2nd tier storage.
 * The location of the data is `/nelsona2/shared/ovarian_Jan2019/DNA_project`.
 * The directory `/ovarian_Jan2019/singlesamples`, which I had thought was the directory of interest, contains the data for the RNAseq project.
 * The sc and wes data were mapped using different reference genomes. sc - GR38 and wes - GR37. **This could be a problem.**
     - We might need to remap the wes data to GR38.
+    - I clarified with Tim that GRCh37 and hg19 are the same, so I should be able to use hg19 as my reference.
 * I need to do a search of `/DNA_project` to see if there are any usable sequence files in there.
 * RL is going to move a small dataset from aws so that I can begin a pilot analysis.
 * The Freebayes params may be relevant, I should look into those.
 
 **Process**
 
-Pipeline (in-house) &rarr; Mapping (GR37\*) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
 
 Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
@@ -576,22 +577,25 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 ### Processing
 
-Project dir
+**Project dir**
 
 * `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
-Pipeline (in-house) &rarr; Mapping (GR37\*) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)
+**Pipeline**
+
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
 
 * All processing was done in MSI scratch due to the large resource use.
 * The data is stored in 2nd tier storage right now as a result.
-  BAM files might also be in 2nd tier storage.
+* BAM files might also be in 2nd tier storage.
+* The location of the data is `/nelsona2/shared/ovarian_Jan2019/DNA_project`.
 * The directory `/ovarian_Jan2019/singlesamples`, which I had thought was the directory of interest, contains the data for the RNAseq project.
 * The sc and wes data were mapped using different reference genomes. sc - GR38 and wes - GR37. **This could be a problem.**
+    - We might need to remap the wes data to GR38.
+    - I clarified with Tim that **GRCh37 and hg19 are the same**, so I should be able to use hg19 as my reference.
+* I need to do a search of `/DNA_project` to see if there are any usable sequence files in there.
+* RL is going to move a small dataset from aws so that I can begin a pilot analysis.
 * The Freebayes params may be relevant, I should look into those.
-* Important scripts are located in `/DNA_project/scanindel_mod`.
-* The probe pull down included some non-coding regions.
-    - The assumption was that there may be a relevant impact on the coding regions in some cases, so these elements should be recovered and selectively filtered out.
-* ClinVar was used to apply annotation to variance that matches existing clinical reference.
 
 ***
 

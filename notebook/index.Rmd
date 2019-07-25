@@ -2466,7 +2466,7 @@ mtg with rebecca
 
 #### Process
 
-Pipeline (in-house) &rarr; Mapping (GR37\*) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
 
 Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
@@ -2514,7 +2514,7 @@ agenda
 
 Our meeting covered the two major branches of the ccgd and ocpmi project. First, I updated Tim on my new access to the ccgd server.
 
-* Looking at the current status, the next steps are to determine the process for updating the server os. 
+* Looking at the current status, the next steps are to determine the process for updating the server os.
     - I need to reach out to OIT to determine their policy on upgrades.
 * Also, I need to begin the backup process to make sure all elements can be recovered in the event of any issues in the upgrade.
     - This is also a conversation to be had with OIT.
@@ -2524,11 +2524,48 @@ The updates on the ocpmi project centered on my conversation with Rebecca.
 * As I had highlighted, the processing work done by RL/CH on the wes data will not be relevant to my cnv pipeline.
     - I need to reach out to them and clarify where their raw data is currently since I assume this is also on aws.
 * With the roadblocks I've experienced with E/Xcavator, Tim suggested I reach out to the developers. Which I will do after a trial of Excavator2
-    - The plan for my approach in the event I continue to see issues can be seen below:
+    - The plan for my approach in the event I continue to see issues can be seen below
+* A point of clarification is that hg19 and GRCh37 are the same. This means that any data I use with upstream processing done by Rebecca should follow with hg19 as the reference.
 
 ### CNV Plan
 
-Try Excavator2 &rarr; Contact Devs &rarr; Resort to VarScan2
+Fallback strategy for cnv pipeline:
+
+*Try Excavator2 &rarr; Contact Devs &rarr; Resort to VarScan2*
+
+### Excavator Troubleshooting
+
+* error from 7/18 - needed different bed file
+
+Took generic bed file from ucsc genome browser
+
+http://genome.ucsc.edu/cgi-bin/hgTables?command=start
+
+* took g1k fasta file from 1000 genome project
+
+ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/
+
+* Needed to install legacy version of libpng12.deb
+
+/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/./bigWigAverageOverBed: error while loading shared libraries: libpng12.so.0: cannot open shared object file: No such file or directory
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg19/test_target2/MAP/Mapout.txt': No such file or directory
+Execution halted
+
+
+https://askubuntu.com/questions/978294/how-to-fix-libpng12-so-0-cannot-open-shared-object-file-no-such-file-or-direc/978338
+
+* Needed to install bedtools
+
+sudo apt install bedtools
+
+* WARNING. chromosome (chr22) was not found in the FASTA file. Skipping.
+
+not sure what this is yet
+
 
 ***
 
