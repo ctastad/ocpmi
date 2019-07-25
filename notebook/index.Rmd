@@ -2592,8 +2592,31 @@ WARNING. chromosome (chr22) was not found in the FASTA file. Skipping.
 
 I made some progress working through the Excavator2 pipeline today. I am still encountering hang ups that are probably related to file formatting and binary file setup. I need to reach out to RL/CH regarding the change in source files I need since we didn't fully cover this when I spoke to Rebecca. Given the quick jump I made in troubleshooting today, I hope to be able to continue that progress with the pipeline tomorrow.
 
+## 25
+
+### TODO
+
+```{r}
+ID Age  P Project Tags   Description                                        Urg
+-- ---- - ------- ------ -------------------------------------------------- ----
+73 1d     lab     n work find vcf files in dna_project                      1.91
+74 1d     lab     n work begin pilot with data from RL                      1.91
+76 1d     lab     n work explore application of vcf files in cnv pipeline   1.91
+77 1d     lab     n work explore freebayes params                           1.91
+79 21h    lab     n work add tasks from wkly mtg                             1.9
+81 2min   lab     n work email rebecca re bam files                          1.9
+82 1min   lab     n work contact oit re update policy and process            1.9
+83 37s    lab     n work start back up process for ccgd server               1.9
+42 8w   L lab            agenda [5]                                         0.34
+40 9w   L lab     w work review scripts for ccgd database                   0.26
+41 9w   L lab     w work explore shiny framework for database               0.26
+
+11 tasks
+```
+
 
 
 ***
 
 # References
+
