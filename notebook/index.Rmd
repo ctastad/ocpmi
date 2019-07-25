@@ -2533,20 +2533,27 @@ Fallback strategy for cnv pipeline:
 
 *Try Excavator2 &rarr; Contact Devs &rarr; Resort to VarScan2*
 
-### Excavator Troubleshooting
+### Excavator2 Troubleshooting
 
-* error from 7/18 - needed different bed file
+#### BED and FASTA
 
-Took generic bed file from ucsc genome browser
+Continuing from the error on 7/18, I found I was not referencing the bed file correctly. This was not as clear in the Xcavator documentation. I took generic bed file from ucsc genome browser.
 
-http://genome.ucsc.edu/cgi-bin/hgTables?command=start
+* http://genome.ucsc.edu/cgi-bin/hgTables?command=start
+* Dir: `/EXCAVATOR2_Package_v1.1.2/data/hg19.bed`
 
-* took g1k fasta file from 1000 genome project
+Looking at the background on fasta reference, I decided to take the g1k fasta file from 1000 genome project.
 
-ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/
+* ftp://ftp-trace.ncbi.nih.gov/1000genomes/ftp/technical/reference/
+* Dir: `/EXCAVATOR2_Package_v1.1.2/data/human_g1k_v37.fasta`
 
-* Needed to install legacy version of libpng12.deb
+The `TargetPerla.pl` script executes after I arranged these bed and fasta files.
 
+#### libpng12.deb
+
+This produced an error re a missing object
+
+```{r}
 /home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/OtherLibrary/./bigWigAverageOverBed: error while loading shared libraries: libpng12.so.0: cannot open shared object file: No such file or directory
 Error in file(file, "rt") : cannot open the connection
 Calls: read.table -> file
@@ -2554,17 +2561,37 @@ In addition: Warning message:
 In file(file, "rt") :
   cannot open file '/home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg19/test_target2/MAP/Mapout.txt': No such file or directory
 Execution halted
+```
 
+* Needed to install legacy version of `libpng12.deb`
+* https://askubuntu.com/questions/978294/how-to-fix-libpng12-so-0-cannot-open-shared-object-file-no-such-file-or-direc/978338
 
-https://askubuntu.com/questions/978294/how-to-fix-libpng12-so-0-cannot-open-shared-object-file-no-such-file-or-direc/978338
+```{r}
+wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
+sudo dpkg -i /tmp/libpng12.deb
+sudo rm /tmp/libpng12.deb
+```
 
-* Needed to install bedtools
+#### BEDTools
 
+Was getting another error re another missing object: bedtools. The documentation says nothing about it, but I needed to install `bedtools`.
+
+```{r}
 sudo apt install bedtools
+```
 
-* WARNING. chromosome (chr22) was not found in the FASTA file. Skipping.
+#### Unresolved
 
-not sure what this is yet
+Current error. Not sure what this is yet. My current thought is that there is an issue with the formatting between the fasta and bed file. I believe the g1k fasta I downloaded is a multi fasta, and I don't know if that's an issue.
+
+```{r}
+WARNING. chromosome (chr22) was not found in the FASTA file. Skipping.
+```
+
+### Summary
+
+I made some progress working through the Excavator2 pipeline today. I am still encountering hang ups that are probably related to file formatting and binary file setup. I need to reach out to RL/CH regarding the change in source files I need since we didn't fully cover this when I spoke to Rebecca. Given the quick jump I made in troubleshooting today, I hope to be able to continue that progress with the pipeline tomorrow.
+
 
 
 ***
