@@ -2614,6 +2614,29 @@ ID Age  P Project Tags   Description                                        Urg
 11 tasks
 ```
 
+### BAM file search
+
+I contacted Rebecca re the location of the wes bam files today since we missed that point in our conversation.
+
+### Excavator2 Trbl (cont.)
+
+#### Unresolved - Solved
+
+I was able to address the last error given on 7/24 by using a different fasta reference file. I believe the issue was that the fasta and bed files contained different chromosome notation as indicated by section 1.6 "Before you start" of the Excavator2 docs. Probably should have read that.
+
+As a result, the fasta file I'm using now also comes from UCSC
+
+* http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/
+* Dir: `/EXCAVATOR2_Package_v1.1.2/data/hg19.fa`
+
+### ExcavatorDataPrepare.pl
+
+The next step in running the Excavator2 pipeline is setting up `EXCAVATORDataPrepare.pl` to process sample BAM files. I don't have a clear set of files I know will work at this point, so I will need to get that sorted out. The BAMs are referenced using the `ExperimentalFilePrepare.window.txt` file which includes 1) an abs path to the BAMs 2) the path to the sample output 3) the sample name.
+
+### Summary
+
+I was able to finally run the first of 3 execution scripts with the Excavator2 pipeline. Having lined all the necessary items up for that first step, I need to arrange a set of pilot BAM files that will allow me to continue with the test run of the pipeline. Currently, I'm looking at pulling a 1kgp dataset that was referenced in the Excavator2 (@DAurizio2016). This may be an issue since the 1kgp has restructured their ftp since the Excavator2 publication.
+
 
 
 ***
