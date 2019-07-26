@@ -2637,9 +2637,33 @@ The next step in running the Excavator2 pipeline is setting up `EXCAVATORDataPre
 
 I was able to finally run the first of 3 execution scripts with the Excavator2 pipeline. Having lined all the necessary items up for that first step, I need to arrange a set of pilot BAM files that will allow me to continue with the test run of the pipeline. Currently, I'm looking at pulling a 1kgp dataset that was referenced in the Excavator2 (@DAurizio2016). This may be an issue since the 1kgp has restructured their ftp since the Excavator2 publication.
 
+## 26
+
+### TODO
+
+```{r}
+ID Age  P Project Tags   Description                                        Urg
+-- ---- - ------- ------ -------------------------------------------------- ----
+69 2d     lab     n work find vcf files in dna_project                      1.91
+70 2d     lab     n work begin pilot with data from RL                      1.91
+72 2d     lab     n work explore application of vcf files in cnv pipeline   1.91
+73 2d     lab     n work explore freebayes params                           1.91
+75 1d     lab     n work add tasks from wkly mtg                            1.91
+78 1d     lab     n work contact oit re update policy and process           1.91
+79 1d     lab     n work start back up process for ccgd server              1.91
+83 1min   lab     n work continue to troubleshoot excavator2 pipeline        1.9
+84 1min   lab     n work find pilot bam files for excavator2 test run        1.9
+42 9w   L lab            agenda [5]                                         0.35
+40 9w   L lab     w work review scripts for ccgd database                   0.26
+41 9w   L lab     w work explore shiny framework for database               0.26
+
+12 tasks
+```
+
 
 
 ***
 
 # References
+
 
