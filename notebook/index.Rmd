@@ -2660,6 +2660,44 @@ ID Age  P Project Tags   Description                                        Urg
 12 tasks
 ```
 
+### 1kgp ftp
+
+The 1kgp ftp has moved to a new site.
+
+* ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/data
+
+### BAM Selection
+
+Currently I am taking 2 of the genome samples referenced in Supplementary Table 2 of @DAurizio2016.
+
+* NA19131
+* NA10847
+
+Both BAMs were downloaded as the phase 1 1kgp sample from the IGSR
+
+* http://www.internationalgenome.org/data-portal/sample
+
+### Excavator2 Trbl (cont.)
+
+#### Missing BAM Index
+
+I realized I was missing the BAM index included on the IGSR.
+
+```{r}
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+```
+
+#### Chr notation
+
+It seems like the chromosome notation has become an issue again. The UCSC and 1kgp gene notations use "chr1" and "1" respectively making them incompatible without a variety of data wrangling.
+
+```{r}
+[main_samview] region "chr1" specifies an unknown reference name. Continue anyway.
+```
+
+### Summary
+
+I hit another formatting snag today that will require me to go back and find different refernce files. I believe I generally have the `ExcavatorDataPrepare.pl` script setup correctly, but the chromosome naming scheme needs to be consistent across the reference and sample files. This should be relatively easy to fix. I just need to find fasta, bed, and bam files that match.
 
 
 ***
