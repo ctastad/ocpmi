@@ -2475,6 +2475,8 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
     - The assumption was that there may be a relevant impact on the coding regions in some cases, so these elements should be recovered and selectively filtered out.
 * ClinVar was used to apply annotation to variance that matches existing clinical reference.
 
+***
+
 ## 24
 
 ### TODO
@@ -2592,6 +2594,8 @@ WARNING. chromosome (chr22) was not found in the FASTA file. Skipping.
 
 I made some progress working through the Excavator2 pipeline today. I am still encountering hang ups that are probably related to file formatting and binary file setup. I need to reach out to RL/CH regarding the change in source files I need since we didn't fully cover this when I spoke to Rebecca. Given the quick jump I made in troubleshooting today, I hope to be able to continue that progress with the pipeline tomorrow.
 
+***
+
 ## 25
 
 ### TODO
@@ -2636,6 +2640,8 @@ The next step in running the Excavator2 pipeline is setting up `EXCAVATORDataPre
 ### Summary
 
 I was able to finally run the first of 3 execution scripts with the Excavator2 pipeline. Having lined all the necessary items up for that first step, I need to arrange a set of pilot BAM files that will allow me to continue with the test run of the pipeline. Currently, I'm looking at pulling a 1kgp dataset that was referenced in the Excavator2 (@DAurizio2016). This may be an issue since the 1kgp has restructured their ftp since the Excavator2 publication.
+
+***
 
 ## 26
 
@@ -2698,6 +2704,31 @@ It seems like the chromosome notation has become an issue again. The UCSC and 1k
 ### Summary
 
 I hit another formatting snag today that will require me to go back and find different refernce files. I believe I generally have the `ExcavatorDataPrepare.pl` script setup correctly, but the chromosome naming scheme needs to be consistent across the reference and sample files. This should be relatively easy to fix. I just need to find fasta, bed, and bam files that match.
+
+***
+
+## 27
+
+### TODO
+
+```{r}
+```
+
+### New fasta and bed
+
+I retrieved new fasta and bed files from
+
+* http://www.internationalgenome.org/category/grch37/
+
+More specifically:
+
+fasta
+
+* http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/
+
+phase 1/2 bed files
+
+* http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/exome_pull_down_targets_phases1_and_2/
 
 
 ***
