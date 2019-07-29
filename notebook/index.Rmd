@@ -2829,6 +2829,33 @@ Performed RC calculations and Normalization on samples:
 
 ***
 
+## 29
+
+### TODO
+
+```{r}
+ID Age P Project Tags   Description                                         Urg
+-- --- - ------- ------ --------------------------------------------------- ----
+66 5d    lab     n work begin pilot with data from RL                       1.93
+67 5d    lab     n work reach out to christy re her wes work                1.93
+68 5d    lab     n work explore application of vcf files in cnv pipeline    1.93
+69 5d    lab     n work explore freebayes params                            1.93
+72 3d    lab     n work contact oit re update policy and process            1.92
+73 3d    lab     n work start back up process for ccgd server               1.92
+76 2d    lab     n work continue to troubleshoot excavator2 pipeline        1.91
+77 2d    lab     n work find pilot bam files for excavator2 test run        1.91
+78 2d    lab     w work summarize excv2 process in methods.Rmd              1.91
+40 9w  L lab     w work review scripts for ccgd database                    0.28
+41 9w  L lab     w work explore shiny framework for database                0.28
+42 9w  L lab            agenda [1]                                          0.16
+
+12 tasks
+```
+
+
+***
+
 # References
+
 
 
