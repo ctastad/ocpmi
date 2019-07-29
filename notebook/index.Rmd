@@ -2709,14 +2709,9 @@ I hit another formatting snag today that will require me to go back and find dif
 
 ## 27
 
-### TODO
-
-```{r}
-```
-
 ### New fasta and bed
 
-I retrieved new fasta and bed files from
+To address the chromosome naming discrepancy, I retrieved new fasta and bed files from the 1kgp so that the source will be consistent.
 
 * http://www.internationalgenome.org/category/grch37/
 
@@ -2725,11 +2720,112 @@ More specifically:
 fasta
 
 * http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/
+  Dir: `/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/human_g1k_v37.fasta`
 
 phase 1/2 bed files
 
 * http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/technical/reference/exome_pull_down_targets_phases1_and_2/
+* Dir: `/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/20120518.consensus.annotation.bed`
 
+## 28
+
+### ExcavatorPrepareData.pl
+
+I've was able to run the `ExcavatorPrepareData.pl` script with the followig parameters. I'm not entirely sure this worked based on the output, but it doesn't seem explicity that it didn't work either.
+
+#### ExperimentalFilePrepare.50000.txt
+
+This is the tab delimited file that identifies the bam files, of which were
+
+```{r}
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/test_bam test_bam
+
+```
+
+In addtiion, I reran the pipeline with a new reference due to the chromosome annotation issue. This includes some BAMs from UCSC that are smaller in size.
+
+* http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeUwRepliSeq/
+* Dir: `/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc`
+
+Here's the updated `SourceTarget.txt`
+
+```{r}
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bPctSignalRep1.bigWig /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/hg19.fa
+
+```
+
+Final `ExperimentalFilePrepare.50000.txt`
+
+```{r}
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 4 --target test_target2 --assembly hg19
+```
+
+
+<details>
+  <summary>**ExcavatorDataPrepare.pl Output**</summary>
+
+```{r}
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 4 --target test_target2 --assembly hg19
+Program folder is: /home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+Preparing Multiprocessor Analysis...
+Starting Multiprocessor Analysis!
+Creating '/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/test_bam/RC' folder...
+Creating '/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/test_bam/RCNorm' folder...
+Creating '/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/test_bam/Images' folder...
+Working on sample test_bam.
+Creating Read Count Data...
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+[W::hts_idx_load2] The index file is older than the data file: /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam.bai
+Removing temporary files...
+Read Count done!
+Normalizing Read Count Data...
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+null device
+          1
+null device
+          1
+null device
+          1
+null device
+          1
+null device
+          1
+Normalization done!
+Performed RC calculations and Normalization on samples:
+```
+
+</details>
 
 ***
 
