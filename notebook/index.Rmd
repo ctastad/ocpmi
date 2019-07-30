@@ -2921,9 +2921,22 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 ### Summary
 
+I've hit an impasse with excv2 and am putting it on hold without new information from the authors. I've reached out to them for a pilot dataset since I believe file inconsistencies are playing a role in the pipeline not running to completion. So as to not waste time, I've started the process of testing out VarScan2. I've downloaded the .jar file and am getting setup to run on msi. Taking a cursory glance, it seems like VarScan2 has a similar executional structure as excv2 in that it is also implemented through command line arguments. I expect to spend all of tomorrow focused on seeing how far I can get with this.
+
+
 #### Completed
 
 ```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- --------------------------------------------
+2019-07-25 2019-07-29 4d  lab     email rebecca re bam files
+2019-07-23 2019-07-29 6d  lab     reach out to christy re her wes work
+2019-07-26 2019-07-29 3d  lab     find pilot bam files for excavator2 test run
+2019-07-29 2019-07-29 6h  lab     reach out to excv2 devs re test dataset
+2019-07-26 2019-07-29 2d  lab     summarize excv2 process in methods.Rmd
+2019-07-26 2019-07-29 3d  lab     continue to troubleshoot excavator2 pipeline
+
+6 tasks
 ```
 
 
@@ -2935,13 +2948,3 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 
 
-Created    Completed  Age Project Description
----------- ---------- --- ------- --------------------------------------------
-2019-07-25 2019-07-29 4d  lab     email rebecca re bam files
-2019-07-23 2019-07-29 6d  lab     reach out to christy re her wes work
-2019-07-26 2019-07-29 3d  lab     find pilot bam files for excavator2 test run
-2019-07-29 2019-07-29 6h  lab     reach out to excv2 devs re test dataset
-2019-07-26 2019-07-29 2d  lab     summarize excv2 process in methods.Rmd
-2019-07-26 2019-07-29 3d  lab     continue to troubleshoot excavator2 pipeline
-
-6 tasks
