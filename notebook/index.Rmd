@@ -2917,7 +2917,7 @@ Project Home
 * dir: `/home/chris/starr_lab/ocpmi/methods/varscan2`
 * man: https://dkoboldt.github.io/varscan/using-varscan.html
 
-I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi.
+I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta refernce with BAMs from the 1kgp (NA10847, NA19131).
 
 ### Summary
 
