@@ -249,7 +249,7 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 ***
 
-## EXCAVATOR
+## Excavator
 
 
 <details>
@@ -262,11 +262,159 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 </details>
 
+### Excv2 Docs
+
+#### Installation
+
+Decompress the Excavator package, then move to `.../excavator/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
+
+```{r eval=F}
+F77> R CMD SHLIB F4R.f
+F77> R CMD SHLIB FastJointSLMLibraryI.f
+```
+
+This will create the .o and .so fortran libraries.
+
+#### Important
+
+* Coherence of chromosome annotation among all files is necessary. (chrN vs N)
+
+#### Excavator2 Commands
+
+The Excv2 workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
+
+* `TargetPerla.pl`
+* `EXCAVATORDataPrepare.pl`
+* `EXCAVATORDataAnalysis.pl`
+
+#### TargetPerla.pl
+
+`TargetPerla.pl` is the module for target initialization. It creates a pseudo-target file with coordinates from the user-specified target input file (.bed) and calculates GC content and mapability values.
+
+Setting the label name as “MyWindowLabelName”, the `TargetPerla.pl` module will create a folder (if you are using the hg19 assembly) /.../Excavator/data/targets/hg19/MyLabelName containing all files required for Excv2 analysis.
+
+
+`TargetPerla.pl` requires 5 arguments:
+
+1. Path to a source file (`SourceTarget.txt`)
+2. Path to a target input (bed file)
+3. A "label"
+4. Window size (e.g. 50000)
+5. the desired ref assembly (GRc37/GRc38)
+
+An example cmd is:
+
+```{r}
+perl TargetPerla.pl SourceTarget.txt myTarget.bed MyTarget_w50000 50000 hg19
+```
+
+**The `TargetPerla.pl` working command is:**
+
+```{r}
+perl TargetPerla.pl SourceTarget.txt /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/hg19.bed myLabel 50000 hg19
+```
+
+The default source file is SourceTarget.txt that is placed in the main program folder. SourceTarget.txt is a space delimited file that contains the absolute paths to
+
+1. bigWig file (.bw) for mappability
+2. reference sequence in .fasta
+
+An example `SourceTarget.txt`
+
+```{r}
+/.../path/to/file.bw /.../path/to/file.fasta
+```
+
+**The working `SourceTarget.txt`**
+
+```{r}
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bPctSignalRep1.bigWig /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/hg19.fa
+
+```
+
+#### EXCAVATORDataPrepare.pl
+
+`EXCAVATORDataPrepare.pl` is a Perl script managing RC calculations, data normalization and data anal-ysis on multiple .bam files. It requires one argument and 4 command-line options to run properly.
+
+1. a sample input text file
+2. processor count
+3. the target
+4. the ref assembly
+
+An example cmd:
+
+```{r}
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 4 --target MyTarget_w50000 --assembly hg19
+```
+
+The `ExperimentalFilePrepare.window.txt` file requires 3 items:
+
+1. Direct path to BAM file
+2. Path to the output directory
+3. Sample name (for output prefix)
+
+An example `ExperimentalFilePrepare.window.txt`
+
+```{r}
+/.../path/to/file.bam /.../path/to/output sample_name
+```
+
+
+**The working `ExperimentalFilePrepare.50000.txt`**
+
+```{r}
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/g1b g1b
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG2AlnRep1.bam /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/g2 g2
+
+```
+
+#### EXCAVATORDataAnalysis.pl
+
+`EXCAVATORDataAnalysis.pl` is a multi-ghreaded perl script performing segmentation of the WMRC by means of the Shifting Level Model algorithm along with the FastCall algorithm to classify each region as one of 5 possible discrete states:
+
+1. 2-copy deletion
+2. 1-copy deletion
+3. normal
+4. 1-copy duplication
+5. N-copy amplification
+
+`EXCAVATORDataAnalysis.pl` requires 6 arguments:
+
+1. a sample input text file
+2. processor count
+3. the target
+4. the ref assembly
+5. results output dir
+6. mode (paired, pooled)
+
+An example cmd:
+
+```{r}
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 4 --target MyTarget_w50K --assembly hg19 --output /.../path/to/output --mode ...
+```
+
+The `ExperimentalFileAnalysis.window.txt` file requires 3 items, the 2nd and 3rd of which will be the same as the `ExperimentalFilePrepare.window.txt` file.
+
+1. Analysis type option (T or C)
+2. `ExperimentalFilePrepare.window.txt` output dir
+3. `ExperimentalFilePrepare.window.txt` sample prefix
+
+An example `ExperimentalFileAnalysis.window.txt`
+
+```{r}
+T1 /.../path/to/output sample_name
+T2 /.../path/to/output sample_name
+C1 /.../path/to/output sample_name
+```
 
 
 
 
-#### Implementation
+***
+
+#### Xcavator
+
+##### Implementation
 
 Excavator leverages perl, bash, R, and fortran, and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
 
@@ -282,9 +430,9 @@ As stated in @Magi2017
 
 >The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
 
-### XCAVATOR Readme
+##### XCAVATOR Readme
 
-#### System Requirements
+##### System Requirements
 
 XCAVATOR was conceived for running on UNIX OS 64-bit machines with R (version ≥ 2.14.0) and the Hmisc library, SAM-tools (version ≥ 0.1.17), and Perl (version ≥ 5.8.8) to be correctly installed on your system.
 
@@ -299,7 +447,7 @@ Press CTRL+D to quit R.
 > perl -v
 ```
 
-#### XCAVATOR Installation
+##### XCAVATOR Installation
 
 Decompress the XCAVATOR package, then move to `.../XCAVATOR/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
 
@@ -310,7 +458,7 @@ F77> R CMD SHLIB FastJointSLMLibrary.f
 
 This will create the .o and .so fortran libraries.
 
-#### XCAVATOR Commands
+##### XCAVATOR Commands
 
 The XCAVATOR workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
 
@@ -318,7 +466,7 @@ The XCAVATOR workflow analysis is made of three steps that can be invoked by mea
 * `XCAVATORDataPrepare.pl`
 * `XCAVATORDataAnalysis.pl`
 
-#### ReferenceWindowInitialize.pl
+##### ReferenceWindowInitialize.pl
 
 `ReferenceWindowInitialize.pl` is the module that calculates "windows" information for the XCAVATOR analyses. This module calculates GC-content and mapability values for consecutive and non overlapping windows of the genome of size "window".
 
@@ -349,7 +497,7 @@ Setting the label name as "MyWindowLabelName", the `ReferenceWindowInitialize.pl
 
 
 
-#### XcavatorDataPrepare.pl
+##### XcavatorDataPrepare.pl
 
 
 `XCAVATORDataPrepare.pl` is a Perl script that performs RC or DOC calculation and normalization on multiple .bam files. It takes as input an experimental file and four command-line options to run properly:
@@ -362,7 +510,7 @@ The text file (e.g. `FilePrepare.txt`, that you have to create) contains details
 
 Before running `EXCAVATORDataPrepare.pl` you need to create a space delimited file with three fields: the absolute path to the .bam file you want to analyze, the path to the main sample output folder and the sample name. The sample name will be used as a prefix/suffix for output files. Each row in the file contains details about one sample. For each sample, the main output folder specified in the second filed of the `ExperimentalFilePre- pare.window.txt` will be created.
 
-#### XcavatorDataAnalysis.pl
+##### XcavatorDataAnalysis.pl
 
 `XCAVATORDataAnalysis.pl` is a multi-threading Perl that performs the segmentation of the RC/DOC by means of the Shifting Level Model algorithm and exploits FastCall algorithm to classify each segmented region as one of the five possible discrete states (2-copy deletion, 1-copy deletion, normal, 1-copy duplication and N-copy amplification). `XCAVATORDataAnalysis.pl` takes as input one file and four options. This is an example of the cmd:
 
@@ -382,7 +530,7 @@ The `Results/SampleName/` folder contains .txt and .vcf files with the results p
 
 Moreover, XCAVATOR also produces a .vcf file (`ExcavatorRegionCall_SampleName.vcf`) with details about identified CNVs. The VCF (Variant Call Format) is a text file of nine fields used to store sequence variations. Each row contains details about a CNV: the starting breakpoint is specified in POS field, the end and the length of the CNV are in the INFO field (END and SVLEN id).
 
-#### Algorithms Parameters
+##### Algorithms Parameters
 
 SML and FastCall parameters are stored in the ParameterFile.txt in the main folder of the tool. For LSM algorithm the user can set the value of Omega in the range 0.0 − 1.0, Theta (0.0 − 1.0) and D_norm. We suggest to use Omega (0.1 − 0.5), Theta (10^−7 −10^−3) and D_norm (10^4 −10^6). For FastCall algorithm the user may set the parameters: Cellularity (0.0−1.0) is the fraction of tumor cells (change this value only for somatic analyses), Threshold d (recommended 0.2−0.6) is the lower bound for the truncated gaussian of the neutral (2 copies) state, Threshold u (recommended 0.1 − 0.4) is the upper bound for the truncated gaussian of the neutral (2 copies) state.
 
