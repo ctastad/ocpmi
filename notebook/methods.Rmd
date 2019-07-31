@@ -135,7 +135,14 @@ It is possible to run an interactive session with the MSI lab space using the `i
 
 This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
 
-* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
+* https://www.msi.umn.edu/content/interactive-queue-use-isub
+
+The `isub` command can also be given params about compute resources. Here is a decent default setting:
+
+```{r}
+isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
+```
+
 
 ***
 
