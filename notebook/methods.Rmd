@@ -877,6 +877,24 @@ This paper explored a comparative analysis between current CNV analysis tools th
 
 * `/home/chris/starr_lab/ccgd/refs/CCGD Project.docx`
 
+#### Server Script Conversations
+
+<details>
+  <summary>**From Ken re COSMIC changes**</summary>
+
+```{remark}
+Possibly--I'll have to see the new file to be sure. We rely on the "gene_name" column in CosmicMutantExport.tsv.gz and the "symbol" column in cancer_gene_census.csv to match our data, and those are the first columns in the files. If they do nothing more than add columns to these files, they may be truncated during loading, and that may not matter so long as the "gene_name" and "symbol" columns are still in frame. I think it's conceivable that they may introduce new 1:many relationships in "gene_name" or "symbol" columns, but that could be handled with a DISTINCT clause in the SQL. The most painful possibility is that they (yet again) change their download process, but that has always been a surmountable problem in the past.
+
+
+
+By the way, would you like to renew my sponsored account (abbot195) for another year? There should be a 7/23 email about this in your inbox.
+
+
+
+-Ken
+```
+</details>
+
 ### Server site
 
 I was finally able to get through on the access portion of the ccgd project. Sonya played an important role in initiating access, which was ultimately completed by Satish.
@@ -886,6 +904,8 @@ I was finally able to get through on the access portion of the ccgd project. Son
 The working directory for the website seems to be located at:
 
 * `/swadm/var/www/html`
+
+
 
 #### Server Access Conversations
 

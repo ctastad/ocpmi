@@ -2860,7 +2860,7 @@ ID Age P Project Tags   Description                                         Urg
 
 ### Excv2 trbl (cont.)
 
-I've run the final script for the Excv2 pipeline to no avail. I'm at a bit of a loss and will likely transition to VarScan2 today unless I get a decent lead from reaching out the Excv2 authors.
+I've run the final script for the Excavator2 (excv2) pipeline to no avail. I'm at a bit of a loss and will likely transition to VarScan2 today unless I get a decent lead from reaching out the Excv2 authors.
 
 ```{r}
 perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 4 --target test_target --assembly hg19 --output /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/results --mode pooling
@@ -2939,6 +2939,8 @@ Created    Completed  Age Project Description
 6 tasks
 ```
 
+***
+
 ## 30
 
 ### TODO
@@ -2958,14 +2960,17 @@ ID Age P Project Tag    Description                                      Urg
 8 tasks
 ```
 
+### vs2 pileup file
+
+VarScan2 (vs2) requires a pileup to operate. I'm running that on both msi and my personal machine as it seems to take a long time.
+
+```{r}
+samtools mpileup -f [reference sequence] [BAM file(s)]
+```
 
 
 
 ***
 
 # References
-
-
-
-
 
