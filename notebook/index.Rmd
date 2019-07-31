@@ -2989,7 +2989,47 @@ ID Age P Project Tags   Description                                         Urg
 8 tasks
 ```
 
+### Lab node
 
+labqi038
+labqi023
+
+### Collaborator mtg
+
+* Speaking with Ying, it sounds like RL and CH may not have saved bam files in their wes processing. I may need to generate my own files from the raw data
+    - looking at the directory, Tim was able to find fastq files for this
+* Tim has generally completed the cellranger3 reprocessing.
+    - Apparently, the updated pipeline identifies a different resolution of rna content in immune cells. As a result, the new processing gives an elevated immune cell content in the Seurat output.
+
+### excv2
+
+
+
+### vs2 pileup creation
+
+### BAM Creation
+
+index -> bam create
+
+/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI
+
+#### bwa
+
+* man: http://bio-bwa.sourceforge.net/bwa.shtml
+
+Command for direct bwa to bam output
+
+```{r}
+bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
+
+# multiple threads
+
+bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
+```
+
+
+PM-15-T17-0910-1_S2_R1_001.fastq.gz
+PM-2-T17-0307-3_S9_R1_001.fastq.gz
 
 
 ***

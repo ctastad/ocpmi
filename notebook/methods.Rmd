@@ -137,7 +137,7 @@ This is useful in the event I want to do development inside MSI rather than just
 
 * https://www.msi.umn.edu/content/interactive-queue-use-isub
 
-The `isub` command can also be given params about compute resources. Here is a decent default setting:
+The `isub` command can also be given params about compute resources. Here is a decent default setting with *1 node, 8 cores, 16 gigs of ram, and a wall time of 8hrs*:
 
 ```{r}
 isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
@@ -236,6 +236,14 @@ htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 
 # CNV
 
+## Gene Reference
+
+I am currently trying to get a wes pipeline to work using the following two bam sets from the 1kgp
+
+* `NA19131`
+* `NA10847` (control)
+
+
 
 ## Varscan2
 
@@ -252,6 +260,14 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 </details>
 
 
+Project Home
+
+* https://dkoboldt.github.io/varscan/index.html
+* git: https://github.com/dkoboldt/varscan
+* dir: `/home/chris/starr_lab/ocpmi/methods/varscan2`
+* man: https://dkoboldt.github.io/varscan/using-varscan.html
+
+I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta refernce with BAMs from the 1kgp (NA10847, NA19131).
 
 
 ***
@@ -659,7 +675,6 @@ Tim has cross walk files; as you will find out there are multiple different samp
 </details>
 
 
-
 <details>
   <summary>**from: Christy re coverage data 7/10/19**</summary>
 ```{remark}
@@ -729,6 +744,12 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 * ClinVar was used to apply annotation to variance that matches existing clinical reference.
 
 </details>
+
+### Fastq dir
+
+The wes data can be found at the msi dir below:
+
+* `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
 
 ### Processing
 
@@ -1149,11 +1170,31 @@ I found a really comprehensive list of single cell analysis tools at the github 
 
 * https://github.com/seandavi/awesome-single-cell
 
-## 1kgp ftp
+## UCSC
 
-This file provides an overview of the structure of the FTP site.
+UCSC hosts what is effectivley the industry standard for reference genomic content.
 
-###Structure of the FTP site
+#### hg19 ref
+
+* http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/
+
+#### GR38 ref
+
+* http://hgdownload.cse.ucsc.edu/goldenpath/hg38/bigZips/
+
+#### Genome Browser
+
+* http://genome.ucsc.edu/cgi-bin/hgTables?command=start
+
+## 1kgp
+
+### IGSR
+
+This is a central resource to find data available from the 1kgp.
+
+* https://www.internationalgenome.org/data
+
+###FTP site
 
 This file provides an overview of the structure of the FTP site.
 
