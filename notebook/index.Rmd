@@ -2996,7 +2996,7 @@ ID Age P Project Tags   Description                                         Urg
 * Tim has generally completed the cellranger3 reprocessing.
     - Apparently, the updated pipeline identifies a different resolution of rna content in immune cells. As a result, the new processing gives an elevated immune cell content in the Seurat output.
 
-### excv2 w/ GR38
+### excv2 w/ 1kgp GR38
 
 **excv2 pilot**
 
@@ -3022,7 +3022,8 @@ I need to create new bam files from our source wes data since these files were l
 
 **First Samples**
 
-* dir: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* src: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* dir: `~/ocpmi/bam/ocpmi/pilot`
 * samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
 * gene_ref: `hg38.fa`, via UCSC
 
@@ -3075,6 +3076,35 @@ ID Age  P Project Tags   Description                                   Urg
 6 tasks
 ```
 
+### BAM Creation
+
+I belive I've finished the process of converting a couple fastq files to bam files. I'm going to run these through the vs2 and excv2 pipelines to see if they will take.
+
+* src: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* dir: `~/ocpmi/bam/ocpmi/pilot`
+* samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
+* gene_ref: `hg38.fa`, via UCSC
+* bam: `pm2.bam`, `pm15.bam`
+
+**Process**
+
+*fastq &rarr; `index` (bwa bwtsw) &rarr; align (bwa mem) + `sort` (samtools) &rarr;*  ***output.bam***
+
+### vs2 Pilot
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, via UCSC
+
+*BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; cnv output?*
+
+### excv2 w/ 1kgp GR38
+
+**excv2 pilot**
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
+
+*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; **`EXCAVATORDataAnalysis.pl`** &rarr; cnv output
 
 ***
 
