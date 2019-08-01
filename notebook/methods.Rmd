@@ -238,12 +238,47 @@ htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 
 ## Gene Reference
 
-I am currently trying to get a wes pipeline to work using the following two bam sets from the 1kgp
+I am currently trying to get a wes pipeline to work using the following two bam sets from the 1kgp phase3
 
 * `NA19131`
 * `NA10847` (control)
+* gene_ref: `~/ocpmi/gene_ref`
+    - fasta: `hg38.fa`
+    - bed: `hg38.bed`
 
+### BAM Creation
 
+I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
+
+**First Samples**
+
+* dir: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
+* gene_ref: `hg38.fa`, via UCSC
+
+*fastq &rarr; **`index` (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
+
+#### bwa
+
+I'll be using bwa for sequence alignment.
+
+* man: http://bio-bwa.sourceforge.net/bwa.shtml
+
+Command for reference index creation using the bwtsw algorithm:
+
+```{r}
+bwa index -a bwtsw reference.fa
+```
+
+Command for direct bwa to bam output using the mem algorithm:
+
+```{r}
+bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
+
+# multiple threads
+
+bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
+```
 
 ## Varscan2
 
@@ -260,14 +295,21 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 </details>
 
 
-Project Home
+**Project Home**
 
 * https://dkoboldt.github.io/varscan/index.html
 * git: https://github.com/dkoboldt/varscan
 * dir: `/home/chris/starr_lab/ocpmi/methods/varscan2`
 * man: https://dkoboldt.github.io/varscan/using-varscan.html
 
-I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta refernce with BAMs from the 1kgp (NA10847, NA19131).
+I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta reference with BAMs from the 1kgp (NA10847, NA19131).
+
+**vs2 pilot**
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, via UCSC
+
+*BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; cnv output?*
 
 
 ***
@@ -284,6 +326,14 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 ```
 
 </details>
+
+
+**excv2 pilot**
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
+
+*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 ### Excv2 Docs
 

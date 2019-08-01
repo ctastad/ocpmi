@@ -2703,7 +2703,7 @@ It seems like the chromosome notation has become an issue again. The UCSC and 1k
 
 ### Summary
 
-I hit another formatting snag today that will require me to go back and find different refernce files. I believe I generally have the `ExcavatorDataPrepare.pl` script setup correctly, but the chromosome naming scheme needs to be consistent across the reference and sample files. This should be relatively easy to fix. I just need to find fasta, bed, and bam files that match.
+I hit another formatting snag today that will require me to go back and find different reference files. I believe I generally have the `ExcavatorDataPrepare.pl` script setup correctly, but the chromosome naming scheme needs to be consistent across the reference and sample files. This should be relatively easy to fix. I just need to find fasta, bed, and bam files that match.
 
 ***
 
@@ -2733,7 +2733,7 @@ phase 1/2 bed files
 
 ### New fasta and bed again
 
-In addtiion, I reran the pipeline with a new reference due to the chromosome annotation issue. This includes some BAMs from UCSC that are smaller in size.
+In addition, I reran the pipeline with a new reference due to the chromosome annotation issue. This includes some BAMs from UCSC that are smaller in size.
 
 * http://hgdownload.cse.ucsc.edu/goldenPath/hg19/encodeDCC/wgEncodeUwRepliSeq/
 * Dir: `/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc`
@@ -2748,7 +2748,7 @@ Here's the updated `SourceTarget.txt`
 
 ### ExcavatorPrepareData.pl
 
-I've was able to run the `ExcavatorPrepareData.pl` script with the followig parameters. I'm not entirely sure this worked based on the output, but it doesn't seem explicity that it didn't work either.
+I've was able to run the `ExcavatorPrepareData.pl` script with the following parameters. I'm not entirely sure this worked based on the output, but it doesn't seem explicitly that it didn't work either.
 
 #### ExperimentalFilePrepare.50000.txt
 
@@ -2906,7 +2906,7 @@ Multiprocessor Analysis Complete!
 
 </details>
 
-### VasScan2
+### VarScan2
 
 While waiting to hear back from the excv2 authors, I've decided to see where VarScan2 can take me.
 
@@ -2917,7 +2917,7 @@ Project Home
 * dir: `/home/chris/starr_lab/ocpmi/methods/varscan2`
 * man: https://dkoboldt.github.io/varscan/using-varscan.html
 
-I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta refernce with BAMs from the 1kgp (NA10847, NA19131).
+I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta reference with BAMs from the 1kgp (NA10847, NA19131).
 
 ### Summary
 
@@ -2989,11 +2989,6 @@ ID Age P Project Tags   Description                                         Urg
 8 tasks
 ```
 
-### Lab node
-
-labqi038
-labqi023
-
 ### Collaborator mtg
 
 * Speaking with Ying, it sounds like RL and CH may not have saved bam files in their wes processing. I may need to generate my own files from the raw data
@@ -3001,23 +2996,51 @@ labqi023
 * Tim has generally completed the cellranger3 reprocessing.
     - Apparently, the updated pipeline identifies a different resolution of rna content in immune cells. As a result, the new processing gives an elevated immune cell content in the Seurat output.
 
-### excv2
+### excv2 w/ GR38
 
+**excv2 pilot**
 
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
+
+*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 ### vs2 pileup creation
 
+To get started on the vs2 pipeline, I've decided to work with the same 1kgp bam files I have available for excv2. In the event both work, I'll hopefully be able to compare the results.
+
+**vs2 pilot**
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, via UCSC
+
+*BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; cnv output?*
+
 ### BAM Creation
 
-index -> bam create
+I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
 
-/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI
+**First Samples**
+
+* dir: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
+* gene_ref: `hg38.fa`, via UCSC
+
+*fastq &rarr; **`index` (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
 
 #### bwa
 
+I'll be using bwa for sequence alignment.
+
 * man: http://bio-bwa.sourceforge.net/bwa.shtml
 
-Command for direct bwa to bam output
+Command for reference index creation using the bwtsw algorithm:
+
+```{r}
+bwa index -a bwtsw reference.fa
+```
+
+Command for direct bwa to bam output using the mem algorithm:
 
 ```{r}
 bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
@@ -3027,9 +3050,9 @@ bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
 bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
 ```
 
+### Summary
 
-PM-15-T17-0910-1_S2_R1_001.fastq.gz
-PM-2-T17-0307-3_S9_R1_001.fastq.gz
+Currently, I have the vs2 and excv2 pipelines running in parallel. I've adjusted the approach of the excv2 pipeline to use the GR38 reference. I learned I will need to create new bam files since these were not preserved in scratch. To some extent this frees me to use the newer reference since I won't be relying on RL/CH's outputs.
 
 
 ***
