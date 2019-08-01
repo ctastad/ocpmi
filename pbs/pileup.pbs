@@ -1,0 +1,11 @@
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N JOBNAME
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/bam/1kgp
+module load samtools
+samtools mpileup -f
