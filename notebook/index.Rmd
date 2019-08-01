@@ -3054,7 +3054,6 @@ bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
 
 Currently, I have the vs2 and excv2 pipelines running in parallel. I've adjusted the approach of the excv2 pipeline to use the GR38 reference. I learned I will need to create new bam files since these were not preserved in scratch. To some extent this frees me to use the newer reference since I won't be relying on RL/CH's outputs.
 
-
 ***
 
 # Aug

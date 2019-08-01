@@ -143,6 +143,43 @@ The `isub` command can also be given params about compute resources. Here is a d
 isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
 ```
 
+## Job Scheduling
+
+### Exit Codes
+
+Name 	Value 	Description
+JOB_EXEC_OK 	0 	Job execution successful
+JOB_EXEC_FAIL1 	-1 	Job execution failed, before files, no retry
+JOB_EXEC_FAIL2 	-2 	Job execution failed, after files, no retry
+JOB_EXEC_RETRY 	-3 	Job execution failed, do retry
+JOB_EXEC_INITABT 	-4 	Job aborted on MOM initialization
+JOB_EXEC_INITRST 	-5 	Job aborted on MOM init, chkpt, no migrate
+JOB_EXEC_INITRMG 	-6 	Job aborted on MOM init, chkpt, ok migrate
+JOB_EXEC_BADRESRT 	-7 	Job restart failed
+JOB_EXEC_CMDFAIL 	-8 	Exec() of user command failed
+JOB_EXEC_STDOUTFAIL 	-9 	Could not create/open stdout stderr files
+JOB_EXEC_OVERLIMIT_MEM 	-10 	Job exceeded a memory limit
+JOB_EXEC_OVERLIMIT_WT 	-11 	Job exceeded a walltime limit
+JOB_EXEC_OVERLIMIT_CPUT 	-12 	Job exceeded a CPU time limit
+
+```{r}
+Name 	Value 	Description
+JOB_EXEC_OK 	0 	Job execution successful
+JOB_EXEC_FAIL1 	-1 	Job execution failed, before files, no retry
+JOB_EXEC_FAIL2 	-2 	Job execution failed, after files, no retry
+JOB_EXEC_RETRY 	-3 	Job execution failed, do retry
+JOB_EXEC_INITABT 	-4 	Job aborted on MOM initialization
+JOB_EXEC_INITRST 	-5 	Job aborted on MOM init, chkpt, no migrate
+JOB_EXEC_INITRMG 	-6 	Job aborted on MOM init, chkpt, ok migrate
+JOB_EXEC_BADRESRT 	-7 	Job restart failed
+JOB_EXEC_CMDFAIL 	-8 	Exec() of user command failed
+JOB_EXEC_STDOUTFAIL 	-9 	Could not create/open stdout stderr files
+JOB_EXEC_OVERLIMIT_MEM 	-10 	Job exceeded a memory limit
+JOB_EXEC_OVERLIMIT_WT 	-11 	Job exceeded a walltime limit
+JOB_EXEC_OVERLIMIT_CPUT 	-12 	Job exceeded a CPU time limit
+
+
+```
 
 ***
 
@@ -232,6 +269,7 @@ htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 ```
 
 ***
+
 
 
 # CNV
