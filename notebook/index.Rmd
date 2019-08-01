@@ -3057,6 +3057,29 @@ Currently, I have the vs2 and excv2 pipelines running in parallel. I've adjusted
 
 ***
 
+# Aug
+
+## 1
+
+### TODO
+
+```{r}
+ID Age  P Project Tags   Description                                   Urg
+-- ---- - ------- ------ --------------------------------------------- ----
+64 8d     lab     w work explore freebayes params                      1.94
+79 2min   lab     n work run pm2 and pm15 bams through vs2/excv2        1.9
+80 1min   lab     n work evaluate excv2 output                          1.9
+81 1min   lab     n work run vs2 copy number function on 1kgp bams      1.9
+40 10w  L lab     w work review scripts for ccgd database              0.29
+41 10w  L lab     w work explore shiny framework for database          0.29
+
+6 tasks
+```
+
+
+***
+
 # References
+
 
 
