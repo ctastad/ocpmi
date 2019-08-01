@@ -6,21 +6,26 @@ bibliography: library.bib
 output:
     html_document:
         toc: yes
-#        toc_float: yes
+        toc_float: yes
         theme: paper
 ---
 
-```{r echo=F}
+```{r eval=T,echo=F}
 library(knitr)
+```
+
+```{r global_options}
+knitr::opts_chunk$set(eval=F)
 ```
 
 # Contacts
 
-```{r echo=F}
+```{r eval=T,echo=F}
 contacts <- read.csv("/home/chris/starr_lab/contacts.csv")
 kable(contacts)
 ```
 
+***
 
 # MSI
 
@@ -94,6 +99,8 @@ chooseCRANmirror(ind=2)
 
 * Packages should be able to be installed and loaded normally now.
 
+***
+
 ## MSI sshfs
 
 #### Auto mount
@@ -110,7 +117,7 @@ sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2
 
 #### Unmount
 
-I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an exacutable for this, `umount_msi`, in the same directory.
+I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an executable for this, `umount_msi`, in the same directory.
 
 ```{r eval=F}
 #!/bin/bash
@@ -128,16 +135,50 @@ It is possible to run an interactive session with the MSI lab space using the `i
 
 This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
 
-* `https://www.msi.umn.edu/content/interactive-queue-use-isub`
+* https://www.msi.umn.edu/content/interactive-queue-use-isub
 
-***
-
-# Seurat
-
-## PBMC Tutorial
+The `isub` command can also be given params about compute resources. Here is a decent default setting with *1 node, 8 cores, 16 gigs of ram, and a wall time of 8hrs*:
 
 ```{r}
-htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
+isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
+```
+
+## Job Scheduling
+
+### Exit Codes
+
+Name 	Value 	Description
+JOB_EXEC_OK 	0 	Job execution successful
+JOB_EXEC_FAIL1 	-1 	Job execution failed, before files, no retry
+JOB_EXEC_FAIL2 	-2 	Job execution failed, after files, no retry
+JOB_EXEC_RETRY 	-3 	Job execution failed, do retry
+JOB_EXEC_INITABT 	-4 	Job aborted on MOM initialization
+JOB_EXEC_INITRST 	-5 	Job aborted on MOM init, chkpt, no migrate
+JOB_EXEC_INITRMG 	-6 	Job aborted on MOM init, chkpt, ok migrate
+JOB_EXEC_BADRESRT 	-7 	Job restart failed
+JOB_EXEC_CMDFAIL 	-8 	Exec() of user command failed
+JOB_EXEC_STDOUTFAIL 	-9 	Could not create/open stdout stderr files
+JOB_EXEC_OVERLIMIT_MEM 	-10 	Job exceeded a memory limit
+JOB_EXEC_OVERLIMIT_WT 	-11 	Job exceeded a walltime limit
+JOB_EXEC_OVERLIMIT_CPUT 	-12 	Job exceeded a CPU time limit
+
+```{r}
+Name 	Value 	Description
+JOB_EXEC_OK 	0 	Job execution successful
+JOB_EXEC_FAIL1 	-1 	Job execution failed, before files, no retry
+JOB_EXEC_FAIL2 	-2 	Job execution failed, after files, no retry
+JOB_EXEC_RETRY 	-3 	Job execution failed, do retry
+JOB_EXEC_INITABT 	-4 	Job aborted on MOM initialization
+JOB_EXEC_INITRST 	-5 	Job aborted on MOM init, chkpt, no migrate
+JOB_EXEC_INITRMG 	-6 	Job aborted on MOM init, chkpt, ok migrate
+JOB_EXEC_BADRESRT 	-7 	Job restart failed
+JOB_EXEC_CMDFAIL 	-8 	Exec() of user command failed
+JOB_EXEC_STDOUTFAIL 	-9 	Could not create/open stdout stderr files
+JOB_EXEC_OVERLIMIT_MEM 	-10 	Job exceeded a memory limit
+JOB_EXEC_OVERLIMIT_WT 	-11 	Job exceeded a walltime limit
+JOB_EXEC_OVERLIMIT_CPUT 	-12 	Job exceeded a CPU time limit
+
+
 ```
 
 ***
@@ -174,6 +215,8 @@ Additionally, regular markdown formatting can be applied behind this special com
 #' A script comment that includes **markdown** formatting.
 ```
 
+***
+
 ## notebook_knit.R
 
 I've renamed my `create_site` file to `notebook_knit` due to a conflict with a different executable. The location of this file is now at `/usr/bin` on my local machine. The updated script is below.
@@ -206,35 +249,285 @@ sudo chmod a+x notebook_knit.R
 
 ***
 
+## Folding elements
+
+Following an example from the Seurat pbmc tutorial, I am incorporating folding page elements in my notebook to reduce length and clutter.
+
+```{r eval=F}
+<details>
+  <summary>****</summary>
+</details>
+```
+
+
+***
+
+# Seurat
+
+```{r eval=T}
+htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
+```
+
+***
+
+
+
 # CNV
 
+## Gene Reference
+
+I am currently trying to get a wes pipeline to work using the following two bam sets from the 1kgp phase3
+
+* `NA19131`
+* `NA10847` (control)
+* gene_ref: `~/ocpmi/gene_ref`
+    - fasta: `hg38.fa`
+    - bed: `hg38.bed`
+
+### BAM Creation
+
+I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
+
+**First Samples**
+
+* dir: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
+* gene_ref: `hg38.fa`, via UCSC
+
+*fastq &rarr; **`index` (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
+
+#### bwa
+
+I'll be using bwa for sequence alignment.
+
+* man: http://bio-bwa.sourceforge.net/bwa.shtml
+
+Command for reference index creation using the bwtsw algorithm:
+
+```{r}
+bwa index -a bwtsw reference.fa
+```
+
+Command for direct bwa to bam output using the mem algorithm:
+
+```{r}
+bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
+
+# multiple threads
+
+bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
+```
 
 ## Varscan2
 
 Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
 
-#### from: Jinhua 6/14/19
-
+<details>
+  <summary>**from: Jinhua 6/14/19**</summary>
+```{remark}
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+```
+
+</details>
+
+
+**Project Home**
+
+* https://dkoboldt.github.io/varscan/index.html
+* git: https://github.com/dkoboldt/varscan
+* dir: `/home/chris/starr_lab/ocpmi/methods/varscan2`
+* man: https://dkoboldt.github.io/varscan/using-varscan.html
+
+I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta reference with BAMs from the 1kgp (NA10847, NA19131).
+
+**vs2 pilot**
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, via UCSC
+
+*BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; cnv output?*
+
 
 ***
 
-## EXCAVATOR
+## Excavator
 
-#### from: Jinhua 6/14/19
 
+<details>
+  <summary>**from: Jinhua 6/14/19**</summary>
+```{remark}
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
+```
+
+</details>
 
 
-#### Implementation
+**excv2 pilot**
 
-I will be taking the first wes cnv approach using the excavator/xcavator tool. This group published EXCAVATOR in @Magi2013 and have since expanded on it @Magi2017. I will be looking at XCAVATOR first, given its recency to see if it can bring anything to fruition.
+* samples: `NA10847`, `NA19131` via 1kgp phase3
+* gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
-Excavator leverages perl, bash, R, and fortran (of all things), and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
+*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+
+### Excv2 Docs
+
+#### Installation
+
+Decompress the Excavator package, then move to `.../excavator/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
+
+```{r eval=F}
+F77> R CMD SHLIB F4R.f
+F77> R CMD SHLIB FastJointSLMLibraryI.f
+```
+
+This will create the .o and .so fortran libraries.
+
+#### Important
+
+* Coherence of chromosome annotation among all files is necessary. (chrN vs N)
+
+#### Excavator2 Commands
+
+The Excv2 workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
+
+* `TargetPerla.pl`
+* `EXCAVATORDataPrepare.pl`
+* `EXCAVATORDataAnalysis.pl`
+
+#### TargetPerla.pl
+
+`TargetPerla.pl` is the module for target initialization. It creates a pseudo-target file with coordinates from the user-specified target input file (.bed) and calculates GC content and mapability values.
+
+Setting the label name as “MyWindowLabelName”, the `TargetPerla.pl` module will create a folder (if you are using the hg19 assembly) /.../Excavator/data/targets/hg19/MyLabelName containing all files required for Excv2 analysis.
+
+
+`TargetPerla.pl` requires 5 arguments:
+
+1. Path to a source file (`SourceTarget.txt`)
+2. Path to a target input (bed file)
+3. A "label"
+4. Window size (e.g. 50000)
+5. the desired ref assembly (GRc37/GRc38)
+
+An example cmd is:
+
+```{r}
+perl TargetPerla.pl SourceTarget.txt myTarget.bed MyTarget_w50000 50000 hg19
+```
+
+**The `TargetPerla.pl` working command is:**
+
+```{r}
+perl TargetPerla.pl SourceTarget.txt /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/hg19.bed myLabel 50000 hg19
+```
+
+The default source file is SourceTarget.txt that is placed in the main program folder. SourceTarget.txt is a space delimited file that contains the absolute paths to
+
+1. bigWig file (.bw) for mappability
+2. reference sequence in .fasta
+
+An example `SourceTarget.txt`
+
+```{r}
+/.../path/to/file.bw /.../path/to/file.fasta
+```
+
+**The working `SourceTarget.txt`**
+
+```{r}
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bPctSignalRep1.bigWig /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/hg19.fa
+
+```
+
+#### EXCAVATORDataPrepare.pl
+
+`EXCAVATORDataPrepare.pl` is a Perl script managing RC calculations, data normalization and data anal-ysis on multiple .bam files. It requires one argument and 4 command-line options to run properly.
+
+1. a sample input text file
+2. processor count
+3. the target
+4. the ref assembly
+
+An example cmd:
+
+```{r}
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 4 --target MyTarget_w50000 --assembly hg19
+```
+
+The `ExperimentalFilePrepare.window.txt` file requires 3 items:
+
+1. Direct path to BAM file
+2. Path to the output directory
+3. Sample name (for output prefix)
+
+An example `ExperimentalFilePrepare.window.txt`
+
+```{r}
+/.../path/to/file.bam /.../path/to/output sample_name
+```
+
+
+**The working `ExperimentalFilePrepare.50000.txt`**
+
+```{r}
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG1bAlnRep1.bam /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/g1b g1b
+/home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/gene_ref/ucsc/wgEncodeUwRepliSeqBg02esG2AlnRep1.bam /home/chris/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/pilot/g2 g2
+
+```
+
+#### EXCAVATORDataAnalysis.pl
+
+`EXCAVATORDataAnalysis.pl` is a multi-ghreaded perl script performing segmentation of the WMRC by means of the Shifting Level Model algorithm along with the FastCall algorithm to classify each region as one of 5 possible discrete states:
+
+1. 2-copy deletion
+2. 1-copy deletion
+3. normal
+4. 1-copy duplication
+5. N-copy amplification
+
+`EXCAVATORDataAnalysis.pl` requires 6 arguments:
+
+1. a sample input text file
+2. processor count
+3. the target
+4. the ref assembly
+5. results output dir
+6. mode (paired, pooled)
+
+An example cmd:
+
+```{r}
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 4 --target MyTarget_w50K --assembly hg19 --output /.../path/to/output --mode ...
+```
+
+The `ExperimentalFileAnalysis.window.txt` file requires 3 items, the 2nd and 3rd of which will be the same as the `ExperimentalFilePrepare.window.txt` file.
+
+1. Analysis type option (T or C)
+2. `ExperimentalFilePrepare.window.txt` output dir
+3. `ExperimentalFilePrepare.window.txt` sample prefix
+
+An example `ExperimentalFileAnalysis.window.txt`
+
+```{r}
+T1 /.../path/to/output sample_name
+T2 /.../path/to/output sample_name
+C1 /.../path/to/output sample_name
+```
+
+
+
+
+***
+
+#### Xcavator
+
+##### Implementation
+
+Excavator leverages perl, bash, R, and fortran, and xcavator runs off of the same underlying architecture. I've installed the source files for the application using the scripts they provided at the location below.
 
 * `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/lib`
 
@@ -248,13 +541,13 @@ As stated in @Magi2017
 
 >The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
 
-### XCAVATOR Readme
+##### XCAVATOR Readme
 
-#### System Requirements
+##### System Requirements
 
 XCAVATOR was conceived for running on UNIX OS 64-bit machines with R (version ≥ 2.14.0) and the Hmisc library, SAM-tools (version ≥ 0.1.17), and Perl (version ≥ 5.8.8) to be correctly installed on your system.
 
-R can be downloaded at CRAN (http://cran.r-project.org), while SAMtools at SourceForge (http://samtools.sourceforge.net). Perl is native in almost any Unix machine. Before installing and runnig XCAVATOR be sure they are all installed on your system and their executable files have been exported in your PATH. If you experience any problem with any of them you should contact your system administrator. Installation of any of these softwares requires superuser privileges.
+R can be downloaded at CRAN (http://cran.r-project.org), while SAMtools at SourceForge (http://samtools.sourceforge.net). Perl is native in almost any Unix machine. Before installing and running XCAVATOR be sure they are all installed on your system and their executable files have been exported in your PATH. If you experience any problem with any of them you should contact your system administrator. Installation of any of these softwares requires superuser privileges.
 
 To check for R, SAMtools and Perl you can type on your shell the following commands:
 
@@ -265,9 +558,9 @@ Press CTRL+D to quit R.
 > perl -v
 ```
 
-#### XCAVATOR Installation
+##### XCAVATOR Installation
 
-Uncompress the XCAVATOR package, then move to `.../XCAVATOR/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
+Decompress the XCAVATOR package, then move to `.../XCAVATOR/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
 
 ```{r eval=F}
 F77> R CMD SHLIB F4R.f
@@ -276,35 +569,46 @@ F77> R CMD SHLIB FastJointSLMLibrary.f
 
 This will create the .o and .so fortran libraries.
 
-#### XCAVATOR Commands
+##### XCAVATOR Commands
 
 The XCAVATOR workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
 
-1. `ReferenceWindowInitialize.pl`
-2. `XCAVATORDataPrepare.pl`
-3. `XCAVATORDataAnalysis.pl`
+* `ReferenceWindowInitialize.pl`
+* `XCAVATORDataPrepare.pl`
+* `XCAVATORDataAnalysis.pl`
 
-#### ReferenceWindowInitialize.pl
+##### ReferenceWindowInitialize.pl
 
-`ReferenceWindowInitialize.pl` is the module that calculates "windows" informations for the XCAVATOR analyses. This module calculates GC-content and mappability values for consecutive and non overlapping windows of the genome of size "window".
+`ReferenceWindowInitialize.pl` is the module that calculates "windows" information for the XCAVATOR analyses. This module calculates GC-content and mapability values for consecutive and non overlapping windows of the genome of size "window".
 
-`ReferenceWindowInitialize.pl` requires 4 arguments: the path to a source file (e.g. SourceTarget.txt), the path to a bed file, a "label" and the assembly name (allowed options are: hg19 and hg38). Example of cmd is:
+`ReferenceWindowInitialize.pl` requires 4 arguments:
+
+1. path to a source file (e.g. SourceTarget.txt)
+2. path to a bed file
+3. a "label"
+4. the assembly name (hg19/hg38)
+
+An example cmd is:
 
 ```{r eval=F}
-perl ReferenceWindowInitialize.pl SourceTarget.txt MyWindowLabelName myWindow hg19
+perl ReferenceWindowInitialize.pl \ # script
+    SourceTarget.txt \              # 1.
+    MyWindowLabelName \             # 3.
+    myWindow \                      #
+    hg19                            # 4.
 ```
 
-The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimitated file that contains the absolute paths to a bigWig file (.bw) for the calculations of mappability and to the reference genome sequence in .fasta format for GC-content calculations.
+The default source file is `SourceTarget.txt` that is placed in the main program folder. `SourceTarget.txt` is a space delimited file that contains the absolute paths to 1) a `bigWig file (.bw)` for the calculations of mapability and 2) to the reference genome sequence in .fasta format for GC-content calculations.
 
-The bigWig file is a binary file reporting information about mappability, referred to a reference assembly. Mappability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
+The `bigWig file` is a binary file reporting information about mapability, referred to a reference assembly. Mapability files for hg19 and hg38 assemblies are provided with the XCAVATOR package and they are present in the `/../XCAVATOR/data` folder. They were created by using the GEM mapper aligner belonging to the GEM suite (http://gemlibrary.sourceforge.net/), allowing up to two mismatches and considering sliding windows of 100mer.
 
-myWindow represents the distance between start and end (in bp) of consecutive and non-overlapping windows of the genome that will be used by XCAVATOR to calculate read counts. myWindow must be an integer number (e.g. 100,200,500,1000).
+`myWindow` represents the distance between start and end (in bp) of consecutive and non-overlapping windows of the genome that will be used by XCAVATOR to calculate read counts. `myWindow` must be an integer number (e.g. 100,200,500,1000).
 
 Setting the label name as "MyWindowLabelName", the `ReferenceWindowInitialize.pl` module will create a folder (if you are using the hg19 assembly) `/.../XCAVATOR/data/targets/hg19/MyLabelName` containing all files required for XCAVATOR analysis.
 
 
 
-#### XcavatorDataPrepare.pl
+##### XcavatorDataPrepare.pl
 
 
 `XCAVATORDataPrepare.pl` is a Perl script that performs RC or DOC calculation and normalization on multiple .bam files. It takes as input an experimental file and four command-line options to run properly:
@@ -313,11 +617,11 @@ Setting the label name as "MyWindowLabelName", the `ReferenceWindowInitialize.pl
 perl XCAVATORDataPrepare.pl FilePrepare.txt --processors 7 --target MyLabelName --mode DOC --assembly hg19
 ```
 
-The text file (e.g. `FilePrepare.txt`, that you have to create) contains details about all .bam files you want to analyse. The options concern the number of processors to use (–processors), the name of the target (MyLabelName, with window size and GC and mappability informations), the mode (RC for short reads and DOC for long reads, PacBio and Nanopore) and the human assembly you used for the mapping (–assembly). Available options for assembly are hg19 and hg38.
+The text file (e.g. `FilePrepare.txt`, that you have to create) contains details about all .bam files you want to analyze. The options concern the number of processors to use (–processors), the name of the target (MyLabelName, with window size and GC and mapability informations), the mode (RC for short reads and DOC for long reads, PacBio and Nanopore) and the human assembly you used for the mapping (–assembly). Available options for assembly are hg19 and hg38.
 
-Before running `EXCAVATORDataPrepare.pl` you need to create a space delimited file with three fields: the absolute path to the .bam file you want to analyse, the path to the main sample output folder and the sample name. The sample name will be used as a prefix/suffix for output files. Each row in the file contains details about one sample. For each sample, the main output folder specified in the second filed of the `ExperimentalFilePre- pare.window.txt` will be created.
+Before running `EXCAVATORDataPrepare.pl` you need to create a space delimited file with three fields: the absolute path to the .bam file you want to analyze, the path to the main sample output folder and the sample name. The sample name will be used as a prefix/suffix for output files. Each row in the file contains details about one sample. For each sample, the main output folder specified in the second filed of the `ExperimentalFilePre- pare.window.txt` will be created.
 
-#### XcavatorDataAnalysis.pl
+##### XcavatorDataAnalysis.pl
 
 `XCAVATORDataAnalysis.pl` is a multi-threading Perl that performs the segmentation of the RC/DOC by means of the Shifting Level Model algorithm and exploits FastCall algorithm to classify each segmented region as one of the five possible discrete states (2-copy deletion, 1-copy deletion, normal, 1-copy duplication and N-copy amplification). `XCAVATORDataAnalysis.pl` takes as input one file and four options. This is an example of the cmd:
 
@@ -327,9 +631,9 @@ perl XCAVATORDataAnalysis.pl FileAnalysis.txt --processors 6 --target MyLabelNam
 
 MyLabelName and assembly must be the same used in `XCAVATORDataPrepare.pl` step. The input file is a space delimited text file that contains three fields, the second and the third are the same as in FilePrepare.txt, while the first is a label which specifies how to handle and compare the samples. Labels are Cx (for controls, with x=1,2,3…) and Ty (with y=1,2,3….).
 
-XCAVATOR allows to analyze samples in three different ways: paired, nocontrol and pooling. In pooling, all test samples will be compared with the same global control obtained by combining all control samples (all the samples with Cx label will be collapsed to a pooled control sample). In paired, each test sample is compared with its control sample (T1-C1, T2-C2,….) and this analysis mode is best suited for the identification of somatic CNV of matched tumor/control samples. In "nocontrol" mode each test sample is analyzed without using a control and the `FileAnalysis.txt` file only needs Ty labels.
+XCAVATOR allows to analyze samples in three different ways: paired, no control and pooling. In pooling, all test samples will be compared with the same global control obtained by combining all control samples (all the samples with Cx label will be collapsed to a pooled control sample). In paired, each test sample is compared with its control sample (T1-C1, T2-C2,….) and this analysis mode is best suited for the identification of somatic CNV of matched tumor/control samples. In "no control" mode each test sample is analyzed without using a control and the `FileAnalysis.txt` file only needs Ty labels.
 
-An example of well formatted `FileAnalysis.txt` for pooling, paired and nocontrol mode is reported in the XCAVATOR main folder.
+An example of well formatted `FileAnalysis.txt` for pooling, paired and no control mode is reported in the XCAVATOR main folder.
 
 All the results of the analyses are stored in the `OutputFolder` that contains two main subfolders: `Plots` and `Results.` The `Plots` folder contains .pdf files reporting the segmented genomic profiles and statistically significant genomic regions (chromosome by chromosome) for each test sample (follow `/.../Plots/SampleName/`).
 
@@ -337,7 +641,7 @@ The `Results/SampleName/` folder contains .txt and .vcf files with the results p
 
 Moreover, XCAVATOR also produces a .vcf file (`ExcavatorRegionCall_SampleName.vcf`) with details about identified CNVs. The VCF (Variant Call Format) is a text file of nine fields used to store sequence variations. Each row contains details about a CNV: the starting breakpoint is specified in POS field, the end and the length of the CNV are in the INFO field (END and SVLEN id).
 
-#### Algorithms Parameters
+##### Algorithms Parameters
 
 SML and FastCall parameters are stored in the ParameterFile.txt in the main folder of the tool. For LSM algorithm the user can set the value of Omega in the range 0.0 − 1.0, Theta (0.0 − 1.0) and D_norm. We suggest to use Omega (0.1 − 0.5), Theta (10^−7 −10^−3) and D_norm (10^4 −10^6). For FastCall algorithm the user may set the parameters: Cellularity (0.0−1.0) is the fraction of tumor cells (change this value only for somatic analyses), Threshold d (recommended 0.2−0.6) is the lower bound for the truncated gaussian of the neutral (2 copies) state, Threshold u (recommended 0.1 − 0.4) is the upper bound for the truncated gaussian of the neutral (2 copies) state.
 
@@ -348,8 +652,9 @@ SML and FastCall parameters are stored in the ParameterFile.txt in the main fold
 
 Juan had tried using contra in the past which did not work.
 
-#### from: Juan 6/13/2019
 
+<details>
+  <summary>**from: Juan 6/13/2019**</summary>
 Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
 
 
@@ -436,18 +741,31 @@ OSError: [Errno 2] No such file or directory
 
 ```
 
+
+</details>
+
+
+
+
 ***
 
 ## Exome data
 
-#### from: Andrew 6/14/19
 
+<details>
+  <summary>**from: Andrew re wes location 6/14/19**</summary>
+```{remark}
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
+```
 
-#### from: Christy re coverage data 7/10/19
+</details>
 
+
+<details>
+  <summary>**from: Christy re coverage data 7/10/19**</summary>
+```{remark}
 Just realized I didn't send you the final coverage data. My apologies.
 The data is now here: `/home/nelsona2/shared/ovarian_Jan2019/DNA_project/coverage`
 There are 3 excel files with coverage as listed below. (There is also a README.txt in the above directory with the same information.) Let me know if you have any questions!
@@ -464,10 +782,117 @@ Coverage by chromosome, gene and exon using a bed file created by using the S076
 OvCA_exome_fullreduce_coverage.xlsx
 Coverage by chromosome and exon. Same bed file as in OvCA_exome_exon_flattened_coverage.xlsx, however instead of only merging overlapping exons if they occurred w any overlapping exons were merged with each other, regardless of gene. This gives us a bed file with any base in the capture only counted once for coverage
  purposes, even if it is included in multiple exons in the same or different genes.
+```
+
+</details>
+
+<details>
+  <summary>**Call w/ Rebecca re wes processing 7/23/19**</summary>
+
+Topic: wes data processing and prep
+
+I was able to finally connect with Rebecca and discuss the nature of the wes data processing that took place earlier this year. It sounds like there has been some distance between when they were actually working on this and now. Nonetheless, she was able to share some general information on their process, which will be very helpful.
+
+```{r}
+Description
+------------------------------------------------------------
+mtg with rebecca
+  2019-07-17 what is the reference assembly for the wes data
+  2019-07-17 file naming conventions
+  2019-07-17 what is a reasonable window size
+  2019-07-18 what is the nature of our controls
+  2019-07-18 do we have fasta files
+
+1 task
+```
+
+**Notes**
+
+* All processing was done in MSI scratch due to the large resource use.
+* The data is stored in 2nd tier storage right now as a result.
+* BAM files might also be in 2nd tier storage.
+* The location of the data is `/nelsona2/shared/ovarian_Jan2019/DNA_project`.
+* The directory `/ovarian_Jan2019/singlesamples`, which I had thought was the directory of interest, contains the data for the RNAseq project.
+* The sc and wes data were mapped using different reference genomes. sc - GR38 and wes - GR37. **This could be a problem.**
+    - We might need to remap the wes data to GR38.
+    - I clarified with Tim that GRCh37 and hg19 are the same, so I should be able to use hg19 as my reference.
+* I need to do a search of `/DNA_project` to see if there are any usable sequence files in there.
+* RL is going to move a small dataset from aws so that I can begin a pilot analysis.
+* The Freebayes params may be relevant, I should look into those.
+
+**Process**
+
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+
+Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
+
+* Important scripts are located in `/DNA_project/scanindel_mod`.
+* The probe pull down included some non-coding regions.
+    - The assumption was that there may be a relevant impact on the coding regions in some cases, so these elements should be recovered and selectively filtered out.
+* ClinVar was used to apply annotation to variance that matches existing clinical reference.
+
+</details>
+
+### Fastq dir
+
+The wes data can be found at the msi dir below:
+
+* `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+
+### Processing
+
+**Project dir**
+
+* `/nelsona2/shared/ovarian_Jan2019/DNA_project`
+
+**Pipeline**
+
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+
+* All processing was done in MSI scratch due to the large resource use.
+* The data is stored in 2nd tier storage right now as a result.
+* BAM files might also be in 2nd tier storage.
+* The location of the data is `/nelsona2/shared/ovarian_Jan2019/DNA_project`.
+* The directory `/ovarian_Jan2019/singlesamples`, which I had thought was the directory of interest, contains the data for the RNAseq project.
+* The sc and wes data were mapped using different reference genomes. sc - GR38 and wes - GR37. **This could be a problem.**
+    - We might need to remap the wes data to GR38.
+    - I clarified with Tim that **GRCh37 and hg19 are the same**, so I should be able to use hg19 as my reference.
+* I need to do a search of `/DNA_project` to see if there are any usable sequence files in there.
+* RL is going to move a small dataset from aws so that I can begin a pilot analysis.
+* The Freebayes params may be relevant, I should look into those.
 
 ***
 
-## CNV w/ scRNA @Tirosh2016
+## Jason's Work
+
+
+Jason sent me his working directory for the early phase of the CNV project. It is located at
+
+* `/starr_lab/ocpmi/methods/jason_cnv`
+
+
+<details>
+  <summary>**from: Jason 6/15/19**</summary>
+```{remark}
+I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
+
+As you may know, the single cell data isn’t really fit for gene-level CNV analysis because only 10-15% of the gene space is covered. So my approach was to look at the average expression level of all genes measured in each chromosome arm, for each cell. I scaled these average values across all the cells (vertically in the figures) that we had annotated as non-epithelial cells. The heatmaps show chromosome arms across the X axis and individual cells across the Y axis. So, rather than looking for CNV in a gene, I’m looking for entire chromosome arm amplifications & deletions.
+
+One useful file will be “ENSEMBLgenes.csv” which indicates the chromosome number and location of each gene. Also, in the CNV.Rmd notebook I have hardcoded the centromere position of each chromosome. Together these will allow you to explore average gene expression by chromosome arm.
+
+Please note that if you are using the most recent patient data from Tim, there will be more cells in each patient because we re-ran the Cell Ranger pipeline since I did this analysis. We have also updated the cell type annotation for each cell since I’ve done this.
+
+The vertical colored bar on the left of the heatmaps show the cell type. They are colored according to “Picture1.png”. On the right side of the heatmaps in small font you will see the cluster number and the annotated cell type according to our outdated Seurat pipeline.
+
+If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
+```
+</details>
+
+***
+
+## Reference
+
+#### CNV w/ scRNA @Tirosh2016
 
 This paper is the only other case Tim is aware of where a group was able to effectively show CNV in single cell expression data.
 
@@ -476,7 +901,7 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * The analysis produced the conclusion that these cells display 2 distinct developmental programs.
 * Subclonal point mutation and insitu hybridization was also done as verification of these results.
 
-#### CNV Method
+##### CNV Method
 
 * Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectively created "bins" of expression level to define relative changes in expression.
 * They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
@@ -485,7 +910,7 @@ This paper is the only other case Tim is aware of where a group was able to effe
 
 ***
 
-## Comparing CNV tools @Zare2017
+#### Comparing CNV tools @Zare2017
 
 This paper explored a comparative analysis between current CNV analysis tools that operate in the context of whole exome sequencing which in wide use in the field. The group narrowed the landscape down to just 5 tools that meet a few criteria.
 
@@ -503,7 +928,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Look at table 1 for feature breakdown
 * Look at table 4 for performance summary
 
-#### ADTEx
+##### ADTEx
 
 * Newest of the tools they evaluated
 * Has ability to leverage BAF
@@ -511,28 +936,28 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Two Hidden Markov Models are used in detection.
 * CBS is used in segmentation
 
-#### Contra
+##### Contra
 
 * used for very small target regions.
 * normalizes read count and log ratios for each base.
 * better for reducing effect of GC bias.
 * addresses problem of very low coverage and GC bias.
 
-#### cn.MOPS
+##### cn.MOPS
 
 * Can use multiple samples for each genomics region to create a better estimate
 * Uses a non-overlapping sliding window.
 * Creates a null-hypothesis to measure distance to observed value.
 * Can reduce false discovery rate
 
-#### ExomeCNV
+##### ExomeCNV
 
 * Specifically design for WES data.
 * Can use BAF data
 * Counts overlapping reads from exons by using these counts for tumor and normal.
 * Can also detect loss of heterzygosity.
 
-#### VarScan2
+##### VarScan2
 
 * Also specifically designed for WES data from tumor-normal.
 * Does not use a sliding window.
@@ -540,7 +965,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Using Fischers test, consecutive bases do not change significantly are binned together.
 * Does not utilize a segmentation algorithm, CBS is advised.
 
-#### Results
+##### Results
 
 * The tools show low consistency.
 * only about 25% of the true amplified genes and deleted genes were identified by all tools in the gene-based comparison.
@@ -551,7 +976,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 * Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
 * A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
 
-#### Other tools
+##### Other tools
 
 * varsimlab to generate synthetic cnv
 * cghmcr to identify cnv genes using refseq gene id
@@ -559,36 +984,8 @@ This paper explored a comparative analysis between current CNV analysis tools th
 
 ***
 
-## Jason's Work
 
 
-Jason sent me his working directory for the early phase of the CNV project. It is located at
-
-* `/starr_lab/ocpmi/methods/jason_cnv`
-
-#### from: Jason 6/15/19
-
-I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
-
-As you may know, the single cell data isn’t really fit for gene-level CNV analysis because only 10-15% of the gene space is covered. So my approach was to look at the average expression level of all genes measured in each chromosome arm, for each cell. I scaled these average values across all the cells (vertically in the figures) that we had annotated as non-epithelial cells. The heatmaps show chromosome arms across the X axis and individual cells across the Y axis. So, rather than looking for CNV in a gene, I’m looking for entire chromosome arm amplifications & deletions.
-
-One useful file will be “ENSEMBLgenes.csv” which indicates the chromosome number and location of each gene. Also, in the CNV.Rmd notebook I have hardcoded the centromere position of each chromosome. Together these will allow you to explore average gene expression by chromosome arm.
-
-Please note that if you are using the most recent patient data from Tim, there will be more cells in each patient because we re-ran the Cell Ranger pipeline since I did this analysis. We have also updated the cell type annotation for each cell since I’ve done this.
-
-The vertical colored bar on the left of the heatmaps show the cell type. They are colored according to “Picture1.png”. On the right side of the heatmaps in small font you will see the cluster number and the annotated cell type according to our outdated Seurat pipeline.
-
-If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
-
-***
-
-# Awesome single cell repo
-
-I found a really comprehensive list of single cell analysis tools at the github below.
-
-* https://github.com/seandavi/awesome-single-cell
-
-***
 
 # CCGD Upgrade
 
@@ -596,7 +993,393 @@ I found a really comprehensive list of single cell analysis tools at the github 
 
 * `/home/chris/starr_lab/ccgd/refs/CCGD Project.docx`
 
+#### Server Script Conversations
+
+<details>
+  <summary>**From Ken re COSMIC changes**</summary>
+
+```{remark}
+Possibly--I'll have to see the new file to be sure. We rely on the "gene_name" column in CosmicMutantExport.tsv.gz and the "symbol" column in cancer_gene_census.csv to match our data, and those are the first columns in the files. If they do nothing more than add columns to these files, they may be truncated during loading, and that may not matter so long as the "gene_name" and "symbol" columns are still in frame. I think it's conceivable that they may introduce new 1:many relationships in "gene_name" or "symbol" columns, but that could be handled with a DISTINCT clause in the SQL. The most painful possibility is that they (yet again) change their download process, but that has always been a surmountable problem in the past.
+
+
+
+By the way, would you like to renew my sponsored account (abbot195) for another year? There should be a 7/23 email about this in your inbox.
+
+
+
+-Ken
+```
+</details>
+
+### Server site
+
+I was finally able to get through on the access portion of the ccgd project. Sonya played an important role in initiating access, which was ultimately completed by Satish.
+
+* [ccgd-starrlab.oit.umn.edu](ccgd-starrlab.oit.umn.edu)
+
+The working directory for the website seems to be located at:
+
+* `/swadm/var/www/html`
+
+
+
+#### Server Access Conversations
+
+<details>
+  <summary>**Email thread with Satish to gain access**</summary>
+
+```{remark}
+Hi Jeff,
+
+Thank you for your response. oialinux@umn.edu was actually the first point of contact I made, and they directed me to HST. I've cc'd the contact who handled the this response.
+
+
+Satish,
+
+Would we be able to make sense of the discrepancy in administration here?
+
+
+
+
+
+Thank you,
+--
+Christopher Tastad
+
+<ctastad@gmail.com>
+Mobile: 612-817-7989
+
+
+On Wed, Jul 17, 2019 at 11:34 AM Jeffrey Sik <sikxx005@umn.edu> wrote:
+
+    Hi Christopher,
+
+    Unfortunately I do not have access to this box and digging further it looks like it's over on OIT's infrastructure. You could try emailing oialinux@umn.edu which is the linux group over there.
+
+    Hope this helps!
+    Thanks,
+
+
+    Jeffrey Sik
+
+    UNIVERSITY OF MINNESOTA
+       HST Systems Administrator
+       Email: sikxx005@umn.edu Phone: (612) 624-9148
+
+
+    On Fri, Jul 12, 2019 at 3:35 PM Christopher Tastad <tasta005@umn.edu> wrote:
+
+        Hello,
+
+        I'm forwarding this on looking for some assistance gaining access to a server that is under the management of HST. Would any of you be able to point me in the right direction?
+
+
+
+
+        Thank you,
+        --
+        Christopher Tastad
+
+        <ctastad@gmail.com>
+        Mobile: 612-817-7989
+
+
+        ---------- Forwarded message ---------
+        From: Christopher Tastad <tasta005@umn.edu>
+        Date: Tue, Jul 9, 2019 at 4:54 PM
+        Subject: Fwd: INC2271719 Update: tasta005@umn.edu - Server Access - CCGD Starr lab - INC2271719 satishs
+        To: <kell@umn.edu>
+        Cc: Tim Starr <star0044@umn.edu>
+
+
+        Hello,
+
+        I am reaching out on behalf of the Starr lab regarding an HST hosted server. I will be taking over a required upgrade for this server and need to start by getting access. The server is running RHEL, and I believe the host site is:
+
+        ccgd-starrlab.oit.umn.edu
+
+        Other points of contact I've been given are Jeffrey Sik, Colby Reese, Nathan Huff. If I should contact one of them, please let me know. Otherwise, please advise on how I should proceed.
+
+
+
+        Thank you,
+        --
+        Christopher Tastad
+
+        <ctastad@gmail.com>
+        Mobile: 612-817-7989
+
+
+        ---------- Forwarded message ---------
+        From: UMN Service Desk <help@umn.edu>
+        Date: Tue, Jul 9, 2019 at 10:20 AM
+        Subject: INC2271719 Update: tasta005@umn.edu - Server Access - CCGD Starr lab - INC2271719 satishs
+        To: <tasta005@umn.edu>
+
+
+
+        Additional comments:
+        2019-07-09 10:20:14 CDT - Satish Chowdary Sadineedi (satishs) Additional comments
+        Hi Chris ,
+
+        The authorized requestors listed on this host are reese007, kell, nrhuff, sikxx005 and it belongs to HST. . Could you ask one of the authorized requestors to approve this request ?
+
+        Thanks,
+        Satish
+
+        You can track the status of your ticket INC2271719 at any time.
+
+        If you would like to provide more information, please reply to this email to update your ticket.
+
+        Ref:MSG25438236
+
+
+```
+
+</details>
+
+<details>
+  <summary>**Email thread with Sonya to gain access**</summary>
+
+```{remark}
+Hi, Christopher.
+
+Not a problem. I've asked Satish to grant you access to that server. I've added myself to the watchlist on the ticket.
+
+Thanks,
+Sonya
+---------------------------------------------------------------------
+Sonya Smith Šustáček
+Project Manager & Business/Systems Analyst (Infrastructure Services)
+Office of Information Technology | it.umn.edu
+University of Minnesota | umn.edu
+ssustace@umn.edu | 612.301.2128
+
+“We must accept finite disappointment, but never lose infinite hope.”  -- Martin Luther King, Jr.
+
+
+On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
+
+    Hi Sonya,
+
+    I am reaching out on behalf of the Starr lab regarding a University hosted server. I will be taking over a required upgrade for this server and need to start by getting access.
+
+    With this, I have been having some trouble identifying who owns the administration of the server. Both OIT and HST have indicated that the other is the manager. I still have active threads with them to see if we can sort it out, but I wanted to make another point of contact since this has been a multi week process.
+
+    I've been told reese007, kell, nrhuff, sikxx005 at HST are authorized requestors and have reached out to them with the only response being that OIT is the owner of the space.
+
+    For reference, the server site is below, and my OIT ticket is INC2271719.
+
+    ccgd-starrlab.oit.umn.edu
+
+    Any assistance would be greatly appreciated.
+
+
+
+    --
+    Christopher Tastad
+
+    <ctastad@gmail.com>
+    Mobile: 612-817-7989
+
+
+    ---------- Forwarded message ---------
+    From: Timothy Starr <star0044@umn.edu>
+    Date: Wed, Jul 17, 2019 at 4:50 PM
+    Subject: Fwd: Strategy to migrate ccgd-starrlab to a RHEL 7 Server
+    To: Christopher Tastad <tasta005@umn.edu>
+
+
+
+
+>     Begin forwarded message:
+>
+>     From: Sonya Sustacek <ssustace@umn.edu>
+>     Subject: Re: Strategy to migrate ccgd-starrlab to a RHEL 7 Server
+>     Date: April 10, 2019 at 11:26:33 AM CDT
+>     To: Ken Abbott <abbot195@umn.edu>
+>     Cc: John Trammell <tram0004@umn.edu>, Tim Starr <star0044@umn.edu>, Thomas Kell <kell@umn.edu>
+>
+>     Hi, Ken.
+>
+>     It's okay that you cannot attend this meeting. Thanks so much for the information. This is helpful.
+>
+>     There are a couple of issues that I think it's better for Tim, HST rep, and Linux rep to get together to hammer out and make clear.
+>
+>     HST can request a new server for Dr. Starr. Then the question is who migrates the website (and updates Phython) to the new server? Who will support it? Does it make sense to move the site to Drupal?
+>
+>     We (OIT) just want to know where we go from here as things have stalled a bit.
+>
+>     Again, thanks for you help and good luck with medical school. :-)
+>
+>     Best,
+>     Sonya
+>     ---------------------------------------------------------------------
+>     Sonya Smith Šustáček
+>     Project Manager & Business/Systems Analyst (Infrastructure Services)
+>     Office of Information Technology | it.umn.edu
+>     University of Minnesota | umn.edu
+>     ssustace@umn.edu | 612.301.2128
+>
+>     “We must accept finite disappointment, but never lose infinite hope.”  -- Martin Luther King, Jr.
+>
+>
+>     On Tue, Apr 9, 2019 at 8:49 PM <abbot195@umn.edu> wrote:
+>
+>         Hi folks. I built this site for Tim in 2012. I’m a medical student doing 100-hour weeks (until December) so I cannot make it to this meeting, but I hope we can exchange some information via email. I think the best bet is just another RHEL server—with only a few webpages here, I think we don’t need a platform, and it could be a pain to adapt what we have now to work with a platform. I may be able to help with this, but I cannot really speculate much about how much I will be able to accomplish, according to any timetable; I would appreciate a labor estimate (and description of any known hurdles) from someone who has experience completing these RHEL migrations for other University entities.
+>
+>
+>
+>         -Ken
+>
+>
+>
+>         -----Original Appointment-----
+>         From: Google Calendar <calendar-notification@google.com> On Behalf Of Sonya Sustacek
+>         Sent: Tuesday, April 9, 2019 4:20 PM
+>         To: abbot195@umn.edu; John Trammell; Tim Starr; kell@umn.edu
+>         Subject: Strategy to migrate ccgd-starrlab to a RHEL 7 Server
+>         When: Friday, April 12, 2019 2:00 PM-2:50 PM (UTC-05:00) Eastern Time (US & Canada).
+>         Where: WBOB-523 OIT
+
+
+```
+
+</details>
+
 
 ***
+
+# Useful Repos
+
+## Awesome single cell repo
+
+I found a really comprehensive list of single cell analysis tools at the github below.
+
+* https://github.com/seandavi/awesome-single-cell
+
+## UCSC
+
+UCSC hosts what is effectivley the industry standard for reference genomic content.
+
+#### hg19 ref
+
+* http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/
+
+#### GR38 ref
+
+* http://hgdownload.cse.ucsc.edu/goldenpath/hg38/bigZips/
+
+#### Genome Browser
+
+* http://genome.ucsc.edu/cgi-bin/hgTables?command=start
+
+## 1kgp
+
+### IGSR
+
+This is a central resource to find data available from the 1kgp.
+
+* https://www.internationalgenome.org/data
+
+###FTP site
+
+This file provides an overview of the structure of the FTP site.
+
+####Top level of the site
+
+At the top level of the site, ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/, there are a number of files and directories.
+
+Files present in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/:
+ - README files: These provide information on a variety of topics related to this FTP site and the data it contains.
+ - CHANGELOG file: This file records alterations made to this FTP site.
+ - current.tree file: This file lists all directories and files currently present on this FTP site.
+
+Directories present in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/:
+- changelog_details
+- data
+- data_collections
+- historical_data
+- phase1
+- phase3
+- pilot_data
+- release
+- technical
+
+These directories and described in the next section of this file.
+
+###Directories
+
+####changelog_details
+
+This directory contains a series of files detailing the changes made to the FTP site over time.
+
+####data
+
+The data directory formerly housed data generated during the 1000 Genomes Project. The data that was previously located here has been integrated into data_collections and is present under ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/data. Further information on this move can be found in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data/README_data_has_moved.md.
+
+####data_collections
+
+The data_collections directory contains directories for various collections of data, typically generated by different projects. Among the data collections is the **1000 Genomes Project** data.
+
+For each collection of data, within the directory for that collection, README and index files provide information on the collection. Under each collection directory, there is a data directory, under which files are organised by population and then sample. Further information can be found in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/README_data_collections.md.
+
+####historical_data
+
+This directory was created during a rearrangement of the FTP site in September 2015. It houses README and index files that were formerly present at the toplevel of this site, including dedicated index directories. Further information is available in ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/historical_data/README_historical_data.md.
+
+####phase1
+
+This directory contains data that supports the publications associated with phase 1 of the 1000 Genomes Project.
+
+####phase3
+
+This directory contains data that supports the publications associated with phase 3 of the 1000 Genomes Project.
+
+####pilot_data
+
+This directory contains data that supports the publications associated with the pilot phase of the 1000 Genomes Project.
+
+####release
+
+The release directory contains dated directories which contain analysis results sets plus README files explaining how those data sets were produced.
+
+Originally, the date in release subdirectory names was the date on which the given release was made. Thereafter, the release subdirectory dates were based on the date in the name of the corresponding YYYYMMDD.sequence.index file. In future, the date in the directory name will be chosen in a manner appropriate to the data and the nature of the release.
+
+Examples of release subdirectories are:
+- ftp://ftp.1000genomes.ebi.ac.uk/release/2008_12/
+- ftp://ftp-trace.ncbi.nih.gov/1000genomes/release/2008_12/
+
+In cases where release directories are named based on the date of the YYYYMMDD.sequence.index, the SNP calls, indel calls, etc. in these directories are based on alignments produced from data listed in the  YYYYMMDD.sequence.index file.
+
+For example, the directory
+ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20100804/
+contains the release versions of SNP and indel calls based on the
+ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/historical_data/former_toplevel/sequence_indices/20100804.sequence.index
+file.
+
+####technical
+
+The technical directory contains subdirectories for other data sets such as simulations, files for
+method development, interm data sets, reference genomes, etc..
+
+An example of data stored under technical is ftp://ftp.1000genomes.ebi.ac.uk/technical/simulations/.
+
+***WARNING: ftp://ftp.1000genomes.ebi.ac.uk/technical/working/***
+
+The working directory under technical contains data that has experimental (non-public release) status
+and is suitable for internal project use only. Please use with ***caution***.
+
+###Further information
+
+Should you require further assistance in navigating the FTP site, please contact info@1000genomes.org.
+
+***
+
+## Samtools
+
+### Format Specs
+
+* https://samtools.github.io/hts-specs/SAMv1.pdf
 
 # References
