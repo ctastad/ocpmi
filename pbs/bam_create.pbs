@@ -9,8 +9,6 @@
 cd ~/ocpmi/bam/wes
 module load bwa
 module load samtools
+module load parallel
 
-for i in ./*.fastq;
-do
-    bwa mem -t 8 ~/ocpmi/gene_ref/hg38.fa $i.fastq | samtools sort -@8 -o $i.bam -;
-done
+ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort -o {.}.bam'
