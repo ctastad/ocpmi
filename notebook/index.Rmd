@@ -3005,7 +3005,7 @@ ID Age P Project Tags   Description                                         Urg
 
 *msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
-### vs2 pileup creation
+### vs2 Pilot w/ 1kgp GR38
 
 To get started on the vs2 pipeline, I've decided to work with the same 1kgp bam files I have available for excv2. In the event both work, I'll hopefully be able to compare the results.
 
@@ -3078,7 +3078,7 @@ ID Age  P Project Tags   Description                                   Urg
 
 ### BAM Creation
 
-I belive I've finished the process of converting a couple fastq files to bam files. I'm going to run these through the vs2 and excv2 pipelines to see if they will take.
+I believe I've finished the process of converting a couple fastq files to bam files. I'm going to run these through the vs2 and excv2 pipelines to see if they will take.
 
 * src: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
 * dir: `~/ocpmi/bam/ocpmi/pilot`
@@ -3090,21 +3090,135 @@ I belive I've finished the process of converting a couple fastq files to bam fil
 
 *fastq &rarr; `index` (bwa bwtsw) &rarr; align (bwa mem) + `sort` (samtools) &rarr;*  ***output.bam***
 
-### vs2 Pilot
+Since it seems like I have this process down, I'm going to begin the transfer of all fastq files at the src dir.
+
+### vs2 Pilot w/ 1kgp GR38
+
+I was able to create pile up files that will allow me to continue along the vs2 pipeline pilot test. I'm going to test these two using the `copynumber` function listed in the vs2 man. That function uses inputs from tumor and normal samples, so I will arbitrarily assign normal to `NA10847` and tumor to `NA19131`.
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
+* output: `na10847.mpileup` (normal), `na19131.mpileup` (tumor)
+* dir: `~/ocpmi/bam/1kgp`
 * gene_ref: `hg38.fa`, via UCSC
 
-*BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; cnv output?*
+**Process**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
+
+#### Trbl
+
+I ran the vs2 `copynumber` function on my `na10847.mpileup` (normal), `na19131.mpileup` (tumor) samples. For some reason, only chr1 was processed.
+
+```{r}
+java -jar VarScan.v2.4.4.jar copynumber ~/ocpmi/bam/1kgp/na10847.mpileup ~/ocpmi/bam/1kgp/na19131.mpileup test_output
+```
+
+<details>
+  <summary>**copynumber Output**</summary>
+
+```{r}
+Normal Pileup: /home/starrt2/tasta005/ocpmi/bam/1kgp/na10847.mpileup
+Tumor Pileup: /home/starrt2/tasta005/ocpmi/bam/1kgp/na19131.mpileup
+NOTICE: While dual input files are still supported, using a single mpileup file (normal-tumor) with the --mpileup 1 setting is strongly recommended.
+Min coverage:   10
+Min avg qual:   15
+P-value thresh: 0.01
+53515932 positions in tumor
+53395419 positions shared in normal
+10800306 had sufficient coverage for comparison
+120744 raw copynumber segments with size > 10
+120740 good copynumber segments with depth > 10
+
+```
+
+</details>
+
+For the region that as processed, I was able to run `copyCaller` on `test_output.copynumber` and get an output.
+
+```{r}
+java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber
+```
+
+
+<details>
+  <summary>**copyCaller Output**</summary>
+
+241480 raw regions parsed
+89442 met min depth
+89442 met min size
+11573 regions (1131082 bp) were called amplification (log2 > 0.25)
+58753 regions (5816994 bp) were called neutral
+19116 regions (1843613 bp) were called deletion (log2 <-0.25)
+140 regions (7388 bp) were called homozygous deletion (normal cov >= 20 and tumor cov <= 5)
+
+</details>
 
 ### excv2 w/ 1kgp GR38
+
+I ran the EXCAVATORDataAnalysis.pl script over night, but it seems like there was an error with the output. I don't have any results figures even though msi gave an exit_status=0. I will try to trouble shoot in isub today.
 
 **excv2 pilot**
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
-*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; **`EXCAVATORDataAnalysis.pl`** &rarr; cnv output
+**Process**
+
+*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; **`EXCAVATORDataAnalysis.pl`** &rarr; cnv output*
+
+#### Trbl
+
+Running the following script produced an error regarding a JointSegIn Fortran function. I found a thread that points to issues with the bed file.
+
+* https://sourceforge.net/p/excavator2tool/tickets/1/
+
+
+```{r}
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target test_target_38 --assembly hg38 --output ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis --mode pooling
+
+```
+
+
+<details>
+  <summary>**EXCAVATORDataAnalysis.pl failed output**</summary>
+```{r}
+Checking output folders...
+'/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis' folder ready!
+Checking output subfolders...
+Creating '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis/Results' folder...
+Creating '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis/Plots' folder...
+'/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis/.tmp' folder ready!
+Creating Pooling Control!
+Pooling Control Created!
+Preparing Multiprocessor Analysis...
+Multiprocessor Analysis Complete
+Starting Multiprocessor Analysis!
+My Children: 29388
+Starting Segmentation and Calling...
+Read 23 items
+Error in JointSegIn(DataSeq1, muk, mi, smu, sepsilon, Pos1, omega, eta,  :
+  NA/NaN/Inf in foreign function call (arg 3)
+Calls: JointSegIn -> .Fortran
+Execution halted
+Segmentation and Calling Complete
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis/Results/NA19131/HSLMResults_NA19131.txt': No such file or directory
+Execution halted
+Multiprocessor Analysis Complete!
+```
+
+
+</details>
+
+I'll go back and and rerun the pipeline after sorting the bedfile.
+
+```{r}
+sort -k1,1 -k2,2n *.bed | bedtools merge
+```
+
 
 ***
 
@@ -3112,3 +3226,17 @@ I belive I've finished the process of converting a couple fastq files to bam fil
 
 
 
+
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-07-25 2019-08-01 7d  lab     contact oit re update policy and process
+2019-07-25 2019-08-01 7d  lab     start back up process for ccgd server
+2019-07-31 2019-08-01 1d  lab     call msi re isub closeout
+2019-07-23 2019-08-01 9d  lab     begin pilot with data from RL
+2019-07-29 2019-08-01 2d  lab     begin varscan2 testing
+2019-07-23 2019-08-01 9d  lab     explore application of vcf files in cnv
+                                  pipeline
+2019-08-01 2019-08-01 4h  lab     evaluate excv2 output
+2019-08-01 2019-08-01 4h  lab     explore process of job parallelization on msi
+
+8 tasks
