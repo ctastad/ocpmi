@@ -1,0 +1,9 @@
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N transfer
+#PBS -o logs/output
+#PBS -e logs/error
+cd /home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI
+cp ./* ~/ocpmi/bam/wes

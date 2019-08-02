@@ -6,8 +6,11 @@
 #PBS -o logs/output
 #PBS -e logs/error
 
-cd ~/ocpmi/bam
+cd ~/ocpmi/bam/wes
 module load bwa
 module load samtools
-bwa mem -t 8 ~/ocpmi/gene_ref/hg38.fa PM-15-T17-0910-1_S2_R1_001.fastq | samtools sort -@8 -o pm15.bam -
-bwa mem -t 8 ~/ocpmi/gene_ref/hg38.fa PM-2-T17-0307-3_S9_R1_001.fastq | samtools sort -@8 -o pm2.bam -
+
+for i in ./*.fastq;
+do
+    bwa mem -t 8 ~/ocpmi/gene_ref/hg38.fa $i.fastq | samtools sort -@8 -o $i.bam -;
+done
