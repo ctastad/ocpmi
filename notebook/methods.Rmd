@@ -165,7 +165,15 @@ kable(codes)
 
 ***
 
-# R
+# Notebook
+
+## Annotation
+
+For consistency in documenting the wide range of information, I want to have a systematic means of tracking this accross experimentation.
+
+* samples: ;
+* output:
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 
 ## Render .R -> .html
 
@@ -270,13 +278,12 @@ I am currently trying to get a wes pipeline to work using the following two bam 
 
 I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
 
-**First Samples**
-
-* dir: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* src: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+* dir: `~/ocpmi/bam/wes`
 * samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
 * gene_ref: `hg38.fa`, via UCSC
 
-*fastq &rarr; **`index` (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
+*fastq &rarr; `index` gene ref (bwa bwtsw) &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
 
 #### bwa
 
@@ -299,6 +306,16 @@ bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
 
 bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
 ```
+
+The following bash script should allow for iteration across all fastq files in a directory.
+
+```{r}
+for i in ./*.fastq;
+do
+    bwa mem -t 8 ~/ocpmi/gene_ref/hg38.fa $i.fastq | samtools sort -@8 -o $i.bam -;
+done
+```
+
 
 ## Varscan2
 
@@ -333,7 +350,7 @@ samtools mpileup -f [reference sequence] [BAM file(s)] > myData.mpileup
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, via UCSC
 
-*BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
 
 
 ***
@@ -357,7 +374,7 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
-*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+*msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 ### Excv2
 
@@ -366,8 +383,8 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 Decompress the Excavator package, then move to `.../excavator/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
 
 ```{r eval=F}
-F77> R CMD SHLIB F4R.f
-F77> R CMD SHLIB FastJointSLMLibraryI.f
+R CMD SHLIB F4R.f
+R CMD SHLIB FastJointSLMLibraryI.f
 ```
 
 This will create the .o and .so fortran libraries.
@@ -375,6 +392,23 @@ This will create the .o and .so fortran libraries.
 #### Important
 
 * Coherence of chromosome annotation among all files is necessary. (chrN vs N)
+* The target bed file must be sorted by chromosome number and region coordinate. No overlapping regions must be present in the target file.
+
+```{r}
+sort -k1,1 -k2,2n *.bed | bedtools merge > file_sorted.bed
+```
+
+#### Quick Start
+
+```{r}
+sort -k1,1 -k2,2n *.bed | bedtools merge > file_sorted.bed
+
+perl TargetPerla.pl SourceTarget.txt myTarget.bed MyTarget_w50000 50000 hg38
+
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --target MyTarget_w50000 --assembly hg38
+
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
+```
 
 #### Excavator2 Commands
 
