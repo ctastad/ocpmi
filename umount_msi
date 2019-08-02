@@ -1,0 +1,4 @@
+#!/bin/bash
+
+fusermount -u ~/starr_lab/msi_mnt/tasta005
+fusermount -u ~/starr_lab/msi_mnt/starrt2
