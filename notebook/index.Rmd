@@ -3101,9 +3101,12 @@ I was able to create pile up files that will allow me to continue along the vs2 
 * dir: `~/ocpmi/bam/1kgp`
 * gene_ref: `hg38.fa`, via UCSC
 
-**Process**
+
+**Start of day**
 
 *BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
+
+
 
 #### Trbl
 
@@ -3153,6 +3156,11 @@ java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber
 
 </details>
 
+
+**End of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
+
 ### excv2 w/ 1kgp GR38
 
 I ran the EXCAVATORDataAnalysis.pl script over night, but it seems like there was an error with the output. I don't have any results figures even though msi gave an exit_status=0. I will try to trouble shoot in isub today.
@@ -3162,7 +3170,7 @@ I ran the EXCAVATORDataAnalysis.pl script over night, but it seems like there wa
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
-**Process**
+**Start of day**
 
 *msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; **`EXCAVATORDataAnalysis.pl`** &rarr; cnv output*
 
@@ -3219,14 +3227,22 @@ I'll go back and and rerun the pipeline after sorting the bedfile.
 sort -k1,1 -k2,2n *.bed | bedtools merge
 ```
 
+**End of day**
 
-***
-
-# References
-
+*msi install &rarr; GR38 ref &rarr; bedfile sort &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 
+### Summary
 
+Today, I continued the 3 major threads I had started yesterday. The excv2 pipeline has produced a comparable error that leads me to a final attempt at getting the software to work. I may need to save the bed file doing the sort function, but I'm not sure about this. I'll run it one additional time after saving a sorted bed file to see if it makes a difference. If it doesn't, I will be done with excv2.
+
+The bam file creation looks to have worked fine, so I am extending that process to the entire set of fastq files. They are being transferred and extracted tonight.
+
+The vs2 process has worked to some degree at least producing actual copy number data. This is limited on the level that it only applied to chr1. It's possible the pileup creation is the issue here. I need to apply some additional processing to smooth this out the actual copy number data though in addition to segmentation. I haven't actually found what their suggested visualization method is either.
+
+#### Completed
+
+```{r}
 Created    Completed  Age Project Description
 ---------- ---------- --- ------- ----------------------------------------------
 2019-07-25 2019-08-01 7d  lab     contact oit re update policy and process
@@ -3240,3 +3256,34 @@ Created    Completed  Age Project Description
 2019-08-01 2019-08-01 4h  lab     explore process of job parallelization on msi
 
 8 tasks
+```
+
+## 2
+
+### TODO
+
+```{r}
+ID Age P Project Tags   Description                                   Urg
+-- --- - ------- ------ --------------------------------------------- ----
+64 9d    lab     w work explore freebayes params                      1.95
+79 23h   lab     n work run pm2 and pm15 bams through vs2/excv2        1.9
+80 23h   lab     n work run vs2 copy number function on 1kgp bams      1.9
+81 18h   lab     n work rerun excv2 with gr38 sorted bed               1.9
+82 18h   lab     n work trbl vs2 only processing chr1                  1.9
+42 10w L lab     work   agenda [3]                                    1.18
+40 10w L lab     w work review scripts for ccgd database               0.3
+41 10w L lab     w work explore shiny framework for database           0.3
+
+8 tasks
+```
+
+
+
+***
+
+# References
+
+
+
+
+

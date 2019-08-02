@@ -153,6 +153,10 @@ All of my pbs scripts are located at
 
 ### Exit Codes
 
+There is some documentation from Adaptive Computing here
+
+* http://docs.adaptivecomputing.com/torque/4-2-9/help.htm#topics/2-jobs/jobExitStatus.htm?Highlight=exit_status
+
 ```{r eval=T,echo=F}
 codes <- read.csv("/home/chris/starr_lab/ocpmi/notebook/csv/exit_codes.csv")
 kable(codes)
