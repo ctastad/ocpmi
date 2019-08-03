@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=16gb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N bam_create
@@ -7,8 +7,6 @@
 #PBS -e logs/error
 
 cd ~/ocpmi/bam/wes
-module load bwa
-module load samtools
-module load parallel
+module load bwa samtools parallel
 
 ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort -o {.}.bam'
