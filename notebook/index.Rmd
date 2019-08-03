@@ -35,15 +35,15 @@ h4 {
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
 
-The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `starr_lab/ocpmi/notebook/`) are collated on the `References` page.
+The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr Lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `starr_lab/ocpmi/notebook/`) are collated on the `References` page.
 
-### Git
+#### Git
 
 Version control was used throughout the development of this work and can be found at the University's private github server:
 
 https://github.umn.edu/tasta005/ocpmi.git
 
-### Contact
+#### Contact
 
 Christopher Tastad, MS Candidate
 
@@ -3000,6 +3000,7 @@ ID Age P Project Tags   Description                                         Urg
 
 **excv2 pilot**
 
+* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output`
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
@@ -3011,6 +3012,7 @@ To get started on the vs2 pipeline, I've decided to work with the same 1kgp bam 
 
 **vs2 pilot**
 
+* dir: `~/ocpmi/methods/varscan2`
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, via UCSC
 
@@ -3027,7 +3029,7 @@ I need to create new bam files from our source wes data since these files were l
 * samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
 * gene_ref: `hg38.fa`, via UCSC
 
-*fastq &rarr; **`index` (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
+*fastq &rarr; **`index` gene ref (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
 
 #### bwa
 
@@ -3057,7 +3059,7 @@ Currently, I have the vs2 and excv2 pipelines running in parallel. I've adjusted
 
 ***
 
-# Aug
+# August
 
 ## 1
 
@@ -3088,9 +3090,17 @@ I believe I've finished the process of converting a couple fastq files to bam fi
 
 **Process**
 
-*fastq &rarr; `index` (bwa bwtsw) &rarr; align (bwa mem) + `sort` (samtools) &rarr;*  ***output.bam***
+*fastq &rarr; `index` gene ref (bwa bwtsw) &rarr; align (bwa mem) + `sort` (samtools) &rarr;*  ***output.bam***
 
-Since it seems like I have this process down, I'm going to begin the transfer of all fastq files at the src dir.
+Since it seems like I have this process down, I'm going to begin the transfer of all fastq files at the src dir. The script below should allow me to iterate the bwa conversion process across all the files.
+
+```{r}
+for i in ./*.fastq;
+do
+    bwa mem -t 8 ~/ocpmi/gene_ref/hg38.fa $i.fastq | samtools sort -@8 -o $i.bam -;
+done
+
+```
 
 ### vs2 Pilot w/ 1kgp GR38
 
@@ -3098,14 +3108,13 @@ I was able to create pile up files that will allow me to continue along the vs2 
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * output: `na10847.mpileup` (normal), `na19131.mpileup` (tumor)
-* dir: `~/ocpmi/bam/1kgp`
+* src: `~/ocpmi/bam/1kgp`
 * gene_ref: `hg38.fa`, via UCSC
 
 
 **Start of day**
 
 *BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
-
 
 
 #### Trbl
@@ -3142,7 +3151,6 @@ For the region that as processed, I was able to run `copyCaller` on `test_output
 java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber
 ```
 
-
 <details>
   <summary>**copyCaller Output**</summary>
 
@@ -3156,7 +3164,6 @@ java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber
 
 </details>
 
-
 **End of day**
 
 *BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
@@ -3167,6 +3174,7 @@ I ran the EXCAVATORDataAnalysis.pl script over night, but it seems like there wa
 
 **excv2 pilot**
 
+* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output`
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, `hg38.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
@@ -3258,6 +3266,8 @@ Created    Completed  Age Project Description
 8 tasks
 ```
 
+***
+
 ## 2
 
 ### TODO
@@ -3277,13 +3287,94 @@ ID Age P Project Tags   Description                                   Urg
 8 tasks
 ```
 
+### Annotation
+
+For consistency in documenting the wide range of information, I want to have a systematic means of tracking this accross experimentation. Going forward I will try to use this general convention where files are listed by category followed by a directory if necessary.
+
+* samples: `file`; `/path/to/file/`
+* output: `/path/to/output/`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+### BAM Creation
+
+Looking at the bam files I created, I noticed they're all 92B in size. This is probably an indication something went wrong in their creation. The bwa script seems to work fine on its own, so I imagine the issue is the bash script I created.
+
+* samples: `*.fastq`; `~/ocpmi/bam/wes`
+* output: `~/ocpmi/bam/wes`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+I'm trying a new script I found on biostars that uses gnu-parallel. I'll run this overnight on all files in the `/wes` directory and see where that gets me.
+
+* https://www.biostars.org/p/231491/
+
+```{r}
+cd ~/ocpmi/bam/wes
+module load bwa samtools parallel
+
+ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort -o {.}.bam'
+
+```
+
+### vs2 Pilot w/ 1kgp GR38
+
+* samples: `test_output.copynumber`; `~/ocpmi/methods/varscan2`
+* output: `copyCall_test_output.txt`; `~/ocpmi/methods/varscan2`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
+
+```{r}
+java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber > copyCall_test_output.txt 2>&1
+```
+
+I set created a file containing the output for this function but didn't take time to make sense of it. Running segmentation will be a little more invovled since this isn't an included functionality in vs2, and I don't have a plan of attach currently. The vs2 man suggests using the `DNAcopy` package from BioC, which employs the CBS algorithm.
+
+* https://www.bioconductor.org/packages/2.3/bioc/html/DNAcopy.html
+
+**End of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; **segmentation** &rarr; ?*
+
+### excv2 w/ 1kgp GR38
+
+* samples: `NA10847`, `NA19131` via 1kgp phase3; `~/ocpmi/bam/1kgp`
+* output: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output`
+* gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
+
+**Start of day**
+
+*sorted bed + GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; `EXCAVATORDataAnalysis.pl` &rarr;* ***cnv output***
+
+It seems like this actually worked. Unbelievable. In hindsight, I did a variety of things wrong, but it seems like I would be able to employ this pipeline across a full scale of samples now.
+
+### Summary
+
+I'm continuing to make progress on the three tandem processes I have going. I believe I can say the excv2 pipeline officially produced a complete result today making that the first of my time in the lab. woot. The bam files I thought I had created last night turned out to be faulty, so I am currently re-running that process with a new script. Additionally, I have a `copyCaller` output from vs2 that I could possibly feed into a segmentation algorithm of my choosing. Taken together, I think I'll be able to run the full data set soon.
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-08-01 2019-08-02 1d  lab     reply to oit help ticket re upgrad process
+2019-08-01 2019-08-02 1d  lab     update exit codes table
+2019-08-01 2019-08-02 1d  lab     extract wes fastq
+2019-08-01 2019-08-02 1d  lab     convert wes fastq to bam
+2019-08-01 2019-08-02 1d  lab     transfer wes fastq from nelsona2
+2019-08-01 2019-08-02 1d  lab     rerun excv2 with gr38 sorted bed
+2019-08-01 2019-08-02 1d  lab     run vs2 copy number function on 1kgp bams
+2019-08-02 2019-08-02 3h  lab     learn if theres a remote access to msi for at
+                                  ups
+
+8 tasks
+```
+
 
 
 ***
 
 # References
-
-
-
 
 
