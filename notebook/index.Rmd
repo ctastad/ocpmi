@@ -3297,13 +3297,13 @@ For consistency in documenting the wide range of information, I want to have a s
 
 ### BAM Creation
 
-Looking at the bam files I created, I noticed they're all 92B. This is probably an indication something went wrong in their creation. The bwa script seems to work fine on its own, so I imagine the issue is the bash script I created.
+Looking at the bam files I created, I noticed they're all 92B in size. This is probably an indication something went wrong in their creation. The bwa script seems to work fine on its own, so I imagine the issue is the bash script I created.
 
 * samples: `*.fastq`; `~/ocpmi/bam/wes`
 * output: `~/ocpmi/bam/wes`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 
-I'm trying a new script I found on biostars that uses gnu-parallel.
+I'm trying a new script I found on biostars that uses gnu-parallel. I'll run this overnight on all files in the `/wes` directory and see where that gets me.
 
 * https://www.biostars.org/p/231491/
 
@@ -3311,11 +3311,31 @@ I'm trying a new script I found on biostars that uses gnu-parallel.
 cd ~/ocpmi/bam/wes
 module load bwa samtools parallel
 
-ls *.fastq | parallel -j 2 'bwa mem -t 4 ~/ocpmi/gene_ref/hg38.fa {} | samtools sort -@4 -o {.}.bam'
+ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort -o {.}.bam'
+
 ```
 
-
 ### vs2 Pilot w/ 1kgp GR38
+
+* samples: `test_output.copynumber`; `~/ocpmi/methods/varscan2`
+* output: `copyCall_test_output.txt`; `~/ocpmi/methods/varscan2`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
+
+```{r}
+java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber > copyCall_test_output.txt 2>&1
+```
+
+I set created a file containing the output for this function but didn't take time to make sense of it. Running segmentation will be a little more invovled since this isn't an included functionality in vs2, and I don't have a plan of attach currently. The vs2 man suggests using the `DNAcopy` package from BioC, which employs the CBS algorithm.
+
+* https://www.bioconductor.org/packages/2.3/bioc/html/DNAcopy.html
+
+**End of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; **segmentation** &rarr; ?*
 
 ### excv2 w/ 1kgp GR38
 
@@ -3326,6 +3346,10 @@ ls *.fastq | parallel -j 2 'bwa mem -t 4 ~/ocpmi/gene_ref/hg38.fa {} | samtools 
 **Start of day**
 
 *sorted bed + GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; `EXCAVATORDataAnalysis.pl` &rarr;* ***cnv output***
+
+It seems like this actually worked. Unbelievable. In hindsight, I did a variety of things wrong, but it seems like I would be able to employ this pipeline across a full scale of samples now.
+
+
 
 ***
 

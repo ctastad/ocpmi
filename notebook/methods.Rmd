@@ -105,25 +105,29 @@ chooseCRANmirror(ind=2)
 
 #### Auto mount
 
-I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script. This is located at `/home/chris/starr_lab/automnt_msi` on my local machine.
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script, which is called `mnt_msi` located in `/usr/bin` on my local machine.
 
 ```{r eval=F}
 #!/bin/bash
 
 sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt/tasta005
 sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2
+sshfs tasta005@login.msi.umn.edu:/home/nelsona2/ ~/starr_lab/msi_mnt/nelsona2/
+sshfs tasta005@login.msi.umn.edu:/panfs/roc/data_release/3/bmgc/ ~/starr_lab/msi_mnt/bmgc/
 
 ```
 
-#### Unmount
+**Unmount**
 
-I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an executable for this, `umount_msi`, in the same directory.
+I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an executable for this, `umnt_msi`, in the same directory.
 
 ```{r eval=F}
 #!/bin/bash
 
-fusermount -u msi_mnt/tasta005
-fusermount -u msi_mnt/starrt2
+fusermount -zu ~/starr_lab/msi_mnt/tasta005
+fusermount -zu ~/starr_lab/msi_mnt/starrt2
+fusermount -zu ~/starr_lab/msi_mnt/nelsona2
+fusermount -zu ~/starr_lab/msi_mnt/bmgc
 
 ```
 
@@ -170,10 +174,11 @@ kable(codes)
 ## Annotation
 
 For consistency in documenting the wide range of information, I want to have a systematic means of tracking this accross experimentation.
-
-* samples: ;
-* output:
+```{r}
+* samples: ``; ``
+* output: ``
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+```
 
 ## Render .R -> .html
 
@@ -394,29 +399,33 @@ This will create the .o and .so fortran libraries.
 * Coherence of chromosome annotation among all files is necessary. (chrN vs N)
 * The target bed file must be sorted by chromosome number and region coordinate. No overlapping regions must be present in the target file.
 
-```{r}
-sort -k1,1 -k2,2n *.bed | bedtools merge > file_sorted.bed
-```
-
 #### Quick Start
-
-```{r}
-sort -k1,1 -k2,2n *.bed | bedtools merge > file_sorted.bed
-
-perl TargetPerla.pl SourceTarget.txt myTarget.bed MyTarget_w50000 50000 hg38
-
-perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --target MyTarget_w50000 --assembly hg38
-
-perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
-```
-
-#### Excavator2 Commands
 
 The Excv2 workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
 
-* `TargetPerla.pl`
-* `EXCAVATORDataPrepare.pl`
-* `EXCAVATORDataAnalysis.pl`
+0. bed file sort
+
+```{r}
+sort -k1,1 -k2,2n *.bed | bedtools merge > file_sorted.bed
+```
+
+1. `TargetPerla.pl`
+
+```{r}
+perl TargetPerla.pl SourceTarget.txt myTarget.bed MyTarget_w50000 50000 hg38
+```
+
+2. `EXCAVATORDataPrepare.pl`
+
+```{r}
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --target MyTarget_w50000 --assembly hg38
+```
+
+3. `EXCAVATORDataAnalysis.pl`
+
+```{r}
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
+```
 
 #### TargetPerla.pl
 
