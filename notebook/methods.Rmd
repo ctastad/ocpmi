@@ -110,8 +110,8 @@ I'm using `sshfs` to mount my MSI home folder on my local machine to make it mor
 ```{r eval=F}
 #!/bin/bash
 
-sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt/tasta005
-sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2
+sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt/tasta005/
+sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2/
 sshfs tasta005@login.msi.umn.edu:/home/nelsona2/ ~/starr_lab/msi_mnt/nelsona2/
 sshfs tasta005@login.msi.umn.edu:/panfs/roc/data_release/3/bmgc/ ~/starr_lab/msi_mnt/bmgc/
 
@@ -124,10 +124,10 @@ I've run into the case where a server disconnect causes a hang any time I naviga
 ```{r eval=F}
 #!/bin/bash
 
-fusermount -zu ~/starr_lab/msi_mnt/tasta005
-fusermount -zu ~/starr_lab/msi_mnt/starrt2
-fusermount -zu ~/starr_lab/msi_mnt/nelsona2
-fusermount -zu ~/starr_lab/msi_mnt/bmgc
+fusermount -zu ~/starr_lab/msi_mnt/tasta005/
+fusermount -zu ~/starr_lab/msi_mnt/starrt2/
+fusermount -zu ~/starr_lab/msi_mnt/nelsona2/
+fusermount -zu ~/starr_lab/msi_mnt/bmgc/
 
 ```
 
