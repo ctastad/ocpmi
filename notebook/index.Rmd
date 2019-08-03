@@ -3349,9 +3349,32 @@ I set created a file containing the output for this function but didn't take tim
 
 It seems like this actually worked. Unbelievable. In hindsight, I did a variety of things wrong, but it seems like I would be able to employ this pipeline across a full scale of samples now.
 
+### Summary
+
+I'm continuing to make progress on the three tandem processes I have going. I believe I can say the excv2 pipeline officially produced a complete result today making that the first of my time in the lab. woot. The bam files I thought I had created last night turned out to be faulty, so I am currently re-running that process with a new script. Additionally, I have a `copyCaller` output from vs2 that I could possibly feed into a segmentation algorithm of my choosing. Taken together, I think I'll be able to run the full data set soon.
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-08-01 2019-08-02 1d  lab     reply to oit help ticket re upgrad process
+2019-08-01 2019-08-02 1d  lab     update exit codes table
+2019-08-01 2019-08-02 1d  lab     extract wes fastq
+2019-08-01 2019-08-02 1d  lab     convert wes fastq to bam
+2019-08-01 2019-08-02 1d  lab     transfer wes fastq from nelsona2
+2019-08-01 2019-08-02 1d  lab     rerun excv2 with gr38 sorted bed
+2019-08-01 2019-08-02 1d  lab     run vs2 copy number function on 1kgp bams
+2019-08-02 2019-08-02 3h  lab     learn if theres a remote access to msi for at
+                                  ups
+
+8 tasks
+```
+
 
 
 ***
 
 # References
+
 
