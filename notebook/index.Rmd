@@ -3371,10 +3371,37 @@ Created    Completed  Age Project Description
 8 tasks
 ```
 
+## 5
+
+### TODO
+
+```{r}
+ID Age  P Project Tags   Description                                        Urg
+-- ---- - ------- ------ -------------------------------------------------- ----
+68 4d     lab     n work run pm2 and pm15 bams through vs2/excv2            1.92
+69 3d     lab     n work trbl vs2 only processing chr1                      1.92
+70 2d     lab     n work add some pbs scripts to methods                    1.91
+71 2d     lab     n work evaluate excv2 1kgp gr38 output                    1.91
+72 2d     lab     n work make readme for notebook                           1.91
+73 2d     lab     w work add excv2 1kgp output to results page              1.91
+74 1d     lab     n work add citation for parallel and other pipeline tools 1.91
+                         bwa, samtools, etc
+76 1d     lab     n work add tree diagrams to relevant dirs                 1.91
+79 7min   lab     n work explore controls for cnv                            1.9
+80 1min   lab     w work call oit re open tickets                            1.9
+42 10w  L lab     work   agenda [3]                                          1.2
+40 10w  L lab     w work review scripts for ccgd database                   0.32
+41 10w  L lab     w work explore shiny framework for database               0.32
+
+13 tasks
+```
+
+
 
 
 ***
 
 # References
+
 
 
