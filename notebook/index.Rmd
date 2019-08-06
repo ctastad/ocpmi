@@ -3371,10 +3371,89 @@ Created    Completed  Age Project Description
 8 tasks
 ```
 
+***
+
+## 5
+
+### TODO
+
+```{r}
+ID Age  P Project Tags   Description                                        Urg
+-- ---- - ------- ------ -------------------------------------------------- ----
+68 4d     lab     n work run pm2 and pm15 bams through vs2/excv2            1.92
+69 3d     lab     n work trbl vs2 only processing chr1                      1.92
+70 2d     lab     n work add some pbs scripts to methods                    1.91
+71 2d     lab     n work evaluate excv2 1kgp gr38 output                    1.91
+72 2d     lab     n work make readme for notebook                           1.91
+73 2d     lab     w work add excv2 1kgp output to results page              1.91
+74 1d     lab     n work add citation for parallel and other pipeline tools 1.91
+                         bwa, samtools, etc
+76 1d     lab     n work add tree diagrams to relevant dirs                 1.91
+79 7min   lab     n work explore controls for cnv                            1.9
+80 1min   lab     w work call oit re open tickets                            1.9
+42 10w  L lab     work   agenda [3]                                          1.2
+40 10w  L lab     w work review scripts for ccgd database                   0.32
+41 10w  L lab     w work explore shiny framework for database               0.32
+
+13 tasks
+
+
+```
+
+### BAM Creation
+
+I ran the process through the weekend with an extended wall time. It took several goes in excess of 24 hrs. I’m not sure if there is a more computationally efficient method, but I do need to confirm my process with Tim or a tutorial.
+
+### vs2 Pilot w/ 1kgp GR38
+
+* samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
+* output: `~/ocpmi/bam/wes/pilot`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
+
+I’ve discovered my pileup files didn’t get processed completely which explains why only chr1 is represented. I’ve started a new job to rerun the process with an updated bash script as well. Also, according to the thread below, another issue presenting itself is that the \*.cram files I thought were aligned with hg38.fa actually used a different reference, which would cause the mpileup process to fail. As a result, I\'m rerunning the process with the pilot bam files I created.
+
+* https://www.biostars.org/p/93643/
+
+```{r}
+cd ~/ocpmi/bam/wes/pilot
+
+for i in *.bam; do
+    samtools mpileup -f ~/ocpmi/gene_ref/hg38.fa "$i" > ${i%%.*}.mpileup
+done
+
+```
+
+**End of day**
+
+*BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
+
+### Summary
+
+I spent much of the day doing documentation work on the 3 major processes I've been running since last week. Given the number of concurrent things I had running, I didn't want to lose track of anything.
+
+Additionally, I've discovered some issues with my vs2 pilot and have restarted that process. Looking ahead, I should have a variety of things to discuss with Tim re the BAM files and excv2 pipeline. I need to evaluate that stuff.
+
+#### Completed
+
+```{r}
+Created    Completed  Age   Project Description
+---------- ---------- ----- ------- -----------------------------
+2019-08-05 2019-08-05 5h    lab     reply to oit re ccgd upgrade
+2019-08-01 2019-08-05 4d    lab     trbl vs2 only processing chr1
+2019-08-05 2019-08-05 16min lab     rerun pileup_create
+
+3 tasks
+```
 
 
 ***
 
 # References
+
+
 
 
