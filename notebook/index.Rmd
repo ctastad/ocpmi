@@ -3371,6 +3371,8 @@ Created    Completed  Age Project Description
 8 tasks
 ```
 
+***
+
 ## 5
 
 ### TODO
@@ -3394,10 +3396,40 @@ ID Age  P Project Tags   Description                                        Urg
 41 10w  L lab     w work explore shiny framework for database               0.32
 
 13 tasks
+
+
 ```
 
+### BAM Creation
 
+I ran the process through the weekend with an extended wall time. It took several goes in excess of 24 hrs. I’m not sure if there is a more computationally efficient method, but I do need to confirm my process with Tim or a tutorial.
 
+### vs2 Pilot w/ 1kgp GR38
+
+* samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
+* output: `~/ocpmi/bam/wes/pilot`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
+
+I’ve discovered my pileup files didn’t get processed completely which explains why only chr1 is represented. I’ve started a new job to rerun the process with an updated bash script as well. Also, according to the thread below, another issue presenting itself is that the \*.cram files I thought were aligned with hg38.fa actually used a different reference, which would cause the mpileup process to fail. As a result, I'm rerunning the process with the pilot bam files I created.
+
+* https://www.biostars.org/p/93643/
+
+```{r}
+cd ~/ocpmi/bam/wes/pilot
+
+for i in *.bam; do
+    samtools mpileup -f ~/ocpmi/gene_ref/hg38.fa "$i" > ${i%%.*}.mpileup
+done
+
+```
+
+**End of day**
+
+*BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
 
 ***
 
