@@ -3433,7 +3433,7 @@ done
 
 ### Summary
 
-I spend much of the day doing documentation work on the 3 major processes I've been running since last week. Given the number of concurrent things I had running, I didn't want to lose track of anything.
+I spent much of the day doing documentation work on the 3 major processes I've been running since last week. Given the number of concurrent things I had running, I didn't want to lose track of anything.
 
 Additionally, I've discovered some issues with my vs2 pilot and have restarted that process. Looking ahead, I should have a variety of things to discuss with Tim re the BAM files and excv2 pipeline. I need to evaluate that stuff.
 
