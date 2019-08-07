@@ -3449,10 +3449,71 @@ Created    Completed  Age   Project Description
 3 tasks
 ```
 
+## 6
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                           Urg
+-- --- - ------- ---- ----------------------------------------------------- ----
+68 4d    lab     work add some pbs scripts to methods                       1.82
+69 4d    lab     work evaluate excv2 1kgp gr38 output                       1.82
+70 4d    lab     work make readme for notebook                              1.82
+71 4d    lab     work add excv2 1kgp output to results page                 1.82
+72 3d    lab     work add citation for parallel and other pipeline tools    1.82
+                      bwa, samtools, etc
+74 3d    lab     work add tree diagrams to relevant dirs                    1.82
+77 1d    lab     work explore controls for cnv                              1.81
+78 1d    lab     work check process of bam creation (youtube)               1.81
+79 1d    lab     work update mnt_msi docs                                   1.81
+81 1d    lab     work update notebook_knit.R docs                           1.81
+42 10w L lab     work agenda [4]                                            1.21
+40 11w L lab     work review scripts for ccgd database                      0.23
+41 11w L lab     work explore shiny framework for database                  0.23
+
+13 tasks
+```
+
+
+
+```{r}
+cd ~/ocpmi/bam/wes/pilot
+java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller pilot_output.copynumber --output-file pilot_output.copynumber.called
+```
+
+
+
+## 7
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                           Urg
+-- --- - ------- ---- ----------------------------------------------------- ----
+68 4d    lab     work add some pbs scripts to methods                       1.82
+69 4d    lab     work evaluate excv2 1kgp gr38 output                       1.82
+70 4d    lab     work make readme for notebook                              1.82
+71 4d    lab     work add excv2 1kgp output to results page                 1.82
+72 3d    lab     work add citation for parallel and other pipeline tools    1.82
+                      bwa, samtools, etc
+74 3d    lab     work add tree diagrams to relevant dirs                    1.82
+77 1d    lab     work explore controls for cnv                              1.81
+78 1d    lab     work check process of bam creation (youtube)               1.81
+79 1d    lab     work update mnt_msi docs                                   1.81
+81 1d    lab     work update notebook_knit.R docs                           1.81
+42 10w L lab     work agenda [4]                                            1.21
+40 11w L lab     work review scripts for ccgd database                      0.23
+41 11w L lab     work explore shiny framework for database                  0.23
+
+13 tasks
+```
+
+
 
 ***
 
 # References
+
 
 
 

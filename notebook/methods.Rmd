@@ -279,18 +279,16 @@ htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 
 <details>
   <summary>**from: Andrew re wes location 6/14/19**</summary>
-```{remark}
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
 
 Tim has cross walk files; as you will find out there are multiple different sample identifiers for each surgical specimen.
-```
 
 </details>
 
 
 <details>
   <summary>**from: Christy re coverage data 7/10/19**</summary>
-```{remark}
+
 Just realized I didn't send you the final coverage data. My apologies.
 The data is now here: `/home/nelsona2/shared/ovarian_Jan2019/DNA_project/coverage`
 There are 3 excel files with coverage as listed below. (There is also a README.txt in the above directory with the same information.) Let me know if you have any questions!
@@ -307,7 +305,7 @@ Coverage by chromosome, gene and exon using a bed file created by using the S076
 OvCA_exome_fullreduce_coverage.xlsx
 Coverage by chromosome and exon. Same bed file as in OvCA_exome_exon_flattened_coverage.xlsx, however instead of only merging overlapping exons if they occurred w any overlapping exons were merged with each other, regardless of gene. This gives us a bed file with any base in the capture only counted once for coverage
  purposes, even if it is included in multiple exons in the same or different genes.
-```
+
 
 </details>
 
@@ -456,11 +454,11 @@ Tim wants me to try to use Varscan2 as a method to assess the exome data [@Kobol
 
 <details>
   <summary>**from: Jinhua 6/14/19**</summary>
-```{remark}
+
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
-```
+
 
 </details>
 
@@ -477,10 +475,9 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 ### Project Home
 
-* https://dkoboldt.github.io/varscan/index.html
 * git: https://github.com/dkoboldt/varscan
-* dir: `/home/chris/starr_lab/ocpmi/methods/varscan2`
-* man: https://dkoboldt.github.io/varscan/using-varscan.html
+* dir: `~/ocpmi/methods/varscan2`
+* man:  https://dkoboldt.github.io/varscan/copy-number-calling.html
 
 #### Pileup Creation
 
@@ -536,11 +533,11 @@ java -jar VarScan.jar copyCaller [varScan.copynumber] OPTIONS
 
 <details>
   <summary>**from: Jinhua 6/14/19**</summary>
-```{remark}
+
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
-```
+
 
 </details>
 
@@ -560,7 +557,12 @@ Detailed
 
 Condensed
 
-*.bed `bedtool` sort &rarr; [SourceTarget.txt (.bw + gene_ref) + .bed] `TargetPerla.pl` &rarr; [ExpFilePrep.txt (BAMs) + targets] `EXCAVATORDataPrepare.pl` &rarr; [ExpFileAn.txt (output + controls) + targets `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+*.bed `bedtool` sort &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+
+#### Project Home
+
+* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
+* man: [file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf](file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf)
 
 #### Installation
 
@@ -969,8 +971,8 @@ Jason sent me his working directory for the early phase of the CNV project. It i
 
 
 <details>
+
   <summary>**from: Jason 6/15/19**</summary>
-```{remark}
 I have previously explored large scale CNV using the single cell data. I’ve attached my directory of scripts and figures. Please go ahead and use whatever you can from them. The coding might be a little messy… not exactly plug-n-chug, but you should be able to get some use out of it.
 
 As you may know, the single cell data isn’t really fit for gene-level CNV analysis because only 10-15% of the gene space is covered. So my approach was to look at the average expression level of all genes measured in each chromosome arm, for each cell. I scaled these average values across all the cells (vertically in the figures) that we had annotated as non-epithelial cells. The heatmaps show chromosome arms across the X axis and individual cells across the Y axis. So, rather than looking for CNV in a gene, I’m looking for entire chromosome arm amplifications & deletions.
@@ -982,7 +984,7 @@ Please note that if you are using the most recent patient data from Tim, there w
 The vertical colored bar on the left of the heatmaps show the cell type. They are colored according to “Picture1.png”. On the right side of the heatmaps in small font you will see the cluster number and the annotated cell type according to our outdated Seurat pipeline.
 
 If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
-```
+
 </details>
 
 ***
@@ -1084,7 +1086,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 
 
 
-# CCGD Upgrade
+# CCGD
 
 #### Project doc location
 
@@ -1095,7 +1097,6 @@ This paper explored a comparative analysis between current CNV analysis tools th
 <details>
   <summary>**From Ken re COSMIC changes**</summary>
 
-```{remark}
 Possibly--I'll have to see the new file to be sure. We rely on the "gene_name" column in CosmicMutantExport.tsv.gz and the "symbol" column in cancer_gene_census.csv to match our data, and those are the first columns in the files. If they do nothing more than add columns to these files, they may be truncated during loading, and that may not matter so long as the "gene_name" and "symbol" columns are still in frame. I think it's conceivable that they may introduce new 1:many relationships in "gene_name" or "symbol" columns, but that could be handled with a DISTINCT clause in the SQL. The most painful possibility is that they (yet again) change their download process, but that has always been a surmountable problem in the past.
 
 
@@ -1105,7 +1106,7 @@ By the way, would you like to renew my sponsored account (abbot195) for another 
 
 
 -Ken
-```
+
 </details>
 
 ### Server site
@@ -1125,7 +1126,6 @@ The working directory for the website seems to be located at:
 <details>
   <summary>**Email thread with Satish to gain access**</summary>
 
-```{remark}
 Hi Jeff,
 
 Thank you for your response. oialinux@umn.edu was actually the first point of contact I made, and they directed me to HST. I've cc'd the contact who handled the this response.
@@ -1231,14 +1231,12 @@ On Wed, Jul 17, 2019 at 11:34 AM Jeffrey Sik <sikxx005@umn.edu> wrote:
         Ref:MSG25438236
 
 
-```
 
 </details>
 
 <details>
   <summary>**Email thread with Sonya to gain access**</summary>
 
-```{remark}
 Hi, Christopher.
 
 Not a problem. I've asked Satish to grant you access to that server. I've added myself to the watchlist on the ticket.
@@ -1340,14 +1338,13 @@ On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
 >         Where: WBOB-523 OIT
 
 
-```
 
 </details>
 
 
 ***
 
-# Useful Repos
+# Repos
 
 ## Awesome single cell repo
 
