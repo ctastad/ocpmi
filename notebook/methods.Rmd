@@ -251,6 +251,21 @@ All of my pbs scripts are located at
 * output: `~/ocpmi/pbs/logs/output`
 * errors: `~/ocpmi/pbs/logs/error`
 
+A template pbs script
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N JOBNAME
+#PBS -o logs/output
+#PBS -e logs/error
+cd ~/
+module load
+
+```
+
 ### Exit Codes
 
 There is some documentation from Adaptive Computing here
@@ -261,6 +276,17 @@ There is some documentation from Adaptive Computing here
 codes <- read.csv("/home/chris/starr_lab/ocpmi/notebook/csv/exit_codes.csv")
 kable(codes)
 ```
+
+### Bash Loop
+
+This is an example bash loop that runs a function on all file types with a common extension and takes the existing file name to the new output.
+
+```{r}
+for i in *.bam; do
+    samtools mpileup -f ~/ocpmi/gene_ref/hg38.fa "$i" > ${i%%.*}.mpileup
+done
+```
+
 
 ***
 
@@ -471,7 +497,10 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 **Pipeline**
 
-*BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
+
+Condensed
+
 
 ### Project Home
 
@@ -553,11 +582,11 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 Detailed
 
-*.bed `bedtool` sort &rarr; [SourceTarget.txt (.bw + gene_ref) + .bed] `TargetPerla.pl` &rarr; [ExpFilePrep.txt (BAMs) + targets] `EXCAVATORDataPrepare.pl` &rarr; [ExpFileAn.txt (output + controls) + targets `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+*&ast;.bed `sort` (bedtools) &rarr; [SourceTarget.txt (&ast;.bw + gene_ref) + &ast;.bed] `TargetPerla.pl` &rarr; [ExpFilePrep.txt (BAMs) + targets] `EXCAVATORDataPrepare.pl` &rarr; [ExpFileAn.txt (output + controls) + targets `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 Condensed
 
-*.bed `bedtool` sort &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+*&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 #### Project Home
 

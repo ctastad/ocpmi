@@ -3404,7 +3404,7 @@ ID Age  P Project Tags   Description                                        Urg
 
 I ran the process through the weekend with an extended wall time. It took several goes in excess of 24 hrs. I’m not sure if there is a more computationally efficient method, but I do need to confirm my process with Tim or a tutorial.
 
-### vs2 Pilot w/ 1kgp GR38
+### vs2 Pilot: ocpmi pm2/15
 
 * samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
 * output: `~/ocpmi/bam/wes/pilot`
@@ -3474,14 +3474,38 @@ ID Age P Project Tags Description                                           Urg
 13 tasks
 ```
 
+### vs2 Pilot: ocpmi pm2/15
 
+* samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
+* output: `~/ocpmi/bam/wes/pilot`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*__&ast;.bam `mpileup` (samtools)__ &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
 
 ```{r}
 cd ~/ocpmi/bam/wes/pilot
 java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller pilot_output.copynumber --output-file pilot_output.copynumber.called
 ```
 
+A primary difference for the vs2 package is that it doesn't include a segmentation algorithm. The documentation suggests CBS via the DNAcopy BioC library.
 
+* https://www.bioconductor.org/packages/2.3/bioc/html/DNAcopy.html
+
+**End of day**
+
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; __output.copynumber.called__ &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
+
+### Project folder sync
+
+I got sick of pushing and pulling back and forth between msi and my personal machine, so I decided to fully transition what I had left from the personal machine to msi. This is largely my notebook structure and ancillary files that are ignored by git.
+
+What this amounted to was doing an `rsync` command to bring the folders current with each other along with pointing some files to the mount location of my sshfs for msi.
+
+### Summary
+
+Today consisted of a large amount of house keeping.
 
 ## 7
 
@@ -3507,6 +3531,10 @@ ID Age P Project Tags Description                                           Urg
 
 13 tasks
 ```
+
+**Start of day**
+
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; __output.copynumber.called__ &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
 
 
 
