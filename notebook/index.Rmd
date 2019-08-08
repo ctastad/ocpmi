@@ -5,7 +5,7 @@ date: \today
 bibliography: library.bib
 output:
     html_document:
-        toc: yes
+#        toc: yes
 #        toc_float: yes
         theme: paper
 ---
@@ -31,15 +31,15 @@ h4 {
 
 <!-- Content -->
 
-# Preamble {.tabset .tabset-fade}
+## Preamble {.tabset .tabset-fade}
 
-## Message
+### Message
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
 
 The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr Lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `starr_lab/ocpmi/notebook/`) are collated on the `References` page.
 
-## Git
+### Git
 
 Version control was used throughout the development of this work and can be found at the University's private github server:
 
@@ -47,7 +47,7 @@ https://github.umn.edu/tasta005/ocpmi.git
 
 ***
 
-## Contact
+### Contact
 
 Christopher Tastad, MS Candidate
 
@@ -61,13 +61,13 @@ knitr::opts_chunk$set(eval=F)
 
 ***
 
-# May 2019 {.tabset .tabset-fade}
+## May 2019 {.tabset .tabset-fade}
 
-## &ast;
+### &ast;
 
-## 20
+### 20
 
-### Background mtg w/ Tim
+#### Background mtg w/ Tim
 
 * present: chris, tim
 
@@ -85,9 +85,9 @@ Focus Options
 
 ***
 
-## 21
+### 21
 
-### TODO
+#### TODO
 
 ```{r}
 ID  Age   Project        Tags       R Due        Description                Urg
@@ -114,23 +114,23 @@ ID  Age   Project        Tags       R Due        Description                Urg
 ```
 
 
-### Citation packages
+#### Citation packages
 
-#### Rmarkdown Default
+##### Rmarkdown Default
 
 This is the intrinsic formatting style for Rmarkdown citation management. It has the ability to call a BibTex file and carries the least effort to get it working. It's what I will probably go for across my whole setup. [@citations]
 
-#### knitcitations
+##### knitcitations
 
 The knitcitations package might provide the best balance of feature set to ease of use. The only constraining factor is what seems like a few bugs that limit intended functionality. The ref() function doesn't work for instance. [@cboettig_2019]
 
-#### RefManageR
+##### RefManageR
 
 This is a fully featured R package that seems to attempt to replace a complete citation manager. It comes across as very comprehensive but more complicated than I would like the approach to be. [@refmanager]
 
-### Summary
+#### Summary
 
-#### Completed
+##### Completed
 
 * 327, 312:progress
 
@@ -139,9 +139,9 @@ Additionally, I plan on establishing a git repo to manage version control and hi
 
 ***
 
-## 22
+### 22
 
-### TODO
+#### TODO
 
 
 
@@ -167,7 +167,7 @@ ID  Age Project        Tags       R Due        Description                  Urg
 ```
 
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -177,17 +177,17 @@ present: chris, tim
 * Currently, we are still working to establish the standardized parameters of the data set. The goal is to arrive at a place where we can make biological conclusions.
     + How do we draw contrast from a data set of this nature?
 
-### Notebook Structure
+#### Notebook Structure
 
 In my conversation with Tim, I decided I need to take an alternate structure to my lab notebook. My original intent was to emulate a development oriented documentation process. Instead, I will go a route that better follows the academic writing process with pages dedicated to methods, results, etc.
 
-### Reference Management
+#### Reference Management
 
 While I would prefer to take a lean, text based approach to this, I am clearly beginning to waste some time in gear the system. I came across jabref, which seems to leverage a unix philosophy and can be found in the ubuntu repos.
 
-### Summary
+#### Summary
 
-#### Completed
+##### Completed
 
 * 312:progress, 323:progress
 
@@ -195,9 +195,9 @@ My work today included continued focus on getting organized an taking a very del
 
 ***
 
-## 23
+### 23
 
-### TODO
+#### TODO
 
 
 
@@ -231,25 +231,25 @@ ID  Age Project        Tags       R Due        Description                  Urg
 ```
 
 
-### Citations
+#### Citations
 
-#### Custom CSL
+##### Custom CSL
 
 At some point, I would like to setup a custom csl file to format my references. The goal here would be to add formatted features that are note readily available in some existing format style. [@2019], [@BibEntry2019May]
 
-#### JabRef
+##### JabRef
 
 I've started to figure out jabref. I think I will still look to my bibtex file as the primary source for citation management, but will make use of the interface and some of the features of jabref. Additionally dio2bib will play a central role in extracting bibtex content. [@2019b]
 
-### GitHub
+#### GitHub
 
 The setup for my git server is complete. It's a private server host by the university a /tasta005/ocpmi [@ocpmi_git]
 
-### Summary
+#### Summary
 
 I was able to round out much of my organizational setup today. I feel confident about the citation management strategy I plan to use going forward which combines the use of dio2bib for bibtex creation, BibItNow for website extraction, and JabRef to centralize management. Additionally, I was able to connect my relevant directories to my git server, which will account for both a measure of backup and version control. Having gotten settled into these systems I think I will be able to begin incorporating my literature search into my daily activities.
 
-#### Completed
+##### Completed
 
 
 ```{r}
@@ -276,9 +276,9 @@ Created    Completed  Age Project        R Due        Description
 
 ***
 
-## 24
+### 24
 
-### TODO
+#### TODO
 
 
 ```{r}
@@ -300,7 +300,7 @@ ID  Age Project        Tag            Description                           Urg
 11 tasks
 ```
 
-### create_site Script
+#### create_site Script
 
 I created a small R script that will effectively knit each page of my lab notebook. This can be executed in the R console or in bash, but each file has to be saved. The save -> knit function that's performed by the IDE does not apply to the console executed render command.
 
@@ -314,11 +314,11 @@ rmarkdown::render_site("index.Rmd")
 ```
 
 
-### Summary
+#### Summary
 
 Today was filled with primarily administrative work. A large bulk of my time was taken by lab safety training, which I was unable to fully complete. Along with this, I was finally able to install Seurat and tinker with the package tutorial. It seems like the version I downloaded may not be compatible with the tutorial code, so I will have to explore that more.
 
-#### Completed
+##### Completed
 
 
 ```{r}
@@ -344,9 +344,9 @@ Created    Completed  Age Project        Description
 
 ***
 
-## 27
+### 27
 
-### TODO
+#### TODO
 
 
 ```{r}
@@ -370,9 +370,9 @@ ID Age Project        Tags           Description                            Urg
 ```
 
 
-###[@Lheureux2019]
+#### @Lheureux2019
 
-#### Evolution of Management in the Era of Precision Medicine  (1/2)
+##### Evolution of Management in the Era of Precision Medicine  (1/2)
 
 * State of field for ovarian cancer
 * Current treatments and outcomes
@@ -396,16 +396,16 @@ ID Age Project        Tags           Description                            Urg
 * Hormone therapy is sometimes used due to the presence of estrogen/progesterone receptors.
 * CNAs in p53 are rare, and brca inactivation seem to unrelated to LGSOC
 
-### Summary
+#### Summary
 
 Just worked my way through the above summary today. Will continue and complete reading this lit tomorrow.
 
 
 ***
 
-## 28
+### 28
 
-### TODO
+#### TODO
 
 
 ```{r}
@@ -430,9 +430,9 @@ ID Age Project        Tags           Description                            Urg
 ```
 
 
-### [@Lheureux2019]
+#### [@Lheureux2019]
 
-#### Evolution of Management in the Era of Precision Medicine (2/2)
+##### Evolution of Management in the Era of Precision Medicine (2/2)
 
 * OCCC or clear cell carcinoma represents about 5% of cases.
 * The pathogenesis of OCCC is not well understood.
@@ -493,11 +493,11 @@ ID Age Project        Tags           Description                            Urg
 
 
 
-### Summary
+#### Summary
 
 I have shifted focus to begin a comprehensive literature review. I've started by taking a look at a review of the current landscape of treatment and outcomes for ovca [@Lheureux2019]. This was helpful to fill many of the holes I have in my general knowledge of cancer biology with the more specific case studies of ovca. Much of this reinforced the review that Tim has given in our meetings, which was helpful. Along with this, I began to work my way through the Seurat tutorial. I was able to locate the v3 tutorial and pbmc data set and made it about half way through the written guide. I plan on getting fully through this tomorrow as well as meeting with Tim to discuss some questions I developed from the ovca review.
 
-#### Completed
+##### Completed
 
 
 ```{r}
@@ -510,9 +510,9 @@ Created    Completed  Age Project        Description
 
 ***
 
-## 29
+### 29
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  Project        Tags           Description                           Urg
@@ -540,7 +540,7 @@ ID Age  Project        Tags           Description                           Urg
 ```
 
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -562,7 +562,7 @@ RAD51 mutations acquired resistance
 1 task
 ```
 
-#### mtg notes
+##### mtg notes
 
 * mysql reference: single cell rnaseq analysis protocol
 * figure out mesabi hostname issue
@@ -577,7 +577,7 @@ RAD51 mutations acquired resistance
     + Objective: determine cell type.
 * There's no way to call copy number variation from this data. That would be novel.
 
-### MSI Project Directory
+#### MSI Project Directory
 
 I logged into the MSI account for the first time today. There is a relatively deep file structure which is composed of a combination of processed data from umgc/MSI and other collaborator work. I have a personal directory in this space along with access to other shared directories.
 
@@ -605,12 +605,12 @@ Processed data can be found in the hiseq folder under data_release. This data is
 
 The Analysis directory contains the source data
 
-* illumina-basicQC # quality control data
+* illumina-basicQC ## quality control data
 * cellranger-`*`
-    + analysis # ?
-    + filtered_gene_bc_matricies # data source that has been filtered by "true cell content"
-    + raw_gene_bc_matrices # matrix data that includes unfiltered reads or all read content
-    + web_summary.html # interactive cell ranger summary
+    + analysis ## ?
+    + filtered_gene_bc_matricies ## data source that has been filtered by "true cell content"
+    + raw_gene_bc_matrices ## matrix data that includes unfiltered reads or all read content
+    + web_summary.html ## interactive cell ranger summary
 
 An example of a complete data source location is below:
 
@@ -618,13 +618,13 @@ An example of a complete data source location is below:
 /home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38
 ```
 
-### Summary
+#### Summary
 
 I met with Tim today for our weekly meeting. We discussed some aspects of ovca content that I had been reading to develop my general knowledge. I major element of this conversation that will adjust what my intentions were going forward dealt with the nature of statistically validating the results of our pipeline. My original thought was that there was some need to dig into the backend of the Seurat/cellranger packages to both confirm and optimize the output. It sounds as though this has been done to a degree that Tim is satisfied with and that we can move on to explore questions that are Biological in nature.
 
 Additionally, I did a little house keeping by establishing the first part of the methods page in my notebook. I explored the MSI project directory for the first time today and recorded some documentation about the file structure and data locations. My expectation is to pull what would be method oriented documentation from Notes -> Methods or Notes -> Results as these things need to be pinned for repeat use and reference.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project  Description
@@ -637,9 +637,9 @@ Created    Completed  Age Project  Description
 
 ***
 
-## 30
+### 30
 
-### TODO
+#### TODO
 
 
 ```{r}
@@ -665,18 +665,18 @@ ID Age Project        Tags           Description                            Urg
 15 tasks
 ```
 
-### Seurat Tutorial pbmc3k
+#### Seurat Tutorial pbmc3k
 
 I ran the v3 Seurat tutorial [@2019d] to completion using the pbmc dataset. This outline was very intuitive and worked through the pipeline seamlessly. There are several points that warrant further exploration.
 
 The output of the v3 PBMC data tutorial can be found [here](/home/chris/starr_lab/ocpmi/code/seurat_tutorial/pbmc3k_tutorial.html).
 
 
-### Summary
+#### Summary
 
 Briefly, I wrapped up safety training today, so that is all taken care of. The rest of my afternoon was dedicated to working my way through the default v3 Seurat tutorial. The tutorial comes packaged in a markdown file, so the presentation and documentation is very effective. To some extent, the documentation is so good I am a little concerned it encourages over use of the default settings. I haven't looked at any other processing that's been completed by Tim et al, so I'll have to keep an eye out for how adjustments have been made. Tim mentioned there has been a limited amount of customization, so this may stand as a short term area of focus. Generally, I think can consider today's work a reasonable summary of the process and syntax associated with the toolset. With this, I would like to spend some time digging into the nuances of the pipeline's analysis. I will probably spend most of tomorrow doing that. Much of the default analysis hinges on PCA dimensionality, so I feel I need to brush up on my knowledge in this area. Going forward I need to run the same pipeline using the new pt59 data and evaluate results.
 
-#### Completed
+##### Completed
 
 
 ```{r}
@@ -693,9 +693,9 @@ Created    Completed  Age Project        Description
 
 ***
 
-## 31
+### 31
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age Project        Tags       Description                                Urg
@@ -721,7 +721,7 @@ ID Age Project        Tags       Description                                Urg
 15 tasks
 ```
 
-### Mendeley
+#### Mendeley
 
 At the risk of seeming indecisive, I've decided to switch citation managers. Given my use if the BibTex file format, it is effectively painless to switch. JabRef showed some promise but presented a few bugs related to database calls which would render much of the value of using it worthless. Mendeley has both a native linux application along with a web import tool for firefox. This is the only major citation tool I've come across that combines those two things. Here are a few key features of my use:
 
@@ -729,9 +729,9 @@ At the risk of seeming indecisive, I've decided to switch citation managers. Giv
 * There are watched folders which will draw sources from any pdf put into them at `starr_lab/ocpmi/ref/`.
 * I've decided to use the IEEE with url csl style taken from the zotero style repository. [@2019]
 
-### [@Winterhoff2019]
+#### [@Winterhoff2019]
 
-#### Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine
+##### Single-Cell Sequencing in Ovarian Cancer: a new frontier in precision Medicine
 
 Key Points
 
@@ -748,13 +748,13 @@ Notes
 * Evaluation of cell plasticity as it relates to cell type transitions may provide insight into the development of chemoresistance
 * Understanding the lineage of the cellular qualities of metastatic dissemination is made possible with scRNA data
 
-### Using Ancestry to find the Stem Cell
+#### Using Ancestry to find the Stem Cell
 
 Question: can we use sequence-based lineage tracing to identify a common progenitor cell expression profile?
 
 A thought I had while looking at some lit tonight led me to wonder if it's worth exploring sequence-based cell lineage across individual cells rather than using differential expression patterns as a general means of characterization. I will need to do a dedicated lit search to explore this concept, but I imagine the use of single cell data for lineage tracing is relatively limited. At a minimum, Tim has alluded to the notion that our data set is unique among the ovca model, which would lend itself to a novel application of single cell lineage tracing. Regardless, this could be a relatively significant deviation from their current pipeline, so I will have to discuss it with Tim.
 
-### Updated create_site.R Script
+#### Updated create_site.R Script
 
 I made a minor update to the script I use to automate total site rendering to clean up the directory a bit. I don't have any use in the parent notebook/ directory for individual html files since they are generated in the site render. The `ifelse` at the end of the script clears these html files from the notebook directory.
 
@@ -771,7 +771,7 @@ fl <- Sys.glob("*.html")
 ifelse(file.exists(fl), file.remove(fl))
 ```
 
-### Summary
+#### Summary
 
 I was able to explore a few different fronts today. I put some more work in to polishing my citation management. This is an area I have been woefully lacking in from past experience, so I do not discount the extra work applied to make sure this is at a publication-ready level.
 
@@ -779,7 +779,7 @@ Additionally, I worked my way through the earliest publication related to the oc
 
 Last, I can't say what generated this thought specifically, but I came across what my limited knowledge of the field would call a good idea. All of our discussions on this data set up to this point have centered on the use of UMI counts and gene expression levels as a means to develop differentiated cell profiles. A consideration I would potentially like to explore is the possibility that we look at sequence level data to identify cell lineage in search of a common progenitor. I have little basis to say if this is a reasonable or even realistic scientific question, but I feel this could be a substantive, novel insight given the nature of our data set. It's quite possible this approach would require too great an investment in shifting the informatics work toward raw sequence analysis, but I will discuss it with Tim nonetheless.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project        Description
@@ -796,13 +796,13 @@ Created    Completed  Age Project        Description
 
 ***
 
-# June {.tabset .tabset-fade}
+## June {.tabset .tabset-fade}
 
-## &ast;
+### &ast;
 
-## 3
+### 3
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age Project        Tags       Description                                Urg
@@ -826,17 +826,17 @@ ID Age Project        Tags       Description                                Urg
 14 tasks
 ```
 
-### Cancer Stem Cell Database
+#### Cancer Stem Cell Database
 
 http://www.csctt.org/ [@csctt2019]
 
 Tim sent me a link to a possible resource last week that could be useful in building references for exploring the cancer stem cell concept.
 
-### LitSrch re Cancer Stem Cell
+#### LitSrch re Cancer Stem Cell
 
 I've done some extremely high level review from the wikipedia article on CSCs [@csc_wiki]. This pointed me to several papers of relevance that I hope to look at in future exploration of the topic.
 
-#### Notes
+##### Notes
 
 * While there has been significant research around the topic, CSCs remain a debated idea.
 * There are currently a few models for CSC tumor propagation
@@ -872,11 +872,11 @@ I've done some extremely high level review from the wikipedia article on CSCs [@
     + De-differentiation
         - Cells are driven back to a state of stemness through some external factor.
 
-### Summary
+#### Summary
 
 I focused mostly on lit search efforts today. I want to develop a better understanding of the current landscape of the CSC hypothesis, so I have taken a broad overview of different findings. I started with the wikipedia article on the subject and have branched out to several other major papers in the field. A few points of interest are the controversies around origin and characterization. There seems to be a relatively wide interpretation of CSCs in terms of typing and behavior. This is obviously due to the relatively abstract nature of stemness and cell development. Talking with Tim today, there are some limitations since we only have expression data. One consideration is that our pipeline is using a known reference sequence database to process the output. Given this, there may be unknown mutations that could serve as markers of both CSC identity and possible lineage association. Screening for these in a cell specific way could bring about interesting findings.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project        Description
@@ -890,9 +890,9 @@ Created    Completed  Age Project        Description
 
 ***
 
-## 4
+### 4
 
-### TODO
+#### TODO
 
 
 ```{r}
@@ -915,15 +915,15 @@ ID Age Project Tags   Description                                           Urg
 13 tasks
 ```
 
-### Summary
+#### Summary
 
 I didn't get a lot done today. I began to apply the vanilla Seurat analysis to the pt59 data set and found myself encountering many of the setup hurdles that come with using a remote system. I have to do some retooling so my environment can seamlessly run on MSI.
 
 ***
 
-## 5
+### 5
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  Project Tags   Description                                          Urg
@@ -949,7 +949,7 @@ ID Age  Project Tags   Description                                          Urg
 ```
 
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -966,7 +966,7 @@ progenitor cell expression profile
 1 task
 ```
 
-#### mtg notes
+##### mtg notes
 
 * We discussed the nature of the Seurat output to some degree
     + I had been wondering how Tim came about the specifications to the metrics he used in his Seurat analysis file.
@@ -979,7 +979,7 @@ progenitor cell expression profile
     + Additionally, we discussed the broad strokes of concepts behind the idea of CSCs. There is a great deal of ambiguity here, and we didn't really arrive at any objective conclusions. To some extent, I just needed to work through the ideas with someone else. I will need to really formulate a sense of this for any comprehensive experimentation which leverages this concept.
     + This was a subpoint but an important realization: **the 10x do not include full coverage.** This was a mistaken assumption of mine in thinking we had more complete expression coverage. Instead, we are working with ~100bp lengths with poly-A ranges. It may be worth digging into this to make sure I understand the specifics.
 
-### Remote MSI Setup
+#### Remote MSI Setup
 
 I've reached somewhat of a hang up in my development environment. I've yet to work in centos, and I'm generally unfamiliar with the MSI setup. So far, I've been able to make sense of my home directory in my personal instance and load the R console. Additionally, I've been able to get the installation of packages going and have a process running over night in tmux.
 
@@ -988,7 +988,7 @@ The challenge I see stems from the combination of developing in an Rstudio-like 
 
 
 
-### Rserve
+#### Rserve
 
 I've found the package `Rserve` which can establish a servable instance of R on a remote server. This holds some potential to allow me to develop locally and execute any part of my code in the MSI instance. There is documentation at the link below. One necessary element of making this work would be to find a suitable Rserve client that can run locally and communicate with the server.
 
@@ -1000,15 +1000,15 @@ https://www.msi.umn.edu/support/faq/how-can-i-install-r-packages-my-home-directo
 
 https://satijalab.org/seurat/install.html
 
-### Summary
+#### Summary
 
 I met with Tim today for our weekly meeting. We were able to discuss things that were mostly conceptual to aid in my continued content exploration. The rest of my time was spent getting a sense for the MSI environment and how I will be interacting with it. My hope is to actually develop in this space full time rather than just schedule jobs. My own computer is limited in its processing power, and using my MSI instance would be highly preferred. Still, there are some hurdles to doing this that I haven't dealt with previously, so I have been working to link my current setup to the operational environment of MSI. This will probably continue to take some time, but I hope to be fully ready tomorrow.
 
 ***
 
-## 6
+### 6
 
-### TODO
+#### TODO
 
 
 ```{r}
@@ -1037,22 +1037,22 @@ ID Age Project Tags   Description                                           Urg
 ```
 
 
-### MSI Workflow
+#### MSI Workflow
 
 After a considerable amount of effort to create a synchronous workflow with my MSI instance, I've generally given up and settled on scripting locally and batching with MSI. I've mounted my home directory with sshfs and clone my ocpmi git repo so I can work out of my MSI instance for the most part. My only concern is if I run into resource intensive cases that require more ram. It does seem that MSI kills unbatched jobs that exceed a threshold of resource use since my process was killed each time it went over 10gb of ram.
 
-### Notes to add
+#### Notes to add
 
 * git repo info
 * sshfs setup and bash script
 * msi setup info
 * seurat install and docs methods
 
-### Summary
+#### Summary
 
 I've wasted a large amount of time over the past two days. I spent a solid 10 hours trying to get my workflow in MSI established all to essentially go with what would have been my setup had I done nothing at all. I will generally resort to developing on my local machine with a connection to my MSI directory. Beyond this, I will need to take a look at the batching process for MSI and possible explore some of their training resources to gain a better understanding.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -1067,9 +1067,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 10
+### 10
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age Project Tags     Description                                         Urg
@@ -1096,9 +1096,9 @@ ID Age Project Tags     Description                                         Urg
 17 tasks
 ```
 
-### Non-contemporaneous Notes - 6/6
+#### Non-contemporaneous Notes - 6/6
 
-#### Load/Install R pkgs
+##### Load/Install R pkgs
 
 * In order to run R in my MSI instance, I need to load the module and install applications.
 
@@ -1129,7 +1129,7 @@ chooseCRANmirror(ind=2)
 
 * Packages should be able to be installed and loaded normally now.
 
-#### sshfs Setup
+##### sshfs Setup
 
 I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto-mount bash script. This is located at `/home/chris/starr_lab/auto_mnt_sshfs` on my local machine.
 
@@ -1141,7 +1141,7 @@ I'm using `sshfs` to mount my MSI home folder on my local machine to make it mor
 sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt
 ```
 
-### Summary
+#### Summary
 
 I made some more progress on developing a base implementation of the default Seurat analysis pipeline when evaluating the pt59 dataset. To a degree, I am mostly taking default params using the PBMC tutorial and running them with the new dataset. Outside of the default params, I have been using the file located at `/ocpmi/code/tim/seurat_analysis.R` as a reference to see what Tim has modified thus far. There are certain points where he has taken the base value and others where his code deviates heavily. The general flow of his implementation differs from the tutorial in the sense that his code is less step wise and more focused on the output while the tutorial is a bit more exploratory to exhibit features. This makes sense of course. An aspect of my own implementation will have to consider how distributed each analysis process to provide modularity.
 
@@ -1149,7 +1149,7 @@ A major point I came across today was that I forgot to review the RNAseq protoco
 
 Overall, I will spend most of tomorrow continuing to review the documentation and code for Tim's pipeline along with getting a sense of the veracity of my pt59 output.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -1163,9 +1163,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 11
+### 11
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age Project Tags     Description                                         Urg
@@ -1193,11 +1193,11 @@ ID Age Project Tags     Description                                         Urg
 18 tasks
 ```
 
-### RNA Velocity
+#### RNA Velocity
 
 I came a cross a [thread](https://www.reddit.com/r/bioinformatics/comments/bz292v/_/) on the bioinformatics subreddit discussing the issues of the day for single cell analysis. One of the points that was discussed was the challenge around merging data sets and the way this might regress some relevant artifacts of the data. The concept of RNA velocity was brought up as a means to address this, and it may hold some relevance to how we analyze our data. [@LaManno2018]
 
-### Render .R -> .html
+#### Render .R -> .html
 
 I made an amazing discovery today. It is possible to render markdown output straight from a .R file. I'm not sure if I can apply certain yaml or formatting settings to this process yet, but this function alone will save the need to create two separate files when running code and producing a formatted output.
 
@@ -1206,7 +1206,7 @@ https://rmarkdown.rstudio.com/articles_report_from_r_script.html
 A markdown report can be compiled from an R script by:
 
 ```{r}
-rmarkdown::render("analysis.R") # will generate an html output
+rmarkdown::render("analysis.R") ## will generate an html output
 rmarkdown::render("analysis.R", "pdf_document")
 ```
 
@@ -1221,7 +1221,7 @@ The metadata and output can be modified through special comments.
 #' ---
 ```
 
-### Summary
+#### Summary
 
 My day consisted of a continued focus on developing a complete working model of the general Seurat pipeline through the lens of the pt59 data. I haven't done much in terms of evaluation for the output and will need to dig into this more. The highly variable features and linear dimensional reduction are items I need to both confirm for efficacy and make sense of in their findings. Additionally, I merely clustered the data along 13 dimensions and did not apply any further analysis such as the exploration of highly variable features in the umap'd data.
 
@@ -1229,7 +1229,7 @@ I did make some unintended progress on formatting and organization of code after
 
 Last, I plan on taking a bit of a dive into the concept of RNA velocity to see if it holds any relevance to evaluating our data set. As I have become acclimated to the content of this field, I have felt there is some aspect of single cell analysis that the group has not considered to explore concepts beyond cell typing such as CNV, cell lineage, and stem cell character. I don't say that with the authority to know if it is the case, but the adolescence of this field draws the general assumption.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -1242,9 +1242,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 12
+### 12
 
-### TODO
+#### TODO
 
 ```{r}
 
@@ -1276,7 +1276,7 @@ ID Age Project Tags     Description                                         Urg
 ```
 
 
-### sshfs Unmount
+#### sshfs Unmount
 
 I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use `fusermount` to force the unmount first.
 
@@ -1284,23 +1284,23 @@ I've run into the case where a server disconnect causes a hang any time I naviga
 fusermount -uz /data
 ```
 
-### MSI Interactive Computing
+#### MSI Interactive Computing
 
 Running all of my work locally has shown to be more resource consuming than originally anticipated. This has developed somewhat of a bottleneck, so I'm hoping I can transfer the larger rendering jobs to MSI so they can process in the background. A limitation in doing this is developing the ability to generate markdown since this would be the best output. It isn't necessary, but I would prefer this. The hangup seems to be the lack of a graphics environment. Obviously, a headless server will not have something like this loaded by default, but I have to see if I can get that working.
 
-### RNA Velocity
+#### RNA Velocity
 
 I began to gloss over this paper today [@LaManno2018]. The concept is both relatively simple in general terms yet includes a good deal of complexity since it involves RNA splicing. I need to read further, but what I've read so far lends itself to the potential for some application in our data set. I'll have to discuss with Tim more tomorrow.
 
-### pt59 analysis
+#### pt59 analysis
 
 I continued to round out my general analysis of the pt59 data. This analysis was furthered with my original approach of being blind to the Biological relevance. I've been able to generate outputs that follow the base pipeline but will need to evaluate markers specific to our cell types and genetic markers of interest.
 
-### Summary
+#### Summary
 
 Today included some light work around finishing off my pt59 analysis. The code I've put together generally mirrors the PBMC tutorial with some minor variations. Key to this general approach is that I haven't customized the marker selection. This would be a good discussion with Tim in how he has identified this in the past in a consistent manner. Additionally, my computer is becoming more limited with every process I run. It may be worth breaking these things into smaller chunks of analysis to account for my resource limitations, but I'm going to return to getting things working on MSI first.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -1316,9 +1316,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 13
+### 13
 
-### TODO
+#### TODO
 
 ```{r}
 
@@ -1345,7 +1345,7 @@ ID Age Project Tags     Description                                   Urg
 17 tasks
 ```
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -1365,7 +1365,7 @@ agenda items
 1 task
 ```
 
-#### Notes
+##### Notes
 
 Direction and project selection
 
@@ -1408,9 +1408,9 @@ ACTIONS:
 * continue pt59 analysis by applying boolean script
 
 
-### CNV
+#### CNV
 
-#### Points of contact
+##### Points of contact
 
 * Juan Abrahante <abrah023@umn.edu>
 * Christy Henzler <chenzler@umn.edu>
@@ -1418,15 +1418,15 @@ ACTIONS:
 * Ying Zhang <zhan2142@umn.edu>
 * Andrew Nelson <nels2055@umn.edu>
 
-#### Varscan2
+##### Varscan2
 
 Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
 
-#### Contra
+##### Contra
 
 Juan had tried using contra in the past which did not work.
 
-##### from: Juan 6/13/2019
+###### from: Juan 6/13/2019
 
 Sure thing. In a nutshell back in 2013 I ran Contra with Tumor/Normal Samples and it worked, I got results... fast forward 6 years and the test files are not even working for me.
 
@@ -1514,13 +1514,13 @@ OSError: [Errno 2] No such file or directory
 
 ```
 
-### Summary
+#### Summary
 
 I had my weekly meeting with Tim today. We had a productive conversation where we were able to assess and re-gear my progress. We came to the conclusion that I would focus on the CNV approach and were able to put together a large ranger of reference points around getting this started. There are several actions that came from our meeting, and I will have a good amount to focus on. The primary focus beyond content review will be developing a method for evaluating CNV within the whole exome data.
 
 I was also able to get some house keeping done around documentation.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age  Project Description
@@ -1539,9 +1539,9 @@ Created    Completed  Age  Project Description
 
 ***
 
-## 14
+### 14
 
-### TODO
+#### TODO
 
 ```{r}
 
@@ -1574,15 +1574,15 @@ ID Age  Project Tags     Description                                        Urg
 
 ```
 
-### More CNV refernce
+#### More CNV refernce
 
-#### from: Jinhua 6/14/19
+##### from: Jinhua 6/14/19
 
 If it is for single cell exome DNA copy number call, you may try this tool: SCOPE,   https://www.biorxiv.org/content/10.1101/594267v1.full
 
 For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.net/projects/excavatortool/,  and also VARscan 2.
 
-#### from: Andrew 6/14/19
+##### from: Andrew 6/14/19
 
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
 
@@ -1590,9 +1590,9 @@ Tim has cross walk files; as you will find out there are multiple different samp
 
 ***
 
-## 17
+### 17
 
-### TODO
+#### TODO
 
 ```{r}
 
@@ -1628,7 +1628,7 @@ ID  Age  Project Tags     Description                                       Urg
 24 tasks
 ```
 
-### @Tirosh2016
+#### @Tirosh2016
 
 This paper is the only other case Tim is aware of where a group was able to effectively show CNV in single cell expression data.
 
@@ -1637,28 +1637,28 @@ This paper is the only other case Tim is aware of where a group was able to effe
 * The analysis produced the conclusion that these cells display 2 distinct developmental programs.
 * Subclonal point mutation and insitu hybridization was also done as verification of these results.
 
-#### CNV Method
+##### CNV Method
 
 * Their CNV approach was to define a window along a chromosomal mapping. By doing this, they effectively created "bins" of expression level to define relative changes in expression.
 * They identified two cell types that aligned with a genetic character (high values at 1p and 19q) which they defined as baseline expression.
 * This was used to define the baseline for microglia and oligdendrocytes.
 * PCA comprised the main statistical approach.
 
-### Minor Notebook Restructure
+#### Minor Notebook Restructure
 
 I realized I have a home page for no reason. I've replaced what is currently a blank placeholder page with what is my notes page since that is effectively the main page of my notebook. In doing so, I added a preamble to the begging of this document as well.
 
-### Jason's CNV Method
+#### Jason's CNV Method
 
 Jason sent a very detailed overview over the weekend of his work on the CNV project. This includes code, references, and some analysis. I will need to look at this in greater depth and potentially set time to discuss it with him further. The files are located at the directory below.
 
 * `/starr_lab/ocpmi/methods/jason_cnv`
 
-### Summary
+#### Summary
 
 I did some house keeping on my documentation today. I've received a considerable amount of data and references regarding the CNV project, so I put some effort into organizing and clarifying my direction with this. My primary goals right now are covering the literature re the comparison for CNV techniques in whole exome data (@Zare2017) and then getting up to speed on Jason's past work. I hope to have a better mastery of the content to attack the project by the time I return from France.
 
-#### Completed
+##### Completed
 
 ```{r}
 
@@ -1680,9 +1680,9 @@ Created    Completed  Age Project Description
 8 tasks
 ```
 
-## 18
+### 18
 
-### mtg w/ Tim
+#### mtg w/ Tim
 
 present: tim, chris
 
@@ -1692,9 +1692,9 @@ Additionally, I introduced a concept that Yuk had brought up regarding the possi
 
 Last, we discussed some of the smaller CNV analysis papers I've found that take a gene prep platform approach to evaluating CNV in single cells. The key distinction here is that these are likely done with DNA, but we both agreed that they may lack significance since I haven't found one published in a journal of significant impact. It may be something to explore for expanding my knowledge of methods though.
 
-## 19
+### 19
 
-### @Zare2017
+#### @Zare2017
 
 This paper explored a comparative analysis between current CNV analysis tools that operate in the context of whole exome sequencing which in wide use in the field. The group narrowed the landscape down to just 5 tools that meet a few criteria.
 
@@ -1760,7 +1760,7 @@ Results
 * Because of the poor performance across the tools, there is a great need for improvement in preprocessing techniques.
 * A point made that may hold relevance to my project is that tumor subclonality has not been addressed by any tool. The granularity offered by our scRNA data could help with this.
 
-### items to clarify
+#### items to clarify
 
 * More specifically, what is the source of the exome data?
     + Is it at the site of the tumor?
@@ -1777,13 +1777,13 @@ Results
 
 ***
 
-# July {.tabset .tabset-fade}
+## July {.tabset .tabset-fade}
 
-## &ast;
+### &ast;
 
-## 8
+### 8
 
-### TODO
+#### TODO
 
 ```{r}
 
@@ -1819,16 +1819,16 @@ ID Age  Project  Tags     Description                                       Urg
 23 tasks
 ```
 
-### CCGD upgrade
+#### CCGD upgrade
 
 I reached out to oialinux@umn.edu today regarding getting server access to the ccgd application. From looking at the ccgd project document, I found a few oit points of contact: Sonya Sustacek (ssustace), John Trammell (tram0004), and Tom Krell (sp?).
 
 
-### Summary
+#### Summary
 
 I'm back. Feeling pretty rusty, so I've been reacclimating myself to the work I left 3wks ago. I started up the process of getting ccgd upgrade going and should be able to work on that in tandem with the cnv work. Additionally, I need to begin the process of really testing and applying the cnv protocols I reviewed on 6/19.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age P Project  Description
@@ -1844,9 +1844,9 @@ Created    Completed  Age P Project  Description
 
 ***
 
-## 9
+### 9
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age Project Tags     Description                                         Urg
@@ -1876,7 +1876,7 @@ ID Age Project Tags     Description                                         Urg
 20 tasks
 ```
 
-### CCGD access
+#### CCGD access
 
 I was informed by OIT that the server is actually owned by HST (Health Science Technology?) and that I need to reach out to them. The contacts I was given are:
 
@@ -1887,11 +1887,11 @@ I was informed by OIT that the server is actually owned by HST (Health Science T
 
 I emailed Tom since he was the only one listed in the original CCGD documentation.
 
-### Summary
+#### Summary
 
 I am still going through the process of reviewing my work to reestablish the momentum and direction I had 3 weeks ago. I have been looking at Jason's code to make sense of his approach. I will probably reach out to him depending on what comes from my meeting with Tim tomorrow so that we can discuss his method. I need to clarify the picture of how I will implement the proper tool sets for both the exome and scRNA data.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -1904,9 +1904,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 10
+### 10
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags     Description                                  Urg
@@ -1928,7 +1928,7 @@ ID Age P Project Tags     Description                                  Urg
 13 tasks
 ```
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -1940,11 +1940,11 @@ present: chris, tim
 * Read papers on excavator (@Magi2013), varscan2, scope (@Wang2019) and assess which would be best. Run on one dataset.
 * We discussed the source exome data since I wanted to clarify my understanding of this. The wes tissue can effectively be assumed to be the same source as the scRNA for each pt.
 
-### Summary
+#### Summary
 
 The conversation with Tim today was helpful in regaining some direction on the CNV work. Right now, my immediate goals are to establish the toolset for wes analysis, develop a reliable wes output for reference, and then evaluate the method I use to approach the scRNA cnv analysis. I need more detail about the development of the wes data, so reaching out to Rebecca will be important at this point. Identifying supporting information for the wes data such as BAFs and VAFs could be determining factors in the pipeline I use.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age P Project Description
@@ -1963,9 +1963,9 @@ Created    Completed  Age P Project Description
 
 ***
 
-## 11
+### 11
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags     Description                                       Urg
@@ -1989,11 +1989,11 @@ ID Age P Project Tags     Description                                       Urg
 15 tasks
 ```
 
-### Summary
+#### Summary
 
 I reached out to Rebecca re a conversation about the background of the exome data processing. While I can investigate different tool sets to get a sense of what I will use, There are a few things she may be able to help me with that could be determining factors. I also began investigating the SCOPE tool today at the suggestion of Jinhua. I didn't have any background on this pipeline and was surprised to find it's purpose is to address single cell data, albeit with DNA. They indicate they did some validation with RNA data from 10x, so it remains to be seen if I will be able to use this.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age P Project Description
@@ -2005,9 +2005,9 @@ Created    Completed  Age P Project Description
 
 ***
 
-## 12
+### 12
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags     Description                                       Urg
@@ -2032,7 +2032,7 @@ ID Age P Project Tags     Description                                       Urg
 ```
 
 
-### Collaborator mtg
+#### Collaborator mtg
 
 present: josh, andy, isaac, shobhana, borris, jason, tim, ying
 
@@ -2051,31 +2051,31 @@ present: josh, andy, isaac, shobhana, borris, jason, tim, ying
     + the location and naming of this are somewhat ambiguous
     + the new v3 cell ranger data might be named "v2"...
 
-### CNV tool lit search
+#### CNV tool lit search
 
-#### EXCAVATOR
+##### EXCAVATOR
 
-#### SCOPE
+##### SCOPE
 
-#### Awesome single cell repo
+##### Awesome single cell repo
 
 I found a really comprehensive list of single cell analysis tools at the github below.
 
 * https://github.com/seandavi/awesome-single-cell
 
-#### InferCNV
+##### InferCNV
 
 I also found a tool that was inspired by the @Tirosh2016 paper which explicitly aims to identify cnv in scRNA data. This looks very promising, and I will probably attempt this tool set first when getting into the sc data. The tool look like it could potentially be very simple. As this may help in getting started, it may be a drawback with the added complexity of our data set.
 
 * https://github.com/broadinstitute/infercnv/wiki
 
-### Summary
+#### Summary
 
 I spent the day evaluating CNV tools. While this was relatively productive, a brief conversation with Tim did draw attention to the fact I need to stop aiming and shoot. With the general info I've gathered, I can begin to run some analysis. My first step will be to run EXCAVATOR with a single pt data set followed by VarScan2 with the same data. My hope is that these pipelines come together with some ease and offer some level of a tutorial or test case. If not, I will focus on which of the two I can fully execute more quickly.
 
 Additionally, my content search led me to an application I have an early excitement for, and that is InferCNV. I have really only glanced at the wiki for this tool, but it seems as if it was made specifically for our purposes. It looks relatively simple to use, and I am hoping that it can allow me to generate some data right away.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -2100,9 +2100,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 15
+### 15
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2119,7 +2119,7 @@ ID Age P Project Tags   Description                                         Urg
 8 tasks
 ```
 
-### WES analysis with EXCAVATOR/XCAVATOR
+#### WES analysis with EXCAVATOR/XCAVATOR
 
 I will be taking the first wes cnv approach using the excavator/xcavator tool. This group published EXCAVATOR in @Magi2013 and have since expanded on it @Magi2017. I will be looking at XCAVATOR first, given its recency to see if it can bring anything to fruition.
 
@@ -2131,7 +2131,7 @@ Documentation can be found here:
 
 * `/home/chris/starr_lab/ocpmi/methods/code/xcavator/source/docs/EXCAVATOR Manual.pdf`
 
-#### XCAVATOR Implementation
+##### XCAVATOR Implementation
 
 As stated in @Magi2017
 
@@ -2139,15 +2139,15 @@ As stated in @Magi2017
 
 >The tool allows to analyze WGS data with three different experimental designs: “pooling”, “paired” and “nocontrol”. In “paired” mode each test sample is compared with its matched control and it is the best scheme to detect sCNA from pairs of tumor and matched normal samples. The “paired” mode has been used to analyze the TCGA Benchmark 4 dataset. In “nocontrol” mode the RCs of each test sample are normalized to two copies and this scheme is best suited for population genomics studies and has been used to analyze the 929 WGS experiments sequenced by 1000GP consortium. In “pooling” scheme, each test sample is compared to a pool control samples by summing the RC of each window across all the control samples. XCAVATOR can run on any unix system (desktop and servers) and allows the user to set the number of processor to analyze multiple samples in parallel. On a desktop computer with a 2.5 GHz cpu and 8 GB of ram, by using four cores, it takes four hours to perform the analysis of ten WGS samples sequenced at 60x. The XCAVATOR tool is freely available at https://sourceforge.net/projects/xcavator/.
 
-### Summary
+#### Summary
 
 I put time into getting xcavator implemented. I am going with the updated version of excavator that was introduced in 2017. I had not noticed in my initial glance at the tool that it utilized perl and fortran. I don't believe this will impact any of the coding necessary since the pipeline seems to rely on modification of reference files, so my limited knowledge of perl and fortran shouldn't be an issue.
 
 ***
 
-## 16
+### 16
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2164,7 +2164,7 @@ ID Age P Project Tags   Description                                         Urg
 8 tasks
 ```
 
-### Interactive Computing
+#### Interactive Computing
 
 It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
 
@@ -2174,9 +2174,9 @@ This is useful in the event I want to do development inside MSI rather than just
 
 ***
 
-## 17
+### 17
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags    Description                                        Urg
@@ -2194,21 +2194,21 @@ ID Age P Project Tags    Description                                        Urg
 9 tasks
 ```
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: tim, chris
 
 We had a limited discussion today. I updated Tim on progress with getting started in xcavator and getting access to the ccgd server space. Tim suggested I approach sonya given her past involvement with the project.
 
-### XCAVATOR Progress
+#### XCAVATOR Progress
 
 I'm continuing the process of getting xcavator setup and running. As a pipeline, xcavator is less mature than something like Seurat, especially with its documentation. I need to discuss a handful of items with either Rebecca or Christy regarding the processing of the wes data.
 
-### Summary
+#### Summary
 
 Most of my time today was spent making sense of the xcavator workflow. There are some gaps in the documentation that I may have to parse out, but I am getting a sense for the parameters.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -2221,9 +2221,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 18
+### 18
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2242,7 +2242,7 @@ ID Age P Project Tags   Description                                         Urg
 10 tasks
 ```
 
-### create_site to notebook_knit
+#### create_site to notebook_knit
 
 I've renamed my `create_site` file to `notebook_knit` due to a conflict with a different executable. The location of this file is now at `/usr/bin` on my local machine. The updated script is below.
 
@@ -2272,7 +2272,7 @@ A key element to make this executable was to include it in an environment direct
 sudo chmod a+x notebook_knit.R
 ```
 
-### XCAVATOR Window Initialize
+#### XCAVATOR Window Initialize
 
 The first command seems to take too much memory, so I installed the pipeline on MSI today. The setup should mirror my local installation for now. The goal right now is just to get the code to run. I'm attempting to execute the `ReferenceWindowInitialize.pl` command.
 
@@ -2294,7 +2294,7 @@ perl ReferenceWindowInitialize.pl -v SourceTarget.txt test_window1 100 hg19
 ```
 
 
-#### Error
+##### Error
 
 I've encountered an error attempting to execute `ReferenceWindowInitialize.pl`.
 
@@ -2312,11 +2312,11 @@ cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/XCAVATOR/data/targets/h
 
 ```
 
-### Summary
+#### Summary
 
 Thinking about the test data I've chosen, I might need to reevaluate. The hg19 dataset isn't wes data, and I don't know if that is an issue for the pipeline. It's also entirely possible I'm missing a setting that is essential to the initialization step. Another point of consideration is that I need a dataset that also has associated bam files, which I am not aware of for hg19. I could take a pt from the ocpmi data set, but they do not have basic fasta files that I am aware of yet, and I don't know if the fastq files we do actually have are compatible with the pipeline.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age P Project Description
@@ -2329,9 +2329,9 @@ Created    Completed  Age P Project Description
 
 ***
 
-## 21
+### 21
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2352,11 +2352,11 @@ ID Age P Project Tags   Description                                         Urg
 12 tasks
 ```
 
-### CCGD Access
+#### CCGD Access
 
 I was finally able to get through on the access portion of the ccgd project. Sonya played an important role in initiating access, which was ultimately completed by Satish.
 
-#### Server site
+##### Server site
 
 * [ccgd-starrlab.oit.umn.edu](ccgd-starrlab.oit.umn.edu)
 
@@ -2366,9 +2366,9 @@ The working directory for the website seems to be located at:
 
 ***
 
-## 22
+### 22
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2391,7 +2391,7 @@ ID Age P Project Tags   Description                                         Urg
 ```
 
 
-### Folding elements
+#### Folding elements
 
 Following an example from the Seurat pbmc tutorial, I am incorporating folding page elements in my notebook to reduce length and clutter.
 
@@ -2401,17 +2401,17 @@ Following an example from the Seurat pbmc tutorial, I am incorporating folding p
 </details>
 ```
 
-### XCAVATOR vs EXCAVATOR2
+#### XCAVATOR vs EXCAVATOR2
 
 I've been working through the error I'm getting in running the `ReferenceWindowInitialize.pl` script to no avail. There is some ambiguity in the file setup for the script arguments. It asks for a bed file but does not specify where that is supposed to be referenced. As a result, I'm going to see if I can easily transition to using EXCAVATOR instead.
 
 * https://sourceforge.net/projects/excavator2tool/
 
-### Summary
+#### Summary
 
 The XCAVATOR package has been giving me some difficulty with the inconsistencies in its documentation. Part of the issue could stem from my lack of knowledge regarding the file types necessary, but there is not a clear indication that I am wrong either. There script requirements do not fully line up, and the lack of a complete test dataset compounds the issue. I'm going to try my luck with the EXCAVATOR2 package since it is probably more mature in its function and support.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -2426,9 +2426,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 23
+### 23
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  P Project Tags   Description                                        Urg
@@ -2444,7 +2444,7 @@ ID Age  P Project Tags   Description                                        Urg
 7 tasks
 ```
 
-### Call w/ Rebecca
+#### Call w/ Rebecca
 
 Topic: wes data processing and prep
 
@@ -2463,7 +2463,7 @@ mtg with rebecca
 1 task
 ```
 
-#### Notes
+##### Notes
 
 * All processing was done in MSI scratch due to the large resource use.
 * The data is stored in 2nd tier storage right now as a result.
@@ -2476,7 +2476,7 @@ mtg with rebecca
 * RL is going to move a small dataset from aws so that I can begin a pilot analysis.
 * The Freebayes params may be relevant, I should look into those.
 
-#### Process
+##### Process
 
 *Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
 
@@ -2489,9 +2489,9 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 ***
 
-## 24
+### 24
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2507,7 +2507,7 @@ ID Age P Project Tags   Description                                         Urg
 7 tasks
 ```
 
-### wkly mtg w/ Tim
+#### wkly mtg w/ Tim
 
 present: chris, tim
 
@@ -2524,7 +2524,7 @@ agenda
 1 task
 ```
 
-#### Notes
+##### Notes
 
 Our meeting covered the two major branches of the ccgd and ocpmi project. First, I updated Tim on my new access to the ccgd server.
 
@@ -2541,15 +2541,15 @@ The updates on the ocpmi project centered on my conversation with Rebecca.
     - The plan for my approach in the event I continue to see issues can be seen below
 * A point of clarification is that hg19 and GRCh37 are the same. This means that any data I use with upstream processing done by Rebecca should follow with hg19 as the reference.
 
-### CNV Plan
+#### CNV Plan
 
 Fallback strategy for cnv pipeline:
 
 *Try Excavator2 &rarr; Contact Devs &rarr; Resort to VarScan2*
 
-### Excavator2 Troubleshooting
+#### Excavator2 Troubleshooting
 
-#### BED and FASTA
+##### BED and FASTA
 
 Continuing from the error on 7/18, I found I was not referencing the bed file correctly. This was not as clear in the Xcavator documentation. I took generic bed file from ucsc genome browser.
 
@@ -2563,7 +2563,7 @@ Looking at the background on fasta reference, I decided to take the g1k fasta fi
 
 The `TargetPerla.pl` script executes after I arranged these bed and fasta files.
 
-#### libpng12.deb
+##### libpng12.deb
 
 This produced an error re a missing object
 
@@ -2586,7 +2586,7 @@ sudo dpkg -i /tmp/libpng12.deb
 sudo rm /tmp/libpng12.deb
 ```
 
-#### BEDTools
+##### BEDTools
 
 Was getting another error re another missing object: bedtools. The documentation says nothing about it, but I needed to install `bedtools`.
 
@@ -2594,7 +2594,7 @@ Was getting another error re another missing object: bedtools. The documentation
 sudo apt install bedtools
 ```
 
-#### Unresolved
+##### Unresolved
 
 Current error. Not sure what this is yet. My current thought is that there is an issue with the formatting between the fasta and bed file. I believe the g1k fasta I downloaded is a multi fasta, and I don't know if that's an issue.
 
@@ -2602,15 +2602,15 @@ Current error. Not sure what this is yet. My current thought is that there is an
 WARNING. chromosome (chr22) was not found in the FASTA file. Skipping.
 ```
 
-### Summary
+#### Summary
 
 I made some progress working through the Excavator2 pipeline today. I am still encountering hang ups that are probably related to file formatting and binary file setup. I need to reach out to RL/CH regarding the change in source files I need since we didn't fully cover this when I spoke to Rebecca. Given the quick jump I made in troubleshooting today, I hope to be able to continue that progress with the pipeline tomorrow.
 
 ***
 
-## 25
+### 25
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  P Project Tags   Description                                        Urg
@@ -2630,13 +2630,13 @@ ID Age  P Project Tags   Description                                        Urg
 11 tasks
 ```
 
-### BAM file search
+#### BAM file search
 
 I contacted Rebecca re the location of the wes bam files today since we missed that point in our conversation.
 
-### Excavator2 Trbl (cont.)
+#### Excavator2 Trbl (cont.)
 
-#### Unresolved - Solved
+##### Unresolved - Solved
 
 I was able to address the last error given on 7/24 by using a different fasta reference file. I believe the issue was that the fasta and bed files contained different chromosome notation as indicated by section 1.6 "Before you start" of the Excavator2 docs. Probably should have read that.
 
@@ -2645,19 +2645,19 @@ As a result, the fasta file I'm using now also comes from UCSC
 * http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/
 * Dir: `/EXCAVATOR2_Package_v1.1.2/data/hg19.fa`
 
-### ExcavatorDataPrepare.pl
+#### ExcavatorDataPrepare.pl
 
 The next step in running the Excavator2 pipeline is setting up `EXCAVATORDataPrepare.pl` to process sample BAM files. I don't have a clear set of files I know will work at this point, so I will need to get that sorted out. The BAMs are referenced using the `ExperimentalFilePrepare.window.txt` file which includes 1) an abs path to the BAMs 2) the path to the sample output 3) the sample name.
 
-### Summary
+#### Summary
 
 I was able to finally run the first of 3 execution scripts with the Excavator2 pipeline. Having lined all the necessary items up for that first step, I need to arrange a set of pilot BAM files that will allow me to continue with the test run of the pipeline. Currently, I'm looking at pulling a 1kgp dataset that was referenced in the Excavator2 (@DAurizio2016). This may be an issue since the 1kgp has restructured their ftp since the Excavator2 publication.
 
 ***
 
-## 26
+### 26
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  P Project Tags   Description                                        Urg
@@ -2678,13 +2678,13 @@ ID Age  P Project Tags   Description                                        Urg
 12 tasks
 ```
 
-### 1kgp ftp
+#### 1kgp ftp
 
 The 1kgp ftp has moved to a new site.
 
 * ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000_genomes_project/data
 
-### BAM Selection
+#### BAM Selection
 
 Currently I am taking 2 of the genome samples referenced in Supplementary Table 2 of @DAurizio2016.
 
@@ -2695,9 +2695,9 @@ Both BAMs were downloaded as the phase 1 1kgp sample from the IGSR
 
 * http://www.internationalgenome.org/data-portal/sample
 
-### Excavator2 Trbl (cont.)
+#### Excavator2 Trbl (cont.)
 
-#### Missing BAM Index
+##### Missing BAM Index
 
 I realized I was missing the BAM index included on the IGSR.
 
@@ -2705,7 +2705,7 @@ I realized I was missing the BAM index included on the IGSR.
 [main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
 ```
 
-#### Chr notation
+##### Chr notation
 
 It seems like the chromosome notation has become an issue again. The UCSC and 1kgp gene notations use "chr1" and "1" respectively making them incompatible without a variety of data wrangling.
 
@@ -2713,15 +2713,15 @@ It seems like the chromosome notation has become an issue again. The UCSC and 1k
 [main_samview] region "chr1" specifies an unknown reference name. Continue anyway.
 ```
 
-### Summary
+#### Summary
 
 I hit another formatting snag today that will require me to go back and find different reference files. I believe I generally have the `ExcavatorDataPrepare.pl` script setup correctly, but the chromosome naming scheme needs to be consistent across the reference and sample files. This should be relatively easy to fix. I just need to find fasta, bed, and bam files that match.
 
 ***
 
-## 27
+### 27
 
-### New fasta and bed
+#### New fasta and bed
 
 To address the chromosome naming discrepancy, I retrieved new fasta and bed files from the 1kgp so that the source will be consistent.
 
@@ -2741,9 +2741,9 @@ phase 1/2 bed files
 
 ***
 
-## 28
+### 28
 
-### New fasta and bed again
+#### New fasta and bed again
 
 In addition, I reran the pipeline with a new reference due to the chromosome annotation issue. This includes some BAMs from UCSC that are smaller in size.
 
@@ -2758,11 +2758,11 @@ Here's the updated `SourceTarget.txt`
 ```
 
 
-### ExcavatorPrepareData.pl
+#### ExcavatorPrepareData.pl
 
 I've was able to run the `ExcavatorPrepareData.pl` script with the following parameters. I'm not entirely sure this worked based on the output, but it doesn't seem explicitly that it didn't work either.
 
-#### ExperimentalFilePrepare.50000.txt
+##### ExperimentalFilePrepare.50000.txt
 
 This is the tab delimited file that identifies the bam files, of which were
 
@@ -2847,9 +2847,9 @@ Performed RC calculations and Normalization on samples:
 
 ***
 
-## 29
+### 29
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -2870,7 +2870,7 @@ ID Age P Project Tags   Description                                         Urg
 12 tasks
 ```
 
-### Excv2 trbl (cont.)
+#### Excv2 trbl (cont.)
 
 I've run the final script for the Excavator2 (excv2) pipeline to no avail. I'm at a bit of a loss and will likely transition to VarScan2 today unless I get a decent lead from reaching out the Excv2 authors.
 
@@ -2918,7 +2918,7 @@ Multiprocessor Analysis Complete!
 
 </details>
 
-### VarScan2
+#### VarScan2
 
 While waiting to hear back from the excv2 authors, I've decided to see where VarScan2 can take me.
 
@@ -2931,12 +2931,12 @@ Project Home
 
 I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta reference with BAMs from the 1kgp (NA10847, NA19131).
 
-### Summary
+#### Summary
 
 I've hit an impasse with excv2 and am putting it on hold without new information from the authors. I've reached out to them for a pilot dataset since I believe file inconsistencies are playing a role in the pipeline not running to completion. So as to not waste time, I've started the process of testing out VarScan2. I've downloaded the .jar file and am getting setup to run on msi. Taking a cursory glance, it seems like VarScan2 has a similar executional structure as excv2 in that it is also implemented through command line arguments. I expect to spend all of tomorrow focused on seeing how far I can get with this.
 
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -2953,9 +2953,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 30
+### 30
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tag    Description                                      Urg
@@ -2972,7 +2972,7 @@ ID Age P Project Tag    Description                                      Urg
 8 tasks
 ```
 
-### vs2 pileup file
+#### vs2 pileup file
 
 VarScan2 (vs2) requires a pileup to operate. I'm running that on both msi and my personal machine as it seems to take a long time.
 
@@ -2982,9 +2982,9 @@ samtools mpileup -f [reference sequence] [BAM file(s)]
 
 ***
 
-## 31
+### 31
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                         Urg
@@ -3001,14 +3001,14 @@ ID Age P Project Tags   Description                                         Urg
 8 tasks
 ```
 
-### Collaborator mtg
+#### Collaborator mtg
 
 * Speaking with Ying, it sounds like RL and CH may not have saved bam files in their wes processing. I may need to generate my own files from the raw data
     - looking at the directory, Tim was able to find fastq files for this
 * Tim has generally completed the cellranger3 reprocessing.
     - Apparently, the updated pipeline identifies a different resolution of rna content in immune cells. As a result, the new processing gives an elevated immune cell content in the Seurat output.
 
-### excv2 w/ 1kgp GR38
+#### excv2 w/ 1kgp GR38
 
 **excv2 pilot**
 
@@ -3018,7 +3018,7 @@ ID Age P Project Tags   Description                                         Urg
 
 *msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
-### vs2 Pilot w/ 1kgp GR38
+#### vs2 Pilot w/ 1kgp GR38
 
 To get started on the vs2 pipeline, I've decided to work with the same 1kgp bam files I have available for excv2. In the event both work, I'll hopefully be able to compare the results.
 
@@ -3030,7 +3030,7 @@ To get started on the vs2 pipeline, I've decided to work with the same 1kgp bam 
 
 *BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; cnv output?*
 
-### BAM Creation
+#### BAM Creation
 
 I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
 
@@ -3043,7 +3043,7 @@ I need to create new bam files from our source wes data since these files were l
 
 *fastq &rarr; **`index` gene ref (bwa bwtsw)** &rarr; align (bwa mem) + `sort` (samtools) &rarr; output.bam*
 
-#### bwa
+##### bwa
 
 I'll be using bwa for sequence alignment.
 
@@ -3060,24 +3060,24 @@ Command for direct bwa to bam output using the mem algorithm:
 ```{r}
 bwa mem genome.fa reads.fastq | samtools sort -o output.bam -
 
-# multiple threads
+## multiple threads
 
 bwa mem -t 8 genome.fa reads.fastq | samtools sort -@8 -o output.bam -
 ```
 
-### Summary
+#### Summary
 
 Currently, I have the vs2 and excv2 pipelines running in parallel. I've adjusted the approach of the excv2 pipeline to use the GR38 reference. I learned I will need to create new bam files since these were not preserved in scratch. To some extent this frees me to use the newer reference since I won't be relying on RL/CH's outputs.
 
 ***
 
-# August {.tabset .tabset-fade}
+## August {.tabset .tabset-fade}
 
-## &ast;
+### &ast;
 
-## 1
+### 1
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  P Project Tags   Description                                   Urg
@@ -3092,7 +3092,7 @@ ID Age  P Project Tags   Description                                   Urg
 6 tasks
 ```
 
-### BAM Creation
+#### BAM Creation
 
 I believe I've finished the process of converting a couple fastq files to bam files. I'm going to run these through the vs2 and excv2 pipelines to see if they will take.
 
@@ -3116,7 +3116,7 @@ done
 
 ```
 
-### vs2 Pilot w/ 1kgp GR38
+#### vs2 Pilot w/ 1kgp GR38
 
 I was able to create pile up files that will allow me to continue along the vs2 pipeline pilot test. I'm going to test these two using the `copynumber` function listed in the vs2 man. That function uses inputs from tumor and normal samples, so I will arbitrarily assign normal to `NA10847` and tumor to `NA19131`.
 
@@ -3131,7 +3131,7 @@ I was able to create pile up files that will allow me to continue along the vs2 
 *BAMs &rarr; `pileup` (samtools) &rarr; **[bam + pileup] `copynumber` (vs2)** &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
 
 
-#### Trbl
+##### Trbl
 
 I ran the vs2 `copynumber` function on my `na10847.mpileup` (normal), `na19131.mpileup` (tumor) samples. For some reason, only chr1 was processed.
 
@@ -3182,7 +3182,7 @@ java -jar VarScan.v2.4.4.jar copyCaller test_output.copynumber
 
 *BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
 
-### excv2 w/ 1kgp GR38
+#### excv2 w/ 1kgp GR38
 
 I ran the EXCAVATORDataAnalysis.pl script over night, but it seems like there was an error with the output. I don't have any results figures even though msi gave an exit_status=0. I will try to trouble shoot in isub today.
 
@@ -3196,7 +3196,7 @@ I ran the EXCAVATORDataAnalysis.pl script over night, but it seems like there wa
 
 *msi install &rarr; GR38 ref &rarr; `TargetPerla.pl` &rarr; `EXCAVATORDataPrepare.pl` &rarr; **`EXCAVATORDataAnalysis.pl`** &rarr; cnv output*
 
-#### Trbl
+##### Trbl
 
 Running the following script produced an error regarding a JointSegIn Fortran function. I found a thread that points to issues with the bed file.
 
@@ -3254,7 +3254,7 @@ sort -k1,1 -k2,2n *.bed | bedtools merge
 *msi install &rarr; GR38 ref &rarr; bedfile sort &rarr; `TargetPerla.pl` &rarr; **`EXCAVATORDataPrepare.pl`** &rarr; `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
 
 
-### Summary
+#### Summary
 
 Today, I continued the 3 major threads I had started yesterday. The excv2 pipeline has produced a comparable error that leads me to a final attempt at getting the software to work. I may need to save the bed file doing the sort function, but I'm not sure about this. I'll run it one additional time after saving a sorted bed file to see if it makes a difference. If it doesn't, I will be done with excv2.
 
@@ -3262,7 +3262,7 @@ The bam file creation looks to have worked fine, so I am extending that process 
 
 The vs2 process has worked to some degree at least producing actual copy number data. This is limited on the level that it only applied to chr1. It's possible the pileup creation is the issue here. I need to apply some additional processing to smooth this out the actual copy number data though in addition to segmentation. I haven't actually found what their suggested visualization method is either.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -3282,9 +3282,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 2
+### 2
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags   Description                                   Urg
@@ -3301,7 +3301,7 @@ ID Age P Project Tags   Description                                   Urg
 8 tasks
 ```
 
-### Annotation
+#### Annotation
 
 For consistency in documenting the wide range of information, I want to have a systematic means of tracking this accross experimentation. Going forward I will try to use this general convention where files are listed by category followed by a directory if necessary.
 
@@ -3309,7 +3309,7 @@ For consistency in documenting the wide range of information, I want to have a s
 * output: `/path/to/output/`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 
-### BAM Creation
+#### BAM Creation
 
 Looking at the bam files I created, I noticed they're all 92B in size. This is probably an indication something went wrong in their creation. The bwa script seems to work fine on its own, so I imagine the issue is the bash script I created.
 
@@ -3329,7 +3329,7 @@ ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort 
 
 ```
 
-### vs2 Pilot w/ 1kgp GR38
+#### vs2 Pilot w/ 1kgp GR38
 
 * samples: `test_output.copynumber`; `~/ocpmi/methods/varscan2`
 * output: `copyCall_test_output.txt`; `~/ocpmi/methods/varscan2`
@@ -3351,7 +3351,7 @@ I set created a file containing the output for this function but didn't take tim
 
 *BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; **segmentation** &rarr; ?*
 
-### excv2 w/ 1kgp GR38
+#### excv2 w/ 1kgp GR38
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3; `~/ocpmi/bam/1kgp`
 * output: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output`
@@ -3363,11 +3363,11 @@ I set created a file containing the output for this function but didn't take tim
 
 It seems like this actually worked. Unbelievable. In hindsight, I did a variety of things wrong, but it seems like I would be able to employ this pipeline across a full scale of samples now.
 
-### Summary
+#### Summary
 
 I'm continuing to make progress on the three tandem processes I have going. I believe I can say the excv2 pipeline officially produced a complete result today making that the first of my time in the lab. woot. The bam files I thought I had created last night turned out to be faulty, so I am currently re-running that process with a new script. Additionally, I have a `copyCaller` output from vs2 that I could possibly feed into a segmentation algorithm of my choosing. Taken together, I think I'll be able to run the full data set soon.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age Project Description
@@ -3387,9 +3387,9 @@ Created    Completed  Age Project Description
 
 ***
 
-## 5
+### 5
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age  P Project Tags   Description                                        Urg
@@ -3414,11 +3414,11 @@ ID Age  P Project Tags   Description                                        Urg
 
 ```
 
-### BAM Creation
+#### BAM Creation
 
 I ran the process through the weekend with an extended wall time. It took several goes in excess of 24 hrs. I’m not sure if there is a more computationally efficient method, but I do need to confirm my process with Tim or a tutorial.
 
-### vs2 Pilot: ocpmi pm2/15
+#### vs2 Pilot: ocpmi pm2/15
 
 * samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
 * output: `~/ocpmi/bam/wes/pilot`
@@ -3445,13 +3445,13 @@ done
 
 *BAMs &rarr; **`pileup` (samtools)** &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; `copyCaller` (vs2) &rarr; segmentation &rarr; ?*
 
-### Summary
+#### Summary
 
 I spent much of the day doing documentation work on the 3 major processes I've been running since last week. Given the number of concurrent things I had running, I didn't want to lose track of anything.
 
 Additionally, I've discovered some issues with my vs2 pilot and have restarted that process. Looking ahead, I should have a variety of things to discuss with Tim re the BAM files and excv2 pipeline. I need to evaluate that stuff.
 
-#### Completed
+##### Completed
 
 ```{r}
 Created    Completed  Age   Project Description
@@ -3465,9 +3465,9 @@ Created    Completed  Age   Project Description
 
 ***
 
-## 6
+### 6
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags Description                                           Urg
@@ -3490,7 +3490,7 @@ ID Age P Project Tags Description                                           Urg
 13 tasks
 ```
 
-### vs2 Pilot: ocpmi pm2/15
+#### vs2 Pilot: ocpmi pm2/15
 
 * samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
 * output: `~/ocpmi/bam/wes/pilot`
@@ -3513,21 +3513,21 @@ A primary difference for the vs2 package is that it doesn't include a segmentati
 
 *&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; __output.copynumber.called__ &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
 
-### Project folder sync
+#### Project folder sync
 
 I got sick of pushing and pulling back and forth between msi and my personal machine, so I decided to fully transition what I had left from the personal machine to msi. This is largely my notebook structure and ancillary files that are ignored by git.
 
 What this amounted to was doing an `rsync` command to bring the folders current with each other along with pointing some files to the mount location of my sshfs for msi.
 
-### Summary
+#### Summary
 
 Today consisted of a large amount of house keeping.
 
 ***
 
-## 7
+### 7
 
-### TODO
+#### TODO
 
 ```{r}
 ID Age P Project Tags Description                                           Urg
@@ -3550,15 +3550,39 @@ ID Age P Project Tags Description                                           Urg
 13 tasks
 ```
 
+#### vs2 Pilot: ocpmi pm2/15
+
 **Start of day**
 
 *&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; __output.copynumber.called__ &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
+
+#### Summary
+
+Today was another day for housekeeping. I've made a significant modification to the layout of my nodebook by instituting a .tabset parameter. Things were starting to feel somewhat unruly with the page length and continuous flow at this point, so tabing sections should help. Additionally, I made sure to go back and get citations for the recent tools I've incorporated into my workflow.
+
+I expected to be meeting with Tim where I thought we would be able to discuss a few things that would define the next phase of my project with the wes data. I found he will be out for the week though, and will need to work on incremental items till then. I might just run the excv2 pipeline with the bam files I've created eitherway.
+
+##### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-08-04 2019-08-07 3d  lab     add citation for parallel and other pipeline
+                                  tools bwa, samtools, etc
+2019-08-07 2019-08-07 1h  lab     install dnacopy on msi
+2019-08-07 2019-08-07 1h  lab     add tabset formatting to notebook
+
+3 tasks
+```
+
+
 
 
 
 ***
 
-# References
+## References
+
 
 
 
