@@ -1,7 +1,7 @@
 ---
 title: "Methods"
 author: "Christopher Tastad"
-date: \today
+date: "Last Edit: `r format(Sys.time(), '%Y-%m-%d')`"
 bibliography: library.bib
 output:
     html_document:
@@ -14,9 +14,11 @@ output:
 library(knitr)
 ```
 
-```{r global_options}
+```{r global_options, include=F}
 knitr::opts_chunk$set(eval=F)
 ```
+
+***
 
 # Contacts
 
@@ -24,6 +26,8 @@ knitr::opts_chunk$set(eval=F)
 contacts <- read.csv("/home/chris/starr_lab/ocpmi/notebook/csv/contacts.csv")
 kable(contacts)
 ```
+
+***
 
 # Notebook
 
@@ -85,7 +89,7 @@ I've renamed my `create_site` file to `notebook_knit` due to a conflict with a d
 #!/usr/bin/env Rscript
 
 cur_dir <- getwd()
-setwd("/home/chris/starr_lab/ocpmi/notebook")
+setwd("/home/chris/ocpmi_msi/notebook")
 
 rmarkdown::render("index.Rmd")
 rmarkdown::render("results.Rmd")
@@ -163,6 +167,8 @@ An example of a complete data source location is below:
 * It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
 
 * `/scratch.global/zhan2142/starr/`
+
+***
 
 ## Load/Install R pkgs
 
@@ -243,6 +249,8 @@ The `isub` command can also be given params about compute resources. Here is a d
 isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
 ```
 
+***
+
 ## Job Scheduling
 
 All of my pbs scripts are located at
@@ -287,6 +295,7 @@ for i in *.bam; do
 done
 ```
 
+***
 
 ***
 
@@ -299,6 +308,8 @@ done
 ```{r eval=T}
 htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
 ```
+
+***
 
 ## wes Data
 
@@ -382,11 +393,15 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 </details>
 
+***
+
 ### Fastq src
 
 The wes data can be found at the msi dir below:
 
 * `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+
+***
 
 ### MSI Processing
 
@@ -410,6 +425,7 @@ The wes data can be found at the msi dir below:
 * RL is going to move a small dataset from aws so that I can begin a pilot analysis.
 * The Freebayes params may be relevant, I should look into those.
 
+***
 
 ### BAM creation
 
@@ -474,6 +490,8 @@ ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort 
 
 ```
 
+***
+
 ## Varscan2
 
 Tim wants me to try to use Varscan2 as a method to assess the exome data [@Koboldt2012]. Jinhua had tried this in some fashion previously.
@@ -501,6 +519,7 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 Condensed
 
+***
 
 ### Project Home
 
@@ -552,9 +571,6 @@ java -jar VarScan.jar copynumber normal.pileup tumor.pileup output.basename
 java -jar VarScan.jar copyCaller [varScan.copynumber] OPTIONS
 ```
 
-
-
-
 ***
 
 ## Excavator
@@ -575,6 +591,8 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
+
+***
 
 ### Excv2
 
@@ -757,9 +775,6 @@ T2 /.../path/to/output sample_name
 C1 /.../path/to/output sample_name
 ```
 
-
-
-
 ***
 
 ### Xcavator
@@ -886,7 +901,6 @@ SML and FastCall parameters are stored in the ParameterFile.txt in the main fold
 
 ***
 
-
 ## Contra
 
 Juan had tried using contra in the past which did not work.
@@ -982,12 +996,6 @@ OSError: [Errno 2] No such file or directory
 
 
 </details>
-
-
-
-
-***
-
 
 ***
 
@@ -1112,8 +1120,7 @@ This paper explored a comparative analysis between current CNV analysis tools th
 
 ***
 
-
-
+***
 
 # CCGD
 
@@ -1137,6 +1144,8 @@ By the way, would you like to renew my sponsored account (abbot195) for another 
 -Ken
 
 </details>
+
+***
 
 ### Server site
 
@@ -1374,6 +1383,8 @@ On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
 
 </details>
 
+
+***
 
 ***
 

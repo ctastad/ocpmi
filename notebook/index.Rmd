@@ -1,12 +1,13 @@
 ---
 title: "Log"
+subtitle: "Start Date: 2019-05-20"
 author: "Christopher Tastad"
-date: \today
+date: "Last Edit: `r format(Sys.time(), '%Y-%m-%d')`"
 bibliography: library.bib
 output:
     html_document:
-#        toc: yes
-#        toc_float: yes
+        toc: yes
+        toc_float: yes
         theme: paper
 ---
 
@@ -31,15 +32,19 @@ h4 {
 
 <!-- Content -->
 
-## Preamble {.tabset .tabset-fade}
+***
 
-### Message
+### Preamble {.tabset .tabset-fade}
+
+#### Message
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
 
 The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr Lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `starr_lab/ocpmi/notebook/`) are collated on the `References` page.
 
-### Git
+***
+
+#### Git
 
 Version control was used throughout the development of this work and can be found at the University's private github server:
 
@@ -47,7 +52,7 @@ https://github.umn.edu/tasta005/ocpmi.git
 
 ***
 
-### Contact
+#### Contact
 
 Christopher Tastad, MS Candidate
 
@@ -55,15 +60,13 @@ Christopher Tastad, MS Candidate
 * Personal: ctastad@gmail.com
 * Mobile: 612-817-7989
 
-```{r global_options}
+```{r global_options, include=F}
 knitr::opts_chunk$set(eval=F)
 ```
 
 ***
 
-## May 2019 {.tabset .tabset-fade}
-
-### &ast;
+## May
 
 ### 20
 
@@ -796,9 +799,7 @@ Created    Completed  Age Project        Description
 
 ***
 
-## June {.tabset .tabset-fade}
-
-### &ast;
+## June
 
 ### 3
 
@@ -1777,9 +1778,7 @@ Results
 
 ***
 
-## July {.tabset .tabset-fade}
-
-### &ast;
+## July
 
 ### 8
 
@@ -3071,9 +3070,7 @@ Currently, I have the vs2 and excv2 pipelines running in parallel. I've adjusted
 
 ***
 
-## August {.tabset .tabset-fade}
-
-### &ast;
+## August
 
 ### 1
 
@@ -3574,6 +3571,8 @@ Created    Completed  Age Project Description
 
 3 tasks
 ```
+
+***
 
 ### 8
 
