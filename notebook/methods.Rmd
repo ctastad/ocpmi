@@ -1155,6 +1155,8 @@ The working directory for the website seems to be located at:
 <details>
   <summary>**Email thread with Satish to gain access**</summary>
 
+```{r}
+
 Hi Jeff,
 
 Thank you for your response. oialinux@umn.edu was actually the first point of contact I made, and they directed me to HST. I've cc'd the contact who handled the this response.
@@ -1260,8 +1262,10 @@ On Wed, Jul 17, 2019 at 11:34 AM Jeffrey Sik <sikxx005@umn.edu> wrote:
         Ref:MSG25438236
 
 
+```
 
 </details>
+
 
 <details>
   <summary>**Email thread with Sonya to gain access**</summary>
@@ -1373,7 +1377,18 @@ On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
 
 ***
 
-# Repos
+# Sources
+
+## Tools
+
+* bwa-mem (@Li2013)
+* Excavator2 (@DAurizio2016)
+* VarScan2 (@Koboldt2012)
+* samtools (@Li2009)
+* parallel (@Tange2011a)
+* DNAcopy
+* BEDTools (@Quinlan2010)
+* UCSC Table Browser (@Karolchik2004)
 
 ## Awesome single cell repo
 
