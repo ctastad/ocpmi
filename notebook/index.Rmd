@@ -3575,6 +3575,32 @@ Created    Completed  Age Project Description
 3 tasks
 ```
 
+### 8
+
+#### TODO
+
+```{r}
+ID Age P Project Tags Description                                 Urg
+-- --- - ------- ---- ------------------------------------------- ----
+83 17h H lab     work review dnacopy [1]                           8.6
+68 5d    lab     work add some pbs scripts to methods             1.83
+69 5d    lab     work evaluate excv2 1kgp gr38 output             1.83
+70 5d    lab     work make readme for notebook                    1.83
+71 5d    lab     work add excv2 1kgp output to results page       1.83
+73 4d    lab     work add tree diagrams to relevant dirs          1.82
+76 2d    lab     work explore controls for cnv                    1.81
+77 2d    lab     work check process of bam creation (youtube)     1.81
+78 2d    lab     work update mnt_msi docs                         1.81
+80 2d    lab     work update notebook_knit.R docs                 1.81
+85 14s   lab     work run excv2 across ocpmi bams                  1.8
+42 10w L lab     work agenda [6]                                  1.22
+40 11w L lab     work review scripts for ccgd database            0.23
+41 11w L lab     work explore shiny framework for database        0.23
+
+14 tasks
+```
+
+
 
 
 
@@ -3582,6 +3608,7 @@ Created    Completed  Age Project Description
 ***
 
 ## References
+
 
 
 
