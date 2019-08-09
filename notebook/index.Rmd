@@ -3497,7 +3497,7 @@ ID Age P Project Tags Description                                           Urg
 
 *__&ast;.bam `mpileup` (samtools)__ &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
 
-**vs2 copyCaller Script**
+##### vs2 copyCaller Script
 
 ```{r}
 cd ~/ocpmi/bam/wes/pilot
