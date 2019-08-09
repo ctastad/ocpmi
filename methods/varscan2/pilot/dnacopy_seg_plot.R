@@ -1,7 +1,7 @@
 library(DNAcopy)
 
 cn <- read.table("pilot_output.copynumber.called",header=T)
-cna.object <- CNA(cbind(cn$normal_depth, cn$tumor_depth), cn$chrom, cn$chr_start, data.type="logratio", sampleid=c("pm2","pm15"))
+cna.object <- CNA(genomdat = cbind(cn$normal_depth, cn$tumor_depth), chrom = cn$chrom, maploc = cn$chr_start, data.type = "logratio", sampleid=c("pm2","pm15"))
 
 # Smoothing object
 cna.object.smooth <- smooth.CNA(cna.object)

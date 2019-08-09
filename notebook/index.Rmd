@@ -3425,7 +3425,7 @@ I ran the process through the weekend with an extended wall time. It took severa
 
 *BAMs &rarr; `pileup` (samtools) &rarr; [bam + pileup] `copynumber` (vs2) &rarr; output.copynumber &rarr; **`copyCaller` (vs2)** &rarr; segmentation &rarr; ?*
 
-I’ve discovered my pileup files didn’t get processed completely which explains why only chr1 is represented. I’ve started a new job to rerun the process with an updated bash script as well. Also, according to the thread below, another issue presenting itself is that the \*.cram files I thought were aligned with hg38.fa actually used a different reference, which would cause the mpileup process to fail. As a result, I\'m rerunning the process with the pilot bam files I created.
+I’ve discovered my pileup files didn’t get processed completely which explains why only chr1 is represented. I’ve started a new job to rerun the process with an updated bash script as well. Also, according to the thread below, another issue presenting itself is that the \*.cram files I thought were aligned with hg38.fa actually used a different reference, which would cause the mpileup process to fail. As a result, I'm rerunning the process with the pilot bam files I created.
 
 * https://www.biostars.org/p/93643/
 
@@ -3557,9 +3557,9 @@ ID Age P Project Tags Description                                           Urg
 
 #### Summary
 
-Today was another day for housekeeping. I've made a significant modification to the layout of my nodebook by instituting a .tabset parameter. Things were starting to feel somewhat unruly with the page length and continuous flow at this point, so tabing sections should help. Additionally, I made sure to go back and get citations for the recent tools I've incorporated into my workflow.
+Today was another day for housekeeping. I've made a significant modification to the layout of my notebook by instituting a .tabset parameter. Things were starting to feel somewhat unruly with the page length and continuous flow at this point, so tabbing sections should help. Additionally, I made sure to go back and get citations for the recent tools I've incorporated into my workflow.
 
-I expected to be meeting with Tim where I thought we would be able to discuss a few things that would define the next phase of my project with the wes data. I found he will be out for the week though, and will need to work on incremental items till then. I might just run the excv2 pipeline with the bam files I've created eitherway.
+I expected to be meeting with Tim where I thought we would be able to discuss a few things that would define the next phase of my project with the wes data. I found he will be out for the week though, and will need to work on incremental items till then. I might just run the excv2 pipeline with the bam files I've created either way.
 
 ##### Completed
 
@@ -3613,7 +3613,7 @@ ID Age P Project Tags Description                                 Urg
 
 I moved the location of the associated files to the vs2 methods directory to get them out of the gene data folder they were in temporarily.
 
-I made an R script that utilizes the `DNAcopy` BioC pacakge for segmentation by the CBS algorithm. Simply, this will take the output of the vs2 `copyCaller` function and build a `cna.object` to perform segmentation and visualization. There are several plotting options with this function. This one currently employs the whole genome view.
+I made an R script that utilizes the `DNAcopy` BioC package for segmentation by the CBS algorithm. Simply, this will take the output of the vs2 `copyCaller` function and build a `cna.object` to perform segmentation and visualization. There are several plotting options with this function. This one currently employs the whole genome view.
 
 * CNA: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/CNA
 * plot.DNAcopy: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/plot.DNAcopy
@@ -3624,7 +3624,7 @@ I made an R script that utilizes the `DNAcopy` BioC pacakge for segmentation by 
 library(DNAcopy)
 
 cn <- read.table("pilot_output.copynumber.called",header=T)
-cna.object <- CNA(cbind(cn$normal_depth, cn$tumor_depth), cn$chrom, cn$chr_start, data.type="logratio", sampleid=c("pm2","pm15"))
+cna.object <- CNA(genomdat = cbind(cn$normal_depth, cn$tumor_depth), chrom = cn$chrom, maploc = cn$chr_start, data.type = "logratio", sampleid=c("pm2","pm15"))
 
 # Smoothing object
 cna.object.smooth <- smooth.CNA(cna.object)
@@ -3639,19 +3639,35 @@ dev.off()
 
 ```
 
+One point of clarity I need is related to the `genomdat` param in the `CNA` function. I'm not sure if this should point to read depth data or the log ratio.
+
 **End of day**
 
-*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization (DNAcopy)*
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; __visualization (DNAcopy)__*
 
+#### Summary
+
+I was able to complete the vs2 pipeline today. There are some minor elements I may need to confirm in the form of how the controls relate to samples in the vs2 `copynumber` function. Otherwise, I think I may be in a position to run both pipelines across the full wes dataset. I will likely get this started tomorrow.
+
+##### Completed
+
+```{r}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- --------------------------------------------
+2019-08-06 2019-08-08 2d    lab     update mnt_msi docs
+2019-08-06 2019-08-08 2d    lab     update notebook_knit.R docs
+2019-08-07 2019-08-08 23h H lab     review dnacopy
+                                      2019-08-07
+                                    https://www.rdocumentation.org/packages/DNA-
+                                    copy/versions/1.46.0/topics/CNA
+2019-08-02 2019-08-08 6d    lab     add some pbs scripts to methods
+2019-08-02 2019-08-08 6d    lab     evaluate excv2 1kgp gr38 output
+
+5 tasks
+```
 
 
 ***
 
 ## References
-
-
-
-
-
-
 

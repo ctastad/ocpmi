@@ -89,7 +89,7 @@ I've renamed my `create_site` file to `notebook_knit` due to a conflict with a d
 #!/usr/bin/env Rscript
 
 cur_dir <- getwd()
-setwd("/home/chris/ocpmi_msi/notebook")
+setwd("/home/chris/ocpmi/notebook")
 
 rmarkdown::render("index.Rmd")
 rmarkdown::render("results.Rmd")
@@ -506,12 +506,18 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 </details>
 
-**vs2 pilot**
+**vs2 pilot** (failed)
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, via UCSC
 
 I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta reference with BAMs from the 1kgp (`NA10847`, `NA19131`).
+
+**vs2 pilot** (passed)
+
+* samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
+* output: `~/ocpmi/methods/varscan2/pilot`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 
 **Pipeline**
 
@@ -617,6 +623,7 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 **excv2 pilot**
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
+* output: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis`
 * gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
 
 ***
