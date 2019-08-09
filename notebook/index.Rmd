@@ -3497,6 +3497,8 @@ ID Age P Project Tags Description                                           Urg
 
 *__&ast;.bam `mpileup` (samtools)__ &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
 
+**vs2 copyCaller Script**
+
 ```{r}
 cd ~/ocpmi/bam/wes/pilot
 java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller pilot_output.copynumber --output-file pilot_output.copynumber.called
@@ -3599,8 +3601,47 @@ ID Age P Project Tags Description                                 Urg
 14 tasks
 ```
 
+#### vs2 Pilot: ocpmi pm2/15
 
+* samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/bam/wes/pilot`
+* output: `~/ocpmi/methods/varscan2/pilot`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 
+**Start of day**
+
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; __output.copynumber.called__ &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
+
+I moved the location of the associated files to the vs2 methods directory to get them out of the gene data folder they were in temporarily.
+
+I made an R script that utilizes the `DNAcopy` BioC pacakge for segmentation by the CBS algorithm. Simply, this will take the output of the vs2 `copyCaller` function and build a `cna.object` to perform segmentation and visualization. There are several plotting options with this function. This one currently employs the whole genome view.
+
+* CNA: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/CNA
+* plot.DNAcopy: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/plot.DNAcopy
+
+**dnacopy_seg_plot.R**
+
+```{r}
+library(DNAcopy)
+
+cn <- read.table("pilot_output.copynumber.called",header=T)
+cna.object <- CNA(cbind(cn$normal_depth, cn$tumor_depth), cn$chrom, cn$chr_start, data.type="logratio", sampleid=c("pm2","pm15"))
+
+# Smoothing object
+cna.object.smooth <- smooth.CNA(cna.object)
+
+#Segmentation at default parameters
+cna.object.smooth.segd <- segment(cna.object.smooth, verbose=1)
+
+#Plot whole studies
+pdf('rplot.pdf')
+plot(cna.object.smooth.segd, plot.type="w")
+dev.off()
+
+```
+
+**End of day**
+
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization (DNAcopy)*
 
 
 

@@ -515,9 +515,8 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 **Pipeline**
 
-*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` (vs2) &rarr; output.copynumber `copyCaller` (vs2) &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization &rarr; ?*
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization (DNAcopy)*
 
-Condensed
 
 ***
 
