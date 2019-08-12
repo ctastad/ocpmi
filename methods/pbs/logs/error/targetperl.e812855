@@ -1,0 +1,6 @@
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists
+processing chromosomes
+Read 3975 items
+processing chromosomes

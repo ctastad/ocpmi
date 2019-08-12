@@ -1,0 +1,106 @@
+Normal Pileup: pm2.mpileup
+Tumor Pileup: pm15.mpileup
+NOTICE: While dual input files are still supported, using a single mpileup file (normal-tumor) with the --mpileup 1 setting is strongly recommended.
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+Not resetting normal file because chrY < chrY_KI270740v1_random
+7230549 positions in tumor
+4592419 positions shared in normal
+778056 had sufficient coverage for comparison
+19144 raw copynumber segments with size > 10
+18215 good copynumber segments with depth > 10

@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N targetperl
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+module load samtools
+module load bedtools
+module load intel
+module load perl
+module load R
+
+perl TargetPerla.pl SourceTarget.txt ~/ocpmi/data/gene_ref/ucsc/hg38/hg38_sorted.bed pilot 50000 hg38

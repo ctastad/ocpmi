@@ -1,0 +1,14 @@
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/test_target_38/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/test_target_38/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/test_target_38/test_target_38_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/test_target_38/test_target_38_chromosome.txt': No such file or directory
+Execution halted

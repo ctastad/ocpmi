@@ -1,0 +1,44 @@
+Program folder is: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+Preparing Multiprocessor Analysis...
+Starting Multiprocessor Analysis!
+Creating 'data/prepare/pilot/NA10847/RC' folder...
+Creating 'data/prepare/pilot/NA10847/RCNorm' folder...
+Creating 'data/prepare/pilot/NA10847/Images' folder...
+Working on sample NA10847.
+Creating Read Count Data...
+Creating 'data/prepare/pilot/NA19131/RC' folder...
+Creating 'data/prepare/pilot/NA19131/RCNorm' folder...
+Creating 'data/prepare/pilot/NA19131/Images' folder...
+Working on sample NA19131.
+Creating Read Count Data...
+Removing temporary files...
+Read Count done!
+Normalizing Read Count Data...
+Removing temporary files...
+Read Count done!
+Normalizing Read Count Data...
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+Normalization done!
+Performed RC calculations and Normalization on samples: 
+NA19131null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+Normalization done!
+Performed RC calculations and Normalization on samples: 
+NA10847Multiprocessor Analysis Complete!

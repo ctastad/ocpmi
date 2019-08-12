@@ -1,0 +1,282 @@
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr1.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr1.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr2.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr2.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr3.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr3.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr4.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr4.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr5.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr5.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr6.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr6.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr7.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr7.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr8.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr8.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr9.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr9.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr10.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr10.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr11.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr11.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr12.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr12.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr13.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr13.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr14.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr14.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr15.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr15.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr16.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr16.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr17.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr17.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr18.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr18.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr19.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr19.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr20.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr20.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr21.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr21.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chr22.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chr22.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA19131/RC/NA19131.RC.chrX.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file, "wb") : cannot open the connection
+Calls: save -> gzfile
+In addition: Warning message:
+In gzfile(file, "wb") :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/prepare/pilot/NA10847/RC/NA10847.RC.chrX.RData', probable reason 'No such file or directory'
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted

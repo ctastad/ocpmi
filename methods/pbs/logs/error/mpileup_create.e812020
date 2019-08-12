@@ -1,0 +1,10 @@
+[mpileup] 1 samples in 1 input files
+[E::cram_decode_slice] MD5 checksum reference mismatch for ref 0 pos 248638342..248857155
+[E::cram_decode_slice] CRAM: 13ab0bf848919527a32e2686ce847c1e
+[E::cram_decode_slice] Ref : b1849c51a50886d8619bd8b60217b163
+[E::cram_next_slice] Failure to decode slice
+[mpileup] 1 samples in 1 input files
+[E::cram_decode_slice] MD5 checksum reference mismatch for ref 0 pos 248558952..248771918
+[E::cram_decode_slice] CRAM: a1c04e59bd86486828a9b3b160e4d161
+[E::cram_decode_slice] Ref : 9823337741214c4ac1fe77912cd019b6
+[E::cram_next_slice] Failure to decode slice

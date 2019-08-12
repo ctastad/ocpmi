@@ -1,0 +1,17 @@
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+[fread] Bad address
+parallel: Error: Output is incomplete.
+parallel: Error: Cannot append to buffer file in /tmp.
+parallel: Error: Is the disk full?
+parallel: Error: Change $TMPDIR with --tmpdir or use --compress.

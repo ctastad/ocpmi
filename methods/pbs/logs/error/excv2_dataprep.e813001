@@ -1,0 +1,20 @@
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Hmisc.so’ not found
+In addition: Warning message:
+S3 methods ‘print.arrGrob’, ‘ggplot.transcan’, ‘ggplot.summaryP’, ‘print.spower’, ‘print.Quantile2’, ‘plot.describe’, ‘plot.Quantile2’, ‘plot.summaryP’, ‘plot.summaryS’, ‘plot.transcan’, ‘label.default’, ‘label.data.frame’, ‘label<-.default’, ‘label<-.data.frame’, ‘[.labelled’, ‘[.ffdflabel’, ‘plotp.summaryS’, ‘print.labelled’, ‘relevel.labelled’, ‘label.Surv’, ‘units.default’, ‘units.Surv’, ‘Ecdf.data.frame’, ‘Ecdf.default’, ‘Ecdf.formula’, ‘Function.areg.boot’, ‘Function.transcan’, ‘Label.data.frame’, ‘Math.mChoice’, ‘Mean.areg.boot’, ‘Ops.mChoice’, ‘Quantile.areg.boot’, ‘Summary.mChoice’, ‘as.character.mChoice’, ‘as.data.frame.ffdflabel’, ‘as.data.frame.impute’, ‘as.data.frame.labelled’, ‘as.data.frame.roundN’, ‘as.data.frame.special.miss’, ‘as.data.frame.substi’, ‘as.discrete.default’, ‘as.double.Cbind’, ‘as.double [... truncated] 
+Error: package or namespace load failed for ‘Hmisc’
+Execution halted
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+Error in library.dynam(lib, package, package.lib) : 
+  shared object ‘Hmisc.so’ not found
+In addition: Warning message:
+S3 methods ‘print.arrGrob’, ‘ggplot.transcan’, ‘ggplot.summaryP’, ‘print.spower’, ‘print.Quantile2’, ‘plot.describe’, ‘plot.Quantile2’, ‘plot.summaryP’, ‘plot.summaryS’, ‘plot.transcan’, ‘label.default’, ‘label.data.frame’, ‘label<-.default’, ‘label<-.data.frame’, ‘[.labelled’, ‘[.ffdflabel’, ‘plotp.summaryS’, ‘print.labelled’, ‘relevel.labelled’, ‘label.Surv’, ‘units.default’, ‘units.Surv’, ‘Ecdf.data.frame’, ‘Ecdf.default’, ‘Ecdf.formula’, ‘Function.areg.boot’, ‘Function.transcan’, ‘Label.data.frame’, ‘Math.mChoice’, ‘Mean.areg.boot’, ‘Ops.mChoice’, ‘Quantile.areg.boot’, ‘Summary.mChoice’, ‘as.character.mChoice’, ‘as.data.frame.ffdflabel’, ‘as.data.frame.impute’, ‘as.data.frame.labelled’, ‘as.data.frame.roundN’, ‘as.data.frame.special.miss’, ‘as.data.frame.substi’, ‘as.discrete.default’, ‘as.double.Cbind’, ‘as.double [... truncated] 
+Error: package or namespace load failed for ‘Hmisc’
+Execution halted
