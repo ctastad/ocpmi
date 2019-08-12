@@ -3649,6 +3649,8 @@ One point of clarity I need is related to the `genomdat` param in the `CNA` func
 
 I was able to complete the vs2 pipeline today. There are some minor elements I may need to confirm in the form of how the controls relate to samples in the vs2 `copynumber` function. Otherwise, I think I may be in a position to run both pipelines across the full wes dataset. I will likely get this started tomorrow.
 
+I also cleaned up my directory structure. This may have been a huge mistake in some sense because I will have to go reassign a bunch of directory pointers, but things were getting super unorganized.
+
 ##### Completed
 
 ```{r}
@@ -3665,6 +3667,50 @@ Created    Completed  Age P Project Description
 
 5 tasks
 ```
+
+***
+
+### 10
+
+#### Directory Cleanup
+
+#### excv2 Pilot redo: 1kgp GRCh38
+
+* samples: `NA10847`; `NA19131` via 1kgp GRCh38
+* output: `~/ocpmi/results/excavator2/pilot`
+* gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
+
+In performing this directory restructuring, I came accross the realization I may have mixed up file association for the version of the excv2 pilot that worked. The config files for excv2 seem to be pointing to older versions of the pilot I had attempted but didn't work. I'm rerunning the pilot with the file set I believe worked in the new directory setup.
+
+***
+
+### 11
+
+***
+
+### 12
+
+#### TODO
+
+```{r}
+ID Age P Project Tags Description                                       Urg
+-- --- - ------- ---- ------------------------------------------------- ----
+68 9d    lab     work make readme for notebook                          1.85
+69 9d    lab     work add excv2 1kgp output to results page             1.85
+71 8d    lab     work add tree diagrams to relevant dirs                1.84
+74 6d    lab     work explore controls for cnv                          1.83
+75 6d    lab     work check process of bam creation (youtube)           1.83
+80 3d    lab     work run excv2 and vs2 across ocpmi bams               1.82
+81 3d    lab     work create loop for excv2 and vs2 to run all bams     1.82
+82 3d    lab     work update dir links to bam, pbs, gene_ref            1.82
+85 1d    lab     work update support txt files for excv2                1.81
+42 11w L lab     work agenda [6]                                        1.24
+40 11w L lab     work review scripts for ccgd database                  0.25
+41 11w L lab     work explore shiny framework for database              0.25
+
+12 tasks
+```
+
 
 
 ***

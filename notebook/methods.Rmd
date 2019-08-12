@@ -31,6 +31,49 @@ kable(contacts)
 
 # Notebook
 
+## Project Directory
+
+```{r}
+ocpmi/
+├── data # location of any experimental or source dataset content
+│   ├── bam
+│   ├── gene_ref # gene reference sources for all pipelines
+│   └── pt59
+├── methods # code, packages, and source files for all pipelines
+│   ├── EXCAVATOR2_Package_v1.1.2
+│   ├── jason_cnv
+│   ├── pbs # job scripts for msi
+│   ├── seurat
+│   ├── test_script.R
+│   ├── tim
+│   ├── varscan2
+│   └── XCAVATOR
+├── notebook # source files for project notebook
+│   ├── csv
+│   ├── ieee-with-url.csl
+│   ├── index.Rmd # log source file
+│   ├── library.bib
+│   ├── methods.Rmd # methods source file
+│   ├── references.Rmd
+│   ├── results.Rmd
+│   ├── _site # notebook site dir
+│   ├── _site.yml
+│   └── tmp
+├── reference # reference documents
+│   ├── background
+│   ├── dir_res_proposal
+│   ├── gene_markers
+│   ├── presentations
+│   ├── single_cell
+│   └── wes
+└── results # output for any code and pipelines
+    ├── excavator2
+    ├── seurat
+    └── varscan2
+
+```
+
+
 ## Annotation
 
 For consistency in documenting the wide range of information, I want to have a systematic means of tracking this accross experimentation.
@@ -306,7 +349,7 @@ done
 ### Seurat
 
 ```{r eval=T}
-htmltools::includeHTML("../methods/seurat_tutorial/pbmc3k_tutorial.html")
+htmltools::includeHTML("~/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html")
 ```
 
 ***
@@ -441,6 +484,16 @@ I need to create new bam files from our source wes data since these files were l
 
 *fastq gene_ref &rarr; `index` gene ref (bwa bwtsw) &rarr; align &ast;.fastq (bwa mem) + `sort` (samtools) &rarr; output.bam*
 
+**Directory**
+
+```{r}
+ocpmi/data/bam/
+├── 1kgp # 1000 genomes project files
+└── wes # ocpmi whole exome data
+
+```
+
+
 #### bwa
 
 I'll be using bwa for sequence alignment.
@@ -522,6 +575,15 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 **Pipeline**
 
 *&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization (DNAcopy)*
+
+**Directory**
+
+```{r}
+ocpmi/methods/varscan2/
+├── pilot
+└── VarScan.v2.4.4.jar
+
+```
 
 
 ***
@@ -637,6 +699,39 @@ Detailed
 Condensed
 
 *&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+
+**Directory**
+
+```{r}
+ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
+├── data
+│   ├── centromere
+│   ├── GCA_000001405.15_GRCh38.bw # hg38 bigwig file
+│   ├── prepare # output of EXCAVATORDataPrepare.pl
+│   ├── support
+│   ├── targets # output of TargetPerla.pl
+│   └── ucsc.hg19.bw
+├── docs
+│   └── EXCAVATOR2 Manual.pdf
+├── EXCAVATORDataAnalysis.pl # excv2 function step 3.
+├── EXCAVATORDataPrepare.pl # excv2 function step 2.
+├── ExperimentalFileAnalysis.50000.txt # excv2 sourcefile step 3.
+├── ExperimentalFilePrepare.50000.txt # excv2 sourcefile step 2.
+├── lib
+│   ├── bash
+│   ├── F77
+│   ├── OtherLibrary
+│   ├── perl
+│   └── R
+├── ParameterFile.txt
+├── SourceTarget_hg38.txt # excv2 sourcefile step 1.
+├── SourceTarget.txt_
+└── TargetPerla.pl # excv2 function step 1.
+
+```
+
+
+***
 
 #### Project Home
 
