@@ -29,7 +29,7 @@ kable(contacts)
 
 ***
 
-# Notebook
+# Documentation
 
 ## Project Directory
 
@@ -52,12 +52,12 @@ ocpmi/
 │   ├── csv
 │   ├── ieee-with-url.csl
 │   ├── index.Rmd # log source file
-│   ├── library.bib
+│   ├── library.bib # bibtex master reference citation file
 │   ├── methods.Rmd # methods source file
 │   ├── references.Rmd
 │   ├── results.Rmd
-│   ├── _site # notebook site dir
-│   ├── _site.yml
+│   ├── _site # notebook site dir - homepage location**
+│   ├── _site.yml # yaml file for site knit
 │   └── tmp
 ├── reference # reference documents
 │   ├── background
@@ -66,7 +66,7 @@ ocpmi/
 │   ├── presentations
 │   ├── single_cell
 │   └── wes
-└── results # output for any code and pipelines
+└── results # output for any code or pipeline
     ├── excavator2
     ├── seurat
     └── varscan2
@@ -298,9 +298,9 @@ isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
 
 All of my pbs scripts are located at
 
-* dir: `~/ocpmi/pbs`
-* output: `~/ocpmi/pbs/logs/output`
-* errors: `~/ocpmi/pbs/logs/error`
+* dir: `~/ocpmi/methods/pbs`
+* output: `~/ocpmi/methods/pbs/logs/output`
+* errors: `~/ocpmi/methods/pbs/logs/error`
 
 A template pbs script
 
@@ -317,7 +317,7 @@ module load
 
 ```
 
-### Exit Codes
+#### Exit Codes
 
 There is some documentation from Adaptive Computing here
 
@@ -328,7 +328,7 @@ codes <- read.csv("/home/chris/starr_lab/ocpmi/notebook/csv/exit_codes.csv")
 kable(codes)
 ```
 
-### Bash Loop
+#### Bash Loop
 
 This is an example bash loop that runs a function on all file types with a common extension and takes the existing file name to the new output.
 
@@ -438,23 +438,19 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 ***
 
-### Fastq src
-
-The wes data can be found at the msi dir below:
-
-* `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
-
-***
-
-### MSI Processing
+#### MSI Processing
 
 **Project dir**
 
-* `/nelsona2/shared/ovarian_Jan2019/DNA_project`
+* dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
+* fastq: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
 
 **Pipeline**
 
 *Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+
+<details>
+  <summary>**Call w/ Rebecca**</summary>
 
 * All processing was done in MSI scratch due to the large resource use.
 * The data is stored in 2nd tier storage right now as a result.
@@ -467,10 +463,11 @@ The wes data can be found at the msi dir below:
 * I need to do a search of `/DNA_project` to see if there are any usable sequence files in there.
 * RL is going to move a small dataset from aws so that I can begin a pilot analysis.
 * The Freebayes params may be relevant, I should look into those.
+</details>
 
 ***
 
-### BAM creation
+#### BAM creation
 
 I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
 
@@ -559,6 +556,12 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 </details>
 
+#### Project Home
+
+* git: https://github.com/dkoboldt/varscan
+* dir: `~/ocpmi/methods/varscan2`
+* man:  https://dkoboldt.github.io/varscan/copy-number-calling.html
+
 **vs2 pilot** (failed)
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
@@ -585,14 +588,7 @@ ocpmi/methods/varscan2/
 
 ```
 
-
 ***
-
-#### Project Home
-
-* git: https://github.com/dkoboldt/varscan
-* dir: `~/ocpmi/methods/varscan2`
-* man:  https://dkoboldt.github.io/varscan/copy-number-calling.html
 
 #### Pileup Creation
 
@@ -610,7 +606,6 @@ for i in *.cram; do
 done
 
 ```
-
 
 #### copynumber Command
 
@@ -642,6 +637,7 @@ java -jar VarScan.jar copyCaller [varScan.copynumber] OPTIONS
 
 I made an R script that utilizes the `DNAcopy` BioC pacakge for segmentation by the CBS algorithm. Simply, this will take the output of the vs2 `copyCaller` function and build a `cna.object` to perform segmentation and visualization. There are several plotting options with this function. This one currently employs the whole genome view.
 
+* DNAcopy: https://www.bioconductor.org/packages/2.3/bioc/vignettes/DNAcopy/inst/doc/DNAcopy.pdf
 * CNA: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/CNA
 * plot.DNAcopy: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/plot.DNAcopy
 
@@ -670,7 +666,6 @@ dev.off()
 
 ## Excavator2
 
-
 <details>
   <summary>**from: Jinhua 6/14/19**</summary>
 
@@ -681,14 +676,16 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 </details>
 
+#### Project Home
+
+* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
+* man: [file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf](file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf)
 
 **excv2 pilot**
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * output: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/output/analysis`
 * gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `GCA_000001405.15_GRCh38.bw` via excv2
-
-***
 
 **Pipeline**
 
@@ -730,29 +727,7 @@ ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
 
 ```
 
-
 ***
-
-#### Project Home
-
-* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
-* man: [file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf](file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf)
-
-#### Installation
-
-Decompress the Excavator package, then move to `.../excavator/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
-
-```{r eval=F}
-R CMD SHLIB F4R.f
-R CMD SHLIB FastJointSLMLibraryI.f
-```
-
-This will create the .o and .so fortran libraries.
-
-#### Important
-
-* Coherence of chromosome annotation among all files is necessary. (chrN vs N)
-* The target bed file must be sorted by chromosome number and region coordinate. No overlapping regions must be present in the target file.
 
 #### Quick Start
 
@@ -781,6 +756,23 @@ perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --
 ```{r}
 perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
 ```
+
+#### Installation
+
+Decompress the Excavator package, then move to `.../excavator/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
+
+```{r eval=F}
+R CMD SHLIB F4R.f
+R CMD SHLIB FastJointSLMLibraryI.f
+```
+
+This will create the .o and .so fortran libraries.
+
+#### Important
+
+* Coherence of chromosome annotation among all files is necessary. (chrN vs N)
+* The target bed file must be sorted by chromosome number and region coordinate. No overlapping regions must be present in the target file.
+
 
 #### TargetPerla.pl
 
@@ -1402,7 +1394,7 @@ On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
 * VarScan2 (@Koboldt2012)
 * samtools (@Li2009)
 * parallel (@Tange2011a)
-* DNAcopy
+* DNAcopy [citation needed]
 * BEDTools (@Quinlan2010)
 * UCSC Table Browser (@Karolchik2004)
 

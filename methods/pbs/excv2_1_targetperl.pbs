@@ -11,6 +11,6 @@ module load samtools
 module load bedtools
 module load intel
 module load perl
-module load R
+module load R/3.6.0
 
-perl TargetPerla.pl SourceTarget.txt ~/ocpmi/data/gene_ref/ucsc/hg38/hg38_sorted.bed pilot 50000 hg38
+perl TargetPerla.pl SourceTarget.txt ~/ocpmi/data/gene_ref/ucsc/hg38/hg38_sortmerge.bed pilot 50000 hg38

@@ -32,37 +32,122 @@ h4 {
 
 <!-- Content -->
 
+```{r global_options, include=F}
+knitr::opts_chunk$set(eval=F)
+```
+
 ***
 
-### Preamble {.tabset .tabset-fade}
+## Readme {.tabset .tabset-fade}
 
-#### Message
+### Preamble
+
+**Copyright**
 
 This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
 
-The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr Lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `starr_lab/ocpmi/notebook/`) are collated on the `References` page.
+* https://sites.google.com/a/umn.edu/starrlab/
+* https://policy.umn.edu/research/copyright
+
+**Layout**
+
+Homepage (go here first)
+
+* `notebook/_site/index.html`
+
+This notebook was written in Rmarkdown and rendered using an automated knit script. For information on the implementation of this, refer to the "Knit" tab.
+
+The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr Lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `~/ocpmi/notebook/`) are collated on the `References` page.
+
+#### Important!!
+
+I did a major restructuring of my project directory on *2019-08-08*. I did update dir pointers on the `methods` page to the fullest extent possible. Many historic dir pointers in the log from *2019-08-08* and back are no longer correct and will not be updated. Please look at the "Dir Structure" tab to see the general paradigm going forward from this date.
 
 ***
 
-#### Git
+### Dir Structure
+
+```{r}
+ocpmi/
+├── data # location of any experimental or source dataset content
+│   ├── bam
+│   ├── gene_ref # gene reference sources for all pipelines
+│   └── pt59
+├── methods # code, packages, and source files for all pipelines
+│   ├── EXCAVATOR2_Package_v1.1.2
+│   ├── jason_cnv
+│   ├── pbs # job scripts for msi
+│   ├── seurat
+│   ├── test_script.R
+│   ├── tim
+│   ├── varscan2
+│   └── XCAVATOR
+├── notebook # source files for project notebook
+│   ├── csv
+│   ├── ieee-with-url.csl
+│   ├── index.Rmd # log source file
+│   ├── library.bib # bibtex master reference citation file
+│   ├── methods.Rmd # methods source file
+│   ├── references.Rmd
+│   ├── results.Rmd
+│   ├── _site # notebook site dir - homepage location**
+│   ├── _site.yml # yaml file for site knit
+│   └── tmp
+├── reference # reference documents
+│   ├── background
+│   ├── dir_res_proposal
+│   ├── gene_markers
+│   ├── presentations
+│   ├── single_cell
+│   └── wes
+└── results # output for any code or pipeline
+    ├── excavator2
+    ├── seurat
+    └── varscan2
+```
+
+***
+
+### Knit
+
+If placed in the `notebook/` directory, this script will render the complete set of webpages contained in the notebook from their &ast;.Rmd source to &ast;.html. With slight modification to the `setwd` function and addition to the \$PATH system variable, this function can be run as an automated system binary.
+
+```{r}
+#!/usr/bin/env Rscript
+
+cur_dir <- getwd()
+setwd("./")
+
+rmarkdown::render("index.Rmd")
+rmarkdown::render("results.Rmd")
+rmarkdown::render("methods.Rmd")
+rmarkdown::render("references.Rmd")
+rmarkdown::render_site("index.Rmd")
+
+fl <- Sys.glob("*.html")
+
+ifelse(file.exists(fl), file.remove(fl))
+
+setwd(cur_dir)
+```
+
+***
+
+### Git
 
 Version control was used throughout the development of this work and can be found at the University's private github server:
 
-https://github.umn.edu/tasta005/ocpmi.git
+* https://github.umn.edu/tasta005/ocpmi.git
 
 ***
 
-#### Contact
+### Contact
 
 Christopher Tastad, MS Candidate
 
 * University: tasta005@umn.edu
 * Personal: ctastad@gmail.com
 * Mobile: 612-817-7989
-
-```{r global_options, include=F}
-knitr::opts_chunk$set(eval=F)
-```
 
 ***
 
@@ -3093,11 +3178,12 @@ ID Age  P Project Tags   Description                                   Urg
 
 I believe I've finished the process of converting a couple fastq files to bam files. I'm going to run these through the vs2 and excv2 pipelines to see if they will take.
 
+**Pilot**
+
 * src: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
-* dir: `~/ocpmi/bam/ocpmi/pilot`
 * samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`
 * gene_ref: `hg38.fa`, via UCSC
-* bam: `pm2.bam`, `pm15.bam`
+* output: `pm2.bam`, `pm15.bam`; `~/ocpmi/data/bam/wes/pilot`
 
 **Process**
 
@@ -3672,8 +3758,6 @@ Created    Completed  Age P Project Description
 
 ### 10
 
-#### Directory Cleanup
-
 #### excv2 Pilot redo: 1kgp GRCh38
 
 * samples: `NA10847`; `NA19131` via 1kgp GRCh38
@@ -3685,6 +3769,14 @@ In performing this directory restructuring, I came accross the realization I may
 ***
 
 ### 11
+
+#### excv2 Pilot redo: 1kgp GRCh38
+
+* samples: `NA10847`; `NA19131` via 1kgp GRCh38
+* output: `~/ocpmi/results/excavator2/pilot`
+* gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
+
+I'm generally continuing this process, and it isn't working for some inexplicable reason. I have been making minor adjustments to the config files to replicate the original successful run as best as possible to no avail. The most ridiculous part is the fact I'm getting the `JointSegIn` error from *2019-08-01*. I will pretty much just keep tinkering with no clue what is going on.
 
 ***
 
@@ -3710,6 +3802,12 @@ ID Age P Project Tags Description                                       Urg
 
 12 tasks
 ```
+
+#### excv2 Pilot redo: 1kgp GRCh38
+
+* samples: `NA10847`; `NA19131` via 1kgp GRCh38
+* output: `~/ocpmi/results/excavator2/pilot`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
 
 
 

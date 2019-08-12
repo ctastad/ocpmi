@@ -13,4 +13,4 @@ module load intel
 module load perl
 module load R/3.6.0
 
-perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target pilot --assembly hg38 --output ~/ocpmi/results/excavator2/pilot --mode paired
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target pilot --assembly hg38 --output ~/ocpmi/results/excavator2/pilot --mode pooling

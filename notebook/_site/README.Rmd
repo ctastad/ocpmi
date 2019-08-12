@@ -1,0 +1,122 @@
+---
+title: "README"
+author: "Christopher Tastad"
+date: "Last Edit: `r format(Sys.time(), '%Y-%m-%d')`"
+bibliography: library.bib
+output:
+    html_document:
+        theme: paper
+---
+
+
+## Readme {.tabset .tabset-fade}
+
+### Preamble
+
+**Copyright**
+
+This is the notebook of Christopher Tastad, a lab member of Tim Starr at the University of Minnesota. All considerations for ownership follow the discretion of the Starr Lab at the extension of the policies of the University of Minnesota.
+
+* https://sites.google.com/a/umn.edu/starrlab/
+* https://policy.umn.edu/research/copyright
+
+**Layout**
+
+Homepage (go here first)
+
+* `notebook/_site/index.html`
+
+This notebook was written in Rmarkdown and rendered using an automated knit script. For information on the implementation of this, refer to the "Knit" tab.
+
+The layout is generally centered here on the `Log`, which is meant to be a full continuum of work and notation completed while in the Starr Lab. Some elements from the `Log` been reiterated on dedicated pages as special points of reference when a relevant context is needed such as a repeatedly used `method` or notable `results`. References used on each page are displayed at the bottom, and all references used across the notebook and bibliography at large (library.bib located at `~/ocpmi/notebook/`) are collated on the `References` page.
+
+#### Important!!
+
+I did a major restructuring of my project directory on *2019-08-08*. I did update dir pointers on the `methods` page to the fullest extent possible. Many historic dir pointers in the log from *2019-08-08* and back are no longer correct and will not be updated. Please look at the "Dir Structure" tab to see the general paradigm going forward from this date.
+
+***
+
+### Dir Structure
+
+```{r}
+ocpmi/
+├── data # location of any experimental or source dataset content
+│   ├── bam
+│   ├── gene_ref # gene reference sources for all pipelines
+│   └── pt59
+├── methods # code, packages, and source files for all pipelines
+│   ├── EXCAVATOR2_Package_v1.1.2
+│   ├── jason_cnv
+│   ├── pbs # job scripts for msi
+│   ├── seurat
+│   ├── test_script.R
+│   ├── tim
+│   ├── varscan2
+│   └── XCAVATOR
+├── notebook # source files for project notebook
+│   ├── csv
+│   ├── ieee-with-url.csl
+│   ├── index.Rmd # log source file
+│   ├── library.bib # bibtex master reference citation file
+│   ├── methods.Rmd # methods source file
+│   ├── references.Rmd
+│   ├── results.Rmd
+│   ├── _site # notebook site dir - homepage location**
+│   ├── _site.yml # yaml file for site knit
+│   └── tmp
+├── reference # reference documents
+│   ├── background
+│   ├── dir_res_proposal
+│   ├── gene_markers
+│   ├── presentations
+│   ├── single_cell
+│   └── wes
+└── results # output for any code or pipeline
+    ├── excavator2
+    ├── seurat
+    └── varscan2
+```
+
+***
+
+### Knit
+
+If placed in the `notebook/` directory, this script will render the complete set of webpages contained in the notebook from their &ast;.Rmd source to &ast;.html. With slight modification to the `setwd` function and addition to the \$PATH system variable, this function can be run as an automated system binary.
+
+```{r}
+#!/usr/bin/env Rscript
+
+cur_dir <- getwd()
+setwd("./")
+
+rmarkdown::render("index.Rmd")
+rmarkdown::render("results.Rmd")
+rmarkdown::render("methods.Rmd")
+rmarkdown::render("references.Rmd")
+rmarkdown::render_site("index.Rmd")
+
+fl <- Sys.glob("*.html")
+
+ifelse(file.exists(fl), file.remove(fl))
+
+setwd(cur_dir)
+```
+
+***
+
+### Git
+
+Version control was used throughout the development of this work and can be found at the University's private github server:
+
+* https://github.umn.edu/tasta005/ocpmi.git
+
+***
+
+### Contact
+
+Christopher Tastad, MS Candidate
+
+* University: tasta005@umn.edu
+* Personal: ctastad@gmail.com
+* Mobile: 612-817-7989
+
