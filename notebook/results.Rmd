@@ -27,7 +27,7 @@ output:
 
 * output: `~/ocpmi/results/excavator2/pilot`
 
-![Image Title](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf){height=500px}
+![Image Title](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf){height=800px}
 
 <div style="width:300px; height:200px">
 ![Image Title](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf)
