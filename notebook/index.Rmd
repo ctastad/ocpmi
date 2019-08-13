@@ -3809,7 +3809,25 @@ ID Age P Project Tags Description                                       Urg
 * output: `~/ocpmi/results/excavator2/pilot`
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
 
+I was able to fully execute the excv2 pipeline again with the pilot 1kgp samples. The issue I was having in this case was an incorrect bam pointer in the `ExperimentalFilePrepare.50000.txt` file for sample `NA19131`. This had the unfortunate result of generating the same error as the sorted bed file error I solved on *2019-08-01*.
 
+#### Summary
+
+Order has been restored in the excv2 pipeline, and I can go into my next conversation with Tim with the expectation that we can determine experimental parameters for the full scale wes analysis. In addition, I did some more documentation restructuring which extended from my directory restructure on *2019-08-08*. This included a `README.Rmd` for both my `Log` and the notebook dir itself. I also updated the `methods` to reflect any dir adjustments and will need to update any outdated reference as I go.
+
+##### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- -------------------------------------
+2019-08-02 2019-08-12 10d lab     make readme for notebook
+2019-08-11 2019-08-12 1d  lab     update support txt files for excv2
+2019-08-04 2019-08-12 8d  lab     add tree diagrams to relevant dirs
+2019-08-02 2019-08-12 10d lab     add excv2 1kgp output to results page
+2019-08-12 2019-08-12 17s lab     rerun excv2 with new dir setup
+
+5 tasks
+```
 
 ***
 
