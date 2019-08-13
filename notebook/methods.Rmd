@@ -346,11 +346,10 @@ done
 
 ## Single Cell Data
 
-### Seurat
+#### Seurat
 
-```{r eval=T}
-htmltools::includeHTML("~/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html")
-```
+* Tutorial: [file:///mnt/msi/tasta005/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html](file:///mnt/msi/tasta005/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html)
+    - `~/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html`
 
 ***
 
@@ -553,14 +552,14 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 * dir: `~/ocpmi/methods/varscan2`
 * man:  https://dkoboldt.github.io/varscan/copy-number-calling.html
 
-**vs2 pilot** (failed)
+**vs2 Pilot** (failed)
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
 * gene_ref: `hg38.fa`, via UCSC
 
 I need to build a pileup file with `samtools`. I don't know how long that will take, so I'm letting that run on msi. Currently, I am planning to use the UCSC hg19 fasta reference with BAMs from the 1kgp (`NA10847`, `NA19131`).
 
-**vs2 pilot** (passed)
+**vs2 Pilot** (passed)
 
 * samples: `pm2.bam`, `pm15.bam`; `~/ocpmi/data/bam/wes/pilot`
 * output: `~/ocpmi/results/varscan2/pilot`
@@ -672,7 +671,7 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 * dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
 * man: [file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf](file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf)
 
-**excv2 pilot**
+**excv2 Pilot**
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3; `~/ocpmi/data/bam/1kgp`
 * output: `~/ocpmi/results/excavator2/pilot`
@@ -993,8 +992,7 @@ OSError: [Errno 2] No such file or directory
 
 Jason sent me his working directory for the early phase of the CNV project. It is located at
 
-* `/starr_lab/ocpmi/methods/jason_cnv`
-
+* `~/ocpmi/methods/jason_cnv`
 
 <details>
 

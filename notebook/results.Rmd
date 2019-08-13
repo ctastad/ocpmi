@@ -6,12 +6,33 @@ bibliography: library.bib
 output:
     html_document:
         toc: yes
-#        toc_float: yes
+        toc_float: yes
         theme: paper
 ---
 
-# pt59 Full Analysis
+## Single Cell
 
-```{r}
-htmltools::includeHTML("/home/chris/starr_lab/ocpmi/analysis/pt59/pt59_full_analysis.html")
-```
+### Seurat
+
+#### pt59 Full Analysis
+
+* Tutorial: [file:///mnt/msi/tasta005/ocpmi/results/seurat/pt59/pt59_full_analysis.html](file:///mnt/msi/tasta005/ocpmi/results/seurat/pt59/pt59_full_analysis.html)
+    - `~/ocpmi/results/seurat/pt59/pt59_full_analysis.html`
+
+## wes
+
+### Excavator2
+
+#### Pilot
+
+* output: `~/ocpmi/results/excavator2/pilot`
+
+![Image Title](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf){height=500px}
+
+<div style="width:300px; height:200px">
+![Image Title](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf)
+</div>
+
+<div style="width:500px; height:300px">
+![Image Title](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf)
+</div>
