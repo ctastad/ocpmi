@@ -3831,5 +3831,28 @@ Created    Completed  Age Project Description
 
 ***
 
+### 13
+
+#### TODO
+
+```{r}
+ID Age P Project Tags Description                                       Urg
+-- --- - ------- ---- ------------------------------------------------- ----
+71 7d    lab     work explore controls for cnv                          1.84
+72 7d    lab     work check process of bam creation (youtube)           1.84
+77 5d    lab     work run excv2 and vs2 across ocpmi bams               1.83
+78 4d    lab     work create loop for excv2 and vs2 to run all bams     1.82
+79 4d    lab     work update dir links to bam, pbs, gene_ref            1.82
+84 22h   lab     work index ocpmi bams                                   1.8
+42 11w L lab     work agenda [6]                                        1.24
+40 12w L lab     work review scripts for ccgd database                  0.26
+41 12w L lab     work explore shiny framework for database              0.26
+
+9 tasks
+```
+
+
+***
+
 ## References
 
