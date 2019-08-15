@@ -3764,7 +3764,7 @@ Created    Completed  Age P Project Description
 * output: `~/ocpmi/results/excavator2/pilot`
 * gene_ref: `hg38.fa`, `hg38_sorted.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
 
-In performing this directory restructuring, I came accross the realization I may have mixed up file association for the version of the excv2 pilot that worked. The config files for excv2 seem to be pointing to older versions of the pilot I had attempted but didn't work. I'm rerunning the pilot with the file set I believe worked in the new directory setup.
+In performing this directory restructuring, I came across the realization I may have mixed up file association for the version of the excv2 pilot that worked. The config files for excv2 seem to be pointing to older versions of the pilot I had attempted but didn't work. I'm rerunning the pilot with the file set I believe worked in the new directory setup.
 
 ***
 
@@ -3805,7 +3805,7 @@ ID Age P Project Tags Description                                       Urg
 
 #### excv2 Pilot redo: 1kgp GRCh38
 
-* samples: `NA10847`; `NA19131` via 1kgp GRCh38
+* samples: `NA10847` (control); `NA19131` via 1kgp GRCh38
 * output: `~/ocpmi/results/excavator2/pilot`
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
 
@@ -3850,6 +3850,182 @@ ID Age P Project Tags Description                                       Urg
 
 9 tasks
 ```
+
+#### excv2 Pilot: pm2/15
+
+* samples: `pm2` (control); `pm15`; `~/ocpmi/data/bam/wes/pilot`
+* output: `~/ocpmi/results/excavator2/pilot1`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/data/gene_ref/ucsc/hg38`
+
+I reran a pilot test of the excv2 with the same samples as the pilot for vs2. Everything worked as expected, which is nice.
+
+#### BAM indexing
+
+* samples: `*.bam`; `~/ocpmi/data/bam/wes`
+* output: `~/ocpmi/data/bam/wes`
+
+I forgot to index the bam files I had created from *2019-08-05*. I will perform this function using gnu parallel and samtools.
+
+* https://www.biostars.org/p/114921/
+
+```{r}
+parallel samtools index ::: *.bam
+```
+
+#### excv2 create_configs.sh File Builder
+
+The excv2 pipeline requires repetitive config files to be setup for each experimental case. As a result, I've started to write a script that will allow me to automate the process of creating the excv2 config files for when I apply the pipeline to a wider set of data. This should take directory pointers and generate the two text files for the 2nd and 3rd steps of the excv2 process.
+
+```{r}
+#!/bin/bash
+
+> ExperimentalFilePrepare.txt
+> ExperimentalFileAnalysis.txt
+prepDir="data/prepare/test"
+bamDir="/home/chris/ocpmi/data/bam/wes"
+
+for i in *.bam; do
+    echo "$bamDir/$i" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.txt
+    echo "T" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.txt
+    sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.txt
+done
+```
+
+#### Summary
+
+I was able to smoothly run the excv2 pipeline on another set of test data today. Overall, I feel like I have a mastery of the process at this point and should be able to apply the package in any case. I've begun to write a script that should automate the process to some degree so that the relatively disjointed steps can be strung together more effectively.
+
+Additionally, I heard back from Bob
+
+##### Completed
+
+```{r}
+
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ---------------------------------------
+2019-08-12 2019-08-13 2d  lab     contact oit about meeting again
+2019-08-08 2019-08-13 5d  lab     update dir links to bam, pbs, gene_ref
+2019-08-12 2019-08-13 1d  lab     index ocpmi bams
+2019-08-05 2019-08-13 8d  lab     check process of bam creation (youtube)
+
+4 tasks
+```
+
+***
+
+### 14
+
+#### TODO
+
+```{r}
+
+ID Age P Project Tags Description                                       Urg
+-- --- - ------- ---- ------------------------------------------------- ----
+71 8d    lab     work explore controls for cnv                          1.84
+76 6d    lab     work run excv2 and vs2 across ocpmi bams               1.83
+77 5d    lab     work create loop for excv2 and vs2 to run all bams     1.83
+82 20h   lab     work create output for pm2 and pm15 with vs2            1.8
+83 12s   lab     work submit application for new vm                      1.8
+42 11w L lab     work agenda [8]                                        1.25
+40 12w L lab     work review scripts for ccgd database                  0.27
+41 12w L lab     work explore shiny framework for database              0.27
+
+8 tasks
+```
+
+#### excv2 create_configs.sh File Builder
+
+```{r}
+#!/bin/bash
+
+# This script is meant to prep the configuration for the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site. The relevant variables are the directory locations for the bam files and the DataPrepare output.
+
+# [CHANGE ME] Directory of bam files
+cd ~/ocpmi/data/bam/wes/pilot
+
+# [CHANGE ME] Output of EXCAVATORDataPrepare.pl
+prepDir="data/prepare/test"
+
+
+> ExperimentalFilePrepare.txt
+> ExperimentalFileAnalysis.txt
+
+# Loop to iterate through each bam
+for i in *.bam; do
+    echo "$PWD/$i" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.txt
+    echo "T" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.txt
+    mkdir -p ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/$prepDir/${i%.*}
+done
+
+# Function to remove leading path from sshfs local mount path
+sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.txt
+
+# Working directory of the Excavator2 pipeline
+mv ExperimentalFile* ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+
+```
+
+#### Call w/ Bob re CCGD upgrade process
+
+* Don't upgrade in place
+    - new vm and name/ip
+    - can add alias for web address redirect
+* Management is important
+    - Fully vs Jointly managed
+        + Full = OS admin performed by OIT (preferred)
+        + Joint = OS admin by starrlab, root access
+* Bob sent links re package mgmt and vm req
+* Access to the server needs to happen over the vpn for now. Being on the U's network gives me a `port 22: Connection refused` error, and ale01 seems to have an issue with duo.
+
+**actions**
+
+* I need to discuss these items with Tim, specifically: the management format Tim prefers, which department the server would be hosted under, and if there were site analytics available.
+* Clarify duo login issue with ale01.
+
+#### mtg w/ Tim
+
+present: tim, chris
+
+```{r}
+Description
+agenda
+  2019-07-26 what pull down method was used for the wes data
+  2019-08-01 check my bam process
+  2019-08-02 determine controls for wes data
+  2019-08-05 ccgd site analytics - how long could site be down
+  2019-08-07 discuss excv2 output
+  2019-08-07 progress on vs2 pilot
+  2019-08-14 management preference for ccgd
+```
+
+##### mtg notes
+
+**ocpmi wes**
+
+* Tim agreed that the output of the excv2 and vs2 pilots turned out well enough. The two outputs for excv2 show effectively no cnv in the cases of the 1kgp genomes (where there should be none) and a high degree in our ocpmi samples (where there should be a lot). Additionally, the vs2 output, while odd, shows a similar result reaffirming the output of excv2 in the case of the ocpmi samples.
+* We face an issue in running the wider set of ocpmi samples in that we don't have a dedicated control(s). I was somewhat concerned about this, and Tim confirmed that we don't have pt specific samples that would serve a tumor-normal experimental design. Our best bet is to find and use a publicly available genome that doesn't introduce any additional variables to our setup. The 1kgp genomes seem like the best option.
+
+**alignment**
+
+* I wanted to confirm my process in creating the bam files. What I've done is probably acceptable with `bwa`, but Tim did mention the `star` tool that Mayank and others have brought up. I will probably rerun the alignment with `star` then.
+
+**ccgd**
+
+* I gave Tim an update on the process of the ccgd upgrade. I was able to talk with Bob of OIT earlier today and have a general direction in the upgrade process.
+* Points of clarification were the management format Tim prefers, which department the server would be hosted under, and if there were site analytics available.
+    - A fully managed server is preferred.
+    - Tim thinks the dept abbreviation is OGC. Looking at this further, it needs to be HST.
+    - There are analytics which are referenced in the project doc.
+
+**actions**
+
+* realign bam files with star
+* run comparison with 1kgp and ocpmi files
+* look for differences 1kgp comparison in exv2 paper
+* do search for best suited cnv controls
+* get analytics for ccgd
+* submit vm application for ccgd
+* determine ports that need to be open ccgd
 
 
 ***

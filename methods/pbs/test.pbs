@@ -5,6 +5,6 @@
 #PBS -N test_pbs1
 #PBS -o logs/output
 #PBS -e logs/error
-cd ~/ocpmi/methods/test_script
+cd ~/ocpmi/methods
 module load R
 Rscript test_script.R
