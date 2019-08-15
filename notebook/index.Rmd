@@ -4040,6 +4040,35 @@ agenda
 ```{r}
 ```
 
+***
+
+### 15
+
+#### TODO
+
+```{r}
+ID Age P Project Tags Description                                           Urg
+-- --- - ------- ---- ----------------------------------------------------- ----
+67 7d    lab     work run excv2 and vs2 across ocpmi bams                   1.84
+68 6d    lab     work create loop for excv2 and vs2 to run all bams         1.83
+72 1d    lab     work create output for pm2 and pm15 with vs2               1.81
+73 21h   lab     work clarify duo login issues with ale01                    1.8
+74 21h   lab     work realign bam files with star                            1.8
+75 21h   lab     work run test comparison with 1kgp and ocpmi files          1.8
+76 21h   lab     work look for differences in 1kgp comparison in exv2 paper  1.8
+77 21h   lab     work do search for best suited cnv controls                 1.8
+78 21h   lab     work get site analytics for ccgd                            1.8
+79 21h   lab     work submit vm application for ccgd                         1.8
+80 19h   lab     work copy na10847 back to og dir                            1.8
+81 19h   lab     work add mkdir for prepDir to fullsend.sh                   1.8
+82 19h   lab     work test full send with ocpmi pilot samples                1.8
+40 12w L lab     work review scripts for ccgd database                      0.27
+41 12w L lab     work explore shiny framework for database                  0.27
+42 11w L lab     work agenda                                                0.25
+
+16 tasks
+```
+
 
 ***
 
