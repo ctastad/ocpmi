@@ -1380,6 +1380,24 @@ On Wed, Jul 17, 2019 at 5:58 PM Christopher Tastad <tasta005@umn.edu> wrote:
 
 </details>
 
+***
+
+### Server Ports
+
+```{r}
+Starting Nmap 7.60 ( https://nmap.org ) at 2019-08-14 18:37 CDT
+Nmap scan report for ccgd-starrlab.oit.umn.edu (134.84.192.84)
+Host is up (0.0089s latency).
+Not shown: 997 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+2000/tcp open  cisco-sccp
+5060/tcp open  sip
+
+Nmap done: 1 IP address (1 host up) scanned in 1.49 seconds
+
+```
+
 
 ***
 

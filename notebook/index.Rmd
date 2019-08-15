@@ -3935,33 +3935,39 @@ ID Age P Project Tags Description                                       Urg
 
 #### excv2 create_configs.sh File Builder
 
+I expanded on the script I started yesterday. This script now effectively automates the entire excv2 process in one command. It requires having created a reference target completed with the `TargetPerla.pl` command already, but that process does not need to be completed if using the same reference genome, which I am.
+
 ```{r}
 #!/bin/bash
 
-# This script is meant to prep the configuration for the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site. The relevant variables are the directory locations for the bam files and the DataPrepare output.
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site. The relevant variables are the directory locations for the bam files, the DataPrepare output, and the results output defined by the "vars.txt" file. Both full_send.sh and vars.txt need to be in the Excavator2 working directory.
 
-# [CHANGE ME] Directory of bam files
-cd ~/ocpmi/data/bam/wes/pilot
+# This file assumes a reference target has been created for repeat use using the TargetPerla.pl function. The name of this target should also be given in "vars.txt".
 
-# [CHANGE ME] Output of EXCAVATORDataPrepare.pl
-prepDir="data/prepare/test"
-
+source vars.txt
+cd "$HOME/$bamDir"
 
 > ExperimentalFilePrepare.txt
 > ExperimentalFileAnalysis.txt
 
 # Loop to iterate through each bam
+count=1
 for i in *.bam; do
     echo "$PWD/$i" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.txt
-    echo "T" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.txt
+    echo "T$count" "$prepDir/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.txt
     mkdir -p ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/$prepDir/${i%.*}
+    count=$[count+1]
 done
 
 # Function to remove leading path from sshfs local mount path
 sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.txt
+sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.txt
 
 # Working directory of the Excavator2 pipeline
 mv ExperimentalFile* ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.txt --processors 8 --target $target --assembly hg38
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.txt --processors 8 --target $target --assembly hg38 --output $HEAD/$reDir --mode pooling
 
 ```
 
@@ -4026,6 +4032,13 @@ agenda
 * get analytics for ccgd
 * submit vm application for ccgd
 * determine ports that need to be open ccgd
+
+#### Summary
+
+##### Completed
+
+```{r}
+```
 
 
 ***
