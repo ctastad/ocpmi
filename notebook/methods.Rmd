@@ -81,8 +81,8 @@ For consistency in documenting the wide range of information, I want to have a s
 **Experiement Files/Dirs**
 
 ```{r}
-* samples: ``; ``
-* output: ``
+* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
+* output: `/path/to/output`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 ```
 
@@ -697,6 +697,10 @@ Detailed
 Condensed
 
 *&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+
+Modified
+
+*&ask;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output*
 
 **Directory**
 

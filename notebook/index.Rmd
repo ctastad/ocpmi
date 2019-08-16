@@ -4069,6 +4069,121 @@ ID Age P Project Tags Description                                           Urg
 16 tasks
 ```
 
+#### excv2 full_send.sh and vars.sh
+
+I continued the expansion of the script I started on *2019-08-13* by bringing a variable source file into the mix. I am now about 95% of the way to turning the entire pipeline into a single command with variable modifiers simplifying the process.
+
+**Cur full_send.sh**
+
+* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
+
+```{r}
+#!/bin/bash
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site.
+
+source vars.sh
+cd $HOME$bamDir
+
+# Overwrite any existing config files
+> ExperimentalFilePrepare.txt
+> ExperimentalFileAnalysis.txt
+
+# Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
+count=1
+for i in *.{bam,cram}; do
+    echo "$PWD/$i" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.txt
+    echo "T$count" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.txt
+    mkdir -p $HOME$excv2Dir/data/prepare/$expName/${i%.*}
+    count=$[count+1]
+done
+
+# Function to remove leading path from sshfs local mount path and create control
+sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.txt
+sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.txt
+
+# Relocate configs to Excavator working dir
+mv ExperimentalFile* $HOME$excv2Dir
+mkdir $HOME$resDir/$expName
+
+# Generate SourceTarget.txt and execute step 1 TargetPerla.pl
+cd $HOME$excv2Dir
+if [ "$runTp"="1" ]; then
+    echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.txt
+    perl TargetPerla.pl SourceTarget.txt $HOME$bedFile $target $window $refAssm
+fi
+
+# Executing steps 2 and 3 of the Excavator pipeline
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.txt --processors $numProc --target $target --assembly $refAssm
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+
+```
+
+**vars.sh**
+
+* dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
+
+This is a source file that is read into `full_send.sh` for variable modification. I have generally designed this file for anyone to be able to approach Excavator2 with this command. Using version `1.1.2` and modifying these variables, the goals is that `full_send.sh` can execute the entire process from sorted bed file to figures.
+
+I'm testing that today with the ocpmi vs 1kgp comparison.
+
+```{r}
+# This is the config file for full_send.sh
+#
+
+# Experiment name
+expName="ocpmi_1kgp_compare"
+
+# Choose to run step 1 TargetPerla.pl [1,0] (not required if desired targets already built)
+runTp="1"
+
+# The target name as output from the TargetPerla.sh script
+target="hg38_target"
+
+# Reference assembly to use [hg19,hg38]
+refAssm="hg38"
+
+# Window size
+window="50000"
+
+# Location of bed file
+bedFile="/ocpmi/data/gene_ref/ucsc/hg38/hg38_sortmerge.bed"
+
+# Location of BigWig file
+bigWig="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/GCA_000001405.15_GRCh38.bw"
+
+# Location of genome reference fasta
+genRef="/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa"
+
+# Number of processors
+numProc="8"
+
+# Step 3 EXCAVATORDataAnalysis.pl sample analysis mode [pooling, paired]
+anMode="pooling"
+
+# Location of the Excavator working directory
+excv2Dir="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2"
+
+# Location of the bam files
+bamDir="/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare"
+
+# Location of results directory [format will be /path/to/dir/$expName]
+resDir="/ocpmi/results/excavator2"
+
+```
+
+#### excv2 ocpmi vs 1kgp pilot
+
+* samples: `NA10847` (control) via 1kgp, `pm2` (expt) via ocpmi; `/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare`
+* output: `/ocpmi/results/excavator2/ocpmi_1kgp_compare`
+* gene_ref: `hg38.fa` via UCSC, `GCA_000001405.15_GRCh38.bw` via excv2; `~/ocpmi/gene_ref`
+    - .fa: `~/ocpmi/data/gene_ref/ucsc/hg38`, .bw: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data`
+
+I am running another pilot to see what the results of comparing an ocpmi sample against the 1kgp control used by @DAurizio2016a. My hope would be that we would see a notable amount of variance between these samples and that this would server as a data point in support of use of `NA10847` as our standard control.
+
+**Modified Pipeline**
+
+*&ask;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output*
+
 
 ***
 

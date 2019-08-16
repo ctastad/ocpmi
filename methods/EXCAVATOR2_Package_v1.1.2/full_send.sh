@@ -1,8 +1,5 @@
 #!/bin/bash
-
-# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site. The relevant variables are the directory locations for the bam files, the DataPrepare output, and the results output defined by the "vars.txt" file. Both full_send.sh and vars.txt need to be in the Excavator2 working directory.
-
-# This file assumes a reference target has been created for repeat use using the TargetPerla.pl function. The name of this target should also be given in "vars.txt".
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site.
 
 source vars.sh
 cd $HOME$bamDir
