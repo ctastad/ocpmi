@@ -700,7 +700,7 @@ Condensed
 
 Modified
 
-*&ask;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output*
+*&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output*
 
 **Directory**
 
