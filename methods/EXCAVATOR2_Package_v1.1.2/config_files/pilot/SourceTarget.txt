@@ -1,0 +1,1 @@
+~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/GCA_000001405.15_GRCh38.bw ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa

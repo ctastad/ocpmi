@@ -1,0 +1,1 @@
+~/ocpmi/data/bam/wes/pilot/pm15.bam ./data/prepare/pilot/pm15 pm15

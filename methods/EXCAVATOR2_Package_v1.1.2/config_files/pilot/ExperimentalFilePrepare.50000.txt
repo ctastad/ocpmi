@@ -1,0 +1,2 @@
+~/ocpmi/data/bam/1kgp/NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome.cram data/prepare/pilot/NA10847 NA10847
+~/ocpmi/data/bam/1kgp/NA19131.alt_bwamem_GRCh38DH.20150826.YRI.exome.cram data/prepare/pilot/NA19131 NA19131

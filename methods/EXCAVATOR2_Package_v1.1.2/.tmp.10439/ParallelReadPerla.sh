@@ -1,0 +1,1 @@
+perl /home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/ReadPerla.pl /home/chris/Seafile/library/work/research/starr_lab/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/.tmp.10439/ExperimentalFilePrepare.50000.txt_1.txt --assembly hg19 --target test_target2
