@@ -4035,9 +4035,21 @@ agenda
 
 #### Summary
 
+I had a couple meetings today which allowed me to address several standing questions for both the ocpmi and ccgd projects.
+
+After speaking with Bob, I have a sense of what needs to be done to transition the server from an OS implementation standpoint. From there I will be able to do application testing to see if there are any params that need to be adjusted, but I'm hoping that only amounts to installing legacy packages to address existing scripts.
+
+On the ocpmi front, I need to work on determining what my controls should be. I will be running a small experiment to size up `NA10847` as a candidate control. Otherwise, I need to explore what the best approach will be in this experimental setup.
+
 ##### Completed
 
 ```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- -----------------------------
+2019-08-05 2019-08-14 10d lab     explore controls for cnv
+2019-08-14 2019-08-14 1d  lab     determine open ports for ccgd
+
+2 tasks
 ```
 
 ***
