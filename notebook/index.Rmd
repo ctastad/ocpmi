@@ -4202,6 +4202,17 @@ I think my `full_send.sh` script is effectively working. I'm running a complete 
 
 The next major step I need to peform is to rerun my seq alignment on my ocpmi bams with star. That will allow me to start full scale analysis once my controls are set.
 
+#### Running
+
+```{r}
+ID Started    Active Age Project Tags Description
+-- ---------- ------ --- ------- ---- ------------------------------------------
+72 2019-08-15 1h     1d  lab     work run test comparison with 1kgp and ocpmi
+                                      files
+
+1 task
+```
+
 #### Completed
 
 ```{r}
