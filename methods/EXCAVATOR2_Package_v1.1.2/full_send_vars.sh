@@ -7,7 +7,7 @@
 # Analysis variables
 ################################################################################
 # Experiment name
-expName="ocpmi_1kgp_compare_pm15only"
+expName="ocpmi_vs_1kgp_2pm_50k"
 # Window size
 window="50000"
 # Number of processors for parallelization
