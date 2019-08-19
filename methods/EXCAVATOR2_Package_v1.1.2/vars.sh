@@ -2,13 +2,15 @@
 #
 
 # Experiment name
-expName="ocpmi_1kgp_compare"
+expName="ocpmi_1kgp_compare_pm15only"
 
-# Choose to run step 1 TargetPerla.pl [1,0] (not required if desired targets already built)
-runTp="1"
+# Choose to not run certain steps [1,0] (e.g. step 1 TargetPerla.pl not required if desired targets already built)
+runTp1=1 # step 1 TargetPerla.pl
+runDp2=1 # step 2 EXCAVATORDataPrepare.pl
+runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
 
 # The target name as output from the TargetPerla.sh script
-target="hg38_target"
+target="ocpmi_1kgp_compare_pm15only"
 
 # Reference assembly to use [hg19,hg38]
 refAssm="hg38"

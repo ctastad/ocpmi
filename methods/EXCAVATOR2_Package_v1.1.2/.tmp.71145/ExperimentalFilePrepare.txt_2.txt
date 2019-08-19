@@ -1,1 +1,0 @@
-/home/starrt2/tasta005/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare/zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome.cram data/prepare/ocpmi_1kgp_compare/zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome

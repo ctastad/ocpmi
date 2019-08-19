@@ -27,14 +27,24 @@ mkdir $HOME$resDir/$expName
 
 # Generate SourceTarget.txt and execute step 1 TargetPerla.pl
 cd $HOME$excv2Dir
-if [ "$runTp"="1" ]; then
+if [[ $runTp1 = 1 ]]; then
     echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.txt
-    perl TargetPerla.pl SourceTarget.txt $HOME$bedFile $target $window $refAssm
+    perl TargetPerla.pl SourceTarget.txt $HOME$bedFile $target $window $refAssm;
+else
+    echo "Skipping step 1 TargetPerla.pl"
 fi
 
-# Executing steps 2 and 3 of the Excavator pipeline
-perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.txt --processors $numProc --target $target --assembly $refAssm
-perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+# Executing step 2 EXCAVATORDataPrepare.pl
+if [[ $runDp2 = 1 ]]; then
+    perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.txt --processors $numProc --target $target --assembly $refAssm
+else
+    echo "Skipping step 2 EXCAVATORDataPrepare.pl"
+fi
 
-
+# Executing step 3 EXCAVATORDataAnalysis.pl
+if [[ $runDa3 = 1 ]]; then
+    perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+else
+    echo "Skipping step 3 EXCAVATORDataAnalysis.pl"
+fi
 

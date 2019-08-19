@@ -10,11 +10,11 @@ output:
         theme: paper
 ---
 
-## Single Cell
+# Single Cell
 
-### Seurat
+## Seurat
 
-#### pt59 Full Analysis
+### pt59 Full Analysis
 
 * Tutorial: [file:///mnt/msi/tasta005/ocpmi/results/seurat/pt59/pt59_full_analysis.html](file:///mnt/msi/tasta005/ocpmi/results/seurat/pt59/pt59_full_analysis.html)
     - `~/ocpmi/results/seurat/pt59/pt59_full_analysis.html`
@@ -23,13 +23,13 @@ output:
 
 ***
 
-## wes
+# wes
 
-### Excavator2
+## Excavator2
 
-#### excv2 Pilot redo: 1kgp GRCh38 {.tabset .tabfade}
+### Pilot redo: 1kgp GRCh38 {.tabset .tabfade}
 
-##### Discussion
+#### Discussion
 
 Completed *2019-08-12*
 
@@ -40,7 +40,7 @@ Completed *2019-08-12*
 
 ***
 
-##### Figures
+#### Figures
 
 ```{r, out.width = "100%", out.height = "600px", echo = F}
 knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf")
@@ -48,9 +48,9 @@ knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot/Plots/NA1913
 
 ***
 
-#### excv2 Pilot: pm2/15 {.tabset .tabfade}
+### Pilot: pm2/15 {.tabset .tabfade}
 
-##### Discussion
+#### Discussion
 
 Completed *2019-08-13*
 
@@ -61,18 +61,18 @@ Completed *2019-08-13*
 
 ***
 
-##### Figures
+#### Figures
 
 ```{r, out.width = "100%", out.height = "600px", echo = F}
 knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot1/Plots/pm2/combined.pdf")
 ```
 
 
-### VarScan2
+## VarScan2
 
-#### vs2 Pilot: ocpmi pm2/15 {.tabset .tabfade}
+### Pilot: ocpmi pm2/15 {.tabset .tabfade}
 
-##### Discussion
+#### Discussion
 
 Completed *2019-08-08*
 
@@ -82,7 +82,7 @@ Completed *2019-08-08*
 
 ***
 
-##### Figures
+#### Figures
 
 ```{r, out.width = "100%", out.height = "600px", echo = F}
 knitr::include_graphics("/home/chris/ocpmi/results/varscan2/pilot/rplot.pdf")

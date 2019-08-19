@@ -1,1 +1,0 @@
-~/ocpmi/data/bam/wes/pilot/pm2.bam ./data/prepare/pilot/pm2 pm2

@@ -1,1 +1,0 @@
-~/ocpmi/data/bam/1kgp/NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome.cram /data/prepare/pilot/NA19131 NA19131

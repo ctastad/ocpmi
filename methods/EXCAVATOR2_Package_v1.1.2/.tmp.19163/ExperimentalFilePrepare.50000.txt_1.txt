@@ -1,1 +1,0 @@
-~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/bam/NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome.cram data/output/test_target_38/NA10847 NA10847
