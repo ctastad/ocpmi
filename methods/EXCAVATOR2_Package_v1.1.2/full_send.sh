@@ -5,8 +5,8 @@ source full_send_vars.sh
 cd $HOME$bamDir
 
 # Overwrite any existing config files
-rm ExperimentalFile*
-target="$expName_target"
+rm -f ExperimentalFile*
+target="${expName}_target"
 runTp1=1 # step 1 TargetPerla.pl
 runDp2=1 # step 2 EXCAVATORDataPrepare.pl
 runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
@@ -26,7 +26,7 @@ sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.txt
 
 # Relocate configs to Excavator working dir
 mv ExperimentalFile* $HOME$excv2Dir
-mkdir $HOME$resDir/$expName
+mkdir -p $HOME$resDir/$expName
 mkdir -p $HOME$excv2Dir/config_files/$expName
 
 # Generate SourceTarget.txt and execute step 1 TargetPerla.pl
