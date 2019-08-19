@@ -1,12 +1,15 @@
 #!/bin/bash
 # This script is meant to prep the configuration and execution of the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site.
 
-source vars.sh
+source full_send_vars.sh
 cd $HOME$bamDir
 
 # Overwrite any existing config files
-> ExperimentalFilePrepare.txt
-> ExperimentalFileAnalysis.txt
+rm ExperimentalFile*
+target="$expName_target"
+runTp1=1 # step 1 TargetPerla.pl
+runDp2=1 # step 2 EXCAVATORDataPrepare.pl
+runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
 
 # Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
 count=1
@@ -24,6 +27,7 @@ sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.txt
 # Relocate configs to Excavator working dir
 mv ExperimentalFile* $HOME$excv2Dir
 mkdir $HOME$resDir/$expName
+mkdir -p $HOME$excv2Dir/config_files/$expName
 
 # Generate SourceTarget.txt and execute step 1 TargetPerla.pl
 cd $HOME$excv2Dir
@@ -48,3 +52,5 @@ else
     echo "Skipping step 3 EXCAVATORDataAnalysis.pl"
 fi
 
+# Copy config files for record
+cp {ExperimentalFile*, SourceTarget.txt, full_send_vars.sh, ParameterFile.txt} $HOME$excv2Dir/config_files/$expName
