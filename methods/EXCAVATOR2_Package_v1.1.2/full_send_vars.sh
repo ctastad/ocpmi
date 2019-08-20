@@ -7,7 +7,7 @@
 # Analysis variables
 ################################################################################
 # Experiment name
-expName="ocpmi_vs_1kgp_15pm_50k"
+expName="ocpmi_v_1kgp_full_50k1"
 # Window size
 window="50000"
 # Number of processors for parallelization
@@ -33,7 +33,7 @@ bigWig="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/GCA_000001405.15_GRCh38.bw
 # Location of the Excavator working directory
 excv2Dir="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2"
 # Location of the bam files
-bamDir="/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare"
+bamDir="/ocpmi/data/bam/wes"
 # Location of results directory [format will be /path/to/dir/$expName]
 resDir="/ocpmi/results/excavator2"
 
