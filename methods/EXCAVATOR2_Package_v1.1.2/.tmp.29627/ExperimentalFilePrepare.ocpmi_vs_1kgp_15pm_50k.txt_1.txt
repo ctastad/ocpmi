@@ -1,1 +1,0 @@
-/home/starrt2/tasta005/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare/pm15.bam data/prepare/ocpmi_vs_1kgp_15pm_50k/pm15 pm15

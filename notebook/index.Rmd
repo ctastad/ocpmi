@@ -4226,7 +4226,11 @@ Created    Completed  Age Project Description
 4 tasks
 ```
 
+***
+
 ## 18
+
+***
 
 ## 19
 
@@ -4254,6 +4258,28 @@ ID Active Age  P Project Tag  Description                                   Urg
 85        2s     lab     work record results from weekend analysis           1.8
 
 17 tasks
+```
+
+### STAR Alignment: ocpmi
+
+got gtf file from ucsc genome table browser (@Karolchik2004)
+
+* https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html
+* (file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)[file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf]
+
+### Summary
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ---------------------------------------------
+2019-08-14 2019-08-19 5d  lab     run test comparison with 1kgp and ocpmi files
+2019-08-14 2019-08-19 5d  lab     test full send with ocpmi pilot samples
+2019-08-15 2019-08-19 4d  lab     add note re sorted bed file to vars.sh
+2019-08-17 2019-08-19 2d  lab     create branch for full_send
+
+4 tasks
 ```
 
 
