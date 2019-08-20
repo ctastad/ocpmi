@@ -4230,6 +4230,159 @@ Created    Completed  Age Project Description
 
 ## 18
 
+### excv2 full_send.sh
+
+I think I have the final version of the full_send script for the excv2 pipeline.
+
+Features added:
+
+* Removed granular control on not running individual steps. This was causing issues in being able to generate the final output.
+* Created loop to rename output to give leading zeros for easy renaming.
+* Fixed minor syntax issues around file movement and naming.
+
+```{r}
+#!/bin/bash
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It auto generates two text files that serve as configs for the pipeline scripts. Proper use of this script is paired with the full_send_vars.sh variable file to indicate pointers and variable names. Both should be placed in the Excavator2 working directory with this script being executed from there.
+
+source full_send_vars.sh
+cd $HOME$bamDir
+
+# Overwrite any existing config files
+rm -f ExperimentalFile*
+target="${expName}_target"
+runTp1=1 # step 1 TargetPerla.pl
+runDp2=1 # step 2 EXCAVATORDataPrepare.pl
+runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
+
+# Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
+count=1
+for i in *.{bam,cram}; do
+    echo "$PWD/$i" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.$expName.txt
+    echo "T$count" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.$expName.txt
+    mkdir -p $HOME$excv2Dir/data/prepare/$expName/${i%.*}
+    count=$[count+1]
+done
+
+# Function to remove leading path from sshfs local mount path and create control
+sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.$expName.txt
+sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
+
+# Relocate configs to Excavator working dir
+mv ExperimentalFile* $HOME$excv2Dir
+mkdir -p $HOME$resDir/$expName
+mkdir -p $HOME$excv2Dir/config_files/$expName
+
+# Generate SourceTarget.txt and execute step 1 TargetPerla.pl
+cd $HOME$excv2Dir
+if [[ $runTp1 = 1 ]]; then
+    echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
+    perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
+else
+    echo "Skipping step 1 TargetPerla.pl"
+fi
+
+# Executing step 2 EXCAVATORDataPrepare.pl
+if [[ $runDp2 = 1 ]]; then
+    perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
+else
+    echo "Skipping step 2 EXCAVATORDataPrepare.pl"
+fi
+
+# Executing step 3 EXCAVATORDataAnalysis.pl
+if [[ $runDa3 = 1 ]]; then
+    perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+else
+    echo "Skipping step 3 EXCAVATORDataAnalysis.pl"
+fi
+
+# Copy config files for record
+cp ParameterFile.txt ParameterFile.$expName.txt
+cp full_send_vars.sh full_send_vars.$expName.sh
+mv *.{$expname}.* $HOME$excv2Dir/config_files/$expName
+
+# Cleanup bad file naming convention
+cd $HOME$resDir/$expName/Plots
+for i in */ ; do
+    cd $i
+    for j in {1..9}; do
+        mv PlotResults_chr$j.pdf PlotResults_chr0$j.pdf
+    done
+    cd ../
+done
+
+```
+
+#### full_send_vars.sh
+
+```{r}
+################################################################################
+# This is the config file for full_send.sh
+#
+# Use of this config file should be paired with full_send.sh.
+# Both should be placed in the same directory and executed there.
+#
+# After setting all variables, the function can be executed with the following
+# command in the Excavator2 working directory
+#
+# ./full_send.sh
+#
+# This function will overwrite any existing config or target files, so care
+# should be taken to use a unique experiment name variable for every case.
+################################################################################
+
+
+################################################################################
+# Analysis variables
+################################################################################
+# Experiment name
+expName="ocpmi_v_1kgp_full_50k1"
+# Window size
+window="50000"
+# Number of processors for parallelization
+numProc="8"
+# Step 3 EXCAVATORDataAnalysis.pl sample analysis mode [pooling, paired]
+anMode="pooling"
+
+################################################################################
+# Gene reference target files
+################################################################################
+# Reference assembly to use [hg19,hg38]
+refAssm="hg38"
+# Location of genome reference fasta
+genRef="/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa"
+# Location of bed file
+bedFile="/ocpmi/data/gene_ref/ucsc/hg38/hg38_sortmerge.bed"
+# Location of BigWig file
+bigWig="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/GCA_000001405.15_GRCh38.bw"
+
+################################################################################
+# Location of working and data directories
+################################################################################
+# Location of the Excavator working directory
+excv2Dir="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2"
+# Location of the bam files
+bamDir="/ocpmi/data/bam/wes"
+# Location of results directory [format will be /path/to/dir/$expName]
+resDir="/ocpmi/results/excavator2"
+
+
+```
+
+
+### excv2 ocpmi vs 1kgp pilot
+
+I'm running several different permutations of my pilot bam samples to get a sense of how these results come out against the `NA10847` control. To a certain extent, I am just taking a shotgut approach to have a variety of cases to compare. Part of this included minor tweaking to the `full_send.sh` script.
+
+**ocpmi_vs_1kgp_2pm_50k2**
+
+* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
+* output: `/path/to/output`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
+* output: `/path/to/output`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
 ***
 
 ## 19
@@ -4266,6 +4419,12 @@ got gtf file from ucsc genome table browser (@Karolchik2004)
 
 * https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html
 * (file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)[file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf]
+
+### excv2 ocpmi_v_1kgp_full_50k
+
+* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
+* output: `/path/to/output`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 
 ### Summary
 
@@ -4311,6 +4470,11 @@ ID Active Age P Project Tag  Description                                    Urg
 
 14 tasks
 ```
+
+### STAR Alignment: ocpmi
+
+The process from yesterday ended in an error, so I'm troubleshooting today. The issue stems from the fact the indexing process is not running to completion. After doing some research, it seems that STAR doesn't do anything to identify working memory and is likely exceeding the allotted amount. I'm going to rerun the process with 64GB to see if this resolves the issue.
+
 
 
 ***
