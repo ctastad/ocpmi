@@ -1,1 +1,0 @@
-perl /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl data/output/pilot/.tmp/ExperimentalFileAnalysis.50000.txt_1.txt --assembly hg38 --output data/output/pilot --target pilot --mode pooling
