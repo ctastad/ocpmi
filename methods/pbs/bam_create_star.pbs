@@ -1,0 +1,30 @@
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_create
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/gene_ref/ucsc/hg38
+
+STAR --runThreadN 8 \
+    --runMode genomeGenerate \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
+    --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf \
+    --sjdbOverhang 100
+
+cd ~/ocpmi/data/bam/wes
+
+for i in *.fastq; do
+STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --runThreadN 8 \
+    --readFilesIn $i \
+    --outFileNamePrefix ./star_aligned \
+    --outSAMtype BAM SortedByCoordinate \
+    --outSAMunmapped Within \
+    --outSAMattributes Standard
+done
