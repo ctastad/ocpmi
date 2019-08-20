@@ -170,181 +170,9 @@ Following an example from the Seurat pbmc tutorial, I am incorporating folding p
 
 ***
 
-# MSI
+# Gene Data
 
-## Directories
-
-#### Project Folder
-
-
-The root project directory is:
-
-* `/home/starrt2/`
-
-I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.
-
-* `/home/starrt2/tasta005`
-
-Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
-
-* Look for the leading 6 digit integer as a point of reference for the data_release folder.
-* The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
-
-* `/home/starrt2/data_release/umgc/hiseq`
-
-The Analysis directory contains the source data
-
-* illumina-basicQC # quality control data
-* cellranger-`*`
-    + analysis # ?
-    + filtered_gene_bc_matricies # data source that has been filtered by "true cell content"
-    + raw_gene_bc_matrices # matrix data that includes unfiltered reads or all read content
-    + web_summary.html # interactive cell ranger summary
-
-An example of a complete data source location is below:
-
-* `/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38`
-
-#### New Cell Ranger Output
-
-* It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
-
-* `/scratch.global/zhan2142/starr/`
-
-***
-
-## Load/Install R pkgs
-
-* In order to run R in my MSI instance, I need to load the module and install applications.
-
-```{r eval=F}
-module load R/3.6.0
-R
-```
-
-* To install packages in my local home directory, need to define a path.
-
-```{r eval=F}
-.libPaths(new='~/R/x86_64-pc-linux-gnu-library/3.6.0')
-dir.create('~/R/x86_64-pc-linux-gnu-library/3.6.0', showWarnings = FALSE, recursive = TRUE)
-```
-
-* Confirm the path is correct.
-
-```{r eval=F}
-.libPaths()
-```
-
-* Choose as CRAN mirror.
-
-```{r eval=F}
-getCRANmirrors()
-chooseCRANmirror(ind=2)
-```
-
-* Packages should be able to be installed and loaded normally now.
-
-***
-
-## MSI sshfs
-
-#### Auto mount
-
-I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script, which is called `mnt_msi` located in `/usr/bin` on my local machine.
-
-```{r eval=F}
-#!/bin/bash
-
-sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt/tasta005/
-sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2/
-sshfs tasta005@login.msi.umn.edu:/home/nelsona2/ ~/starr_lab/msi_mnt/nelsona2/
-sshfs tasta005@login.msi.umn.edu:/panfs/roc/data_release/3/bmgc/ ~/starr_lab/msi_mnt/bmgc/
-
-```
-
-**Unmount**
-
-I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an executable for this, `umnt_msi`, in the same directory.
-
-```{r eval=F}
-#!/bin/bash
-
-fusermount -zu ~/starr_lab/msi_mnt/tasta005/
-fusermount -zu ~/starr_lab/msi_mnt/starrt2/
-fusermount -zu ~/starr_lab/msi_mnt/nelsona2/
-fusermount -zu ~/starr_lab/msi_mnt/bmgc/
-
-```
-
-***
-
-## Interactive Computing
-
-It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
-
-This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
-
-* https://www.msi.umn.edu/content/interactive-queue-use-isub
-
-The `isub` command can also be given params about compute resources. Here is a decent default setting with *1 node, 8 cores, 16 gigs of ram, and a wall time of 8hrs*:
-
-```{r}
-isub -n nodes=1:ppn=8 -m 16GB -w 8:00:00
-```
-
-***
-
-## Job Scheduling
-
-All of my pbs scripts are located at
-
-* dir: `~/ocpmi/methods/pbs`
-* output: `~/ocpmi/methods/pbs/logs/output`
-* errors: `~/ocpmi/methods/pbs/logs/error`
-
-A template pbs script
-
-```{r}
-#!/bin/bash -l
-#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
-#PBS -m abe
-#PBS -M tasta005@umn.edu
-#PBS -N JOBNAME
-#PBS -o logs/output
-#PBS -e logs/error
-cd ~/
-module load
-
-```
-
-#### Exit Codes
-
-There is some documentation from Adaptive Computing here
-
-* http://docs.adaptivecomputing.com/torque/4-2-9/help.htm#topics/2-jobs/jobExitStatus.htm?Highlight=exit_status
-
-```{r eval=T,echo=F}
-codes <- read.csv("/home/chris/starr_lab/ocpmi/notebook/csv/exit_codes.csv")
-kable(codes)
-```
-
-#### Bash Loop
-
-This is an example bash loop that runs a function on all file types with a common extension and takes the existing file name to the new output.
-
-```{r}
-for i in *.bam; do
-    samtools mpileup -f ~/ocpmi/gene_ref/hg38.fa "$i" > ${i%%.*}.mpileup
-done
-```
-
-***
-
-***
-
-# CNV
-
-## Single Cell Data
+## Single Cell
 
 #### Seurat
 
@@ -353,7 +181,7 @@ done
 
 ***
 
-## wes Data
+## wes
 
 
 <details>
@@ -541,6 +369,184 @@ parallel samtools index ::: *.bam
 ```
 
 ***
+
+***
+
+***
+
+# MSI
+
+## Directories
+
+#### Project Folder
+
+
+The root project directory is:
+
+* `/home/starrt2/`
+
+I have a personal directory under the root. At the same level, there is also a shared directory which includes some content that is under active collaboration.
+
+* `/home/starrt2/tasta005`
+
+Processed data can be found in the hiseq folder under data_release. This data is mirrored in the msi file structure. Each file set is named by a unique ID which follows a naming convention given by umgc.
+
+* Look for the leading 6 digit integer as a point of reference for the data_release folder.
+* The Starr_Project sub folder is given a number which is considered the MSI and sample ID.
+
+* `/home/starrt2/data_release/umgc/hiseq`
+
+The Analysis directory contains the source data
+
+* illumina-basicQC # quality control data
+* cellranger-`*`
+    + analysis # ?
+    + filtered_gene_bc_matricies # data source that has been filtered by "true cell content"
+    + raw_gene_bc_matrices # matrix data that includes unfiltered reads or all read content
+    + web_summary.html # interactive cell ranger summary
+
+An example of a complete data source location is below:
+
+* `/home/starrt2/data_release/umgc/hiseq/170627_D00635_0259_ACB8R1ANXX/Starr_Project_037/Analysis/cellranger-Starr_037/filtered_gene_bc_matrices/GRCh38`
+
+#### New Cell Ranger Output
+
+* It sounds like the Cell Ranger processing is a work in progress that is being conducted by Ying. They have 5 pt done, and the data is located at the root directory below.
+
+* `/scratch.global/zhan2142/starr/`
+
+***
+
+## Load/Install R pkgs
+
+* In order to run R in my MSI instance, I need to load the module and install applications.
+
+```{r eval=F}
+module load R/3.6.0
+R
+```
+
+* To install packages in my local home directory, need to define a path.
+
+```{r eval=F}
+.libPaths(new='~/R/x86_64-pc-linux-gnu-library/3.6.0')
+dir.create('~/R/x86_64-pc-linux-gnu-library/3.6.0', showWarnings = FALSE, recursive = TRUE)
+```
+
+* Confirm the path is correct.
+
+```{r eval=F}
+.libPaths()
+```
+
+* Choose as CRAN mirror.
+
+```{r eval=F}
+getCRANmirrors()
+chooseCRANmirror(ind=2)
+```
+
+* Packages should be able to be installed and loaded normally now.
+
+***
+
+## MSI sshfs
+
+#### Auto mount
+
+I'm using `sshfs` to mount my MSI home folder on my local machine to make it more readily accessible. I already have ssh keys exchanged with MSI, so I can create an executable auto mount bash script, which is called `mnt_msi` located in `/usr/bin` on my local machine.
+
+```{r eval=F}
+#!/bin/bash
+
+sshfs tasta005@login.msi.umn.edu: ~/starr_lab/msi_mnt/tasta005/
+sshfs tasta005@login.msi.umn.edu:../ ~/starr_lab/msi_mnt/starrt2/
+sshfs tasta005@login.msi.umn.edu:/home/nelsona2/ ~/starr_lab/msi_mnt/nelsona2/
+sshfs tasta005@login.msi.umn.edu:/panfs/roc/data_release/3/bmgc/ ~/starr_lab/msi_mnt/bmgc/
+
+```
+
+**Unmount**
+
+I've run into the case where a server disconnect causes a hang any time I navigate to this mount point. To reset the mount point use the fusermount command to force the unmount first. I've also created an executable for this, `umnt_msi`, in the same directory.
+
+```{r eval=F}
+#!/bin/bash
+
+fusermount -zu ~/starr_lab/msi_mnt/tasta005/
+fusermount -zu ~/starr_lab/msi_mnt/starrt2/
+fusermount -zu ~/starr_lab/msi_mnt/nelsona2/
+fusermount -zu ~/starr_lab/msi_mnt/bmgc/
+
+```
+
+***
+
+## Interactive Computing
+
+It is possible to run an interactive session with the MSI lab space using the `isub` command. Additionally, `qsub` allows for scheduling of jobs in the lab space.
+
+This is useful in the event I want to do development inside MSI rather than just batch jobs. More documentation at the link below:
+
+* https://www.msi.umn.edu/content/interactive-queue-use-isub
+
+The `isub` command can also be given params about compute resources. Here is a decent default setting with *1 node, 8 cores, 16 gigs of ram, and a wall time of 8hrs*:
+
+```{r}
+isub -n nodes=1:ppn=6 -m 16GB -w 8:00:00
+```
+
+***
+
+## Job Scheduling
+
+All of my pbs scripts are located at
+
+* dir: `~/ocpmi/methods/pbs`
+* output: `~/ocpmi/methods/pbs/logs/output`
+* errors: `~/ocpmi/methods/pbs/logs/error`
+
+A template pbs script
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N JOBNAME
+#PBS -o logs/output
+#PBS -e logs/error
+cd ~/
+module load
+
+```
+
+#### Exit Codes
+
+There is some documentation from Adaptive Computing here
+
+* http://docs.adaptivecomputing.com/torque/4-2-9/help.htm#topics/2-jobs/jobExitStatus.htm?Highlight=exit_status
+
+```{r eval=T,echo=F}
+codes <- read.csv("/home/chris/starr_lab/ocpmi/notebook/csv/exit_codes.csv")
+kable(codes)
+```
+
+#### Bash Loop
+
+This is an example bash loop that runs a function on all file types with a common extension and takes the existing file name to the new output.
+
+```{r}
+for i in *.bam; do
+    samtools mpileup -f ~/ocpmi/gene_ref/hg38.fa "$i" > ${i%%.*}.mpileup
+done
+```
+
+***
+
+***
+
+# CNV
 
 ## Varscan2
 
@@ -734,7 +740,7 @@ ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
 
 ***
 
-#### Quick Start
+### Quick Start
 
 The Excv2 workflow analysis is made of three steps that can be invoked by means of three Perl scripts:
 
@@ -761,6 +767,144 @@ perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --
 ```{r}
 perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
 ```
+
+***
+
+### full_send.sh
+
+I created a bash script that executes the entirety of the excv2 pipeline. This script has a helper file that is used to define the variables for the pipline in one centralized place. Generally, this script should be portable and could be used by others with limited to no tweaking necessary.
+
+```{r}
+#!/bin/bash
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It auto generates two text files that serve as configs for the pipeline scripts. Proper use of this script is paired with the full_send_vars.sh variable file to indicate pointers and variable names. Both should be placed in the Excavator2 working directory with this script being executed from there.
+
+source full_send_vars.sh
+cd $HOME$bamDir
+
+# Overwrite any existing config files
+rm -f ExperimentalFile*
+target="${expName}_target"
+runTp1=1 # step 1 TargetPerla.pl
+runDp2=1 # step 2 EXCAVATORDataPrepare.pl
+runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
+
+# Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
+count=1
+for i in *.{bam,cram}; do
+    echo "$PWD/$i" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.$expName.txt
+    echo "T$count" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.$expName.txt
+    mkdir -p $HOME$excv2Dir/data/prepare/$expName/${i%.*}
+    count=$[count+1]
+done
+
+# Function to remove leading path from sshfs local mount path and create control
+sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.$expName.txt
+sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
+
+# Relocate configs to Excavator working dir
+mv ExperimentalFile* $HOME$excv2Dir
+mkdir -p $HOME$resDir/$expName
+mkdir -p $HOME$excv2Dir/config_files/$expName
+
+# Generate SourceTarget.txt and execute step 1 TargetPerla.pl
+cd $HOME$excv2Dir
+if [[ $runTp1 = 1 ]]; then
+    echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
+    perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
+else
+    echo "Skipping step 1 TargetPerla.pl"
+fi
+
+# Executing step 2 EXCAVATORDataPrepare.pl
+if [[ $runDp2 = 1 ]]; then
+    perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
+else
+    echo "Skipping step 2 EXCAVATORDataPrepare.pl"
+fi
+
+# Executing step 3 EXCAVATORDataAnalysis.pl
+if [[ $runDa3 = 1 ]]; then
+    perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+else
+    echo "Skipping step 3 EXCAVATORDataAnalysis.pl"
+fi
+
+# Copy config files for record
+cp ParameterFile.txt ParameterFile.$expName.txt
+cp full_send_vars.sh full_send_vars.$expName.sh
+mv *.{$expname}.* $HOME$excv2Dir/config_files/$expName
+
+# Cleanup bad file naming convention
+cd $HOME$resDir/$expName/Plots
+for i in */ ; do
+    cd $i
+    for j in {1..9}; do
+        mv PlotResults_chr$j.pdf PlotResults_chr0$j.pdf
+    done
+    cd ../
+done
+
+```
+
+#### full_send_vars.sh
+
+This is the helper file for the full_send.sh script. All variables need to be filled while many can remain the same accross several experiements.
+
+* Selecting a different experiment name for each series of analysis is critical to avoid overwriting previous output.
+
+```{r}
+################################################################################
+# This is the config file for full_send.sh
+#
+# Use of this config file should be paired with full_send.sh.
+# Both should be placed in the same directory and executed there.
+#
+# After setting all variables, the function can be executed with the following
+# command in the Excavator2 working directory
+#
+# ./full_send.sh
+#
+# This function will overwrite any existing config or target files, so care
+# should be taken to use a unique experiment name variable for every case.
+################################################################################
+
+
+################################################################################
+# Analysis variables
+################################################################################
+# Experiment name
+expName="ocpmi_v_1kgp_full_50k1"
+# Window size
+window="50000"
+# Number of processors for parallelization
+numProc="8"
+# Step 3 EXCAVATORDataAnalysis.pl sample analysis mode [pooling, paired]
+anMode="pooling"
+
+################################################################################
+# Gene reference target files
+################################################################################
+# Reference assembly to use [hg19,hg38]
+refAssm="hg38"
+# Location of genome reference fasta
+genRef="/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa"
+# Location of bed file
+bedFile="/ocpmi/data/gene_ref/ucsc/hg38/hg38_sortmerge.bed"
+# Location of BigWig file
+bigWig="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/GCA_000001405.15_GRCh38.bw"
+
+################################################################################
+# Location of working and data directories
+################################################################################
+# Location of the Excavator working directory
+excv2Dir="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2"
+# Location of the bam files
+bamDir="/ocpmi/data/bam/wes"
+# Location of results directory [format will be /path/to/dir/$expName]
+resDir="/ocpmi/results/excavator2"
+```
+
+***
 
 #### Installation
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It first auto generates two text files that will serve as configs for the 2nd and 3rd pipeline scripts. It then creates directories for each sample at the prepDir site.
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It auto generates two text files that serve as configs for the pipeline scripts. Proper use of this script is paired with the full_send_vars.sh variable file to indicate pointers and variable names. Both should be placed in the Excavator2 working directory with this script being executed from there.
 
 source full_send_vars.sh
 cd $HOME$bamDir

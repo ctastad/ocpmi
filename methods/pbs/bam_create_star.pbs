@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=64gb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N bam_create
@@ -10,7 +10,7 @@ module load gcc star
 
 cd ~/ocpmi/data/gene_ref/ucsc/hg38
 
-STAR --runThreadN 6 \
+STAR --runThreadN 8 \
     --runMode genomeGenerate \
     --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
     --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
@@ -21,7 +21,7 @@ cd ~/ocpmi/data/bam/wes
 
 for i in *.fastq; do
 STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-    --runThreadN 6 \
+    --runThreadN 8 \
     --readFilesIn $i \
     --outFileNamePrefix ./star_aligned \
     --outSAMtype BAM SortedByCoordinate \

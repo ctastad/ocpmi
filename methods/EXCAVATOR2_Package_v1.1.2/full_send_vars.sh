@@ -1,5 +1,16 @@
 ################################################################################
 # This is the config file for full_send.sh
+#
+# Use of this config file should be paired with full_send.sh.
+# Both should be placed in the Excavator2 working directory and executed there.
+#
+# After setting all variables, the function can be executed with the following
+# command in the Excavator2 working directory
+#
+# ./full_send.sh
+#
+# This function will overwrite any existing config or target files, so care
+# should be taken to use a unique experiment name variable for every case.
 ################################################################################
 
 
