@@ -1,8 +1,0 @@
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-40-T18-0451-07_S19_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-40-T18-0451-07_S19_R1_001 PM-40-T18-0451-07_S19_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-40-T18-0451-07_S19_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-40-T18-0451-07_S19_R2_001 PM-40-T18-0451-07_S19_R2_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-41-T18-0468-01_S23_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-41-T18-0468-01_S23_R1_001 PM-41-T18-0468-01_S23_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-41-T18-0468-01_S23_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-41-T18-0468-01_S23_R2_001 PM-41-T18-0468-01_S23_R2_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-42-T18-0486-16_S27_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-42-T18-0486-16_S27_R1_001 PM-42-T18-0486-16_S27_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-42-T18-0486-16_S27_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-42-T18-0486-16_S27_R2_001 PM-42-T18-0486-16_S27_R2_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-43-T18-0525-02_S4_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-43-T18-0525-02_S4_R1_001 PM-43-T18-0525-02_S4_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-43-T18-0525-02_S4_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k1/PM-43-T18-0525-02_S4_R2_001 PM-43-T18-0525-02_S4_R2_001

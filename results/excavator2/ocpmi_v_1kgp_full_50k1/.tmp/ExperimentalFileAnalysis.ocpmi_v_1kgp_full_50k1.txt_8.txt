@@ -1,0 +1,8 @@
+T58 data/prepare/ocpmi_v_1kgp_full_50k1/PM-55-T18-0639-02_S28_R2_001 PM-55-T18-0639-02_S28_R2_001
+T59 data/prepare/ocpmi_v_1kgp_full_50k1/PM-6-T17-0382-2_S17_R1_001 PM-6-T17-0382-2_S17_R1_001
+T60 data/prepare/ocpmi_v_1kgp_full_50k1/PM-6-T17-0382-2_S17_R2_001 PM-6-T17-0382-2_S17_R2_001
+T61 data/prepare/ocpmi_v_1kgp_full_50k1/PM-7-T17-0576-3_S25_R1_001 PM-7-T17-0576-3_S25_R1_001
+T62 data/prepare/ocpmi_v_1kgp_full_50k1/PM-7-T17-0576-3_S25_R2_001 PM-7-T17-0576-3_S25_R2_001
+T63 data/prepare/ocpmi_v_1kgp_full_50k1/PM-9-T17-0591-1_S21_R1_001 PM-9-T17-0591-1_S21_R1_001
+T64 data/prepare/ocpmi_v_1kgp_full_50k1/PM-9-T17-0591-1_S21_R2_001 PM-9-T17-0591-1_S21_R2_001
+T65 data/prepare/ocpmi_v_1kgp_full_50k1/star_alignedAligned.sortedByCoord.out star_alignedAligned.sortedByCoord.out

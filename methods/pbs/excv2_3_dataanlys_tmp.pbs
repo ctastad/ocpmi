@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=32gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N excv2_data_an
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+module load samtools
+module load bedtools
+module load intel
+module load perl
+module load R/3.6.0
+
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.ocpmi_v_1kgp_full_50k1.txt --processors 8 --target ocpmi_v_1kgp_full_50k1_target --assembly hg38 --output ~/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1 --mode pooling

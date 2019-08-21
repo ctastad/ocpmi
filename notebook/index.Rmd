@@ -4632,5 +4632,36 @@ Created    Completed  Age Project Description
 
 ***
 
+## 21
+
+### TODO
+
+```{r}
+ID Active Age P Project Tags      Description                               Urg
+-- ------ --- - ------- --------- ----------------------------------------- ----
+65 1d     12d   lab     work      run excv2 across ocpmi bams               5.87
+68 1d     6d  H lab     work      realign bam files with star               11.8
+79        11h   lab     ccgd work is a java license necessary                1.9
+80        11h   lab     ccgd work how much drive space is necessary          1.9
+81        11h   lab     ccgd work determine firewall config ports open       1.9
+82        11h   lab     ccgd work determine security level for vm            1.9
+69        6d    lab     work      look for differences in 1kgp comparison   1.83
+                                  in exv2 paper
+70        6d    lab     work      do search for best suited cnv controls    1.83
+71        6d    lab     work      get site analytics for ccgd               1.83
+72        6d    lab     work      submit vm application for ccgd            1.83
+74        1d    lab     work      create full_send.sh for varscan           1.81
+78        20h   lab     work      replace full_send files with new ones      1.8
+                                  after excv2 process completes
+83        9h    lab     work      remove base16 terminal theme               1.8
+41        12w L lab     work      agenda [5]                                1.29
+40        3mo L lab     work      review scripts for ccgd database           0.3
+
+15 tasks
+```
+
+
+***
+
 # References
 
