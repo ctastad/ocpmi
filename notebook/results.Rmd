@@ -44,6 +44,14 @@ This is a first case where I have been able to get the pipeline to run to comple
 
 #### Figures
 
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/fig_matrix.png-1.png)
+
+***
+
+**Individual Output**
+
 ```{r, out.width = "100%", out.height = "600px", echo = F}
 knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot/Plots/NA19131/combined.pdf")
 ```
@@ -66,6 +74,14 @@ This result presents the first instance of where I ran analysis on actual ocpmi 
 ***
 
 #### Figures
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/pilot1/Plots/pm2/fig_matrix.png-1.png)
+
+***
+
+**Individual Output**
 
 ```{r, out.width = "100%", out.height = "600px", echo = F}
 knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot1/Plots/pm2/combined.pdf")
@@ -95,6 +111,14 @@ This analysis completed successfully. There are some indications of variation at
 ***
 
 ##### Figures
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_vs_1kgp_2pm_50k2/Plots/pm2/fig_matrix.png-1.png)
+
+***
+
+**Individual Output**
 
 ```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
 knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_vs_1kgp_2pm_50k2/Plots/pm2/combined.pdf")

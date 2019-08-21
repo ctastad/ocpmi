@@ -4505,7 +4505,7 @@ Even though I am doing realignment for the ocpmi samples, I figured I could run 
 
 ### Summary
 
-#### Started
+#### Running
 
 ```{r}
 ID Started    Active Age P Project Tags Description
@@ -4578,6 +4578,57 @@ The process from yesterday ended in an error, so I'm troubleshooting today. The 
 * targets: `GCA_000001405.15_GRCh38.bw`, via excv2
 
 I foolishly did not set an adequate wall time for this process yesterday, so I needed to restart it. I initiated a new process at 24hrs, but that might also have been inadequate. We'll see.
+
+### figs_finish_excv2.sh
+
+I wanted to automate the final processing of the figure output for the excv2 pipeline, so I wrote a bash script to do that. This creates two items:
+
+* A `combined.pdf` which is a string of all the independent figures.
+* An image of a 5x5 matrix of each figure on one page.
+
+```{r}
+#!/bin/sh
+
+dir=$PWD
+cd $dir
+
+pdfunite Plot* combined.pdf
+pdfnup Plot* --nup 5x5 --outfile tmp.pdf
+pdftoppm tmp.pdf fig_matrix.png -png
+rm -rf tmp.pdf
+```
+
+### Summary
+
+I was able to get a good deal done today. Most of that was documentation related, but I feel that was lacking from my work over the weekend. My large processes to redo seq alignment and run excv2 across all current bam files are still running. Expect them to run for a while still.
+
+#### Running
+
+```{r}
+ID Started    Active Age P Project Tags Description
+-- ---------- ------ --- - ------- ---- ---------------------------
+70 2019-08-19 22h    6d  H lab     work realign bam files with star
+66 2019-08-19 22h    12d   lab     work run excv2 across ocpmi bams
+
+2 tasks
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-08-15 2019-08-20 4d  lab     add discussion notes to expts on resutls page
+2019-08-19 2019-08-20 1d  lab     record results from weekend analysis
+2019-08-18 2019-08-20 1d  lab     add expt name annotation convention to methods
+                                  page
+2019-08-19 2019-08-20 22h lab     add general parameters to methods for star
+                                  alignment
+2019-08-20 2019-08-20 2h  lab     fold pilot expts on methods page
+2019-08-19 2019-08-20 1d  lab     find way to combine pdfs
+
+6 tasks
+```
 
 ***
 
