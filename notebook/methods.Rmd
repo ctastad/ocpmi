@@ -74,17 +74,38 @@ ocpmi/
 ```
 
 
-## Annotation
+## Expt Annotation
 
 For consistency in documenting the wide range of information, I want to have a systematic means of tracking this accross experimentation.
 
-**Experiement Files/Dirs**
+#### General Format
 
 ```{r}
 * samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
 * output: `/path/to/output`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 ```
+
+#### exvc2 Format
+
+```{r}
+* name: `expName`
+* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+```
+
+#### STAR Alignment
+
+```{r}
+* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes`
+* star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+```
+
 
 **Function Highlighting**
 
@@ -183,7 +204,6 @@ Following an example from the Seurat pbmc tutorial, I am incorporating folding p
 
 ## wes
 
-
 <details>
   <summary>**from: Andrew re wes location 6/14/19**</summary>
 You should now have access to nelsona2, where the somatic DNA exome data is located.  Rebecca and Christy have done the primary work on these samples, so please reach out to them if you have questions about the exome data.  Also, there are directories on there of sequencing from the Illumina TST170 panel, a focused DNAseq panel that has copy number calling built into the stock pipeline (using an algorithm called Craft).
@@ -278,11 +298,12 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 ***
 
-#### BAM creation
+### BAM Creation
 
 I need to create new bam files from our source wes data since these files were likely lost to scratch. I'll be doing a pilot run with two files that I will then run through each of excv2 and vs2.
 
-**bam Pilot**
+<details>
+  <summary>**bwa Pilot**</summary>
 
 * src: `/home/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
 * samples: `PM-2-T17-0307-3_S9_R1_001.fastq`, `PM-15-T17-0910-1_S2_R1_001.fastq`; via Andy Nelson group
@@ -295,9 +316,15 @@ I need to create new bam files from our source wes data since these files were l
 * output: `~ocpmi/data/bam/wes`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/data/gene_ref`
 
-**Pipeline**
+</details>
 
-*fastq gene_ref &rarr; `index` gene ref (bwa bwtsw) &rarr; align &ast;.fastq (bwa mem) + `sort` (samtools) &rarr; output.bam*
+**bwa Pipeline**
+
+*fastq, gene_ref &rarr; `index` gene ref (bwa bwtsw) &rarr; align &ast;.fastq (bwa mem) + `sort` (samtools) &rarr; output.bam*
+
+**STAR Pipeline**
+
+*gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; `align` + `sort` &rarr; output.bam*
 
 **Directory**
 
@@ -308,14 +335,61 @@ ocpmi/data/bam/
     └── pilot
 ```
 
+#### STAR Alignment
 
-#### bwa
+* samples: `*.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
+* star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+* man: [file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf](file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)
+
+I found a helpful walkthrough on getting star going.
+
+* https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html
+
+#### bam_create_star.pbs
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=64gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_create
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/gene_ref/ucsc/hg38
+
+STAR --runThreadN 8 \
+    --runMode genomeGenerate \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
+    --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf \
+    --sjdbOverhang 100
+
+cd ~/ocpmi/data/bam/wes
+
+for i in *.fastq; do
+STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --runThreadN 8 \
+    --readFilesIn $i \
+    --outFileNamePrefix ./star_aligned \
+    --outSAMtype BAM SortedByCoordinate \
+    --outSAMunmapped Within \
+    --outSAMattributes Standard
+done
+```
+
+#### bwa Alignmnet
 
 I'll be using bwa for sequence alignment.
 
 * man: http://bio-bwa.sourceforge.net/bwa.shtml
 
-#### Reference Indexing
+##### Reference Indexing
 
 Command for reference index creation using the bwtsw algorithm:
 
@@ -323,7 +397,7 @@ Command for reference index creation using the bwtsw algorithm:
 bwa index -a bwtsw reference.fa
 ```
 
-#### Sorted BAM
+##### Sorted BAM
 
 Command for direct bwa to bam output using the mem algorithm:
 
@@ -346,7 +420,7 @@ do
 done
 ```
 
-#### Iterating Sorted BAM w/ parallel
+##### Iterating Sorted BAM w/ parallel
 
 * https://www.biostars.org/p/231491/
 
@@ -358,7 +432,7 @@ ls *.fastq | parallel -j 2 'bwa mem ~/ocpmi/gene_ref/hg38.fa {} | samtools sort 
 
 ```
 
-#### BAM Indexing
+##### BAM Indexing
 
 BAM file indexes can be created using gnu parallel and samtools.
 
@@ -367,8 +441,6 @@ BAM file indexes can be created using gnu parallel and samtools.
 ```{r}
 parallel samtools index ::: *.bam
 ```
-
-***
 
 ***
 

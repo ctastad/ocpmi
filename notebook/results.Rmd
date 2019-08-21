@@ -38,6 +38,8 @@ Completed *2019-08-12*
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC, `GCA_000001405.15_GRCh38.bw` via excv2
     - .fa: `~/ocpmi/data/gene_ref/ucsc/hg38`, .bw:`~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data`
 
+This is a first case where I have been able to get the pipeline to run to completion. The comparisson of these two genomes is not particularly interesting, but the lack of variation is what I expected to see which serves as some minor validation.
+
 ***
 
 #### Figures
@@ -59,6 +61,8 @@ Completed *2019-08-13*
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC, `GCA_000001405.15_GRCh38.bw` via excv2
     - .fa: `~/ocpmi/data/gene_ref/ucsc/hg38`, .bw:`~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data`
 
+This result presents the first instance of where I ran analysis on actual ocpmi samples. Fortunately, the results are extremely messy, which is an indication of the high cnv character of our samples. There isn't much to gleen from this in terms of quantitative results but it further establishes the relevance of the toolset and data.
+
 ***
 
 #### Figures
@@ -67,6 +71,53 @@ Completed *2019-08-13*
 knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot1/Plots/pm2/combined.pdf")
 ```
 
+***
+
+### excv2 ocpmi vs 1kgp pilot
+
+I'm running several different permutations of my pilot bam samples to get a sense of how these results come out against the `NA10847` control. To a certain extent, I am just taking a shotgut approach to have a variety of cases to compare. Part of this includes testing the minor tweaking to the `full_send.sh` script with known runs. There are several failed iterations that are not shown.
+
+#### ocpmi_vs_1kgp_2pm_50k2 {.tabset .tabfade}
+
+##### Discussion
+
+*Completed 2019-08-19*
+
+* name: `ocpmi_vs_1kgp_2pm_50k2`
+* samples: `NA10847` (control), `2pm` (expt) via ; `~/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw`, via excv2
+
+This analysis completed successfully. There are some indications of variation at certain points (chr5, 11, 14, 17, 18, 19, 21, 22) though these sectors are very large. This may be an indication I need to adjust my window size since whole arms seem to be up or down regulated.
+
+***
+
+##### Figures
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_vs_1kgp_2pm_50k2/Plots/pm2/combined.pdf")
+```
+
+***
+
+#### ocpmi_vs_1kgp_15pm_50k {.tabset .tabfade}
+
+##### Discussion
+
+*Completed 2019-08-19*
+
+* name: `ocpmi_vs_1kgp_15pm_50k`
+* samples: `NA10847` (control), `15pm` (expt) via ; `~/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw`, via excv2
+
+This run did not complete successfully. This is somewhat of a concern since I don't have a good indication of why this could not run to completion. I tried a few different variations on the experimental setup and also attempted to run it interactively with no positive output. I'm hoping that rerunning the alignment will address this in some way.
+
+***
 
 ## VarScan2
 
