@@ -89,7 +89,7 @@ knitr::include_graphics("/home/chris/ocpmi/results/excavator2/pilot1/Plots/pm2/c
 
 ***
 
-### excv2 ocpmi vs 1kgp pilot
+### Pilot: ocpmi vs 1kgp
 
 I'm running several different permutations of my pilot bam samples to get a sense of how these results come out against the `NA10847` control. To a certain extent, I am just taking a shotgut approach to have a variety of cases to compare. Part of this includes testing the minor tweaking to the `full_send.sh` script with known runs. There are several failed iterations that are not shown.
 
