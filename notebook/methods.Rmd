@@ -640,6 +640,9 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 * dir: `~/ocpmi/methods/varscan2`
 * man:  https://dkoboldt.github.io/varscan/copy-number-calling.html
 
+<details>
+  <summary>**vs2 Pilot**</summary>
+
 **vs2 Pilot** (failed)
 
 * samples: `NA10847`, `NA19131` via 1kgp phase3
@@ -652,6 +655,8 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 * samples: `pm2.bam` (control), `pm15.bam`; `~/ocpmi/data/bam/wes/pilot`
 * output: `~/ocpmi/results/varscan2/pilot`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/data/gene_ref`
+
+</details>
 
 **Pipeline**
 
@@ -759,12 +764,14 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 * dir: `~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2`
 * man: [file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf](file:///mnt/msi/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/docs/EXCAVATOR2 Manual.pdf)
 
-**excv2 Pilot**
+<details>
+  <summary>**excv2 Pilot**</summary>
 
 * samples: `NA10847` (control); `NA19131` via 1kgp GRCh38; `~/ocpmi/data/bam/1kgp`
 * output: `~/ocpmi/results/excavator2/pilot`
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC, `GCA_000001405.15_GRCh38.bw` via excv2
     - .fa: `~/ocpmi/data/gene_ref/ucsc/hg38`, .bw:`~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data`
+</details>
 
 **Pipeline**
 
