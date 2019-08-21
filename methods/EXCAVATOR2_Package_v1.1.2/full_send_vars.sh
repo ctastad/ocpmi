@@ -9,8 +9,9 @@
 #
 # ./full_send.sh
 #
-# This function will overwrite any existing config or target files, so care
-# should be taken to use a unique experiment name variable for every case.
+# In addition to the output generated in the results directory, this function
+# will move all config files to a directory it creates in the Excavator2 working
+# directory labeled config_files.
 ################################################################################
 
 

@@ -4368,20 +4368,49 @@ resDir="/ocpmi/results/excavator2"
 
 ```
 
-
 ### excv2 ocpmi vs 1kgp pilot
 
-I'm running several different permutations of my pilot bam samples to get a sense of how these results come out against the `NA10847` control. To a certain extent, I am just taking a shotgut approach to have a variety of cases to compare. Part of this included minor tweaking to the `full_send.sh` script.
+I'm running several different permutations of my pilot bam samples to get a sense of how these results come out against the `NA10847` control. To a certain extent, I am just taking a shotgut approach to have a variety of cases to compare. Part of this includes testing the minor tweaking to the `full_send.sh` script with known runs. There are several failed iterations that are not shown.
 
-**ocpmi_vs_1kgp_2pm_50k2**
+#### ocpmi_vs_1kgp_2pm_50k2 {.tabset .tabfade}
 
-* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
-* output: `/path/to/output`
-* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+##### Discussion
 
-* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
-* output: `/path/to/output`
-* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+*Completed 2019-08-19*
+
+* name: `ocpmi_vs_1kgp_2pm_50k2`
+* samples: `NA10847` (control), `2pm` (expt) via ; `~/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw`, via excv2
+
+This analysis completed successfully. There are some indications of variation at certain points (chr5, 11, 14, 17, 18, 19, 21, 22) though these sectors are very large. This may be an indication I need to adjust my window size since whole arms seem to be up or down regulated.
+
+***
+
+##### Figures
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_vs_1kgp_2pm_50k2/Plots/pm2/combined.pdf")
+```
+
+***
+
+#### ocpmi_vs_1kgp_15pm_50k {.tabset .tabfade}
+
+##### Discussion
+
+*Completed 2019-08-19*
+
+* name: `ocpmi_vs_1kgp_15pm_50k`
+* samples: `NA10847` (control), `15pm` (expt) via ; `~/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw`, via excv2
+
+This run did not complete successfully. This is somewhat of a concern since I don't have a good indication of why this could not run to completion. I tried a few different variations on the experimental setup and also attempted to run it interactively with no positive output. I'm hoping that rerunning the alignment will address this in some way.
 
 ***
 
@@ -4415,18 +4444,77 @@ ID Active Age  P Project Tag  Description                                   Urg
 
 ### STAR Alignment: ocpmi
 
-got gtf file from ucsc genome table browser (@Karolchik2004)
+* samples: `*.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
+* star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+* man: [file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf](file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)
+
+I am redoing the sequence alignment on my fastq files out of fear that bwa is dated and does not have specific enough parameters to deal with our highliy variable dataset. The package requires a gtf file in order to index the gene reference. I retrieved this from the ucsc genome table browser (@Karolchik2004)
+
+I found a helpful walkthrough on getting star going.
 
 * https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html
-* (file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)[file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf]
+
+#### bam_create_star.pbs
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=64gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_create
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/gene_ref/ucsc/hg38
+
+STAR --runThreadN 8 \
+    --runMode genomeGenerate \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
+    --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf \
+    --sjdbOverhang 100
+
+cd ~/ocpmi/data/bam/wes
+
+for i in *.fastq; do
+STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --runThreadN 8 \
+    --readFilesIn $i \
+    --outFileNamePrefix ./star_aligned \
+    --outSAMtype BAM SortedByCoordinate \
+    --outSAMunmapped Within \
+    --outSAMattributes Standard
+done
+```
 
 ### excv2 ocpmi_v_1kgp_full_50k
 
-* samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
-* output: `/path/to/output`
-* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+* name: `ocpmi_v_1kgp_full_50k`
+* samples: `NA10847` (control), `*.bam` (expt) via ocpmi; `~/ocpmi/data/bam/wes`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw`, via excv2
+
+Even though I am doing realignment for the ocpmi samples, I figured I could run this in the background. This is the whole deal. All ocpmi bam files with the complete excv2 process to see how things go.
 
 ### Summary
+
+#### Started
+
+```{r}
+ID Started    Active Age P Project Tags Description
+-- ---------- ------ --- - ------- ---- -----------------------------------
+70 2019-08-19 20h    5d  H lab     work realign bam files with star
+66 2019-08-19 20h    12d   lab     work run excv2 and vs2 across ocpmi bams
+
+2 tasks
+```
 
 #### Completed
 
@@ -4473,9 +4561,23 @@ ID Active Age P Project Tag  Description                                    Urg
 
 ### STAR Alignment: ocpmi
 
+* samples: `*.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
+* star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
 The process from yesterday ended in an error, so I'm troubleshooting today. The issue stems from the fact the indexing process is not running to completion. After doing some research, it seems that STAR doesn't do anything to identify working memory and is likely exceeding the allotted amount. I'm going to rerun the process with 64GB to see if this resolves the issue.
 
+### excv2 ocpmi_v_1kgp_full_50k1
 
+* name: `ocpmi_v_1kgp_full_50k1`
+* samples: `NA10847` (control), `*.bam` (expt) via ocpmi; `~/ocpmi/data/bam/wes`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw`, via excv2
+
+I foolishly did not set an adequate wall time for this process yesterday, so I needed to restart it. I initiated a new process at 24hrs, but that might also have been inadequate. We'll see.
 
 ***
 
