@@ -777,15 +777,15 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
 
 Detailed
 
-*&ast;.bed `sort` (bedtools) &rarr; [SourceTarget.txt (&ast;.bw + gene_ref) + &ast;.bed] `TargetPerla.pl` &rarr; [ExpFilePrep.txt (BAMs) + targets] `EXCAVATORDataPrepare.pl` &rarr; [ExpFileAn.txt (output + controls) + targets `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+*&ast;.bed `sort` (bedtools) &rarr; [SourceTarget.txt (&ast;.bw + gene_ref) + &ast;.bed] `TargetPerla.pl` &rarr; [ExpFilePrep.txt (BAMs) + targets] `EXCAVATORDataPrepare.pl` &rarr; [ExpFileAn.txt (output + controls) + targets `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
 Condensed
 
-*&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output*
+*&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
 Modified
 
-*&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output*
+*&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
 **Directory**
 
@@ -845,6 +845,27 @@ perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --
 
 ```{r}
 perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
+```
+
+***
+
+#### figs_finish_excv2.sh
+
+I wanted to automate the final processing of the figure output for the excv2 pipeline, so I wrote a bash script to do that. This creates two items:
+
+* A `combined.pdf` which is a string of all the independent figures.
+* An image of a 5x5 matrix of each figure on one page.
+
+```{r}
+#!/bin/sh
+
+dir=$PWD
+cd $dir
+
+pdfunite Plot* combined.pdf
+pdfnup Plot* --nup 5x5 --outfile tmp.pdf
+pdftoppm tmp.pdf fig_matrix.png -png
+rm -rf tmp.pdf
 ```
 
 ***
