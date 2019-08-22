@@ -1,2 +1,0 @@
-T1 data/prepare/test1_2pm_50000_2019-08-21_21:49/pm2 pm2
-C1 data/prepare/test1_2pm_50000_2019-08-21_21:49/zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome
