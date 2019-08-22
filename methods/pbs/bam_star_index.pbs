@@ -1,0 +1,18 @@
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=64gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_star_index
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/gene_ref/ucsc/hg38
+
+STAR --runThreadN 8 \
+    --runMode genomeGenerate \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
+    --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf \
+    --sjdbOverhang 100
