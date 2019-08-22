@@ -4798,6 +4798,7 @@ This process completed early this morning. There isn't any indication that an er
 
 <details>
   <summary>**star_alignedLog.out**</summary>
+
 ```{r}
 STAR version=STAR_2.5.3a
 STAR compilation time,server,dir=Fri Mar 17 11:35:46 EDT 2017 florence.cshl.edu:/sonas-hs/gingeras/nlsas_norepl/user/dobin/STAR/STAR.sandbox/source
@@ -5615,7 +5616,7 @@ Loading SAindex ... done: 1565873619 bytes
 Finished loading the genome: Tue Aug 20 22:16:25 2019
 
 Processing splice junctions database sjdbN=389747,   sjdbOverhang=100
-alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)*winAnchorDistNbins=589824
+alignIntronMax=alignMatesGapMax=0, the max intron size will be approximately determined by (2^winBinNbits)&ast;winAnchorDistNbins=589824
 Created thread # 1
 Created thread # 2
 Created thread # 3
@@ -5666,6 +5667,7 @@ ALL DONE!
 
 <details>
   <summary>**star_alignedLog.progress.out**</summary>
+
 ```{r}
            Time    Speed        Read     Read   Mapped   Mapped   Mapped   Mapped Unmapped Unmapped Unmapped Unmapped
                     M/hr      number   length   unique   length   MMrate    multi   multi+       MM    short    other
@@ -5712,6 +5714,34 @@ Created    Completed  Age Project Description
 
 3 tasks
 ```
+
+***
+
+## 22
+
+### TODO
+
+```{r}
+ID Active Age P Project Tags      Description                               Urg
+-- ------ --- - ------- --------- ----------------------------------------- ----
+80 1min   16h   lab     work      rerun excv2 across all bwa bams            5.8
+76        1d    lab     ccgd work is a java license necessary               1.91
+77        1d    lab     ccgd work how much drive space is necessary         1.91
+78        1d    lab     ccgd work determine firewall config ports open      1.91
+79        1d    lab     ccgd work determine security level for vm           1.91
+67        7d    lab     work      look for differences in 1kgp comparison   1.84
+                                  in exv2 paper
+68        7d    lab     work      do search for best suited cnv controls    1.84
+69        7d    lab     work      get site analytics for ccgd               1.84
+70        7d    lab     work      submit vm application for ccgd            1.84
+72        2d    lab     work      create full_send.sh for varscan           1.81
+81        23s   lab     work      trblsht star alignment                     1.8
+41        3mo L lab     work      agenda [5]                                1.29
+40        3mo L lab     work      review scripts for ccgd database          0.31
+
+13 tasks
+```
+
 
 
 ***
