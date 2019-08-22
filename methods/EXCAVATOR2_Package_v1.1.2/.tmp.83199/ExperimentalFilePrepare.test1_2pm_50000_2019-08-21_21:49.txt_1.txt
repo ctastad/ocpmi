@@ -1,0 +1,1 @@
+/home/starrt2/tasta005/ocpmi/data/bam/wes/pilot/ocmpi_1kgp_compare/pm2.bam data/prepare/test1_2pm_50000_2019-08-21_21:49/pm2 pm2

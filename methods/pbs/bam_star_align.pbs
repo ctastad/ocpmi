@@ -1,0 +1,20 @@
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=32gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_star_align
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/bam/wes
+
+for i in *.fastq; do
+STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --runThreadN 8 \
+    --readFilesIn $i \
+    --outSAMtype BAM SortedByCoordinate \
+    --outSAMunmapped Within \
+    --outSAMattributes Standard
+done
