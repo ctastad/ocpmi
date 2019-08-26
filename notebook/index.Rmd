@@ -4661,6 +4661,8 @@ ID Active Age P Project Tags      Description                               Urg
 ```
 ### excv2 ocpmi_v_1kgp_full_50k1 {.tabset .tabfade}
 
+#### Discussion
+
 * name: `ocpmi_v_1kgp_full_50k1`
 * samples: `NA10847` (control), `*.bam` (expt) via ocpmi; `~/ocpmi/data/bam/wes`
 * excv2_vars: `50000` (window); `pooling` (analysis mode)
@@ -4668,83 +4670,593 @@ ID Active Age P Project Tags      Description                               Urg
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
 * targets: `GCA_000001405.15_GRCh38.bw`, via excv2
 
-PM-32-T18-0097-03_S30_R2_001
-PM-1-T18-0648-17_S32_R2_001
-PM-40-T18-0451-07_S19_R1_001
-PM-44-T18-0445-19_S31_R1_001
-PM-24-T17-1392-4_S10_R1_001
-PM-40-T18-0451-07_S19_R2_001
-PM-44-T18-0445-19_S31_R2_001
-PM-24-T17-1392-4_S10_R2_001
-PM-41-T18-0468-01_S23_R1_001
-PM-25-T17-1476-1_S18_R1_001
-PM-41-T18-0468-01_S23_R2_001
-PM-25-T17-1476-1_S18_R2_001
-PM-26-T17-1472-1_S14_R1_001
-PM-26-T17-1472-1_S14_R2_001
+#### Figures {.tabset .tabfade}
 
-#### PM-4-T17-0325-3_S13_R2_001
+##### Collated
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-4-T17-0325-3_S13_R2_001/fig_matrix.png-1.png)
+        PM-14-T17-0867-1_S29_R1_001 No Output
 
-#### PM-55-T18-0639-02_S28_R2_001
+        PM-14-T17-0867-1_S29_R2_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-55-T18-0639-02_S28_R2_001/fig_matrix.png-1.png)
+        PM-15-T17-0910-1_S2_R1_001 No Output
 
-#### PM-3-T17-0315-2_S5_R2_001
+        PM-15-T17-0910-1_S2_R2_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-3-T17-0315-2_S5_R2_001/fig_matrix.png-1.png)
+        PM-16-T17-0964-3_S6_R1_001 No Output
 
-#### PM-43-T18-0525-02_S4_R2_001
+        PM-16-T17-0964-3_S6_R2_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-43-T18-0525-02_S4_R2_001/fig_matrix.png-1.png)
+        PM-1-T17-0146-3_S1_R1_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-32-T18-0097-03_S30_R2_001/fig_matrix.png-1.png)
+        PM-1-T17-0146-3_S1_R2_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-1-T18-0648-17_S32_R2_001/fig_matrix.png-1.png)
+        PM-1-T18-0648-17_S32_R1_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R1_001/fig_matrix.png-1.png)
+![PM-1-T18-0648-17_S32_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-1-T18-0648-17_S32_R2_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R1_001/fig_matrix.png-1.png)
+![PM-24-T17-1392-4_S10_R1_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R1_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R1_001/fig_matrix.png-1.png)
+![PM-24-T17-1392-4_S10_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R2_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R2_001/fig_matrix.png-1.png)
+![PM-25-T17-1476-1_S18_R1_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R1_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R2_001/fig_matrix.png-1.png)
+![PM-25-T17-1476-1_S18_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R2_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R2_001/fig_matrix.png-1.png)
+![PM-26-T17-1472-1_S14_R1_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R1_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R1_001/fig_matrix.png-1.png)
+![PM-26-T17-1472-1_S14_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R2_001/fig_matrix-1.png)
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R1_001/fig_matrix.png-1.png)
+        PM-27-T17-1564-2_S22_R1_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R2_001/fig_matrix.png-1.png)
+        PM-27-T17-1564-2_S22_R2_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R2_001/fig_matrix.png-1.png)
+        PM-2-T17-0307-3_S9_R1_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R1_001/fig_matrix.png-1.png)
+        PM-2-T17-0307-3_S9_R2_001 No Output
 
-![](/mnt/msi/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R2_001/fig_matrix.png-1.png)
+        PM-31-T18-0112-4_S3_R1_001 No Output
+
+        PM-31-T18-0112-4_S3_R2_001 No Output
+
+        PM-32-T18-0094-03_S26_R1_001 No Output
+
+        PM-32-T18-0094-03_S26_R2_001 No Output
+
+        PM-32-T18-0097-03_S30_R1_001 No Output
+
+![PM-32-T18-0097-03_S30_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-32-T18-0097-03_S30_R2_001/fig_matrix-1.png)
+
+        PM-37-T18-0421-13_S7_R1_001 No Output
+
+        PM-37-T18-0421-13_S7_R2_001 No Output
+
+        PM-38-T18-0426-06_S11_R1_001 No Output
+
+        PM-38-T18-0426-06_S11_R2_001 No Output
+
+        PM-39-T18-0449-18_S15_R1_001 No Output
+
+        PM-39-T18-0449-18_S15_R2_001 No Output
+
+        PM-3-T17-0315-2_S5_R1_001 No Output
+
+![PM-3-T17-0315-2_S5_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-3-T17-0315-2_S5_R2_001/fig_matrix-1.png)
+
+![PM-40-T18-0451-07_S19_R1_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R1_001/fig_matrix-1.png)
+
+![PM-40-T18-0451-07_S19_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R2_001/fig_matrix-1.png)
+
+![PM-41-T18-0468-01_S23_R1_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R1_001/fig_matrix-1.png)
+
+![PM-41-T18-0468-01_S23_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R2_001/fig_matrix-1.png)
+
+        PM-42-T18-0486-16_S27_R1_001 No Output
+
+        PM-42-T18-0486-16_S27_R2_001 No Output
+
+        PM-43-T18-0525-02_S4_R1_001 No Output
+
+![PM-43-T18-0525-02_S4_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-43-T18-0525-02_S4_R2_001/fig_matrix-1.png)
+
+![PM-44-T18-0445-19_S31_R1_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R1_001/fig_matrix-1.png)
+
+![PM-44-T18-0445-19_S31_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R2_001/fig_matrix-1.png)
+
+        PM-47-T18-0569-07_S12_R1_001 No Output
+
+        PM-47-T18-0569-07_S12_R2_001 No Output
+
+        PM-49-T18-0605-11_S20_R1_001 No Output
+
+        PM-49-T18-0605-11_S20_R2_001 No Output
+
+        PM-4-T17-0325-3_S13_R1_001 No Output
+
+![PM-4-T17-0325-3_S13_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-4-T17-0325-3_S13_R2_001/fig_matrix-1.png)
+
+        PM-50-T18-0595-05_S16_R1_001 No Output
+
+        PM-50-T18-0595-05_S16_R2_001 No Output
+
+        PM-51-T18-0606-08_S24_R1_001 No Output
+
+        PM-51-T18-0606-08_S24_R2_001 No Output
+
+        PM-52-T18-0523-02_S8_R1_001 No Output
+
+        PM-52-T18-0523-02_S8_R2_001 No Output
+
+        PM-55-T18-0639-02_S28_R1_001 No Output
+
+![PM-55-T18-0639-02_S28_R2_001](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-55-T18-0639-02_S28_R2_001/fig_matrix-1.png)
+
+        PM-6-T17-0382-2_S17_R1_001 No Output
+
+        PM-6-T17-0382-2_S17_R2_001 No Output
+
+        PM-7-T17-0576-3_S25_R1_001 No Output
+
+        PM-7-T17-0576-3_S25_R2_001 No Output
+
+        PM-9-T17-0591-1_S21_R1_001 No Output
+
+        PM-9-T17-0591-1_S21_R2_001 No Output
+
+##### PM-14-T17-0867-1_S29_R1_001
+
+**No output**
+
+##### PM-14-T17-0867-1_S29_R2_001
+
+**No output**
+
+##### PM-15-T17-0910-1_S2_R1_001
+
+**No output**
+
+##### PM-15-T17-0910-1_S2_R2_001
+
+**No output**
+
+##### PM-16-T17-0964-3_S6_R1_001
+
+**No output**
+
+##### PM-16-T17-0964-3_S6_R2_001
+
+**No output**
+
+##### PM-1-T17-0146-3_S1_R1_001
+
+**No output**
+
+##### PM-1-T17-0146-3_S1_R2_001
+
+**No output**
+
+##### PM-1-T18-0648-17_S32_R1_001
+
+**No output**
+
+##### PM-1-T18-0648-17_S32_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-1-T18-0648-17_S32_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-1-T18-0648-17_S32_R2_001/combined.pdf")
+```
+
+##### PM-24-T17-1392-4_S10_R1_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R1_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R1_001/combined.pdf")
+```
+
+##### PM-24-T17-1392-4_S10_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-24-T17-1392-4_S10_R2_001/combined.pdf")
+```
+
+##### PM-25-T17-1476-1_S18_R1_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R1_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R1_001/combined.pdf")
+```
+
+##### PM-25-T17-1476-1_S18_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-25-T17-1476-1_S18_R2_001/combined.pdf")
+```
+
+##### PM-26-T17-1472-1_S14_R1_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R1_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R1_001/combined.pdf")
+```
+
+##### PM-26-T17-1472-1_S14_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-26-T17-1472-1_S14_R2_001/combined.pdf")
+```
+
+##### PM-27-T17-1564-2_S22_R1_001
+
+**No output**
+
+##### PM-27-T17-1564-2_S22_R2_001
+
+**No output**
+
+##### PM-2-T17-0307-3_S9_R1_001
+
+**No output**
+
+##### PM-2-T17-0307-3_S9_R2_001
+
+**No output**
+
+##### PM-31-T18-0112-4_S3_R1_001
+
+**No output**
+
+##### PM-31-T18-0112-4_S3_R2_001
+
+**No output**
+
+##### PM-32-T18-0094-03_S26_R1_001
+
+**No output**
+
+##### PM-32-T18-0094-03_S26_R2_001
+
+**No output**
+
+##### PM-32-T18-0097-03_S30_R1_001
+
+**No output**
+
+##### PM-32-T18-0097-03_S30_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-32-T18-0097-03_S30_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-32-T18-0097-03_S30_R2_001/combined.pdf")
+```
+
+##### PM-37-T18-0421-13_S7_R1_001
+
+**No output**
+
+##### PM-37-T18-0421-13_S7_R2_001
+
+**No output**
+
+##### PM-38-T18-0426-06_S11_R1_001
+
+**No output**
+
+##### PM-38-T18-0426-06_S11_R2_001
+
+**No output**
+
+##### PM-39-T18-0449-18_S15_R1_001
+
+**No output**
+
+##### PM-39-T18-0449-18_S15_R2_001
+
+**No output**
+
+##### PM-3-T17-0315-2_S5_R1_001
+
+**No output**
+
+##### PM-3-T17-0315-2_S5_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-3-T17-0315-2_S5_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-3-T17-0315-2_S5_R2_001/combined.pdf")
+```
+
+##### PM-40-T18-0451-07_S19_R1_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R1_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R1_001/combined.pdf")
+```
+
+##### PM-40-T18-0451-07_S19_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-40-T18-0451-07_S19_R2_001/combined.pdf")
+```
+
+##### PM-41-T18-0468-01_S23_R1_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R1_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R1_001/combined.pdf")
+```
+
+##### PM-41-T18-0468-01_S23_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-41-T18-0468-01_S23_R2_001/combined.pdf")
+```
+
+##### PM-42-T18-0486-16_S27_R1_001
+
+**No output**
+
+##### PM-42-T18-0486-16_S27_R2_001
+
+**No output**
+
+##### PM-43-T18-0525-02_S4_R1_001
+
+**No output**
+
+##### PM-43-T18-0525-02_S4_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-43-T18-0525-02_S4_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-43-T18-0525-02_S4_R2_001/combined.pdf")
+```
+
+##### PM-44-T18-0445-19_S31_R1_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R1_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R1_001/combined.pdf")
+```
+
+##### PM-44-T18-0445-19_S31_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-44-T18-0445-19_S31_R2_001/combined.pdf")
+```
+
+##### PM-47-T18-0569-07_S12_R1_001
+
+**No output**
+
+##### PM-47-T18-0569-07_S12_R2_001
+
+**No output**
+
+##### PM-49-T18-0605-11_S20_R1_001
+
+**No output**
+
+##### PM-49-T18-0605-11_S20_R2_001
+
+**No output**
+
+##### PM-4-T17-0325-3_S13_R1_001
+
+**No output**
+
+##### PM-4-T17-0325-3_S13_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-4-T17-0325-3_S13_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-4-T17-0325-3_S13_R2_001/combined.pdf")
+```
+
+##### PM-50-T18-0595-05_S16_R1_001
+
+**No output**
+
+##### PM-50-T18-0595-05_S16_R2_001
+
+**No output**
+
+##### PM-51-T18-0606-08_S24_R1_001
+
+**No output**
+
+##### PM-51-T18-0606-08_S24_R2_001
+
+**No output**
+
+##### PM-52-T18-0523-02_S8_R1_001
+
+**No output**
+
+##### PM-52-T18-0523-02_S8_R2_001
+
+**No output**
+
+##### PM-55-T18-0639-02_S28_R1_001
+
+**No output**
+
+##### PM-55-T18-0639-02_S28_R2_001
+
+**Figure Matrix**
+
+![](/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-55-T18-0639-02_S28_R2_001/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/home/chris/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Plots/PM-55-T18-0639-02_S28_R2_001/combined.pdf")
+```
+
+##### PM-6-T17-0382-2_S17_R1_001
+
+**No output**
+
+##### PM-6-T17-0382-2_S17_R2_001
+
+**No output**
+
+##### PM-7-T17-0576-3_S25_R1_001
+
+**No output**
+
+##### PM-7-T17-0576-3_S25_R2_001
+
+**No output**
+
+##### PM-9-T17-0591-1_S21_R1_001
+
+**No output**
+
+##### PM-9-T17-0591-1_S21_R2_001
+
+**No output**
 
 ### Collaborator mtg
 
 present: tim, andy, ying, chris
 
-- is the 10847 the baseline genome or is it immortalized?
-- exome data is agilent v6 wes data
-- what did 1kgp use for their genome generation?
-- andy might have some clinical data that was also generated by agilinet v6
-    - he's going to reach out to the people for that.
-- check out cnvrf: this is used by the clinical pathology dept
-  naming convention for wes ocpmi samples
+* is the 10847 the baseline genome or is it immortalized?
+* exome data is agilent v6 wes data
+* what did 1kgp use for their genome generation?
+* andy might have some clinical data that was also generated by agilinet v6
+    + he's going to reach out to the people for that.
+* check out cnvrf: this is used by the clinical pathology dept
+* naming convention for wes ocpmi samples
+    + [PM-pathology ID]-[Bionet year retrieved]-[Bionet ID]-[Bionet subID]-[Illumina ID]
 
 ### wkly mtg w/ Tim
 
 present: tim, chris
 
-grant
-update on ccgd
+* grant
+* update on ccgd
 
 ### STAR Alignment: ocpmi
 
@@ -5688,6 +6200,8 @@ ALL DONE!
 
 ### figs_finish_excv2.sh
 
+I started a bash script that would automate the steps necessary to process the excv2 output. Given the number of samples I have, this would be relatively pretty tedious, so I'm hoping this will be a good supplement to `full_send.sh`
+
 ### Summary
 
 #### Running
@@ -5742,6 +6256,176 @@ ID Active Age P Project Tags      Description                               Urg
 13 tasks
 ```
 
+### figs_finish_excv2.sh
+
+This is a continuation of the bash script I started yesterday. I've expanded it quite a bit to make it effectively pump and dump for the markdown output needed to go to the `results` page. It needs to be run from the `Plots` results directory.
+
+```{r}
+#!/bin/bash
+
+# Establish path for function working dir
+dir=$PWD
+
+# Get experiment name from parent dir
+cd ..
+expName1=$(pwd | awk -F'/' '{print $NF}')
+cd $dir
+
+# Source variable file from experiment
+source /home/chris/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/config_files/$expName1/full_send_vars.$expName1.txt
+
+# Text for header in figures markdown file
+header=$(cat <<EOF
+### $expName1 {.tabset .tabfade}
+
+#### Discussion
+
+* name: \`$expName1\`
+* samples: \`SAMPLE\` (control), \`SAMPLE\` (expt) via ; \`$bamDir\`
+* excv2_vars: \`$window\` (window); \`$anMode\` (analysis mode)
+* output: \`$resDir/$expName1\`
+* gene_ref: \`hg38.fa\`, \`hg38_sortmerge.bed\` via UCSC; \`~/ocpmi/gene_ref\`
+* targets: \`GCA_000001405.15_GRCh38.bw\` via excv2
+
+#### Figures {.tabset .tabfade}
+
+##### Collated
+
+EOF
+)
+
+echo "${header}" > figs.md
+> collated.md
+
+# Loop to created collated figures and output formatted markdown
+for i in */; do
+    if [ "$(ls -A $i)" ]; then
+        cd $i
+        # Create figs
+        pdfunite Plot* combined.pdf
+        pdfnup Plot* --nup 5x5 --outfile tmp.pdf
+        pdftoppm tmp.pdf fig_matrix -png
+        rm -rf tmp.pdf
+        # Assign variable names for figs
+        sampleName=${PWD##*/}
+        figMatrix=$(find $PWD -name "fig_matrix*" | grep $sampleName)
+        combinedPdf=$(find $PWD -name "combined.pdf" | grep $sampleName)
+        # Formatted output to individual sample entry
+        sampleMd=$(cat <<EOF
+
+##### ${sampleName}
+
+**Figure Matrix**
+
+![]($figMatrix)
+
+***
+
+**Individual Output**
+
+\`\`\`{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("${combinedPdf}")
+\`\`\`
+EOF
+)
+        # Formatted output to collated entry for all samples
+        collatedMd=$(cat << EOF
+
+![${sampleName}]($figMatrix)
+EOF
+)
+        # Pass to markdown files
+        echo "${sampleMd}" >> ../figs.md
+        echo "${collatedMd}" >> ../collated.md
+        cd ../
+    else
+        cd $i
+        sampleName=${PWD##*/}
+        # Formatted output for no output
+        noOutput=$(cat <<EOF
+
+##### ${sampleName}
+
+**No output**
+EOF
+)
+        # Pass to markdown files
+        echo "${noOutput}" >> ../figs.md
+        echo "
+        ${sampleName} No Output" >> ../collated.md
+        cd ../
+    fi
+done
+
+# Insert contents of collated.md at top of sample entries
+cd $dir
+sed -i -e '/##### Collated/r collated.md' figs.md
+```
+
+### Summary
+
+Holy crap it feels like I've wasted an enormous amount of time. The last two days have been largely preoccupied with figuring out how I'm going to handle figure processing. A point I hadn't considered was the sheer quantity of figures generated by the excv2 pipeline. I think I generally have this under control now, but the actual size of these images may be an issue for my notebook. We'll have to see.
+
+From my conversations with the collaborators yesterday and the current progress of the project, I think I need to do a mind dump and regear my direction.
+
+#### Running
+
+```{r}
+ID Started    Active Age Project Tags Description
+-- ---------- ------ --- ------- ---- -------------------------------
+73 2019-08-22 7h     23h lab     work rerun excv2 across all bwa bams
+
+1 task
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age   P Project Description
+---------- ---------- ----- - ------- -------------------------------------
+2019-08-21 2019-08-22 23h     lab     rerun test excv2 full send
+2019-08-14 2019-08-22 8d    H lab     realign bam files with star
+2019-08-21 2019-08-22 1d      lab     is a java license necessary
+2019-08-21 2019-08-22 1d      lab     how much drive space is necessary
+2019-08-21 2019-08-22 1d      lab     determine firewall config ports open
+2019-08-21 2019-08-22 1d      lab     determine security level for vm
+2019-08-22 2019-08-22 42min   lab     find lightweight browser for notebook
+2019-08-14 2019-08-22 8d      lab     submit vm application for ccgd
+2019-05-20 2019-08-22 3mo   L lab     review scripts for ccgd database
+2019-08-22 2019-08-22 20s     lab     finish figs_finish_excv2.sh
+
+10 tasks
+```
+
+***
+
+## 24
+
+***
+
+## 26
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                           Urg
+-- --- - ------- ---- ----------------------------------------------------- ----
+65 11d   lab     work clarify duo login issues with ale01                   1.86
+66 11d   lab     work look for differences in 1kgp comparison in exv2 paper 1.86
+67 11d   lab     work do search for best suited cnv controls                1.86
+69 6d    lab     work create full_send.sh for varscan                       1.83
+72 3d    lab     work followup with andy re possible cnv controls           1.82
+73 3d    lab     work check if im using the immortalized or baseline 10847  1.82
+74 3d    lab     work do mind dump. regear direction                        1.82
+75 3d    lab     work run vs2 across all bwa bams                           1.82
+76 3d    lab     work add documentation re ccgd hosting app stats           1.82
+77 1d    lab     work setup termux with umn vpn                             1.81
+78 1d    lab     work review resulst of 8/24 star alignment                 1.81
+82 21s   lab     work run excv2_full_send across all star bams               1.8
+40 3mo L lab     work agenda [5]                                            1.32
+
+13 tasks
+```
 
 
 ***

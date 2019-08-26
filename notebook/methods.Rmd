@@ -82,6 +82,7 @@ For consistency in documenting the wide range of information, I want to have a s
 
 ```{r}
 * samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
+* job: `00001.mesabi`
 * output: `/path/to/output`
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 ```
@@ -90,6 +91,7 @@ For consistency in documenting the wide range of information, I want to have a s
 
 ```{r}
 * name: `expName`
+* job: `00001.mesabi`
 * samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
 * excv2_vars: `50000` (window); `pooling` (analysis mode)
 * output: `~/ocpmi/results/excavator2`
@@ -101,6 +103,7 @@ For consistency in documenting the wide range of information, I want to have a s
 
 ```{r}
 * samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes`
+* job: `00001.mesabi`
 * star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
 * output: `~/ocpmi/data/bam/wes/star_aligned`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
@@ -295,6 +298,11 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 **Pipeline**
 
 *Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+
+**Sample ID Convention**
+
+* PM-1-T17-0146-3_S1_R1_001
+* PM-[pathology ID]-[Bionet year]-[Bionet ID]-[Bionet subID]-[Illumina_ID]
 
 ***
 
@@ -565,7 +573,7 @@ This is useful in the event I want to do development inside MSI rather than just
 The `isub` command can also be given params about compute resources. Here is a decent default setting with *1 node, 8 cores, 16 gigs of ram, and a wall time of 8hrs*:
 
 ```{r}
-isub -n nodes=1:ppn=6 -m 16GB -w 8:00:00
+isub -n nodes=1:ppn=4 -m 16GB -w 8:00:00
 ```
 
 ***
@@ -1004,9 +1012,115 @@ bamDir="/ocpmi/data/bam/wes"
 resDir="/ocpmi/results/excavator2"
 ```
 
+### figs_finish_excv2.sh
+
+This is a continuation of the bash script I started yesterday. I've expanded it quite a bit to make it effectively pump and dump for the markdown output needed to go to the `results` page. It needs to be run from the `Plots` results directory.
+
+```{r}
+#!/bin/bash
+
+# Establish path for function working dir
+dir=$PWD
+
+# Get experiment name from parent dir
+cd ..
+expName1=$(pwd | awk -F'/' '{print $NF}')
+cd $dir
+
+# Source variable file from experiment
+source /home/chris/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/config_files/$expName1/full_send_vars.$expName1.txt
+
+# Text for header in figures markdown file
+header=$(cat <<EOF
+### $expName1 {.tabset .tabfade}
+
+#### Discussion
+
+* name: \`$expName1\`
+* samples: \`SAMPLE\` (control), \`SAMPLE\` (expt) via ; \`$bamDir\`
+* excv2_vars: \`$window\` (window); \`$anMode\` (analysis mode)
+* output: \`$resDir/$expName1\`
+* gene_ref: \`hg38.fa\`, \`hg38_sortmerge.bed\` via UCSC; \`~/ocpmi/gene_ref\`
+* targets: \`GCA_000001405.15_GRCh38.bw\` via excv2
+
+#### Figures {.tabset .tabfade}
+
+##### Collated
+
+EOF
+)
+
+echo "${header}" > figs.md
+> collated.md
+
+# Loop to created collated figures and output formatted markdown
+for i in */; do
+    if [ "$(ls -A $i)" ]; then
+        cd $i
+        # Create figs
+        pdfunite Plot* combined.pdf
+        pdfnup Plot* --nup 5x5 --outfile tmp.pdf
+        pdftoppm tmp.pdf fig_matrix -png
+        rm -rf tmp.pdf
+        # Assign variable names for figs
+        sampleName=${PWD##*/}
+        figMatrix=$(find $PWD -name "fig_matrix*" | grep $sampleName)
+        combinedPdf=$(find $PWD -name "combined.pdf" | grep $sampleName)
+        # Formatted output to individual sample entry
+        sampleMd=$(cat <<EOF
+
+##### ${sampleName}
+
+**Figure Matrix**
+
+![]($figMatrix)
+
 ***
 
-#### Installation
+**Individual Output**
+
+\`\`\`{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("${combinedPdf}")
+\`\`\`
+EOF
+)
+        # Formatted output to collated entry for all samples
+        collatedMd=$(cat << EOF
+
+![${sampleName}]($figMatrix)
+EOF
+)
+        # Pass to markdown files
+        echo "${sampleMd}" >> ../figs.md
+        echo "${collatedMd}" >> ../collated.md
+        cd ../
+    else
+        cd $i
+        sampleName=${PWD##*/}
+        # Formatted output for no output
+        noOutput=$(cat <<EOF
+
+##### ${sampleName}
+
+**No output**
+EOF
+)
+        # Pass to markdown files
+        echo "${noOutput}" >> ../figs.md
+        echo "
+        ${sampleName} No Output" >> ../collated.md
+        cd ../
+    fi
+done
+
+# Insert contents of collated.md at top of sample entries
+cd $dir
+sed -i -e '/##### Collated/r collated.md' figs.md
+```
+
+***
+
+### Installation
 
 Decompress the Excavator package, then move to `.../excavator/lib/F77` folder and compile the fortran files `F4R.f` and `FastJointSLMLibrary.f` with R compiler:
 
@@ -1646,6 +1760,19 @@ Nmap done: 1 IP address (1 host up) scanned in 1.49 seconds
 
 ```
 
+### VM Application
+
+#### Standing questions
+
+These are points I need to clarify before submitting the requirements for the new ccgd vm.
+
+* is a oracle license necessary
+    + no
+* how much drive space is necessary
+* determine firewall config ports open
+    + see server ports section below
+* determine security level for vm
+    + the documentation doesn't specify any requirements
 
 ***
 

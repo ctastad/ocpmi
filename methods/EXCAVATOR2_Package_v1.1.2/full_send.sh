@@ -14,7 +14,7 @@ target="${expName}_target"
 
 ## Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
 count=1
-for i in *.{bam,cram}; do
+for i in *.bam; do
     echo "$PWD/$i" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.$expName.txt
     echo "T$count" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.$expName.txt
     mkdir -p $HOME$excv2Dir/data/prepare/$expName/${i%.*}
@@ -23,7 +23,7 @@ done
 
 ## Function to remove leading path from sshfs local mount path and create control
 sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.$expName.txt
-sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
+sed -i -e '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
 
 ## Relocate configs to Excavator working dir
 mv ExperimentalFile* $HOME$excv2Dir
