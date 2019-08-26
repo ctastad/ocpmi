@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=32gb
+#PBS -l walltime=4:00:00,nodes=1:ppn=8,mem=32gb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N bam_star_align
@@ -10,11 +10,20 @@ module load gcc star
 
 cd ~/ocpmi/data/bam/wes
 
-for i in *.fastq; do
-STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-    --runThreadN 8 \
-    --readFilesIn $i \
+### For looped
+# for i in *_R1_001.fastq; do
+# STAR --runMode alignReads \
+#     --outSAMtype BAM SortedByCoordinate \
+#     --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+#     --readFilesIn $i ${i%_R1_001.fastq}_R2_001.fastq \
+#     --runThreadN 8 \
+#     --outFileNamePrefix ${i%_R1_001.fastq}
+# done
+
+### Individual files
+STAR --runMode alignReads \
     --outSAMtype BAM SortedByCoordinate \
-    --outSAMunmapped Within \
-    --outSAMattributes Standard
-done
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --readFilesIn NA10847_SRR070823_1.fastq NA10847_SRR070823_2.fastq \
+    --runThreadN 8 \
+    --outFileNamePrefix NA10847_SRR070823

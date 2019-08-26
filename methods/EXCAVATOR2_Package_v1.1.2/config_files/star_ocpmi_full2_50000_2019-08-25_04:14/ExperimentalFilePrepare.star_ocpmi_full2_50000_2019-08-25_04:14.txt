@@ -1,0 +1,1 @@
+/home/starrt2/tasta005/ocpmi/data/bam/wes/star_aligned/*.{bam} data/prepare/star_ocpmi_full2_50000_2019-08-25_04:14/* *

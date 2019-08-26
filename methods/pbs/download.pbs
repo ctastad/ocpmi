@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N download
+#PBS -o logs/output
+#PBS -e logs/error
+cd ~/
+
+wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR070/SRR070823/SRR070823_1.fastq.gz
+wget ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR070/SRR070823/SRR070823_2.fastq.gz
+
