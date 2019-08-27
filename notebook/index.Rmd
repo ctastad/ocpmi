@@ -6401,6 +6401,76 @@ Created    Completed  Age   P Project Description
 
 ## 24
 
+### STAR alignment: ocpmi
+
+**ocpmi**
+
+* samples: `*.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
+* job: `16806914.mesabim1`
+* star_vars: `100` (overhang); `SortedByCoordinate` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+**1kgp: NA10847**
+
+* samples: `NA10847_SRR070823.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
+* job: `16811628.mesabim1`
+* star_vars: `100` (overhang); `SortedByCoordinate` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+I was finally able to complete realignment with star. A github tutorial gave me an insight on how to structure my file naming scheme in my for loop since this was the issue. My previous iteration was overwriting each file.
+
+A major issue here was that I had not addressed the paired reads in my alignment. This was a major oversight that I'm glad I caught and should now be addressed in the new alignment.
+
+* https://gist.github.com/ipurusho/f6a6e53e0aa798c44e09c87bdc8b74fd
+
+**bam_star_align.pbs**
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=4:00:00,nodes=1:ppn=8,mem=32gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_star_align
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/bam/wes
+
+## For looped
+for i in *_R1_001.fastq; do
+STAR --runMode alignReads \
+    --outSAMtype BAM SortedByCoordinate \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --readFilesIn $i ${i%_R1_001.fastq}_R2_001.fastq \
+    --runThreadN 8 \
+    --outFileNamePrefix ${i%_R1_001.fastq}
+done
+
+### Individual files
+#STAR --runMode alignReads \
+#    --outSAMtype BAM SortedByCoordinate \
+#    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+#    --readFilesIn read_1.fastq read_2.fastq \
+#    --runThreadN 8 \
+#    --outFileNamePrefix NA10847_SRR070823
+
+```
+
+### bwa_ocpmi_full1
+
+* name: `bwa_ocpmi_full1_50000_2019-08-22_06:19`
+* samples: `NA10847` (control), `*.bam` (expt) via ; `/ocpmi/data/bam/wes/bwa_aligned`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/bwa_ocpmi_full1_50000_2019-08-22_06:19`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+I made some adjustments to the `excv2_full_send.sh` script hoping this would have an impact on the outcomes I saw from *2019-08-21*. Unfortunately, the outcome was effectively the same with several samples not producing an output.
+
 ***
 
 ## 26
@@ -6427,6 +6497,35 @@ ID Age P Project Tags Description                                           Urg
 13 tasks
 ```
 
+### star bams indexing
+
+* samples: `*.bam`; `/ocpmi/data/bam/wes/star_aligned`
+* job: `16827658.mesabim1`
+* output: `/ocpmi/data/bam/wes/star_aligned`
+
+### excv2 star_aligned all bams
+
+* name: `star_ocpmi_full4_50000_2019-08-26_17:59`
+* job: `16828021.mesabim1`
+* samples: `NA10847` (control), `*.bam` (expt) via ; `/ocpmi/data/bam/wes/star_aligned`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### Updated wes data!!
+
+Apparently, we have a new set of wes data. The data I have been using was a "total bust" in the words of Andy, and new runs have been generated. Because of this, I need to restart the gene data prep and create new bams, so I'm starting that process today.
+
+### STAR align: wes1
+
+* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
+* job: `16828650.mesabim1`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes1/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+I'm leaving the files gzipped to conserve space and adjusted the star function by adding the `readFilesCommand`.
 
 ***
 
