@@ -102,9 +102,9 @@ For consistency in documenting the wide range of information, I want to have a s
 #### STAR Alignment
 
 ```{r}
-* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes`
+* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
 * job: `00001.mesabi`
-* star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
+* star_vars: `100` (overhang); `Standard` (SAM attr)
 * output: `~/ocpmi/data/bam/wes/star_aligned`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 ```
@@ -290,6 +290,23 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 #### MSI Processing
 
+**Bulk tumor RNAseq analysis repeat (Winterhoff_Project_002) (aka “RNA2”)**
+
+* second attempt at bulk RNAseq based on new RNA extractions performed in Nelson lab, with high quality RNA; used stranded RNA library preparation, 51 bp paired end sequencing on the NovaSeq
+    + `/panfs/roc/groups/3/nelsona2/data_release/umgc/novaseq/190813_A00223_0186_BHCMMKDRXX/Winterhoff_Project_002`
+
+
+<details>
+  <summary>**Failed RNAseq HiSeq Data - Winterhoff Project 001**</summary>
+
+Update from Andy 2019-08-26
+
+* first attempt failed due to poor quality extractions; ended up using the ClonTech kit to try and salvage the poor quality RNA; also challenged by DNA contamination; three total runs were performed on the HiSeqs to QC and potentially salvage; ultimately all data is a loss
+    + `panfs/roc/groups/3/nelsona2/data_release/umgc/hiseq/181019_D00635_0420_ACCVYYANXX/Winterhoff_Project_001`
+    + `/panfs/roc/groups/3/nelsona2/data_release/umgc/hiseq/181108_D00635_0422_ACCVWNANXX/Winterhoff_Project_001`
+    + `/panfs/roc/groups/3/nelsona2/data_release/umgc/hiseq/181205_D00635_0425_BCD07EANXX/Winterhoff_Project_001_SI`
+
+
 **Project dir**
 
 * dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
@@ -299,7 +316,123 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 *Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
 
-**Sample ID Convention**
+
+</details>
+
+<details>
+  <summary>**from: Andy re new wes data!!! 2019-08-26**</summary>
+
+```{r}
+
+My understanding of bulk exome tumor method
+Andrew Nelson <nels2055@umn.edu>	Mon, Aug 26, 2019 at 9:33 AM
+To: Tim Starr <star0044@umn.edu>, Christine Henzler <chenzler@umn.edu>, Jinhua Wang <wangjh@umn.edu>, Rebecca LaRue <larue005@umn.edu>, Joshua Baller <jballer@umn.edu>
+Cc: Christopher Tastad <tasta005@umn.edu>, Ying Zhang <zhan2142@umn.edu>
+Hi all-
+
+Here is the location in data release of the bulk tumor sequencing data for the OCPMI.  Note that the first set of RNAseq data that came off the HiSeq was a total bust.
+
+The RNAseq projects have gone in under Winterhoff_Project_*, while the DNAseq job went under Nelson_Project_003.
+
+We now have RNAseq bulk data, from good quality RNA, prepped with the Stranded RNAseq library kit, with 25-37M reads, that by the basic QC appears of reasonably good quality.
+
+thanks,
+andy
+
+
+
+
+On Mon, Aug 26, 2019 at 8:52 AM Andrew Nelson <nels2055@umn.edu> wrote:
+
+    Correct.  Winterhoff Project 001 is the failed bulk RNAseq experiments performed on the HiSeq.
+
+    I'm putting together some information now.   Will send out soon.
+
+    thanks,
+    andy
+
+    On Sat, Aug 24, 2019 at 12:08 PM Tim Starr <star0044@umn.edu> wrote:
+
+        Addendum, I have written that the fastq files for these are located in
+        /panfs/roc/data_release/3/umgc/nelsona2/hiseq/181205_D00635_0425_BCD07EANX/Winterhoff_Project_001_SI
+
+        So these are not the bulk exome fastq files?
+
+
+>         On Aug 24, 2019, at 12:06 PM, Tim Starr <star0044@umn.edu> wrote:
+>
+>         Hi Andy and Ying
+>
+>         This helps, but I’m still a little confused.  I also have a umgc report for Winterhoff_project_001, which I thought was the bulk tumor exome, but apparently it is for something else.  Do you know what this one is for?
+>
+>
+>
+>
+>
+>
+>         -TIm
+>
+>
+>
+>         Tim Starr
+>         Asst. Prof. Ob-Gyn & Women’s Health UMN
+>         star0044@umn.edu, 612-625-4425
+>         Lab website: z.umn.edu/starrlab
+>         Candidate Cancer Gene Database
+>
+>>         On Aug 22, 2019, at 2:53 PM, Andrew Nelson <nels2055@umn.edu> wrote:
+>>
+>>         Hi Tim-
+>>
+>>         The library prep kit is correct.  As I was remembering, the bulk tumor exome DNAseq was 150 bp paired on the Nova.  See attached.
+>>
+>>         best,
+>>         andy
+>>
+>>         On Wed, Aug 21, 2019 at 3:53 PM Timothy Starr <star0044@umn.edu> wrote:
+>>
+>>             Exome sequencing was done using SureSelectXT Human All Exon V6 + COSMIC platform. https://www.agilent.com/en/promotions/sureselect-human-all-exon-v6 . Sequencing was done on the Illumina HiSeq with 50 bp paired end reads.
+>>
+>>
+>>
+>>         --
+>>         Andrew Nelson, MD, PhD
+>>         Assistant Professor, Department of Lab Medicine and Pathology
+>>         Director of Research and Development, M Health Molecular Diagnostics Laboratory
+>>         University of Minnesota
+>>         Office:  612-273-3328
+>>         Pager: 612-899-4097
+>>         nels2055@umn.edu
+>
+
+
+
+    --
+    Andrew Nelson, MD, PhD
+    Assistant Professor, Department of Lab Medicine and Pathology
+    Director of Research and Development, M Health Molecular Diagnostics Laboratory
+    University of Minnesota
+    Office:  612-273-3328
+    Pager: 612-899-4097
+    nels2055@umn.edu
+
+
+
+--
+Andrew Nelson, MD, PhD
+Assistant Professor, Department of Lab Medicine and Pathology
+Director of Research and Development, M Health Molecular Diagnostics Laboratory
+University of Minnesota
+Office:  612-273-3328
+Pager: 612-899-4097
+nels2055@umn.edu
+
+OCPMI_bulk_Seq_file_locations.rtf
+
+```
+</details>
+
+##### Sample ID Convention
 
 * PM-1-T17-0146-3_S1_R1_001
 * PM-[pathology ID]-[Bionet year]-[Bionet ID]-[Bionet subID]-[Illumina_ID]
@@ -345,50 +478,60 @@ ocpmi/data/bam/
 
 #### STAR Alignment
 
+**ocpmi**
+
 * samples: `*.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
-* star_vars: `100` (overhang); `Within` (unmapped); `Standard` (SAM attr)
+* job: `16806914.mesabim1`
+* star_vars: `100` (overhang); `SortedByCoordinate` (SAM attr)
 * output: `~/ocpmi/data/bam/wes/star_aligned`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
+**1kgp: NA10847**
+
+* samples: `NA10847_SRR070823.fastq` via ocpmi; `~/ocpmi/data/bam/wes`
+* job: `16811628.mesabim1`
+* star_vars: `100` (overhang); `SortedByCoordinate` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+I was finally able to complete realignment with star. A github tutorial gave me an insight on how to structure my file naming scheme in my for loop since this was the issue. My previous iteration was overwriting each file.
+
 * man: [file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf](file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)
+* https://gist.github.com/ipurusho/f6a6e53e0aa798c44e09c87bdc8b74fd
 
-I found a helpful walkthrough on getting star going.
-
-* https://hbctraining.github.io/Intro-to-rnaseq-hpc-O2/lessons/03_alignment.html
-
-#### bam_create_star.pbs
+**bam_star_align.pbs**
 
 ```{r}
 #!/bin/bash -l
-#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=64gb
+#PBS -l walltime=4:00:00,nodes=1:ppn=8,mem=32gb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
-#PBS -N bam_create
+#PBS -N bam_star_align
 #PBS -o logs/output
 #PBS -e logs/error
 
 module load gcc star
 
-cd ~/ocpmi/data/gene_ref/ucsc/hg38
-
-STAR --runThreadN 8 \
-    --runMode genomeGenerate \
-    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-    --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
-    --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf \
-    --sjdbOverhang 100
-
 cd ~/ocpmi/data/bam/wes
 
-for i in *.fastq; do
-STAR --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-    --runThreadN 8 \
-    --readFilesIn $i \
-    --outFileNamePrefix ./star_aligned \
+## For looped
+for i in *_R1_001.fastq; do
+STAR --runMode alignReads \
     --outSAMtype BAM SortedByCoordinate \
-    --outSAMunmapped Within \
-    --outSAMattributes Standard
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --readFilesIn $i ${i%_R1_001.fastq}_R2_001.fastq \
+    --runThreadN 8 \
+    --outFileNamePrefix ${i%_R1_001.fastq}
 done
+
+### Individual files
+#STAR --runMode alignReads \
+#    --outSAMtype BAM SortedByCoordinate \
+#    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+#    --readFilesIn read_1.fastq read_2.fastq \
+#    --runThreadN 8 \
+#    --outFileNamePrefix NA10847_SRR070823
+
 ```
 
 #### bwa Alignmnet
@@ -1773,6 +1916,72 @@ These are points I need to clarify before submitting the requirements for the ne
     + see server ports section below
 * determine security level for vm
     + the documentation doesn't specify any requirements
+
+#### Application
+
+*Submitted 2019-08-22*
+
+
+<details>
+  <summary>**App response from Tom Kell**</summary>
+
+```{r}
+
+Thanks for the information. I have approved it and you should be hearing from OIT hosting soon.
+
+Tom
+---------- Forwarded message ---------
+From: <mptflow@umn.edu>
+Date: Fri, Aug 23, 2019 at 6:23 AM
+Subject: Hosting Service Request for hst-ccgd-prd-web -- linux -- Approve
+To: <reese007@umn.edu>, <kell@umn.edu>, <nrhuff@umn.edu>, <sikxx005@umn.edu>
+
+
+
+
+Hello,
+The OIT Hosting Services request for hst-ccgd-prd-web has been Approve by kell@umn.edu.
+
+Comments:
+
+No further action is needed.
+
+Thank you,
+OIT Hosting Services
+
+
+--
+
+--
+Thomas Kell
+Server Operations Manager
+Health Sciences Technology
+University of Minnesota
+kell@umn.edu
+612-626-6219
+
+```
+
+</details>
+
+<details>
+  <summary>**Question re firewall req**</summary>
+
+```{r}
+
+2019-08-23 11:20:00 CDT - Thomas Bertschinger (thomasb) Additional comments
+Hi Christopher,
+
+For the custom firewall, can you confirm whether you need ports 80, 2000, and 5060 open to the world, or just to the UMN?
+
+thanks!
+-Thomas
+
+You can track the status of your ticket INC2305839 at any time.
+
+If you would like to provide more information, please reply to this email to update your ticket.
+```
+</details>
 
 ***
 
