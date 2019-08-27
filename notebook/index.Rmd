@@ -6527,6 +6527,34 @@ Apparently, we have a new set of wes data. The data I have been using was a "tot
 
 I'm leaving the files gzipped to conserve space and adjusted the star function by adding the `readFilesCommand`.
 
+### Summary
+
+#### Running
+
+```{r}
+ID Started    Active Age Project Tags Description
+-- ---------- ------ --- ------- ---- ----------------------------------------
+82 2019-08-26 4h     4h  lab     work run excv2_full_send across all star bams
+83 2019-08-26 1h     1h  lab     work align new wes1 fastq files
+
+2 tasks
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-08-21 2019-08-26 4d  lab     rerun excv2 across all bwa bams
+2019-08-22 2019-08-26 4d  lab     trblsht star alignment
+2019-08-22 2019-08-26 4d  lab     possibly realign 10847 with star
+2019-08-23 2019-08-26 3d  lab     rerun star align with updated readFilesIn
+                                  syntax
+
+4 tasks
+```
+
+
 ***
 
 # References
