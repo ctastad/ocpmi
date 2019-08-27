@@ -277,6 +277,11 @@ mtg with rebecca
 
 *Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
 
+```{r}
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+```
+
+
 Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 * Important scripts are located in `/DNA_project/scanindel_mod`.
@@ -315,6 +320,10 @@ Update from Andy 2019-08-26
 **Pipeline**
 
 *Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+
+```{r}
+*Pipeline (in-house) &rarr; Mapping (GR37) &rarr; Preprocessing (`ScanIndel-ovarian.py`) &rarr; Freebayes (variance calling) &rarr; Selective Capture (ovarian specific) &rarr; VCF file output &rarr; Selective Filtering (`fb_VCF_filter.R`) &rarr; ClinVar (Christy)*
+```
 
 
 </details>
@@ -463,9 +472,17 @@ I need to create new bam files from our source wes data since these files were l
 
 *fastq, gene_ref &rarr; `index` gene ref (bwa bwtsw) &rarr; align &ast;.fastq (bwa mem) + `sort` (samtools) &rarr; output.bam*
 
+```{r}
+*fastq, gene_ref &rarr; `index` gene ref (bwa bwtsw) &rarr; align &ast;.fastq (bwa mem) + `sort` (samtools) &rarr; output.bam*
+```
+
 **STAR Pipeline**
 
 *gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; `align` + `sort` &rarr; output.bam*
+
+```{r}
+*gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; `align` + `sort` &rarr; output.bam*
+```
 
 **Directory**
 
@@ -813,6 +830,10 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 
 *&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization (DNAcopy)*
 
+```{r}
+*&ast;.bam `mpileup` (samtools) &rarr; &ast;.mpileup `copynumber` &rarr; output.copynumber `copyCaller` &rarr; output.copynumber.called &rarr; segmentation (DNAcopy) &rarr; visualization (DNAcopy)*
+```
+
 **Directory**
 
 ```{r}
@@ -934,9 +955,17 @@ Condensed
 
 *&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
+```{r}
+*&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
+```
+
 Modified
 
 *&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
+
+```{r}
+*&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
+```
 
 **Directory**
 

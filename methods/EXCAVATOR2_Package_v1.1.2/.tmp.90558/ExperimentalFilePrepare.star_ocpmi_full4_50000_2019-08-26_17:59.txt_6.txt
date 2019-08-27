@@ -1,2 +1,0 @@
-/home/starrt2/tasta005/ocpmi/data/bam/wes/star_aligned/PM-32-T18-0094-03_S26.bam data/prepare/star_ocpmi_full4_50000_2019-08-26_17:59/PM-32-T18-0094-03_S26 PM-32-T18-0094-03_S26
-/home/starrt2/tasta005/ocpmi/data/bam/wes/star_aligned/PM-32-T18-0097-03_S30.bam data/prepare/star_ocpmi_full4_50000_2019-08-26_17:59/PM-32-T18-0097-03_S30 PM-32-T18-0097-03_S30

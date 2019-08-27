@@ -1,0 +1,2 @@
+T5 data/prepare/star_ocpmi_full4_50000_2019-08-26_17:59/PM-1-T18-0648-17_S32 PM-1-T18-0648-17_S32
+T6 data/prepare/star_ocpmi_full4_50000_2019-08-26_17:59/PM-24-T17-1392-4_S10 PM-24-T17-1392-4_S10

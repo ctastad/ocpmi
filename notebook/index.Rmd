@@ -6525,6 +6525,8 @@ Apparently, we have a new set of wes data. The data I have been using was a "tot
 * output: `~/ocpmi/data/bam/wes1/star_aligned`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
+This is the new set of data that Andy referred to today - referred to by him as Winterhoff Project 002. I will need to do a full work up on this data and effectively start fresh with the analysis.
+
 I'm leaving the files gzipped to conserve space and adjusted the star function by adding the `readFilesCommand`.
 
 ### Summary
@@ -6552,6 +6554,40 @@ Created    Completed  Age Project Description
                                   syntax
 
 4 tasks
+```
+
+***
+
+## 26
+
+### TODO
+
+```{r}
+ID Active Age   P Project Tags Description                                Urg
+-- ------ ----- - ------- ---- ------------------------------------------ ------
+81 19h    19h     lab     work align new wes1 fastq files                    5.8
+80 22h    22h     lab     work run excv2_full_send across all star bams      5.8
+65        12d     lab     work look for differences in 1kgp comparison in   1.87
+                               exv2 paper
+66        12d     lab     work do search for best suited cnv controls       1.87
+68        7d      lab     work create full_send.sh for varscan              1.84
+71        4d      lab     work followup with andy re possible cnv           1.82
+                               controls
+72        4d      lab     work check if im using the immortalized or        1.82
+                               baseline 10847
+73        4d      lab     work do mind dump. regear direction               1.82
+74        4d      lab     work run vs2 across all bwa bams                  1.82
+75        4d      lab     work add documentation re ccgd hosting app        1.82
+                               stats
+77        2d      lab     work review resulst of 8/24 star alignment        1.81
+82        19h     lab     work run excv2 on wes1 ocpmi files                 1.8
+83        18h     lab     work summary from yesterday                        1.8
+84        54min   lab     work add code block below pipeline summaries       1.8
+39        3mo   L lab     work agenda [2]                                   1.22
+64        12d   L lab     work clarify duo login issues with ale01        -0.134
+76        2d    L lab     work setup termux with umn vpn                  -0.189
+
+17 tasks
 ```
 
 
