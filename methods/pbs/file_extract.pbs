@@ -1,11 +1,15 @@
 #!/bin/bash -l
-#PBS -l walltime=8:00:00
+#PBS -l walltime=2:00:00,nodes=1:ppn=8
 #PBS -m abe
 #PBS -M tasta005@umn.edu
-#PBS -N file_transfer
+#PBS -N file_extract
 #PBS -o logs/output
 #PBS -e logs/error
 
+module load parallel
+
 cd /panfs/roc/groups/3/nelsona2/data_release/umgc/novaseq/181103_A00223_0048_AHGMHLDMXX/Nelson3_Project_003
 
-cp ./* ~/ocpmi/data/bam/wes1
+parallel cp {} ~/ocpmi/data/bam/wes1 ::: *
+cd ~/ocpmi/data/bam/wes1
+parallel gunzip ::: *.fastq.gz

@@ -6513,9 +6513,13 @@ ID Age P Project Tags Description                                           Urg
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
 * targets: `GCA_000001405.15_GRCh38.bw` via excv2
 
+*&ast;.bed `sort` (bedtools) &rarr; **`full_send.sh`** &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
+
 ### Updated wes data!!
 
-Apparently, we have a new set of wes data. The data I have been using was a "total bust" in the words of Andy, and new runs have been generated. Because of this, I need to restart the gene data prep and create new bams, so I'm starting that process today.
+Apparently, I've been using the wrong data set this whole time. The directory Tim had given me pointed to a set of failed RNAseq data. Andy sent me an email detailing the location of the correct dataset. I'll need to start the process over.
+
+* `/panfs/roc/groups/3/nelsona2/data_release/umgc/novaseq/181103_A00223_0048_AHGMHLDMXX/Nelson3_Project_003`
 
 ### STAR align: wes1
 
@@ -6525,11 +6529,15 @@ Apparently, we have a new set of wes data. The data I have been using was a "tot
 * output: `~/ocpmi/data/bam/wes1/star_aligned`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
+*gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
+
 This is the new set of data that Andy referred to today - referred to by him as Winterhoff Project 002. I will need to do a full work up on this data and effectively start fresh with the analysis.
 
 I'm leaving the files gzipped to conserve space and adjusted the star function by adding the `readFilesCommand`.
 
 ### Summary
+
+We had a major development today in that the dataset I've been working with up to this point has been incorrect. I'll need to restart the process and discuss the nature of this with Tim. I immediately started work on the new data set as I finish out a few items with the old one just to see the results.
 
 #### Running
 
@@ -6558,7 +6566,7 @@ Created    Completed  Age Project Description
 
 ***
 
-## 26
+## 27
 
 ### TODO
 
@@ -6589,6 +6597,36 @@ ID Active Age   P Project Tags Description                                Urg
 
 17 tasks
 ```
+
+### STAR align: wes1
+
+* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
+* job: `xxxx`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes1/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
+
+### excv2 star_aligned all bams
+
+* name: `star_ocpmi_full4_50000_2019-08-26_17:59`
+* job: `16828021.mesabim1`
+* samples: `NA10847` (control), `*.bam` (expt) via ; `/ocpmi/data/bam/wes/star_aligned`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+**Start of day**
+
+*&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; **cnv output** &rarr; `figs_finish_excv2.sh`*
+
+**End of day**
+
+*&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `**figs_finish_excv2.sh**`*
 
 
 ***
