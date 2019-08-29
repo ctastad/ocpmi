@@ -6526,7 +6526,7 @@ Apparently, I've been using the wrong data set this whole time. The directory Ti
 * samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
 * job: `16828650.mesabim1`
 * star_vars: `100` (overhang); `Standard` (SAM attr)
-* output: `~/ocpmi/data/bam/wes1/star_aligned`
+* output: `~/ocpmi/data/bam/wes1`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
 *gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
@@ -6603,7 +6603,7 @@ ID Active Age   P Project Tags Description                                Urg
 * samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
 * job: `xxxx`
 * star_vars: `100` (overhang); `Standard` (SAM attr)
-* output: `~/ocpmi/data/bam/wes1/star_aligned`
+* output: `~/ocpmi/data/bam/wes1`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
 **Start of day**
@@ -6698,10 +6698,10 @@ Our meeting was relatively brief today. I updated Tim on my general progress wit
 
 ### STAR align: wes1
 
-* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
-* job: `xxxx`
+* samples: `*.fastq.gz` via ocpmi; `~/ocpmi/data/bam/wes1`
+* job: `2463992.node1081`
 * star_vars: `100` (overhang); `Standard` (SAM attr)
-* output: `~/ocpmi/data/bam/wes1/star_aligned`
+* output: `~/ocpmi/data/bam/wes1`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
 **Start of day**
@@ -6709,6 +6709,83 @@ Our meeting was relatively brief today. I updated Tim on my general progress wit
 *gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
 
 This has continued to be a thorn in my side. Based on the error output I'm getting, I seem to need to thread the needle between striving for the large resource allocation the aligner needs and putting together a resource request that will actually initiate on msi. I'm waiting to hear back about a ticket with msi to see if there's a better approach to strategically requesting resources.
+
+I was able to get this job started with a sizable resource req on itasca having seen that there was a decent amount of idle nodes there. Hopefully things run smoothly this time around.
+
+### MSI Resources State
+
+I found a page which I think shows a "real time" update on the current node usage for msi. Hopefully, this will serve to give me a better sense of how to strategize around resource reqs.
+
+* https://umgcdownload.msi.umn.edu/website/pbsnodes/index.html
+
+### Summary
+
+Didn't get a lot of concrete work done today. Something randommly changed the permissions for my working directory today. I'm at a complete loss for why that would have happened. I was able to fix it for my file permissions, but my ssh keys are still not working. I don't know if those things are related, but they are equally weird and occured at the same time.
+
+Outside of that, my primary focus right now is the genomic prep of the new wes data so we can begin pushing it through the excv2 pipeline.
+
+#### Running
+
+```{r}
+ID Started    Active Age P Project Tags Description
+-- ---------- ------ --- - ------- ---- --------------------------
+76 2019-08-28 2h     2d  H lab     work align new wes1 fastq files
+
+1 task
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- -----------------------------
+2019-08-27 2019-08-28 1d  H lab     transfer new wes data to wes1
+2019-08-27 2019-08-28 1d    lab     req new vm for lab notebooks
+
+2 tasks
+```
+
+***
+
+## 29
+
+### TODO
+
+```{r}
+ID Active Age P Project Tags Description                                  Urg
+-- ------ --- - ------- ---- -------------------------------------------- ------
+76 22h    2d  H lab     work align new wes1 fastq files                     11.8
+64        2w    lab     work look for differences in 1kgp comparison in     1.88
+                             exv2 paper
+65        2w    lab     work do search for best suited cnv controls         1.88
+67        9d    lab     work create full_send.sh for varscan                1.85
+70        7d    lab     work followup with andy re possible cnv controls    1.84
+71        7d    lab     work check if im using the immortalized or          1.84
+                             baseline 10847
+72        6d    lab     work do mind dump. regear direction                 1.83
+79        2d    lab     work add results of excv2 bwa bams to results       1.81
+                             page
+39        3mo L lab     work agenda                                         0.33
+73        4d  L lab     work setup termux with umn vpn                    -0.178
+
+10 tasks
+```
+
+### STAR align: wes1
+
+* samples: `*.fastq.gz` via ocpmi; `~/ocpmi/data/bam/wes1/tmp`
+* job: ``
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes1`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
+
+### Insufficient disk space
+
+The latest error I'm getting from the seq alignment process is the result of a lack of disk space. Aparently, I've taken up a massive amount of space with these wes files and will need to figure out how to manage those effectively since they are so large.
 
 ***
 
