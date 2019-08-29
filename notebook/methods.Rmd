@@ -296,6 +296,7 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 #### MSI Processing
 
 **Bulk tumor DNAseq analysis (Nelson_Project_003)**
+
 * Agilent V6 Exome + COSMIC library prep, sequenced on the NovaSeq, 151 bp paired end
     + bmgc dir: `/panfs/roc/groups/3/nelsona2/data_release/umgc/novaseq/181103_A00223_0048_AHGMHLDMXX/Nelson3_Project_003`
     + personal dir: `~/ocpmi/data/bam/wes1`
