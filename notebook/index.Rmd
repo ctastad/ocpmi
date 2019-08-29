@@ -6624,10 +6624,91 @@ ID Active Age   P Project Tags Description                                Urg
 
 *&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; **cnv output** &rarr; `figs_finish_excv2.sh`*
 
+I was able to complete this process, yet it comes with a sense of futility. This data has been identified as incorrect, so the results are no longer relavent.
+
 **End of day**
 
 *&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `**figs_finish_excv2.sh**`*
 
+### Summary
+
+My primary focus right now is to reestablish the pipeline on the new wes data set. I am getting that going and have transferred new files to my directory. It seems current hurdles will center around getting the resource allocation correct in alignment with star.
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- -------------------------------------------
+2019-08-26 2019-08-27 1d  lab     summary from yesterday
+2019-08-26 2019-08-27 2d  lab     run excv2_full_send across all star bams
+2019-08-23 2019-08-27 5d  lab     add documentation re ccgd hosting app stats
+2019-08-25 2019-08-27 3d  lab     review resulst of 8/24 star alignment
+2019-08-27 2019-08-27 1d  lab     add code block below pipeline summaries
+
+5 tasks
+```
+
+
+***
+
+## 28
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                         Urg
+-- --- - ------- ---- --------------------------------------------------- ------
+78 1d  H lab     work align new wes1 fastq files                            7.81
+65 2w    lab     work look for differences in 1kgp comparison in exv2       1.88
+                      paper
+66 2w    lab     work do search for best suited cnv controls                1.88
+68 8d    lab     work create full_send.sh for varscan                       1.84
+71 6d    lab     work followup with andy re possible cnv controls           1.83
+72 6d    lab     work check if im using the immortalized or baseline        1.83
+                      10847
+73 5d    lab     work do mind dump. regear direction                        1.83
+74 5d    lab     work run vs2 across all bwa bams                           1.83
+79 1d    lab     work run excv2 on wes1 ocpmi files                         1.81
+81 1d    lab     work add results of excv2 bwa bams to results page         1.81
+82 23h   lab     work req new vm for lab notebooks                           1.8
+39 3mo L lab     work agenda [2]                                            1.23
+64 2w  L lab     work clarify duo login issues with ale01                 -0.123
+75 3d  L lab     work setup termux with umn vpn                           -0.184
+
+14 tasks
+```
+
+### wkly mtg w/ Tim
+
+present: chris, tim
+
+```{r}
+Description
+-----------------------------------------------------
+agenda
+  2019-08-26 redid seq alignment w/ star
+  2019-08-26 whats the deal with the updated wes data
+  2019-08-28 lab notebooks vm
+  2019-08-28 update on ccgd
+
+1 task
+```
+
+Our meeting was relatively brief today. I updated Tim on my general progress with ccgd and the new data. We clarified the status of the wes data since there has been some ambiguity coming from Andy and msi with the integrity of the data. As of now, I can reliably say I have the correct dataset from the `Nelson3_Project_003` data_release dir.
+
+### STAR align: wes1
+
+* samples: `sample` via ocpmi; `~/ocpmi/data/bam/wes1`
+* job: `xxxx`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes1/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+**Start of day**
+
+*gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
+
+This has continued to be a thorn in my side. Based on the error output I'm getting, I seem to need to thread the needle between striving for the large resource allocation the aligner needs and putting together a resource request that will actually initiate on msi. I'm waiting to hear back about a ticket with msi to see if there's a better approach to strategically requesting resources.
 
 ***
 
