@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=96:00:00,nodes=1:ppn=24,mem=64gb
+#PBS -l walltime=24:00:00,nodes=1:ppn=16,pmem=3500mb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N bam_star_align
@@ -8,7 +8,7 @@
 
 module load gcc star
 
-cd ~/ocpmi/data/bam/wes1
+cd ~/ocpmi/data/bam/wes1/tmp
 
 ## For looped, compressed
 for i in *_R1_001.fastq.gz; do
@@ -17,9 +17,9 @@ STAR --runMode alignReads \
     --readFilesCommand zcat \
     --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
     --genomeLoad LoadAndRemove \
-    --limitBAMsortRAM 64000000000 \
+    --limitBAMsortRAM 56000000000 \
     --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
-    --runThreadN 24 \
+    --runThreadN 16 \
     --outFileNamePrefix ${i%_R1_001.fastq.gz}_
 done
 

@@ -761,6 +761,12 @@ module load
 
 ```
 
+### MSI Resources State
+
+I found a page which I think shows a "real time" update on the current node usage for msi. Hopefully, this will serve to give me a better sense of how to strategize around resource reqs.
+
+* https://umgcdownload.msi.umn.edu/website/pbsnodes/index.html
+
 #### Exit Codes
 
 There is some documentation from Adaptive Computing here
