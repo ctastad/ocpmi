@@ -14,11 +14,11 @@ cd ~/ocpmi/data/bam/wes1/tmp
 for i in *_R1_001.fastq.gz; do
 STAR --runMode alignReads \
     --outSAMtype BAM SortedByCoordinate \
+    --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
     --readFilesCommand zcat \
     --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-    --genomeLoad LoadAndRemove \
-    --limitBAMsortRAM 56000000000 \
-    --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
+#   --genomeLoad LoadAndRemove \
+#   --limitBAMsortRAM 56000000000 \
     --runThreadN 16 \
     --outFileNamePrefix ${i%_R1_001.fastq.gz}_
 done
