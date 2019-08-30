@@ -6774,7 +6774,7 @@ ID Active Age P Project Tags Description                                  Urg
 ### STAR align: wes1
 
 * samples: `*.fastq.gz` via ocpmi; `~/ocpmi/data/bam/wes1/tmp`
-* job: ``
+* job: `2464105.node1081`
 * star_vars: `100` (overhang); `Standard` (SAM attr)
 * output: `~/ocpmi/data/bam/wes1`
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
@@ -6783,9 +6783,64 @@ ID Active Age P Project Tags Description                                  Urg
 
 *gene_ref, gtf &rarr; `genomeGenerate` indexing &rarr; **`alignReads` + `sort`** &rarr; output.bam &rarr; index `samtools`*
 
+I think I finally got this down. A major issue seemed to be that I needed to call `readFilesIn` before `readFilesCommand` for the decompression method. This took an outrageous amount of time to figure out, but it seems good now. The only issue that remains is storage management. I'm working with ~2TB. I'll do things incrementally so I can clear out some space as I go, but I may have to deliver the output to scratch if worse comes to worse.
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=16,pmem=3500mb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_star_align
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/bam/wes1/tmp
+
+## For looped, compressed
+for i in *_R1_001.fastq.gz; do
+STAR --runMode alignReads \
+    --outSAMtype BAM SortedByCoordinate \
+    --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
+    --readFilesCommand zcat \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+#   --genomeLoad LoadAndRemove \
+#   --limitBAMsortRAM 56000000000 \
+    --runThreadN 16 \
+    --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+done
+
+```
+
 ### Insufficient disk space
 
 The latest error I'm getting from the seq alignment process is the result of a lack of disk space. Aparently, I've taken up a massive amount of space with these wes files and will need to figure out how to manage those effectively since they are so large.
+
+### Summary
+
+Basically the whole day was spent troubleshooting the alignment process. Almost there, but it's been a grip since I've progressed forward. Additionally, I was able to resolve a few standing issues with OIT today, most notably of which is the access issue with ale03. This will allow me to move forward with transitioning the ccgd.
+
+#### Running
+
+```{r}
+ID Started    Active Age P Project Tags Description
+-- ---------- ------ --- - ------- ---- --------------------------
+76 2019-08-28 1d     3d  H lab     work align new wes1 fastq files
+
+1 task
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- -----------------------------------
+2019-08-14 2019-08-29 2w  L lab     clarify duo login issues with ale01
+
+1 task
+```
+
 
 ***
 
