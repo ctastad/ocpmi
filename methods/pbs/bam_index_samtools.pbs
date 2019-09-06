@@ -1,12 +1,12 @@
 #!/bin/bash -l
-#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -l walltime=8:00:00,nodes=1:ppn=16,mem=16gb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N bam_index
 #PBS -o logs/output
 #PBS -e logs/error
 
-cd ~/ocpmi/data/bam/wes/star_aligned
+cd ~/ocpmi/data/bam/wes1
 module load samtools parallel
 
 parallel samtools index ::: *.bam

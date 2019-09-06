@@ -6,7 +6,7 @@ cd $HOME$bamDir
 
 ## Overwrite existing config files and updating some vars
 rm -f ExperimentalFile*
-expName="${expName}_${window}_`date +"%Y-%m-%d_%H:%M"`"
+expName="${expName}_${window}_`date +"%Y-%m-%d_%H%M"`"
 target="${expName}_target"
 # runTp1=1 # step 1 TargetPerla.pl
 # runDp2=1 # step 2 EXCAVATORDataPrepare.pl
@@ -31,9 +31,6 @@ mkdir -p $HOME$resDir/$expName
 mkdir -p $HOME$excv2Dir/config_files/$expName
 
 ## Generate SourceTarget.txt and execute step 1 TargetPerla.pl
-cd $HOME$excv2Dir
-echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
-perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
 
 # if [[ $runTp1 = 1 ]]; then
 #     echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
@@ -42,28 +39,21 @@ perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $ref
 #     echo "Skipping step 1 TargetPerla.pl"
 # fi
 
-
-## Executing step 2 EXCAVATORDataPrepare.pl
-perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
-
-# if [[ $runDp2 = 1 ]]; then
-#     perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
-# else
-#     echo "Skipping step 2 EXCAVATORDataPrepare.pl"
-# fi
-
-## Executing step 3 EXCAVATORDataAnalysis.pl
-perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
-
-# if [[ $runDa3 = 1 ]]; then
-#     perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
-# else
-#     echo "Skipping step 3 EXCAVATORDataAnalysis.pl"
-# fi
-
-## Copy config files for record
+cd $HOME$excv2Dir
 cp ParameterFile.txt ParameterFile.$expName.txt
 cp full_send_vars.txt full_send_vars.$expName.txt
+
+## Generate SourceTarget file and run step 1
+echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
+perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
+
+## Executing step 2 EXCAVATORDataPrepare.pl
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
+
+## Executing step 3 EXCAVATORDataAnalysis.pl
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+
+## Copy config files for record
 mv *.$expName.* $HOME$excv2Dir/config_files/$expName
 
 ## Cleanup bad file naming convention

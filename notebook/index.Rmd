@@ -6841,6 +6841,214 @@ Created    Completed  Age P Project Description
 1 task
 ```
 
+***
+
+## 30
+
+### Disclaimer
+
+There is a period of about 6 days extending from *2019-08-30* through *2019-09-04* were a combination of travel and illness put me in a relatively disorganized position. I continually ran several processes over this time with poor documentation due to my circumstances. As a result, I only really have the bare bones in terms of detail for my efforts during this period. Any analysis that did not produce a relevant output will not be documented.
+
+### Ambiguous notes - start
+
+### STAR align: wes1 ocpmi
+
+* samples: `*.fastq.gz` via ocpmi; `~/ocpmi/data/bam/wes1`
+* job: `2464146.node1081`, `2464147.node1081`, `2464196.node1081`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes1`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+I needed to make some modifications to the STAR script to allow for the processing of compressed files. Given the size of these fastq files, it was necessary to complete the alignment with out an uncompresed intermediate. The command below takes this into account using the `readFilesCommand`.
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=16,pmem=3500mb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_star_align
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/bam/1kgp/star_aligned
+
+## For looped, compressed
+for i in *_R1_001.fastq.gz; do
+STAR --runMode alignReads \
+    --outSAMtype BAM SortedByCoordinate \
+    --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
+    --readFilesCommand zcat \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --runThreadN 16 \
+    --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+done
+
+### Individual files
+#STAR --runMode alignReads \
+#    --outSAMtype BAM SortedByCoordinate \
+#    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+#    --readFilesIn read_1.fastq.gz read_2.fastq.gz \
+#    --runThreadN 8 \
+#    --outFileNamePrefix NA10847_SRR070823
+```
+
+
+***
+
+## 31
+
+### STAR align: wes1 NA10847
+
+* samples: `z_NA10847_SRR070531_*` via 1kgp; `/ocpmi/data/bam/1kgp/star_aligned`
+* job: `2464295.node1081`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `/ocpmi/data/bam/1kgp/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+The bam output for these files was transfered to `/home/chris/ocpmi/data/bam/wes1` to be processsed with the ocpmi bams.
+
+changed a couple minor things in full_send that may be causing problems
+running excv2_full_send
+started pileup creation for vs2- job: 816769
+
+### Bam indexing
+
+* samples: `*.bam`; `/ocpmi/data/bam/wes1`
+* job: `2464336.node1081`
+* output: `/ocpmi/data/bam/wes1`
+
+***
+
+# September
+
+## 4
+
+### excv2 ocpmi full 50k
+
+* name: `star_wes1_full5_50000_2019-09-04_1523`
+* job: `16973019.mesabim1`
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/star_wes1_full5_50000_2019-09-04_1523`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### excv2 ocpmi full 40k
+
+* name: `star_wes1_40_40000_2019-09-05_0049`
+* job: `16979880.mesabim1`
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `40000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/star_wes1_40_40000_2019-09-05_0049`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### excv2 ocpmi full 30k
+
+* name: `star_wes1_30_30000_2019-09-05_0103`
+* job: `16979884.mesabim1`
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `30000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/star_wes1_30_30000_2019-09-05_0103`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### excv2 ocpmi full 20k
+
+* name: `star_wes1_20_20000_2019-09-05_0105`
+* job: `16979883.mesabim1`
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/star_wes1_20_20000_2019-09-05_0105`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### excv2 ocpmi full 10k
+
+* name: `star_wes1_10_10000_2019-09-05_0124`
+* job: `16979886.mesabim1`
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `10000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/star_wes1_10_10000_2019-09-05_0124`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### vs2 mpileup ocpmi
+
+* samples: `z_NA10847_SRR070531` (normal), `ocpmi *.bam` (tumor) via ; `/ocpmi/data/bam/wes1`
+* job: `816789.labq`
+* output: `/ocpmi/data/bam/wes1`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+I modified the `mpileup` script to allow for the use of `parallel.`
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N mpileup_create
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/data/bam/wes1
+module load samtools parallel
+
+parallel 'samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam {} > {.}.mpileup' ::: *.bam
+
+## Original for loop
+
+# for i in *.bam; do
+#     samtools mpileup -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa "$i" > ${i%%.*}.mpileup
+# done
+```
+
+These samples will be transferred to `/scratch.global/tasta005` temporarily as I determine what to do regarding the space constraints they create.
+
+### Ambiguous notes - end
+
+***
+
+## 5
+
+### TODO
+
+```{r}
+ID Active Age  P Project Tags Description                                   Urg
+-- ------ ---- - ------- ---- --------------------------------------------- ----
+83 11s    39s    lab     work create mpileup for wes1 data vs2               5.8
+63        3w     lab     work look for differences in 1kgp comparison in    1.92
+                              exv2 paper
+64        3w     lab     work do search for best suited cnv controls        1.92
+66        2w     lab     work create full_send.sh for varscan               1.89
+69        13d    lab     work followup with andy re possible cnv controls   1.87
+70        13d    lab     work check if im using the immortalized or         1.87
+                              baseline 10847
+71        13d    lab     work do mind dump. regear direction                1.87
+75        9d     lab     work add results of excv2 bwa bams to results page 1.85
+76        7d     lab     work setup starrnotes site                         1.84
+82        1min   lab     work add rmarkdown render element to figs_final     1.8
+84        25s    lab     work run vs2 copynumber function                    1.8
+39        3mo  L lab     work agenda                                        0.37
+
+12 tasks
+```
+
+### Secondary Storage
+
+#### AWS s3
+
+I setup a second tier storage bucket today in anticipation of capacity issues on our group instance. The bucket location is below.
+
+* `s3://tasta005_2t`
+
+#### scratch.global
+
+I've created a directory under the global scratch to store things in transition.
+
+* `/scratch.global/tasta005`
 
 ***
 

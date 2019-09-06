@@ -516,11 +516,36 @@ I was finally able to complete realignment with star. A github tutorial gave me 
 * man: [file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf](file:///mnt/msi/tasta005/ocpmi/reference/gene_markers/STARmanual.pdf)
 * https://gist.github.com/ipurusho/f6a6e53e0aa798c44e09c87bdc8b74fd
 
+**bam_star_refindex.pbs**
+
+```{r}
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=64gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam_star_refindex
+#PBS -o logs/output
+#PBS -e logs/error
+
+module load gcc star
+
+cd ~/ocpmi/data/gene_ref/ucsc/hg38
+
+STAR --runThreadN 8 \
+    --runMode genomeGenerate \
+    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
+    --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa \
+    --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf \
+    --sjdbOverhang 100
+
+```
+
+
 **bam_star_align.pbs**
 
 ```{r}
 #!/bin/bash -l
-#PBS -l walltime=4:00:00,nodes=1:ppn=8,mem=32gb
+#PBS -l walltime=24:00:00,nodes=1:ppn=16,pmem=3500mb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N bam_star_align
@@ -529,26 +554,26 @@ I was finally able to complete realignment with star. A github tutorial gave me 
 
 module load gcc star
 
-cd ~/ocpmi/data/bam/wes
+cd ~/ocpmi/data/bam/1kgp/star_aligned
 
-## For looped
-for i in *_R1_001.fastq; do
+## For looped, compressed
+for i in *_R1_001.fastq.gz; do
 STAR --runMode alignReads \
     --outSAMtype BAM SortedByCoordinate \
+    --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
+    --readFilesCommand zcat \
     --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-    --readFilesIn $i ${i%_R1_001.fastq}_R2_001.fastq \
-    --runThreadN 8 \
-    --outFileNamePrefix ${i%_R1_001.fastq}
+    --runThreadN 16 \
+    --outFileNamePrefix ${i%_R1_001.fastq.gz}_
 done
 
 ### Individual files
 #STAR --runMode alignReads \
 #    --outSAMtype BAM SortedByCoordinate \
 #    --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
-#    --readFilesIn read_1.fastq read_2.fastq \
+#    --readFilesIn read_1.fastq.gz read_2.fastq.gz \
 #    --runThreadN 8 \
 #    --outFileNamePrefix NA10847_SRR070823
-
 ```
 
 #### bwa Alignmnet
@@ -782,11 +807,27 @@ for i in *.bam; do
 done
 ```
 
+***
+
 ## MSI Resources
 
 I found a page which I think shows a "real time" update on the current node usage for msi. Hopefully, this will serve to give me a better sense of how to strategize around resource reqs.
 
 * https://umgcdownload.msi.umn.edu/website/pbsnodes/index.html
+
+*** 
+
+## Secondary Storage
+
+**AWS s3**
+
+I setup a second tier storage bucket today in anticipation of capacity issues on our group instance. The bucket location is below.
+
+* `s3://tasta005_2t`
+
+**scratch.global**
+
+I have a directory at scratch.global under `/scratch.global/tasta005`
 
 ***
 
@@ -1062,65 +1103,64 @@ I created a bash script that executes the entirety of the excv2 pipeline. This s
 
 ```{r}
 #!/bin/bash
-# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It auto generates two text files that serve as configs for the pipeline scripts. Proper use of this script is paired with the full_send_vars.sh variable file to indicate pointers and variable names. Both should be placed in the Excavator2 working directory with this script being executed from there.
+# This script is meant to prep the configuration and execution of the Excavator2 pipeline. It auto generates two text files that serve as configs for the pipeline scripts. Proper use of this script is paired with the full_send_vars.txt variable file to indicate pointers and variable names. Both should be placed in the Excavator2 working directory with this script being executed from there.
 
-source full_send_vars.sh
+source full_send_vars.txt
 cd $HOME$bamDir
 
-# Overwrite any existing config files
+## Overwrite existing config files and updating some vars
 rm -f ExperimentalFile*
+expName="${expName}_${window}_`date +"%Y-%m-%d_%H%M"`"
 target="${expName}_target"
-runTp1=1 # step 1 TargetPerla.pl
-runDp2=1 # step 2 EXCAVATORDataPrepare.pl
-runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
+# runTp1=1 # step 1 TargetPerla.pl
+# runDp2=1 # step 2 EXCAVATORDataPrepare.pl
+# runDa3=1 # step 3 EXCAVATORDataAnalysis.pl
 
-# Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
+## Loop to iterate through each bam to create string for FilePrepare and FileAnalysis configs
 count=1
-for i in *.{bam,cram}; do
+for i in *.bam; do
     echo "$PWD/$i" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFilePrepare.$expName.txt
     echo "T$count" "data/prepare/$expName/${i%.*}" "${i%.*}" >> ExperimentalFileAnalysis.$expName.txt
     mkdir -p $HOME$excv2Dir/data/prepare/$expName/${i%.*}
     count=$[count+1]
 done
 
-# Function to remove leading path from sshfs local mount path and create control
+## Function to remove leading path from sshfs local mount path and create control
 sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.$expName.txt
-sed -i '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
+sed -i -e '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
 
-# Relocate configs to Excavator working dir
+## Relocate configs to Excavator working dir
 mv ExperimentalFile* $HOME$excv2Dir
 mkdir -p $HOME$resDir/$expName
 mkdir -p $HOME$excv2Dir/config_files/$expName
 
-# Generate SourceTarget.txt and execute step 1 TargetPerla.pl
+## Generate SourceTarget.txt and execute step 1 TargetPerla.pl
+
+# if [[ $runTp1 = 1 ]]; then
+#     echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
+#     perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
+# else
+#     echo "Skipping step 1 TargetPerla.pl"
+# fi
+
 cd $HOME$excv2Dir
-if [[ $runTp1 = 1 ]]; then
-    echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
-    perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
-else
-    echo "Skipping step 1 TargetPerla.pl"
-fi
-
-# Executing step 2 EXCAVATORDataPrepare.pl
-if [[ $runDp2 = 1 ]]; then
-    perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
-else
-    echo "Skipping step 2 EXCAVATORDataPrepare.pl"
-fi
-
-# Executing step 3 EXCAVATORDataAnalysis.pl
-if [[ $runDa3 = 1 ]]; then
-    perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
-else
-    echo "Skipping step 3 EXCAVATORDataAnalysis.pl"
-fi
-
-# Copy config files for record
 cp ParameterFile.txt ParameterFile.$expName.txt
-cp full_send_vars.sh full_send_vars.$expName.sh
-mv *.{$expname}.* $HOME$excv2Dir/config_files/$expName
+cp full_send_vars.txt full_send_vars.$expName.txt
 
-# Cleanup bad file naming convention
+## Generate SourceTarget file and run step 1
+echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
+perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
+
+## Executing step 2 EXCAVATORDataPrepare.pl
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
+
+## Executing step 3 EXCAVATORDataAnalysis.pl
+perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+
+## Copy config files for record
+mv *.$expName.* $HOME$excv2Dir/config_files/$expName
+
+## Cleanup bad file naming convention
 cd $HOME$resDir/$expName/Plots
 for i in */ ; do
     cd $i
