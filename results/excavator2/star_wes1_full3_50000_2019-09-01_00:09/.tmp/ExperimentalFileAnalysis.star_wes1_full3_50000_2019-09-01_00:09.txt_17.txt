@@ -1,0 +1,1 @@
+T25 data/prepare/star_wes1_full3_50000_2019-09-01_00:09/PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out

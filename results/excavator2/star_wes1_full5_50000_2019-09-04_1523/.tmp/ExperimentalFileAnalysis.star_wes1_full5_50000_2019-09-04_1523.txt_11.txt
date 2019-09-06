@@ -1,0 +1,2 @@
+T21 data/prepare/star_wes1_full5_50000_2019-09-04_1523/PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out
+T22 data/prepare/star_wes1_full5_50000_2019-09-04_1523/PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out

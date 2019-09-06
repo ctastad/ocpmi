@@ -13,4 +13,4 @@ module load intel
 module load perl
 module load R/3.6.0
 
-perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --target pilot --assembly hg38
+perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.star_wes1_tmp_50000_2019-09-03_16:47.txt --processors 8 --target pilot --assembly hg38
