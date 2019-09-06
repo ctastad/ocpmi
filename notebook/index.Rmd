@@ -6720,7 +6720,7 @@ I found a page which I think shows a "real time" update on the current node usag
 
 ### Summary
 
-Didn't get a lot of concrete work done today. Something randommly changed the permissions for my working directory today. I'm at a complete loss for why that would have happened. I was able to fix it for my file permissions, but my ssh keys are still not working. I don't know if those things are related, but they are equally weird and occured at the same time.
+Didn't get a lot of concrete work done today. Something randomly changed the permissions for my working directory today. I'm at a complete loss for why that would have happened. I was able to fix it for my file permissions, but my ssh keys are still not working. I don't know if those things are related, but they are equally weird and occurred at the same time.
 
 Outside of that, my primary focus right now is the genomic prep of the new wes data so we can begin pushing it through the excv2 pipeline.
 
@@ -6815,7 +6815,7 @@ done
 
 ### Insufficient disk space
 
-The latest error I'm getting from the seq alignment process is the result of a lack of disk space. Aparently, I've taken up a massive amount of space with these wes files and will need to figure out how to manage those effectively since they are so large.
+The latest error I'm getting from the seq alignment process is the result of a lack of disk space. Apparently, I've taken up a massive amount of space with these wes files and will need to figure out how to manage those effectively since they are so large.
 
 ### Summary
 
@@ -6908,10 +6908,6 @@ done
 * gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
 
 The bam output for these files was transfered to `/home/chris/ocpmi/data/bam/wes1` to be processsed with the ocpmi bams.
-
-changed a couple minor things in full_send that may be causing problems
-running excv2_full_send
-started pileup creation for vs2- job: 816769
 
 ### Bam indexing
 
@@ -7049,6 +7045,60 @@ I setup a second tier storage bucket today in anticipation of capacity issues on
 I've created a directory under the global scratch to store things in transition.
 
 * `/scratch.global/tasta005`
+
+### vs2 mpileup copynumber pilot
+
+**With Parallel**
+
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1/wes1_tmp`
+* job: `x`
+* output: `/ocpmi/data/bam/wes1/wes1_tmp`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+```{r}
+parallel 'samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam {} | java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber {.} --mpileup 1' ::: *.bam
+```
+
+**Brute without Parallel**
+
+* samples: `z_NA10847_SRR070531` (control), `ocpmi *.bam` (expt) via ; `/ocpmi/data/bam/wes1/wes1_tmp1`
+* job: `x`
+* output: `/ocpmi/data/bam/wes1/wes1_tmp1`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+The brute force method follows the given structure in the vs2 man to provide validation to the parallel method.
+
+### Summary
+
+Major cleanup day. I think I finally got caught up on nearly a weeks worth of analysis that I did not actively record. I have developed some degree of results that I need to evaluate tomorrow from the excv2 pipeline. In addition, I have begun the movement of the same data through the vs2 pipeline.
+
+#### Running
+
+```{r}
+ID Started    Active Age Project Tags Description
+-- ---------- ------ --- ------- ---- ------------------------------------------
+80 2019-09-05 6h     6h  lab     work create mpileup for wes1 data vs2
+84 2019-09-05 1min   3h  lab     work run pilot vs2 with piped mpileup to
+                                      copynumber commmand
+
+2 tasks
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age P Project Description
+---------- ---------- --- - ------- --------------------------------------------
+2019-08-24 2019-09-05 12d L lab     setup termux with umn vpn
+2019-08-26 2019-09-05 10d H lab     align new wes1 fastq files
+2019-08-26 2019-09-05 10d   lab     run excv2 on wes1 ocpmi files
+2019-08-22 2019-09-05 2w    lab     check if im using the immortalized or
+                                    baseline 10847
+2019-08-22 2019-09-05 2w    lab     do mind dump. regear direction
+
+5 tasks
+```
+
 
 ***
 
