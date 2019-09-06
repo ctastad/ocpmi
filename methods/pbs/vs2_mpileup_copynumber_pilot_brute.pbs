@@ -1,0 +1,16 @@
+#!/bin/bash -l
+#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N mpileup_copynumber_create_brute
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/data/bam/wes1/wes1_tmp1
+module load samtools parallel java
+
+samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out.bam | java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber PM-1-T18_brute --mpileup 1
+
+samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out.bam | java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber PM-25-T17_brute --mpileup 1
+
+
