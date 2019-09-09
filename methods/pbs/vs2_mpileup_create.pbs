@@ -1,5 +1,5 @@
 #!/bin/bash -l
-#PBS -l walltime=24:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -l walltime=48:00:00,nodes=1:ppn=8,mem=16gb
 #PBS -m abe
 #PBS -M tasta005@umn.edu
 #PBS -N mpileup_create
@@ -9,7 +9,7 @@
 cd ~/ocpmi/data/bam/wes1
 module load samtools parallel
 
-parallel 'samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam {} > {.}.mpileup' ::: *.bam
+parallel 'samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam {} > /scratch.global/tasta005/{.}.mpileup' ::: *.bam
 
 ## Original for loop
 

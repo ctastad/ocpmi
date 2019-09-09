@@ -7099,6 +7099,29 @@ Created    Completed  Age P Project Description
 5 tasks
 ```
 
+***
+
+## 9
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                           Urg
+-- --- - ------- ---- ----------------------------------------------------- ----
+62 3w    lab     work look for differences in 1kgp comparison in exv2 paper 1.94
+63 3w    lab     work do search for best suited cnv controls                1.94
+65 2w    lab     work create full_send.sh for varscan                       1.91
+68 2w    lab     work followup with andy re possible cnv controls           1.89
+72 11d   lab     work setup starrnotes site                                 1.86
+78 3d    lab     work add rmarkdown render element to figs_final            1.82
+79 3d    lab     work review figure params for excv2                        1.82
+84 59s   lab     work run dnacopy_seg_plot.R on wes1 data                    1.8
+85 40s   lab     work follow up re starrnotes access                         1.8
+39 3mo L lab     work agenda                                                0.39
+
+10 tasks
+```
+
 
 ***
 
