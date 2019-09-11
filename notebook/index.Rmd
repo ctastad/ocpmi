@@ -7122,6 +7122,71 @@ ID Age P Project Tags Description                                           Urg
 10 tasks
 ```
 
+### CCGD Disk Space
+
+Ken reached out re the disk space needed at the `/swadm` dir on the ccgd server. Based on an issue we're seeing with a nightly dump file, we will need more space on the new server. I created a ticket with OIT to have this arranged.
+
+<details>
+  <summary>**From Ken re disk space**</summary>
+```{r}
+From: <abbot195@umn.edu>
+Subject: Disk space
+Date: September 8, 2019 at 1:40:39 PM CDT
+To: <oialinux@umn.edu>
+Cc: "'Timothy Starr'" <star0044@umn.edu>
+
+Greetings. Could we get another 30 GB provisioned for /swadm on ccgd-starrlab.oit.umn.edu? One of the files we download and digest on a nightly basis has been updated, and it’s now so large that it’s causing an update process to flop.
+
+-Ken
+```
+</details>
+
+### vs2 dnacopy_seg_plot.R
+
+
+***
+
+## 11
+
+### TODO
+
+```{r}
+ID Age  D P Project Tags Description                                    Urg
+-- ---- - - ------- ---- ---------------------------------------------- ----
+88 4min     lab     work select new 1kgp control                         9.8
+89 4min D   lab     work align new 1kgp control                          4.8
+90 4min D   lab     work index new 1kgp control                          4.8
+87 5min     lab     work make sense of excv2 viz [2]                     2.7
+81 1d       lab     work explore cnvtogenes [1]                         2.61
+63 3w       lab     work create full_send.sh for varscan                1.92
+68 13d      lab     work setup starrnotes site                          1.87
+74 6d       lab     work add rmarkdown render element to figs_final     1.83
+79 2d       lab     work follow up re starrnotes access                 1.81
+80 1d       lab     work add notes from weekend analysis                1.81
+82 22h      lab     work troubleshoot window size excv2                  1.8
+83 22h      lab     work troubleshoot recenter problem vs2               1.8
+39 3mo    L lab     work agenda                                          0.4
+91 3min D   lab     work run excv2 full_send with new 1kgp control      -3.2
+
+14 tasks
+```
+
+### wkly mtg w/ Tim
+
+present: chris, tim
+
+* I need to take some time to explore the validation of my excv2 results
+* Looking at the results of my excv2 output, the vcf region call files seem to correlate with the visualization. This will probably serve to allow for gene level association.
+* I need to determine the most accurate window size. As the window decreases, there seem to be a greater number of calls.
+* next steps would include drawing association to gene level variation
+* describe the excv2 viz in greater detail
+
+Actions
+
+* explore excv2 viz. what adjustments can be made to output? what does each part of the viz mean?
+* run another round of excv2 with new control. use old control as variable sample.
+* explore statistical merits of window size.
+
 
 ***
 
