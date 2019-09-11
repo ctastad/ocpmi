@@ -815,7 +815,7 @@ I found a page which I think shows a "real time" update on the current node usag
 
 * https://umgcdownload.msi.umn.edu/website/pbsnodes/index.html
 
-*** 
+***
 
 ## Secondary Storage
 
@@ -2057,6 +2057,12 @@ You can track the status of your ticket INC2305839 at any time.
 If you would like to provide more information, please reply to this email to update your ticket.
 ```
 </details>
+
+### New VM
+
+The new address has been approved, and my access has been cleared.
+
+* address: `hst-ccgd-prd-web.oit.umn.edu`
 
 ***
 
