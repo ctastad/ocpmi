@@ -8,17 +8,18 @@
 
 module load gcc star
 
-cd ~/ocpmi/data/bam/1kgp/star_aligned
+cd ~/ocpmi/data/bam/1kgp/star_aligned/na19131_tmp
 
 ## For looped, compressed
-for i in *_R1_001.fastq.gz; do
+# Adjustment for sample specific naming conventions necessary for name prefix
+for i in *_1.fastq.gz; do
 STAR --runMode alignReads \
     --outSAMtype BAM SortedByCoordinate \
-    --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz \
+    --readFilesIn $i ${i%_1.fastq.gz}_2.fastq.gz \
     --readFilesCommand zcat \
     --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 \
     --runThreadN 16 \
-    --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+    --outFileNamePrefix ${i%_1.fastq.gz}_
 done
 
 ### Individual files

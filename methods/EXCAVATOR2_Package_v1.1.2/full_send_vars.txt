@@ -18,9 +18,9 @@
 # Analysis variables
 ################################################################################
 # Experiment name
-expName="star_wes1_10"
+expName="star_wes1_controlvalidate"
 # Window size
-window="10000"
+window="20000"
 # Number of processors for parallelization
 numProc="16"
 # Step 3 EXCAVATORDataAnalysis.pl sample analysis mode [pooling, paired]

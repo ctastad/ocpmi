@@ -7187,6 +7187,75 @@ Actions
 * run another round of excv2 with new control. use old control as variable sample.
 * explore statistical merits of window size.
 
+### BAM create NA19131
+
+As part of the process of trying to validate the results of my excv2 output, I am going to take another 1kgp genome and replace the NA10847 control to see if we can produce the same results. First I need to align this sequence.
+
+* samples: `z_NA19131_SRR070494_1.fastq.gz`, `z_NA19131_SRR070494_2.fastq.gz` via 1kgp; `~/ocpmi/data/bam/1kgp/star_aligned`
+* job: `2473057.node1081`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+**BAM Index**
+* samples: `z_NA19131_SRR070494_Aligned.sortedByCoord.out.bam` via 1kgp; `~/ocpmi/data/bam/1kgp/star_aligned`
+* job: `2473061.node1081`
+* output: `~/ocpmi/data/bam/wes/star_aligned`
+
+### excv2 ocpmi full validate control
+
+* name: `star_wes1_controlvalidate`
+* job: `2473070.node1081`
+* samples: `NA19131` (control), `*.bam` (expt) via ; `~/ocpmi/data/bam/wes1`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### Validating window size
+
+I'm concerned about the statistical validation in determining a window size for our cnv analysis. Given the wide range of reported calls when varying the window size, we may be looking at an elevated false discovery rate or missed calls. I found a thread where two investigators discuss methods for determining window size and cite their own work in this area. Both reference the expectation that we would be working with a poisson distribution, but overdispersion in real world data complicates this.
+
+The first post offers a package called `CNAnorm` in bioc which allows for calculation of reasonable window size based on the sum of chromosome/contig length. The other major factor to consider is read depth, which I need to confirm with Tim.
+
+* https://www.biostars.org/p/17899/
+
+* samples: `NA10847` (control), `NA19131` (expt) via ; `~/ocpmi/data/bam/1kgp/star_aligned/bam2window_test`
+* job: `817718.labq`
+* output: `~/ocpmi/data/bam/1kgp/star_aligned/bam2window_test`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+### Summary
+
+Meeting with Tim today, we discussed the nature of my excv2 output from *2019-09-04*. We made some sense of this data and presented a few other questions that need to be addressed. Most importantly, I need to be able to validate the window size I select in running this analysis. Depending on what we go with, it can have a notable impact on false positives and negatives. Additionally, we need to rule out the need for other (different) controls. I'm running the excv2 pipeline again with a different 1kgp genome to assess this.
+
+#### Running
+
+```{r}
+ID Started    Active Age   D Project Tags Description
+-- ---------- ------ ----- - ------- ---- --------------------------------------
+88 2019-09-11 20min  20min   lab     work run bam2window to test for window size
+87 2019-09-11 8s     3h    D lab     work run excv2 full_send with new 1kgp
+                                          control
+
+2 tasks
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Due        Description
+---------- ---------- --- ------- ---------- -----------------------------------
+2019-09-10 2019-09-11 1d  lab     2019-09-11 send excv2 20k figs to tim
+2019-09-05 2019-09-11 6d  lab                review figure params for excv2
+2019-09-09 2019-09-11 2d  lab                run dnacopy_seg_plot.R on wes1 data
+2019-09-11 2019-09-11 2h  lab                select new 1kgp control
+2019-09-11 2019-09-11 2h  lab                align new 1kgp control
+2019-09-11 2019-09-11 2h  lab                index new 1kgp control
+
+6 tasks
+```
+
 
 ***
 
