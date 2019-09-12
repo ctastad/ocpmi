@@ -6,7 +6,7 @@
 #PBS -o logs/output
 #PBS -e logs/error
 
-cd ~/ocpmi/data/bam/wes1
+cd ~/ocpmi/data/bam/1kgp/star_aligned
 module load samtools parallel
 
 parallel samtools index ::: *.bam
