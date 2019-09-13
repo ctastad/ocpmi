@@ -7411,5 +7411,29 @@ I have a ticket open to see if the apache setup used in RHEL6 will work in the n
 
 ***
 
+## 13
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                Urg
+-- --- - ------- ---- ------------------------------------------ ----
+82 1d    lab     work make sense of excv2 viz [2]                2.71
+77 3d    lab     work explore cnvtogenes [1]                     2.62
+62 3w    lab     work create full_send.sh for varscan            1.93
+78 2d    lab     work troubleshoot window size excv2             1.81
+79 2d    lab     work troubleshoot recenter problem vs2          1.81
+83 1d    lab     work run bam2window to test for window size     1.81
+84 1d    lab     work confirm read depth data on wes             1.81
+85 22h   lab     work create heatmap of cnv gene association      1.8
+86 20h   lab     work update project directories in notebook      1.8
+39 3mo L lab     work agenda [1]                                 1.21
+
+10 tasks
+```
+
+
+***
+
 # References
 
