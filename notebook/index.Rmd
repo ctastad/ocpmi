@@ -7393,6 +7393,20 @@ I ran the full_send of excv2 with a new control from 1kgp. Eyeballing the result
 
 I spent a good deal of time troubleshooting the setup of the oit hosted linux servers today. The documentation is somewhat limited, and the nature of their privs setup is not entirely clear. I went through what I know to be the apache setup process with no resulting web page. There is something in the system setup I am unaware of that is preventing apache from serving pages.
 
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ------------------------------------------
+2019-09-11 2019-09-12 1d  lab     run excv2 full_send with new 1kgp control
+2019-09-05 2019-09-12 7d  lab     add rmarkdown render element to figs_final
+2019-09-09 2019-09-12 3d  lab     follow up re starrnotes access
+2019-09-09 2019-09-12 3d  lab     add notes from weekend analysis
+
+4 tasks
+```
+
+
 I have a ticket open to see if the apache setup used in RHEL6 will work in the new server since there is an automated script. If not, I will need to work with OIT more closely to see what the issue is in getting the webserver running.
 
 ***
