@@ -7101,6 +7101,67 @@ Created    Completed  Age P Project Description
 
 ***
 
+## 7
+
+### Updated vs2 scripts
+
+I've created updated pbs scripts to execute the vs2 pipeline to take advantage of gnu parallel and manage the increased size of the mpileup output.
+
+**vs2_mpileup_create.pbs**
+
+* Important! the output dir for this script is `/scratch.global/` due to the massive size of the mpileup files.
+
+```{r}
+module load samtools parallel
+
+parallel 'samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam {} > /scratch.global/tasta005/{.}.mpileup' ::: *.bam
+
+## Original for loop
+
+# for i in *.bam; do
+#     samtools mpileup -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa "$i" > ${i%%.*}.mpileup
+# done
+```
+
+**vs2_copynumber.pbs**
+
+```{r}
+module load java parallel
+
+parallel 'java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber {} {.} --mpileup 1' ::: *.mpileup
+```
+
+**vs2_copycaller.pbs**
+
+```{r}
+module load java parallel
+
+parallel 'java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller {} --output-file {.}.called' ::: *.copynumber
+```
+
+### vs2 wes1 ocpmi mpileup creation
+
+* samples: `NA10847_SRR070531_Aligned` (control), `*.bam` (expt) via ocpmi; `~/ocpmi/data/bam/wes1`
+* job: `816985.labq`
+* output: `/scratch.global/tasta005`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+### vs2 wes1 ocpmi copynumber
+
+* samples: `*.mpileup` via ocpmi; `/scratch.global/tasta005`
+* job: `817151.labq`
+* output: `~/ocpmi/results/varscan2/wes1`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+### vs2 wes1 ocpmi copyCaller
+
+* samples: `*.copynumber` via ocpmi; `~/ocpmi/results/varscan2/wes1`
+* job: `817163.labq`
+* output: `~/ocpmi/results/varscan2/wes1`
+* gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
+
+***
+
 ## 9
 
 ### TODO
@@ -7143,6 +7204,39 @@ Greetings. Could we get another 30 GB provisioned for /swadm on ccgd-starrlab.oi
 
 ### vs2 dnacopy_seg_plot.R
 
+I've created an updated version of the DNAcopy script necessary to apply segmentation and visualization to the vs2 copynumber output.
+
+```{r}
+#!/usr/bin/env Rscript
+
+library(DNAcopy)
+
+args <- commandArgs(TRUE)
+sampleName <- gsub(pattern = "\\.sortedByCoord.out.called$", "", args)
+
+cn <- read.table(args,header=T)
+cna.object <- CNA(cbind(cn$normal_depth, cn$tumor_depth), cn$chrom, cn$chr_start, data.type="logratio", sampleid=sampleName)
+
+# Smoothing object
+cna.object.smooth <- smooth.CNA(cna.object)
+
+#Segmentation at default parameters
+cna.object.smooth.segd <- segment(cna.object.smooth, verbose=1)
+
+#Plot whole studies
+
+# pdf('rplot2.pdf')
+# plot(cna.object.smooth.segd, plot.type="w")
+# dev.off()
+
+pdf(paste0(sampleName, ".pdf"))
+plot(cna.object.smooth.segd, plot.type="w")
+dev.off()
+```
+
+### vs2 wes1 ocpmi DNAcopy
+
+I processed the vs2 copynumber output from *2019-09-07* with the above `dnacopy_seg_plot.R` script. The output seems to be skewed either all positive or all negative depending on the patient. vs2 specifically addresses this with an argument in the `copyCaller` function called either `--recenter-up` or `--recenter-down`. This is something I need to do, but I worry there needs to be greater statistical validation to the recentering adjustment than is offered in vs2's documentation. This is something I need to explore.
 
 ***
 
@@ -7205,7 +7299,7 @@ As part of the process of trying to validate the results of my excv2 output, I a
 ### excv2 ocpmi full validate control
 
 * name: `star_wes1_controlvalidate`
-* job: `2473070.node1081`
+* job: `17114108.mesabim1`
 * samples: `NA19131` (control), `*.bam` (expt) via ; `~/ocpmi/data/bam/wes1`
 * excv2_vars: `20000` (window); `pooling` (analysis mode)
 * output: `~/ocpmi/results/excavator2`
@@ -7256,6 +7350,50 @@ Created    Completed  Age Project Due        Description
 6 tasks
 ```
 
+***
+
+## 12
+
+### TODO
+
+```{r}
+ID Age  P Project Tags Description                                    Urg
+-- ---- - ------- ---- ---------------------------------------------- ----
+86 1d     lab     work make sense of excv2 viz [2]                    2.71
+81 2d     lab     work explore cnvtogenes [1]                         2.61
+63 3w     lab     work create full_send.sh for varscan                1.93
+74 7d     lab     work add rmarkdown render element to figs_final     1.84
+79 3d     lab     work follow up re starrnotes access                 1.82
+80 3d     lab     work add notes from weekend analysis                1.82
+82 2d     lab     work troubleshoot window size excv2                 1.81
+83 2d     lab     work troubleshoot recenter problem vs2              1.81
+87 1d     lab     work run bam2window to test for window size         1.81
+88 1d     lab     work confirm read depth data on wes                 1.81
+89 2h     lab     work create heatmap of cnv gene association          1.8
+90 7min   lab     work update project directories in notebook          1.8
+39 3mo  L lab     work agenda                                         0.41
+
+13 tasks
+```
+
+### star_wes1_controlvalidate_20000_2019-09-11_2140 {.tabset .tabfade}
+
+#### Discussion
+
+* name: `star_wes1_controlvalidate_20000_2019-09-11_2140`
+* samples: `NA19131_SRR070494` (control), `*.bam` (expt) via ocpmi and 1kgp; `/ocpmi/data/bam/wes1`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/star_wes1_controlvalidate_20000_2019-09-11_2140`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+I ran the full_send of excv2 with a new control from 1kgp. Eyeballing the results, it looks as if there is maybe an 85% overlap in CNV sites across all samples. There is a good deal of similarity, but the variation does raise the question of whether our controls are valid. It's possible we will need to create a "control consortium" of sorts with multiple controls to identify consistent common denominator CNV sites.
+
+### ccgd and starrnotes
+
+I spent a good deal of time troubleshooting the setup of the oit hosted linux servers today. The documentation is somewhat limited, and the nature of their privs setup is not entirely clear. I went through what I know to be the apache setup process with no resulting web page. There is something in the system setup I am unaware of that is preventing apache from serving pages.
+
+I have a ticket open to see if the apache setup used in RHEL6 will work in the new server since there is an automated script. If not, I will need to work with OIT more closely to see what the issue is in getting the webserver running.
 
 ***
 

@@ -892,6 +892,10 @@ ocpmi/methods/varscan2/
 
 ***
 
+### Quick Start
+
+***
+
 #### Pileup Creation
 
 The general script format.
@@ -907,6 +911,22 @@ for i in *.cram; do
     samtools mpileup -f ~/ocpmi/gene_ref/hg38.fa "$i" > ${i%%.*}.mpileup
 done
 
+```
+
+**vs2_mpileup_create.pbs**
+
+* Important! the output dir for this script is `/scratch.global/` due to the massive size of the mpileup files.
+
+```{r}
+module load samtools parallel
+
+parallel 'samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam {} > /scratch.global/tasta005/{.}.mpileup' ::: *.bam
+
+## Original for loop
+
+# for i in *.bam; do
+#     samtools mpileup -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa "$i" > ${i%%.*}.mpileup
+# done
 ```
 
 #### copynumber Command
@@ -929,10 +949,26 @@ Or, if you have independent normal and tumor pileup files:
 java -jar VarScan.jar copynumber normal.pileup tumor.pileup output.basename
 ```
 
+**vs2_copynumber.pbs**
+
+```{r}
+module load java parallel
+
+parallel 'java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber {} {.} --mpileup 1' ::: *.mpileup
+```
+
 #### copyCaller Command
 
 ```{r}
 java -jar VarScan.jar copyCaller [varScan.copynumber] OPTIONS
+```
+
+**vs2_copycaller.pbs**
+
+```{r}
+module load java parallel
+
+parallel 'java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller {} --output-file {.}.called' ::: *.copynumber
 ```
 
 #### Segmentation
@@ -943,13 +979,20 @@ I made an R script that utilizes the `DNAcopy` BioC pacakge for segmentation by 
 * CNA: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/CNA
 * plot.DNAcopy: https://www.rdocumentation.org/packages/DNAcopy/versions/1.46.0/topics/plot.DNAcopy
 
-**dnacopy_seg_plot.R**
+**vs2 dnacopy_seg_plot.R**
+
+I've created an updated version of the DNAcopy script necessary to apply segmentation and visualization to the vs2 copynumber output.
 
 ```{r}
+#!/usr/bin/env Rscript
+
 library(DNAcopy)
 
-cn <- read.table("pilot_output.copynumber.called",header=T)
-cna.object <- CNA(cbind(cn$normal_depth, cn$tumor_depth), cn$chrom, cn$chr_start, data.type="logratio", sampleid=c("pm2","pm15"))
+args <- commandArgs(TRUE)
+sampleName <- gsub(pattern = "\\.sortedByCoord.out.called$", "", args)
+
+cn <- read.table(args,header=T)
+cna.object <- CNA(cbind(cn$normal_depth, cn$tumor_depth), cn$chrom, cn$chr_start, data.type="logratio", sampleid=sampleName)
 
 # Smoothing object
 cna.object.smooth <- smooth.CNA(cna.object)
@@ -958,10 +1001,14 @@ cna.object.smooth <- smooth.CNA(cna.object)
 cna.object.smooth.segd <- segment(cna.object.smooth, verbose=1)
 
 #Plot whole studies
-pdf('rplot.pdf')
+
+# pdf('rplot2.pdf')
+# plot(cna.object.smooth.segd, plot.type="w")
+# dev.off()
+
+pdf(paste0(sampleName, ".pdf"))
 plot(cna.object.smooth.segd, plot.type="w")
 dev.off()
-
 ```
 
 ***
@@ -1072,27 +1119,6 @@ perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.50000.txt --processors 8 --
 
 ```{r}
 perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.50000.txt --processors 8 --target MyTarget_w50K --assembly hg38 --output /.../path/to/output --mode ...
-```
-
-***
-
-#### figs_finish_excv2.sh
-
-I wanted to automate the final processing of the figure output for the excv2 pipeline, so I wrote a bash script to do that. This creates two items:
-
-* A `combined.pdf` which is a string of all the independent figures.
-* An image of a 5x5 matrix of each figure on one page.
-
-```{r}
-#!/bin/sh
-
-dir=$PWD
-cd $dir
-
-pdfunite Plot* combined.pdf
-pdfnup Plot* --nup 5x5 --outfile tmp.pdf
-pdftoppm tmp.pdf fig_matrix.png -png
-rm -rf tmp.pdf
 ```
 
 ***
@@ -1232,7 +1258,12 @@ resDir="/ocpmi/results/excavator2"
 
 ### figs_finish_excv2.sh
 
-This is a continuation of the bash script I started yesterday. I've expanded it quite a bit to make it effectively pump and dump for the markdown output needed to go to the `results` page. It needs to be run from the `Plots` results directory.
+I wanted to automate the final processing of the figure output for the excv2 pipeline, so I wrote a bash script to do that. This creates two items:
+
+* A `combined.pdf` which is a string of all the independent figures.
+* An image of a 5x5 matrix of each figure on one page.
+
+I've expanded it quite a bit to make it effectively pump and dump for the markdown output needed to go to the `results` page. It needs to be run from the `Plots` results directory.
 
 ```{r}
 #!/bin/bash
