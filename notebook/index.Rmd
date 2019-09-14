@@ -7432,6 +7432,60 @@ ID Age P Project Tags Description                                Urg
 10 tasks
 ```
 
+### excv2 agilent pbmc control
+
+Andy was able to get back to me re a wes control today. Once I have access to these, I will align them and send them through the excv2 pipeline.
+
+```{r}
+Hi Chris-
+
+My apologies that I lost track of this. Christy did identify a sample you can use for your copy number experiments with the OCPMI bulk Agilent exome DNAseq data.
+
+These are the two fastq files.  PLEASE let Christy know ASAP if you also want BAM/BAI from our clinical germline pipeline for these.
+
+/panfs/roc/groups/6/clinicalmdl/shared/data_release/miscellaneous/180308_A00223_0008_AH7YG3DMXX/BT_WES_NovaSeq_Val/BTWES_Feb_12_2018_1_S4_R1_001.fastq.gz
+/panfs/roc/groups/6/clinicalmdl/shared/data_release/miscellaneous/180308_A00223_0008_AH7YG3DMXX/BT_WES_NovaSeq_Val/BTWES_Feb_12_2018_1_S4_R2_001.fastq.gz
+
+Note that these are currently in our clinical space which you cannot access.  Christy is going to move them to scratch and update on how to access.  But PLEASE respond ASAP if you need the BAM/BAI so we only have to do this once.
+
+THANKS and sorry for the long delay.
+
+andy
+```
+
+### Excavator2 viz
+
+I spent some time digging through the R libs for the excv2 package since there isn't any detail on the plot params in the documentation. I was able to discern the following associations re the plots:
+
+* Red line = HSLM SegMean value
+* Grey bars = HSLM Log2 ratio value
+* Light Blue dots = HSLM Log2 ratio value Out
+* Dark Blue dots = HSLM Log2 ratio value In
+* Dark Green = FastCall -2 call
+* Light Green = FastCall -1 call
+* Dark Red = FastCall +2 call
+* Light Red = FastCall +1 call
+
+I've reached out to the authors of the excv2 package to confirm these values. The only variable I need further detail on is the SegMean value. I have a sense of what this could be, but I don't want to make assumptions. As a result, I've asked for clarification on this from the authors as well.
+
+### Summary
+
+I was able to develop a better understanding of our excv2 output today, which was a big step forward. I'll need to pass this on to Tim when I get a chance. I also need to spend some time making sense of the in vs out targets that the pipeline is distinguishing between. In other news, Andy was able to get back to me re a potential agilent control. Once they're able to give me access to that data, I should be able to send that through the excv2 pipeline.
+
+#### Completed
+
+```{r}
+Created    Completed  Age   Project Description
+---------- ---------- ----- ------- --------------------------------------------
+2019-09-13 2019-09-13 25min lab     contact excavator2 authors re plot variables
+2019-09-11 2019-09-13 2d    lab     make sense of excv2 viz
+                                      2019-09-11 what adjustments can be made to
+                                    the viz output?
+                                      2019-09-11 what does each part of the viz
+                                    mean?
+
+2 tasks
+```
 
 ***
 

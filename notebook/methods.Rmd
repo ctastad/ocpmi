@@ -1039,13 +1039,35 @@ For low coverage whole exome CNV,  you may try: EXCAVATOR,  http://sourceforge.n
     - .fa: `~/ocpmi/data/gene_ref/ucsc/hg38`, .bw:`~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data`
 </details>
 
-**Pipeline**
+<details>
+  <summary>**from: Andy 9/13/19 re excv2 agilent PBMC control**</summary>
 
-Detailed
+Hi Chris-
+
+My apologies that I lost track of this. Christy did identify a sample you can use for your copy number experiments with the OCPMI bulk Agilent exome DNAseq data.
+
+These are the two fastq files.  PLEASE let Christy know ASAP if you also want BAM/BAI from our clinical germline pipeline for these.
+
+/panfs/roc/groups/6/clinicalmdl/shared/data_release/miscellaneous/180308_A00223_0008_AH7YG3DMXX/BT_WES_NovaSeq_Val/BTWES_Feb_12_2018_1_S4_R1_001.fastq.gz
+/panfs/roc/groups/6/clinicalmdl/shared/data_release/miscellaneous/180308_A00223_0008_AH7YG3DMXX/BT_WES_NovaSeq_Val/BTWES_Feb_12_2018_1_S4_R2_001.fastq.gz
+
+Note that these are currently in our clinical space which you cannot access.  Christy is going to move them to scratch and update on how to access.  But PLEASE respond ASAP if you need the BAM/BAI so we only have to do this once.
+
+THANKS and sorry for the long delay.
+
+andy
+
+</details>
+
+***
+
+##### Pipeline
+
+**Detailed**
 
 *&ast;.bed `sort` (bedtools) &rarr; [SourceTarget.txt (&ast;.bw + gene_ref) + &ast;.bed] `TargetPerla.pl` &rarr; [ExpFilePrep.txt (BAMs) + targets] `EXCAVATORDataPrepare.pl` &rarr; [ExpFileAn.txt (output + controls) + targets `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
-Condensed
+**Condensed**
 
 *&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
@@ -1053,7 +1075,7 @@ Condensed
 *&ast;.bed `sort` (bedtools) &rarr; SourceTarget.txt `TargetPerla.pl` &rarr; ExpFilePrep.txt `EXCAVATORDataPrepare.pl` &rarr; ExpFileAn.txt `EXCAVATORDataAnalysis.pl` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 ```
 
-Modified
+**Modified**
 
 *&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 
@@ -1061,7 +1083,24 @@ Modified
 *&ast;.bed `sort` (bedtools) &rarr; `full_send.sh` &rarr; cnv output &rarr; `figs_finish_excv2.sh`*
 ```
 
-**Directory**
+***
+
+##### Excavator2 plot variables
+
+I spent some time digging through the R libs for the excv2 package since there isn't any detail on the plot params in the documentation. I was able to discern the following associations re the plots:
+
+* Red line = HSLM SegMean value
+* Grey bars = HSLM Log2 ratio value
+* Light Blue dots = HSLM Log2 ratio value Out
+* Dark Blue dots = HSLM Log2 ratio value In
+* Dark Green = FastCall -2 call
+* Light Green = FastCall -1 call
+* Dark Red = FastCall +2 call
+* Light Red = FastCall +1 call
+
+***
+
+##### Directory
 
 ```{r}
 ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
