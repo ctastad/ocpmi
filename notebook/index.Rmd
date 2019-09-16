@@ -7489,5 +7489,33 @@ Created    Completed  Age   Project Description
 
 ***
 
+## 16
+
+### TODO
+
+```{r}
+ID Age D P Project Tags Description                                       Urg
+-- --- - - ------- ---- ------------------------------------------------- -----
+87 2d  D   lab     work align agilent pbmc fastqs                          4.81
+88 2d  D   lab     work index agilent pbmc bams                            4.81
+77 6d      lab     work explore cnvtogenes [1]                             2.63
+62 3w      lab     work create full_send.sh for varscan                    1.95
+67 2w      lab     work setup starrnotes site                               1.9
+78 5d      lab     work troubleshoot window size excv2                     1.83
+79 5d      lab     work troubleshoot recenter problem vs2                  1.83
+82 4d      lab     work run bam2window to test for window size             1.82
+83 4d      lab     work confirm read depth data on wes                     1.82
+84 3d      lab     work create heatmap of cnv gene association             1.82
+85 3d      lab     work update project directories in notebook             1.82
+90 2d      lab     work make sense of in vs out targets excv2              1.81
+91 2d      lab     work store git credentials                              1.81
+92 2d      lab     work merge working branch to master                     1.81
+39 3mo   L lab     work agenda [2]                                         1.33
+89 2d  D   lab     work run excv2 full_send with agilent pbmc control     -3.19
+
+16 tasks
+```
+
+
 # References
 
