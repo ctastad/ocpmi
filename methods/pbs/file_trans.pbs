@@ -8,6 +8,6 @@
 
 module load parallel
 
-cd ~/ocpmi/data/bam/wes1
+cd /home/nelsona2/shared/for_chris
 
-parallel mv {} /scratch.global/tasta005 ::: *.mpileup
+parallel cp {} ~/ocpmi/data/bam/pbmc_control ::: *.fastq.gz
