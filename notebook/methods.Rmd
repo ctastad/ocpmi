@@ -40,6 +40,7 @@ ocpmi/
 │   ├── gene_ref # gene reference sources for all pipelines
 │   └── pt59
 ├── methods # code, packages, and source files for all pipelines
+│   ├── cnaNorm
 │   ├── EXCAVATOR2_Package_v1.1.2
 │   ├── jason_cnv
 │   ├── pbs # job scripts for msi
@@ -70,7 +71,6 @@ ocpmi/
     ├── excavator2
     ├── seurat
     └── varscan2
-
 ```
 
 
@@ -487,10 +487,16 @@ I need to create new bam files from our source wes data since these files were l
 **Directory**
 
 ```{r}
+
 ocpmi/data/bam/
 ├── 1kgp # 1000 genomes project files
+│   └── star_aligned
+├── pbmc_control # agilent v6 control from andy
+│   ├── BTWES_Feb_12_2018__STARtmp
+│   └── test
 └── wes # ocpmi whole exome data
-    └── pilot
+    ├── _STARtmp
+    └── wes1_tmp
 ```
 
 #### STAR Alignment
@@ -884,10 +890,11 @@ I need to build a pileup file with `samtools`. I don't know how long that will t
 **Directory**
 
 ```{r}
-ocpmi/methods/varscan2/
-├── pilot
+varscan2/
+├── dnacopy_seg_plot.R # script to execute DNAcopy: CBS algo and visualization
+├── full_send.sh
+├── test.R
 └── VarScan.v2.4.4.jar
-
 ```
 
 ***
@@ -1103,7 +1110,8 @@ I spent some time digging through the R libs for the excv2 package since there i
 ##### Directory
 
 ```{r}
-ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
+EXCAVATOR2_Package_v1.1.2/
+├── config_files # source of configs from past runs
 ├── data
 │   ├── centromere
 │   ├── GCA_000001405.15_GRCh38.bw # hg38 bigwig file
@@ -1115,8 +1123,9 @@ ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
 │   └── EXCAVATOR2 Manual.pdf
 ├── EXCAVATORDataAnalysis.pl # excv2 function step 3.
 ├── EXCAVATORDataPrepare.pl # excv2 function step 2.
-├── ExperimentalFileAnalysis.50000.txt # excv2 sourcefile step 3.
-├── ExperimentalFilePrepare.50000.txt # excv2 sourcefile step 2.
+├── full_send.sh # bash script to execute full excv2 pipeline
+├── full_send.sh_old
+├── full_send_vars.txt # config to define variables in full_send.sh
 ├── lib
 │   ├── bash
 │   ├── F77
@@ -1124,10 +1133,7 @@ ocpmi/methods/EXCAVATOR2_Package_v1.1.2/
 │   ├── perl
 │   └── R
 ├── ParameterFile.txt
-├── SourceTarget_hg38.txt # excv2 sourcefile step 1.
-├── SourceTarget.txt_
 └── TargetPerla.pl # excv2 function step 1.
-
 ```
 
 ***
