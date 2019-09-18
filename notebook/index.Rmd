@@ -7516,6 +7516,94 @@ ID Age D P Project Tags Description                                       Urg
 16 tasks
 ```
 
+### PBMC Control
+
+I received access to the samples from the Christy and Andy today. I'll then begin the process of running this through the excv2 pipeline. The samples are located at the directory below:
+
+* /home/nelsona2/shared/for_chris
+
+### PBMC star align
+
+* samples: `*.fastq.gz` via ocpmi; `~/ocpmi/data/bam/pbmc_control`
+* job: `2473653.node1081`
+* star_vars: `100` (overhang); `Standard` (SAM attr)
+* output: `~/ocpmi/data/bam/pbmc_control`
+* gene_ref: `hg38.fa`, `hg38.gtf` via UCSC; `~/ocpmi/gene_ref`
+
+### PBMC bam index
+
+* samples: `*.bam` via ocpmi; `~/ocpmi/data/bam/pbmc_control`
+* job: `17142908.mesabim1`
+* output: `~/ocpmi/data/bam/pbmc_control`
+
+### PBMC wes1 excv2 full_send
+
+* name: `star_wes1_pbmc`
+* job: `17145051.mesabim1`
+* samples: `z_BTWES_Feb_12_2018` (control), `*.bam` (expt) via ; `~/ocpmi/data/bam/wes1`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2/star_wes1_pbmc_20000_2019-09-16_1729`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+***
+
+## 17
+
+### PBMC wes1 excv2 full_send
+
+The experiment from yesterday failed to produce an output. An error shown in the logs indicates that the age of the bam index file is older than the bam itself. This may have occurred when I copied the index file before the bam. I'm going to rerun adjusting some parameters to see if I can achieve some results.
+
+***
+
+## 18
+
+### TODO
+
+```{r}
+ID Active Age   P Project Tags Description                                Urg
+-- ------ ----- - ------- ---- ------------------------------------------ ----
+63 17min  17min   lab     work run troubleshoot excv2 on pbmc              5.8
+52        8d      lab     work explore cnvtogenes [1]                     2.64
+43        4w      lab     work create full_send.sh for varscan            1.96
+48        2w      lab     work setup starrnotes site                      1.91
+53        7d      lab     work troubleshoot window size excv2             1.84
+54        7d      lab     work troubleshoot recenter problem vs2          1.84
+56        6d      lab     work run bam2window to test for window size     1.83
+57        5d      lab     work create heatmap of cnv gene association     1.83
+58        4d      lab     work make sense of in vs out targets excv2      1.82
+59        4d      lab     work store git credentials                      1.82
+25        3mo   L lab     work agenda [4]                                 1.44
+
+11 tasks
+```
+
+### PBMC wes1 excv2 full_send
+
+The modified experiement didn't work, so I am running the excv2 full_send with just my 1kgp and pbmc files.
+
+### PBMC test
+
+* name: `pbmc_test`
+* job: `17168653.mesabim1`
+* samples: `NA10847` (control), `BTWES` (expt) via ; `~/ocpmi/data/bam/pbmc_control/test`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2/pbmc_test_20000_2019-09-18_1428`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+The above experiment produced an output, so I'm going to adjust the sample setup and see if I can generate an output.
+
+### PBMC test2
+
+* name: `pbmc_test2`
+* job: `818658.labq`
+* samples: `BTWES` (control), `NA10847, PM-25` (expt) via ; `~/ocpmi/data/bam/pbmc_control/test`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2/pbmc_test2_20000_2019-09-18_1710`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
 
 # References
 
