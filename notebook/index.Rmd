@@ -7604,6 +7604,21 @@ The above experiment produced an output, so I'm going to adjust the sample setup
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
 * targets: `GCA_000001405.15_GRCh38.bw` via excv2
 
+This run failed.
+
+### PBMC test3
+
+This is the inverse of pbmc_test. The pbmc bam can run as an experimental sample, so we need to rule out if there is an issue with the ocpmi bams when it is run as the control.
+
+* name: `pbmc_test3`
+* job: `818671.labq`
+* samples: `BTWES` (control), `NA10847` (expt) via ; `~/ocpmi/data/bam/pbmc_control/test`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2/pbmc_test3_20000_2019-09-18_1938`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+***
 
 # References
 
