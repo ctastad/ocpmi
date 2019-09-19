@@ -7580,7 +7580,7 @@ ID Active Age   P Project Tags Description                                Urg
 
 ### PBMC wes1 excv2 full_send
 
-The modified experiement didn't work, so I am running the excv2 full_send with just my 1kgp and pbmc files.
+The modified experiement didn't work, so I am running the excv2 `full_send` with just my 1kgp and pbmc files.
 
 ### PBMC test
 
@@ -7608,7 +7608,7 @@ This run failed.
 
 ### PBMC test3
 
-This is the inverse of pbmc_test. The pbmc bam can run as an experimental sample, so we need to rule out if there is an issue with the ocpmi bams when it is run as the control.
+This is the inverse of `pbmc_test.` The pbmc bam can run as an experimental sample, so we need to rule out if there is an issue with the ocpmi bams when it is run as the control.
 
 * name: `pbmc_test3`
 * job: `818671.labq`
@@ -7617,6 +7617,40 @@ This is the inverse of pbmc_test. The pbmc bam can run as an experimental sample
 * output: `~/ocpmi/results/excavator2/pbmc_test3_20000_2019-09-18_1938`
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
 * targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### Summary
+
+I spend most of the day troubleshooting the issues with running the new pbmc control through the excv2 pipeline. The output from the pipeline is not very verbose, so it is difficult to know what the issue is. If `pbmc_test3` doesn't work, I won't have much to go on as far as why the ocpmi and pbmc files don't want to cooperate. I guess even if it does work, I won't have a good explanation.
+
+#### Running
+
+```{r}
+ID Started    Active Age Project Tags Description
+-- ---------- ------ --- ------- ---- ------------------------------
+61 2019-09-18 2h     2h  lab     work run troubleshoot excv2 on pbmc
+
+1 task
+```
+
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- ----------------------------------------------
+2019-09-13 2019-09-18 4d  lab     get agilent pbmc fastqs from christy
+2019-09-13 2019-09-18 4d  lab     align agilent pbmc fastqs
+2019-09-13 2019-09-18 4d  lab     index agilent pbmc bams
+2019-09-13 2019-09-18 4d  lab     run excv2 full_send with agilent pbmc control
+2019-09-12 2019-09-18 5d  lab     update project directories in notebook
+2019-09-13 2019-09-18 4d  lab     store git credentials
+2019-09-09 2019-09-18 8d  lab     explore cnvtogenes
+                                    2019-09-09
+                                  https://github.com/Jeltje/cnvtogenes
+
+7 tasks
+```
+
 
 ***
 
