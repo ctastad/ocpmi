@@ -7,6 +7,9 @@
 #PBS -e logs/error
 
 cd ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2
+source full_send_vars.txt
+echo "Name:" "${expName}_${window}_`date +"%Y-%m-%d_%H%M"`"
+
 module load samtools bedtools intel perl R/3.6.0
 
 ./full_send.sh

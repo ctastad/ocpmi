@@ -18,10 +18,10 @@
 # Analysis variables
 ################################################################################
 # Experiment name
-expName="pbmc_test3"
+expName="pbmc_windowtest3"
 
 # Window size
-window="20000"
+window="30000"
 
 # Number of processors for parallelization
 numProc="8"
@@ -51,7 +51,7 @@ bigWig="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/GCA_000001405.15_GRCh38.bw
 excv2Dir="/ocpmi/methods/EXCAVATOR2_Package_v1.1.2"
 
 # Location of the bam files
-bamDir="/ocpmi/data/bam/pbmc_control/test"
+bamDir="/ocpmi/data/bam/wes1"
 
 # Location of results directory [format will be /path/to/dir/$expName]
 resDir="/ocpmi/results/excavator2"
