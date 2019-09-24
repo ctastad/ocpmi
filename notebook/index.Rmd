@@ -7651,6 +7651,80 @@ Created    Completed  Age Project Description
 7 tasks
 ```
 
+***
+
+## 21
+
+pbmc_windowtest0
+
+* name: `pbmc_windowtest0_50000_2019-09-22_0021`
+* job: `819013.labq`
+* samples: `SAMPLE` (control), `SAMPLE` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/pbmc_windowtest0_50000_2019-09-22_0021`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+pbmc_windowtest1
+
+* name: `pbmc_windowtest1_40000_2019-09-22_0024`
+* job: `819014.labq`
+* samples: `SAMPLE` (control), `SAMPLE` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `40000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/pbmc_windowtest1_40000_2019-09-22_0024`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+pbmc_windowtest4
+
+* name: `pbmc_windowtest4_10000_2019-09-22_0028`
+  job: `819017.labq`
+* samples: `SAMPLE` (control), `SAMPLE` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `10000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/pbmc_windowtest4_10000_2019-09-22_0028`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+pbmc_windowtest5
+
+* job: `819018.labq`
+
+pbmc_windowtest6
+
+* job: `17203412.mesabim1`
+
+pbmc_windowtest7
+
+* job: `17203578.mesabim1`
+
+pbmc_windowtest8
+
+* job: `17203636.mesabim1`
+
+***
+
+## 24
+
+### TODO
+
+```{r}
+ID Active Age P Project Tags Description                                Urg
+-- ------ --- - ------- ---- ------------------------------------------ ----
+49 5d     5d    lab     work run troubleshoot excv2 on pbmc             5.83
+35        5w    lab     work create full_send.sh for varscan            1.99
+39        3w    lab     work setup starrnotes site                      1.94
+43        13d   lab     work troubleshoot window size excv2             1.87
+44        13d   lab     work troubleshoot recenter problem vs2          1.87
+45        12d   lab     work run bam2window to test for window size     1.87
+46        11d   lab     work create heatmap of cnv gene association     1.86
+47        10d   lab     work make sense of in vs out targets excv2      1.85
+52        4d    lab     work move failed excv2 to folder                1.82
+24        4mo L lab     work agenda [4]                                 1.47
+
+10 tasks
+```
+
+pbmc_windowtest
 
 ***
 

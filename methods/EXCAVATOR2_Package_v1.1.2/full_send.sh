@@ -23,7 +23,7 @@ done
 
 ## Function to remove leading path from sshfs local mount path and create control
 sed -i -e 's/\/home\/chris/~/g' ./ExperimentalFilePrepare.$expName.txt
-sed -i -e '$s/T[[:digit:]]*/C1/g' ./ExperimentalFileAnalysis.$expName.txt
+sed -i -e '$s/T[0-9]* /C1 /g' ./ExperimentalFileAnalysis.$expName.txt
 
 ## Relocate configs to Excavator working dir
 mv ExperimentalFile* $HOME$excv2Dir
@@ -45,13 +45,13 @@ cp full_send_vars.txt full_send_vars.$expName.txt
 
 ## Generate SourceTarget file and run step 1
 echo "$HOME$bigWig" "$HOME$genRef" > SourceTarget.$expName.txt
-perl TargetPerla.pl SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
+perl TargetPerla.pl -v SourceTarget.$expName.txt $HOME$bedFile $target $window $refAssm;
 
 ## Executing step 2 EXCAVATORDataPrepare.pl
-perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
+perl EXCAVATORDataPrepare.pl -v ExperimentalFilePrepare.$expName.txt --processors $numProc --target $target --assembly $refAssm
 
 ## Executing step 3 EXCAVATORDataAnalysis.pl
-perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
+perl EXCAVATORDataAnalysis.pl -v ExperimentalFileAnalysis.$expName.txt --processors $numProc --target $target --assembly $refAssm --output $HOME$resDir/$expName --mode $anMode
 
 ## Copy config files for record
 mv *.$expName.* $HOME$excv2Dir/config_files/$expName
