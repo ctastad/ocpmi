@@ -7771,6 +7771,149 @@ ID Age  P Project Tags   Description                                        Urg
 10 tasks
 ```
 
+***
+
+## 29
+
+### TODO
+
+```{r}
+```
+
+### Gene association graph
+
+Tim has asked me to graph the results of the excv2 pipeline so as to draw out gene identiy from our variation results. I'm going to create a combination of bash and R scripts to do so.
+
+#### excv2_gene_association.sh
+
+This script is the main executable which calls the other scripts. It sould be run from the `Results` directory of an excv2 output. The workhorse of this script is the bedtools function `intersect` which can draw overlapping gene regions from different files.
+
+```{r}
+#!/bin/bash
+
+################################################################################
+#
+# This script is meant to be run from the 'Results' directory of the Excavator2
+# output.
+#
+################################################################################
+
+# Establish path for function working dir
+dir=$PWD
+
+for i in */; do
+    cd $i
+    sampleName=$(pwd | awk -F'/' '{print $NF}')
+    bedtools intersect \
+        -a EXCAVATORRegionCall_* \
+        -b ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed \
+        > ${sampleName}_call_subset
+    echo "Created call subset file for" "$sampleName"
+    bedtools intersect \
+        -a ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed \
+        -b EXCAVATORRegionCall_* \
+        > bed_subset.txt
+    echo "Created bed subset file for" "$sampleName"
+    echo "Running ETL"
+    geneAssociation_etl.R
+    echo "Doing cleanup"
+    rm *_call_subset
+    rm bed_subset.txt
+    cd ../
+done
+
+echo "Finished creating sample files"
+
+echo "Creating final table"
+cat *.txt > geneAssociationTable
+rm *.txt
+sed -i -e 's/_Aligned.sortedByCoord.out_call_subset//g'
+
+echo "Graphing output"
+geneAssociationGraph.R
+
+echo "All done"
+
+```
+
+#### geneAssociation_etl.r
+
+This is an Rscript called by `excv2_gene_association.sh`. It's central purpose is to do the etl work on the excv2 vcf output.
+
+```{r}
+#!/usr/bin/env Rscript
+
+callFile <- Sys.glob("*call_subset")
+bedFile <- Sys.glob("*bed_subset.txt")
+
+bedTable <- read.table(bedFile, sep = "\t")
+callTable <- read.table(callFile, sep = ":")
+df <- data.frame(geneId = bedTable$V4,
+                 call = callTable$V8,
+                 sampleId = c(rep(callFile, nrow(bedTable))))
+write.table(df,
+            file = paste0("../etl_output_", callFile, ".txt"),
+            row.names = F, sep = "\t",
+            quote = F)
+
+```
+
+#### geneAssociationGraph.R
+
+This is the last step in the gene association process. This takes the transformed intersect dataset and graphs it as a heatmap.
+
+```{r}
+#!/usr/bin/env Rscript
+
+library(ggplot2)
+
+geneAssociationTable <- read.table("geneAssociationTable", header = T, sep = "\t")
+allGenes <- read.table("~/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed", as.is = T, sep = "\t")
+allGenes <- data.frame(geneId = allGenes$V4)
+#allGenes[, ] <- lapply(allGenes[, ], as.character)
+df <- merge(geneAssociationTable, allGenes, by = "geneId")
+
+cols <- c("-2" = "orangered", "-1" = "orange", "1" = "lightblue", "2" = "blue")
+
+ggplot(df, aes(sampleId, geneId, fill = call)) +
+    geom_tile() +
+    scale_fill_manual(values = cols) +
+    theme(axis.title.x = element_blank(), axis.text.x = element_text(angle = 60, hjust = 1), axis.text.y = element_blank())
+
+```
+
+***
+
+# October
+
+## 2
+
+### TODO
+
+```{r}
+ID Age   P Project Tags       Description                                   Urg
+-- ----- - ------- ---------- --------------------------------------------- ----
+24 4w      lab     work       setup starrnotes site                         1.99
+37 5d      lab     phone work call agilent re wes control data              1.93
+26 3w      lab     work       troubleshoot window size excv2                1.92
+27 2w      lab     work       create heatmap of cnv gene association         1.9
+28 2w      lab     work       make sense of in vs out targets excv2          1.9
+36 5d      lab     work       possibly run analysis of read depth on        1.83
+                              samples
+40 5d      lab     work       troubleshoot sshfs speed over vpn             1.83
+45 1d      lab     work       update bash script code for sed command       1.81
+46 1d      lab     work       troubleshoot plot output of gene association  1.81
+                              script
+47 1d      lab     work       change heatmap colors to red and blue         1.81
+55 16min   lab     work       run gene association graph on excv2 output     1.8
+                              with gene id bed file
+56 15min   lab     work       rerun excv2 pipeline with agilent v6 bedfile   1.8
+57 9s      lab     work       get apache working for ccgd                    1.8
+14 4mo   L lab     work       agenda                                        0.52
+
+14 tasks
+```
+
 
 ***
 

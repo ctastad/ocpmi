@@ -295,6 +295,22 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 #### MSI Processing
 
+##### Sequencing data (from Tim)
+
+Library was generated using Agilent's SureSelectXT Human All Exon V6 +COSMIC Catalog #'s 5190-9307 5190-9308 5190-9309.
+
+* https://www.agilent.com/cs/library/datasheets/public/SureSelect%20V6%20DataSheet%205991-5572EN.pdf
+
+I downloaded the BED files for from Agilent's website for the target capture. I downloaded by the BED files for Hg19 (GRCh37) and Hg38 (GRCh38). Christy Henzler's analysis used Hg19 (GRCh37) I'm pretty sure.
+
+* (S07604715) (https://earray.chem.agilent.com/suredesign/search.htm)
+
+Sequencing was done on two lanes of an Illumina NovaSeq S2 with 151 bp paired end reads. (see Nelson3_Project_003_NovaSeq_Summary.xlsx)
+
+* Run name: 181103_A00223_0048_AHGMHLDMXX-analysis
+* Total read-pairs = 4,462,035,977
+* Mean read-pairs per sample = 139,438,624
+
 **Bulk tumor DNAseq analysis (Nelson_Project_003)**
 
 * Agilent V6 Exome + COSMIC library prep, sequenced on the NovaSeq, 151 bp paired end
