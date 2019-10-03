@@ -87,13 +87,13 @@ For consistency in documenting the wide range of information, I want to have a s
 * gene_ref: `hg38.fa`, via UCSC; `~/ocpmi/gene_ref`
 ```
 
-#### exvc2 Format
+#### excv2 Format
 
 ```{r}
 * name: `expName`
 * job: `00001.mesabi`
 * samples: `sample` (control), `sample` (expt) via ; `/path/to/samples`
-* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
 * output: `~/ocpmi/results/excavator2`
 * gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
 * targets: `GCA_000001405.15_GRCh38.bw` via excv2
@@ -293,9 +293,9 @@ Project dir: `/nelsona2/shared/ovarian_Jan2019/DNA_project`
 
 ***
 
-#### MSI Processing
+### Sequencing Data
 
-##### Sequencing data (from Tim)
+**Sequencing data (from Tim)**
 
 Library was generated using Agilent's SureSelectXT Human All Exon V6 +COSMIC Catalog #'s 5190-9307 5190-9308 5190-9309.
 
