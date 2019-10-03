@@ -7914,8 +7914,60 @@ ID Age   P Project Tags       Description                                   Urg
 14 tasks
 ```
 
+### wkly mtg w/ Tim
+
+present: chris, tim
+
+Tim and I discussed my heatmap output from yesterday. I need to evaluate a few things with this. Primarily, I need to associate the cnv data I have to actual gene IDs rather than just transcript IDs like are in the bed file I've been using. Additionally, it came to my attention that agilent has a bed file specifically for the targets we've been working with, so I will need to try rerun things and look for differences.
+
+### excv2 w/ wes1 and agilent bed
+
+Per my conversation with Tim, I am going to rerun the excv2 pipeline on the wes1 bams to see if we get different results with the agilent targets. Given how excv2 manages the targeting process, I actually do expect this will have an impact.
+
+* name: `wes1_agilent_covered_01`
+* job: `820649.labq`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `~/ocpmi/data/bam/wes1`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `~/ocpmi/results/excavator2`
+* gene_ref: `hg38.fa` via UCSC, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### Gene association heatmap
+
+The bed file I've used to run excv2 and do the output-bed intersect was generated with ensembl transcript IDs. I'm going to be running the excv2 pipeline with the agilent target bed files, which may return different results. Regardless, I need to convert the final output to gene IDs eventually, so I'm going to try that with my existing bedfile.
+
+Here's a possible bioMart tutorial to get a geneID annotated bed file:
+
+* https://www.r-bloggers.com/biomart-and-biomart/
 
 ***
+
+### Summary
+
+I started a new run for the excv2 pipeline with the updated agilent v6 targets bed file. Waiting to see the results there, but I would not be surprised if they carry a significant difference in read out.
+
+Also, I need to do some digging to find the correct annotations for a heatmap figure. Currently, the ucsc browser to generate eveverything at the transcript level. I could work with that by using the intersect bedtools function to create a gene-specific subset of ranges, but it may be safer just to generate one from scratch. The BioMart package seems to be the best bet at the moment.
+
+#### Running
+
+```{r}
+ID Started    Active Age Project Tags Description
+-- ---------- ------ --- ------- ---- ------------------------------------------
+55 2019-10-02 1h     2h  lab     work rerun excv2 pipeline with agilent v6
+                                      bedfile
+
+1 task
+```
+
+#### Completed
+
+```{r}
+Created    Completed  Age Project Description
+---------- ---------- --- ------- --------------------------------------
+2019-09-12 2019-10-02 2w  lab     create heatmap of cnv gene association
+
+1 task
+```
 
 # References
 
