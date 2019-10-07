@@ -7924,6 +7924,10 @@ Tim and I discussed my heatmap output from yesterday. I need to evaluate a few t
 
 Per my conversation with Tim, I am going to rerun the excv2 pipeline on the wes1 bams to see if we get different results with the agilent targets. Given how excv2 manages the targeting process, I actually do expect this will have an impact.
 
+I downloaded the BED files for from Agilent's website for the target capture.
+
+* (S07604715) (https://earray.chem.agilent.com/suredesign/search.htm)
+
 * name: `wes1_agilent_covered_01`
 * job: `820649.labq`
 * samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `~/ocpmi/data/bam/wes1`
@@ -7939,8 +7943,6 @@ The bed file I've used to run excv2 and do the output-bed intersect was generate
 Here's a possible bioMart tutorial to get a geneID annotated bed file:
 
 * https://www.r-bloggers.com/biomart-and-biomart/
-
-***
 
 ### Summary
 
@@ -7968,6 +7970,34 @@ Created    Completed  Age Project Description
 
 1 task
 ```
+
+***
+
+## 7
+
+### TODO
+
+```{r}
+ID Age P Project Tags       Description                                     Urg
+-- --- - ------- ---------- ----------------------------------------------- ----
+18 5w    lab     work       setup starrnotes site                           2.01
+29 10d   lab     phone work call agilent re wes control data                1.95
+20 3w    lab     work       troubleshoot window size excv2                  1.94
+21 3w    lab     work       make sense of in vs out targets excv2           1.93
+28 10d   lab     work       possibly run analysis of read depth on samples  1.85
+33 6d    lab     work       update bash script code for sed command         1.83
+34 6d    lab     work       change heatmap colors to red and blue           1.83
+42 4d    lab     work       get apache working for ccgd                     1.82
+43 4d    lab     work       bring symlinks of all scripts in /usr/bin to my 1.82
+                            project folder
+46 3d    lab     work       add notation to heatmap scripts                 1.82
+12 4mo L lab     work       agenda                                          0.55
+
+11 tasks
+```
+
+
+***
 
 # References
 
