@@ -1,0 +1,14 @@
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N bam2window
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/data/bam/1kgp/star_aligned/bam2window_test
+module load perl samtools
+
+# perl bam2windows.pl [Options] <testFile> <controlFile>
+
+perl ~/ocpmi/methods/cnaNorm/bam2windows.pl z_NA19131_SRR070494_Aligned.sortedByCoord.out.bam z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam

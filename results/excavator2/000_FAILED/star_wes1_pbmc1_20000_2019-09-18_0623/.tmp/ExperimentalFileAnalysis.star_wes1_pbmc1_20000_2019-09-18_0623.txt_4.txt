@@ -1,0 +1,2 @@
+T8 data/prepare/star_wes1_pbmc1_20000_2019-09-18_0623/PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out
+T9 data/prepare/star_wes1_pbmc1_20000_2019-09-18_0623/PM-26-T17-1472-1_S12_Aligned.sortedByCoord.out PM-26-T17-1472-1_S12_Aligned.sortedByCoord.out

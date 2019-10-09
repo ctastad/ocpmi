@@ -7996,8 +7996,38 @@ ID Age P Project Tags       Description                                     Urg
 11 tasks
 ```
 
+### Gene association heatmap
+
+I was able to retrieve an ensembl geneID bed file from bioMart. I'll need to do some discordant read analysis to see if there are transcripts with varying calls within a gene.
+
+* http://useast.ensembl.org/biomart/martview/057861e7c4ab1683182100fdff6668ee
 
 ***
+
+## 8
+
+### TODO
+
+```{r}
+ID Age P Project Tags Description                                           Urg
+-- --- - ------- ---- ----------------------------------------------------- ----
+18 5w    lab     work setup starrnotes site                                 2.02
+20 3w    lab     work troubleshoot window size excv2                        1.95
+21 3w    lab     work make sense of in vs out targets excv2                 1.93
+28 12d   lab     work possibly run analysis of read depth on samples        1.87
+32 7d    lab     work update bash script code for sed command               1.84
+33 7d    lab     work change heatmap colors to red and blue                 1.84
+41 6d    lab     work get apache working for ccgd                           1.83
+42 6d    lab     work bring symlinks of all scripts in /usr/bin to my       1.83
+                      project folder
+45 4d    lab     work add notation to heatmap scripts                       1.82
+54 1d    lab     work explore discordant pairing in wes data                1.81
+58 14s   lab     work get heatmap clustering working                         1.8
+12 4mo L lab     work agenda [1]                                            1.35
+
+12 tasks
+```
+
 
 # References
 

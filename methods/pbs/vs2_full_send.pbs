@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#PBS -l walltime=4:00:00,nodes=1:ppn=8,mem=16gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N vs2_full_send
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/methods/varscan2/wes1
+module load R/3.6.0 parallel
+
+parallel 'Rscript --vanilla ../dnacopy_seg_plot.R {}' ::: *.called

@@ -1,0 +1,4 @@
+T22 data/prepare/pbmc_windowtest2_30000_2019-09-22_0027/PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out
+T23 data/prepare/pbmc_windowtest2_30000_2019-09-22_0027/PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out
+T24 data/prepare/pbmc_windowtest2_30000_2019-09-22_0027/PM-47-T18-0569-07_S27_Aligned.sortedByCoord.out PM-47-T18-0569-07_S27_Aligned.sortedByCoord.out
+T25 data/prepare/pbmc_windowtest2_30000_2019-09-22_0027/PM-49-T18-0605-11_S29_Aligned.sortedByCoord.out PM-49-T18-0605-11_S29_Aligned.sortedByCoord.out
