@@ -1,0 +1,2 @@
+T26 data/prepare/star_wes1_controlvalidate_20000_2019-09-11_2140/PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out
+T27 data/prepare/star_wes1_controlvalidate_20000_2019-09-11_2140/PM-50-T18-0595-05_S28_Aligned.sortedByCoord.out PM-50-T18-0595-05_S28_Aligned.sortedByCoord.out

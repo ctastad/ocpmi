@@ -1,0 +1,30 @@
+### pbmc_test_20000_2019-09-18_1428 {.tabset .tabfade}
+
+#### Discussion
+
+* name: `pbmc_test_20000_2019-09-18_1428`
+* samples: `SAMPLE` (control), `SAMPLE` (expt) via ; `/ocpmi/data/bam/pbmc_control/test`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/pbmc_test_20000_2019-09-18_1428`
+* gene_ref: `hg38.fa`, `hg38_sortmerge.bed` via UCSC; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+#### Figures {.tabset .tabfade}
+
+##### Collated
+
+![BTWES_Feb_12_2018_Aligned.sortedByCoord.out](/mnt/msi/tasta005/ocpmi/results/excavator2/pbmc_test_20000_2019-09-18_1428/Plots/BTWES_Feb_12_2018_Aligned.sortedByCoord.out/fig_matrix-1.png)
+
+##### BTWES_Feb_12_2018_Aligned.sortedByCoord.out
+
+**Figure Matrix**
+
+![](/mnt/msi/tasta005/ocpmi/results/excavator2/pbmc_test_20000_2019-09-18_1428/Plots/BTWES_Feb_12_2018_Aligned.sortedByCoord.out/fig_matrix-1.png)
+
+***
+
+**Individual Output**
+
+```{r, out.width = "100%", out.height = "600px", echo = F, eval=T}
+knitr::include_graphics("/mnt/msi/tasta005/ocpmi/results/excavator2/pbmc_test_20000_2019-09-18_1428/Plots/BTWES_Feb_12_2018_Aligned.sortedByCoord.out/combined.pdf")
+```

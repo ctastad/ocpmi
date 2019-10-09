@@ -1,0 +1,3 @@
+/home/starrt2/tasta005/ocpmi/data/bam/pbmc_control/test/NA10847_SRR070531_Aligned.sortedByCoord.out.bam data/prepare/pbmc_test2_20000_2019-09-18_1710/NA10847_SRR070531_Aligned.sortedByCoord.out NA10847_SRR070531_Aligned.sortedByCoord.out
+/home/starrt2/tasta005/ocpmi/data/bam/pbmc_control/test/PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out.bam data/prepare/pbmc_test2_20000_2019-09-18_1710/PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out
+/home/starrt2/tasta005/ocpmi/data/bam/pbmc_control/test/z_BTWES_Feb_12_2018_Aligned.sortedByCoord.out.bam data/prepare/pbmc_test2_20000_2019-09-18_1710/z_BTWES_Feb_12_2018_Aligned.sortedByCoord.out z_BTWES_Feb_12_2018_Aligned.sortedByCoord.out
