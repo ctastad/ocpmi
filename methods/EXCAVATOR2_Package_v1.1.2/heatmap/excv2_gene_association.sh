@@ -2,8 +2,8 @@
 
 ################################################################################
 #
-# The Results dir should be used as the primary argument when executing this
-# script. The name of the figure should be the second argument.
+# The Results dir name should be used as the primary argument when executing
+# this script. The name of the figure should be the second argument.
 #
 ################################################################################
 
@@ -46,7 +46,9 @@ cat *.txt > geneAssociationTable
 rm *.txt
 sed -i -e 's/_Aligned.sortedByCoord.out_call_subset//g' geneAssociationTable
 
-echo "Graphing output"
+echo "Graphing unclustered output"
 $scriptDir/geneAssociationGraph.R $1 $2
+echo "Graphing clustered output"
+$scriptDir/geneAssociationGraph_clust.R $1 $2
 
 echo "All done"

@@ -837,6 +837,10 @@ I found a page which I think shows a "real time" update on the current node usag
 
 * https://umgcdownload.msi.umn.edu/website/pbsnodes/index.html
 
+Also, job queue resource parameters
+
+* https://www.msi.umn.edu/queues
+
 ***
 
 ## Secondary Storage
@@ -1429,6 +1433,188 @@ sed -i -e '/##### Collated/r collated.md' figs.md
 ```
 
 ***
+
+### Gene Association Figs
+
+The 4 scripts below work in concert to generate 2 heatmap figures. The first is the unclustered output of calls by ensembl geneID by patient. The second is the same dataset in a clustered heatmap created using the `pheatmap` package.
+
+The `excv2_gene_association.sh` script should be run from the heatmap dir (`~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/heatmap`) with 2 arguments:
+
+1. The excv2 results directory name (not the full path)
+2. The desired title for the figure
+
+Also, given the resource demand of `hclust`, this full process requires ~48GB of ram. Ran without `geneAssociationGraph_clust.R` can be done on any machine with basic resources.
+
+#### excv2_gene_association.sh
+
+```{r}
+#!/bin/bash
+
+################################################################################
+#
+# The Results dir name should be used as the primary argument when executing
+# this script. The name of the figure should be the second argument.
+#
+################################################################################
+
+# module load bedtools R/3.6.0
+
+# Establish path for function working dir
+dir=$HOME/ocpmi/results/excavator2/$1/Results
+cd $dir
+# geneAssociation scripts location
+scriptDir=$HOME/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/heatmap
+
+for i in */; do
+    cd $i
+    sampleName=$(pwd | awk -F'/' '{print $NF}')
+    bedtools intersect \
+        -a EXCAVATORRegionCall_* \
+        -b $HOME/ocpmi/data/gene_ref/biomart/hg38/ensembl_genes.bed \
+        > ${sampleName}_call_subset
+        # -b $HOME/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed \
+    echo "Created call subset file for" "$sampleName"
+    bedtools intersect \
+        -a $HOME/ocpmi/data/gene_ref/biomart/hg38/ensembl_genes.bed \
+        -b EXCAVATORRegionCall_* \
+        > bed_subset.txt
+        # -a $HOME/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed \
+    echo "Created bed subset file for" "$sampleName"
+    echo "Running ETL"
+    $scriptDir/geneAssociation_etl.R
+    echo "Doing cleanup"
+    mv etl_output* $dir
+    rm *_call_subset
+    rm bed_subset.txt
+    cd $dir
+done
+
+echo "Finished creating sample files"
+
+echo "Creating final table"
+cat *.txt > geneAssociationTable
+rm *.txt
+sed -i -e 's/_Aligned.sortedByCoord.out_call_subset//g' geneAssociationTable
+
+echo "Graphing unclustered output"
+$scriptDir/geneAssociationGraph.R $1 $2
+echo "Graphing clustered output"
+$scriptDir/geneAssociationGraph_clust.R $1 $2
+
+echo "All done"
+```
+
+#### geneAssociation_etl.R
+
+```{r}
+#!/usr/bin/env Rscript
+
+################################################################################
+#
+# This is the helper script for the gene_association process. It takes the
+# output bedfile subsets from bedtools intersect and assembles them into a
+# workable dataframe.
+#
+################################################################################
+
+# Draw file names from local dir
+callFile <- Sys.glob("*call_subset")
+bedFile <- Sys.glob("*bed_subset.txt")
+
+bedTable <- read.table(bedFile, sep = "\t")
+callTable <- read.table(callFile, sep = ":")
+df <- data.frame(geneId = bedTable$V4,
+                 geneName = bedTable$V5,
+                 call = callTable$V8,
+                 sampleId = c(rep(callFile, nrow(bedTable))))
+write.table(df,
+            file = paste0("etl_output_", callFile, ".txt"),
+            row.names = F, sep = "\t",
+            col.names = F,
+            quote = F)
+```
+
+#### geneAssociation_etl.R
+
+```{r}
+#!/usr/bin/env Rscript
+
+################################################################################
+#
+# This script is used to create the graphical output of the geneAssociation
+# function. The first argument should be the experiment name, and the second
+# should be the figure title.
+#
+################################################################################
+
+library(ggplot2)
+
+# Pull arguments passed from original command
+args <- commandArgs(TRUE)
+dir <- paste0("~/ocpmi/results/excavator2/", args[1], "/Results")
+setwd(dir)
+
+geneAssociationTable <- read.table("geneAssociationTable", header = F, sep = "\t")
+colnames(geneAssociationTable) <- c("seqId", "geneName", "call", "sampleId")
+
+g <- ggplot(geneAssociationTable) +
+    geom_tile(aes(sampleId, seqId, fill = call)) +
+    scale_fill_distiller(palette = "RdBu") +
+    labs(title = args[2]) +
+    theme(axis.title.x = element_blank(),
+          axis.text.x = element_text(angle = 90, hjust = 1),
+          axis.text.y = element_blank())
+
+ggsave("unclustered_plot.png", plot = g)
+```
+
+#### geneAssociationGraph_clust.R
+
+```{r}
+#!/usr/bin/env Rscript
+
+################################################################################
+#
+# This scriopt creates a clustered graphical heatmap from the same dataset as
+# geneAssociationGraph.R using the pheatmap package.
+#
+################################################################################
+
+# Pull arguments passed from original command
+args <- commandArgs(TRUE)
+dir <- paste0("~/ocpmi/results/excavator2/", args[1], "/Results")
+setwd(dir)
+
+library(reshape2)
+library(pheatmap)
+library(RColorBrewer)
+
+geneAssociationTable <- read.table("geneAssociationTable",
+                                   header = F,
+                                   sep = "\t")
+message("created OG table")
+colnames(geneAssociationTable) <- c("seqId", "geneName", "call", "sampleId")
+tableWide_lab <- dcast(geneAssociationTable,
+                   seqId + geneName ~ sampleId,
+                   value.var = "call",
+                   fun = median,
+                   fill = 0)
+message("reshaped table to wide format")
+
+tableWide <- tableWide_lab[,-2]
+rownames(tableWide) <- tableWide[,1]
+tableWide[,1] <- NULL
+mat_unmelt <- as.matrix(tableWide)
+message("created matrix")
+
+message("working on heatmap")
+pheatmap(mat_unmelt,
+         show_rownames = F,
+         brewer.pal(n = 5, name = "RdBu"),
+         filename = "clustered_plot.png",
+         main = args[2])
+```
+
 
 ### Installation
 

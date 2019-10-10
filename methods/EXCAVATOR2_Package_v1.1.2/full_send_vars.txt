@@ -18,10 +18,10 @@
 # Analysis variables
 ################################################################################
 # Experiment name
-expName="wes1_agilent_covered_01"
+expName="wes1_agilent_covered_09"
 
 # Window size
-window="20000"
+window="500"
 
 # Number of processors for parallelization
 numProc="8"
