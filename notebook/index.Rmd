@@ -8231,6 +8231,86 @@ pheatmap(mat_unmelt,
          main = args[2])
 ```
 
+### wes1_agilent_covered_02_50000_2019-10-09_1332
+
+* name: `wes1_agilent_covered_02_50000_2019-10-09_1332`
+* job: `821837.labq`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `50000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/wes1_agilent_covered_02_50000_2019-10-09_1332`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_03_40000_2019-10-09_1333
+
+* name: `wes1_agilent_covered_03_40000_2019-10-09_1333`
+* job: `821838.labq`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `40000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/wes1_agilent_covered_03_40000_2019-10-09_1333`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_04_30000_2019-10-09_133
+
+* name: `wes1_agilent_covered_04_30000_2019-10-09_1336`
+* job: `821841.labq`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `30000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/wes1_agilent_covered_04_30000_2019-10-09_1336`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_05_20000_2019-10-09_13
+
+* name: `wes1_agilent_covered_05_20000_2019-10-09_1338`
+* job: `821843.labq`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `20000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/wes1_agilent_covered_05_20000_2019-10-09_1338`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_06_10000_2019-10-09_1
+
+* name: `wes1_agilent_covered_06_10000_2019-10-09_1340`
+* job: `821846.labq`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `10000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/wes1_agilent_covered_06_10000_2019-10-09_1340`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_07_5000_2019-10-09_1
+
+* name: `wes1_agilent_covered_07_5000_2019-10-09_1343`
+* job: `17685360.mesabim1`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `5000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/wes1_agilent_covered_07_5000_2019-10-09_1343`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_08_1000_2019-10-09_1345
+
+* name: `wes1_agilent_covered_08_1000_2019-10-09_1345`
+* job: `17685388.mesabim1`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `5000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
+### wes1_agilent_covered_09_500_2019-10-09_1347
+
+* name: `wes1_agilent_covered_09_500_2019-10-09_1347`
+* job: `17685418.mesabim1`
+* samples: `BTWES` (control), `*.bam ocpmi` (expt) via ; `/ocpmi/data/bam/wes1`
+* excv2_vars: `5000` (window); `pooling` (analysis mode)
+* output: `/ocpmi/results/excavator2/`
+* gene_ref: `hg38.fa`, `S07604715_Covered_excv2_formatted.bed` via Agilent; `~/ocpmi/gene_ref`
+* targets: `GCA_000001405.15_GRCh38.bw` via excv2
+
 ***
 
 ## 10
@@ -8256,7 +8336,129 @@ ID Age P Project Tags Description                                           Urg
 11 tasks
 ```
 
+### wkly mtg w/ Tim
 
+present: chris, tim
+
+We discussed the output I've generated through the gene association approach. The figure is generally looking good with how the data is clustering and showing notable grouping among both genes and patients.
+
+One issue I raised was that there was some difficulty in finding a "clean" gene ID bed file. The dataset I had to filter the output probably contained a good deal of overlapping or generallly junk genes. My goal was to strive for a comprehensive list, but this was only really achievable through datasets that had a notable ambiguity (e.g. conveting a transcript ID list to gene ID). Tim gave me a list of genes he had created that was subsetted across genes that are all present in the RefSeq, CCDS lists as well as having a HUGO ID. I'm going to run the heatmap creation with this list and see what we end up with. In addition, we agreed that I should also do some subsetting by patient typing with the clustering results I see.
+
+Typing (OCPMI spreadsheet):
+
+* histotype
+* molecular subtype
+* chemoresistance
+
+Tim also pointed me to the work of klaus pautel of germany. He presented somework on wes cnv methods at a conference in San Diego that Tim thought might be helpful.
+
+### heatmap
+
+I've updated the heatmap per the conversation I've had with Tim. There doesn't seem to be any sort of pattern formation around any of our patient parameters, which is odd. I'm going to explore the nature of the clustering method to see if there is a more appropriate way to cluster the results since I expect there to be at least some correlation in the cnv profile accross patient categorization.
+
+```{r}
+#!/usr/bin/env Rscript
+
+################################################################################
+#
+# This scriopt creates a clustered graphical heatmap from the same dataset as
+# geneAssociationGraph.R using the pheatmap package.
+#
+################################################################################
+
+# Pull arguments passed from original command
+args <- commandArgs(TRUE)
+dir <- paste0("~/ocpmi/results/excavator2/", args[1], "/Results")
+setwd(dir)
+
+library(reshape2)
+library(pheatmap)
+library(RColorBrewer)
+library(scales)
+
+geneAssociationTable <- read.table("geneAssociationTable",
+                                   header = F,
+                                   sep = "\t")
+message("created OG table")
+colnames(geneAssociationTable) <- c("seqId", "geneName", "call", "sampleId")
+tableWide_lab <- dcast(geneAssociationTable,
+                   seqId + geneName ~ sampleId,
+                   value.var = "call",
+                   fun = median,
+                   fill = 0)
+message("reshaped table to wide format")
+
+tableWide <- tableWide_lab[,-2]
+rownames(tableWide) <- tableWide[,1]
+tableWide[,1] <- NULL
+mat_unmelt <- as.matrix(tableWide)
+message("created matrix")
+
+subtypes <- read.csv("~/ocpmi/reference/wes/patient_subtyping.csv")
+rownames(subtypes) <- subtypes$sample
+subtypes[1] <- NULL
+
+message("working on heatmap")
+pheatmap(mat_unmelt,
+         show_rownames = F,
+         #color = colorRampPalette(rev(brewer.pal(n = 5, name = "RdBu"))),
+         color = brewer_pal(palette = "RdBu", direction = -1)(5),
+         annotation_col = subtypes,
+         filename = "clustered_plot.pdf",
+         main = args[2])
+
+```
+
+
+### Summary
+
+#### Completed
+
+```{r}
+Created    Completed  Age   Project Description
+---------- ---------- ----- ------- --------------------------------------------
+2019-10-04 2019-10-10 6d    lab     add notation to heatmap scripts
+2019-10-08 2019-10-10 2d    lab     get heatmap clustering working
+2019-10-08 2019-10-10 1d    lab     run exc2 at different window ranges with
+                                    agilent bed
+2019-10-09 2019-10-10 1d    lab     make git commits
+2019-10-10 2019-10-10 56min lab     add subtyping color bars to wes heatmap
+
+5 tasks
+```
+
+***
+
+## 11
+
+### Collaborator mtg
+
+I spoke with Jun re his work on CNV with the ocpmi data. He has run inferCNV with pt59 and has sent me reference to some of his scripts. I can take a look at implementing this across all single cell samples.
+
+#### From Jun
+
+Hi Chris,
+
+I put inferCNV on MSI public directory.
+
+To load it,
+1) $ module load JAGS/4.3.0-gcc7.2.0
+2) $ R
+   > library('infercnv', lib.loc='/home/starrt2/public/infercnv/library')
+
+Example script and input files I used (msi37) are:
+/home/starrt2/public/infercnv/msi37/infercnv.R
+/home/starrt2/public/infercnv/msi37/msi37_epi_nonlog.rds (just the count matrix)
+/home/starrt2/public/infercnv/msi37/gene_ordering_file.txt (grch38 gene locations)
+/home/starrt2/public/infercnv/msi37/sample_annotation_file.txt (barcode vs. cluster IDs)
+
+It takes several hours so would have to be submitted to a queue. The resulting figures etc are not optimal (chromosomes not ordered etc) but the output files are there, so I think we would need to generate our own figures from them. I can help with that as well.
+
+If you get to try on other samples, I would be interested in knowing how it compares with exome seq results.
+
+Thanks, Jun
+
+***
 
 # References
 
