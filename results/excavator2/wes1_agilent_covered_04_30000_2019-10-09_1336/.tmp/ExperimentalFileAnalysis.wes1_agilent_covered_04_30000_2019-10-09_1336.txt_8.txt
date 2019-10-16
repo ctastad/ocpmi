@@ -1,0 +1,4 @@
+T30 data/prepare/wes1_agilent_covered_04_30000_2019-10-09_1336/PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out
+T31 data/prepare/wes1_agilent_covered_04_30000_2019-10-09_1336/PM-6-T17-0382-2_S5_Aligned.sortedByCoord.out PM-6-T17-0382-2_S5_Aligned.sortedByCoord.out
+T32 data/prepare/wes1_agilent_covered_04_30000_2019-10-09_1336/PM-7-T17-0576-3_S7_Aligned.sortedByCoord.out PM-7-T17-0576-3_S7_Aligned.sortedByCoord.out
+T33 data/prepare/wes1_agilent_covered_04_30000_2019-10-09_1336/PM-9-T17-0591-1_S6_Aligned.sortedByCoord.out PM-9-T17-0591-1_S6_Aligned.sortedByCoord.out

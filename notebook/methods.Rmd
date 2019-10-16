@@ -203,6 +203,23 @@ Following an example from the Seurat pbmc tutorial, I am incorporating folding p
 * Tutorial: [file:///mnt/msi/tasta005/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html](file:///mnt/msi/tasta005/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html)
     - `~/ocpmi/methods/seurat/seurat_tutorial/pbmc3k_tutorial.html`
 
+### Sequencing Data
+
+<details>
+  <summary>**from: Ying re single cell location 9/26/19**</summary>
+Hi, Chris,
+
+/home/starrt2/shared/cellranger_v3_results
+
+There is a file names “fname.txt” where you can find the data_release folder of UMGC raw reads.
+
+
+Best,
+Ying
+</details>
+
+* dir: `/home/starrt2/shared/cellranger_v3_results`
+
 ***
 
 ## wes
@@ -1877,6 +1894,34 @@ The vertical colored bar on the left of the heatmaps show the cell type. They ar
 
 If you have any question or would like to discuss in more detail, I’ll be happy to connect with you sometime this week to have a look together. I live in Colorado so we would use Skype or Google Hangouts if you’d like to do this.
 
+</details>
+
+***
+
+## inferCNV
+
+<details>
+  <summary>**from: Jun re implementation of SC inferCNV**</summary>
+Hi Chris,
+
+I put inferCNV on MSI public directory.
+
+To load it,
+1) $ module load JAGS/4.3.0-gcc7.2.0
+2) $ R
+   > library('infercnv', lib.loc='/home/starrt2/public/infercnv/library')
+
+Example script and input files I used (msi37) are:
+/home/starrt2/public/infercnv/msi37/infercnv.R
+/home/starrt2/public/infercnv/msi37/msi37_epi_nonlog.rds (just the count matrix)
+/home/starrt2/public/infercnv/msi37/gene_ordering_file.txt (grch38 gene locations)
+/home/starrt2/public/infercnv/msi37/sample_annotation_file.txt (barcode vs. cluster IDs)
+
+It takes several hours so would have to be submitted to a queue. The resulting figures etc are not optimal (chromosomes not ordered etc) but the output files are there, so I think we would need to generate our own figures from them. I can help with that as well.
+
+If you get to try on other samples, I would be interested in knowing how it compares with exome seq results.
+
+Thanks, Jun
 </details>
 
 ***

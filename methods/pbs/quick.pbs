@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#PBS -l walltime=1:00:00,nodes=1:ppn=16,mem=48gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N quick_job
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/heatmap
+module load R/3.6.0
+
+./geneAssociationGraph_clust.R

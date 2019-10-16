@@ -20,15 +20,13 @@ for i in */; do
     sampleName=$(pwd | awk -F'/' '{print $NF}')
     bedtools intersect \
         -a EXCAVATORRegionCall_* \
-        -b $HOME/ocpmi/data/gene_ref/biomart/hg38/ensembl_genes.bed \
+        -b $HOME/ocpmi/data/gene_ref/tim/master_gene_list.bed \
         > ${sampleName}_call_subset
-        # -b $HOME/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed \
     echo "Created call subset file for" "$sampleName"
     bedtools intersect \
-        -a $HOME/ocpmi/data/gene_ref/biomart/hg38/ensembl_genes.bed \
+        -a $HOME/ocpmi/data/gene_ref/tim/master_gene_list.bed \
         -b EXCAVATORRegionCall_* \
         > bed_subset.txt
-        # -a $HOME/ocpmi/data/gene_ref/ucsc/hg38/hg38.bed \
     echo "Created bed subset file for" "$sampleName"
     echo "Running ETL"
     $scriptDir/geneAssociation_etl.R

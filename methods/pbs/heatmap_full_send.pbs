@@ -1,0 +1,12 @@
+#!/bin/bash -l
+#PBS -l walltime=8:00:00,nodes=1:ppn=4,mem=32gb
+#PBS -m abe
+#PBS -M tasta005@umn.edu
+#PBS -N heatmap_full_send
+#PBS -o logs/output
+#PBS -e logs/error
+
+cd ~/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/heatmap
+module load R/3.6.0 bedtools
+
+./excv2_gene_association.sh wes1_agilent_covered_01_20000_2019-10-02_1828 row_col_annotated_20k
