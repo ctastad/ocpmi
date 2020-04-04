@@ -1,0 +1,18 @@
+mkdir: cannot create directory ‘/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_1kgp_compare’: File exists
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly,  :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/hg38_target' already exists
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly,  :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/hg38_target/GCC' already exists
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly,  :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/hg38_target/MAP' already exists
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly,  :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/hg38_target/FRB' already exists
+processing chromosomes
+Read 3975 items

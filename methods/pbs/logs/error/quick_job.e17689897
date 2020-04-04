@@ -1,0 +1,21 @@
+Saving 7 x 7 in image
+Error in .External2(C_X11, paste0("png::", filename), g$width, g$height,  : 
+  unable to start device PNG
+Calls: ggsave -> dev -> <Anonymous>
+In addition: Warning message:
+In grDevices::png(..., res = dpi, units = "in") :
+  unable to open connection to X11 display ''
+Execution halted
+created OG table
+reshaped table to wide format
+created matrix
+working on heatmap
+Error in .External2(C_X11, paste0("png::", filename), g$width, g$height,  : 
+  unable to start device PNG
+Calls: pheatmap -> heatmap_motor -> f -> png
+In addition: Warning message:
+In png(x, units = "in", res = 300, ...) :
+  unable to open connection to X11 display ''
+Execution halted
+Warning message:
+system call failed: Cannot allocate memory 

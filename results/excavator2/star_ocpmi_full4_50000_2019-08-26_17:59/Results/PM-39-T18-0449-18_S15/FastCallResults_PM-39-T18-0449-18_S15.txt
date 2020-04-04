@@ -1,1 +1,0 @@
-Chromosome	Start	End	Segment	CNF	CN	Call	ProbCall

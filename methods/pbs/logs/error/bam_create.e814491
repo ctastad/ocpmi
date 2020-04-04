@@ -1,0 +1,321 @@
+/var/spool/torque/mom_priv/jobs/814491.labq.msi.umn.edu.SC: line 21: 30097 Killed                  STAR --runThreadN 6 --runMode genomeGenerate --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeFastaFiles ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa --sjdbGTFfile ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.gtf --sjdbOverhang 100
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:23 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:31 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:38 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:39 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:40 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: could not open genome file /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/genomeParameters.txt
+SOLUTION: check that the path to genome files, specified in --genomeDir is correct and the files are present, and have user read permsissions
+
+Aug 19 22:43:41 ...... FATAL ERROR, exiting

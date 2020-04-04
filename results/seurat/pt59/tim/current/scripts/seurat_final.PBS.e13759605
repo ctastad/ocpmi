@@ -1,1153 +1,0 @@
-
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union
-
-Warning messages:
-1: In rgl.init(initValue, onlyNULL) : RGL: unable to open X11 display
-2: 'rgl_init' failed, running with rgl.useNULL = TRUE 
-
-Attaching package: ‘gplots’
-
-The following object is masked from ‘package:stats’:
-
-    lowess
-
-Performing log-normalization
-0%   10   20   30   40   50   60   70   80   90   100%
-[----|----|----|----|----|----|----|----|----|----|
-**************************************************|
-Calculating gene variances
-0%   10   20   30   40   50   60   70   80   90   100%
-[----|----|----|----|----|----|----|----|----|----|
-**************************************************|
-Calculating feature variances of standardized and clipped values
-0%   10   20   30   40   50   60   70   80   90   100%
-[----|----|----|----|----|----|----|----|----|----|
-**************************************************|
-Regressing out nCount_RNA, percent.mito
-  |                                                                              |                                                                      |   0%  |                                                                              |                                                                      |   1%  |                                                                              |=                                                                     |   1%  |                                                                              |=                                                                     |   2%  |                                                                              |==                                                                    |   2%  |                                                                              |==                                                                    |   3%  |                                                                              |===                                                                   |   4%  |                                                                              |===                                                                   |   5%  |                                                                              |====                                                                  |   5%  |                                                                              |====                                                                  |   6%  |                                                                              |=====                                                                 |   6%  |                                                                              |=====                                                                 |   7%  |                                                                              |=====                                                                 |   8%  |                                                                              |======                                                                |   8%  |                                                                              |======                                                                |   9%  |                                                                              |=======                                                               |   9%  |                                                                              |=======                                                               |  10%  |                                                                              |=======                                                               |  11%  |                                                                              |========                                                              |  11%  |                                                                              |========                                                              |  12%  |                                                                              |=========                                                             |  12%  |                                                                              |=========                                                             |  13%  |                                                                              |=========                                                             |  14%  |                                                                              |==========                                                            |  14%  |                                                                              |==========                                                            |  15%  |                                                                              |===========                                                           |  15%  |                                                                              |===========                                                           |  16%  |                                                                              |============                                                          |  16%  |                                                                              |============                                                          |  17%  |                                                                              |============                                                          |  18%  |                                                                              |=============                                                         |  18%  |                                                                              |=============                                                         |  19%  |                                                                              |==============                                                        |  19%  |                                                                              |==============                                                        |  20%  |                                                                              |==============                                                        |  21%  |                                                                              |===============                                                       |  21%  |                                                                              |===============                                                       |  22%  |                                                                              |================                                                      |  22%  |                                                                              |================                                                      |  23%  |                                                                              |================                                                      |  24%  |                                                                              |=================                                                     |  24%  |                                                                              |=================                                                     |  25%  |                                                                              |==================                                                    |  25%  |                                                                              |==================                                                    |  26%  |                                                                              |===================                                                   |  27%  |                                                                              |===================                                                   |  28%  |                                                                              |====================                                                  |  28%  |                                                                              |====================                                                  |  29%  |                                                                              |=====================                                                 |  29%  |                                                                              |=====================                                                 |  30%  |                                                                              |=====================                                                 |  31%  |                                                                              |======================                                                |  31%  |                                                                              |======================                                                |  32%  |                                                                              |=======================                                               |  32%  |                                                                              |=======================                                               |  33%  |                                                                              |=======================                                               |  34%  |                                                                              |========================                                              |  34%  |                                                                              |========================                                              |  35%  |                                                                              |=========================                                             |  35%  |                                                                              |=========================                                             |  36%  |                                                                              |==========================                                            |  36%  |                                                                              |==========================                                            |  37%  |                                                                              |==========================                                            |  38%  |                                                                              |===========================                                           |  38%  |                                                                              |===========================                                           |  39%  |                                                                              |============================                                          |  39%  |                                                                              |============================                                          |  40%  |                                                                              |============================                                          |  41%  |                                                                              |=============================                                         |  41%  |                                                                              |=============================                                         |  42%  |                                                                              |==============================                                        |  42%  |                                                                              |==============================                                        |  43%  |                                                                              |==============================                                        |  44%  |                                                                              |===============================                                       |  44%  |                                                                              |===============================                                       |  45%  |                                                                              |================================                                      |  45%  |                                                                              |================================                                      |  46%  |                                                                              |=================================                                     |  46%  |                                                                              |=================================                                     |  47%  |                                                                              |=================================                                     |  48%  |                                                                              |==================================                                    |  48%  |                                                                              |==================================                                    |  49%  |                                                                              |===================================                                   |  49%  |                                                                              |===================================                                   |  50%  |                                                                              |===================================                                   |  51%  |                                                                              |====================================                                  |  51%  |                                                                              |====================================                                  |  52%  |                                                                              |=====================================                                 |  52%  |                                                                              |=====================================                                 |  53%  |                                                                              |=====================================                                 |  54%  |                                                                              |======================================                                |  54%  |                                                                              |======================================                                |  55%  |                                                                              |=======================================                               |  55%  |                                                                              |=======================================                               |  56%  |                                                                              |========================================                              |  56%  |                                                                              |========================================                              |  57%  |                                                                              |========================================                              |  58%  |                                                                              |=========================================                             |  58%  |                                                                              |=========================================                             |  59%  |                                                                              |==========================================                            |  59%  |                                                                              |==========================================                            |  60%  |                                                                              |==========================================                            |  61%  |                                                                              |===========================================                           |  61%  |                                                                              |===========================================                           |  62%  |                                                                              |============================================                          |  62%  |                                                                              |============================================                          |  63%  |                                                                              |============================================                          |  64%  |                                                                              |=============================================                         |  64%  |                                                                              |=============================================                         |  65%  |                                                                              |==============================================                        |  65%  |                                                                              |==============================================                        |  66%  |                                                                              |===============================================                       |  66%  |                                                                              |===============================================                       |  67%  |                                                                              |===============================================                       |  68%  |                                                                              |================================================                      |  68%  |                                                                              |================================================                      |  69%  |                                                                              |=================================================                     |  69%  |                                                                              |=================================================                     |  70%  |                                                                              |=================================================                     |  71%  |                                                                              |==================================================                    |  71%  |                                                                              |==================================================                    |  72%  |                                                                              |===================================================                   |  72%  |                                                                              |===================================================                   |  73%  |                                                                              |====================================================                  |  74%  |                                                                              |====================================================                  |  75%  |                                                                              |=====================================================                 |  75%  |                                                                              |=====================================================                 |  76%  |                                                                              |======================================================                |  76%  |                                                                              |======================================================                |  77%  |                                                                              |======================================================                |  78%  |                                                                              |=======================================================               |  78%  |                                                                              |=======================================================               |  79%  |                                                                              |========================================================              |  79%  |                                                                              |========================================================              |  80%  |                                                                              |========================================================              |  81%  |                                                                              |=========================================================             |  81%  |                                                                              |=========================================================             |  82%  |                                                                              |==========================================================            |  82%  |                                                                              |==========================================================            |  83%  |                                                                              |==========================================================            |  84%  |                                                                              |===========================================================           |  84%  |                                                                              |===========================================================           |  85%  |                                                                              |============================================================          |  85%  |                                                                              |============================================================          |  86%  |                                                                              |=============================================================         |  86%  |                                                                              |=============================================================         |  87%  |                                                                              |=============================================================         |  88%  |                                                                              |==============================================================        |  88%  |                                                                              |==============================================================        |  89%  |                                                                              |===============================================================       |  89%  |                                                                              |===============================================================       |  90%  |                                                                              |===============================================================       |  91%  |                                                                              |================================================================      |  91%  |                                                                              |================================================================      |  92%  |                                                                              |=================================================================     |  92%  |                                                                              |=================================================================     |  93%  |                                                                              |=================================================================     |  94%  |                                                                              |==================================================================    |  94%  |                                                                              |==================================================================    |  95%  |                                                                              |===================================================================   |  95%  |                                                                              |===================================================================   |  96%  |                                                                              |====================================================================  |  97%  |                                                                              |====================================================================  |  98%  |                                                                              |===================================================================== |  98%  |                                                                              |===================================================================== |  99%  |                                                                              |======================================================================|  99%  |                                                                              |======================================================================| 100%
-Scaling data matrix
-  |                                                                              |                                                                      |   0%  |                                                                              |===================================                                   |  50%  |                                                                              |======================================================================| 100%
-PC_1
-Positive: WFDC2, CD24, SPINT2, BCAM, EPCAM, LINC01986, ELF3, CDKN2A, CD9, CLDN3
-	  YWHAE, C6orf132, KRT7, CKB, SLPI, CLDN7, ASRGL1, THSD4, KRT17, IGF2BP2
-	  LAPTM4B, HMGA1, TACSTD2, CLDN6, KLK6, MTCH1, MSLN, HSP90AB1, DMKN, KRT18
-Negative: COL1A2, DCN, COL3A1, SPARC, FN1, COL5A2, VCAN, COL1A1, COL6A2, MMP2
-	  BGN, COL8A1, THBS2, COL6A1, COL6A3, CTHRC1, LUM, THY1, COL5A1, PCOLCE
-	  AEBP1, FAP, NBL1, CLEC11A, INHBA, GJB2, OLFML3, IGFBP7, ACTA2, CCDC80
-
-PC_2
-Positive: CALD1, CTHRC1, SPARC, COL1A2, RARRES2, COL3A1, DCN, COL1A1, TAGLN, C1S
-	  CYR61, TPM2, BGN, TPM1, MYL9, C1R, COL6A2, THY1, COL5A2, IGFBP7
-	  NNMT, LUM, CCDC80, AEBP1, COL8A1, PCOLCE, NBL1, COL6A1, THBS2, MEG3
-Negative: ALOX5AP, CCL4, C1QC, LYZ, CD14, C15orf48, C1QB, CCL3, AREG, SPP1
-	  TREM2, CCL4L2, APOC1, G0S2, IGSF6, CCL3L1, IL1B, LTB, VSIG4, IFI30
-	  NKG7, CH25H, TNFSF13B, RNASE1, SDS, GZMA, TRBC1, CCL20, IL1RN, PLAC8
-
-PC_3
-Positive: COL8A1, GJB2, THBS2, COL11A1, MEG3, COL1A1, RARRES2, DCN, LUM, INHBA
-	  COL5A1, VCAN, COL1A2, PLAU, ISLR, SLC12A8, AEBP1, MMP11, LOXL1, COL6A3
-	  NBL1, PDGFRL, CDH11, COL3A1, NTM, CTHRC1, FN1, C1S, PDLIM3, COL5A2
-Negative: CLEC14A, ECSCR, ADGRL4, RAMP2, VWF, ESAM, PLVAP, EMCN, RAMP3, CLDN5
-	  PCDH17, CXorf36, AQP1, TM4SF18, GNG11, MYCT1, FAM167B, CD34, CALCRL, COL15A1
-	  NOTCH4, ACKR1, SPARCL1, APLNR, SLCO2A1, ADGRF5, PTPRB, CDH5, EGFL7, THSD7A
-
-PC_4
-Positive: C1QB, C1QC, CD14, APOE, SPP1, CCL3, APOC1, TREM2, LYZ, C15orf48
-	  RNASE1, CTSL, CCL3L1, GPNMB, G0S2, CXCL8, VSIG4, IL1B, TNFSF13B, CCL4L2
-	  IL4I1, IGSF6, PLIN2, CXCL2, SDS, IFI30, CCL20, S100A9, CH25H, IL1RN
-Negative: GZMA, LTB, TRBC1, NKG7, ITM2A, GNLY, KLRB1, KLRD1, PRF1, GZMB
-	  GZMK, TRDC, CCR7, GZMH, SH2D2A, ZNF683, TNFRSF18, HOPX, KLRC1, SPOCK2
-	  CD79A, XCL2, TNFRSF4, STK17A, KLRC2, KRT86, LAG3, KRT81, MZB1, IGHM
-
-PC_5
-Positive: RARRES1, CFB, CXCL1, PRG4, CLU, CXCL2, PDZK1IP1, CXCL6, CHI3L1, PLA2G2A
-	  HP, SLPI, TFPI2, IGFBP3, CP, SAA1, VTN, IGF1, CXCL3, EFEMP1
-	  SNCG, LCN2, SLC40A1, LYPD2, TGM1, CRYAB, EVA1C, MGST1, OGN, C1R
-Negative: UBE2C, TOP2A, NUSAP1, MKI67, BIRC5, CENPF, HMGB2, CKS1B, PTTG1, CDKN3
-	  CENPA, CDK1, CCNB2, TPX2, CCNB1, NUF2, CCNA2, CDC20, PLK1, MAD2L1
-	  CDCA3, HIST1H4C, TK1, AURKB, KPNA2, SMC4, CENPE, ASPM, PCLAF, SPC25
-
-PC_1
-Positive: WFDC2, CD24, SPINT2, BCAM, EPCAM, LINC01986, ELF3, CDKN2A, CD9, CLDN3
-	  YWHAE, C6orf132, KRT7, CKB, SLPI, CLDN7, ASRGL1, THSD4, KRT17, IGF2BP2
-Negative: COL1A2, DCN, COL3A1, SPARC, FN1, COL5A2, VCAN, COL1A1, COL6A2, MMP2
-	  BGN, COL8A1, THBS2, COL6A1, COL6A3, CTHRC1, LUM, THY1, COL5A1, PCOLCE
-
-PC_2
-Positive: CALD1, CTHRC1, SPARC, COL1A2, RARRES2, COL3A1, DCN, COL1A1, TAGLN, C1S
-	  CYR61, TPM2, BGN, TPM1, MYL9, C1R, COL6A2, THY1, COL5A2, IGFBP7
-Negative: ALOX5AP, CCL4, C1QC, LYZ, CD14, C15orf48, C1QB, CCL3, AREG, SPP1
-	  TREM2, CCL4L2, APOC1, G0S2, IGSF6, CCL3L1, IL1B, LTB, VSIG4, IFI30
-
-PC_3
-Positive: COL8A1, GJB2, THBS2, COL11A1, MEG3, COL1A1, RARRES2, DCN, LUM, INHBA
-	  COL5A1, VCAN, COL1A2, PLAU, ISLR, SLC12A8, AEBP1, MMP11, LOXL1, COL6A3
-Negative: CLEC14A, ECSCR, ADGRL4, RAMP2, VWF, ESAM, PLVAP, EMCN, RAMP3, CLDN5
-	  PCDH17, CXorf36, AQP1, TM4SF18, GNG11, MYCT1, FAM167B, CD34, CALCRL, COL15A1
-
-PC_4
-Positive: C1QB, C1QC, CD14, APOE, SPP1, CCL3, APOC1, TREM2, LYZ, C15orf48
-	  RNASE1, CTSL, CCL3L1, GPNMB, G0S2, CXCL8, VSIG4, IL1B, TNFSF13B, CCL4L2
-Negative: GZMA, LTB, TRBC1, NKG7, ITM2A, GNLY, KLRB1, KLRD1, PRF1, GZMB
-	  GZMK, TRDC, CCR7, GZMH, SH2D2A, ZNF683, TNFRSF18, HOPX, KLRC1, SPOCK2
-
-PC_5
-Positive: RARRES1, CFB, CXCL1, PRG4, CLU, CXCL2, PDZK1IP1, CXCL6, CHI3L1, PLA2G2A
-	  HP, SLPI, TFPI2, IGFBP3, CP, SAA1, VTN, IGF1, CXCL3, EFEMP1
-Negative: UBE2C, TOP2A, NUSAP1, MKI67, BIRC5, CENPF, HMGB2, CKS1B, PTTG1, CDKN3
-	  CENPA, CDK1, CCNB2, TPX2, CCNB1, NUF2, CCNA2, CDC20, PLK1, MAD2L1
-
-Warning message:
-Removed 41499 rows containing missing values (geom_point). 
-Warning message:
-Removed 35358 rows containing missing values (geom_point). 
-Computing nearest neighbor graph
-Computing SNN
-0%   10   20   30   40   50   60   70   80   90   100%
-[----|----|----|----|----|----|----|----|----|----|
-**************************************************|
-1 singletons identified. 28 final clusters.
-Calculating cluster 0
-Calculating cluster 1
-Calculating cluster 10
-Calculating cluster 11
-Calculating cluster 12
-Calculating cluster 13
-Calculating cluster 14
-Calculating cluster 15
-Calculating cluster 16
-Calculating cluster 17
-Calculating cluster 18
-Calculating cluster 19
-Calculating cluster 2
-Calculating cluster 20
-Calculating cluster 21
-Calculating cluster 22
-Calculating cluster 23
-Calculating cluster 24
-Calculating cluster 25
-Calculating cluster 26
-Calculating cluster 27
-Calculating cluster 3
-Calculating cluster 4
-Calculating cluster 5
-Calculating cluster 6
-Calculating cluster 7
-Calculating cluster 8
-Calculating cluster 9
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items
-Read 610 items
-Read 84 items
-Read 33 items
-Read 79 items
-Read 29 items
-Read 134 items
-Read 153 items
-Read 183 items
-Read 747 items
-Read 131 items
-Read 146 items
-Read 350 items
-Read 317 items
-Read 167 items
-Read 450 items
-Read 154 items
-Read 201 items
-Read 361 items
-Read 477 items
-Read 17 items
-Read 13 items
-Read 310 items
-Read 14 items
-Read 117 items
-Read 562 items
-Read 84 items
-Read 31 items
-Read 97 items
-Read 152 items
-Read 25 items
-Read 159 items
-Read 399 items
-Read 1302 items
-Read 1215 items
-Read 73 items
-Read 29 items

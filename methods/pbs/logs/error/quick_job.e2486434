@@ -1,0 +1,5 @@
+Error in dyn.load(file, DLLpath = DLLpath, ...) : 
+  unable to load shared object '/panfs/roc/groups/11/starrt2/tasta005/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/libs/Rcpp.so':
+  /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /panfs/roc/groups/11/starrt2/tasta005/R/x86_64-pc-linux-gnu-library/3.3/Rcpp/libs/Rcpp.so)
+Error: package or namespace load failed for ‘reshape2’
+Execution halted

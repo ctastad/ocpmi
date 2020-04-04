@@ -8460,5 +8460,25 @@ Thanks, Jun
 
 ***
 
+## 16
+
+### ccgd upgrade
+
+I was able to get the apache server running with a test index file. Here are the key points of the setup to get the base server running.
+
+* Create `/swadm/var/www/html` to host site files.
+* Set permissions of `/html`.
+* Edit the `/etc/httpd/conf/httpd.conf` file to update the `DocumentRoot`.
+* The `ServerRoot` can remain pointing at the original system site under the `/etc` directory.
+* The `DocumentRoot` needs to be updated to the `/swadm` directory. Along with the `<Directory>` variable.
+
+***
+
+## 22
+
+### ccgd upgrade
+
+
+
 # References
 

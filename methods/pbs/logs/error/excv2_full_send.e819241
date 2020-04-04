@@ -1,0 +1,4 @@
+/var/spool/torque/mom_priv/jobs/819241.labq.msi.umn.edu.SC: line 12: full_send_vars.txt: No such file or directory
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists

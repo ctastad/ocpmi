@@ -1,0 +1,6 @@
+Saving 7 x 7 in image
+created OG table
+reshaped table to wide format
+created matrix
+Error in oubtypes[1] <- NULL : object 'oubtypes' not found
+Execution halted

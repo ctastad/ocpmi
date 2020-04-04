@@ -1,0 +1,22 @@
+[mpileup] 2 samples in 2 input files
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from STDIN
+Reading mpileup input...
+1724437611 positions in mpileup
+97478367 had sufficient coverage for comparison
+1179884 raw copynumber segments with size > 10
+1179213 good copynumber segments with depth > 10
+[mpileup] 2 samples in 2 input files
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Input stream not ready, waiting for 5 seconds...
+Reading input from STDIN
+Reading mpileup input...
+[E::bgzf_read] Read block operation failed with error 4 after 38 of 251 bytes
+695518226 positions in mpileup
+44847531 had sufficient coverage for comparison
+543908 raw copynumber segments with size > 10
+543643 good copynumber segments with depth > 10

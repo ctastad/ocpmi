@@ -1,0 +1,10 @@
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 8 jobs to finish. Send SIGTERM again to stop now.
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-26-T17-1472-1_S12_Aligned.sortedByCoord.out.copynumber --output-file PM-26-T17-1472-1_S12_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-14-T17-0867-1_S8_Aligned.sortedByCoord.out.copynumber --output-file PM-14-T17-0867-1_S8_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-24-T17-1392-4_S11_Aligned.sortedByCoord.out.copynumber --output-file PM-24-T17-1392-4_S11_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out.copynumber --output-file PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-16-T17-0964-3_S10_Aligned.sortedByCoord.out.copynumber --output-file PM-16-T17-0964-3_S10_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-15-T17-0910-1_S9_Aligned.sortedByCoord.out.copynumber --output-file PM-15-T17-0910-1_S9_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-1-T17-0146-3_S1_Aligned.sortedByCoord.out.copynumber --output-file PM-1-T17-0146-3_S1_Aligned.sortedByCoord.out.called
+parallel: java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copyCaller PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out.copynumber --output-file PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out.called

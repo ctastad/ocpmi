@@ -1,0 +1,17 @@
+Can't open perl script "TargetPerla.pl": No such file or directory
+Can't open perl script "EXCAVATORDataPrepare.pl": No such file or directory
+Can't open perl script "EXCAVATORDataAnalysis.pl": No such file or directory
+cp: cannot stat ‘ParameterFile.txt’: No such file or directory
+cp: cannot stat ‘full_send_vars.txt’: No such file or directory
+mv: cannot stat ‘*.{}.*’: No such file or directory
+./full_send.sh: line 70: cd: /home/starrt2/tasta005/ocpmi/results/excavator2/test_2pm_50000_2019-08-21_19:23/Plots: No such file or directory
+./full_send.sh: line 72: cd: */: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory

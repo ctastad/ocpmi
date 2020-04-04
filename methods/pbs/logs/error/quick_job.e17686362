@@ -1,0 +1,5 @@
+created OG table
+reshaped table to wide format
+created matrix
+working on heatmap
+/var/spool/torque/mom_priv/jobs/17686362.mesabim1.msi.umn.edu.SC: line 15: 15032 Killed                  ./geneAssociationGraph_clust.R

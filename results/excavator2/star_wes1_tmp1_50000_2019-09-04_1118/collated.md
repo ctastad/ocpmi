@@ -1,6 +1,0 @@
-
-![Control]()
-
-![Plots]()
-
-![Results]()

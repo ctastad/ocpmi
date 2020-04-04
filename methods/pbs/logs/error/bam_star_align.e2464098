@@ -1,0 +1,7 @@
+/var/spool/torque/mom_priv/jobs/2464098.node1081.localdomain.SC: line 15: PM-1-T17-0146-3_S1_R1_001.fastq.gz: command not found
+/var/spool/torque/mom_priv/jobs/2464098.node1081.localdomain.SC: line 16: PM-1-T17-0146-3_S1_R2_001.fastq.gz: command not found
+gzip: Read1.gz: No such file or directory
+gzip: Read2.gz: No such file or directory
+/var/spool/torque/mom_priv/jobs/2464098.node1081.localdomain.SC: line 24: --runThreadN: command not found
+/var/spool/torque/mom_priv/jobs/2464098.node1081.localdomain.SC: line 25: syntax error near unexpected token `done'
+/var/spool/torque/mom_priv/jobs/2464098.node1081.localdomain.SC: line 25: `done'

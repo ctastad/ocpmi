@@ -1,0 +1,297 @@
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-24-T17-1392-4_S11_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1668027782 positions in mpileup
+97478367 had sufficient coverage for comparison
+1181651 raw copynumber segments with size > 10
+1180927 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1681292026 positions in mpileup
+97478367 had sufficient coverage for comparison
+1180713 raw copynumber segments with size > 10
+1180019 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-26-T17-1472-1_S12_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1692467713 positions in mpileup
+97478367 had sufficient coverage for comparison
+1174581 raw copynumber segments with size > 10
+1173996 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1724437611 positions in mpileup
+97478367 had sufficient coverage for comparison
+1179884 raw copynumber segments with size > 10
+1179213 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-15-T17-0910-1_S9_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1725307598 positions in mpileup
+97478367 had sufficient coverage for comparison
+1171833 raw copynumber segments with size > 10
+1171238 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-16-T17-0964-3_S10_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1751994821 positions in mpileup
+97478367 had sufficient coverage for comparison
+1177693 raw copynumber segments with size > 10
+1177091 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-14-T17-0867-1_S8_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1723502374 positions in mpileup
+97478367 had sufficient coverage for comparison
+1171373 raw copynumber segments with size > 10
+1170874 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-1-T17-0146-3_S1_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1740897815 positions in mpileup
+97478367 had sufficient coverage for comparison
+1179592 raw copynumber segments with size > 10
+1179004 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-27-T17-1564-2_S14_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1699965163 positions in mpileup
+97478367 had sufficient coverage for comparison
+1175782 raw copynumber segments with size > 10
+1175124 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-2-T17-0307-3_S3_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1749458951 positions in mpileup
+97478367 had sufficient coverage for comparison
+1181920 raw copynumber segments with size > 10
+1181308 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-32-T18-0094-03_S15_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1731544533 positions in mpileup
+97478367 had sufficient coverage for comparison
+1174357 raw copynumber segments with size > 10
+1173772 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-31-T18-0112-4_S17_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1768571346 positions in mpileup
+97478367 had sufficient coverage for comparison
+1175273 raw copynumber segments with size > 10
+1174718 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-38-T18-0426-06_S19_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1742011215 positions in mpileup
+97478367 had sufficient coverage for comparison
+1176937 raw copynumber segments with size > 10
+1176355 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1783428052 positions in mpileup
+97478367 had sufficient coverage for comparison
+1170681 raw copynumber segments with size > 10
+1170203 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-37-T18-0421-13_S18_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1772943169 positions in mpileup
+97478367 had sufficient coverage for comparison
+1183581 raw copynumber segments with size > 10
+1183021 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-39-T18-0449-18_S20_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1798537821 positions in mpileup
+97478367 had sufficient coverage for comparison
+1186539 raw copynumber segments with size > 10
+1185975 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-3-T17-0315-2_S2_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1719794449 positions in mpileup
+97478367 had sufficient coverage for comparison
+1185868 raw copynumber segments with size > 10
+1185202 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-42-T18-0486-16_S23_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1730334142 positions in mpileup
+97478367 had sufficient coverage for comparison
+1173156 raw copynumber segments with size > 10
+1172548 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1754124079 positions in mpileup
+97478367 had sufficient coverage for comparison
+1182374 raw copynumber segments with size > 10
+1181642 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-41-T18-0468-01_S22_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1760507135 positions in mpileup
+97478367 had sufficient coverage for comparison
+1167030 raw copynumber segments with size > 10
+1166520 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1733236938 positions in mpileup
+97478367 had sufficient coverage for comparison
+1174364 raw copynumber segments with size > 10
+1173776 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-47-T18-0569-07_S27_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1795459009 positions in mpileup
+97478367 had sufficient coverage for comparison
+1185866 raw copynumber segments with size > 10
+1185229 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-40-T18-0451-07_S21_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1809944518 positions in mpileup
+97478367 had sufficient coverage for comparison
+1176966 raw copynumber segments with size > 10
+1176481 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-49-T18-0605-11_S29_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1771700070 positions in mpileup
+97478367 had sufficient coverage for comparison
+1174978 raw copynumber segments with size > 10
+1174414 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1748481174 positions in mpileup
+97478367 had sufficient coverage for comparison
+1174794 raw copynumber segments with size > 10
+1174275 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1668368686 positions in mpileup
+97478367 had sufficient coverage for comparison
+1170930 raw copynumber segments with size > 10
+1170161 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-50-T18-0595-05_S28_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1763545836 positions in mpileup
+97478367 had sufficient coverage for comparison
+1167428 raw copynumber segments with size > 10
+1166905 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-51-T18-0606-08_S30_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1724478385 positions in mpileup
+97478367 had sufficient coverage for comparison
+1174588 raw copynumber segments with size > 10
+1173985 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-7-T17-0576-3_S7_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1717426217 positions in mpileup
+97478367 had sufficient coverage for comparison
+1168357 raw copynumber segments with size > 10
+1167788 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-9-T17-0591-1_S6_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1667149175 positions in mpileup
+97478367 had sufficient coverage for comparison
+1179049 raw copynumber segments with size > 10
+1178389 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-52-T18-0523-02_S26_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1790810843 positions in mpileup
+97478367 had sufficient coverage for comparison
+1181494 raw copynumber segments with size > 10
+1180931 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from PM-6-T17-0382-2_S5_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1736665403 positions in mpileup
+97478367 had sufficient coverage for comparison
+1180605 raw copynumber segments with size > 10
+1179999 good copynumber segments with depth > 10
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from z_NA10847_SRR070531_Aligned.sortedByCoord.out.mpileup
+Reading mpileup input...
+1038594745 positions in mpileup
+97478367 had sufficient coverage for comparison
+1103577 raw copynumber segments with size > 10
+1100270 good copynumber segments with depth > 10

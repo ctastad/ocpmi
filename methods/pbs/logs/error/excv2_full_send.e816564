@@ -1,0 +1,58 @@
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists
+processing chromosomes
+Read 3975 items
+processing chromosomes
+Read 3602 items
+Read 2544 items
+Read 2850 items
+Read 2662 items
+Read 2782 items
+Read 2410 items
+Read 2072 items
+Read 2055 items
+Read 2030 items
+Read 2360 items
+Read 2067 items
+Read 1550 items
+Read 1601 items
+Read 1214 items
+Read 1494 items
+Read 1629 items
+Read 1092 items
+Read 1651 items
+Read 1125 items
+Read 694 items
+Read 853 items
+Read 2871 items
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file 'data/prepare/star_wes1_tmp_50000_2019-09-03_16:47/PM-1-C1-0146-3_S1_Aligned.sortedByCoord.out/RCNorm/PM-1-C1-0146-3_S1_Aligned.sortedByCoord.out.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in rep(Q + 1, times = R) : invalid 'times' argument
+Execution halted
+Couldn't open the input file /home/starrt2/tasta005/ocpmi/results/excavator2/star_wes1_tmp_50000_2019-09-03_16:47/.tmp/ParallelAnalyzePerla.sh. at EXCAVATORDataAnalysis.pl line 146.
+./full_send.sh: line 72: cd: */: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory

@@ -1,0 +1,1 @@
+/home/chris/starr_lab/ocpmi/methods/XCAVATOR/data/ucsc.hg19.bw /home/chris/starr_lab/ocpmi/methods/XCAVATOR/data/hg19.fa

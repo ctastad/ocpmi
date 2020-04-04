@@ -1,0 +1,44 @@
+mkdir: cannot create directory `/scratch/2463992.node1081.localdomain': No space left on device
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 58936 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 5218758435   4239570124   15
+
+Aug 28 22:17:12 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 5376488638   4039839382   14
+
+Aug 28 22:40:46 ...... FATAL ERROR, exiting
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 6281701679   3928870441   16
+
+Aug 28 23:06:30 ...... FATAL ERROR, exiting
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 62001 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 5562735312   4177505057   12
+
+Aug 28 23:32:14 ...... FATAL ERROR, exiting
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 63130 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 4824427415   4225367784   14
+
+Aug 28 23:53:46 ...... FATAL ERROR, exiting
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 64191 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 65140 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:   963 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  1994 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 5832016395   4015091238   14
+
+Aug 29 01:23:37 ...... FATAL ERROR, exiting
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  2946 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+EXITING because of FATAL ERROR: number of bytes expected from the BAM bin does not agree with the actual size on disk: 5748662791   3960600082   15
+
+Aug 29 01:47:26 ...... FATAL ERROR, exiting
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  5047 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  5989 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  6986 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  8055 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16:  9058 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 10505 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/2463992.node1081.localdomain.SC: line 16: 11624 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --genomeLoad LoadAndRemove --limitBAMsortRAM 64000000000 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_

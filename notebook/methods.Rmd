@@ -2389,6 +2389,73 @@ The new address has been approved, and my access has been cleared.
 
 ***
 
+### Server Setup
+
+Apache config file
+
+* `/etc/httpd/conf`
+
+Need to setup ssh keys for both general chef role (x500) and swadm user.
+
+R was installed with the following tutorial
+
+* https://blog.sellorm.com/2017/11/11/basic-installation-of-r-on-redhat-linux-7/
+
+R dependencies:
+
+markdown
+shiny
+DT
+tidyverse
+rsconnect
+
+setAccountInfo to deploy app
+https://shiny.rstudio.com/articles/shinyapps.html
+
+
+tim's computer
+- git clone
+  R dependencies
+  swadm keys
+
+oit linux docs
+https://github.umn.edu/OIT-LPT/Public-Docs
+
+tree map of server/proj dirs
+
+
+
+***
+
+### Shiny Build
+
+I've decided to effectively scrap the existing website. This may sound like a fools errand, but my investigation of the existing layout of the current site and database present a couple problems. As I have only attempted to transition the application, I have encountered some nuances that could take an undetermined amount of time to iron out. The layout of this thing is immense and complex. Also, there are a variety of frameworks that were chosen in the original setup which will certinaly present compatibility issues down the line. Given the effort already going into the migration. I feel it best to go the route of building this thing in R and shiny.
+
+#### Version control
+
+I've setup a git to track development of this project that is separate from the ocpmi project. It's located at the link below.
+
+https://github.umn.edu/tasta005/ccgd.git
+
+#### Shiny deployment
+
+My plan is to deploy the shiny application to the public shinyapps.io hosting platform. This is done with the `rsconnect` package.
+
+* docs: https://shiny.rstudio.com/articles/shinyapps.html
+* platform: https://www.shinyapps.io/
+
+The account information can be retrieved from the shinyapps.io site.
+
+```{r}
+library(rsconnect)
+rsconnect::setAccountInfo(name="<ACCOUNT>", token="<TOKEN>", secret="<SECRET>")
+deployApp()
+
+```
+
+
+***
+
 ***
 
 # Sources

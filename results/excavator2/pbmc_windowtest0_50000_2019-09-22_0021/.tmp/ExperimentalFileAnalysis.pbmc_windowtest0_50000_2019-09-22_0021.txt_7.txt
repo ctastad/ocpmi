@@ -1,2 +1,0 @@
-T14 data/prepare/pbmc_windowtest0_50000_2019-09-22_0021/PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out
-T15 data/prepare/pbmc_windowtest0_50000_2019-09-22_0021/PM-37-T18-0421-13_S18_Aligned.sortedByCoord.out PM-37-T18-0421-13_S18_Aligned.sortedByCoord.out

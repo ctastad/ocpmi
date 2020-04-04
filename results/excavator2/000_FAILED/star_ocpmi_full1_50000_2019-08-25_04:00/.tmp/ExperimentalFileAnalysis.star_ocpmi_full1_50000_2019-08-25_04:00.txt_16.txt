@@ -1,2 +1,0 @@
-T32 data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-9-T17-0591-1_S21 PM-9-T17-0591-1_S21
-T33 data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/zc_NA10847_SRR070823 zc_NA10847_SRR070823

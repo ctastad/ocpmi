@@ -1,0 +1,9 @@
+gzip: Read1.gz: No such file or directory
+
+EXITING because of fatal PARAMETERS error: limitBAMsortRAM=0 (default) cannot be used with --genomeLoad=LoadAndRemove, or any other shared memory options
+SOLUTION: please use default --genomeLoad NoSharedMemory, 
+        OR specify --limitBAMsortRAM the amount of RAM (bytes) that can be allocated for BAM sorting in addition to shared memory allocated for the genome.
+        --limitBAMsortRAM typically has to be > 10000000000 (i.e 10GB).
+
+Aug 29 18:55:06 ...... FATAL ERROR, exiting
+gzip: Read2.gz: No such file or directory
