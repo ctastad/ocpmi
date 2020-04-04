@@ -1,0 +1,102 @@
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file 'data/prepare/star_wes1_full4_50000_2019-09-01_06:50/z_NA10847_SRR070531_Aligned.sortedByCoord.out/RCNorm/z_NA10847_SRR070531_Aligned.sortedByCoord.out.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: 
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Warning message:
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In readChar(con, 5L, useBytes = TRUE) :Execution halted
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+ Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+ cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+In addition: Warning message:
+Execution halted
+
+ In readChar(con, 5L, useBytes = TRUE) : cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out/HSLMResults_PM-43-T18-0525-02_S25_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out/HSLMResults_PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out/HSLMResults_PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out/HSLMResults_PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out/HSLMResults_PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-14-T17-0867-1_S8_Aligned.sortedByCoord.out/HSLMResults_PM-14-T17-0867-1_S8_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-27-T17-1564-2_S14_Aligned.sortedByCoord.out/HSLMResults_PM-27-T17-1564-2_S14_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/tmp_wes1/Results/PM-3-T17-0315-2_S2_Aligned.sortedByCoord.out/HSLMResults_PM-3-T17-0315-2_S2_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted

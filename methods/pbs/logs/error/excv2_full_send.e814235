@@ -1,0 +1,66 @@
+mkdir: cannot create directory ‘/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_vs_1kgp_2pm_50k’: File exists
+Syntax error
+Usage:
+     perl TargetPerla.pl [arguments] [options]
+
+     Options:
+
+           -h, --help                   Print help message.
+           -m, --man                    Print complete documentation.
+           -v, --verbose                Use verbose output.
+
+     Function:
+
+    TargetPerla.pl initialises target files for further data processing with
+    the EXCAVATOR2 package. It requires 5 arguments (one source files - with
+    space-delimited paths to source data for mappability and GC-content
+    calculations), path to target file, target name, window size and
+    assembly to run properly. A sub-folder with the specified target name
+    will be created under "EXCAVATOR2/data/targets/hgXX". Target input file
+    (.bed, .txt or any plain text file) must be tab-delimited.
+
+     Example: 
+ 
+     EXCAVATOR2> perl TargetPerla.pl SourceTarget.txt /Users/.../MyTarget.bed TargetName 50000  hg19
+
+Syntax error: too many arguments were presented at command line.
+Usage:
+     perl EXCAVATORDataPrepare.pl [arguments] [options]
+
+     Options:
+
+           -h, --help                   Print help message.
+           -m, --man                    Print complete documentation.
+           -v, --verbose                Use verbose output.
+               --mapq <integer>         Select mapping quality for .bam file filtering; if omitted default value is 0.
+           
+     Function:
+ 
+     perl EXCAVATORDataPrepare.pl performs RC calculations, data normalization and data analysis on multiple .bam files.
+
+     Example: 
+ 
+     EXCAVATOR2> perl EXCAVATORDataPrepare.pl ExperimentalFilePrepare.w50000.txt --processors 6 --target MyTarget_w50000 --assembly hg19
+
+Syntax error: the number of arguments found at command line is incorrect.
+Usage:
+     perl EXCAVATORDataAnalysis.pl [arguments] [options]
+ 
+      Options:
+
+           -h, --help                   Print help message.
+           -m, --man                    Print complete documentation.
+           -v, --verbose                Use verbose output.
+
+     Function:
+ 
+     EXCAVATORDataAnalysis.pl performs segmentation of the WMRC and classify each segmented region as one of 5 possible discrete states (2-copy deletion, 1-copy deletion, normal, 1-copy duplication and N-copy amplification).
+
+     Example: 
+ 
+     EXCAVATOR2> perl EXCAVATORDataAnalysis.pl ExperimentalFileAnalysis.w50K.txt --processors 6 --target MyTarget_w50K --assembly hg19 --output /.../OutEXCAVATOR2/Results_MyProject_w50K --mode pooling/paired
+
+cp: cannot stat ‘{ExperimentalFile*,’: No such file or directory
+cp: cannot stat ‘SourceTarget.txt,’: No such file or directory
+cp: cannot stat ‘full_send_vars.sh,’: No such file or directory
+cp: cannot stat ‘ParameterFile.txt}’: No such file or directory

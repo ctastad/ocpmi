@@ -1,0 +1,280 @@
+sh: line 1: 26399 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/data/gene_ref/ucsc/hg38/hg38_sortmerge.bed,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,pbmc_windowtest8_50_2019-09-22_0045_target,hg38,50 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/FilterTarget.R
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txtcat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txtcat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory: No such file or directory
+
+: No such file or directory
+: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: In addition: Warning message:
+Warning message:
+In file(con, "r") :In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/*_chromosome.txt: No such file or directory
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+Error in file(con, "r") : cannot open the connection
+Calls: readLines -> file
+In addition: Warning message:
+In file(con, "r") :
+  cannot open file '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/pbmc_windowtest8_50_2019-09-22_0045_target/pbmc_windowtest8_50_2019-09-22_0045_target_chromosome.txt': No such file or directory
+Execution halted
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+User ERROR: the target specified with --target wasn't found for assembly hg38. 
+Please check --target and --assembly. 
+Error found at /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/AnalyzePerla.pl line 58.
+./full_send.sh: line 62: cd: */: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory

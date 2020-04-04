@@ -1,0 +1,4431 @@
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists
+processing chromosomes
+Read 3975 items
+processing chromosomes
+Read 3602 items
+Read 2544 items
+Read 2850 items
+Read 2662 items
+Read 2782 items
+Read 2410 items
+Read 2072 items
+Read 2055 items
+Read 2030 items
+Read 2360 items
+Read 2067 items
+Read 1550 items
+Read 1601 items
+Read 1214 items
+Read 1494 items
+Read 1629 items
+Read 1092 items
+Read 1651 items
+Read 1125 items
+Read 694 items
+Read 853 items
+Read 2871 items
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-15-T17-0910-1_S2/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-26-T17-1472-1_S14/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-27-T17-1564-2_S22/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-31-T18-0112-4_S3/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-37-T18-0421-13_S7/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-3-T17-0315-2_S5/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-44-T18-0445-19_S31/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-50-T18-0595-05_S16/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-51-T18-0606-08_S24/.tmp’: File exists
+mkdir: cannot create directory ‘data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-55-T18-0639-02_S28/.tmp’: File exists
+cat: data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-14-T17-0867-1_S29/data/targets/data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-1-T17-0146-3_S1/data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/PM-16-T17-0964-3_S6/*_chromosome.txt: No such file or directory
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+[main_samview] random alignment retrieval only works for indexed BAM or CRAM files.
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in seq.default(2, length(tt) * 2, by = 2) : 
+  wrong sign in 'by' argument
+Calls: seq -> seq.default
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file 'data/prepare/star_ocpmi_full1_50000_2019-08-25_04:00/*/RCNorm/*.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-26-T17-1472-1_S14/HSLMResults_PM-26-T17-1472-1_S14.txt': No such file or directory
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-1-T17-0146-3_S1/HSLMResults_PM-1-T17-0146-3_S1.txt': No such file or directory
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-50-T18-0595-05_S16/HSLMResults_PM-50-T18-0595-05_S16.txt': No such file or directory
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Control/RCNorm/Control.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-14-T17-0867-1_S29/HSLMResults_PM-14-T17-0867-1_S29.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-49-T18-0605-11_S20/HSLMResults_PM-49-T18-0605-11_S20.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-44-T18-0445-19_S31/HSLMResults_PM-44-T18-0445-19_S31.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-40-T18-0451-07_S19/HSLMResults_PM-40-T18-0451-07_S19.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-52-T18-0523-02_S8/HSLMResults_PM-52-T18-0523-02_S8.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-2-T17-0307-3_S9/HSLMResults_PM-2-T17-0307-3_S9.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-39-T18-0449-18_S15/HSLMResults_PM-39-T18-0449-18_S15.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-37-T18-0421-13_S7/HSLMResults_PM-37-T18-0421-13_S7.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-9-T17-0591-1_S21/HSLMResults_PM-9-T17-0591-1_S21.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-6-T17-0382-2_S17/HSLMResults_PM-6-T17-0382-2_S17.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-42-T18-0486-16_S27/HSLMResults_PM-42-T18-0486-16_S27.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-24-T17-1392-4_S10/HSLMResults_PM-24-T17-1392-4_S10.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/star_ocpmi_full1_50000_2019-08-25_04:00/Results/PM-32-T18-0094-03_S26/HSLMResults_PM-32-T18-0094-03_S26.txt': No such file or directory
+Execution halted
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory

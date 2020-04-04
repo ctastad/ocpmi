@@ -1,0 +1,9 @@
+Saving 7 x 7 in image
+created OG table
+reshaped table to wide format
+created matrix
+working on heatmap
+Error in sample.int(length(x), size, replace, prob) : 
+  cannot take a sample larger than the population when 'replace = FALSE'
+Calls: pheatmap ... generate_annotation_colours -> sample -> sample.int
+Execution halted

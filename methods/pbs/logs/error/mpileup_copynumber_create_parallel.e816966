@@ -1,0 +1,33 @@
+[mpileup] 1 samples in 2 input files
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Input stream not ready, waiting for 5 seconds...
+Reading input from STDIN
+Reading mpileup input...
+1038594745 positions in mpileup
+97478367 had sufficient coverage for comparison
+1103577 raw copynumber segments with size > 10
+1100270 good copynumber segments with depth > 10
+parallel: SIGTERM received. No new jobs will be started.
+parallel: Waiting for these 2 jobs to finish. Send SIGTERM again to stop now.
+parallel: samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out.bam | java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber PM-1-T18-0648-17_S32_Aligned.sortedByCoord.out --mpileup 1
+parallel: samtools mpileup -q 1 -f ~/ocpmi/data/gene_ref/ucsc/hg38/hg38.fa z_NA10847_SRR070531_Aligned.sortedByCoord.out.bam PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out.bam | java -jar ~/ocpmi/methods/varscan2/VarScan.v2.4.4.jar copynumber PM-25-T17-1476-1_S13_Aligned.sortedByCoord.out --mpileup 1
+[mpileup] 2 samples in 2 input files
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Input stream not ready, waiting for 5 seconds...
+Reading input from STDIN
+Reading mpileup input...
+[mpileup] 2 samples in 2 input files
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Input stream not ready, waiting for 5 seconds...
+Reading input from STDIN
+Reading mpileup input...
+1576433733 positions in mpileup
+91086937 had sufficient coverage for comparison
+1104930 raw copynumber segments with size > 10
+1104288 good copynumber segments with depth > 10

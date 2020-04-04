@@ -1,0 +1,21 @@
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.16' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+cat: /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/star_wes1_controlvalidate_20000_2019-09-11_2131_target/*_chromosome.txt: No such file or directory
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.16' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+Couldn't open the input file /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/.tmp.63323/ParallelReadPerla.sh. at EXCAVATORDataPrepare.pl line 79.
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.16' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.14' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+/panfs/roc/msisoft/R/3.6.0/lib64/R/bin/exec/R: /lib64/libc.so.6: version `GLIBC_2.16' not found (required by /panfs/roc/msisoft/R/3.6.0/lib64/R/lib/libR.so)
+Couldn't open the input file /home/starrt2/tasta005/ocpmi/results/excavator2/star_wes1_controlvalidate_20000_2019-09-11_2131/.tmp/ParallelAnalyzePerla.sh. at EXCAVATORDataAnalysis.pl line 146.
+./full_send.sh: line 62: cd: */: No such file or directory
+mv: cannot stat `PlotResults_chr1.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr2.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr3.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr4.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr5.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr6.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr7.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr8.pdf': No such file or directory
+mv: cannot stat `PlotResults_chr9.pdf': No such file or directory

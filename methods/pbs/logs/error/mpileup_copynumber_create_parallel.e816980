@@ -1,0 +1,48 @@
+[mpileup] 2 samples in 2 input files
+USAGE: VarScan copynumber [normal_pileup] [tumor_pileup] [Opt: output] OPTIONS
+	normal_pileup - The SAMtools pileup file for Normal
+	tumor_pileup - The SAMtools pileup file for Tumor
+	output - Output base name for files
+***If you have a single mpileup, see VarScan copynumber -mpileup 1 -h ***
+
+OPTIONS:
+	--min-base-qual - Minimum base quality to count for coverage [20]
+	--min-map-qual - Minimum read mapping quality to count for coverage [20]
+	--min-coverage - Minimum coverage threshold for copynumber segments [20]
+	--min-segment-size - Minimum number of consecutive bases to report a segment [10]
+	--max-segment-size - Max size before a new segment is made [100]
+	--p-value - P-value threshold for significant copynumber change-point [0.01]
+	--data-ratio - The normal/tumor input data ratio for copynumber adjustment [1.0]
+
+[mpileup] 2 samples in 2 input files
+USAGE: VarScan copynumber [normal_pileup] [tumor_pileup] [Opt: output] OPTIONS
+	normal_pileup - The SAMtools pileup file for Normal
+	tumor_pileup - The SAMtools pileup file for Tumor
+	output - Output base name for files
+***If you have a single mpileup, see VarScan copynumber -mpileup 1 -h ***
+
+OPTIONS:
+	--min-base-qual - Minimum base quality to count for coverage [20]
+	--min-map-qual - Minimum read mapping quality to count for coverage [20]
+	--min-coverage - Minimum coverage threshold for copynumber segments [20]
+	--min-segment-size - Minimum number of consecutive bases to report a segment [10]
+	--max-segment-size - Max size before a new segment is made [100]
+	--p-value - P-value threshold for significant copynumber change-point [0.01]
+	--data-ratio - The normal/tumor input data ratio for copynumber adjustment [1.0]
+
+[mpileup] 1 samples in 2 input files
+USAGE: VarScan copynumber [normal_pileup] [tumor_pileup] [Opt: output] OPTIONS
+	normal_pileup - The SAMtools pileup file for Normal
+	tumor_pileup - The SAMtools pileup file for Tumor
+	output - Output base name for files
+***If you have a single mpileup, see VarScan copynumber -mpileup 1 -h ***
+
+OPTIONS:
+	--min-base-qual - Minimum base quality to count for coverage [20]
+	--min-map-qual - Minimum read mapping quality to count for coverage [20]
+	--min-coverage - Minimum coverage threshold for copynumber segments [20]
+	--min-segment-size - Minimum number of consecutive bases to report a segment [10]
+	--max-segment-size - Max size before a new segment is made [100]
+	--p-value - P-value threshold for significant copynumber change-point [0.01]
+	--data-ratio - The normal/tumor input data ratio for copynumber adjustment [1.0]
+

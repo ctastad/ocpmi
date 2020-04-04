@@ -1,0 +1,50 @@
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists
+processing chromosomes
+Read 3975 items
+processing chromosomes
+Read 3602 items
+Read 2544 items
+Read 2850 items
+Read 2662 items
+Read 2782 items
+Read 2410 items
+Read 2072 items
+Read 2055 items
+Read 2030 items
+Read 2360 items
+Read 2067 items
+Read 1550 items
+Read 1601 items
+Read 1214 items
+Read 1494 items
+Read 1629 items
+Read 1092 items
+Read 1651 items
+Read 1125 items
+Read 694 items
+Read 853 items
+Read 2871 items
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+

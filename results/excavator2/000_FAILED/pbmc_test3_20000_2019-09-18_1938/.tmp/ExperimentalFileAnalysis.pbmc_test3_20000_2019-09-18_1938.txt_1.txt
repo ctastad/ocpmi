@@ -1,1 +1,0 @@
-T1 data/prepare/pbmc_test3_20000_2019-09-18_1938/NA10847_SRR070531_Aligned.sortedByCoord.out NA10847_SRR070531_Aligned.sortedByCoord.out

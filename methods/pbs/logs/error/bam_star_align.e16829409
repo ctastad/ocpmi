@@ -1,0 +1,88 @@
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  3797 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  4212 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  4447 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  4625 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  4871 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  5078 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  5388 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  5799 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  6088 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  6545 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  6875 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  7210 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  7686 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  7881 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  8290 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  8783 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  9183 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  9567 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  9795 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17:  9932 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 10370 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 10712 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 10884 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 11145 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 11453 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 11728 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 12008 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 12359 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 12605 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 13582 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 13773 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_
+
+gzip: stdout: Broken pipe
+
+gzip: stdout: Broken pipe
+/var/spool/torque/mom_priv/jobs/16829409.mesabim1.msi.umn.edu.SC: line 17: 13907 Killed                  STAR --runMode alignReads --outSAMtype BAM SortedByCoordinate --readFilesCommand zcat --genomeDir ~/ocpmi/data/gene_ref/ucsc/hg38 --readFilesIn $i ${i%_R1_001.fastq.gz}_R2_001.fastq.gz --runThreadN 16 --outFileNamePrefix ${i%_R1_001.fastq.gz}_

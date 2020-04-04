@@ -1,0 +1,88 @@
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-27-T17-1564-2_S22_R2_001/FastCallResults_PM-27-T17-1564-2_S22_R2_001.txt': No such file or directory
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-14-T17-0867-1_S29_R1_001/FastCallResults_PM-14-T17-0867-1_S29_R1_001.txt': No such file or directory
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-50-T18-0595-05_S16_R1_001/FastCallResults_PM-50-T18-0595-05_S16_R1_001.txt': No such file or directory
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-6-T17-0382-2_S17_R1_001/FastCallResults_PM-6-T17-0382-2_S17_R1_001.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-37-T18-0421-13_S7_R1_001/FastCallResults_PM-37-T18-0421-13_S7_R1_001.txt': No such file or directory
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-47-T18-0569-07_S12_R1_001/FastCallResults_PM-47-T18-0569-07_S12_R1_001.txt': No such file or directory
+Execution halted
+Error in if (abs(LikeliNew - LikeliOld) < threshold) { : 
+  missing value where TRUE/FALSE needed
+Calls: EMFastCall
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-42-T18-0486-16_S27_R1_001/FastCallResults_PM-42-T18-0486-16_S27_R1_001.txt': No such file or directory
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/ocpmi_v_1kgp_full_50k1/Results/PM-27-T17-1564-2_S22_R1_001/FastCallResults_PM-27-T17-1564-2_S22_R1_001.txt': No such file or directory
+Execution halted

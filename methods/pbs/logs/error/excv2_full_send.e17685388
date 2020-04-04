@@ -1,0 +1,724 @@
+Warning message:
+In dir.create(file.path(ProgramFolder, "data", "targets", assembly)) :
+  '/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38' already exists
+processing chromosomes
+Read 234430 items
+processing chromosomes
+Read 243811 items
+processing chromosomes
+Read 199023 items
+processing chromosomes
+Read 190276 items
+processing chromosomes
+Read 180838 items
+processing chromosomes
+Read 172221 items
+processing chromosomes
+Read 159818 items
+processing chromosomes
+Read 145248 items
+processing chromosomes
+Read 122343 items
+processing chromosomes
+Read 134179 items
+processing chromosomes
+Read 135129 items
+processing chromosomes
+Read 134864 items
+processing chromosomes
+Read 97196 items
+processing chromosomes
+Read 90765 items
+processing chromosomes
+Read 84632 items
+processing chromosomes
+Read 82945 items
+processing chromosomes
+Read 83142 items
+processing chromosomes
+Read 75778 items
+processing chromosomes
+Read 60064 items
+processing chromosomes
+Read 61977 items
+processing chromosomes
+Read 38786 items
+processing chromosomes
+Read 38680 items
+processing chromosomes
+Read 153657 items
+/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/bash/./FiltBam.sh: line 28: 12610 Killed                  R --slave --args $Sample_Name,$Output_Folder,$i,$Program_Folder,$Target_Name,$Assembly < $Program_Folder/lib/R/MakeReadCount.R
+/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/bash/./FiltBam.sh: line 28: 12634 Killed                  R --slave --args $Sample_Name,$Output_Folder,$i,$Program_Folder,$Target_Name,$Assembly < $Program_Folder/lib/R/MakeReadCount.R
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Error in gzfile(file) : invalid 'description' argument
+Calls: loadRC -> load -> gzfile
+Execution halted
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+sh: line 1: 29110 Killed                  R --slave --args /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,data/prepare/wes1_agilent_covered_08_1000_2019-10-09_1345/PM-31-T18-0112-4_S17_Aligned.sortedByCoord.out,PM-31-T18-0112-4_S17_Aligned.sortedByCoord.out,wes1_agilent_covered_08_1000_2019-10-09_1345_target,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORNormalizationExome.R
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Loading required package: lattice
+Loading required package: survival
+Loading required package: Formula
+Loading required package: ggplot2
+
+Attaching package: ‘Hmisc’
+
+The following objects are masked from ‘package:base’:
+
+    format.pval, units
+
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+sh: line 1: 16759 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/wes1_agilent_covered_08_1000_2019-10-09_1345_target,/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/.tmp/ExperimentalFileAnalysis.wes1_agilent_covered_08_1000_2019-10-09_1345.txt_7.txt,pooling,wes1_agilent_covered_08_1000_2019-10-09_1345_target,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORInferenceExome.R
+Read 23 items
+Read 23 items
+Read 23 items
+Read 23 items
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out/HSLMResults_PM-4-T17-0325-3_S4_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+sh: line 1: 16768 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/wes1_agilent_covered_08_1000_2019-10-09_1345_target,/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/.tmp/ExperimentalFileAnalysis.wes1_agilent_covered_08_1000_2019-10-09_1345.txt_5.txt,pooling,wes1_agilent_covered_08_1000_2019-10-09_1345_target,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORInferenceExome.R
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/PM-3-T17-0315-2_S2_Aligned.sortedByCoord.out/HSLMResults_PM-3-T17-0315-2_S2_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+sh: line 1: 16754 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/wes1_agilent_covered_08_1000_2019-10-09_1345_target,/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/.tmp/ExperimentalFileAnalysis.wes1_agilent_covered_08_1000_2019-10-09_1345.txt_3.txt,pooling,wes1_agilent_covered_08_1000_2019-10-09_1345_target,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORInferenceExome.R
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/PM-27-T17-1564-2_S14_Aligned.sortedByCoord.out/HSLMResults_PM-27-T17-1564-2_S14_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+sh: line 1: 16769 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/wes1_agilent_covered_08_1000_2019-10-09_1345_target,/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/.tmp/ExperimentalFileAnalysis.wes1_agilent_covered_08_1000_2019-10-09_1345.txt_4.txt,pooling,wes1_agilent_covered_08_1000_2019-10-09_1345_target,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORInferenceExome.R
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out/HSLMResults_PM-32-T18-0097-03_S16_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+sh: line 1: 16766 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/wes1_agilent_covered_08_1000_2019-10-09_1345_target,/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/.tmp/ExperimentalFileAnalysis.wes1_agilent_covered_08_1000_2019-10-09_1345.txt_8.txt,pooling,wes1_agilent_covered_08_1000_2019-10-09_1345_target,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORInferenceExome.R
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out/HSLMResults_PM-55-T18-0639-02_S31_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+sh: line 1: 16772 Killed                  R --slave --args /home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/data/targets/hg38/wes1_agilent_covered_08_1000_2019-10-09_1345_target,/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/.tmp/ExperimentalFileAnalysis.wes1_agilent_covered_08_1000_2019-10-09_1345.txt_1.txt,pooling,wes1_agilent_covered_08_1000_2019-10-09_1345_target,/panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2,hg38 < /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/R/EXCAVATORInferenceExome.R
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/NA10847_SRR070531_Aligned.sortedByCoord.out/HSLMResults_NA10847_SRR070531_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+Error in readChar(con, 5L, useBytes = TRUE) : cannot open the connection
+Calls: load -> readChar
+In addition: Warning message:
+In readChar(con, 5L, useBytes = TRUE) :
+  cannot open compressed file 'data/prepare/wes1_agilent_covered_08_1000_2019-10-09_1345/PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out/RCNorm/PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out.NRC.RData', probable reason 'No such file or directory'
+Execution halted
+Error in file(file, "rt") : cannot open the connection
+Calls: read.table -> file
+In addition: Warning message:
+In file(file, "rt") :
+  cannot open file '/home/starrt2/tasta005/ocpmi/results/excavator2/wes1_agilent_covered_08_1000_2019-10-09_1345/Results/PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out/HSLMResults_PM-44-T18-0445-19_S24_Aligned.sortedByCoord.out.txt': No such file or directory
+Execution halted
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr1.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr2.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr3.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr4.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr5.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr6.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr7.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr8.pdf’: No such file or directory
+mv: cannot stat ‘PlotResults_chr9.pdf’: No such file or directory

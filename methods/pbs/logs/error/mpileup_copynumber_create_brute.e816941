@@ -1,0 +1,7 @@
+[mpileup] 2 samples in 2 input files
+Min coverage:	10
+Min avg qual:	15
+P-value thresh:	0.01
+Reading input from STDIN
+Reading mpileup input...
+44183394 positions in mpileup

@@ -1,2 +1,0 @@
-T21 data/prepare/star_wes1_pbmc_20000_2019-09-16_1729/PM-41-T18-0468-01_S22_Aligned.sortedByCoord.out PM-41-T18-0468-01_S22_Aligned.sortedByCoord.out
-T22 data/prepare/star_wes1_pbmc_20000_2019-09-16_1729/PM-42-T18-0486-16_S23_Aligned.sortedByCoord.out PM-42-T18-0486-16_S23_Aligned.sortedByCoord.out
