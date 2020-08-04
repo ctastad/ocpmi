@@ -14,12 +14,27 @@ bedFile <- Sys.glob("*bed_subset.txt")
 
 bedTable <- read.table(bedFile, sep = "\t")
 callTable <- read.table(callFile, sep = ":")
-df <- data.frame(geneId = bedTable$V4,
-                 geneName = bedTable$V5,
-                 call = callTable$V8,
-                 sampleId = c(rep(callFile, nrow(bedTable))))
+df <- data.frame(
+  geneId = bedTable$V4,
+  geneName = bedTable$V5,
+  call = callTable$V8,
+  sampleId = c(rep(callFile, nrow(bedTable)))
+)
+# Format req per Tim
+# length <- bedTable$V3 - bedTable$V2
+# df <- data.frame(
+#   chrom = bedTable$V1,
+#   start = bedTable$V2,
+#   stop = bedTable$V3,
+#   length = length,
+#   geneId = bedTable$V4,
+#   geneName = bedTable$V5,
+#   call = callTable$V8,
+#   sampleId = c(rep(callFile, nrow(bedTable)))
+# )
 write.table(df,
-            file = paste0("etl_output_", callFile, ".txt"),
-            row.names = F, sep = "\t",
-            col.names = F,
-            quote = F)
+  file = paste0("etl_output_", callFile, ".txt"),
+  row.names = F, sep = "\t",
+  col.names = F,
+  quote = F
+)

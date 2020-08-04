@@ -18,20 +18,22 @@ library(RColorBrewer)
 library(scales)
 
 geneAssociationTable <- read.table("geneAssociationTable",
-                                   header = F,
-                                   sep = "\t")
+  header = F,
+  sep = "\t"
+)
 message("created OG table")
 colnames(geneAssociationTable) <- c("seqId", "geneName", "call", "sampleId")
 tableWide_lab <- dcast(geneAssociationTable,
-                   seqId + geneName ~ sampleId,
-                   value.var = "call",
-                   fun = median,
-                   fill = 0)
+  seqId + geneName ~ sampleId,
+  value.var = "call",
+  fun = median,
+  fill = 0
+)
 message("reshaped table to wide format")
 
-tableWide <- tableWide_lab[,-2]
-rownames(tableWide) <- tableWide[,1]
-tableWide[,1] <- NULL
+tableWide <- tableWide_lab[, -2]
+rownames(tableWide) <- tableWide[, 1]
+tableWide[, 1] <- NULL
 mat_unmelt <- as.matrix(tableWide)
 message("created matrix")
 
@@ -48,10 +50,11 @@ chromosomes[1] <- NULL
 
 message("working on heatmap")
 pheatmap(mat_unmelt,
-         show_rownames = F,
-         #color = colorRampPalette(rev(brewer.pal(n = 5, name = "RdBu"))),
-         color = brewer_pal(palette = "RdBu", direction = -1)(5),
-         annotation_col = subtypes,
-         annotation_row = chromosomes,
-         filename = "clustered_plot.pdf",
-         main = args[2])
+  show_rownames = F,
+  # color = colorRampPalette(rev(brewer.pal(n = 5, name = "RdBu"))),
+  color = brewer_pal(palette = "RdBu", direction = -1)(5),
+  annotation_col = subtypes,
+  annotation_row = chromosomes,
+  filename = "clustered_plot.pdf",
+  main = args[2]
+)
