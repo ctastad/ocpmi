@@ -1,8 +1,0 @@
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-6-T17-0382-2_S17_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k/PM-6-T17-0382-2_S17_R1_001 PM-6-T17-0382-2_S17_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-6-T17-0382-2_S17_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k/PM-6-T17-0382-2_S17_R2_001 PM-6-T17-0382-2_S17_R2_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-7-T17-0576-3_S25_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k/PM-7-T17-0576-3_S25_R1_001 PM-7-T17-0576-3_S25_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-7-T17-0576-3_S25_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k/PM-7-T17-0576-3_S25_R2_001 PM-7-T17-0576-3_S25_R2_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-9-T17-0591-1_S21_R1_001.bam data/prepare/ocpmi_v_1kgp_full_50k/PM-9-T17-0591-1_S21_R1_001 PM-9-T17-0591-1_S21_R1_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/PM-9-T17-0591-1_S21_R2_001.bam data/prepare/ocpmi_v_1kgp_full_50k/PM-9-T17-0591-1_S21_R2_001 PM-9-T17-0591-1_S21_R2_001
-/home/starrt2/tasta005/ocpmi/data/bam/wes/star_alignedAligned.sortedByCoord.out.bam data/prepare/ocpmi_v_1kgp_full_50k/star_alignedAligned.sortedByCoord.out star_alignedAligned.sortedByCoord.out
-/home/starrt2/tasta005/ocpmi/data/bam/wes/zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome.cram data/prepare/ocpmi_v_1kgp_full_50k/zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome zc_NA10847.alt_bwamem_GRCh38DH.20150826.CEU.exome

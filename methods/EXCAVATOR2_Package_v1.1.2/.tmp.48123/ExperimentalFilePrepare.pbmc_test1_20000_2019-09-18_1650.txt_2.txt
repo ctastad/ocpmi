@@ -1,1 +1,0 @@
-/home/starrt2/tasta005/ocpmi/data/bam/pbmc_control/test/z_BTWES_Feb_12_2018_Aligned.sortedByCoord.out.bam data/prepare/pbmc_test1_20000_2019-09-18_1650/z_BTWES_Feb_12_2018_Aligned.sortedByCoord.out z_BTWES_Feb_12_2018_Aligned.sortedByCoord.out

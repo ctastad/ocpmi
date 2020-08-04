@@ -1,1 +1,0 @@
-perl /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/lib/perl/ReadPerla.pl /panfs/roc/groups/11/starrt2/tasta005/ocpmi/methods/EXCAVATOR2_Package_v1.1.2/.tmp.83242/ExperimentalFilePrepare.star_wes1_tmp_50000_2019-09-03_16:47.txt_1.txt --assembly hg38 --target star_wes1_tmp_50000_2019-09-03_16:47_target
