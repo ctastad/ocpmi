@@ -2,7 +2,7 @@
 
 ################################################################################
 #
-# This scriopt creates a clustered graphical heatmap from the same dataset as
+# This script creates a clustered graphical heatmap from the same dataset as
 # geneAssociationGraph.R using the pheatmap package.
 #
 ################################################################################
@@ -46,7 +46,6 @@ chromosomes <- read.table("~/ocpmi/data/gene_ref/tim/master_gene_list.bed")
 chromosomes <- data.frame(chromosomes[4], chromosomes[1])
 rownames(chromosomes) <- chromosomes$V4
 chromosomes[1] <- NULL
-
 
 message("working on heatmap")
 pheatmap(mat_unmelt,

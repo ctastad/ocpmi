@@ -1551,7 +1551,7 @@ write.table(df,
             quote = F)
 ```
 
-#### geneAssociation_etl.R
+#### geneAssociationGraph.R
 
 ```{r}
 #!/usr/bin/env Rscript
